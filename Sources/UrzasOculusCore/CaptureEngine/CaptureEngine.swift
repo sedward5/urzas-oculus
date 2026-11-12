@@ -1,5 +1,3 @@
-// ScreenCaptureKit integration will live here.
-public enum CaptureEngineModule {}
 import Combine
 import CoreGraphics
 import ScreenCaptureKit
