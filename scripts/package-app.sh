@@ -37,6 +37,8 @@ cat > "$APP_DIR/Contents/Info.plist" <<'PLIST'
     <string>14.0</string>
     <key>NSHighResolutionCapable</key>
     <true/>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>Urza's Oculus captures your mirrored iPhone window to analyze Magic: The Gathering Arena draft packs locally. Screen contents are never transmitted.</string>
 </dict>
 </plist>
 PLIST
