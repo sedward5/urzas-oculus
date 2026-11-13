@@ -33,8 +33,7 @@ public enum ScryfallImporter {
         defer { try? handle.close() }
         var pending = Data()
         var count = 0
-        try store.beginTransaction()
-        do {
+        return try store.transaction {
             while let chunk = try handle.read(upToCount: 64 * 1024), !chunk.isEmpty {
                 pending.append(chunk)
                 while let newline = pending.firstIndex(of: 0x0A) {
@@ -55,11 +54,7 @@ public enum ScryfallImporter {
                 sourceUpdatedAt: sourceUpdatedAt, recordCount: count, attribution: attribution
             )
             try store.save(snapshot: snapshot)
-            try store.commitTransaction()
             return snapshot
-        } catch {
-            try? store.rollbackTransaction()
-            throw error
         }
     }
 

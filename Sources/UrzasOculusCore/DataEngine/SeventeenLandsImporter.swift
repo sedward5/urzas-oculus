@@ -44,8 +44,7 @@ public enum SeventeenLandsImporter {
             datasetKey: "\(request.setCode):\(request.eventType):\(request.userGroup):\(request.colorFilter ?? "all")",
             sourceUpdatedAt: sourceUpdatedAt, recordCount: rows.count, attribution: attribution
         )
-        try store.beginTransaction()
-        do {
+        return try store.transaction {
             try store.save(snapshot: snapshot)
             for row in rows {
                 let matches = try store.cards(named: row.name, setCode: request.setCode)
@@ -62,11 +61,7 @@ public enum SeventeenLandsImporter {
                     averageLastSeen: row.averageLastSeen, averageTakenAt: row.averageTakenAt
                 ))
             }
-            try store.commitTransaction()
             return snapshot
-        } catch {
-            try? store.rollbackTransaction()
-            throw error
         }
     }
 }
