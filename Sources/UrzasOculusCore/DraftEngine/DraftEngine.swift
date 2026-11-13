@@ -221,12 +221,13 @@ public struct DraftState: Codable, Equatable, Sendable {
             }) else {
                 throw DraftEngineError.packPositionAlreadyObserved(observation.position)
             }
-            guard observation.id != UUID() else {
-                throw DraftEngineError.invalidObservation
-            }
-            guard nextExpectedPosition == observation.position else {
+            guard acceptsNextPosition(observation.position) else {
+                let expected = DraftPosition(
+                    packNumber: picks.last?.position.packNumber ?? 1,
+                    pickNumber: (picks.last?.position.pickNumber ?? 0) + 1
+                )
                 throw DraftEngineError.unexpectedPackPosition(
-                    expected: nextExpectedPosition,
+                    expected: expected,
                     received: observation.position
                 )
             }
@@ -275,16 +276,22 @@ public struct DraftState: Codable, Equatable, Sendable {
         appliedEventIDs.isEmpty
     }
 
-    private var nextExpectedPosition: DraftPosition {
+    private func acceptsNextPosition(_ received: DraftPosition) -> Bool {
         guard let previous = picks.last?.position else {
-            return DraftPosition(packNumber: 1, pickNumber: 1)
+            return received == DraftPosition(packNumber: 1, pickNumber: 1)
         }
 
-        // Pack size is deliberately not hard-coded. A new pack begins at pick 1.
-        return DraftPosition(
+        // Pack size is deliberately not hard-coded. A new pack may begin
+        // after the final pick of the previous pack, whose size is format-specific.
+        let nextPick = DraftPosition(
             packNumber: previous.packNumber,
             pickNumber: previous.pickNumber + 1
         )
+        let nextPack = DraftPosition(
+            packNumber: previous.packNumber + 1,
+            pickNumber: 1
+        )
+        return received == nextPick || received == nextPack
     }
 
     private func requireSession(_ eventSessionID: UUID) throws {
