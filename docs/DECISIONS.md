@@ -59,3 +59,20 @@ Consequences:
 - Failed events do not partially mutate the engine.
 - User corrections preserve the original record and their own reason.
 - Persistence and recognition integration remain separate future work.
+
+## ADR-006: SQLite reference store with source snapshots
+
+**Status:** Accepted
+
+Scryfall printing records and 17Lands performance observations are stored
+in a local SQLite database. Scryfall ID, Oracle ID, and Arena ID remain
+distinct. 17Lands observations are scoped to set, event type, user group,
+color filter, and dataset snapshot.
+
+Imported records preserve source attribution and snapshot metadata.
+A 17Lands metric links to a Scryfall printing only when the card name maps
+unambiguously within the requested set. Arena ID lookups likewise expose
+ambiguity rather than choosing an arbitrary printing.
+
+Reference data is updated explicitly. Draft recommendations never depend
+on a live Scryfall or 17Lands request.
