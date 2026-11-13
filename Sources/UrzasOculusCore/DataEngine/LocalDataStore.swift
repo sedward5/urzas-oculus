@@ -27,6 +27,22 @@ public final class LocalDataStore: @unchecked Sendable {
     public func commitTransaction() throws { try execute("COMMIT") }
     public func rollbackTransaction() throws { try execute("ROLLBACK") }
 
+    /// Holds the connection lock for the full transaction so another caller
+    /// cannot accidentally interleave writes into an import.
+    public func transaction<T>(_ operation: () throws -> T) throws -> T {
+        try withLock {
+            try execute("BEGIN IMMEDIATE")
+            do {
+                let result = try operation()
+                try execute("COMMIT")
+                return result
+            } catch {
+                try? execute("ROLLBACK")
+                throw error
+            }
+        }
+    }
+
     public func save(snapshot: DatasetSnapshot) throws {
         try withStatement("""
         INSERT INTO dataset_snapshots

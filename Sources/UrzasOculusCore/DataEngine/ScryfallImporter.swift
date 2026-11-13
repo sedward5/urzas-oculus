@@ -17,7 +17,7 @@ public struct ScryfallBulkFile: Decodable, Sendable {
         case downloadURI = "download_uri"
         case jsonlDownloadURI = "jsonl_download_uri"
     }
-    public var preferredDownloadURL: URL? { jsonlDownloadURI ?? downloadURI }
+    public var preferredDownloadURL: URL? { jsonlDownloadURI }
 }
 
 public enum ScryfallImporter {

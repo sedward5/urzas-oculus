@@ -20,7 +20,7 @@ public struct SeventeenLandsImportRequest: Equatable, Sendable {
         var parts = URLComponents(string: "https://www.17lands.com/card_ratings/data")
         var query = [
             URLQueryItem(name: "expansion", value: setCode),
-            URLQueryItem(name: "format", value: eventType),
+            URLQueryItem(name: "event_type", value: eventType),
             URLQueryItem(name: "user_group", value: userGroup)
         ]
         if let colorFilter { query.append(URLQueryItem(name: "colors", value: colorFilter)) }
