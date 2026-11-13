@@ -72,6 +72,19 @@ final class DataEngineTests: XCTestCase {
         XCTAssertEqual(query["colors"], "WU")
     }
 
+    func testArenaIDLookupDoesNotGuessAcrossPrintings() throws {
+        let (store, url) = try makeStore()
+        defer { try? store.close(); try? FileManager.default.removeItem(at: url) }
+        try store.upsert(card: CardRecord(id: "printing-a", arenaID: 77,
+            name: "Example Card", setCode: "AAA"))
+        try store.upsert(card: CardRecord(id: "printing-b", arenaID: 77,
+            name: "Example Card", setCode: "BBB"))
+
+        XCTAssertEqual(try store.cards(arenaID: 77).count, 2)
+        XCTAssertNil(try store.card(arenaID: 77))
+        XCTAssertEqual(try store.card(arenaID: 77, setCode: "bbb")?.id, "printing-b")
+    }
+
     func testPerformanceRequiresSnapshotForeignKey() throws {
         let (store, url) = try makeStore()
         defer { try? store.close(); try? FileManager.default.removeItem(at: url) }
