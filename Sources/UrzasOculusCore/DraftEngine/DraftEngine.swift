@@ -216,6 +216,9 @@ public struct DraftState: Codable, Equatable, Sendable {
         case let .packObserved(observation):
             try requireSession(event.sessionID)
             try validate(observation)
+            guard packObservations[observation.id] == nil else {
+                throw DraftEngineError.duplicateObservationID(observation.id)
+            }
             guard !packObservations.values.contains(where: {
                 $0.position == observation.position
             }) else {
@@ -320,6 +323,7 @@ public enum DraftEngineError: Error, Equatable {
     case sessionNotStarted
     case sessionIDMismatch
     case invalidObservation
+    case duplicateObservationID(UUID)
     case packPositionAlreadyObserved(DraftPosition)
     case unexpectedPackPosition(expected: DraftPosition, received: DraftPosition)
     case unknownPackObservation(UUID)
