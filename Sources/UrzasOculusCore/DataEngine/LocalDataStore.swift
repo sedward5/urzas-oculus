@@ -96,8 +96,27 @@ public final class LocalDataStore: @unchecked Sendable {
         try queryOne("SELECT payload FROM cards WHERE scryfall_id = ?", value: scryfallID)
     }
 
-    public func card(arenaID: Int) throws -> CardRecord? {
-        try queryOne("SELECT payload FROM cards WHERE arena_id = ? ORDER BY set_code LIMIT 1", value: arenaID)
+    /// Returns every printing that shares an Arena identifier.
+    public func cards(arenaID: Int) throws -> [CardRecord] {
+        try withStatement("SELECT payload FROM cards WHERE arena_id = ? ORDER BY set_code") { s in
+            bind(arenaID, 1, s)
+            var result: [CardRecord] = []
+            while sqlite3_step(s) == SQLITE_ROW {
+                if let data = columnData(s, 0) {
+                    result.append(try decoder.decode(CardRecord.self, from: data))
+                }
+            }
+            return result
+        }
+    }
+
+    /// Returns a result only when the Arena identifier is unambiguous.
+    /// Supply a set code when the same Arena ID appears on multiple printings.
+    public func card(arenaID: Int, setCode: String? = nil) throws -> CardRecord? {
+        let matches = try cards(arenaID: arenaID).filter {
+            setCode == nil || $0.setCode == setCode?.uppercased()
+        }
+        return matches.count == 1 ? matches[0] : nil
     }
 
     public func cards(named name: String, setCode: String? = nil) throws -> [CardRecord] {
