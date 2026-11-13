@@ -6,6 +6,8 @@ iPhone using macOS iPhone Mirroring.
 Urza's Oculus observes the mirrored draft, identifies cards and packs,
 tracks the draft, and provides deterministic pick recommendations.
 
+![App Icon](Resources/AppIcon.png)
+
 ## Project status
 
 **Foundation scaffold.** The initial architecture and build pipeline are
