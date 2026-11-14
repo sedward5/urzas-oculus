@@ -30,7 +30,7 @@ final class SeventeenLandsCSVReaderTests: XCTestCase {
 
     func testRejectsRowsWithDifferentColumnCounts() throws {
         let compressed = Data(base64Encoded:
-            "H4sIAAAAAAAC/8tLzE3VyS9IzcvMS4/PSMxL0UkpSizP41JyTixK0VHwA0or6RjpGHIphZTnKygpBZbml6QWKylxBacm5+elKORk5gEVGOgYcwEAhdNtZkoAAAA="
+            "H4sIAAAAAAAC/0vUSeIy1DHiMuYCANihyAcKAAAA"
         )!
         let file = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv.gz")
