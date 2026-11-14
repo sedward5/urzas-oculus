@@ -72,6 +72,8 @@ public enum SeventeenLandsPublicDatasetCatalog {
                     guard let url = URL(string: decodeHTMLEntities(href), relativeTo: baseURL)?.absoluteURL else {
                         continue
                     }
+                    guard url.scheme == "https",
+                          url.host == "17lands-public.s3.amazonaws.com" else { continue }
                     let filename = url.lastPathComponent.lowercased()
                     if filename.hasPrefix("draft_data_public.") {
                         draftURL = url
