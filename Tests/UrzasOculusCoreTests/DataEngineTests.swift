@@ -62,12 +62,13 @@ final class DataEngineTests: XCTestCase {
         let request = SeventeenLandsImportRequest(setCode: "tst", userGroup: "top", colorFilter: "WU")
         let url = try XCTUnwrap(request.url)
         let parts = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
-        let query = Dictionary(uniqueKeysWithValues: (parts.queryItems ?? []).compactMap {
-            guard let value = $0.value else { return nil }
-            return ($0.name, value)
-        })
+        let queryItems: [(String, String)] = (parts.queryItems ?? []).compactMap { item in
+            guard let value = item.value else { return nil }
+            return (item.name, value)
+        }
+        let query = Dictionary(uniqueKeysWithValues: queryItems)
         XCTAssertEqual(query["expansion"], "TST")
-        XCTAssertEqual(query["format"], "PremierDraft")
+        XCTAssertEqual(query["event_type"], "PremierDraft")
         XCTAssertEqual(query["user_group"], "top")
         XCTAssertEqual(query["colors"], "WU")
     }
