@@ -225,8 +225,13 @@ private final class CSVRowParser {
 
     func finish() throws {
         if case .quoted = state { throw SeventeenLandsCSVError.malformedCSV }
-        if !field.isEmpty || !row.isEmpty || state == .afterQuote || state == .unquoted {
+        switch state {
+        case .fieldStart:
+            if !field.isEmpty || !row.isEmpty { try finishRow() }
+        case .unquoted, .afterQuote:
             try finishRow()
+        case .quoted:
+            throw SeventeenLandsCSVError.malformedCSV
         }
     }
 
