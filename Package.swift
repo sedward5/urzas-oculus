@@ -9,7 +9,8 @@ let package = Package(
     ],
     targets: [
         .systemLibrary(name: "CSQLite"),
-        .target(name: "UrzasOculusCore", dependencies: ["CSQLite"]),
+        .systemLibrary(name: "CZlib"),
+        .target(name: "UrzasOculusCore", dependencies: ["CSQLite", "CZlib"]),
         .executableTarget(name: "UrzasOculusApp", dependencies: ["UrzasOculusCore"]),
         .testTarget(name: "UrzasOculusCoreTests", dependencies: ["UrzasOculusCore"])
     ],

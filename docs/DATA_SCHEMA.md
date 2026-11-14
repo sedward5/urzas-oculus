@@ -93,3 +93,20 @@ Card data © Scryfall: https://scryfall.com
 
 17Lands public datasets are generally published under CC BY 4.0 unless
 otherwise noted. Preserve attribution when displaying or exporting data.
+
+
+## Public CSV acquisition and parsing
+
+The catalog client reads the official 17Lands public dataset listing and
+retains the exact draft/game archive URLs and each row's Last Updated date.
+This avoids treating the URL naming convention as proof that a dataset
+exists for a particular set and event type.
+
+The gzip CSV reader uses zlib incrementally and emits one CSV row at a time.
+It supports quoted fields, escaped quotes, commas, CRLF, and embedded
+newlines. The first row becomes a dynamic header; card-facet columns must be
+looked up by name because the column set changes between expansions.
+
+The reader validates UTF-8, duplicate header names, malformed quoting, and
+row-width mismatches. It does not yet interpret 17Lands metrics or write
+performance records. Raw CSV parsing is a transport/format layer only.
