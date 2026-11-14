@@ -66,7 +66,7 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         try store.upsert(card: CardRecord(id: "test-printing", name: "Test Card", setCode: "TST"))
 
         let compressed = Data(base64Encoded:
-            "H4sIAOLV+GoC/1WKMQ6DMBAEe78iD9jCJE/gC6CU1gUfYAXuorMR3wfSAN3OzK4qmClJ6HRSy9AfS5IhjCQxNJzLoyaLiEarXLgsRY1vD+6+F8wp8kf3dTpXbGG8WzxRweMF73qa8l/5XVVHcBsYvdZgkQAAAA=="
+            "H4sIAPnV+GoC/1WKMQ6DMBAEe7+CB2xhkifwBVBK64IPsELuorMR3we5CXQ7M7ur4EtJwqirWob+WJLMYSGJoedcmo4sIhrtcuGyFTW+PXj8XDCnyG8919+5YhvjNeCBFh5PeDfRmqvyVZ3BHb1uiquRAAAA"
         )!
         let file = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv.gz")
