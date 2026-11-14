@@ -5,26 +5,32 @@ public enum SeventeenLandsPublicDatasetKind: String, Codable, Sendable {
     case game
 }
 
-/// One official 17Lands public CSV archive. The public listing's "Last
-/// Updated" date is supplied by the catalog layer and retained separately
-/// from the time this installation downloads the archive.
+/// One official 17Lands public CSV archive.
 public struct SeventeenLandsPublicDataset: Equatable, Sendable {
     public let setCode: String
     public let eventType: String
     public let kind: SeventeenLandsPublicDatasetKind
     public let lastUpdatedAt: Date?
+    public let archiveURL: URL?
 
-    public init(setCode: String, eventType: String = "PremierDraft",
-                kind: SeventeenLandsPublicDatasetKind, lastUpdatedAt: Date? = nil) {
+    public init(
+        setCode: String,
+        eventType: String = "PremierDraft",
+        kind: SeventeenLandsPublicDatasetKind,
+        lastUpdatedAt: Date? = nil,
+        archiveURL: URL? = nil
+    ) {
         self.setCode = setCode.uppercased()
         self.eventType = eventType
         self.kind = kind
         self.lastUpdatedAt = lastUpdatedAt
+        self.archiveURL = archiveURL
     }
 
-    /// Official public S3 archive naming convention. These are the published
-    /// aggregated datasets, not the unsupported interactive card-ratings API.
+    /// Prefer the exact URL supplied by the official catalog. The naming
+    /// convention remains a fallback for explicitly constructed descriptors.
     public var downloadURL: URL {
+        if let archiveURL { return archiveURL }
         let filename = "\(kind.rawValue)_data_public.\(setCode).\(eventType).csv.gz"
         return URL(string: "https://17lands-public.s3.amazonaws.com/analysis_data/\(filename)")!
     }
@@ -72,7 +78,6 @@ public enum SeventeenLandsPublicDatasetDownloader {
         try FileManager.default.createDirectory(
             at: directory, withIntermediateDirectories: true
         )
-        // Keep the previous archive intact if installing the new download fails.
         let backupURL = destination.appendingPathExtension("previous-\(UUID().uuidString)")
         let hadPreviousFile = FileManager.default.fileExists(atPath: destination.path)
         if hadPreviousFile {
