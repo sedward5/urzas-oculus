@@ -50,9 +50,32 @@ An imported metric links to a Scryfall printing only when exactly one
 card matches that name within the requested set. Ambiguous and unmatched
 records are retained without an identity link.
 
-The 17Lands card-ratings endpoint is community-used and not formally
-documented. The adapter constructs its request URL and imports a saved
-JSON response. Fetching is intentionally separate from active drafting.
+The interactive 17Lands card-ratings endpoint is community-used but not
+formally documented, and 17Lands discourages scraping its API. The existing
+JSON adapter remains useful for importing a previously acquired snapshot,
+but it is not the planned default acquisition mechanism.
+
+The supported acquisition direction is the official public dataset page:
+https://www.17lands.com/public_datasets
+
+17Lands publishes aggregated draft and game datasets as gzip-compressed
+CSV archives. Draft data supports pick/seen-derived metrics such as ALSA
+and ATA; game data supports in-game performance metrics. Both are needed
+to reproduce the full recommendation feature set from public data.
+
+The ingestion branch introduces descriptors and a downloader for the
+official S3 archive naming convention, plus explicit local acquisition
+timestamps. The remaining pipeline work is catalog discovery, streaming
+gzip/CSV parsing, aggregation into card-performance records, and validation
+against known 17Lands card-rating results. Do not treat a downloaded raw
+archive as recommendation-ready until those steps have completed.
+
+17Lands publishes updates as the meta develops. Its FAQ describes draft
+data becoming available around two weeks into a set, game data around three
+weeks in, and older datasets being refreshed when new ones are released.
+The public listing's per-dataset "Last Updated" date must be captured as
+sourceUpdatedAt; the local download/import time must be captured separately
+as importedAt. See https://www.17lands.com/faq.
 
 ## SQLite tables and indexes
 
