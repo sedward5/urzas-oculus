@@ -136,6 +136,13 @@ public struct CardPerformanceRecord: Codable, Equatable, Sendable, Identifiable 
     public let drawnImprovementWinRate: Double?
     public let averageLastSeen: Double?
     public let averageTakenAt: Double?
+    public let gamesPlayedCount: Int?
+    public let gamesPlayedWinRate: Double?
+    public let gamesInHandCount: Int?
+    public let openingHandCount: Int?
+    public let drawnCount: Int?
+    public let gamesNotSeenCount: Int?
+    public let gamesNotSeenWinRate: Double?
 
     public init(snapshotID: String, setCode: String, eventType: String,
                 userGroup: String = "all", colorFilter: String? = nil,
@@ -144,7 +151,10 @@ public struct CardPerformanceRecord: Codable, Equatable, Sendable, Identifiable 
                 playRate: Double? = nil, winRate: Double? = nil,
                 openingHandWinRate: Double? = nil, drawnWinRate: Double? = nil,
                 drawnImprovementWinRate: Double? = nil, averageLastSeen: Double? = nil,
-                averageTakenAt: Double? = nil) {
+                averageTakenAt: Double? = nil, gamesPlayedCount: Int? = nil,
+                gamesPlayedWinRate: Double? = nil, gamesInHandCount: Int? = nil,
+                openingHandCount: Int? = nil, drawnCount: Int? = nil,
+                gamesNotSeenCount: Int? = nil, gamesNotSeenWinRate: Double? = nil) {
         self.snapshotID = snapshotID
         self.setCode = setCode.uppercased()
         self.eventType = eventType
@@ -163,6 +173,13 @@ public struct CardPerformanceRecord: Codable, Equatable, Sendable, Identifiable 
         self.drawnImprovementWinRate = drawnImprovementWinRate
         self.averageLastSeen = averageLastSeen
         self.averageTakenAt = averageTakenAt
+        self.gamesPlayedCount = gamesPlayedCount
+        self.gamesPlayedWinRate = gamesPlayedWinRate
+        self.gamesInHandCount = gamesInHandCount
+        self.openingHandCount = openingHandCount
+        self.drawnCount = drawnCount
+        self.gamesNotSeenCount = gamesNotSeenCount
+        self.gamesNotSeenWinRate = gamesNotSeenWinRate
         self.id = [snapshotID, setCode.uppercased(), eventType, userGroup,
                    colorFilter ?? "all", CardRecord.normalizeName(cardName)].joined(separator: "|")
     }
