@@ -224,7 +224,7 @@ public enum SeventeenLandsGameMetricsImporter {
                 try accumulator?.consume(row)
             }
         )
-        guard let metrics = accumulator?.finish(), !metrics.isEmpty else {
+        guard rowCount > 0, let metrics = accumulator?.finish(), !metrics.isEmpty else {
             throw SeventeenLandsMetricsError.missingColumn("usable card metrics")
         }
 
@@ -267,7 +267,6 @@ public enum SeventeenLandsGameMetricsImporter {
                 ))
             }
         }
-        _ = rowCount
         return snapshot
     }
 }
