@@ -13,7 +13,7 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         ])
         let accumulator = try SeventeenLandsGameMetricsAccumulator(header: header)
         try accumulator.consume(["true", "WU", "2", "1", "0", "3", "0", "0", "1", "0", "1", "1"])
-        try accumulator.consume(["false", "WU", "0", "1", "1", "2", "1", "1", "0", "0", "1", "0"])
+        try accumulator.consume(["false", "WU", "0", "1", "0", "2", "1", "1", "0", "0", "1", "0"])
 
         let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
         let testCard = try XCTUnwrap(metrics["Test Card"])
