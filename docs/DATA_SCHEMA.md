@@ -110,3 +110,32 @@ looked up by name because the column set changes between expansions.
 The reader validates UTF-8, duplicate header names, malformed quoting, and
 row-width mismatches. It does not yet interpret 17Lands metrics or write
 performance records. Raw CSV parsing is a transport/format layer only.
+
+
+## Game-level metric aggregation
+
+The game CSV aggregator discovers the set-specific card columns by the
+`opening_hand_`, `drawn_`, `tutored_`, `deck_`, and `sideboard_`
+prefixes. It processes one game row at a time and retains only per-card
+counters, so memory use does not grow with the number of games.
+
+Copy-weighted statistics follow the 17Lands metric definitions:
+
+- Games played and GP win rate weight each maindeck copy.
+- Play rate is maindeck copies divided by maindeck plus sideboard copies.
+- Opening-hand, drawn, and games-in-hand rates weight each corresponding
+  card copy.
+- Games not seen are maindeck copies minus opening-hand, drawn, and tutored
+  copies, clamped at zero.
+- Improvement in hand is games-in-hand win rate minus games-not-seen win rate.
+
+Rates are fractions, not percentages. A missing denominator produces nil,
+not zero. The existing `winRate` field represents games-in-hand win rate
+for CSV-derived records. Additional count and GP/GNS fields are preserved
+in the Codable payload.
+
+This first aggregation step supports the public all-user game dataset.
+Non-`all` user groups are rejected rather than silently mislabeled. Draft
+metrics (ALSA/ATA) are not populated by this importer; they require the
+draft archive and a separate aggregation pass. Therefore a game snapshot
+alone is not recommendation-ready.
