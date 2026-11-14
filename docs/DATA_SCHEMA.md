@@ -137,5 +137,7 @@ in the Codable payload.
 This first aggregation step supports the public all-user game dataset.
 Non-`all` user groups are rejected rather than silently mislabeled. Draft
 metrics (ALSA/ATA) are not populated by this importer; they require the
-draft archive and a separate aggregation pass. Therefore a game snapshot
-alone is not recommendation-ready.
+draft archive and a separate aggregation pass. The game and draft passes
+for one catalog entry share a snapshot ID and dataset key so their metrics
+can be combined without losing the common upstream update date or local
+acquisition time. A game-only snapshot is not recommendation-ready.
