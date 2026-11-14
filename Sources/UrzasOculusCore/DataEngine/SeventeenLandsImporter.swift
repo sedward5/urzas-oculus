@@ -32,17 +32,21 @@ public struct SeventeenLandsImportRequest: Equatable, Sendable {
 public enum SeventeenLandsImporter {
     public static let attribution = "17Lands data; https://www.17lands.com"
 
-    /// Imports the JSON array returned by the 17Lands card-ratings endpoint.
+    /// Imports a previously acquired 17Lands card-ratings JSON snapshot.
+    /// sourceUpdatedAt is the upstream dataset publication/update date, not
+    /// the local download time. importedAt records when this copy was acquired.
     /// The set/format/user-group filters become part of the metric identity.
     @discardableResult
     public static func importJSON(_ data: Data, request: SeventeenLandsImportRequest,
                                   snapshotID: String, sourceUpdatedAt: Date? = nil,
+                                  importedAt: Date = .now,
                                   into store: LocalDataStore) throws -> DatasetSnapshot {
         let rows = try JSONDecoder().decode([SeventeenLandsCardDTO].self, from: data)
         let snapshot = DatasetSnapshot(
             id: snapshotID, source: .seventeenLands,
             datasetKey: "\(request.setCode):\(request.eventType):\(request.userGroup):\(request.colorFilter ?? "all")",
-            sourceUpdatedAt: sourceUpdatedAt, recordCount: rows.count, attribution: attribution
+            sourceUpdatedAt: sourceUpdatedAt, importedAt: importedAt,
+            recordCount: rows.count, attribution: attribution
         )
         return try store.transaction {
             try store.save(snapshot: snapshot)
