@@ -6,9 +6,8 @@ public enum SeventeenLandsMetricsError: Error, Equatable {
     case unsupportedUserGroup(String)
 }
 
-/// Weighted game-level statistics for one card. Counts represent card copies,
-/// except gameCount, which is the number of distinct game rows with the card
-/// in the maindeck.
+/// Weighted game-level statistics for one card. Copy counts, including
+/// gameCount, follow 17Lands' per-copy weighting.
 public struct SeventeenLandsGameMetric: Equatable, Sendable {
     public let cardName: String
     public let gameCount: Int
@@ -27,7 +26,6 @@ public struct SeventeenLandsGameMetric: Equatable, Sendable {
 }
 
 private struct SeventeenLandsGameTotals {
-    var gameCount = 0
     var gamesPlayed = 0
     var gamesPlayedWins = 0
     var maindeckCopies = 0
@@ -115,7 +113,6 @@ public final class SeventeenLandsGameMetricsAccumulator {
         for (name, observation) in observations {
             var value = totals[name] ?? SeventeenLandsGameTotals()
             if observation.deck > 0 {
-                value.gameCount += 1
                 value.gamesPlayed += observation.deck
                 if won { value.gamesPlayedWins += observation.deck }
             }
@@ -145,7 +142,7 @@ public final class SeventeenLandsGameMetricsAccumulator {
             let gns = Self.rate(wins: value.notSeenWins, count: value.notSeen)
             return SeventeenLandsGameMetric(
                 cardName: name,
-                gameCount: value.gameCount,
+                gameCount: value.gamesPlayed,
                 gamesPlayedCount: value.gamesPlayed,
                 gamesPlayedWinRate: Self.rate(wins: value.gamesPlayedWins, count: value.gamesPlayed),
                 playRate: Self.rate(
@@ -231,7 +228,7 @@ public enum SeventeenLandsGameMetricsImporter {
         let snapshot = DatasetSnapshot(
             id: snapshotID,
             source: .seventeenLands,
-            datasetKey: "\(request.setCode):\(request.eventType):\(request.userGroup):\(request.colorFilter ?? "all"):game",
+            datasetKey: "\(request.setCode):\(request.eventType):\(request.userGroup):\(request.colorFilter ?? "all)",
             sourceUpdatedAt: sourceUpdatedAt,
             importedAt: importedAt,
             recordCount: metrics.count,
