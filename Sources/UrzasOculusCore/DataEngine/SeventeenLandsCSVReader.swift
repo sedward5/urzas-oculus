@@ -50,8 +50,8 @@ public enum SeventeenLandsCSVReader {
     public static func readTable(
         from url: URL,
         chunkSize: Int = 64 * 1024,
-        onHeader: (SeventeenLandsCSVHeader) throws -> Void,
-        onRow: ([String]) throws -> Void
+        onHeader: @escaping (SeventeenLandsCSVHeader) throws -> Void,
+        onRow: @escaping ([String]) throws -> Void
     ) throws -> Int {
         var header: SeventeenLandsCSVHeader?
         var rowCount = 0
@@ -80,7 +80,7 @@ public enum SeventeenLandsCSVReader {
     public static func readRows(
         from url: URL,
         chunkSize: Int = 64 * 1024,
-        onRow: ([String]) throws -> Void
+        onRow: @escaping ([String]) throws -> Void
     ) throws -> Int {
         guard chunkSize > 0 else { throw SeventeenLandsCSVError.malformedCSV }
         let file = try FileHandle(forReadingFrom: url)
