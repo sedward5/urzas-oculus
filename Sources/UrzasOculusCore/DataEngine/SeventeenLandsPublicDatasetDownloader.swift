@@ -72,10 +72,23 @@ public enum SeventeenLandsPublicDatasetDownloader {
         try FileManager.default.createDirectory(
             at: directory, withIntermediateDirectories: true
         )
-        if FileManager.default.fileExists(atPath: destination.path) {
-            try FileManager.default.removeItem(at: destination)
+        // Keep the previous archive intact if installing the new download fails.
+        let backupURL = destination.appendingPathExtension("previous-\(UUID().uuidString)")
+        let hadPreviousFile = FileManager.default.fileExists(atPath: destination.path)
+        if hadPreviousFile {
+            try FileManager.default.moveItem(at: destination, to: backupURL)
         }
-        try FileManager.default.moveItem(at: temporaryURL, to: destination)
+        do {
+            try FileManager.default.moveItem(at: temporaryURL, to: destination)
+            if hadPreviousFile {
+                try? FileManager.default.removeItem(at: backupURL)
+            }
+        } catch {
+            if hadPreviousFile {
+                try? FileManager.default.moveItem(at: backupURL, to: destination)
+            }
+            throw error
+        }
 
         let attributes = try FileManager.default.attributesOfItem(atPath: destination.path)
         let byteCount = (attributes[.size] as? NSNumber)?.int64Value ?? 0
