@@ -15,7 +15,7 @@ public struct SeventeenLandsPublicDataset: Equatable, Sendable {
     public let lastUpdatedAt: Date?
 
     public init(setCode: String, eventType: String = "PremierDraft",
-                kind: SeventeenLandsPublicDatasetKind, lastUpdatedAt: Date? = nil) {
+                kind: SeventeenLandsPublicDatasetKind, lastUpdatedAt: Date? = nil,\n                archiveURL: URL? = nil) {
         self.setCode = setCode.uppercased()
         self.eventType = eventType
         self.kind = kind
