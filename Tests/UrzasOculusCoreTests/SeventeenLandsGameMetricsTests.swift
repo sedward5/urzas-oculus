@@ -17,7 +17,7 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
 
         let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
         let testCard = try XCTUnwrap(metrics["Test Card"])
-        XCTAssertEqual(testCard.gameCount, 2)
+        XCTAssertEqual(testCard.gameCount, 5)
         XCTAssertEqual(testCard.gamesPlayedCount, 5)
         XCTAssertEqual(try XCTUnwrap(testCard.gamesPlayedWinRate), 0.6, accuracy: 0.0001)
         XCTAssertEqual(try XCTUnwrap(testCard.playRate), 5.0 / 6.0, accuracy: 0.0001)
@@ -85,6 +85,7 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         XCTAssertEqual(snapshot.recordCount, 1)
         XCTAssertEqual(metric.cardScryfallID, "test-printing")
         XCTAssertEqual(metric.gamesPlayedCount, 5)
+        XCTAssertEqual(metric.gameCount, 5)
         XCTAssertEqual(metric.winRate, 0.75)
         XCTAssertEqual(metric.drawnImprovementWinRate, 0.75)
     }
