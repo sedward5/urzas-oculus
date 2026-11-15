@@ -76,3 +76,24 @@ ambiguity rather than choosing an arbitrary printing.
 
 Reference data is updated explicitly. Draft recommendations never depend
 on a live Scryfall or 17Lands request.
+
+
+## ADR-007: One shared recommendation implementation
+
+**Status:** Accepted
+
+All recommendation domain logic lives in one platform-independent Swift
+core. The macOS app and headless CI invoke the same evaluator. CI may publish
+versioned static artifacts, and the web app may present those artifacts, but
+neither delivery surface may maintain its own normalization, scoring, or
+ranking implementation.
+
+The evaluator is deterministic and accepts explicit data, readiness, and
+versioned scoring configuration. Adapters acquire inputs and distribute
+outputs; they do not duplicate recommendation rules.
+
+Consequences:
+- The macOS app and web experience cannot drift through separate scoring code.
+- CI and local app results can be compared using the same evaluator version.
+- Browser-side evaluation is not introduced unless a future requirement
+  justifies compiling the shared core for that environment.
