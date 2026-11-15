@@ -100,8 +100,10 @@ public final class SeventeenLandsDraftMetricsAccumulator {
         for column in packCardColumns {
             let count = try Self.parseCount(row[column.index], column: header.columns[column.index])
             guard count > 0 else { continue }
+            let existing = sightings[column.name]
             sightings[column.name] = PackSighting(
-                lastSeenPick: pickNumber, copies: count
+                lastSeenPick: max(existing?.lastSeenPick ?? 0, pickNumber),
+                copies: max(existing?.copies ?? 0, count)
             )
         }
 
