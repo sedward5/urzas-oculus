@@ -12,7 +12,7 @@ public enum RecommendationEngineError: Error, Equatable {
 /// event, and user-group dataset. priorWeight is a regularization strength,
 /// not an independent-observation count or confidence interval. 17Lands
 /// counts are copy-weighted and may contain correlated observations.
-public struct RecommendationScoringConfiguration: Equatable, Sendable {
+public struct RecommendationScoringConfiguration: Codable, Equatable, Sendable {
     public let version: String
     public let schemaVersion: Int
     public let baselineWinRate: Double
@@ -61,7 +61,7 @@ public struct RecommendationEvaluationRequest: Equatable, Sendable {
     }
 }
 
-public struct ScoredRecommendation: Equatable, Sendable, Identifiable {
+public struct ScoredRecommendation: Codable, Equatable, Sendable, Identifiable {
     public let id: String
     public let cardName: String
     public let score: Double
@@ -92,14 +92,14 @@ public struct ScoredRecommendation: Equatable, Sendable, Identifiable {
     }
 }
 
-public enum RecommendationExclusionReason: Equatable, Sendable {
+public enum RecommendationExclusionReason: String, Codable, Equatable, Sendable {
     case missingPerformance
     case missingGamesInHandSample
     case mismatchedDatasetScope
     case mismatchedSnapshot
 }
 
-public struct ExcludedRecommendation: Equatable, Sendable, Identifiable {
+public struct ExcludedRecommendation: Codable, Equatable, Sendable, Identifiable {
     public let id: String
     public let cardName: String
     public let reason: RecommendationExclusionReason
@@ -113,7 +113,7 @@ public struct ExcludedRecommendation: Equatable, Sendable, Identifiable {
 
 /// A deterministic baseline result. Generation timestamps belong to the
 /// publication adapter, not this pure evaluation result.
-public struct RecommendationResult: Equatable, Sendable {
+public struct RecommendationResult: Codable, Equatable, Sendable {
     public let datasetKey: String
     public let gameSnapshotID: String
     public let engineVersion: String
