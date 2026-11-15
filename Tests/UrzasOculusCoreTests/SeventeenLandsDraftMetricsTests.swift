@@ -10,14 +10,15 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         ])
         let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
 
-        // Wheel Card survives the first pass and is seen again on pick 9.
-        try accumulator.consume(["draft-a", "1", "1", "Picked Card", "", "1", "1", "1"])
-        try accumulator.consume(["draft-a", "1", "2", "Other Card", "", "1", "1", "0"])
-        try accumulator.consume(["draft-a", "1", "8", "Other Card", "", "1", "1", "0"])
+        // Pick 9 revisits the pack lane seen at pick 1. The other picks
+        // belong to separate circulating packs in the same draft round.
+        try accumulator.consume(["draft-a", "1", "1", "Picked Card", "", "1", "0", "1"])
+        try accumulator.consume(["draft-a", "1", "2", "Other Card", "", "0", "1", "0"])
+        try accumulator.consume(["draft-a", "1", "8", "Other Card", "", "0", "0", "0"])
         try accumulator.consume(["draft-a", "1", "9", "Wheel Card", "", "1", "0", "0"])
         try accumulator.consume(["draft-a", "1", "10", "Late Card", "", "0", "1", "0"])
 
-        // Same card in a second pack is a second seen instance.
+        // A card in a second pack round is another seen instance.
         try accumulator.consume(["draft-a", "2", "1", "Wheel Card", "", "1", "1", "0"])
 
         let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
