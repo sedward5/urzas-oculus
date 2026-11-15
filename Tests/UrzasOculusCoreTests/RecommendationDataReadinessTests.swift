@@ -11,7 +11,7 @@ final class RecommendationDataReadinessTests: XCTestCase {
                            importedAt: Date = Date(timeIntervalSince1970: 1_800_000_000),
                            count: Int = 10) -> DatasetComponentSnapshot {
         DatasetComponentSnapshot(
-            datasetKey: request.datasetKey, kind: kind, snapshotID: "snapshot-\(kind.rawValue)",
+            datasetKey: request.datasetKey, kind: kind, snapshotID: "snapshot-shared",
             sourceUpdatedAt: updatedAt, importedAt: importedAt, recordCount: count
         )
     }
@@ -29,6 +29,18 @@ final class RecommendationDataReadinessTests: XCTestCase {
             request: request, components: [component(.game), component(.draft)]
         )
         XCTAssertTrue(result.isReady)
+    }
+
+    func testRejectsComponentsFromDifferentSnapshots() {
+        let game = component(.game)
+        let draft = DatasetComponentSnapshot(
+            datasetKey: request.datasetKey, kind: .draft, snapshotID: "different-snapshot",
+            sourceUpdatedAt: Date(timeIntervalSince1970: 1_800_000_000),
+            importedAt: Date(timeIntervalSince1970: 1_800_000_000), recordCount: 10
+        )
+        let result = RecommendationDataReadiness(request: request, components: [game, draft])
+        XCTAssertFalse(result.isReady)
+        XCTAssertTrue(result.issues.contains(.mismatchedSnapshot))
     }
 
     func testRejectsMismatchedSourceUpdateTimes() {
@@ -59,6 +71,24 @@ final class RecommendationDataReadinessTests: XCTestCase {
         )
         XCTAssertFalse(result.isReady)
         XCTAssertTrue(result.issues.contains(.unknownSourceUpdate))
+    }
+
+    func testUnknownSourceTimestampDoesNotSkipAcquisitionFreshness() {
+        let now = Date(timeIntervalSince1970: 1_900_000_000)
+        let oldImport = Date(timeIntervalSince1970: 1_700_000_000)
+        let result = RecommendationDataReadiness(
+            request: request,
+            components: [
+                component(.game, updatedAt: nil, importedAt: oldImport),
+                component(.draft, updatedAt: nil, importedAt: oldImport)
+            ],
+            now: now,
+            maximumSourceAge: 1_000,
+            maximumAcquisitionAge: 1_000
+        )
+        XCTAssertTrue(result.issues.contains(.unknownSourceUpdate))
+        XCTAssertTrue(result.issues.contains(.staleComponent(.game)))
+        XCTAssertTrue(result.issues.contains(.staleComponent(.draft)))
     }
 
     func testRejectsUnsupportedUserGroup() {
