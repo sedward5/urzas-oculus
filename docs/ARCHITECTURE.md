@@ -114,3 +114,26 @@ files, or depend on SwiftUI. A CI runner may acquire and validate datasets, invo
 same evaluator for configured set/event combinations, and publish static JSON artifacts
 for the web app. Publication is allowed only when the shared readiness evaluator reports
 a complete compatible dataset. Local pick evaluation remains offline.
+
+
+## Baseline evaluator contract
+
+`ScoringEngine.evaluate` is a pure Swift-core API. It accepts a dataset
+request, the shared readiness result, explicit card/performance candidates,
+and a versioned scoring configuration. It returns a deterministic ranking,
+excluded-candidate reasons, explanations, dataset snapshot identity, engine
+version, scoring-configuration version, and result schema version.
+
+The initial score is regularized GIH WR. The caller must provide the overall
+win-rate baseline for the same set/event/user-group dataset and a versioned
+prior weight. The prior weight is a tuning parameter, not an independent
+sample count. ALSA and ATA are returned as context but do not affect ranking
+in this first version.
+
+The evaluator rejects unready data, a readiness scope mismatch, candidates
+from another set/event/user-group/color scope, metrics from another snapshot,
+and candidates without a usable GIH count/rate. It does not silently fall back
+to a different dataset or score missing metrics as zero.
+
+The macOS app and CI must call this same API. The web app consumes published
+results and must not reproduce this calculation in JavaScript or TypeScript.
