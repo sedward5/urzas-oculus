@@ -504,20 +504,25 @@ The application can retrieve the relevant data without making live requests duri
 
 ### Phase 4 — Recommendation Engine
 
-Implement baseline card evaluation.
+Build one platform-independent Swift evaluator and use it from both the macOS
+app and future headless CI jobs. The first baseline ranks standalone strength
+using 17Lands GIH WR, with an explicit same-dataset baseline and versioned
+regularization configuration.
 
-Start with understandable, testable scoring components.
-
-Add contextual evaluation incrementally.
+The first version must not pretend to account for pool synergy, archetypes,
+curve, or deck needs. Those are later increments with their own input models
+and tests.
 
 Acceptance criteria:
 
-- Recommendations are deterministic.
-- The same evaluator can run in the macOS app and in a headless CI process.
-- CI can publish versioned, schema-defined static recommendations without duplicating scoring logic.
-- Results are explainable.
-- Individual scoring factors can be inspected.
-- Scoring can be tested independently of the UI.
+- Recommendations are deterministic and explainable.
+- Readiness and snapshot compatibility are enforced before scoring.
+- Candidate metrics must match the requested set/event/user-group/color scope.
+- Missing or incompatible metrics are excluded with explicit reasons.
+- The scoring configuration and output schema are versioned.
+- The same evaluator runs in the macOS app and headless CI.
+- The web app consumes published results; it does not reimplement scoring.
+- Scoring is tested independently of the UI.
 
 ### Phase 5 — Integrated Draft Companion
 
