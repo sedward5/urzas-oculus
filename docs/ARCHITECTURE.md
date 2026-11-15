@@ -140,3 +140,24 @@ to a different dataset or score missing metrics as zero.
 
 The macOS app and CI must call this same API. The web app consumes published
 results and must not reproduce this calculation in JavaScript or TypeScript.
+
+## Local recommendation adapter
+
+`RecommendationService.evaluate` is the local DataEngine-to-ScoringEngine
+adapter. Callers provide the exact candidate Scryfall printing IDs, dataset
+scope, and explicit scoring configuration. The service:
+
+- Checks game/draft dataset readiness before looking up candidates.
+- Loads each printing from the local card store.
+- Loads performance records using the requested set, event, user group,
+  color filter, and card name.
+- Rejects duplicate candidate IDs and unknown card IDs explicitly.
+- Passes the assembled request to `ScoringEngine.evaluate`; it contains
+  no ranking or scoring logic of its own.
+
+The service does not invent or infer the format baseline. The caller must
+supply a baseline value and matching dataset key/snapshot in the versioned
+configuration. Recognition and draft-state adapters will provide candidate
+IDs once their integration is implemented. This service is independently
+testable without screen capture, OCR, SwiftUI, or network access.
+
