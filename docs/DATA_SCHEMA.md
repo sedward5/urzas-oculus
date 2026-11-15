@@ -173,3 +173,34 @@ The draft and game importers use the same snapshot ID and dataset key.
 Performance upserts merge non-nil facets for that snapshot/card identity,
 so importing one archive does not erase metrics already imported from the
 other. A single archive still does not make the dataset recommendation-ready.
+
+
+## Recommendation baseline contract
+
+The first shared evaluator uses Games in Hand Win Rate (GIH WR) as its
+standalone strength signal. GIH count is the number of card copies seen in
+opening hands or drawn later, not a count of independent games. A game can
+contribute multiple copies, and repeated draws can contribute more than one
+observation. Do not interpret this count as an independent Bernoulli sample
+or use it to claim a confidence interval.
+
+The evaluator regularizes observed GIH WR toward an explicitly supplied
+overall format baseline:
+
+`score = (GIH_WR * GIH_count + baseline_WR * prior_weight) / (GIH_count + prior_weight)`
+
+The baseline must come from the same set, event type, and user group. The
+prior weight is a versioned tuning parameter, not a claim about the number
+of independent observations. Both values are explicit scoring configuration;
+the evaluator does not invent a default baseline.
+
+ALSA and ATA are carried through as draft-context signals for display and
+future scoring work. This baseline version does not use them to change the
+ranking. Synergy, archetype, curve, and deck-needs adjustments are deferred
+until those inputs have explicit, tested contracts.
+
+Current importer tests use small compressed fixtures. They validate parser
+and aggregation behavior but do not replace a production validation pass
+against current official archives, including actual headers and independently
+recomputed metric totals. That archive-level comparison remains a release
+gate before recommendations are treated as production-ready.
