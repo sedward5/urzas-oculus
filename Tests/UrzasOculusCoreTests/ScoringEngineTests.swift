@@ -176,7 +176,7 @@ final class ScoringEngineTests: XCTestCase {
 
     private var configuration: RecommendationScoringConfiguration {
         RecommendationScoringConfiguration(
-            version: "baseline-test", baselineDatasetKey: dataset.datasetKey, baselineWinRate: 0.55, priorWeight: 40
+            version: "baseline-test", baselineDatasetKey: dataset.datasetKey, baselineSnapshotID: "snapshot-1", baselineWinRate: 0.55, priorWeight: 40
         )
     }
 
