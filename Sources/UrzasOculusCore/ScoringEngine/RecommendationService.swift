@@ -31,6 +31,10 @@ public enum RecommendationService {
             maximumAcquisitionAge: maximumAcquisitionAge
         )
 
+        guard readiness.isReady else {
+            throw RecommendationEngineError.datasetNotReady(readiness.issues)
+        }
+
         let candidates = try candidateCardIDs.map { id -> RecommendationCandidateInput in
             guard let card = try store.card(scryfallID: id) else {
                 throw RecommendationServiceError.missingCardRecord(id)
