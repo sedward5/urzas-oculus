@@ -128,8 +128,8 @@ final class RecommendationServiceTests: XCTestCase {
         count: Int,
         to store: LocalDataStore
     ) throws {
-        try store.upsert(CardRecord(id: id, name: name, setCode: "TST"))
-        try store.upsert(CardPerformanceRecord(
+        try store.upsert(card: CardRecord(id: id, name: name, setCode: "TST"))
+        try store.upsert(performance: CardPerformanceRecord(
             snapshotID: snapshotID,
             setCode: "TST",
             eventType: "PremierDraft",
