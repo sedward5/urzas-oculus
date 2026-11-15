@@ -58,10 +58,14 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         defer { try? store.close(); try? FileManager.default.removeItem(at: url) }
         try store.upsert(card: CardRecord(id: "test-printing", name: "Test Card", setCode: "TST"))
 
-        let draftCSV = "draft_id,pack_number,pick_number,pick,pack_card_Test Card\ndraft-a,1,1,Test Card,1\n"
+        // The production reader intentionally accepts gzip archives only.
+        // Keep this integration fixture in the same format as 17Lands exports.
+        let compressedDraftCSV = Data(base64Encoded:
+            "H4sIAAAAAAAC/0spSkwric9M0SlITM6OzyvNTUot0inIRGVDJJMTi1LiQ1KLSxScgSyuFJBO3UQdQyCEi+oYcgEAjJvxG1IAAAA="
+        )!
         let file = FileManager.default.temporaryDirectory
-            .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv")
-        try Data(draftCSV.utf8).write(to: file)
+            .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv.gz")
+        try compressedDraftCSV.write(to: file)
         defer { try? FileManager.default.removeItem(at: file) }
 
         _ = try SeventeenLandsDraftMetricsImporter.importCSV(
