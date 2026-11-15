@@ -12,7 +12,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
 
         // Pick 9 revisits the pack lane seen at pick 1. The other picks
         // belong to separate circulating packs in the same draft round.
-        try accumulator.consume(["draft-a", "1", "1", "Picked Card", "", "1", "0", "1"])
+        try accumulator.consume(["draft-a", "1", "1", "Picked Card", "", "1", "0", "0"])
         try accumulator.consume(["draft-a", "1", "2", "Other Card", "", "0", "1", "0"])
         try accumulator.consume(["draft-a", "1", "8", "Other Card", "", "0", "0", "0"])
         try accumulator.consume(["draft-a", "1", "9", "Wheel Card", "", "1", "0", "0"])
