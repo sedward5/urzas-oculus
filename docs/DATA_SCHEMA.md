@@ -151,9 +151,11 @@ current pack; `pick` identifies the primary selected card and `pick_2`
 is included when the archive records a secondary selection. The importer
 also requires `draft_id`, `pack_number`, and `pick_number`.
 
-The importer streams the archive and retains sightings for only the current
-draft/pack. At a pack boundary, each card's last observed pick number is
-folded into its ALSA total. This matters when a card wheels: the last
+The importer streams the archive and retains sightings for only the
+current draft round. It tracks the eight circulating pack lanes separately:
+pick 9 revisits the pack seen at pick 1, pick 10 revisits pick 2, and so on.
+At a round boundary, each card's last observed pick number within its own
+pack is folded into its ALSA total. This matters when a card wheels: the last
 observation on the second pass, not the first pass, determines ALSA.
 A selected card is counted as seen even when the P1P1 pack contents are
 missing from the Arena log.
@@ -164,8 +166,8 @@ and `pickCount` are retained as sample sizes; averages remain nil when
 their denominator is zero. These are card-instance counts, not unique
 draft counts.
 
-The official public draft archive is ordered by draft and pack; the
-streaming accumulator finalizes a pack when its key changes. Draft
+The official public draft archive is ordered by draft and pack round; the
+streaming accumulator finalizes the eight pack lanes when that key changes. Draft
 statistics use the all-user archive and are not filtered by deck colors.
 The draft and game importers use the same snapshot ID and dataset key.
 Performance upserts merge non-nil facets for that snapshot/card identity,
