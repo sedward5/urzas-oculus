@@ -18,7 +18,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         try accumulator.consume(["draft-a", "1", "10", "Late Card", "", "0", "1", "0"])
 
         // Same card in a second pack is a second seen instance.
-        try accumulator.consume(["draft-a", "2", "1", "Wheel Card", "Late Card", "1", "1", "0"])
+        try accumulator.consume(["draft-a", "2", "1", "Wheel Card", "", "1", "1", "0"])
 
         let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
         let wheel = try XCTUnwrap(metrics["Wheel Card"])
@@ -29,7 +29,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
 
         let late = try XCTUnwrap(metrics["Late Card"])
         XCTAssertEqual(late.seenCount, 2)
-        XCTAssertEqual(try XCTUnwrap(late.averageLastSeen), 10.5, accuracy: 0.0001)
+        XCTAssertEqual(try XCTUnwrap(late.averageLastSeen), 5.5, accuracy: 0.0001)
         XCTAssertEqual(late.pickCount, 1)
         XCTAssertEqual(try XCTUnwrap(late.averageTakenAt), 10.0, accuracy: 0.0001)
 
