@@ -228,7 +228,7 @@ public enum SeventeenLandsGameMetricsImporter {
         let snapshot = DatasetSnapshot(
             id: snapshotID,
             source: .seventeenLands,
-            datasetKey: "\(request.setCode):\(request.eventType):\(request.userGroup):\(request.colorFilter ?? "all)",
+            datasetKey: "\(request.setCode):\(request.eventType):\(request.userGroup):\(request.colorFilter ?? "all")",
             sourceUpdatedAt: sourceUpdatedAt,
             importedAt: importedAt,
             recordCount: metrics.count,
