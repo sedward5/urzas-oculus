@@ -54,6 +54,7 @@ public enum RecommendationReadinessIssue: Equatable, Sendable {
     case emptyComponent(DatasetComponentKind)
     case staleComponent(DatasetComponentKind)
     case mismatchedSourceUpdate
+    case mismatchedSnapshot
     case unknownSourceUpdate
     case unsupportedUserGroup(String)
 }
@@ -105,6 +106,9 @@ public struct RecommendationDataReadiness: Equatable, Sendable {
             }
         }
         if let game = indexed[.game], let draft = indexed[.draft] {
+            if game.snapshotID != draft.snapshotID {
+                findings.append(.mismatchedSnapshot)
+            }
             if let gameUpdate = game.sourceUpdatedAt, let draftUpdate = draft.sourceUpdatedAt {
                 if gameUpdate != draftUpdate { findings.append(.mismatchedSourceUpdate) }
             } else {
