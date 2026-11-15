@@ -43,6 +43,49 @@ public final class LocalDataStore: @unchecked Sendable {
         }
     }
 
+    /// Records successful import provenance for one independently acquired dataset facet.
+    public func save(component: DatasetComponentSnapshot) throws {
+        try withStatement("""
+        INSERT INTO dataset_components
+          (id, dataset_key, kind, snapshot_id, source_updated_at, imported_at, record_count)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(id) DO UPDATE SET snapshot_id=excluded.snapshot_id,
+          source_updated_at=excluded.source_updated_at, imported_at=excluded.imported_at,
+          record_count=excluded.record_count
+        """) { s in
+            bind(component.id, 1, s); bind(component.datasetKey, 2, s)
+            bind(component.kind.rawValue, 3, s); bind(component.id, 4, s)
+            bind(component.sourceUpdatedAt?.timeIntervalSince1970, 5, s)
+            bind(component.importedAt.timeIntervalSince1970, 6, s)
+            bind(component.recordCount, 7, s); try stepDone(s)
+        }
+    }
+
+    public func components(datasetKey: String) throws -> [DatasetComponentSnapshot] {
+        try withStatement("""
+        SELECT dataset_key, kind, snapshot_id, source_updated_at, imported_at, record_count
+        FROM dataset_components WHERE dataset_key = ?
+        """) { s in
+            bind(datasetKey, 1, s)
+            var result: [DatasetComponentSnapshot] = []
+            while sqlite3_step(s) == SQLITE_ROW {
+                guard let key = columnText(s, 0),
+                      let rawKind = columnText(s, 1),
+                      let kind = DatasetComponentKind(rawValue: rawKind),
+                      let snapshotID = columnText(s, 2) else { continue }
+                let sourceTime = sqlite3_column_type(s, 3) == SQLITE_NULL
+                    ? nil : Date(timeIntervalSince1970: sqlite3_column_double(s, 3))
+                let importedAt = Date(timeIntervalSince1970: sqlite3_column_double(s, 4))
+                result.append(DatasetComponentSnapshot(
+                    datasetKey: key, kind: kind, snapshotID: snapshotID,
+                    sourceUpdatedAt: sourceTime, importedAt: importedAt,
+                    recordCount: Int(sqlite3_column_int64(s, 5))
+                ))
+            }
+            return result
+        }
+    }
+
     public func save(snapshot: DatasetSnapshot) throws {
         try withStatement("""
         INSERT INTO dataset_snapshots
@@ -187,6 +230,13 @@ public final class LocalDataStore: @unchecked Sendable {
         );
         CREATE INDEX IF NOT EXISTS idx_snapshots_source_key
           ON dataset_snapshots(source, dataset_key, imported_at DESC);
+        CREATE TABLE IF NOT EXISTS dataset_components (
+          id TEXT PRIMARY KEY, dataset_key TEXT NOT NULL, kind TEXT NOT NULL,
+          snapshot_id TEXT NOT NULL, source_updated_at REAL, imported_at REAL NOT NULL,
+          record_count INTEGER NOT NULL
+        );
+        CREATE INDEX IF NOT EXISTS idx_dataset_components_key
+          ON dataset_components(dataset_key, kind);
         CREATE TABLE IF NOT EXISTS cards (
           scryfall_id TEXT PRIMARY KEY, oracle_id TEXT, arena_id INTEGER, mtgo_id INTEGER,
           name TEXT NOT NULL, normalized_name TEXT NOT NULL, set_code TEXT NOT NULL,
@@ -243,6 +293,11 @@ public final class LocalDataStore: @unchecked Sendable {
             guard sqlite3_step(s) == SQLITE_ROW else { throw makeError() }
             return Int(sqlite3_column_int64(s, 0))
         }
+    }
+
+    private func columnText(_ s: OpaquePointer, _ index: Int32) -> String? {
+        guard let value = sqlite3_column_text(s, index) else { return nil }
+        return String(cString: value)
     }
 
     private func columnData(_ s: OpaquePointer, _ index: Int32) -> Data? {
