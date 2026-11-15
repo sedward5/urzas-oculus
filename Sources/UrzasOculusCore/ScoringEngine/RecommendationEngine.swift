@@ -9,20 +9,22 @@ public enum RecommendationEngineError: Error, Equatable {
 
 /// Versioned, explicit inputs to the baseline evaluator.
 ///
-/// priorWeight is a regularization strength, not an independent-observation
-/// count or a confidence interval. 17Lands counts are copy-weighted and may
-/// contain correlated observations from the same game.
+/// baselineWinRate must come from the overall win rate for the same set,
+/// event, and user-group dataset. priorWeight is a regularization strength,
+/// not an independent-observation count or confidence interval. 17Lands
+/// counts are copy-weighted and may contain correlated observations.
 public struct RecommendationScoringConfiguration: Equatable, Sendable {
     public let version: String
     public let schemaVersion: Int
     public let baselineWinRate: Double
+    /// Regularization strength; must be tuned and versioned with the strategy.
     public let priorWeight: Double
 
     public init(
         version: String,
         schemaVersion: Int = 1,
         baselineWinRate: Double,
-        priorWeight: Double = 40
+        priorWeight: Double
     ) {
         self.version = version
         self.schemaVersion = schemaVersion
@@ -116,6 +118,7 @@ public struct RecommendationResult: Equatable, Sendable {
     public let datasetKey: String
     public let gameSnapshotID: String
     public let engineVersion: String
+    public let scoringConfigurationVersion: String
     public let schemaVersion: Int
     public let ranked: [ScoredRecommendation]
     public let excluded: [ExcludedRecommendation]
@@ -124,6 +127,7 @@ public struct RecommendationResult: Equatable, Sendable {
         datasetKey: String,
         gameSnapshotID: String,
         engineVersion: String,
+        scoringConfigurationVersion: String,
         schemaVersion: Int,
         ranked: [ScoredRecommendation],
         excluded: [ExcludedRecommendation]
@@ -131,6 +135,7 @@ public struct RecommendationResult: Equatable, Sendable {
         self.datasetKey = datasetKey
         self.gameSnapshotID = gameSnapshotID
         self.engineVersion = engineVersion
+        self.scoringConfigurationVersion = scoringConfigurationVersion
         self.schemaVersion = schemaVersion
         self.ranked = ranked
         self.excluded = excluded
@@ -259,6 +264,7 @@ public enum ScoringEngine {
             datasetKey: request.dataset.datasetKey,
             gameSnapshotID: gameComponent.snapshotID,
             engineVersion: engineVersion,
+            scoringConfigurationVersion: configuration.version,
             schemaVersion: configuration.schemaVersion,
             ranked: ranked,
             excluded: excluded
