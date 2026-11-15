@@ -1,0 +1,107 @@
+import Foundation
+
+/// The independently acquired components required for a complete 17Lands
+/// recommendation dataset.
+public enum DatasetComponentKind: String, Codable, CaseIterable, Sendable {
+    case game
+    case draft
+}
+
+/// Provenance for one successfully imported component of a logical dataset.
+public struct DatasetComponentSnapshot: Codable, Equatable, Sendable, Identifiable {
+    public let id: String
+    public let datasetKey: String
+    public let kind: DatasetComponentKind
+    public let sourceUpdatedAt: Date?
+    public let importedAt: Date
+    public let recordCount: Int
+
+    public init(datasetKey: String, kind: DatasetComponentKind, snapshotID: String,
+                sourceUpdatedAt: Date?, importedAt: Date, recordCount: Int) {
+        self.datasetKey = datasetKey
+        self.kind = kind
+        self.id = "\(datasetKey)|\(kind.rawValue)"
+        self.sourceUpdatedAt = sourceUpdatedAt
+        self.importedAt = importedAt
+        self.recordCount = recordCount
+    }
+}
+
+/// The logical identity against which recommendation data is evaluated.
+public struct RecommendationDatasetRequest: Equatable, Sendable {
+    public let setCode: String
+    public let eventType: String
+    public let userGroup: String
+    public let colorFilter: String?
+
+    public init(setCode: String, eventType: String = "PremierDraft",
+                userGroup: String = "all", colorFilter: String? = nil) {
+        self.setCode = setCode.uppercased()
+        self.eventType = eventType
+        self.userGroup = userGroup
+        self.colorFilter = colorFilter?.uppercased()
+    }
+
+    public var datasetKey: String {
+        "\(setCode):\(eventType):\(userGroup):\(colorFilter ?? "all")"
+    }
+}
+
+public enum RecommendationReadinessIssue: Equatable, Sendable {
+    case missingComponent(DatasetComponentKind)
+    case emptyComponent(DatasetComponentKind)
+    case staleComponent(DatasetComponentKind)
+    case mismatchedSourceUpdate
+    case unsupportedUserGroup(String)
+}
+
+/// A deterministic readiness result shared by local and batch callers.
+public struct RecommendationDataReadiness: Equatable, Sendable {
+    public let datasetKey: String
+    public let components: [DatasetComponentKind: DatasetComponentSnapshot]
+    public let issues: [RecommendationReadinessIssue]
+
+    public var isReady: Bool { issues.isEmpty }
+
+    public init(request: RecommendationDatasetRequest,
+                components: [DatasetComponentSnapshot],
+                now: Date = .now,
+                maximumSourceAge: TimeInterval? = nil,
+                maximumAcquisitionAge: TimeInterval? = nil) {
+        datasetKey = request.datasetKey
+        var indexed: [DatasetComponentKind: DatasetComponentSnapshot] = [:]
+        for component in components where component.datasetKey == request.datasetKey {
+            indexed[component.kind] = component
+        }
+        self.components = indexed
+
+        var findings: [RecommendationReadinessIssue] = []
+        if request.userGroup != "all" {
+            findings.append(.unsupportedUserGroup(request.userGroup))
+        }
+        for kind in DatasetComponentKind.allCases {
+            guard let component = indexed[kind] else {
+                findings.append(.missingComponent(kind))
+                continue
+            }
+            if component.recordCount <= 0 {
+                findings.append(.emptyComponent(kind))
+            }
+            if let maximumSourceAge,
+               let updatedAt = component.sourceUpdatedAt,
+               now.timeIntervalSince(updatedAt) > maximumSourceAge {
+                findings.append(.staleComponent(kind))
+            }
+            if let maximumAcquisitionAge,
+               now.timeIntervalSince(component.importedAt) > maximumAcquisitionAge {
+                findings.append(.staleComponent(kind))
+            }
+        }
+        if let game = indexed[.game], let draft = indexed[.draft],
+           let gameUpdate = game.sourceUpdatedAt, let draftUpdate = draft.sourceUpdatedAt,
+           gameUpdate != draftUpdate {
+            findings.append(.mismatchedSourceUpdate)
+        }
+        issues = findings
+    }
+}
