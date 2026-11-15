@@ -134,7 +134,7 @@ final class ScoringEngineTests: XCTestCase {
             readiness: ready,
             candidates: [candidate("Card", rate: 0.6, count: 20)],
             configuration: RecommendationScoringConfiguration(
-                version: "test", baselineDatasetKey: dataset.datasetKey, baselineWinRate: 1.2, priorWeight: 40
+                version: "test", baselineDatasetKey: dataset.datasetKey, baselineSnapshotID: "snapshot-1", baselineWinRate: 1.2, priorWeight: 40
             )
         )
         XCTAssertThrowsError(try ScoringEngine.evaluate(invalid)) {
@@ -148,11 +148,28 @@ final class ScoringEngineTests: XCTestCase {
             configuration: RecommendationScoringConfiguration(
                 version: "wrong-baseline",
                 baselineDatasetKey: "OTHER:PremierDraft:all:all",
+                baselineSnapshotID: "snapshot-1",
                 baselineWinRate: 0.55,
                 priorWeight: 40
             )
         )
         XCTAssertThrowsError(try ScoringEngine.evaluate(wrongBaseline)) {
+            XCTAssertEqual($0 as? RecommendationEngineError, .invalidConfiguration)
+        }
+
+        let staleBaseline = RecommendationEvaluationRequest(
+            dataset: dataset,
+            readiness: ready,
+            candidates: [candidate("Card", rate: 0.6, count: 20)],
+            configuration: RecommendationScoringConfiguration(
+                version: "stale-baseline",
+                baselineDatasetKey: dataset.datasetKey,
+                baselineSnapshotID: "older-snapshot",
+                baselineWinRate: 0.55,
+                priorWeight: 40
+            )
+        )
+        XCTAssertThrowsError(try ScoringEngine.evaluate(staleBaseline)) {
             XCTAssertEqual($0 as? RecommendationEngineError, .invalidConfiguration)
         }
     }
