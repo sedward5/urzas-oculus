@@ -4,7 +4,6 @@ public enum RecommendationEngineError: Error, Equatable {
     case datasetNotReady([RecommendationReadinessIssue])
     case readinessScopeMismatch
     case invalidConfiguration
-    case noScorableCandidates
 }
 
 /// Versioned, explicit inputs to the baseline evaluator.
@@ -123,6 +122,8 @@ public struct RecommendationResult: Equatable, Sendable {
     public let ranked: [ScoredRecommendation]
     public let excluded: [ExcludedRecommendation]
 
+    public var hasRecommendations: Bool { !ranked.isEmpty }
+
     public init(
         datasetKey: String,
         gameSnapshotID: String,
@@ -198,7 +199,9 @@ public enum ScoringEngine {
             guard performance.setCode == request.dataset.setCode,
                   performance.eventType == request.dataset.eventType,
                   performance.userGroup == request.dataset.userGroup,
-                  performance.colorFilter == request.dataset.colorFilter else {
+                  performance.colorFilter == request.dataset.colorFilter,
+                  CardRecord.normalizeName(performance.cardName) == CardRecord.normalizeName(card.name),
+                  performance.cardScryfallID == nil || performance.cardScryfallID == card.id else {
                 excluded.append(ExcludedRecommendation(
                     id: card.id, cardName: card.name, reason: .mismatchedDatasetScope
                 ))
@@ -238,10 +241,6 @@ public enum ScoringEngine {
                     configuration: configuration
                 )
             ))
-        }
-
-        guard !ranked.isEmpty else {
-            throw RecommendationEngineError.noScorableCandidates
         }
 
         ranked.sort {
