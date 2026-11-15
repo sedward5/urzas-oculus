@@ -189,10 +189,12 @@ overall format baseline:
 
 `score = (GIH_WR * GIH_count + baseline_WR * prior_weight) / (GIH_count + prior_weight)`
 
-The baseline must come from the same set, event type, and user group. The
-prior weight is a versioned tuning parameter, not a claim about the number
-of independent observations. Both values are explicit scoring configuration;
-the evaluator does not invent a default baseline.
+The baseline must come from the same set, event type, and user group. Its
+dataset key is included in the scoring configuration and the evaluator
+rejects a baseline whose key does not match the requested dataset. The prior
+weight is a versioned tuning parameter, not a claim about the number of
+independent observations. Both values are explicit configuration; the
+evaluator does not invent a default baseline.
 
 ALSA and ATA are carried through as draft-context signals for display and
 future scoring work. This baseline version does not use them to change the
