@@ -1,0 +1,102 @@
+import Foundation
+import XCTest
+@testable import UrzasOculusCore
+
+final class SeventeenLandsDraftMetricsTests: XCTestCase {
+    func testAggregatesLastSeenPerPackAndTakenAtPerPick() throws {
+        let header = try SeventeenLandsCSVHeader(columns: [
+            "draft_id", "pack_number", "pick_number", "pick", "pick_2",
+            "pack_card_Wheel Card", "pack_card_Late Card", "pack_card_Picked Card"
+        ])
+        let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
+
+        // Wheel Card survives the first pass and is seen again on pick 9.
+        try accumulator.consume(["draft-a", "1", "1", "Picked Card", "", "1", "1", "1"])
+        try accumulator.consume(["draft-a", "1", "2", "Other Card", "", "1", "1", "0"])
+        try accumulator.consume(["draft-a", "1", "8", "Other Card", "", "1", "1", "0"])
+        try accumulator.consume(["draft-a", "1", "9", "Wheel Card", "", "1", "0", "0"])
+        try accumulator.consume(["draft-a", "1", "10", "Late Card", "", "0", "1", "0"])
+
+        // Same card in a second pack is a second seen instance.
+        try accumulator.consume(["draft-a", "2", "1", "Wheel Card", "Late Card", "1", "1", "0"])
+
+        let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
+        let wheel = try XCTUnwrap(metrics["Wheel Card"])
+        XCTAssertEqual(wheel.seenCount, 2)
+        XCTAssertEqual(try XCTUnwrap(wheel.averageLastSeen), 5.0, accuracy: 0.0001)
+        XCTAssertEqual(wheel.pickCount, 2)
+        XCTAssertEqual(try XCTUnwrap(wheel.averageTakenAt), 5.0, accuracy: 0.0001)
+
+        let late = try XCTUnwrap(metrics["Late Card"])
+        XCTAssertEqual(late.seenCount, 2)
+        XCTAssertEqual(try XCTUnwrap(late.averageLastSeen), 10.5, accuracy: 0.0001)
+        XCTAssertEqual(late.pickCount, 1)
+        XCTAssertEqual(try XCTUnwrap(late.averageTakenAt), 10.0, accuracy: 0.0001)
+
+        let picked = try XCTUnwrap(metrics["Picked Card"])
+        XCTAssertEqual(picked.seenCount, 1)
+        XCTAssertEqual(picked.pickCount, 1)
+        XCTAssertEqual(picked.averageLastSeen, 1.0)
+    }
+
+    func testRejectsMissingColumnsAndInvalidPickNumbers() throws {
+        let missing = try SeventeenLandsCSVHeader(columns: ["draft_id", "pack_number", "pick_number", "pick"])
+        XCTAssertThrowsError(try SeventeenLandsDraftMetricsAccumulator(header: missing))
+
+        let header = try SeventeenLandsCSVHeader(columns: [
+            "draft_id", "pack_number", "pick_number", "pick", "pack_card_Test Card"
+        ])
+        let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
+        XCTAssertThrowsError(try accumulator.consume(["draft", "1", "0", "Test Card", "1"]))
+    }
+
+    func testImporterMergesDraftAndGameFieldsForSharedSnapshot() throws {
+        let url = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString).appendingPathExtension("sqlite")
+        let store = try LocalDataStore(url: url)
+        defer { try? store.close(); try? FileManager.default.removeItem(at: url) }
+        try store.upsert(card: CardRecord(id: "test-printing", name: "Test Card", setCode: "TST"))
+
+        let draftCSV = "draft_id,pack_number,pick_number,pick,pack_card_Test Card\ndraft-a,1,1,Test Card,1\n"
+        let file = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv")
+        try Data(draftCSV.utf8).write(to: file)
+        defer { try? FileManager.default.removeItem(at: file) }
+
+        _ = try SeventeenLandsDraftMetricsImporter.importCSV(
+            from: file,
+            request: SeventeenLandsImportRequest(setCode: "TST"),
+            snapshotID: "shared-snapshot",
+            into: store
+        )
+        try store.upsert(performance: CardPerformanceRecord(
+            snapshotID: "shared-snapshot",
+            setCode: "TST",
+            eventType: "PremierDraft",
+            cardName: "Test Card",
+            gameCount: 12,
+            winRate: 0.55
+        ))
+
+        let metric = try XCTUnwrap(store.performance(
+            setCode: "TST", eventType: "PremierDraft", cardName: "Test Card"
+        ))
+        XCTAssertEqual(metric.pickCount, 1)
+        XCTAssertEqual(metric.seenCount, 1)
+        XCTAssertEqual(metric.averageLastSeen, 1.0)
+        XCTAssertEqual(metric.gameCount, 12)
+        XCTAssertEqual(metric.winRate, 0.55)
+    }
+
+    func testSecondaryPickContributesToPickCountAndATA() throws {
+        let header = try SeventeenLandsCSVHeader(columns: [
+            "draft_id", "pack_number", "pick_number", "pick", "pick_2",
+            "pack_card_Primary", "pack_card_Secondary"
+        ])
+        let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
+        try accumulator.consume(["draft", "1", "3", "Primary", "Secondary", "1", "1"])
+        let values = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
+        XCTAssertEqual(values["Secondary"]?.pickCount, 1)
+        XCTAssertEqual(values["Secondary"]?.averageTakenAt, 3.0)
+    }
+}
