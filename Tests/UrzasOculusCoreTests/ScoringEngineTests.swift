@@ -70,6 +70,38 @@ final class ScoringEngineTests: XCTestCase {
         XCTAssertEqual(result.excluded.first(where: { $0.cardName == "No Sample" })?.reason, .missingGamesInHandSample)
     }
 
+    func testReturnsExplicitExclusionsWhenNoCandidateCanBeScored() throws {
+        let request = try makeRequest(candidates: [
+            candidate("No Metrics", rate: nil, count: 0)
+        ])
+
+        let result = try ScoringEngine.evaluate(request)
+
+        XCTAssertFalse(result.hasRecommendations)
+        XCTAssertTrue(result.ranked.isEmpty)
+        XCTAssertEqual(result.excluded.map(\\.reason), [.missingGamesInHandSample])
+    }
+
+    func testRejectsPerformanceForAnotherCardIdentity() throws {
+        let card = CardRecord(id: "card-id", name: "Actual Card", setCode: "TST")
+        let performance = CardPerformanceRecord(
+            snapshotID: "snapshot-1",
+            setCode: "TST",
+            eventType: "PremierDraft",
+            cardName: "Different Card",
+            winRate: 0.65,
+            gamesInHandCount: 20
+        )
+        let request = try makeRequest(candidates: [
+            RecommendationCandidateInput(card: card, performance: performance)
+        ])
+
+        let result = try ScoringEngine.evaluate(request)
+
+        XCTAssertFalse(result.hasRecommendations)
+        XCTAssertEqual(result.excluded.first?.reason, .mismatchedDatasetScope)
+    }
+
     func testRejectsMismatchedReadinessScopeAndInvalidConfiguration() throws {
         let ready = try makeReadiness()
         let wrongScope = RecommendationEvaluationRequest(
