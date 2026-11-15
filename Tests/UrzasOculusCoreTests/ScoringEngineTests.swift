@@ -181,9 +181,9 @@ final class ScoringEngineTests: XCTestCase {
             eventType: eventType,
             cardName: name,
             winRate: rate,
-            gamesInHandCount: count,
             averageLastSeen: alsa,
-            averageTakenAt: ata
+            averageTakenAt: ata,
+            gamesInHandCount: count
         )
         return RecommendationCandidateInput(card: card, performance: performance)
     }
