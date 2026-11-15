@@ -86,7 +86,11 @@ public final class LocalDataStore: @unchecked Sendable {
         guard !performance.cardName.isEmpty, !performance.setCode.isEmpty else {
             throw DataEngineError.invalidPerformanceRecord(performance.cardName)
         }
-        let payload = try encoder.encode(performance)
+        let existing: CardPerformanceRecord? = try queryOne(
+            "SELECT payload FROM card_performance WHERE id = ?", value: performance.id
+        )
+        let merged = existing?.merging(performance) ?? performance
+        let payload = try encoder.encode(merged)
         try withStatement("""
         INSERT INTO card_performance
           (id, snapshot_id, scryfall_id, set_code, event_type, user_group, color_filter,
@@ -96,15 +100,15 @@ public final class LocalDataStore: @unchecked Sendable {
           scryfall_id=excluded.scryfall_id, game_count=excluded.game_count,
           win_rate=excluded.win_rate, average_last_seen=excluded.average_last_seen,
           average_taken_at=excluded.average_taken_at, payload=excluded.payload
-        """) { s in
-            bind(performance.id, 1, s); bind(performance.snapshotID, 2, s)
-            bind(performance.cardScryfallID, 3, s); bind(performance.setCode, 4, s)
-            bind(performance.eventType, 5, s); bind(performance.userGroup, 6, s)
-            bind(performance.colorFilter ?? "all", 7, s)
-            bind(CardRecord.normalizeName(performance.cardName), 8, s)
-            bind(performance.gameCount, 9, s); bind(performance.winRate, 10, s)
-            bind(performance.averageLastSeen, 11, s); bind(performance.averageTakenAt, 12, s)
-            bind(payload, 13, s); try stepDone(s)
+        """) { statement in
+            bind(merged.id, 1, statement); bind(merged.snapshotID, 2, statement)
+            bind(merged.cardScryfallID, 3, statement); bind(merged.setCode, 4, statement)
+            bind(merged.eventType, 5, statement); bind(merged.userGroup, 6, statement)
+            bind(merged.colorFilter ?? "all", 7, statement)
+            bind(CardRecord.normalizeName(merged.cardName), 8, statement)
+            bind(merged.gameCount, 9, statement); bind(merged.winRate, 10, statement)
+            bind(merged.averageLastSeen, 11, statement); bind(merged.averageTakenAt, 12, statement)
+            bind(payload, 13, statement); try stepDone(statement)
         }
     }
 

@@ -129,6 +129,7 @@ public struct CardPerformanceRecord: Codable, Equatable, Sendable, Identifiable 
     public let rarity: String?
     public let gameCount: Int?
     public let pickCount: Int?
+    public let seenCount: Int?
     public let playRate: Double?
     public let winRate: Double?
     public let openingHandWinRate: Double?
@@ -143,11 +144,46 @@ public struct CardPerformanceRecord: Codable, Equatable, Sendable, Identifiable 
     public let drawnCount: Int?
     public let gamesNotSeenCount: Int?
     public let gamesNotSeenWinRate: Double?
+    /// Combines independently imported draft and game facets for one
+    /// snapshot/card identity. Non-nil incoming values replace prior values;
+    /// absent facets leave the other import intact.
+    public func merging(_ newer: CardPerformanceRecord) -> CardPerformanceRecord {
+        CardPerformanceRecord(
+            snapshotID: snapshotID,
+            setCode: setCode,
+            eventType: eventType,
+            userGroup: userGroup,
+            colorFilter: newer.colorFilter ?? colorFilter,
+            cardName: cardName,
+            cardScryfallID: newer.cardScryfallID ?? cardScryfallID,
+            color: newer.color ?? color,
+            rarity: newer.rarity ?? rarity,
+            gameCount: newer.gameCount ?? gameCount,
+            pickCount: newer.pickCount ?? pickCount,
+            seenCount: newer.seenCount ?? seenCount,
+            playRate: newer.playRate ?? playRate,
+            winRate: newer.winRate ?? winRate,
+            openingHandWinRate: newer.openingHandWinRate ?? openingHandWinRate,
+            drawnWinRate: newer.drawnWinRate ?? drawnWinRate,
+            drawnImprovementWinRate: newer.drawnImprovementWinRate ?? drawnImprovementWinRate,
+            averageLastSeen: newer.averageLastSeen ?? averageLastSeen,
+            averageTakenAt: newer.averageTakenAt ?? averageTakenAt,
+            gamesPlayedCount: newer.gamesPlayedCount ?? gamesPlayedCount,
+            gamesPlayedWinRate: newer.gamesPlayedWinRate ?? gamesPlayedWinRate,
+            gamesInHandCount: newer.gamesInHandCount ?? gamesInHandCount,
+            openingHandCount: newer.openingHandCount ?? openingHandCount,
+            drawnCount: newer.drawnCount ?? drawnCount,
+            gamesNotSeenCount: newer.gamesNotSeenCount ?? gamesNotSeenCount,
+            gamesNotSeenWinRate: newer.gamesNotSeenWinRate ?? gamesNotSeenWinRate
+        )
+    }
+
 
     public init(snapshotID: String, setCode: String, eventType: String,
                 userGroup: String = "all", colorFilter: String? = nil,
                 cardName: String, cardScryfallID: String? = nil, color: String? = nil,
                 rarity: String? = nil, gameCount: Int? = nil, pickCount: Int? = nil,
+                seenCount: Int? = nil,
                 playRate: Double? = nil, winRate: Double? = nil,
                 openingHandWinRate: Double? = nil, drawnWinRate: Double? = nil,
                 drawnImprovementWinRate: Double? = nil, averageLastSeen: Double? = nil,
@@ -166,6 +202,7 @@ public struct CardPerformanceRecord: Codable, Equatable, Sendable, Identifiable 
         self.rarity = rarity
         self.gameCount = gameCount
         self.pickCount = pickCount
+        self.seenCount = seenCount
         self.playRate = playRate
         self.winRate = winRate
         self.openingHandWinRate = openingHandWinRate
