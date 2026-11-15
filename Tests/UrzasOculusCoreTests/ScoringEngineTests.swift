@@ -79,7 +79,7 @@ final class ScoringEngineTests: XCTestCase {
 
         XCTAssertFalse(result.hasRecommendations)
         XCTAssertTrue(result.ranked.isEmpty)
-        XCTAssertEqual(result.excluded.map(\\.reason), [.missingGamesInHandSample])
+        XCTAssertEqual(result.excluded.map(\.reason), [.missingGamesInHandSample])
     }
 
     func testRejectsPerformanceForAnotherCardIdentity() throws {
