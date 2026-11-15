@@ -54,7 +54,7 @@ public final class LocalDataStore: @unchecked Sendable {
           record_count=excluded.record_count
         """) { s in
             bind(component.id, 1, s); bind(component.datasetKey, 2, s)
-            bind(component.kind.rawValue, 3, s); bind(component.id, 4, s)
+            bind(component.kind.rawValue, 3, s); bind(component.snapshotID, 4, s)
             bind(component.sourceUpdatedAt?.timeIntervalSince1970, 5, s)
             bind(component.importedAt.timeIntervalSince1970, 6, s)
             bind(component.recordCount, 7, s); try stepDone(s)
