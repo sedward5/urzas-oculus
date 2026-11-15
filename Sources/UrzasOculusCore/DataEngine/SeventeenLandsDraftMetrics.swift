@@ -237,6 +237,11 @@ public enum SeventeenLandsDraftMetricsImporter {
 
         return try store.transaction {
             try store.save(snapshot: snapshot)
+            try store.save(component: DatasetComponentSnapshot(
+                datasetKey: snapshot.datasetKey, kind: .draft, snapshotID: snapshotID,
+                sourceUpdatedAt: sourceUpdatedAt, importedAt: importedAt,
+                recordCount: metrics.count
+            ))
             for metric in metrics {
                 let matches = try store.cards(named: metric.cardName, setCode: request.setCode)
                 let linkedID = matches.count == 1 ? matches[0].id : nil

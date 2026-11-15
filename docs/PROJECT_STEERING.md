@@ -8,6 +8,13 @@ The application captures the mirrored iPhone window, identifies the active draft
 
 The application is designed around local processing, deterministic algorithms, and explainable recommendations.
 
+Recommendation evaluation must be reusable across execution environments. The macOS app
+and scheduled/triggered CI jobs must call the same deterministic Swift core; they must
+never maintain separate scoring implementations. CI may publish versioned, static
+recommendation artifacts for the web app, but publishing is a distribution concern,
+not a second recommendation engine. The local draft workflow must remain fully usable
+offline and must not depend on the web app or CI.
+
 The player remains in complete control of the game. Urza's Oculus observes and advises. It does not interact with Arena.
 
 ### Primary objectives
@@ -245,6 +252,18 @@ Responsibilities:
 - Recommendation explanations.
 
 Scoring must be deterministic for a given draft state, scoring configuration, and reference-data version.
+
+The recommendation evaluator must be a pure, reusable core API with explicit input and
+output models. It must not depend on SwiftUI, app lifecycle, local filesystem layout,
+GitHub Actions, web hosting, or network services. App-specific and CI-specific adapters
+may load inputs and deliver outputs, but both must invoke this same evaluator.
+
+CI batch execution must use the same dataset readiness rules as the macOS app. It may
+generate and publish versioned static recommendation artifacts for the web app. Each
+artifact must identify its set, format/event type, user group, source dataset timestamps,
+local generation timestamp, evaluator/scoring version, and schema version. A failed
+readiness check must prevent publication; partial or mismatched datasets must never be
+presented as recommendation-ready.
 
 ScoringEngine must not mutate draft state.
 
@@ -494,6 +513,8 @@ Add contextual evaluation incrementally.
 Acceptance criteria:
 
 - Recommendations are deterministic.
+- The same evaluator can run in the macOS app and in a headless CI process.
+- CI can publish versioned, schema-defined static recommendations without duplicating scoring logic.
 - Results are explainable.
 - Individual scoring factors can be inspected.
 - Scoring can be tested independently of the UI.

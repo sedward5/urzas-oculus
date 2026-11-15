@@ -68,12 +68,13 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         try compressedDraftCSV.write(to: file)
         defer { try? FileManager.default.removeItem(at: file) }
 
-        _ = try SeventeenLandsDraftMetricsImporter.importCSV(
+        let draftSnapshot = try SeventeenLandsDraftMetricsImporter.importCSV(
             from: file,
             request: SeventeenLandsImportRequest(setCode: "TST"),
             snapshotID: "shared-snapshot",
             into: store
         )
+        XCTAssertEqual(try store.components(datasetKey: draftSnapshot.datasetKey).map(\.kind), [.draft])
         try store.upsert(performance: CardPerformanceRecord(
             snapshotID: "shared-snapshot",
             setCode: "TST",
