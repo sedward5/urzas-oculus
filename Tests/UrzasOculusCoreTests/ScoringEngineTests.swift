@@ -13,12 +13,14 @@ final class ScoringEngineTests: XCTestCase {
 
         let result = try ScoringEngine.evaluate(request)
 
-        XCTAssertEqual(result.ranked.map(\.cardName), ["Strong", "Steady", "Small Sample"])
-        XCTAssertEqual(result.ranked.first?.score, (0.70 * 100 + 0.55 * 40) / 140, accuracy: 0.000001)
-        XCTAssertEqual(result.ranked.first?.averageLastSeen, 2.1)
-        XCTAssertEqual(result.ranked.first?.averageTakenAt, 3.4)
-        XCTAssertTrue(result.ranked.first?.explanation.contains("copy-weighted observations") == true)
+        XCTAssertEqual(result.ranked.map(\.cardName), ["Strong", "Small Sample", "Steady"])
+        let strongest = try XCTUnwrap(result.ranked.first)
+        XCTAssertEqual(strongest.score, (0.70 * 100 + 0.55 * 40) / 140, accuracy: 0.000001)
+        XCTAssertEqual(strongest.averageLastSeen, 2.1)
+        XCTAssertEqual(strongest.averageTakenAt, 3.4)
+        XCTAssertTrue(strongest.explanation.contains("copy-weighted observations"))
         XCTAssertEqual(result.engineVersion, ScoringEngine.engineVersion)
+        XCTAssertEqual(result.scoringConfigurationVersion, "baseline-test")
         XCTAssertEqual(result.gameSnapshotID, "snapshot-1")
     }
 
@@ -85,7 +87,7 @@ final class ScoringEngineTests: XCTestCase {
             readiness: ready,
             candidates: [candidate("Card", rate: 0.6, count: 20)],
             configuration: RecommendationScoringConfiguration(
-                version: "test", baselineWinRate: 1.2
+                version: "test", baselineWinRate: 1.2, priorWeight: 40
             )
         )
         XCTAssertThrowsError(try ScoringEngine.evaluate(invalid)) {
