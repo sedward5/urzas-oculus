@@ -57,12 +57,13 @@ final class ScoringEngineTests: XCTestCase {
             ),
             candidate("Wrong Snapshot", rate: 0.6, count: 20, snapshotID: "old-snapshot"),
             candidate("Wrong Scope", rate: 0.6, count: 20, eventType: "TradDraft"),
-            candidate("No Sample", rate: nil, count: 0)
+            candidate("No Sample", rate: nil, count: 0),
+            candidate("Valid", rate: 0.62, count: 40)
         ])
 
         let result = try ScoringEngine.evaluate(request)
 
-        XCTAssertTrue(result.ranked.isEmpty == false)
+        XCTAssertEqual(result.ranked.map(\.cardName), ["Valid"])
         XCTAssertEqual(result.excluded.count, 4)
         XCTAssertEqual(result.excluded.first(where: { $0.cardName == "Missing" })?.reason, .missingPerformance)
         XCTAssertEqual(result.excluded.first(where: { $0.cardName == "Wrong Snapshot" })?.reason, .mismatchedSnapshot)
