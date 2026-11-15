@@ -73,6 +73,24 @@ final class RecommendationDataReadinessTests: XCTestCase {
         XCTAssertTrue(result.issues.contains(.unknownSourceUpdate))
     }
 
+    func testUnknownSourceTimestampDoesNotSkipAcquisitionFreshness() {
+        let now = Date(timeIntervalSince1970: 1_900_000_000)
+        let oldImport = Date(timeIntervalSince1970: 1_700_000_000)
+        let result = RecommendationDataReadiness(
+            request: request,
+            components: [
+                component(.game, updatedAt: nil, importedAt: oldImport),
+                component(.draft, updatedAt: nil, importedAt: oldImport)
+            ],
+            now: now,
+            maximumSourceAge: 1_000,
+            maximumAcquisitionAge: 1_000
+        )
+        XCTAssertTrue(result.issues.contains(.unknownSourceUpdate))
+        XCTAssertTrue(result.issues.contains(.staleComponent(.game)))
+        XCTAssertTrue(result.issues.contains(.staleComponent(.draft)))
+    }
+
     func testRejectsUnsupportedUserGroup() {
         let topPlayers = RecommendationDatasetRequest(
             setCode: "TST", eventType: "PremierDraft", userGroup: "top"
