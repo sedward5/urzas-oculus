@@ -46,7 +46,7 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         try accumulator.consume(["true", "WU", "2", "0"])
         try accumulator.consume(["false", "BR", "1", "0"])
         let metric = try XCTUnwrap(accumulator.finish().first)
-        XCTAssertEqual(metric.gameCount, 1)
+        XCTAssertEqual(metric.gameCount, 2)
         XCTAssertEqual(metric.gamesPlayedCount, 2)
         XCTAssertEqual(try XCTUnwrap(metric.gamesPlayedWinRate), 1.0)
     }
