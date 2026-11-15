@@ -251,12 +251,16 @@ public enum ScoringEngine {
             if $0.gamesInHandCount != $1.gamesInHandCount {
                 return $0.gamesInHandCount > $1.gamesInHandCount
             }
-            return CardRecord.normalizeName($0.cardName) <
-                CardRecord.normalizeName($1.cardName)
+            let leftName = CardRecord.normalizeName($0.cardName)
+            let rightName = CardRecord.normalizeName($1.cardName)
+            if leftName != rightName { return leftName < rightName }
+            return $0.id < $1.id
         }
         excluded.sort {
-            CardRecord.normalizeName($0.cardName) <
-                CardRecord.normalizeName($1.cardName)
+            let leftName = CardRecord.normalizeName($0.cardName)
+            let rightName = CardRecord.normalizeName($1.cardName)
+            if leftName != rightName { return leftName < rightName }
+            return $0.id < $1.id
         }
 
         return RecommendationResult(
@@ -276,10 +280,11 @@ public enum ScoringEngine {
         score: Double,
         configuration: RecommendationScoringConfiguration
     ) -> String {
-        let observed = observedRate.formatted(.percent.precision(.fractionLength(1)))
-        let adjusted = score.formatted(.percent.precision(.fractionLength(1)))
+        let locale = Locale(identifier: "en_US_POSIX")
+        let observed = observedRate.formatted(.percent.precision(.fractionLength(1)).locale(locale))
+        let baseline = configuration.baselineWinRate.formatted(.percent.precision(.fractionLength(1)).locale(locale))
+        let adjusted = score.formatted(.percent.precision(.fractionLength(1)).locale(locale))
         return "GIH win rate \(observed) across \(sampleCount) copy-weighted observations; " +
-            "regularized toward the \(configuration.baselineWinRate.formatted(.percent.precision(.fractionLength(1)))) " +
-            "format baseline to \(adjusted)."
+            "regularized toward the \(baseline) format baseline to \(adjusted)."
     }
 }
