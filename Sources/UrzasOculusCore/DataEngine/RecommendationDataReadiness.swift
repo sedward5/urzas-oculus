@@ -107,10 +107,29 @@ public struct RecommendationDataReadiness: Equatable, Sendable {
         if let game = indexed[.game], let draft = indexed[.draft] {
             if let gameUpdate = game.sourceUpdatedAt, let draftUpdate = draft.sourceUpdatedAt {
                 if gameUpdate != draftUpdate { findings.append(.mismatchedSourceUpdate) }
-            } else if game.sourceUpdatedAt != nil || draft.sourceUpdatedAt != nil {
+            } else {
                 findings.append(.unknownSourceUpdate)
             }
         }
         issues = findings
+    }
+}
+
+
+public extension LocalDataStore {
+    /// Uses the same readiness evaluator for local app and headless batch callers.
+    func recommendationReadiness(
+        for request: RecommendationDatasetRequest,
+        now: Date = .now,
+        maximumSourceAge: TimeInterval? = nil,
+        maximumAcquisitionAge: TimeInterval? = nil
+    ) throws -> RecommendationDataReadiness {
+        RecommendationDataReadiness(
+            request: request,
+            components: try components(datasetKey: request.datasetKey),
+            now: now,
+            maximumSourceAge: maximumSourceAge,
+            maximumAcquisitionAge: maximumAcquisitionAge
+        )
     }
 }
