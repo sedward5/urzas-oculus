@@ -233,7 +233,7 @@ public enum SeventeenLandsDraftMetricsImporter {
             attribution: SeventeenLandsImporter.attribution
         )
 
-        try store.transaction {
+        return try store.transaction {
             try store.save(snapshot: snapshot)
             for metric in metrics {
                 let matches = try store.cards(named: metric.cardName, setCode: request.setCode)
