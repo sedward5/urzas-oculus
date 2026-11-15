@@ -92,12 +92,12 @@ public struct RecommendationDataReadiness: Equatable, Sendable {
                 findings.append(.emptyComponent(kind))
             }
             if let maximumSourceAge {
-                guard let updatedAt = component.sourceUpdatedAt else {
+                if let updatedAt = component.sourceUpdatedAt {
+                    if now.timeIntervalSince(updatedAt) > maximumSourceAge {
+                        findings.append(.staleComponent(kind))
+                    }
+                } else {
                     findings.append(.unknownSourceUpdate)
-                    continue
-                }
-                if now.timeIntervalSince(updatedAt) > maximumSourceAge {
-                    findings.append(.staleComponent(kind))
                 }
             }
             if let maximumAcquisitionAge,
