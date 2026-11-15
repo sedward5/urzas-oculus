@@ -126,9 +126,12 @@ version, scoring-configuration version, and result schema version.
 
 The initial score is regularized GIH WR. The caller must provide the overall
 win-rate baseline for the same set/event/user-group dataset and a versioned
-prior weight. The prior weight is a tuning parameter, not an independent
-sample count. ALSA and ATA are returned as context but do not affect ranking
-in this first version.
+prior weight. The configuration carries the baseline dataset key, and the
+engine rejects a key that differs from the evaluation request. The prior
+weight is a tuning parameter, not an independent sample count. The complete
+configuration is included in the Codable result for artifact provenance.
+ALSA and ATA are returned as context but do not affect ranking in this first
+version.
 
 The evaluator rejects unready data, a readiness scope mismatch, candidates
 from another set/event/user-group/color scope, metrics from another snapshot,
