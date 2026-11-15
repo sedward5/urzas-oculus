@@ -1,3 +1,4 @@
+import Foundation
 import XCTest
 @testable import UrzasOculusCore
 
@@ -35,6 +36,19 @@ final class ScoringEngineTests: XCTestCase {
             try ScoringEngine.evaluate(request)
         )
         XCTAssertEqual(try ScoringEngine.evaluate(request).ranked.map(\.cardName), ["Alpha", "Beta"])
+    }
+
+    func testRecommendationResultRoundTripsThroughJSON() throws {
+        let request = try makeRequest(candidates: [
+            candidate("Artifact", rate: 0.64, count: 75, alsa: 3.2, ata: 4.1)
+        ])
+        let result = try ScoringEngine.evaluate(request)
+        let data = try JSONEncoder().encode(result)
+        let decoded = try JSONDecoder().decode(RecommendationResult.self, from: data)
+
+        XCTAssertEqual(decoded, result)
+        XCTAssertEqual(decoded.schemaVersion, 1)
+        XCTAssertEqual(decoded.scoringConfigurationVersion, "baseline-test")
     }
 
     func testRejectsUnreadyDataset() throws {
