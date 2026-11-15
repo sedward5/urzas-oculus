@@ -83,6 +83,7 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
             setCode: "TST", eventType: "PremierDraft", cardName: "Test Card"
         ))
         XCTAssertEqual(snapshot.recordCount, 1)
+        XCTAssertEqual(try store.components(datasetKey: snapshot.datasetKey).map(\.kind), [.game])
         XCTAssertEqual(metric.cardScryfallID, "test-printing")
         XCTAssertEqual(metric.gamesPlayedCount, 5)
         XCTAssertEqual(metric.gameCount, 5)
