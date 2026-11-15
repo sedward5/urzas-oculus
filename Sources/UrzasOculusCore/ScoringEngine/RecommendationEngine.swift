@@ -16,6 +16,7 @@ public struct RecommendationScoringConfiguration: Codable, Equatable, Sendable {
     public let version: String
     public let schemaVersion: Int
     public let baselineDatasetKey: String
+    public let baselineSnapshotID: String
     public let baselineWinRate: Double
     /// Regularization strength; must be tuned and versioned with the strategy.
     public let priorWeight: Double
@@ -24,12 +25,14 @@ public struct RecommendationScoringConfiguration: Codable, Equatable, Sendable {
         version: String,
         schemaVersion: Int = 1,
         baselineDatasetKey: String,
+        baselineSnapshotID: String,
         baselineWinRate: Double,
         priorWeight: Double
     ) {
         self.version = version
         self.schemaVersion = schemaVersion
         self.baselineDatasetKey = baselineDatasetKey
+        self.baselineSnapshotID = baselineSnapshotID
         self.baselineWinRate = baselineWinRate
         self.priorWeight = priorWeight
     }
@@ -168,6 +171,7 @@ public enum ScoringEngine {
         guard !configuration.version.isEmpty,
               configuration.schemaVersion > 0,
               configuration.baselineDatasetKey == request.dataset.datasetKey,
+              configuration.baselineSnapshotID == request.readiness.components[.game]?.snapshotID,
               configuration.baselineWinRate.isFinite,
               (0...1).contains(configuration.baselineWinRate),
               configuration.priorWeight.isFinite,
