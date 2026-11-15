@@ -12,6 +12,7 @@ public struct DatasetComponentSnapshot: Codable, Equatable, Sendable, Identifiab
     public let id: String
     public let datasetKey: String
     public let kind: DatasetComponentKind
+    public let snapshotID: String
     public let sourceUpdatedAt: Date?
     public let importedAt: Date
     public let recordCount: Int
@@ -20,6 +21,7 @@ public struct DatasetComponentSnapshot: Codable, Equatable, Sendable, Identifiab
                 sourceUpdatedAt: Date?, importedAt: Date, recordCount: Int) {
         self.datasetKey = datasetKey
         self.kind = kind
+        self.snapshotID = snapshotID
         self.id = "\(datasetKey)|\(kind.rawValue)"
         self.sourceUpdatedAt = sourceUpdatedAt
         self.importedAt = importedAt
@@ -52,6 +54,7 @@ public enum RecommendationReadinessIssue: Equatable, Sendable {
     case emptyComponent(DatasetComponentKind)
     case staleComponent(DatasetComponentKind)
     case mismatchedSourceUpdate
+    case unknownSourceUpdate
     case unsupportedUserGroup(String)
 }
 
@@ -87,20 +90,26 @@ public struct RecommendationDataReadiness: Equatable, Sendable {
             if component.recordCount <= 0 {
                 findings.append(.emptyComponent(kind))
             }
-            if let maximumSourceAge,
-               let updatedAt = component.sourceUpdatedAt,
-               now.timeIntervalSince(updatedAt) > maximumSourceAge {
-                findings.append(.staleComponent(kind))
+            if let maximumSourceAge {
+                guard let updatedAt = component.sourceUpdatedAt else {
+                    findings.append(.unknownSourceUpdate)
+                    continue
+                }
+                if now.timeIntervalSince(updatedAt) > maximumSourceAge {
+                    findings.append(.staleComponent(kind))
+                }
             }
             if let maximumAcquisitionAge,
                now.timeIntervalSince(component.importedAt) > maximumAcquisitionAge {
                 findings.append(.staleComponent(kind))
             }
         }
-        if let game = indexed[.game], let draft = indexed[.draft],
-           let gameUpdate = game.sourceUpdatedAt, let draftUpdate = draft.sourceUpdatedAt,
-           gameUpdate != draftUpdate {
-            findings.append(.mismatchedSourceUpdate)
+        if let game = indexed[.game], let draft = indexed[.draft] {
+            if let gameUpdate = game.sourceUpdatedAt, let draftUpdate = draft.sourceUpdatedAt {
+                if gameUpdate != draftUpdate { findings.append(.mismatchedSourceUpdate) }
+            } else if game.sourceUpdatedAt != nil || draft.sourceUpdatedAt != nil {
+                findings.append(.unknownSourceUpdate)
+            }
         }
         issues = findings
     }
