@@ -99,3 +99,18 @@ core draft workflow.
 - Draft history is the source of truth.
 - Scoring consumes state; it does not mutate it.
 - Reference data versions should be recorded with scoring results.
+
+
+## Shared recommendation execution
+
+Recommendation evaluation belongs in the platform-independent Swift core. The macOS
+application and headless batch/CI execution are adapters around that core, not separate
+implementations. The evaluator accepts explicit draft context, normalized card data,
+validated 17Lands metrics, and a versioned scoring configuration. It returns a
+deterministic, schema-versioned result with explanations and provenance.
+
+The core must not read environment variables, access the network, write publication
+files, or depend on SwiftUI. A CI runner may acquire and validate datasets, invoke the
+same evaluator for configured set/event combinations, and publish static JSON artifacts
+for the web app. Publication is allowed only when the shared readiness evaluator reports
+a complete compatible dataset. Local pick evaluation remains offline.
