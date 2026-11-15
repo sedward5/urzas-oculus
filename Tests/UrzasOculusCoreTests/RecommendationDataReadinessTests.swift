@@ -52,6 +52,15 @@ final class RecommendationDataReadinessTests: XCTestCase {
         XCTAssertTrue(result.issues.contains(.staleComponent(.draft)))
     }
 
+    func testUnknownSourceTimestampsBlockReadiness() {
+        let result = RecommendationDataReadiness(
+            request: request,
+            components: [component(.game, updatedAt: nil), component(.draft, updatedAt: nil)]
+        )
+        XCTAssertFalse(result.isReady)
+        XCTAssertTrue(result.issues.contains(.unknownSourceUpdate))
+    }
+
     func testRejectsUnsupportedUserGroup() {
         let topPlayers = RecommendationDatasetRequest(
             setCode: "TST", eventType: "PremierDraft", userGroup: "top"
