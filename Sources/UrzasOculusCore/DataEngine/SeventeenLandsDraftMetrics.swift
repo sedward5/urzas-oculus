@@ -42,7 +42,9 @@ public final class SeventeenLandsDraftMetricsAccumulator {
     private let secondaryPickIndex: Int?
     private let packCardColumns: [(name: String, index: Int)]
     private var currentPack: PackKey?
-    private var currentSightings: [String: PackSighting] = [:]
+    // Eight pack lanes circulate during each round. Pick 9 revisits the
+    // pack seen at pick 1, pick 10 revisits pick 2, and so on.
+    private var currentSightings: [Int: [String: PackSighting]] = [:]
     private var totals: [String: SeventeenLandsDraftTotals] = [:]
 
     public init(header: SeventeenLandsCSVHeader) throws {
@@ -92,11 +94,13 @@ public final class SeventeenLandsDraftMetricsAccumulator {
             finalizeCurrentPack()
         }
         currentPack = key
+        let lane = (pickNumber - 1) % 8
+        var sightings = currentSightings[lane] ?? [:]
 
         for column in packCardColumns {
             let count = try Self.parseCount(row[column.index], column: header.columns[column.index])
             guard count > 0 else { continue }
-            currentSightings[column.name] = PackSighting(
+            sightings[column.name] = PackSighting(
                 lastSeenPick: pickNumber, copies: count
             )
         }
@@ -105,14 +109,15 @@ public final class SeventeenLandsDraftMetricsAccumulator {
         // the Arena log did not expose the rest of the pack.
         let primary = Self.nonEmptyName(row[pickIndex])
         if let primary {
-            markSeen(primary, at: pickNumber)
+            Self.markSeen(primary, at: pickNumber, in: &sightings)
             recordPick(primary, at: pickNumber)
         }
         if let secondaryPickIndex,
            let secondary = Self.nonEmptyName(row[secondaryPickIndex]) {
-            markSeen(secondary, at: pickNumber)
+            Self.markSeen(secondary, at: pickNumber, in: &sightings)
             recordPick(secondary, at: pickNumber)
         }
+        currentSightings[lane] = sightings
     }
 
     public func finish() -> [SeventeenLandsDraftMetric] {
@@ -131,9 +136,13 @@ public final class SeventeenLandsDraftMetricsAccumulator {
         }
     }
 
-    private func markSeen(_ name: String, at pickNumber: Int) {
-        let existing = currentSightings[name]
-        currentSightings[name] = PackSighting(
+    private static func markSeen(
+        _ name: String,
+        at pickNumber: Int,
+        in sightings: inout [String: PackSighting]
+    ) {
+        let existing = sightings[name]
+        sightings[name] = PackSighting(
             lastSeenPick: pickNumber,
             copies: max(existing?.copies ?? 0, 1)
         )
@@ -147,11 +156,13 @@ public final class SeventeenLandsDraftMetricsAccumulator {
     }
 
     private func finalizeCurrentPack() {
-        for (name, sighting) in currentSightings {
-            var value = totals[name] ?? SeventeenLandsDraftTotals()
-            value.seenCount += sighting.copies
-            value.lastSeenPickSum += sighting.lastSeenPick * sighting.copies
-            totals[name] = value
+        for sightings in currentSightings.values {
+            for (name, sighting) in sightings {
+                var value = totals[name] ?? SeventeenLandsDraftTotals()
+                value.seenCount += sighting.copies
+                value.lastSeenPickSum += sighting.lastSeenPick * sighting.copies
+                totals[name] = value
+            }
         }
         currentSightings.removeAll(keepingCapacity: true)
         currentPack = nil
