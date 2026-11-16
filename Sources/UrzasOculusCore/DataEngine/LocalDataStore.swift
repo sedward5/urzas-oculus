@@ -102,6 +102,38 @@ public final class LocalDataStore: @unchecked Sendable {
         }
     }
 
+    /// Persists the overall, unweighted game baseline for one source snapshot.
+    public func save(baseline: DatasetBaselineRecord) throws {
+        guard baseline.gameCount > 0, baseline.gameWins >= 0,
+              baseline.gameWins <= baseline.gameCount else {
+            throw DataEngineError.invalidDatasetBaseline(baseline.datasetKey)
+        }
+        let payload = try encoder.encode(baseline)
+        try withStatement("""
+        INSERT INTO dataset_baselines
+          (id, dataset_key, snapshot_id, game_count, game_wins, payload)
+        VALUES (?, ?, ?, ?, ?, ?)
+        ON CONFLICT(id) DO UPDATE SET game_count=excluded.game_count,
+          game_wins=excluded.game_wins, payload=excluded.payload
+        """) { s in
+            bind(baseline.id, 1, s)
+            bind(baseline.datasetKey, 2, s)
+            bind(baseline.snapshotID, 3, s)
+            bind(baseline.gameCount, 4, s)
+            bind(baseline.gameWins, 5, s)
+            bind(payload, 6, s)
+            try stepDone(s)
+        }
+    }
+
+    /// Retrieves a baseline only for the exact dataset key and snapshot identity.
+    public func baseline(datasetKey: String, snapshotID: String) throws -> DatasetBaselineRecord? {
+        try queryOne(
+            "SELECT payload FROM dataset_baselines WHERE id = ?",
+            value: "\(datasetKey)|\(snapshotID)"
+        )
+    }
+
     public func upsert(card: CardRecord) throws {
         guard !card.id.isEmpty, !card.name.isEmpty, !card.setCode.isEmpty else {
             throw DataEngineError.invalidCardRecord(card.id)
@@ -230,6 +262,13 @@ public final class LocalDataStore: @unchecked Sendable {
         );
         CREATE INDEX IF NOT EXISTS idx_snapshots_source_key
           ON dataset_snapshots(source, dataset_key, imported_at DESC);
+        CREATE TABLE IF NOT EXISTS dataset_baselines (
+          id TEXT PRIMARY KEY, dataset_key TEXT NOT NULL, snapshot_id TEXT NOT NULL,
+          game_count INTEGER NOT NULL, game_wins INTEGER NOT NULL, payload BLOB NOT NULL,
+          FOREIGN KEY(snapshot_id) REFERENCES dataset_snapshots(id)
+        );
+        CREATE INDEX IF NOT EXISTS idx_dataset_baselines_scope
+          ON dataset_baselines(dataset_key, snapshot_id);
         CREATE TABLE IF NOT EXISTS dataset_components (
           id TEXT PRIMARY KEY, dataset_key TEXT NOT NULL, kind TEXT NOT NULL,
           snapshot_id TEXT NOT NULL, source_updated_at REAL, imported_at REAL NOT NULL,
