@@ -15,6 +15,10 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         try accumulator.consume(["true", "WU", "2", "1", "0", "3", "0", "0", "1", "0", "1", "1"])
         try accumulator.consume(["false", "WU", "0", "1", "0", "2", "1", "1", "0", "0", "1", "0"])
 
+        XCTAssertEqual(accumulator.overallGameCount, 2)
+        XCTAssertEqual(accumulator.overallGameWins, 1)
+        XCTAssertEqual(try XCTUnwrap(accumulator.overallWinRate), 0.5, accuracy: 0.0001)
+
         let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
         let testCard = try XCTUnwrap(metrics["Test Card"])
         XCTAssertEqual(testCard.gameCount, 5)
@@ -46,6 +50,9 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         try accumulator.consume(["true", "WU", "2", "0"])
         try accumulator.consume(["false", "BR", "1", "0"])
         let metric = try XCTUnwrap(accumulator.finish().first)
+        XCTAssertEqual(accumulator.overallGameCount, 1)
+        XCTAssertEqual(accumulator.overallGameWins, 1)
+        XCTAssertEqual(try XCTUnwrap(accumulator.overallWinRate), 1.0, accuracy: 0.0001)
         XCTAssertEqual(metric.gameCount, 2)
         XCTAssertEqual(metric.gamesPlayedCount, 2)
         XCTAssertEqual(try XCTUnwrap(metric.gamesPlayedWinRate), 1.0)
@@ -89,6 +96,12 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         XCTAssertEqual(metric.gameCount, 5)
         XCTAssertEqual(metric.winRate, 0.75)
         XCTAssertEqual(metric.drawnImprovementWinRate, 0.75)
+        let baseline = try XCTUnwrap(store.baseline(
+            datasetKey: snapshot.datasetKey, snapshotID: snapshot.id
+        ))
+        XCTAssertEqual(baseline.gameCount, 2)
+        XCTAssertEqual(baseline.gameWins, 1)
+        XCTAssertEqual(try XCTUnwrap(baseline.winRate), 0.5, accuracy: 0.0001)
     }
 
     private func makeStore() throws -> (LocalDataStore, URL) {
