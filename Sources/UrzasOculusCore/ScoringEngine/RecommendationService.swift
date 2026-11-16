@@ -45,7 +45,9 @@ public enum RecommendationService {
               baseline.winRate != nil else {
             throw RecommendationServiceError.missingBaseline
         }
-        guard configuration.baselineDatasetKey == dataset.datasetKey,
+        guard baseline.datasetKey == dataset.datasetKey,
+              baseline.snapshotID == gameSnapshotID,
+              configuration.baselineDatasetKey == dataset.datasetKey,
               configuration.baselineSnapshotID == baseline.snapshotID,
               configuration.baselineWinRate == baseline.winRate else {
             throw RecommendationServiceError.mismatchedBaseline
