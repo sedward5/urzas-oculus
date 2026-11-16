@@ -108,6 +108,16 @@ public final class LocalDataStore: @unchecked Sendable {
               baseline.gameWins <= baseline.gameCount else {
             throw DataEngineError.invalidDatasetBaseline(baseline.datasetKey)
         }
+        let snapshotMatches = try withStatement(
+            "SELECT 1 FROM dataset_snapshots WHERE id = ? AND dataset_key = ?"
+        ) { s in
+            bind(baseline.snapshotID, 1, s)
+            bind(baseline.datasetKey, 2, s)
+            return sqlite3_step(s) == SQLITE_ROW
+        }
+        guard snapshotMatches else {
+            throw DataEngineError.invalidDatasetBaseline(baseline.datasetKey)
+        }
         let payload = try encoder.encode(baseline)
         try withStatement("""
         INSERT INTO dataset_baselines
