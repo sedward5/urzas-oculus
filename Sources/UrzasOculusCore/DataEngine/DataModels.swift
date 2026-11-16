@@ -27,6 +27,28 @@ public struct DatasetSnapshot: Codable, Equatable, Sendable, Identifiable {
     }
 }
 
+/// Unweighted overall game win rate for one exact 17Lands game-archive snapshot.
+/// Each source row is one game; unlike card metrics, these counts are not copy-weighted.
+public struct DatasetBaselineRecord: Codable, Equatable, Sendable, Identifiable {
+    public let id: String
+    public let datasetKey: String
+    public let snapshotID: String
+    public let gameCount: Int
+    public let gameWins: Int
+
+    public var winRate: Double? {
+        gameCount > 0 ? Double(gameWins) / Double(gameCount) : nil
+    }
+
+    public init(datasetKey: String, snapshotID: String, gameCount: Int, gameWins: Int) {
+        self.datasetKey = datasetKey
+        self.snapshotID = snapshotID
+        self.gameCount = gameCount
+        self.gameWins = gameWins
+        self.id = "\(datasetKey)|\(snapshotID)"
+    }
+}
+
 public struct CardFaceRecord: Codable, Equatable, Sendable {
     public let name: String
     public let manaCost: String?
