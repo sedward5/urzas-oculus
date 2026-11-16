@@ -75,6 +75,23 @@ final class RecommendationServiceTests: XCTestCase {
         }
     }
 
+    func testRejectsConfigurationWithDifferentOverallBaseline() throws {
+        let store = try makeReadyStore()
+        defer { try? store.close() }
+        let incorrect = RecommendationScoringConfiguration(
+            version: "service-test",
+            baselineDatasetKey: dataset.datasetKey,
+            baselineSnapshotID: snapshotID,
+            baselineWinRate: 0.56,
+            priorWeight: 40
+        )
+        XCTAssertThrowsError(try RecommendationService.evaluate(
+            candidateCardIDs: [], dataset: dataset, configuration: incorrect, in: store
+        )) {
+            XCTAssertEqual($0 as? RecommendationServiceError, .mismatchedBaseline)
+        }
+    }
+
     private var configuration: RecommendationScoringConfiguration {
         RecommendationScoringConfiguration(
             version: "service-test",
