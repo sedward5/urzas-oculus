@@ -248,5 +248,6 @@ public enum DataEngineError: Error, Equatable {
     case sqlite(String)
     case invalidCardRecord(String)
     case invalidPerformanceRecord(String)
+    case invalidDatasetBaseline(String)
     case invalidJSONLine(Int)
 }
