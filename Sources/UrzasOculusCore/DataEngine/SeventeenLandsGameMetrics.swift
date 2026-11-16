@@ -232,8 +232,11 @@ public enum SeventeenLandsGameMetricsImporter {
             }
         )
         guard rowCount > 0, let accumulator,
-              let baselineRate = accumulator.overallWinRate,
-              let metrics = Optional(accumulator.finish()), !metrics.isEmpty else {
+              accumulator.overallWinRate != nil else {
+            throw SeventeenLandsMetricsError.missingColumn("usable game baseline")
+        }
+        let metrics = accumulator.finish()
+        guard !metrics.isEmpty else {
             throw SeventeenLandsMetricsError.missingColumn("usable card metrics")
         }
 
