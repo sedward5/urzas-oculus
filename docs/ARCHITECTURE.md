@@ -155,9 +155,12 @@ scope, and explicit scoring configuration. The service:
 - Passes the assembled request to `ScoringEngine.evaluate`; it contains
   no ranking or scoring logic of its own.
 
-The service does not invent or infer the format baseline. The caller must
-supply a baseline value and matching dataset key/snapshot in the versioned
-configuration. Recognition and draft-state adapters will provide candidate
-IDs once their integration is implemented. This service is independently
-testable without screen capture, OCR, SwiftUI, or network access.
+The service does not invent or infer the format baseline. The game importer
+persists an unweighted overall win rate from the same filtered game rows,
+keyed by dataset and exact snapshot. The adapter requires the caller's
+versioned scoring configuration to match that persisted value, dataset key,
+and game snapshot; it rejects missing or mismatched baselines before card
+lookup. Recognition and draft-state adapters will provide candidate IDs once
+their integration is implemented. This service is independently testable
+without screen capture, OCR, SwiftUI, or network access.
 
