@@ -181,19 +181,19 @@ def main():
         if (gr,gw)!=(swift["gameRows"],swift["gameWins"]):
             errors.append(f"overall game baseline mismatch: reference {gw}/{gr}, Swift {swift['gameWins']}/{swift['gameRows']}")
         if dr != swift["draftRows"]: errors.append(f"draft row count mismatch: {dr} != {swift['draftRows']}")
-        lines=[f"# 17Lands validation — {a.set_code if hasattr(a,'set_code') else a.set_code}",
+        lines=[f"# 17Lands validation — {a.set_code}",
                "",f"- Format: {a.event_type}",f"- Catalog updated: {updated}",
                f"- Game rows: {gr:,}; wins: {gw:,}; unweighted WR: {ratio(gw,gr):.4%}",
                f"- Game metric cards: {len(gm):,}",f"- Draft rows: {dr:,}",
                f"- Draft metric cards: {len(dm):,}",f"- Discrepancies: {len(errors):,}",""]
         if errors: lines += ["## Discrepancies",""]+[f"- {e}" for e in errors[:500]]
         else: lines += ["## Result","","Independent reference metrics match the Swift accumulators."]
-        (out/"validation-report.md").write_text("\\n".join(lines)+"\\n")
+        (out/"validation-report.md").write_text("\n".join(lines)+"\n")
         print("\\n".join(lines))
         return 1 if errors else 0
     except Exception as exc:
         message=f"Validation failed: {type(exc).__name__}: {exc}"
-        (out/"validation-error.txt").write_text(message+"\\n")
+        (out/"validation-error.txt").write_text(message+"\n")
         print(message,file=sys.stderr); return 2
 
 if __name__=="__main__": raise SystemExit(main())
