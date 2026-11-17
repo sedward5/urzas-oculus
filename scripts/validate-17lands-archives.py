@@ -86,6 +86,8 @@ def game_reference(path):
                 c = {k: integer(row[i], header[i]) for k,i in cols.items()}
                 deck, sb = c.get("deck_",0), c.get("sideboard_",0)
                 op, dr, tut = c.get("opening_hand_",0), c.get("drawn_",0), c.get("tutored_",0)
+                if not any(c.values()):
+                    continue
                 t = sums[card]
                 t["gp"] += deck; t["gpw"] += deck if won else 0
                 t["md"] += deck; t["sb"] += sb
@@ -183,6 +185,7 @@ def main():
         if dr != swift["draftRows"]: errors.append(f"draft row count mismatch: {dr} != {swift['draftRows']}")
         lines=[f"# 17Lands validation — {a.set_code}",
                "",f"- Format: {a.event_type}",f"- Catalog updated: {updated}",
+               f"- Game archive: {game_url}",f"- Draft archive: {draft_url}",
                f"- Game rows: {gr:,}; wins: {gw:,}; unweighted WR: {ratio(gw,gr):.4%}",
                f"- Game metric cards: {len(gm):,}",f"- Draft rows: {dr:,}",
                f"- Draft metric cards: {len(dm):,}",f"- Discrepancies: {len(errors):,}",""]
