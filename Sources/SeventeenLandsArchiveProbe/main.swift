@@ -1,4 +1,5 @@
 import Foundation
+import Darwin
 import UrzasOculusCore
 
 private struct GameMetricOutput: Encodable {
