@@ -192,7 +192,7 @@ def main():
         if errors: lines += ["## Discrepancies",""]+[f"- {e}" for e in errors[:500]]
         else: lines += ["## Result","","Independent reference metrics match the Swift accumulators."]
         (out/"validation-report.md").write_text("\n".join(lines)+"\n")
-        print("\\n".join(lines))
+        print("\n".join(lines))
         return 1 if errors else 0
     except Exception as exc:
         message=f"Validation failed: {type(exc).__name__}: {exc}"
