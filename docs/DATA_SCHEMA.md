@@ -224,3 +224,32 @@ rejects a scoring configuration whose dataset key, snapshot ID, or baseline
 rate differs. This prevents a manually supplied or stale baseline from
 being used with otherwise compatible card metrics. The baseline is an
 unweighted game-level rate; it is not derived from summing card-copy counts.
+
+
+## Reproducible archive validation
+
+The repository includes an independent reference implementation in
+`scripts/validate-17lands-archives.py` and a small Swift executable that
+runs the production CSV reader and game/draft accumulators over the same
+archives. The validator downloads the exact draft and game URLs from the
+official public dataset catalog, records the catalog update date, and
+compares per-card counts and rates between the two implementations.
+
+Run it locally from the repository root:
+
+```sh
+python3 scripts/validate-17lands-archives.py --set-code HOB --event-type PremierDraft
+```
+
+The GitHub Actions workflow is manually triggerable for supported draft
+formats and runs weekly. It uploads the source-independent metrics output
+and a Markdown discrepancy report. Archive downloads are deliberately not
+part of ordinary pull-request CI, so an upstream outage cannot block
+unrelated code changes.
+
+A clean comparison proves that the two implementations agree on the
+documented aggregation rules and actual archive shape. It does not, by
+itself, prove that every interpretation matches 17Lands' displayed
+card-ratings calculations. Any differences from official metric
+definitions or published figures must be investigated before the
+recommendation pipeline is considered production-ready.
