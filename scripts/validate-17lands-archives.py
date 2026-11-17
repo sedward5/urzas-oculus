@@ -37,17 +37,54 @@ def get(url):
         raise RuntimeError(f"HTTP {status}: {url}")
     return response
 
+def archive_urls(set_code, event_type):
+    """Return the documented 17Lands S3 locations for one dataset pair."""
+    set_code = set_code.strip().upper()
+    if not set_code or not set_code.isalnum():
+        raise ValueError(f"Invalid set code: {set_code!r}")
+    if not event_type or not event_type.isalnum():
+        raise ValueError(f"Invalid event type: {event_type!r}")
+    base = "https://17lands-public.s3.amazonaws.com/analysis_data"
+    draft = f"{base}/draft_data/draft_data_public.{set_code}.{event_type}.csv.gz"
+    game = f"{base}/game_data/game_data_public.{set_code}.{event_type}.csv.gz"
+    return draft, game
+
+
+def verify_archive_url(url):
+    """Check that an archive exists without downloading its potentially large body."""
+    request = urllib.request.Request(url, headers={"User-Agent": UA}, method="HEAD")
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            if response.status != 200:
+                raise RuntimeError(f"HTTP {response.status}: {url}")
+    except Exception as exc:
+        raise RuntimeError(f"Archive is not reachable ({url}): {exc}") from exc
+
+
 def archives(set_code, event_type):
-    parser = CatalogParser()
-    with get(CATALOG) as response: parser.feed(response.read().decode("utf-8"))
-    for row in parser.rows:
-        if len(row) < 5: continue
-        vals = [html.unescape(c["text"]).strip() for c in row]
-        if vals[0].upper() != set_code.upper() or vals[1] != event_type: continue
-        draft = next((u for c in row for u in c["links"] if "draft_data_public." in u), None)
-        game = next((u for c in row for u in c["links"] if "game_data_public." in u), None)
-        if draft and game: return draft, game, vals[2]
-    raise RuntimeError(f"No complete archive for {set_code} {event_type}")
+    # The public catalog is useful for its update timestamp, but its rendered HTML
+    # is not a stable machine interface. In particular, its link markup can change
+    # independently of the underlying S3 archive naming convention.
+    updated = "unknown (catalog timestamp unavailable)"
+    try:
+        parser = CatalogParser()
+        with get(CATALOG) as response:
+            parser.feed(response.read().decode("utf-8"))
+        for row in parser.rows:
+            if len(row) < 3:
+                continue
+            vals = [html.unescape(c["text"]).strip() for c in row]
+            if vals[0].upper() == set_code.upper() and vals[1] == event_type:
+                updated = vals[2] or updated
+                break
+    except Exception as exc:
+        print(f"Catalog lookup unavailable; using canonical archive URLs: {exc}",
+              file=sys.stderr)
+
+    draft, game = archive_urls(set_code, event_type)
+    verify_archive_url(draft)
+    verify_archive_url(game)
+    return draft, game, updated
 
 def download(url, path):
     with get(url) as response, path.open("wb") as out:

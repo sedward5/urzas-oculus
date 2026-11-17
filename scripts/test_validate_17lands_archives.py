@@ -1,7 +1,9 @@
 import gzip
+import io
 import importlib.util
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 SCRIPT = Path(__file__).with_name("validate-17lands-archives.py")
@@ -34,6 +36,23 @@ class ArchiveReferenceTests(unittest.TestCase):
         self.assertEqual(metrics["A"]["gamesInHandCount"], 2)
         self.assertEqual(metrics["A"]["gamesInHandWinRate"], 1.0)
         self.assertIsNone(metrics["A"]["gamesNotSeenWinRate"])
+
+    def test_archive_urls_use_documented_s3_layout(self):
+        draft, game = VALIDATOR.archive_urls("hob", "PremierDraft")
+        base = "https://17lands-public.s3.amazonaws.com/analysis_data"
+        self.assertEqual(draft, f"{base}/draft_data/draft_data_public.HOB.PremierDraft.csv.gz")
+        self.assertEqual(game, f"{base}/game_data/game_data_public.HOB.PremierDraft.csv.gz")
+
+    def test_archives_fall_back_when_catalog_markup_has_no_links(self):
+        with (
+            patch.object(VALIDATOR, "get", return_value=io.BytesIO(b"<html></html>")),
+            patch.object(VALIDATOR, "verify_archive_url") as verify,
+        ):
+            draft, game, updated = VALIDATOR.archives("HOB", "PremierDraft")
+        self.assertIn("draft_data_public.HOB.PremierDraft.csv.gz", draft)
+        self.assertIn("game_data_public.HOB.PremierDraft.csv.gz", game)
+        self.assertIn("unknown", updated)
+        self.assertEqual(verify.call_count, 2)
 
     def test_draft_reference_tracks_wheel_in_pack_lane(self):
         path = self.write_gzip_csv(
