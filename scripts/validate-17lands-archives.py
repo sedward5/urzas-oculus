@@ -30,9 +30,12 @@ class CatalogParser(HTMLParser):
 
 def get(url):
     req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=180) as response:
-        if response.status != 200: raise RuntimeError(f"HTTP {response.status}: {url}")
-        return response
+    response = urllib.request.urlopen(req, timeout=180)
+    if response.status != 200:
+        status = response.status
+        response.close()
+        raise RuntimeError(f"HTTP {status}: {url}")
+    return response
 
 def archives(set_code, event_type):
     parser = CatalogParser()
