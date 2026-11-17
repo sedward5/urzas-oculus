@@ -1,0 +1,64 @@
+name: 17Lands Archive Validation
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_code:
+        description: 17Lands expansion code
+        required: true
+        default: HOB
+        type: string
+      event_type:
+        description: Draft event type
+        required: true
+        default: PremierDraft
+        type: choice
+        options:
+          - PremierDraft
+          - TradDraft
+          - PickTwoDraft
+  schedule:
+    - cron: "17 9 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: macos-15
+    timeout-minutes: 90
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show toolchain
+        run: |
+          swift --version
+          python3 --version
+
+      - name: Validate official archives
+        id: validation
+        continue-on-error: true
+        env:
+          SET_CODE: ${{ inputs.set_code || 'HOB' }}
+          EVENT_TYPE: ${{ inputs.event_type || 'PremierDraft' }}
+        run: |
+          python3 scripts/validate-17lands-archives.py \
+            --set-code "$SET_CODE" \
+            --event-type "$EVENT_TYPE" \
+            --output-dir validation-output
+
+      - name: Upload validation report and probe output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 17lands-validation-${{ inputs.set_code || 'scheduled' }}-${{ github.run_id }}
+          path: validation-output/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Fail when validation reports discrepancies
+        if: steps.validation.outcome == 'failure'
+        run: |
+          echo "17Lands archive validation failed. Inspect the uploaded report artifact."
+          exit 1
