@@ -5,13 +5,15 @@ let package = Package(
     platforms: [.macOS(.v14)],
     products: [
         .library(name: "UrzasOculusCore", targets: ["UrzasOculusCore"]),
-        .executable(name: "UrzasOculus", targets: ["UrzasOculusApp"])
+        .executable(name: "UrzasOculus", targets: ["UrzasOculusApp"]),
+        .executable(name: "SeventeenLandsArchiveProbe", targets: ["SeventeenLandsArchiveProbe"])
     ],
     targets: [
         .systemLibrary(name: "CSQLite"),
         .systemLibrary(name: "CZlib"),
         .target(name: "UrzasOculusCore", dependencies: ["CSQLite", "CZlib"]),
         .executableTarget(name: "UrzasOculusApp", dependencies: ["UrzasOculusCore"]),
+        .executableTarget(name: "SeventeenLandsArchiveProbe", dependencies: ["UrzasOculusCore"]),
         .testTarget(name: "UrzasOculusCoreTests", dependencies: ["UrzasOculusCore"])
     ],
     swiftLanguageVersions: [.v5]
