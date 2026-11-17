@@ -55,6 +55,14 @@ public final class SeventeenLandsGameMetricsAccumulator {
     private let cardColumns: [(name: String, facet: String, index: Int)]
     private var totals: [String: SeventeenLandsGameTotals] = [:]
 
+    /// Number of source game rows included after the optional color filter.
+    public private(set) var overallGameCount = 0
+    /// Number of winning source game rows included after the optional color filter.
+    public private(set) var overallGameWins = 0
+    public var overallWinRate: Double? {
+        overallGameCount > 0 ? Double(overallGameWins) / Double(overallGameCount) : nil
+    }
+
     public init(header: SeventeenLandsCSVHeader, colorFilter: String? = nil) throws {
         guard let wonIndex = header.index(of: "won") else {
             throw SeventeenLandsMetricsError.missingColumn("won")
@@ -94,6 +102,8 @@ public final class SeventeenLandsGameMetricsAccumulator {
         }
 
         let won = try Self.parseBoolean(row[wonIndex], column: "won")
+        overallGameCount += 1
+        if won { overallGameWins += 1 }
         var observations: [String: CardObservation] = [:]
         for column in cardColumns {
             let count = try Self.parseCount(row[column.index], column: header.columns[column.index])
@@ -221,7 +231,12 @@ public enum SeventeenLandsGameMetricsImporter {
                 try accumulator?.consume(row)
             }
         )
-        guard rowCount > 0, let metrics = accumulator?.finish(), !metrics.isEmpty else {
+        guard rowCount > 0, let accumulator,
+              accumulator.overallWinRate != nil else {
+            throw SeventeenLandsMetricsError.missingColumn("usable game baseline")
+        }
+        let metrics = accumulator.finish()
+        guard !metrics.isEmpty else {
             throw SeventeenLandsMetricsError.missingColumn("usable card metrics")
         }
 
@@ -241,6 +256,12 @@ public enum SeventeenLandsGameMetricsImporter {
                 datasetKey: snapshot.datasetKey, kind: .game, snapshotID: snapshotID,
                 sourceUpdatedAt: sourceUpdatedAt, importedAt: importedAt,
                 recordCount: metrics.count
+            ))
+            try store.save(baseline: DatasetBaselineRecord(
+                datasetKey: snapshot.datasetKey,
+                snapshotID: snapshotID,
+                gameCount: accumulator.overallGameCount,
+                gameWins: accumulator.overallGameWins
             ))
             for metric in metrics {
                 let matches = try store.cards(named: metric.cardName, setCode: request.setCode)

@@ -80,6 +80,8 @@ as importedAt. See https://www.17lands.com/faq.
 ## SQLite tables and indexes
 
 - dataset_snapshots: source/version metadata and attribution.
+- dataset_baselines: unweighted overall game counts and win rate, keyed by
+  dataset scope and exact game snapshot.
 - cards: one row per Scryfall printing, with indexes for Arena ID,
   Oracle ID, and normalized name + set.
 - card_performance: set/format/user-group/color-scoped observations,
@@ -206,3 +208,19 @@ and aggregation behavior but do not replace a production validation pass
 against current official archives, including actual headers and independently
 recomputed metric totals. That archive-level comparison remains a release
 gate before recommendations are treated as production-ready.
+
+
+## Overall game baseline
+
+The game archive contains one row per game. The importer counts those rows
+and their winning outcomes separately from the per-card copy-weighted
+statistics. The overall win rate is the number of winning game rows divided
+by all included game rows. For color-filtered datasets, only rows matching
+the requested main-color cohort contribute. The result is persisted in
+`dataset_baselines` with the exact dataset key and game snapshot ID.
+
+The local recommendation adapter requires this persisted baseline and
+rejects a scoring configuration whose dataset key, snapshot ID, or baseline
+rate differs. This prevents a manually supplied or stale baseline from
+being used with otherwise compatible card metrics. The baseline is an
+unweighted game-level rate; it is not derived from summing card-copy counts.

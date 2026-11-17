@@ -3,6 +3,8 @@ import Foundation
 public enum RecommendationServiceError: Error, Equatable {
     case duplicateCandidateID(String)
     case missingCardRecord(String)
+    case missingBaseline
+    case mismatchedBaseline
 }
 
 /// Loads a complete, scope-matched evaluation request from the local store
@@ -33,6 +35,22 @@ public enum RecommendationService {
 
         guard readiness.isReady else {
             throw RecommendationEngineError.datasetNotReady(readiness.issues)
+        }
+
+        guard let gameSnapshotID = readiness.components[.game]?.snapshotID,
+              let baseline = try store.baseline(
+                datasetKey: dataset.datasetKey,
+                snapshotID: gameSnapshotID
+              ),
+              baseline.winRate != nil else {
+            throw RecommendationServiceError.missingBaseline
+        }
+        guard baseline.datasetKey == dataset.datasetKey,
+              baseline.snapshotID == gameSnapshotID,
+              configuration.baselineDatasetKey == dataset.datasetKey,
+              configuration.baselineSnapshotID == baseline.snapshotID,
+              configuration.baselineWinRate == baseline.winRate else {
+            throw RecommendationServiceError.mismatchedBaseline
         }
 
         let candidates = try candidateCardIDs.map { id -> RecommendationCandidateInput in
