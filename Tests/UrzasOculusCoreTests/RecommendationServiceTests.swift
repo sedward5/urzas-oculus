@@ -117,6 +117,12 @@ final class RecommendationServiceTests: XCTestCase {
             recordCount: 10,
             attribution: SeventeenLandsImporter.attribution
         ))
+        try store.save(baseline: DatasetBaselineRecord(
+            datasetKey: dataset.datasetKey,
+            snapshotID: snapshotID,
+            gameCount: 20,
+            gameWins: 11
+        ))
         try store.save(component: DatasetComponentSnapshot(
             datasetKey: dataset.datasetKey,
             kind: .game,
