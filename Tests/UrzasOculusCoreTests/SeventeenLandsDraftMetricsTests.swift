@@ -12,14 +12,14 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
 
         // Pick 9 revisits the pack lane seen at pick 1. The other picks
         // belong to separate circulating packs in the same draft round.
-        try accumulator.consume(["draft-a", "1", "1", "Picked Card", "", "1", "0", "0"])
-        try accumulator.consume(["draft-a", "1", "2", "Other Card", "", "0", "1", "0"])
-        try accumulator.consume(["draft-a", "1", "8", "Other Card", "", "0", "0", "0"])
-        try accumulator.consume(["draft-a", "1", "9", "Wheel Card", "", "1", "0", "0"])
-        try accumulator.consume(["draft-a", "1", "10", "Late Card", "", "0", "1", "0"])
+        try accumulator.consume(["draft-a", "0", "0", "Picked Card", "", "1", "0", "0"])
+        try accumulator.consume(["draft-a", "0", "1", "Other Card", "", "0", "1", "0"])
+        try accumulator.consume(["draft-a", "0", "7", "Other Card", "", "0", "0", "0"])
+        try accumulator.consume(["draft-a", "0", "8", "Wheel Card", "", "1", "0", "0"])
+        try accumulator.consume(["draft-a", "0", "9", "Late Card", "", "0", "1", "0"])
 
         // A card in a second pack round is another seen instance.
-        try accumulator.consume(["draft-a", "2", "1", "Wheel Card", "", "1", "1", "0"])
+        try accumulator.consume(["draft-a", "1", "0", "Wheel Card", "", "1", "1", "0"])
 
         let metrics = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
         let wheel = try XCTUnwrap(metrics["Wheel Card"])
@@ -40,7 +40,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         XCTAssertEqual(picked.averageLastSeen, 1.0)
     }
 
-    func testRejectsMissingColumnsAndInvalidPickNumbers() throws {
+    func testRejectsMissingColumnsAndNegativePickNumbers() throws {
         let missing = try SeventeenLandsCSVHeader(columns: ["draft_id", "pack_number", "pick_number", "pick"])
         XCTAssertThrowsError(try SeventeenLandsDraftMetricsAccumulator(header: missing))
 
@@ -48,7 +48,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
             "draft_id", "pack_number", "pick_number", "pick", "pack_card_Test Card"
         ])
         let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
-        XCTAssertThrowsError(try accumulator.consume(["draft", "1", "0", "Test Card", "1"]))
+        XCTAssertThrowsError(try accumulator.consume(["draft", "0", "-1", "Test Card", "1"]))
     }
 
     func testImporterMergesDraftAndGameFieldsForSharedSnapshot() throws {
