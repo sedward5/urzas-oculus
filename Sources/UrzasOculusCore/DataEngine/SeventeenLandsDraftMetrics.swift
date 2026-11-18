@@ -86,15 +86,19 @@ public final class SeventeenLandsDraftMetricsAccumulator {
                 column: "draft_id", value: row[draftIDIndex]
             )
         }
-        let packNumber = try Self.parsePositiveInt(row[packNumberIndex], column: "pack_number")
-        let pickNumber = try Self.parsePositiveInt(row[pickNumberIndex], column: "pick_number")
+        // 17Lands public archives use zero-based pack_number and pick_number.
+        // Convert pick numbers to the human-facing 1-based convention used by
+        // ALSA/ATA, while retaining the zero-based pack identifier for grouping.
+        let packNumber = try Self.parseNonnegativeInt(row[packNumberIndex], column: "pack_number")
+        let rawPickNumber = try Self.parseNonnegativeInt(row[pickNumberIndex], column: "pick_number")
+        let pickNumber = rawPickNumber + 1
         let key = PackKey(draftID: draftID, packNumber: packNumber)
 
         if let currentPack, currentPack != key {
             finalizeCurrentPack()
         }
         currentPack = key
-        let lane = (pickNumber - 1) % 8
+        let lane = rawPickNumber % 8
         var sightings = currentSightings[lane] ?? [:]
 
         for column in packCardColumns {
@@ -175,9 +179,9 @@ public final class SeventeenLandsDraftMetricsAccumulator {
         return name.isEmpty ? nil : name
     }
 
-    private static func parsePositiveInt(_ value: String, column: String) throws -> Int {
+    private static func parseNonnegativeInt(_ value: String, column: String) throws -> Int {
         guard let number = Int(value.trimmingCharacters(in: .whitespacesAndNewlines)),
-              number > 0 else {
+              number >= 0 else {
             throw SeventeenLandsMetricsError.invalidValue(column: column, value: value)
         }
         return number
