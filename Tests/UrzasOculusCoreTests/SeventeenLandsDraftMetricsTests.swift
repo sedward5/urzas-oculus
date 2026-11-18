@@ -100,9 +100,9 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
             "pack_card_Primary", "pack_card_Secondary"
         ])
         let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
-        try accumulator.consume(["draft", "1", "3", "Primary", "Secondary", "1", "1"])
+        // Raw pick_number 3 is the fourth pick in the human-facing ATA metric.\n        try accumulator.consume(["draft", "1", "3", "Primary", "Secondary", "1", "1"])
         let values = Dictionary(uniqueKeysWithValues: accumulator.finish().map { ($0.cardName, $0) })
         XCTAssertEqual(values["Secondary"]?.pickCount, 1)
-        XCTAssertEqual(values["Secondary"]?.averageTakenAt, 3.0)
+        XCTAssertEqual(values["Secondary"]?.averageTakenAt, 4.0)
     }
 }
