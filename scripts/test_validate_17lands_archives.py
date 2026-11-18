@@ -57,10 +57,10 @@ class ArchiveReferenceTests(unittest.TestCase):
     def test_draft_reference_tracks_wheel_in_pack_lane(self):
         path = self.write_gzip_csv(
             "draft_id,pack_number,pick_number,pick,pick_2,pack_card_Wheel,pack_card_Late\n"
-            "d1,1,1,Picked,,1,0\n"
-            "d1,1,2,Other,,0,1\n"
-            "d1,1,9,Wheel,,1,0\n"
-            "d1,1,10,Late,,0,1\n"
+            "d1,0,0,Picked,,1,0\n"
+            "d1,0,1,Other,,0,1\n"
+            "d1,0,8,Wheel,,1,0\n"
+            "d1,0,9,Late,,0,1\n"
         )
         rows, metrics = VALIDATOR.draft_reference(path)
         self.assertEqual(rows, 4)

@@ -168,12 +168,15 @@ def draft_reference(path):
         for line,row in enumerate(reader,2):
             if len(row) != len(header): raise ValueError(f"draft row {line}: width mismatch")
             draft = row[ix["draft_id"]].strip()
+            # The official public archive numbers packs and picks from zero.
+            # Convert pick positions to 1-based values for published ALSA/ATA.
             pack = integer(row[ix["pack_number"]],"pack_number")
-            pick = integer(row[ix["pick_number"]],"pick_number")
-            if not draft or pack < 1 or pick < 1: raise ValueError(f"draft row {line}: invalid identity")
+            raw_pick = integer(row[ix["pick_number"]],"pick_number")
+            pick = raw_pick + 1
+            if not draft: raise ValueError(f"draft row {line}: invalid identity")
             key = (draft,pack)
             if current is not None and current != key: flush()
-            current = key; lane = lanes[(pick-1)%8]
+            current = key; lane = lanes[raw_pick%8]
             for card,i in cards:
                 count = integer(row[i],header[i])
                 if count:
