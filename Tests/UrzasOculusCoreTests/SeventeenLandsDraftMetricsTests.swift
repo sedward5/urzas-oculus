@@ -61,7 +61,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         // The production reader intentionally accepts gzip archives only.
         // Keep this integration fixture in the same format as 17Lands exports.
         let compressedDraftCSV = Data(base64Encoded:
-            "H4sIAAAAAAAC/0spSkwric9M0SlITM6OzyvNTUot0inIRGVDJJMTi1LiQ1KLSxScgSyuFJBO3UQdQyCEi+oYcgEAjJvxG1IAAAA="
+            "H4sIAAAAAAAC/0spSkwric9M0SlITM6OzyvNTUot0inIRGVDJJMTi1LiQ1KLSxScgSyuFJBO3UQdAyCEi+oYcgEAa+uWKFIAAAA="
         )!
         let file = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv.gz")
