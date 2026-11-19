@@ -101,6 +101,7 @@ public enum SeventeenLandsCSVReader {
         let parser = CSVRowParser(onRow: onRow)
         var finished = false
         var completedGzipMember = false
+        var awaitingNextGzipMember = false
 
         while !finished {
             let input = try file.read(upToCount: chunkSize) ?? Data()
@@ -110,6 +111,10 @@ public enum SeventeenLandsCSVReader {
                 }
                 finished = true
                 break
+            }
+            if awaitingNextGzipMember {
+                completedGzipMember = false
+                awaitingNextGzipMember = false
             }
 
             try input.withUnsafeBytes { rawBuffer in
@@ -147,6 +152,11 @@ public enum SeventeenLandsCSVReader {
                             throw SeventeenLandsCSVError.invalidGzipStream(resetStatus)
                         }
                         completedGzipMember = true
+                        awaitingNextGzipMember = true
+                        if stream.avail_in > 0 {
+                            completedGzipMember = false
+                            awaitingNextGzipMember = false
+                        }
                         continue
                     }
                     guard status == Z_OK || status == Z_BUF_ERROR else {
