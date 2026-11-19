@@ -63,7 +63,7 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
             for pack in 0..<3 {
                 for pick in 0..<14 {
                     try accumulator.consume([
-                        "draft-\\(draft)", "\\(pack)", "\\(pick)",
+                        "draft-\(draft)", "\(pack)", "\(pick)",
                         "Primary", pick.isMultiple(of: 2) ? "Secondary" : "",
                         "1", "1"
                     ])
