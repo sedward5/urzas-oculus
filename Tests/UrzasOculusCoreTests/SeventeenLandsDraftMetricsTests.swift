@@ -51,6 +51,35 @@ final class SeventeenLandsDraftMetricsTests: XCTestCase {
         XCTAssertThrowsError(try accumulator.consume(["draft", "0", "-1", "Test Card", "1"]))
     }
 
+
+    func testPickDiagnosticsRemainConsistentAcrossManyPacksAndDrafts() throws {
+        let header = try SeventeenLandsCSVHeader(columns: [
+            "draft_id", "pack_number", "pick_number", "pick", "pick_2",
+            "pack_card_Primary", "pack_card_Secondary"
+        ])
+        let accumulator = try SeventeenLandsDraftMetricsAccumulator(header: header)
+
+        for draft in 0..<25 {
+            for pack in 0..<3 {
+                for pick in 0..<14 {
+                    try accumulator.consume([
+                        "draft-\\(draft)", "\\(pack)", "\\(pick)",
+                        "Primary", pick.isMultiple(of: 2) ? "Secondary" : "",
+                        "1", "1"
+                    ])
+                }
+            }
+        }
+
+        let metrics = accumulator.finish()
+        XCTAssertEqual(accumulator.consumedRowCount, 25 * 3 * 14)
+        XCTAssertEqual(accumulator.primaryPickCount, 25 * 3 * 14)
+        XCTAssertEqual(accumulator.secondaryPickCount, 25 * 3 * 7)
+        XCTAssertEqual(metrics.reduce(0) { $0 + $1.pickCount }, 25 * 3 * 14 + 25 * 3 * 7)
+        XCTAssertEqual(metrics.first(where: { $0.cardName == "Primary" })?.pickCount, 25 * 3 * 14)
+        XCTAssertEqual(metrics.first(where: { $0.cardName == "Secondary" })?.pickCount, 25 * 3 * 7)
+    }
+
     func testImporterMergesDraftAndGameFieldsForSharedSnapshot() throws {
         let url = FileManager.default.temporaryDirectory
             .appendingPathComponent(UUID().uuidString).appendingPathExtension("sqlite")
