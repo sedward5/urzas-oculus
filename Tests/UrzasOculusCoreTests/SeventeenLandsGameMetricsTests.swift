@@ -42,6 +42,33 @@ final class SeventeenLandsGameMetricsTests: XCTestCase {
         XCTAssertEqual(try XCTUnwrap(secondCard.gamesInHandWinRate), 0.5, accuracy: 0.0001)
     }
 
+
+    func testDrawnAndTutoredCopiesFollowPublishedGNSAndGIHSemantics() throws {
+        let header = try SeventeenLandsCSVHeader(columns: [
+            "won", "opening_hand_Test Card", "drawn_Test Card", "tutored_Test Card",
+            "deck_Test Card", "sideboard_Test Card"
+        ])
+        let accumulator = try SeventeenLandsGameMetricsAccumulator(header: header)
+
+        // The same physical copy can be drawn again after being shuffled back.
+        // Tutored copies are not counted as drawn or in-hand copies.
+        try accumulator.consume(["true", "1", "2", "1", "1", "0"])
+        // One of two maindeck copies is tutored; the other remains unseen.
+        try accumulator.consume(["false", "0", "0", "1", "2", "1"])
+
+        let metric = try XCTUnwrap(accumulator.finish().first)
+        XCTAssertEqual(metric.gamesPlayedCount, 3)
+        XCTAssertEqual(metric.gamesInHandCount, 3)
+        XCTAssertEqual(metric.gamesInHandWinRate, 1.0)
+        XCTAssertEqual(metric.openingHandCount, 1)
+        XCTAssertEqual(metric.drawnCount, 2)
+        XCTAssertEqual(metric.drawnWinRate, 1.0)
+        XCTAssertEqual(metric.gamesNotSeenCount, 1)
+        XCTAssertEqual(metric.gamesNotSeenWinRate, 0.0)
+        XCTAssertEqual(metric.improvementInHand, 1.0)
+        XCTAssertEqual(metric.playRate, 0.75)
+    }
+
     func testColorFilterOnlyIncludesMatchingMainColors() throws {
         let header = try SeventeenLandsCSVHeader(columns: [
             "won", "main_colors", "deck_Test Card", "sideboard_Test Card"
