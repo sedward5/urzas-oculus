@@ -24,9 +24,9 @@ class ArchiveReferenceTests(unittest.TestCase):
 
     def test_game_reference_aggregates_copy_weighted_metrics(self):
         path = self.write_gzip_csv(
-            "won,main_colors,deck_A,sideboard_A,opening_hand_A,drawn_A,tutored_A\n"
-            "true,WU,2,0,1,1,0\n"
-            "false,WU,1,1,0,0,1\n"
+            "won,main_colors,deck_A,sideboard_A,opening_hand_A,drawn_A,tutored_A\\n"
+            "true,WU,2,0,1,1,0\\n"
+            "false,WU,1,1,0,0,1\\n"
         )
         rows, wins, metrics = VALIDATOR.game_reference(path)
         self.assertEqual((rows, wins), (2, 1))
@@ -56,14 +56,16 @@ class ArchiveReferenceTests(unittest.TestCase):
 
     def test_draft_reference_tracks_wheel_in_pack_lane(self):
         path = self.write_gzip_csv(
-            "draft_id,pack_number,pick_number,pick,pick_2,pack_card_Wheel,pack_card_Late\n"
-            "d1,0,0,Picked,,1,0\n"
-            "d1,0,1,Other,,0,1\n"
-            "d1,0,8,Wheel,,1,0\n"
-            "d1,0,9,Late,,0,1\n"
+            "draft_id,pack_number,pick_number,pick,pick_2,pack_card_Wheel,pack_card_Late\\n"
+            "d1,0,0,Picked,,1,0\\n"
+            "d1,0,1,Other,,0,1\\n"
+            "d1,0,8,Wheel,,1,0\\n"
+            "d1,0,9,Late,,0,1\\n"
         )
-        rows, metrics = VALIDATOR.draft_reference(path)
+        rows, metrics, primary_picks, secondary_picks = VALIDATOR.draft_reference(path)
         self.assertEqual(rows, 4)
+        self.assertEqual(primary_picks, 4)
+        self.assertEqual(secondary_picks, 0)
         self.assertEqual(metrics["Wheel"]["seenCount"], 1)
         self.assertEqual(metrics["Wheel"]["averageLastSeen"], 9)
         self.assertEqual(metrics["Wheel"]["pickCount"], 1)
