@@ -10,8 +10,11 @@ tracks the draft, and provides deterministic pick recommendations.
 
 ## Project status
 
-**Foundation scaffold.** The initial architecture and build pipeline are
-being established. Screen capture and recognition are not implemented yet.
+**Phase 0 — Screen Capture Feasibility.** The prototype can enumerate
+shareable windows, capture a still frame, and sample a bounded three-second
+sequence from a selected window. Manual validation of iPhone Mirroring
+window identification, image quality, and frame delivery remains outstanding.
+OCR, card recognition, and draft-state tracking are not implemented yet.
 
 ## Goals
 
