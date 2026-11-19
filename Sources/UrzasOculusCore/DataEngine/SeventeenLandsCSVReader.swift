@@ -100,11 +100,21 @@ public enum SeventeenLandsCSVReader {
 
         let parser = CSVRowParser(onRow: onRow)
         var finished = false
+        var completedGzipMember = false
+        var awaitingNextGzipMember = false
 
         while !finished {
             let input = try file.read(upToCount: chunkSize) ?? Data()
             if input.isEmpty {
-                throw SeventeenLandsCSVError.truncatedGzipStream
+                guard completedGzipMember else {
+                    throw SeventeenLandsCSVError.truncatedGzipStream
+                }
+                finished = true
+                break
+            }
+            if awaitingNextGzipMember {
+                completedGzipMember = false
+                awaitingNextGzipMember = false
             }
 
             try input.withUnsafeBytes { rawBuffer in
@@ -134,8 +144,20 @@ public enum SeventeenLandsCSVReader {
                     lastOutputCount = outputCount
 
                     if status == Z_STREAM_END {
-                        finished = true
-                        break
+                        // 17Lands archives may be concatenated gzip members.
+                        // Reset the inflater but keep any unread bytes in this
+                        // input chunk; the CSV parser intentionally spans members.
+                        let resetStatus = inflateReset2(&stream, MAX_WBITS + 16)
+                        guard resetStatus == Z_OK else {
+                            throw SeventeenLandsCSVError.invalidGzipStream(resetStatus)
+                        }
+                        completedGzipMember = true
+                        awaitingNextGzipMember = true
+                        if stream.avail_in > 0 {
+                            completedGzipMember = false
+                            awaitingNextGzipMember = false
+                        }
+                        continue
                     }
                     guard status == Z_OK || status == Z_BUF_ERROR else {
                         throw SeventeenLandsCSVError.invalidGzipStream(status)

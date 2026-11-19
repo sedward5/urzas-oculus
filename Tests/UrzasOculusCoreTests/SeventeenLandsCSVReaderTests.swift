@@ -28,6 +28,51 @@ final class SeventeenLandsCSVReaderTests: XCTestCase {
         XCTAssertEqual(rows[1], ["Two \"Quotes\"\nSecond line", "0", "3"])
     }
 
+    func testReadsCSVAcrossConcatenatedGzipMembers() throws {
+        // The member boundary deliberately splits a CSV field across streams.
+        let first = Data(base64Encoded:
+            "H4sIAAAAAAAC/8tLzE3VKUvMKU3lck4sStEBACs4yM0QAAAA"
+        )!
+        let second = Data(base64Encoded:
+            "H4sIAAAAAAAC/zPkAgBT/FFnAgAAAA=="
+        )!
+        let file = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv.gz")
+        try (first + second).write(to: file)
+        defer { try? FileManager.default.removeItem(at: file) }
+
+        var rows: [[String]] = []
+        let count = try SeventeenLandsCSVReader.readTable(
+            from: file,
+            chunkSize: 7,
+            onHeader: { _ in },
+            onRow: { rows.append($0) }
+        )
+
+        XCTAssertEqual(count, 1)
+        XCTAssertEqual(rows, [["Card", "1"]])
+    }
+
+    func testRejectsTruncatedTrailingGzipMember() throws {
+        let complete = Data(base64Encoded:
+            "H4sIAAAAAAAC/8tLzE3VKUvMKU3lck4sStEBACs4yM0QAAAA"
+        )!
+        let truncated = Data(base64Encoded:
+            "H4sIAAAAAAAC/zPkAgBT/FFnAgAAAA=="
+        )!.dropLast(5)
+        let file = FileManager.default.temporaryDirectory
+            .appendingPathComponent(UUID().uuidString).appendingPathExtension("csv.gz")
+        try (complete + truncated).write(to: file)
+        defer { try? FileManager.default.removeItem(at: file) }
+
+        XCTAssertThrowsError(try SeventeenLandsCSVReader.readTable(
+            from: file,
+            chunkSize: 7,
+            onHeader: { _ in },
+            onRow: { _ in }
+        ))
+    }
+
     func testRejectsRowsWithDifferentColumnCounts() throws {
         let compressed = Data(base64Encoded:
             "H4sIAAAAAAAC/0vUSeIy1DHiMuYCANihyAcKAAAA"
