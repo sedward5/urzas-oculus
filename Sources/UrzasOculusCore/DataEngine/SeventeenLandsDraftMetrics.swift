@@ -47,6 +47,11 @@ public final class SeventeenLandsDraftMetricsAccumulator {
     private var currentSightings: [Int: [String: PackSighting]] = [:]
     private var totals: [String: SeventeenLandsDraftTotals] = [:]
 
+    /// Diagnostic counters used to verify that every archive row and pick reaches aggregation.
+    public private(set) var consumedRowCount = 0
+    public private(set) var primaryPickCount = 0
+    public private(set) var secondaryPickCount = 0
+
     public init(header: SeventeenLandsCSVHeader) throws {
         func required(_ name: String) throws -> Int {
             guard let index = header.index(of: name) else {
@@ -74,6 +79,7 @@ public final class SeventeenLandsDraftMetricsAccumulator {
     }
 
     public func consume(_ row: [String]) throws {
+        consumedRowCount += 1
         guard row.count == header.columns.count else {
             throw SeventeenLandsCSVError.inconsistentColumnCount(
                 expected: header.columns.count, actual: row.count
@@ -115,11 +121,13 @@ public final class SeventeenLandsDraftMetricsAccumulator {
         // the Arena log did not expose the rest of the pack.
         let primary = Self.nonEmptyName(row[pickIndex])
         if let primary {
+            primaryPickCount += 1
             Self.markSeen(primary, at: pickNumber, in: &sightings)
             recordPick(primary, at: pickNumber)
         }
         if let secondaryPickIndex,
            let secondary = Self.nonEmptyName(row[secondaryPickIndex]) {
+            secondaryPickCount += 1
             Self.markSeen(secondary, at: pickNumber, in: &sightings)
             recordPick(secondary, at: pickNumber)
         }
