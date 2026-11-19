@@ -31,6 +31,10 @@ private struct ProbeOutput: Encodable {
     let gameWinRate: Double?
     let gameMetrics: [GameMetricOutput]
     let draftRows: Int
+    let draftRowsConsumed: Int
+    let draftPrimaryPickCount: Int
+    let draftSecondaryPickCount: Int
+    let draftMetricPickCountTotal: Int
     let draftMetrics: [DraftMetricOutput]
 }
 
@@ -103,6 +107,10 @@ do {
         gameWinRate: gameAccumulator.overallWinRate,
         gameMetrics: games,
         draftRows: draftRows,
+        draftRowsConsumed: draftAccumulator.consumedRowCount,
+        draftPrimaryPickCount: draftAccumulator.primaryPickCount,
+        draftSecondaryPickCount: draftAccumulator.secondaryPickCount,
+        draftMetricPickCountTotal: drafts.reduce(0) { $0 + $1.pickCount },
         draftMetrics: drafts
     )
     let encoder = JSONEncoder()

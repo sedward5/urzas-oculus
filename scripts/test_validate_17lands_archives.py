@@ -62,8 +62,10 @@ class ArchiveReferenceTests(unittest.TestCase):
             "d1,0,8,Wheel,,1,0\n"
             "d1,0,9,Late,,0,1\n"
         )
-        rows, metrics = VALIDATOR.draft_reference(path)
+        rows, metrics, primary_picks, secondary_picks = VALIDATOR.draft_reference(path)
         self.assertEqual(rows, 4)
+        self.assertEqual(primary_picks, 4)
+        self.assertEqual(secondary_picks, 0)
         self.assertEqual(metrics["Wheel"]["seenCount"], 1)
         self.assertEqual(metrics["Wheel"]["averageLastSeen"], 9)
         self.assertEqual(metrics["Wheel"]["pickCount"], 1)

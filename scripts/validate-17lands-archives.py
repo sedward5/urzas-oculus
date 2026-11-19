@@ -149,7 +149,7 @@ def game_reference(path):
     return rows, wins, result
 
 def draft_reference(path):
-    sums = defaultdict(lambda: defaultdict(int)); rows = 0
+    sums = defaultdict(lambda: defaultdict(int)); rows = primary_picks = secondary_picks = 0
     current = None; lanes = defaultdict(dict)
     def flush():
         for lane in lanes.values():
@@ -181,10 +181,13 @@ def draft_reference(path):
                 count = integer(row[i],header[i])
                 if count:
                     old = lane.get(card,(0,0)); lane[card] = (max(old[0],pick),max(old[1],count))
-            picks = [row[ix["pick"]].strip()]
-            if "pick_2" in ix: picks.append(row[ix["pick_2"]].strip())
-            for card in picks:
+            primary = row[ix["pick"]].strip()
+            secondary = row[ix["pick_2"]].strip() if "pick_2" in ix else ""
+            picks = [(primary, "primary"), (secondary, "secondary")]
+            for card, kind in picks:
                 if not card: continue
+                if kind == "primary": primary_picks += 1
+                else: secondary_picks += 1
                 old = lane.get(card,(0,0)); lane[card] = (pick,max(old[1],1))
                 sums[card]["picked"] += 1; sums[card]["taken"] += pick
             rows += 1
@@ -192,7 +195,7 @@ def draft_reference(path):
     result = {card:{"seenCount":t["seen"],"averageLastSeen":ratio(t["lastsum"],t["seen"]),
                     "pickCount":t["picked"],"averageTakenAt":ratio(t["taken"],t["picked"])}
               for card,t in sums.items()}
-    return rows,result
+    return rows,result,primary_picks,secondary_picks
 
 def compare(label, expected, actual_rows):
     actual = {r["cardName"]:r for r in actual_rows}; errors=[]
@@ -221,11 +224,16 @@ def main():
         subprocess.run(["swift","run","-c","release","SeventeenLandsArchiveProbe",
                         str(game),str(draft),str(probe)],cwd=root,check=True)
         swift=json.loads(probe.read_text())
-        gr,gw,gm=game_reference(game); dr,dm=draft_reference(draft)
+        gr,gw,gm=game_reference(game); dr,dm,primary_picks,secondary_picks=draft_reference(draft)
         errors=compare("game",gm,swift["gameMetrics"])+compare("draft",dm,swift["draftMetrics"])
         if (gr,gw)!=(swift["gameRows"],swift["gameWins"]):
             errors.append(f"overall game baseline mismatch: reference {gw}/{gr}, Swift {swift['gameWins']}/{swift['gameRows']}")
         if dr != swift["draftRows"]: errors.append(f"draft row count mismatch: {dr} != {swift['draftRows']}")
+        if dr != swift["draftRowsConsumed"]: errors.append(f"draft rows consumed mismatch: reference {dr}, Swift {swift['draftRowsConsumed']}")
+        if primary_picks != swift["draftPrimaryPickCount"]: errors.append(f"primary pick count mismatch: reference {primary_picks}, Swift {swift['draftPrimaryPickCount']}")
+        if secondary_picks != swift["draftSecondaryPickCount"]: errors.append(f"secondary pick count mismatch: reference {secondary_picks}, Swift {swift['draftSecondaryPickCount']}")
+        expected_total_picks = primary_picks + secondary_picks
+        if expected_total_picks != swift["draftMetricPickCountTotal"]: errors.append(f"aggregated pick total mismatch: reference {expected_total_picks}, Swift {swift['draftMetricPickCountTotal']}")
         lines=[f"# 17Lands validation — {a.set_code}",
                "",f"- Format: {a.event_type}",f"- Catalog updated: {updated}",
                f"- Game archive: {game_url}",f"- Draft archive: {draft_url}",
