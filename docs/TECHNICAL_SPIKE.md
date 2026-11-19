@@ -12,17 +12,22 @@ card recognition, or draft-state tracking.
 
 The current prototype provides:
 
-- Screen Recording permission status.
-- A permission request action.
+- Screen Recording permission status and a permission request action.
 - Enumeration of visible shareable application windows.
-- A heuristic that highlights likely iPhone Mirroring windows.
-- Manual selection of a window.
+- An advisory heuristic for likely iPhone Mirroring windows.
+- Manual window selection.
 - Still-frame capture of the selected window.
-- Display of the captured image and its pixel dimensions.
-- Basic error reporting.
+- A three-second, window-scoped frame sequence capture.
+- Local sampling at up to four frames per second, capped at twenty frames.
+- A thumbnail strip for inspecting the captured sequence.
+- Pixel dimensions and basic capture error reporting.
 
 The window-identification heuristic is advisory. The user remains
 responsible for selecting the correct window.
+
+The sequence capture is a bounded feasibility sample, not a production
+continuous-capture service. It captures only the selected window and
+does not capture audio or transmit frames.
 
 ## Experiments
 
@@ -53,8 +58,10 @@ responsible for selecting the correct window.
 
 ### 4. Frame sequence
 
-- [ ] Capture a short sequence of frames.
-- [ ] Measure frame delivery and processing costs.
+- [x] Capture a short sequence of frames.
+- [x] Bound the sample duration, sampling rate, and retained frame count.
+- [x] Display sampled frames for manual inspection.
+- [ ] Measure frame delivery and processing costs on a real Mac.
 - [ ] Determine whether continuous capture is necessary.
 - [ ] Evaluate capture behavior while the mirrored display changes.
 
@@ -68,6 +75,22 @@ responsible for selecting the correct window.
 Do not begin substantial card recognition implementation until
 capture quality has been evaluated.
 
+## Manual validation procedure
+
+On the target Mac:
+
+1. Build and launch Urza's Oculus.
+2. Grant Screen Recording permission if prompted. Restart the app if macOS requires it.
+3. Open iPhone Mirroring and display a representative Arena draft pack.
+4. Refresh the available windows and select the mirrored iPhone window.
+5. Capture a still frame. Confirm the entire mirrored window is present.
+6. Capture a three-second sequence while scrolling or otherwise changing the mirrored display.
+7. Inspect the thumbnails. Confirm they show the selected window only and that changing content appears across the sequence.
+8. Record the frame count, pixel dimensions, visible text clarity, and any dropped or repeated frames.
+
+Do not use private or unrelated screen content as test fixtures. Captures remain
+local to the app process and are not uploaded by this prototype.
+
 ## Acceptance criteria
 
 - The mirrored window can be identified consistently.
@@ -80,23 +103,25 @@ capture quality has been evaluated.
 
 ## Current limitations
 
-The prototype captures still images only.
+The prototype supports still images and a bounded three-second sample.
+It does not provide an always-on capture service or background monitoring.
 
 It does not yet provide:
 
-- Continuous frame capture.
 - OCR.
 - Card recognition.
 - Draft-state tracking.
 - Automated window selection.
 
 The iPhone Mirroring identification heuristic has not yet been
-validated against real-world window metadata.
+validated against real-world window metadata. Image quality and frame
+delivery also remain unverified on the user's target Mac.
 
 ## Deliverable
 
 A working capture prototype, representative observations, and a
-written go/no-go assessment.
+written feasibility assessment.
 
-The next milestone is to validate the prototype on a real macOS
-installation with iPhone Mirroring active.
+The next milestone is manual validation on a real macOS installation
+with iPhone Mirroring active. Recognition work remains gated on that
+assessment.
