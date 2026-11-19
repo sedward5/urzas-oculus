@@ -24,13 +24,9 @@ private struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             header
-
             permissionSection
-
             windowSection
-
             captureSection
-
             statusSection
         }
         .padding(24)
@@ -154,6 +150,17 @@ private struct ContentView: View {
                             )
                         }
                     }
+                    .buttonStyle(.bordered)
+
+                    Button("Capture 3-Second Sequence") {
+                        guard let selectedWindowID else { return }
+
+                        Task {
+                            await captureEngine.captureSequence(
+                                windowID: selectedWindowID
+                            )
+                        }
+                    }
                     .buttonStyle(.borderedProminent)
                     .disabled(
                         selectedWindowID == nil
@@ -174,8 +181,43 @@ private struct ContentView: View {
                             .foregroundStyle(.secondary)
                     }
                 }
+                .disabled(
+                    selectedWindowID == nil
+                        || captureEngine.isBusy
+                        || !captureEngine.hasScreenRecordingPermission
+                )
 
-                if let image = captureEngine.capturedImage {
+                if !captureEngine.capturedFrames.isEmpty {
+                    HStack {
+                        Text("Sequence sample")
+                            .font(.headline)
+                        Spacer()
+                        Text("\(captureEngine.capturedFrames.count) frames")
+                            .font(.caption.monospacedDigit())
+                            .foregroundStyle(.secondary)
+                    }
+
+                    ScrollView(.horizontal) {
+                        HStack(alignment: .top, spacing: 8) {
+                            ForEach(
+                                Array(captureEngine.capturedFrames.enumerated()),
+                                id: \.offset
+                            ) { index, frame in
+                                VStack(spacing: 4) {
+                                    Image(decorative: frame, scale: 1)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(height: 150)
+                                        .clipShape(RoundedRectangle(cornerRadius: 6))
+
+                                    Text("#\(index + 1)")
+                                        .font(.caption2.monospacedDigit())
+                                        .foregroundStyle(.secondary)
+                                }
+                            }
+                        }
+                    }
+                } else if let image = captureEngine.capturedImage {
                     Image(decorative: image, scale: 1)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -187,7 +229,7 @@ private struct ContentView: View {
                         "No Capture Yet",
                         systemImage: "viewfinder",
                         description: Text(
-                            "Select a window and capture a still frame."
+                            "Select a window and capture a still frame or short sequence."
                         )
                     )
                     .frame(maxWidth: .infinity, minHeight: 180)
