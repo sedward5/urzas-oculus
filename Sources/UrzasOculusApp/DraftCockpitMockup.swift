@@ -118,7 +118,7 @@ struct DraftCockpitMockupView: View {
                         .foregroundStyle(OculusPalette.text)
                 }
                 Spacer()
-                Label("14 cards observed", systemImage: "square.stack.3d.up")
+                Label("8 sample slots · partial scan", systemImage: "square.stack.3d.up")
                     .font(.caption)
                     .foregroundStyle(OculusPalette.muted)
             }
@@ -456,7 +456,7 @@ struct DraftCockpitMockupView: View {
             Text("Which card did you take from P1P4?")
                 .font(.headline)
                 .foregroundStyle(OculusPalette.text)
-            ForEach(cards) { card in
+            ForEach(cards.filter { $0.score > 0 }) { card in
                 Button {
                     recoverySelection = card.id
                 } label: {
