@@ -97,3 +97,23 @@ Consequences:
 - CI and local app results can be compared using the same evaluator version.
 - Browser-side evaluation is not introduced unless a future requirement
   justifies compiling the shared core for that environment.
+
+
+## ADR-008: Draft cockpit interaction model
+
+**Status:** Accepted product direction; implementation pending
+
+The primary draft workspace presents three coordinated views: the current pack, the evolving drafted pool/deck, and strategic context. The current pack is the primary focus during a pick. Deck composition and strategy remain visible as supporting context.
+
+Before joining a draft, the player selects event type and set in Oculus. Sets are ordered by release date, newest first. Oculus checks local data freshness/readiness and may present reviewed set archetypes as an optional briefing. Oculus does not launch or control Arena.
+
+Pack recognition accumulates observations across scrolling. Unresolved card slots remain visible and are not guessed. The player explicitly confirms a pick; confirmed picks enter the append-only draft history and update the drafted pool. Prior packs remain inspectable and can be updated with wheel observations. The interface must not infer that a card was picked by another drafter merely because it is absent from a later observation.
+
+The deck view summarizes drafted cards, colors, mana curve, and creature/noncreature counts. Future strategic guidance may identify archetype direction, table openness, and splash considerations, but must explain evidence and uncertainty. These strategic capabilities are not present in the current standalone GIH WR evaluator.
+
+Consequences:
+- Recognition, confirmed selection, and Arena state observation remain separate.
+- The event log remains authoritative; the UI displays projections of it.
+- Dataset snapshots and scoring configuration are pinned to a draft session.
+- The detailed UX specification is maintained in docs/DRAFT_COCKPIT_UX.md.
+- This ADR defines product behavior, not a claim that the interface is implemented.
