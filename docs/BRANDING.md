@@ -75,7 +75,7 @@ The icon is a symmetrical brass astrolabe/oculus surrounding a luminous cyan-blu
 - Do not add a wordmark or small text to the icon.
 - The icon artwork is square source artwork. Let macOS apply its own icon mask and presentation; do not add a second rounded-square frame or shadow baked into future source artwork.
 
-The current compact source is Resources/AppIcon.jpg. It is a 512 × 512 JPEG chosen to keep the repository asset lightweight. The packaging script converts it into the required PNG icon sizes and .icns bundle resource. Keep a higher-resolution archival master outside the runtime bundle if one is needed for future re-export.
+The current source is Resources/AppIcon.png (1024 × 1024). The packaging script converts it into the required PNG icon sizes and .icns bundle resource. Keep the high-resolution source as the canonical artwork; optimize generated bundle assets only if packaging size becomes a practical concern.
 
 ### Other imagery
 
