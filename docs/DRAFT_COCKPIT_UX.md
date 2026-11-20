@@ -1,6 +1,6 @@
 # Draft Cockpit — Product UX Specification
 
-Status: product direction accepted; interface and behavior not implemented
+Status: product direction accepted; interactive visual mockup available; production behavior not implemented
 Last updated: 2026-11-20
 
 ## Product intent
@@ -123,6 +123,12 @@ As picks accumulate, Oculus evaluates the user's developing direction and availa
 - Explain when a card is attractive in isolation but poor for the current pool, and when a speculative pick may keep options open.
 
 Archetype openness and splash advice are future scoring capabilities. The current standalone GIH WR evaluator does not provide them.
+
+## Interactive visual mockup
+
+The macOS app includes a **Draft Cockpit** tab alongside the existing **Capture Lab**. The cockpit tab is a static-data SwiftUI prototype for reviewing hierarchy, visual density, and interaction concepts. It is not connected to ScreenCaptureKit, card recognition, the draft event store, or recommendation scoring.
+
+The mockup includes a pre-draft setup view, ranked card rows, unresolved-card treatment, a secondary wheel-watch indicator, explicit pick confirmation, a drafted-pool summary, early strategy context, and a missed-pick recovery sheet. Its controls demonstrate intended interaction only; no changes are persisted.
 
 ## Main draft workspace
 
