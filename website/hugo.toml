@@ -1,7 +1,7 @@
 baseURL = "/"
 languageCode = "en-us"
 title = "Urza's Oculus"
-enableRobotsTXT = true
+enableRobotsTXT = true\ndisableKinds = ["taxonomy", "term"]
 
 [params]
   description = "A thoughtful, data-informed companion for Magic: The Gathering Arena drafts."
