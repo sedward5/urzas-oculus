@@ -10,7 +10,34 @@ permissions:
   contents: read
 
 jobs:
+  detect-changes:
+    name: Detect Swift changes
+    runs-on: ubuntu-latest
+    outputs:
+      swift: ${{ steps.filter.outputs.swift }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Identify changes requiring macOS
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            swift:
+              - 'Package.swift'
+              - 'Sources/**'
+              - 'Tests/**'
+              - 'Resources/**'
+              - 'scripts/**'
+              - '.github/workflows/ci.yml'
+
   build-and-test:
+    name: Build and test (macOS)
+    needs: detect-changes
+    if: needs.detect-changes.outputs.swift == 'true'
     runs-on: macos-15
 
     steps:
