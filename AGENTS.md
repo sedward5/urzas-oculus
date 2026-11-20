@@ -2,33 +2,39 @@
 
 ## Project authority
 
-Read `docs/PROJECT_STEERING.md` and `docs/ARCHITECTURE.md` before making
-architectural changes. These documents are the project's source of truth.
+Before architectural changes, read:
+- docs/PROJECT_STEERING.md
+- docs/ARCHITECTURE.md
+- docs/DECISIONS.md
+- docs/ROADMAP.md
+- CONTRIBUTING.md
+
+These documents define project constraints and current implementation status.
+
+## Current implementation reality
+
+The app is a Phase 0 ScreenCaptureKit feasibility prototype. It can enumerate windows, suggest likely iPhone Mirroring windows, capture a selected still frame, and sample a bounded three-second sequence. Real-world capture validation remains pending.
+
+Do not claim OCR, card recognition, integrated draft tracking, persistence, or live recommendations are shipped. Draft-event, data-import, readiness, and baseline-scoring foundations exist, but are not integrated into the capture workflow.
 
 ## Core constraints
 
-- Target native macOS 14 or newer.
-- Use Swift and SwiftUI.
-- Keep OCR, recognition, draft state, and scoring deterministic and local.
-- Do not introduce runtime AI inference, cloud inference, or paid APIs.
-- Do not automate clicks or input into MTG Arena.
-- Do not introduce overlays or require administrator privileges.
-- Keep the user in control of all draft decisions.
+- Target native macOS 14 or newer; use Swift and SwiftUI.
+- Keep processing local, deterministic, and explainable.
+- Do not introduce runtime AI inference, cloud inference, paid APIs, or a server dependency for the active-draft workflow.
+- Never automate clicks, keyboard/touch input, selections, or overlays in MTG Arena.
+- Never transmit captured screen contents or commit private recordings.
+- Keep recognition observations separate from authoritative append-only draft events.
+- Keep recommendation logic in the shared platform-independent Swift core. The website may display published artifacts but must not reimplement scoring.
+- Preserve dataset scope, snapshot identity, provenance, and freshness. Missing values are not zero.
+- Do not claim exact 17Lands parity; whole-game eligibility for inconsistent source games remains unresolved.
+- Treat iPhone Mirroring as the initial capture source. Keep draft, data, and scoring domains independent of capture-source details.
+- Update tests and documentation with meaningful behavior changes. Record significant decisions in docs/DECISIONS.md.
 
-## Engineering expectations
+## Validation
 
-- Prefer small, independently testable components.
-- Separate raw observations from interpreted card identities.
-- Treat draft history as the authoritative record of state.
-- Make uncertainty explicit; do not silently guess card identities.
-- Preserve provenance and version information for reference datasets.
-- Add or update tests with behavior changes.
-- Avoid speculative abstractions before a real requirement exists.
-- Document significant architectural decisions.
-
-## Workflow
-
-- Run `swift test` on a compatible macOS environment.
-- Keep pull requests focused.
-- Explain assumptions and known limitations.
-- Never claim a feature is implemented when it is only scaffolded.
+- Swift changes: run swift test and package on macOS where applicable.
+- Python scripts: run python3 -m unittest discover -s scripts -p 'test_*.py'.
+- Website: use Hugo Extended 0.147.9 and run hugo --minify --panicOnWarning from website/.
+- Do not claim a check passed without a result.
+- Do not merge pull requests without explicit maintainer approval.
