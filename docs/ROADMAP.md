@@ -64,6 +64,18 @@ This page distinguishes implemented foundations from an integrated, user-ready f
 
 The current evaluator is a baseline, not a complete Limited strategy model. ALSA and ATA are carried as context but do not affect ranking. GIH observations are copy-weighted and are not independent game samples.
 
+## Product UX design
+
+- [x] Define draft cockpit product direction: current pack, evolving deck, and strategic context.
+- [x] Define pre-draft set/event selection, data readiness, and optional archetype briefing.
+- [x] Define progressive pack observation, unresolved-card states, explicit pick confirmation, and pack history/wheel behavior.
+- [x] Define deck summary and future archetype/splash guidance expectations.
+- [ ] Validate the proposed workspace hierarchy against real capture dimensions and a complete recorded draft.
+- [ ] Implement the draft-session shell and state projections after Phase 0 capture validation.
+- [ ] Usability-test card scanning, pick confirmation, pack history, and deck visibility.
+
+The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). Design definition is complete; implementation is not.
+
 ## Next phases
 
 ### Phase 1 — Recognition prototype
