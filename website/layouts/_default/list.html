@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="page-content">
+  <div class="eyebrow"><span class="eyebrow-line"></span> EXPLORE</div>
+  <h1>{{ .Title }}</h1>
+  <div class="prose">
+    {{ .Content }}
+    <ul>
+      {{ range .RegularPages.ByTitle }}
+      <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ with .Description }} — {{ . }}{{ end }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
