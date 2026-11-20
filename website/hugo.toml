@@ -11,7 +11,7 @@ enableRobotsTXT = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = false
+      unsafe = true
 
 [permalinks]
   pages = "/:slug/"
