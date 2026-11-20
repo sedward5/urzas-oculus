@@ -1,0 +1,37 @@
+name: Website CI
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - '.github/workflows/website-ci.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'website/**'
+      - '.github/workflows/website-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Hugo site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.147.9'
+          extended: true
+
+      - name: Show Hugo version
+        run: hugo version
+
+      - name: Build site
+        working-directory: website
+        run: hugo --minify --panicOnWarning --destination public

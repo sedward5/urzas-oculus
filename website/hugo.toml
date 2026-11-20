@@ -1,0 +1,16 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Urza's Oculus"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "A thoughtful, data-informed companion for Magic: The Gathering Arena drafts."
+  tagline = "See the shape of the draft."
+  githubURL = "https://github.com/sedward5/urzas-oculus"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

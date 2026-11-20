@@ -6,3 +6,4 @@ dist/
 xcuserdata/
 .env
 .env.*
+\n# Hugo output\nwebsite/public/\n

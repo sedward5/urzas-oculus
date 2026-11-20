@@ -1,0 +1,28 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="eyebrow-line"></span> A draft companion in the making</div>
+    <h1>See the shape<br>of the <em>draft.</em></h1>
+    <p class="hero-lede">An arcane instrument for clearer decisions. Urza's Oculus is being built to bring draft history, card data, and thoughtful recommendations into one native macOS companion.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ site.Params.githubURL }}">Explore the project <span aria-hidden="true">↗</span></a>
+      <a class="button button-quiet" href="{{ "pages/about/" | relURL }}">How it works</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-label="Urza's Oculus brass instrument and luminous blue crystal">
+    <div class="orbit orbit-outer"></div>
+    <div class="orbit orbit-inner"></div>
+    <div class="crystal-halo"></div>
+    <div class="crystal"><span></span></div>
+    <div class="hero-art-caption">OBSERVE · UNDERSTAND · CHOOSE</div>
+  </div>
+  <div class="hero-footnote"><span class="pulse-dot"></span> Open development · Phase 0</div>
+</section>
+<section class="intro-section">
+  <div class="section-heading">
+    <span class="eyebrow">THE IDEA</span>
+    <h2>A little more insight.<br><em>A lot more agency.</em></h2>
+  </div>
+  <div class="intro-copy">{{ .Content }}</div>
+</section>
+{{ end }}

@@ -1,0 +1,8 @@
+{{ define "main" }}
+<article class="page-content">
+  <div class="eyebrow"><span class="eyebrow-line"></span> URZA'S OCULUS</div>
+  <h1>{{ .Title }}</h1>
+  {{ with .Description }}<p class="page-lede">{{ . }}</p>{{ end }}
+  <div class="prose">{{ .Content }}</div>
+</article>
+{{ end }}
