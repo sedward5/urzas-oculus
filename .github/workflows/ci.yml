@@ -33,7 +33,6 @@ jobs:
               - 'Tests/**'
               - 'Resources/**'
               - 'scripts/package-app.sh'
-              - '.github/workflows/ci.yml'
             python:
               - 'scripts/*.py'
 
