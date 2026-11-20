@@ -26,7 +26,7 @@ Configure the Pages project with:
 - **Build output directory:** `public`
 - **Environment variable:** `HUGO_VERSION` set to the version used by `.github/workflows/website-ci.yml`
 
-Cloudflare Pages handles deployment and preview deployments. GitHub Actions validates pull requests but does not deploy the site.
+Cloudflare Pages handles deployment and preview deployments. GitHub Actions validates pull requests but does not deploy the site. Keep the Hugo version in this file, the GitHub workflow, and the Cloudflare environment variable in sync.
 
 ## Content status
 
