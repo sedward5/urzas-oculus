@@ -71,7 +71,7 @@ GitHub Actions runs the native macOS build and tests. GitHub Codespaces
 can be used for browser-based editing and Git operations, but its Linux
 environment cannot run the native macOS application.
 
-## Project documentation
+## Website\n\nThe Hugo site lives in [`website/`](website/). See [website setup and Cloudflare Pages configuration](website/README.md).\n\n## Project documentation
 
 - [Project steering](docs/PROJECT_STEERING.md)
 - [Architecture](docs/ARCHITECTURE.md)
