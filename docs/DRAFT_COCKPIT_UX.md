@@ -181,6 +181,26 @@ This is a conceptual hierarchy, not a fixed pixel layout. The workspace must ada
 8. A recognition error can be corrected without rewriting the original observation or silently corrupting the draft history.
 9. A capture interruption or app restart does not lose confirmed picks once session persistence is implemented.
 
+## Wheel likelihood indicator
+
+A compact wheel-watch icon may appear on a card row when available evidence suggests the card has a meaningful chance to return. It is a decision aid, not a guarantee or a substitute for the recommendation score.
+
+- Show the indicator only when the estimate has a defensible basis, such as pick position and compatible historical pick/wheel data.
+- Keep the indicator secondary to the card name and recommendation.
+- Provide a short explanation on hover or selection, including the evidence basis and uncertainty.
+- Do not show a numeric probability until the model is calibrated and its meaning can be explained.
+- Absence of the indicator means "no useful estimate," not "will not wheel."
+
+## Recovering a pick that Oculus did not observe
+
+A missed capture must not force the player to reconstruct the whole deck manually. Use the following recovery order:
+
+1. **Resolve from the last observed pack.** If the pack contents and current pick are known, ask which card instance the player selected. Preserve the original observations and append a user-confirmed recovery/correction event.
+2. **Reconcile against Arena's deck view.** If the relevant pack is unavailable or too incomplete, offer a guided deck-review flow. Capture multiple scroll positions, accumulate the visible deck entries, and compare the resulting pool with the event log. The deck view is a reconciliation source, not the authoritative history of what happened at each pick.
+3. **Manual card search as a last resort.** If neither pack evidence nor a complete deck review can resolve the discrepancy, allow the player to search/select the card and clearly mark the event as manually recovered.
+
+The recovery UI should explain what is known and what is uncertain. Never silently infer a pick merely because a card disappeared from a later pack frame. If multiple copies or identical card instances are possible, retain instance-level identity where available and ask for clarification only when it changes the resulting pool.
+
 ## Delivery sequence
 
 This specification does not change the current Phase 0 gate. Validate real capture first. Then implement recognition and pack accumulation, followed by the confirmed-pick workflow and persistent draft history. Deck analytics and strategic recommendations build on reliable draft state.
