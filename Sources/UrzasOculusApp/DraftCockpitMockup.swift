@@ -64,14 +64,9 @@ struct DraftCockpitMockupView: View {
 
     private var sessionHeader: some View {
         HStack(spacing: 14) {
-            Image(systemName: "眼睛")
+            Image(systemName: "scope")
                 .font(.system(size: 25, weight: .medium))
                 .foregroundStyle(OculusPalette.cyan)
-                .overlay {
-                    Image(systemName: "scope")
-                        .font(.system(size: 24, weight: .medium))
-                        .foregroundStyle(OculusPalette.cyan)
-                }
                 .frame(width: 34)
             VStack(alignment: .leading, spacing: 2) {
                 Text("URZA'S OCULUS")
