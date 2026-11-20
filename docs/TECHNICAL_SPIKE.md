@@ -1,6 +1,10 @@
 # Phase 0 — Screen Capture Feasibility
 
-## Status (2026-11-20)\n\nThe ScreenCaptureKit prototype and bounded three-second sequence capture are implemented and merged. Real-world manual validation on the target Mac remains the next gate. A representative Arena draft recording is being prepared; capture quality, window identification, and OCR suitability have not yet been established.\n\n## Objective
+## Status (2026-11-20)\n\nThe ScreenCaptureKit prototype and bounded three-second sequence capture are implemented and merged. Real-world manual validation on the target Mac remains the next gate. A representative Arena draft recording is being prepared; capture quality, window identification, and OCR suitability have not yet been established.\n\n## Status (2026-11-20)
+
+The ScreenCaptureKit prototype and bounded three-second sequence capture are implemented and merged. Real-world manual validation on the target Mac remains the next gate. A representative Arena draft recording is being prepared; capture quality, window identification, and OCR suitability have not yet been established.
+
+## Objective
 
 Determine whether ScreenCaptureKit can reliably capture the macOS
 iPhone Mirroring window on macOS 14 or newer.
