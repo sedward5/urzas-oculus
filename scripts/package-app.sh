@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
-ICON_SOURCE="$ROOT_DIR/Resources/AppIcon.jpg"
+ICON_SOURCE="$ROOT_DIR/Resources/AppIcon.png"
 
 if [[ ! -f "$ICON_SOURCE" ]]; then
     echo "Missing app icon: $ICON_SOURCE"
