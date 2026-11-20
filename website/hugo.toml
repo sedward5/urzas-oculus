@@ -13,5 +13,3 @@ enableRobotsTXT = true\ndisableKinds = ["taxonomy", "term"]
     [markup.goldmark.renderer]
       unsafe = true
 
-[permalinks]
-  pages = "/:slug/"
