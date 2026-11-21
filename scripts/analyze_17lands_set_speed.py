@@ -104,6 +104,8 @@ def analyze_archive(path: Path) -> dict:
     rows = missing_turns = invalid_turns = invalid_results = missing_seat = 0
     missing_identity = 0
     first_time = last_time = None
+    performance_groups: dict[str, GameStats] = {}
+    performance_field = None
     with gzip.open(path, "rt", encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
         fields = reader.fieldnames or []
@@ -115,6 +117,10 @@ def analyze_archive(path: Path) -> dict:
         identity = ("draft_id", "build_index", "match_number", "game_number")
         has_identity = all(name in fields for name in identity)
         has_seat = "on_play" in fields
+        performance_field = next(
+            (name for name in ("user_game_win_rate_bucket", "user_win_rate_bucket") if name in fields),
+            None,
+        )
         for rows, row in enumerate(reader, 1):
             if has_identity and not all((row.get(k) or "").strip() for k in identity):
                 missing_identity += 1
@@ -139,6 +145,10 @@ def analyze_archive(path: Path) -> dict:
                 invalid_results += 1
                 continue
             overall.add(turns, won)
+            if performance_field:
+                bucket = (row.get(performance_field) or "").strip()
+                if bucket:
+                    performance_groups.setdefault(bucket, GameStats()).add(turns, won)
             if has_seat:
                 seat = parse_bool(row.get("on_play"))
                 if seat is None:
@@ -151,6 +161,8 @@ def analyze_archive(path: Path) -> dict:
         "missing_identity_rows": missing_identity if has_identity else None,
         "missing_play_draw_rows": missing_seat if has_seat else None,
         "draft_time_min": first_time, "draft_time_max": last_time,
+        "performance_group_field": performance_field,
+        "by_performance_group": {k: v.summary() for k, v in sorted(performance_groups.items())},
         "overall": overall.summary(),
         "by_play_draw": {k: v.summary() for k, v in splits.items()} if has_seat else None,
     }
@@ -185,6 +197,17 @@ def render_report(set_code: str, event_type: str, result: dict) -> str:
     ]
     for item in stats["turn_distribution"]:
         lines.append(f"| {item['turns']} | {item['games']:,} | {pct(item['share'])} | {pct(item['win_rate'])} |")
+    lines += ["", "## Player-performance groups", ""]
+    if not result["by_performance_group"]:
+        lines.append("No documented player-performance bucket was present in this archive.")
+    else:
+        lines += ["| Group | Games | Median turns | Ended by turn 6 | Reached turn 10+ | Win rate |",
+                  "|---|---:|---:|---:|---:|---:|"]
+        for group, part in result["by_performance_group"].items():
+            lines.append(f"| {group} | {part['games']:,} | {part['median_turns']} | "
+                         f"{pct(part['ended_by_turn_share'].get('6'))} | "
+                         f"{pct(part['reached_turn_10_plus_share'])} | {pct(part['win_rate'])} |")
+        lines += ["", f"- Source grouping field: {result['performance_group_field']}"]
     lines += ["", "## Play/draw split", ""]
     if result["by_play_draw"] is None:
         lines.append("The archive does not include an on_play field.")
