@@ -31,7 +31,7 @@ class ArchetypeAuditTests(unittest.TestCase):
             header = ["draft_id", "build_index", "main_colors", "won"]
             rows = [
                 ["a", "0", "UW", "true"],
-                ["a", "0", "WU", "false"],
+                ["a", "0", "UB", "false"],
                 ["b", "0", "WU", "true"],
                 ["c", "0", "BR", "false"],
                 ["c", "0", "BR", "false"],
