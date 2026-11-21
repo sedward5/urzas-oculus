@@ -1,0 +1,51 @@
+name: 17Lands Replay Data Quality Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_code:
+        description: 17Lands expansion code
+        required: true
+        default: HOB
+        type: string
+      event_type:
+        description: Event type
+        required: true
+        default: PremierDraft
+        type: choice
+        options:
+          - PremierDraft
+          - TradDraft
+          - PickTwoDraft
+          - Sealed
+          - TradSealed
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: macos-15
+    timeout-minutes: 120
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show Python version
+        run: python3 --version
+
+      - name: Run replay-backed data quality audit
+        run: |
+          python3 scripts/inspect_17lands_replay_quality.py \
+            --set-code "${{ inputs.set_code }}" \
+            --event-type "${{ inputs.event_type }}" \
+            --output-dir replay-quality-output
+
+      - name: Upload quality report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 17lands-replay-quality-${{ inputs.set_code }}-${{ inputs.event_type }}-${{ github.run_id }}
+          path: replay-quality-output/
+          if-no-files-found: warn
+          retention-days: 30

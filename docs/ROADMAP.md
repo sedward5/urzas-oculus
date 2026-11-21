@@ -38,10 +38,11 @@ This page distinguishes implemented foundations from an integrated, user-ready f
 - [x] HOB PremierDraft archive validation workflow and successful validation artifact.
 - [x] Manual review of physical pack return, last-seen behavior, ALSA averaging, secondary picks, duplicate copies, and incomplete pack handling.
 - [x] Replay schema audit script and manually triggerable workflow.
-- [ ] Review the downloaded HOB replay audit artifact for possible game-eligibility evidence.
+- [x] Reviewed HOB replay audit: all 323,114 game keys matched replay keys one-to-one.
+- [ ] Run replay-backed deck/sideboard/opening-hand consistency audit.
 - [ ] Establish a defensible whole-game eligibility rule consistent with 17Lands definitions.
 
-**Important limitation:** the game importer currently aggregates rows with valid win outcomes; it does not exclude inconsistent games as a whole. The public wide CSV has no documented game-valid/deck-linked flag. Do not claim exact 17Lands parity. See [metric semantics](17lands-metric-semantics.md).
+**Important limitation:** the game importer currently aggregates rows with valid win outcomes; it does not exclude inconsistent games as a whole. The public wide CSV has no documented game-valid/deck-linked flag. Do not claim exact 17Lands parity. Replay key matching does not itself establish upstream eligibility. See [metric semantics](17lands-metric-semantics.md).
 
 ### Draft domain foundation
 - [x] Append-only event model.
@@ -75,6 +76,12 @@ The current evaluator is a baseline, not a complete Limited strategy model. ALSA
 - [ ] Usability-test card scanning, pick confirmation, pack history, and deck visibility.
 
 The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). Design definition is complete; implementation is not.
+
+## Analysis and production plan
+
+The bounded data-analysis sequence and production checkpoint are documented in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md).
+
+The next task is the replay-backed consistency audit. Set speed, archetype performance, and lane inference are separate follow-on analyses. They are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
 
 ## Next phases
 
