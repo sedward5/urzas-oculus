@@ -1,0 +1,48 @@
+name: 17Lands Set Speed Audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_code:
+        description: 17Lands expansion code
+        required: true
+        default: HOB
+        type: string
+      event_type:
+        description: Event type
+        required: true
+        default: PremierDraft
+        type: choice
+        options:
+          - PremierDraft
+          - TradDraft
+          - PickTwoDraft
+          - Sealed
+          - TradSealed
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Show Python version
+        run: python3 --version
+      - name: Run set-speed audit
+        run: |
+          python3 scripts/analyze_17lands_set_speed.py \
+            --set-code "${{ inputs.set_code }}" \
+            --event-type "${{ inputs.event_type }}" \
+            --output-dir set-speed-output
+      - name: Upload set-speed report and summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 17lands-set-speed-${{ inputs.set_code }}-${{ inputs.event_type }}-${{ github.run_id }}
+          path: set-speed-output/
+          if-no-files-found: warn
+          retention-days: 30
