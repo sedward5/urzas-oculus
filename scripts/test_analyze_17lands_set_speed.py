@@ -47,6 +47,7 @@ class SetSpeedAuditTests(unittest.TestCase):
             write_archive(path, ["num_turns", "won"], [["8", "true"], ["9", "false"]])
             result = analyze_archive(path)
             self.assertEqual(result["overall"]["games"], 2)
+            self.assertEqual(result["overall"]["median_turns"], 8.5)
             self.assertIsNone(result["by_play_draw"])
 
     def test_report_states_limits(self):
