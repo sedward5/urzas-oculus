@@ -81,7 +81,7 @@ The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_C
 
 The bounded data-analysis sequence and production checkpoint are documented in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md).
 
-The HOB PremierDraft set-speed baseline is recorded in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md) from successful workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947). The report terminology correction is in progress. The next analysis is archetype performance; lane inference remains a separate follow-on analysis. These are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
+The HOB PremierDraft set-speed baseline is recorded in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md) from successful workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947). The historical user win-rate bucket terminology and missing-value count are corrected. A first reproducible two-color archetype-proxy audit is implemented in `scripts/analyze_17lands_archetypes.py`, with manual workflow `17lands-archetype-audit.yml`. Run it for HOB PremierDraft and review its artifact before drawing conclusions. Lane inference remains a separate follow-on analysis. These are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
 
 ## Next phases
 
