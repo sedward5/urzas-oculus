@@ -41,18 +41,33 @@ class SetSpeedAuditTests(unittest.TestCase):
             self.assertEqual(result["by_play_draw"]["on_play"]["games"], 3)
             self.assertEqual(result["by_play_draw"]["on_draw"]["games"], 2)
 
-    def test_optional_performance_group_breakdown(self):
+    def test_historical_win_rate_buckets_are_not_performance_groups(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "game.csv.gz"
             write_archive(
                 path,
                 ["num_turns", "won", "user_game_win_rate_bucket"],
-                [["6", "true", "Top"], ["9", "false", "Bottom"]],
+                [["6", "true", "0.70"], ["9", "false", "0.72"]],
             )
             result = analyze_archive(path)
-            self.assertEqual(result["performance_group_field"], "user_game_win_rate_bucket")
-            self.assertEqual(result["by_performance_group"]["Top"]["games"], 1)
-            self.assertEqual(result["by_performance_group"]["Bottom"]["games"], 1)
+            self.assertEqual(result["historical_user_win_rate_bucket_field"], "user_game_win_rate_bucket")
+            self.assertEqual(result["by_historical_user_win_rate_bucket"]["0.70"]["games"], 1)
+            self.assertEqual(result["by_historical_user_win_rate_bucket"]["0.72"]["games"], 1)
+            self.assertEqual(result["missing_historical_user_win_rate_bucket_games"], 0)
+            report = render_report("HOB", "PremierDraft", result)
+            self.assertIn("Historical user win-rate buckets", report)
+            self.assertIn("not 17Lands Top/Middle/Bottom performance groups", report)
+            self.assertNotIn("Player-performance groups", report)
+
+    def test_missing_historical_bucket_count(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "game.csv.gz"
+            write_archive(path, ["num_turns", "won", "user_game_win_rate_bucket"], [
+                ["6", "true", "0.70"], ["8", "false", ""], ["9", "true", "0.72"]
+            ])
+            result = analyze_archive(path)
+            self.assertEqual(result["missing_historical_user_win_rate_bucket_games"], 1)
+            self.assertEqual(sum(v["games"] for v in result["by_historical_user_win_rate_bucket"].values()), 2)
 
     def test_optional_play_draw_field(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -104,7 +104,8 @@ def analyze_archive(path: Path) -> dict:
     rows = missing_turns = invalid_turns = invalid_results = missing_seat = 0
     missing_identity = 0
     first_time = last_time = None
-    performance_groups: dict[str, GameStats] = {}
+    historical_win_rate_buckets: dict[str, GameStats] = {}
+    historical_win_rate_bucket_missing = 0
     performance_field = None
     with gzip.open(path, "rt", encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
@@ -148,7 +149,9 @@ def analyze_archive(path: Path) -> dict:
             if performance_field:
                 bucket = (row.get(performance_field) or "").strip()
                 if bucket:
-                    performance_groups.setdefault(bucket, GameStats()).add(turns, won)
+                    historical_win_rate_buckets.setdefault(bucket, GameStats()).add(turns, won)
+                else:
+                    historical_win_rate_bucket_missing += 1
             if has_seat:
                 seat = parse_bool(row.get("on_play"))
                 if seat is None:
@@ -161,8 +164,11 @@ def analyze_archive(path: Path) -> dict:
         "missing_identity_rows": missing_identity if has_identity else None,
         "missing_play_draw_rows": missing_seat if has_seat else None,
         "draft_time_min": first_time, "draft_time_max": last_time,
-        "performance_group_field": performance_field,
-        "by_performance_group": {k: v.summary() for k, v in sorted(performance_groups.items())},
+        "historical_user_win_rate_bucket_field": performance_field,
+        "missing_historical_user_win_rate_bucket_games": historical_win_rate_bucket_missing,
+        "by_historical_user_win_rate_bucket": {
+            k: v.summary() for k, v in sorted(historical_win_rate_buckets.items())
+        },
         "overall": overall.summary(),
         "by_play_draw": {k: v.summary() for k, v in splits.items()} if has_seat else None,
     }
@@ -197,17 +203,25 @@ def render_report(set_code: str, event_type: str, result: dict) -> str:
     ]
     for item in stats["turn_distribution"]:
         lines.append(f"| {item['turns']} | {item['games']:,} | {pct(item['share'])} | {pct(item['win_rate'])} |")
-    lines += ["", "## Player-performance groups", ""]
-    if not result["by_performance_group"]:
-        lines.append("No documented player-performance bucket was present in this archive.")
+    lines += ["", "## Historical user win-rate buckets", ""]
+    if not result["by_historical_user_win_rate_bucket"]:
+        lines.append("No historical user win-rate bucket field was present in this archive.")
     else:
-        lines += ["| Group | Games | Median turns | Ended by turn 6 | Reached turn 10+ | Win rate |",
-                  "|---|---:|---:|---:|---:|---:|"]
-        for group, part in result["by_performance_group"].items():
-            lines.append(f"| {group} | {part['games']:,} | {part['median_turns']} | "
+        lines += [
+            "These are fine-grained historical user win-rate buckets, not 17Lands Top/Middle/Bottom performance groups.",
+            "",
+            "| Source bucket | Games | Median turns | Ended by turn 6 | Reached turn 10+ | Win rate |",
+            "|---|---:|---:|---:|---:|---:|",
+        ]
+        for bucket, part in result["by_historical_user_win_rate_bucket"].items():
+            lines.append(f"| {bucket} | {part['games']:,} | {part['median_turns']} | "
                          f"{pct(part['ended_by_turn_share'].get('6'))} | "
                          f"{pct(part['reached_turn_10_plus_share'])} | {pct(part['win_rate'])} |")
-        lines += ["", f"- Source grouping field: {result['performance_group_field']}"]
+        lines += [
+            "",
+            f"- Source field: {result['historical_user_win_rate_bucket_field']}",
+            f"- Included games without a bucket: {result['missing_historical_user_win_rate_bucket_games']:,}",
+        ]
     lines += ["", "## Play/draw split", ""]
     if result["by_play_draw"] is None:
         lines.append("The archive does not include an on_play field.")
@@ -224,7 +238,7 @@ def render_report(set_code: str, event_type: str, result: dict) -> str:
         "- num_turns is reported as supplied by the archive; this audit does not reinterpret it as match length or a player-turn count.",
         "- Win rate by game length is descriptive; it does not show that longer or shorter games cause wins.",
         "- Play/draw groups are separated because seat status can affect game length and outcomes.",
-        "- Compare only compatible event types, player-performance groups, and overlapping date/coverage windows.",
+        "- Historical user win-rate buckets are not the official Top/Middle/Bottom performance groups; compare only compatible event types, populations, and overlapping date/coverage windows.",
         "- The public archive may omit games 17Lands considers inconsistent. This audit does not reproduce that eligibility filter.",
         "- No faster/balanced/slower label is assigned from one median; classification needs a compatible baseline and uncertainty review.", ""]
     return "\n".join(lines)
@@ -250,7 +264,7 @@ def main() -> int:
             result = analyze_archive(archive)
         report = render_report(set_code, event_type, result)
         (output / "set-speed-report.md").write_text(report, encoding="utf-8")
-        payload = {"schema_version": 1, "analysis": "17lands-set-speed",
+        payload = {"schema_version": 2, "analysis": "17lands-set-speed",
                    "set_code": set_code, "event_type": event_type,
                    "source_url": archive_url(set_code, event_type),
                    "generated_at_utc": datetime.now(timezone.utc).isoformat(),
