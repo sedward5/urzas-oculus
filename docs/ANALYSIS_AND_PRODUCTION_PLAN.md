@@ -46,6 +46,7 @@ It measures:
 - Turn-count distribution, median, and P25/P75/P90.
 - Shares ending by turns 5, 6, and 7, plus games reaching turn 10+.
 - First-player versus second-player splits when the `on_play` field is available.
+- Optional player-performance bucket breakdown when the archive exposes a documented bucket field.
 - Descriptive win rate by game-length bucket and overall.
 - Source coverage, missing/invalid fields, and draft-time range.
 
