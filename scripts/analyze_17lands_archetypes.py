@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deck-level color-pair performance audit of a 17Lands public game archive."""
+"""Deck-clustered, game-weighted color-pair performance audit of 17Lands data."""
 from __future__ import annotations
 
 import argparse
@@ -9,7 +9,6 @@ import json
 import random
 import re
 import urllib.request
-from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -50,31 +49,66 @@ def canonical_colors(value: str | None) -> str | None:
     return "".join(color for color in COLOR_ORDER if color in colors)
 
 
-def bootstrap_interval(values: list[float], *, seed: int = BOOTSTRAP_SEED) -> tuple[float, float] | None:
-    """Percentile interval for the mean of independent deck-level win rates."""
-    if len(values) < 2:
+def pooled_win_rate(decks: list[dict]) -> float | None:
+    games = sum(deck["games"] for deck in decks)
+    return sum(deck["wins"] for deck in decks) / games if games else None
+
+
+def bootstrap_win_rate_interval(
+    decks: list[dict], *, seed: int = BOOTSTRAP_SEED
+) -> tuple[float, float] | None:
+    """Percentile interval for pooled game win rate, resampling whole decks."""
+    if len(decks) < 2:
         return None
     rng = random.Random(seed)
-    size = len(values)
-    means = []
+    sample_size = len(decks)
+    estimates = []
     for _ in range(BOOTSTRAP_RESAMPLES):
-        means.append(sum(values[rng.randrange(size)] for _ in range(size)) / size)
-    means.sort()
-    return means[int(0.025 * (BOOTSTRAP_RESAMPLES - 1))], means[int(0.975 * (BOOTSTRAP_RESAMPLES - 1))]
+        sample = [decks[rng.randrange(sample_size)] for _ in range(sample_size)]
+        rate = pooled_win_rate(sample)
+        if rate is not None:
+            estimates.append(rate)
+    estimates.sort()
+    low = estimates[int(0.025 * (len(estimates) - 1))]
+    high = estimates[int(0.975 * (len(estimates) - 1))]
+    return low, high
 
 
-def summarize_decks(decks: dict[tuple[str, str], dict]) -> dict:
-    rates = [deck["wins"] / deck["games"] for deck in decks.values()]
-    games = sum(deck["games"] for deck in decks.values())
-    wins = sum(deck["wins"] for deck in decks.values())
-    interval = bootstrap_interval(rates)
+def bootstrap_delta_interval(
+    group: list[dict], comparison: list[dict], *, seed: int
+) -> tuple[float, float] | None:
+    """95% interval for game-win-rate difference, resampling whole decks by group."""
+    if len(group) < 2 or len(comparison) < 2:
+        return None
+    rng = random.Random(seed)
+    group_size = len(group)
+    comparison_size = len(comparison)
+    deltas = []
+    for _ in range(BOOTSTRAP_RESAMPLES):
+        group_sample = [group[rng.randrange(group_size)] for _ in range(group_size)]
+        comparison_sample = [
+            comparison[rng.randrange(comparison_size)] for _ in range(comparison_size)
+        ]
+        group_rate = pooled_win_rate(group_sample)
+        comparison_rate = pooled_win_rate(comparison_sample)
+        if group_rate is not None and comparison_rate is not None:
+            deltas.append(group_rate - comparison_rate)
+    deltas.sort()
+    low = deltas[int(0.025 * (len(deltas) - 1))]
+    high = deltas[int(0.975 * (len(deltas) - 1))]
+    return low, high
+
+
+def summarize_decks(decks: list[dict], *, seed: int = BOOTSTRAP_SEED) -> dict:
+    games = sum(deck["games"] for deck in decks)
+    wins = sum(deck["wins"] for deck in decks)
+    interval = bootstrap_win_rate_interval(decks, seed=seed)
     return {
         "decks": len(decks),
         "games": games,
         "game_wins": wins,
         "game_weighted_win_rate": wins / games if games else None,
-        "mean_deck_win_rate": sum(rates) / len(rates) if rates else None,
-        "mean_deck_win_rate_ci_95": list(interval) if interval else None,
+        "game_weighted_win_rate_ci_95": list(interval) if interval else None,
     }
 
 
@@ -84,8 +118,7 @@ def analyze_archive(path: Path) -> dict:
     decks: dict[tuple[str, str], dict] = {}
     identity_colors: dict[tuple[str, str], str] = {}
     conflicting_decks: set[tuple[str, str]] = set()
-    non_pair_decks: set[tuple[str, str]] = set()
-    color_values: Counter[str] = Counter()
+    incomplete_decks: set[tuple[str, str]] = set()
 
     with gzip.open(path, "rt", encoding="utf-8-sig", newline="") as stream:
         reader = csv.DictReader(stream)
@@ -107,41 +140,58 @@ def analyze_archive(path: Path) -> dict:
             colors = canonical_colors(colors_raw)
             if not colors_raw:
                 missing_colors += 1
+                incomplete_decks.add(key)
                 continue
             if colors is None:
                 invalid_colors += 1
+                incomplete_decks.add(key)
                 continue
-            won = parse_bool(row.get("won"))
-            if won is None:
-                invalid_results += 1
-                continue
+
             if key in identity_colors and identity_colors[key] != colors:
                 conflicting_decks.add(key)
             identity_colors[key] = colors
+
+            won = parse_bool(row.get("won"))
+            if won is None:
+                invalid_results += 1
+                incomplete_decks.add(key)
+                continue
             deck = decks.setdefault(key, {"colors": colors, "games": 0, "wins": 0})
             deck["games"] += 1
             deck["wins"] += int(won)
 
-    for key, deck in decks.items():
-        if len(deck["colors"]) != 2:
-            non_pair_decks.add(key)
-        else:
-            color_values[deck["colors"]] += 1
+    excluded_decks = conflicting_decks | incomplete_decks
+    valid_decks = [value for key, value in decks.items() if key not in excluded_decks]
+    excluded_game_rows = sum(decks[key]["games"] for key in excluded_decks if key in decks)
 
-    valid_decks = {key: value for key, value in decks.items() if key not in conflicting_decks}
-    pair_decks: dict[str, dict[tuple[str, str], dict]] = {}
-    for key, deck in valid_decks.items():
+    pair_decks: dict[str, list[dict]] = {}
+    non_pair_decks = 0
+    for deck in valid_decks:
         if len(deck["colors"]) == 2:
-            pair_decks.setdefault(deck["colors"], {})[key] = deck
+            pair_decks.setdefault(deck["colors"], []).append(deck)
+        else:
+            non_pair_decks += 1
 
     baseline = summarize_decks(valid_decks)
     by_color_pair = {}
     for pair, members in sorted(pair_decks.items()):
-        summary = summarize_decks(members)
-        rate = summary["mean_deck_win_rate"]
-        baseline_rate = baseline["mean_deck_win_rate"]
-        summary["delta_vs_all_decks_percentage_points"] = (
-            (rate - baseline_rate) * 100 if rate is not None and baseline_rate is not None else None
+        comparison = [
+            deck for deck in valid_decks if deck["colors"] != pair
+        ]
+        seed = BOOTSTRAP_SEED + sum(ord(char) for char in pair)
+        summary = summarize_decks(members, seed=seed)
+        comparison_rate = pooled_win_rate(comparison)
+        pair_rate = summary["game_weighted_win_rate"]
+        delta_interval = bootstrap_delta_interval(members, comparison, seed=seed + 1)
+        summary["comparison_decks"] = len(comparison)
+        summary["comparison_games"] = sum(deck["games"] for deck in comparison)
+        summary["comparison_game_weighted_win_rate"] = comparison_rate
+        summary["delta_vs_rest_percentage_points"] = (
+            (pair_rate - comparison_rate) * 100
+            if pair_rate is not None and comparison_rate is not None else None
+        )
+        summary["delta_vs_rest_ci_95_percentage_points"] = (
+            [value * 100 for value in delta_interval] if delta_interval else None
         )
         by_color_pair[pair] = summary
 
@@ -152,8 +202,10 @@ def analyze_archive(path: Path) -> dict:
         "invalid_main_colors_rows": invalid_colors,
         "missing_or_invalid_result_rows": invalid_results,
         "conflicting_deck_identity_count": len(conflicting_decks),
-        "excluded_conflicting_deck_game_rows": sum(decks[key]["games"] for key in conflicting_decks),
-        "non_two_color_decks": len(non_pair_decks),
+        "incomplete_deck_identity_count": len(incomplete_decks - conflicting_decks),
+        "excluded_deck_identity_count": len(excluded_decks),
+        "excluded_valid_game_rows_from_incomplete_or_conflicting_decks": excluded_game_rows,
+        "non_two_color_decks": non_pair_decks,
         "valid_deck_count": len(valid_decks),
         "overall_deck_baseline": baseline,
         "by_color_pair": by_color_pair,
@@ -162,6 +214,12 @@ def analyze_archive(path: Path) -> dict:
 
 def pct(value: float | None) -> str:
     return "n/a" if value is None else f"{value:.1%}"
+
+
+def interval_text(value: list[float] | None, *, scale: float = 1.0, suffix: str = "") -> str:
+    if not value:
+        return "n/a"
+    return f"{value[0] * scale:.1f}{suffix}–{value[1] * scale:.1f}{suffix}"
 
 
 def render_report(set_code: str, event_type: str, result: dict) -> str:
@@ -177,44 +235,48 @@ def render_report(set_code: str, event_type: str, result: dict) -> str:
         f"- Rows with invalid main colors: {result['invalid_main_colors_rows']:,}",
         f"- Rows with missing/invalid results: {result['missing_or_invalid_result_rows']:,}",
         f"- Deck identities with conflicting color assignments (excluded): {result['conflicting_deck_identity_count']:,}",
-        f"- Games excluded with conflicting deck identities: {result['excluded_conflicting_deck_game_rows']:,}",
+        f"- Deck identities with incomplete game rows (excluded): {result['incomplete_deck_identity_count']:,}",
+        f"- Valid game rows excluded with incomplete/conflicting decks: {result['excluded_valid_game_rows_from_incomplete_or_conflicting_decks']:,}",
         f"- Valid non-two-color decks (not in pair table): {result['non_two_color_decks']:,}", "",
         "## Format baseline", "",
         f"- Decks: {baseline['decks']:,}; games: {baseline['games']:,}",
-        f"- Mean deck win rate: {pct(baseline['mean_deck_win_rate'])}",
-        f"- 95% deck-bootstrap interval: {interval_text(baseline['mean_deck_win_rate_ci_95'])}",
-        f"- Game-weighted win rate (context only): {pct(baseline['game_weighted_win_rate'])}", "",
-        "## Two-color results", "",
-        "Sorted by observed mean deck win rate for readability; this is not a strength ranking.", "",
-        "| Colors | Decks | Games | Mean deck win rate | 95% interval | vs. all-deck baseline |",
+        f"- Game-weighted win rate: {pct(baseline['game_weighted_win_rate'])}",
+        f"- 95% deck-cluster bootstrap interval: {interval_text(baseline['game_weighted_win_rate_ci_95'], scale=100, suffix='%')}",
+        "", "## Two-color results", "",
+        "Sorted by observed game-weighted win rate for readability; this is not a strength ranking.", "",
+        "| Colors | Decks | Games | Game-weighted win rate | 95% interval | vs. rest of field (95% interval) |",
         "|---|---:|---:|---:|---:|---:|",
     ]
-    for pair, part in sorted(result["by_color_pair"].items(),
-                             key=lambda item: (item[1]["mean_deck_win_rate"] or 0), reverse=True):
+    for pair, part in sorted(
+        result["by_color_pair"].items(),
+        key=lambda item: (item[1]["game_weighted_win_rate"] or 0),
+        reverse=True,
+    ):
+        delta = part["delta_vs_rest_percentage_points"]
+        delta_text = "n/a" if delta is None else f"{delta:+.1f} pp"
+        delta_ci = part["delta_vs_rest_ci_95_percentage_points"]
+        delta_text += f" ({interval_text(delta_ci, suffix=' pp')})"
         lines.append(
             f"| {pair} | {part['decks']:,} | {part['games']:,} | "
-            f"{pct(part['mean_deck_win_rate'])} | {interval_text(part['mean_deck_win_rate_ci_95'])} | "
-            f"{part['delta_vs_all_decks_percentage_points']:+.1f} pp |"
+            f"{pct(part['game_weighted_win_rate'])} | "
+            f"{interval_text(part['game_weighted_win_rate_ci_95'], scale=100, suffix='%')} | "
+            f"{delta_text} |"
         )
     lines += [
         "", "## Method and limitations", "",
-        "- A deck is identified by the pair (draft_id, build_index); each deck contributes one win-rate observation regardless of how many games it played.",
-        "- The reported archetype estimate is the unweighted mean of each deck's game win rate. The game-weighted rate is shown only as context.",
-        "- The 95% interval is a deterministic percentile bootstrap over deck-level win rates, not individual games. The public archive does not provide a stable player identifier for clustering repeated decks by drafter, so the interval may still understate population-level uncertainty.",
-        "- The baseline includes all valid-color decks, including mono-color and three-or-more-color decks. Only exactly two-color decks appear in the pair table.",
+        "- The primary win-rate estimate is pooled game wins divided by pooled games, matching the familiar game-level win-rate measure.",
+        "- Uncertainty intervals resample whole decks (draft_id, build_index) as clusters, then recompute the pooled game win rate. Games from one deck are not treated as independent bootstrap observations.",
+        "- Each color pair is compared with the rest of the field, excluding that pair from its comparison baseline. The delta interval independently resamples deck clusters from each side.",
+        "- The public archive does not provide a stable player identifier for clustering multiple decks by drafter. Repeated decks by one player may therefore remain correlated.",
+        "- Deck identities with conflicting main-color assignments or any incomplete game rows are excluded in full, rather than estimating a deck from only its valid subset of games.",
+        "- The overall baseline includes mono-color and three-or-more-color decks. Only exactly two-color decks appear in the comparison table.",
         "- main_colors is used as the deck's primary color identity. Splash colors are not folded into the pair label.",
         "- Color pairs are broad buckets. They do not distinguish different strategies within a pair, and a pair can contain multiple archetypes.",
-        "- The delta is descriptive against the all-deck baseline. It is not causal and is not adjusted for player skill, rank, date, or event subgroup.",
+        "- Results are descriptive and are not adjusted for player skill, rank, date, or event subgroup. Confidence intervals do not remove those confounders.",
         "- Do not use these results to modify live recommendations until sample coverage, cohort comparability, and archetype semantics have been reviewed.",
         "",
     ]
     return "\n".join(lines)
-
-
-def interval_text(value: list[float] | None) -> str:
-    if not value:
-        return "n/a"
-    return f"{pct(value[0])}–{pct(value[1])}"
 
 
 def main() -> int:
@@ -238,7 +300,7 @@ def main() -> int:
         report = render_report(set_code, event_type, result)
         (output / "archetype-report.md").write_text(report, encoding="utf-8")
         payload = {
-            "schema_version": 1,
+            "schema_version": 2,
             "analysis": "17lands-archetype-performance",
             "set_code": set_code,
             "event_type": event_type,
@@ -246,7 +308,9 @@ def main() -> int:
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
             **result,
         }
-        (output / "archetype-summary.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        (output / "archetype-summary.json").write_text(
+            json.dumps(payload, indent=2) + "\n", encoding="utf-8"
+        )
         print(report)
         return 0
     except Exception as exc:
