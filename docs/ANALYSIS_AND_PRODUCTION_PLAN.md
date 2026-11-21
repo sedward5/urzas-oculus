@@ -82,12 +82,13 @@ Question: Which archetypes are performing above or below the format baseline?
 First pass: use transparent two-color buckets from the game archive's `main_colors` field. This is a color-pair proxy, not a refined archetype taxonomy.
 
 - Identify a deck by `(draft_id, build_index)`; do not treat every game as an independent deck sample.
-- Calculate each deck's game win rate, then report the unweighted mean across decks for each color pair.
-- Show both distinct deck count and game count.
-- Compare against the all-deck baseline from the same archive, event type, and date coverage.
-- Include a deterministic 95% bootstrap interval over deck-level win rates. The public archive does not expose a stable player identifier for clustering multiple decks from the same drafter, so describe this as deck-level uncertainty rather than a fully player-clustered population interval.
+- Use pooled game wins divided by pooled games as the primary win-rate estimate, matching the familiar game-level win-rate measure.
+- Show both distinct deck count and game count; do not present an unweighted mean of deck win rates as the headline metric. The first HOB run showed why: 48.2% unweighted mean deck win rate versus 56.2% pooled game win rate.
+- Compare each color pair with the rest of the field, excluding that pair from its comparison baseline, rather than comparing it with a baseline that includes itself.
+- Calculate deterministic 95% bootstrap intervals by resampling whole decks and recomputing pooled game win rates. Also bootstrap the pair-versus-rest difference. This preserves game weighting while avoiding treating games from the same deck as independent observations.
+- The public archive does not expose a stable player identifier for clustering multiple decks from the same drafter, so repeated decks by one player may remain correlated.
 - Keep mono-color and three-or-more-color decks in the overall baseline, but outside the two-color comparison table.
-- Exclude and report deck identities whose main-color assignment conflicts across their game rows.
+- Exclude and report deck identities whose main-color assignment conflicts or that contain any incomplete game rows; do not estimate their performance from only a valid subset of games.
 - Keep splash colors separate from the main-color pair; do not silently convert a splash into a third archetype color.
 - Do not call the ten color pairs ten distinct strategies. They can contain materially different archetypes.
 - Do not rank noisy results as strong/weak or feed them into live recommendations.
