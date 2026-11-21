@@ -12,6 +12,16 @@ The current macOS app is a **Phase 0 ScreenCaptureKit feasibility prototype**. I
 
 Foundational components already exist independently: an append-only draft-event model; SQLite/Scryfall reference data; official 17Lands archive acquisition, parsing, and metric aggregation; dataset provenance/readiness; and a shared Swift evaluator for a regularized standalone GIH WR baseline. These components are not integrated into a complete draft companion.
 
+## Draft experience direction
+
+The intended user experience is a persistent **draft cockpit** with three coordinated areas: the current pack, the evolving drafted pool/deck, and strategic context. The pack is primary during a pick; deck shape and archetype/color signals remain visible alongside it.
+
+The intended journey is: refresh/check local Scryfall and 17Lands data at launch; choose event type and set (newest release first) before joining Arena; start a local session; optionally review set archetypes; capture and progressively recognize the first pack; explicitly confirm picks; retain collapsible pack history and wheel updates; and continuously update deck composition and strategic context.
+
+Recognition is never authoritative. Unresolved cards remain visibly unresolved, picks require explicit confirmation, and the drafted pool is derived from append-only events. Strategic guidance must expose evidence and uncertainty. In particular, archetype openness is not the same as the user's own color direction, and splash advice must account for fixing and mana requirements.
+
+The detailed interaction hierarchy, states, acceptance scenarios, and open design questions are in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). This is accepted product direction, not implemented functionality.
+
 ## Core philosophy
 
 - **Local first:** capture, recognition, draft tracking, and scoring are intended to run locally. Network access is for explicit reference-data updates, not active picks.

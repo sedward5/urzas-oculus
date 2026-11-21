@@ -164,3 +164,18 @@ lookup. Recognition and draft-state adapters will provide candidate IDs once
 their integration is implemented. This service is independently testable
 without screen capture, OCR, SwiftUI, or network access.
 
+
+
+## Draft cockpit presentation and state
+
+The user-facing workspace is organized around three projections of explicit domain state:
+
+- **Current pack:** card instances observed from captured frames, recognition hypotheses/confidence, unresolved slots, and the current recommendation result.
+- **Drafted pool:** cards derived only from confirmed pick events and subsequent corrections. Deck statistics are projections of this pool.
+- **Strategic context:** archetype/color hypotheses and splash considerations, each with evidence, confidence, and the data/configuration version that produced it.
+
+A separate pack-history projection retains prior pack observations and known wheel updates. It must distinguish cards explicitly picked by the player, cards observed on later wheel returns, and cards merely absent from a later frame. Absence is not proof of a particular selection by another drafter.
+
+The session coordinator will orchestrate capture, recognition, user confirmation, event persistence, and scoring, but domain boundaries remain intact. Recognition hypotheses cannot directly add cards to the drafted pool. The user-confirmed pick becomes an append-only draft event; corrections append a compensating/correction event. The deck panel is a deterministic projection of the event history.
+
+The intended workspace hierarchy and interaction contracts are specified in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). The document describes desired behavior; it does not imply those UI features exist today.

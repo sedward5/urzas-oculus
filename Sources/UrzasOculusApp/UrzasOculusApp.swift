@@ -5,8 +5,18 @@ import UrzasOculusCore
 struct UrzasOculusApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .frame(minWidth: 720, minHeight: 600)
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Label("Capture Lab", systemImage: "viewfinder")
+                    }
+
+                DraftCockpitMockupView()
+                    .tabItem {
+                        Label("Draft Cockpit", systemImage: "rectangle.3.group")
+                    }
+            }
+            .frame(minWidth: 1040, minHeight: 720)
         }
     }
 }
