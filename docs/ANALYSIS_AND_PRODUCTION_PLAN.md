@@ -36,30 +36,46 @@ Recorded result from workflow run [44857461613](https://github.com/sedward5/urza
 
 This is strong evidence that the two exports agree on deck composition for this sample. It does not prove the upstream eligibility decision. The public game archive still lacks a documented whole-game validity flag, and the audit does not validate every in-game hand against deck/sideboard. Do not infer eligibility from drawn/tutored totals or undocumented candidate-hand fields.
 
-### 2. Set speed and format texture
+### 2. Set speed and format texture — HOB PremierDraft baseline recorded
 
 Question: Does a set tend to reward fast starts, or does it support longer games?
 
 The first reproducible audit is `scripts/analyze_17lands_set_speed.py`, run by the manually triggered workflow `17lands-set-speed-audit.yml`. It streams the official game archive and emits a Markdown report plus a versioned JSON summary.
 
+#### Recorded baseline: HOB PremierDraft
+
+Workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947), artifact `14689985681`:
+
+- 323,114 source rows and included games; no missing/invalid turn counts, results, or identity fields.
+- Draft-time range: 2026-08-11 15:43:42 through 2026-09-22 23:31:56.
+- Median 9 turns; P25 7, P75 10, P90 12.
+- 6.4% ended by turn 5; 16.9% by turn 6; 32.5% by turn 7; 35.0% reached turn 10+.
+- Overall tracked-user game win rate: 56.2%.
+- On the play: 161,736 games, median 8 turns, 60.8% tracked-user win rate.
+- On the draw: 161,378 games, median 9 turns, 51.5% tracked-user win rate.
+- The historical `user_game_win_rate_bucket` field was present on 322,944 games; 170 included games lacked it. It is a fine-grained historical user win-rate bucket, not the official Top/Middle/Bottom performance grouping.
+
+These are descriptive archive statistics, not causal findings. The play/draw win-rate gap and win-rate-by-game-length relationship should not be interpreted as causal effects. The baseline is a single set/event sample, not a comparative speed classification.
+
 It measures:
 - Turn-count distribution, median, and P25/P75/P90.
 - Shares ending by turns 5, 6, and 7, plus games reaching turn 10+.
 - First-player versus second-player splits when the `on_play` field is available.
-- Optional player-performance bucket breakdown when the archive exposes a documented bucket field.
+- Optional historical user win-rate bucket breakdown, explicitly distinguished from 17Lands' official Top/Middle/Bottom performance groups.
 - Descriptive win rate by game-length bucket and overall.
 - Source coverage, missing/invalid fields, and draft-time range.
 
 Guardrails:
 - Treat the archive's `num_turns` value as supplied; do not reinterpret it as match length or a player-turn count without authoritative semantics.
 - Win rate by game length is descriptive, not causal.
-- Do not classify a set as faster/balanced/slower from one median. Compare compatible event types, player-performance groups, and overlapping date windows first.
+- Do not classify a set as faster/balanced/slower from one median. Compare compatible event types, populations, and overlapping date windows first.
+- `user_game_win_rate_bucket` is not the official Top/Middle/Bottom performance group. Report it only as a historical user win-rate bucket and count missing values.
 - The public game archive may omit inconsistent games. This audit does not reproduce 17Lands' eligibility filter.
 - Per-turn creature/spell/land activity is deferred until the raw replay-turn schema is independently verified.
 
 Cockpit use after analysis: a compact faster/balanced/slower profile with median and distribution, plus a short explanation of curve pressure and defensive-pick implications. No hard-coded labels based on community hearsay.
 
-### 3. Archetype performance in the meta
+### 3. Archetype performance in the meta — next analysis
 
 Question: Which archetypes are performing above or below the format baseline?
 
