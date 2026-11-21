@@ -75,17 +75,23 @@ Guardrails:
 
 Cockpit use after analysis: a compact faster/balanced/slower profile with median and distribution, plus a short explanation of curve pressure and defensive-pick implications. No hard-coded labels based on community hearsay.
 
-### 3. Archetype performance in the meta — next analysis
+### 3. Archetype performance in the meta — first reproducible audit implemented
 
 Question: Which archetypes are performing above or below the format baseline?
 
-Start with archetypes that can be assigned consistently from available data:
-- Use official 17Lands archetype/color labels when present and documented.
-- If unavailable, begin with transparent color-pair buckets; do not pretend these are refined archetypes.
-- Compare win rate to the format baseline, with sample counts and uncertainty intervals.
-- Show game count and deck count separately where the data supports both.
-- Segment by event type and date window before comparing.
-- Flag small samples and avoid ranking noisy archetypes as strong/weak.
+First pass: use transparent two-color buckets from the game archive's `main_colors` field. This is a color-pair proxy, not a refined archetype taxonomy.
+
+- Identify a deck by `(draft_id, build_index)`; do not treat every game as an independent deck sample.
+- Calculate each deck's game win rate, then report the unweighted mean across decks for each color pair.
+- Show both distinct deck count and game count.
+- Compare against the all-deck baseline from the same archive, event type, and date coverage.
+- Include a deterministic 95% bootstrap interval over deck-level win rates.
+- Keep mono-color and three-or-more-color decks in the overall baseline, but outside the two-color comparison table.
+- Exclude and report deck identities whose main-color assignment conflicts across their game rows.
+- Keep splash colors separate from the main-color pair; do not silently convert a splash into a third archetype color.
+- Do not call the ten color pairs ten distinct strategies. They can contain materially different archetypes.
+- Do not rank noisy results as strong/weak or feed them into live recommendations.
+- If a documented official archetype field becomes available, validate its semantics before replacing or supplementing these proxy buckets.
 
 Cockpit use:
 - Set briefing: archetype performance and confidence.
