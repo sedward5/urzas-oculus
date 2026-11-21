@@ -81,7 +81,7 @@ The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_C
 
 The bounded data-analysis sequence and production checkpoint are documented in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md).
 
-The next task is the replay-backed consistency audit. Set speed, archetype performance, and lane inference are separate follow-on analyses. They are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
+The next data task is to run and review the new set-speed audit. Archetype performance and lane inference remain separate follow-on analyses. They are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
 
 ## Next phases
 

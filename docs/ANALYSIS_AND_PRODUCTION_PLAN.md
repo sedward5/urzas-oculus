@@ -24,53 +24,40 @@ A future evidence-based eligibility rule can increment the engine/config version
 
 ## Analysis workstreams
 
-### 1. Replay-backed game-data quality (next task)
+### 1. Replay-backed game-data quality — completed for HOB PremierDraft
 
-Question: Can replay records independently validate deck composition and opening-hand observations in the game archive?
+The HOB audit joined game and replay archives using `draft_id`, `build_index`, `match_number`, and `game_number`.
 
-Inputs:
-- Official 17Lands game archive.
-- Official 17Lands replay archive.
-- Join key: draft_id, build_index, match_number, game_number.
+Recorded result from workflow run [44857461613](https://github.com/sedward5/urzas-oculus/actions/runs/44857461613):
+- 323,114 game rows and 323,114 replay rows; all keys matched one-to-one.
+- No duplicate keys, missing identities, game-only keys, or replay-only keys.
+- No main-deck or sideboard count mismatches.
+- No opening-hand count exceeded the corresponding main-deck count.
 
-Checks:
-- Key coverage, duplicates, and missing identity.
-- Per-card main-deck count agreement between deck_ columns.
-- Per-card sideboard count agreement between sideboard_ columns.
-- Opening-hand card counts do not exceed corresponding main-deck counts.
-- Report unmatched and discrepant records separately.
-- Preserve representative examples, but do not dump unnecessary raw data.
-- Treat candidate-hand fields as opaque until their encoding and semantics are independently established.
-- Do not use total drawn/tutored counts as a deck-validity check; game effects can change how often a card is drawn or tutored.
-
-Deliverable: a reproducible audit report with denominators, mismatch rates, representative examples, and explicit interpretation limits.
-
-Exit decision:
-- If fields agree, record replay evidence and retain the unresolved 17Lands eligibility question unless official semantics establish that this is the relevant validation.
-- If they disagree, characterize mismatch patterns and seek authoritative field definitions before proposing an exclusion rule.
-- Missing replay rows are not evidence that a game is invalid.
+This is strong evidence that the two exports agree on deck composition for this sample. It does not prove the upstream eligibility decision. The public game archive still lacks a documented whole-game validity flag, and the audit does not validate every in-game hand against deck/sideboard. Do not infer eligibility from drawn/tutored totals or undocumented candidate-hand fields.
 
 ### 2. Set speed and format texture
 
 Question: Does a set tend to reward fast starts, or does it support longer games?
 
-Build set-level indicators from replay/game data:
-- Turn-count distribution and median, not just a single average.
-- Share of games ending by turns 5/6/7 and games reaching turns 10+.
-- First-player versus second-player splits where supported.
-- Win rate by game length, interpreted descriptively rather than causally.
-- Creature/spell/land activity by turn as supporting context.
-- Compare sets only within compatible event types, user groups, and comparable date/coverage windows.
+The first reproducible audit is `scripts/analyze_17lands_set_speed.py`, run by the manually triggered workflow `17lands-set-speed-audit.yml`. It streams the official game archive and emits a Markdown report plus a versioned JSON summary.
 
-Cockpit use:
-- A compact set-speed profile (faster / balanced / slower) with the underlying median and distribution.
-- A short explanation of what the profile means for curve pressure and defensive picks.
-- No hard-coded labels based on community hearsay. TRK and Reality Fracture are hypotheses to test against measured data.
+It measures:
+- Turn-count distribution, median, and P25/P75/P90.
+- Shares ending by turns 5, 6, and 7, plus games reaching turn 10+.
+- First-player versus second-player splits when the `on_play` field is available.
+- Optional player-performance bucket breakdown when the archive exposes a documented bucket field.
+- Descriptive win rate by game-length bucket and overall.
+- Source coverage, missing/invalid fields, and draft-time range.
 
 Guardrails:
-- Avoid calling a set aggro from median game length alone.
-- Account for format changes, player skill, event type, and sample size.
-- Recompute when data coverage changes.
+- Treat the archive's `num_turns` value as supplied; do not reinterpret it as match length or a player-turn count without authoritative semantics.
+- Win rate by game length is descriptive, not causal.
+- Do not classify a set as faster/balanced/slower from one median. Compare compatible event types, player-performance groups, and overlapping date windows first.
+- The public game archive may omit inconsistent games. This audit does not reproduce 17Lands' eligibility filter.
+- Per-turn creature/spell/land activity is deferred until the raw replay-turn schema is independently verified.
+
+Cockpit use after analysis: a compact faster/balanced/slower profile with median and distribution, plus a short explanation of curve pressure and defensive-pick implications. No hard-coded labels based on community hearsay.
 
 ### 3. Archetype performance in the meta
 
