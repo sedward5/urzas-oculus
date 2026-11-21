@@ -47,12 +47,12 @@ class SetSpeedAuditTests(unittest.TestCase):
             write_archive(
                 path,
                 ["num_turns", "won", "user_game_win_rate_bucket"],
-                [["6", "true", "Top"], ["9", "false", "Bottom"]],
+                [["6", "true", "0.70"], ["9", "false", "0.72"]],
             )
             result = analyze_archive(path)
             self.assertEqual(result["historical_user_win_rate_bucket_field"], "user_game_win_rate_bucket")
-            self.assertEqual(result["by_historical_user_win_rate_bucket"]["Top"]["games"], 1)
-            self.assertEqual(result["by_historical_user_win_rate_bucket"]["Bottom"]["games"], 1)
+            self.assertEqual(result["by_historical_user_win_rate_bucket"]["0.70"]["games"], 1)
+            self.assertEqual(result["by_historical_user_win_rate_bucket"]["0.72"]["games"], 1)
             self.assertEqual(result["missing_historical_user_win_rate_bucket_games"], 0)
             report = render_report("HOB", "PremierDraft", result)
             self.assertIn("Historical user win-rate buckets", report)
