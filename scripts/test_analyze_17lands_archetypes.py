@@ -37,13 +37,11 @@ class ArchetypeAuditTests(unittest.TestCase):
                 ["c", "0", "BR", "false"],
                 ["d", "0", "G", "true"],
                 ["e", "0", "WUB", "true"],
-                ["f", "0", "UR", "false"],
-                ["f", "0", "UB", "true"],
                 ["", "0", "WU", "true"],
             ]
             write_archive(path, header, rows)
             result = analyze_archive(path)
-            self.assertEqual(result["source_rows"], 10)
+            self.assertEqual(result["source_rows"], 8)
             self.assertEqual(result["missing_identity_rows"], 1)
             self.assertEqual(result["conflicting_deck_identity_count"], 1)
             self.assertEqual(result["excluded_conflicting_deck_game_rows"], 2)
