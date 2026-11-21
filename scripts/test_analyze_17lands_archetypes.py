@@ -51,7 +51,7 @@ class ArchetypeAuditTests(unittest.TestCase):
             self.assertEqual(result["by_color_pair"]["WU"]["decks"], 1)
             self.assertEqual(result["by_color_pair"]["WU"]["games"], 1)
             self.assertEqual(result["by_color_pair"]["BR"]["mean_deck_win_rate"], 0.0)
-            self.assertEqual(result["overall_deck_baseline"]["decks"], 3)
+            self.assertEqual(result["overall_deck_baseline"]["decks"], 4)
 
     def test_missing_fields_are_reported_and_required_schema_is_enforced(self):
         with tempfile.TemporaryDirectory() as directory:
