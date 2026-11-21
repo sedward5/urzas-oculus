@@ -59,6 +59,22 @@ class GameStats:
                 return turn
         return max(self.turns)
 
+    def median(self) -> float | None:
+        if not self.games:
+            return None
+        lower = self.percentile(0.5)
+        if self.games % 2:
+            return lower
+        target = self.games // 2 + 1
+        seen = 0
+        upper = None
+        for turn, count in sorted(self.turns.items()):
+            seen += count
+            if seen >= target:
+                upper = turn
+                break
+        return (lower + upper) / 2
+
     def summary(self) -> dict:
         by_turn = []
         for turn, count in sorted(self.turns.items()):
@@ -72,7 +88,7 @@ class GameStats:
         return {
             "games": self.games, "wins": self.wins,
             "win_rate": self.wins / self.games if self.games else None,
-            "median_turns": self.percentile(.5), "p25_turns": self.percentile(.25),
+            "median_turns": self.median(), "p25_turns": self.percentile(.25),
             "p75_turns": self.percentile(.75), "p90_turns": self.percentile(.90),
             "ended_by_turn": ended,
             "ended_by_turn_share": {k: v / self.games for k, v in ended.items()} if self.games else {},
