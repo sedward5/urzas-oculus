@@ -41,6 +41,19 @@ class SetSpeedAuditTests(unittest.TestCase):
             self.assertEqual(result["by_play_draw"]["on_play"]["games"], 3)
             self.assertEqual(result["by_play_draw"]["on_draw"]["games"], 2)
 
+    def test_optional_performance_group_breakdown(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "game.csv.gz"
+            write_archive(
+                path,
+                ["num_turns", "won", "user_game_win_rate_bucket"],
+                [["6", "true", "Top"], ["9", "false", "Bottom"]],
+            )
+            result = analyze_archive(path)
+            self.assertEqual(result["performance_group_field"], "user_game_win_rate_bucket")
+            self.assertEqual(result["by_performance_group"]["Top"]["games"], 1)
+            self.assertEqual(result["by_performance_group"]["Bottom"]["games"], 1)
+
     def test_optional_play_draw_field(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "game.csv.gz"
