@@ -200,7 +200,7 @@ def render_report(set_code: str, event_type: str, result: dict) -> str:
         "", "## Method and limitations", "",
         "- A deck is identified by the pair (draft_id, build_index); each deck contributes one win-rate observation regardless of how many games it played.",
         "- The reported archetype estimate is the unweighted mean of each deck's game win rate. The game-weighted rate is shown only as context.",
-        "- The 95% interval is a deterministic percentile bootstrap over deck-level win rates, not individual games.",
+        "- The 95% interval is a deterministic percentile bootstrap over deck-level win rates, not individual games. The public archive does not provide a stable player identifier for clustering repeated decks by drafter, so the interval may still understate population-level uncertainty.",
         "- The baseline includes all valid-color decks, including mono-color and three-or-more-color decks. Only exactly two-color decks appear in the pair table.",
         "- main_colors is used as the deck's primary color identity. Splash colors are not folded into the pair label.",
         "- Color pairs are broad buckets. They do not distinguish different strategies within a pair, and a pair can contain multiple archetypes.",
