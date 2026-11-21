@@ -89,30 +89,71 @@ Cockpit use:
 - During draft: current colors/likely archetype compared with the set baseline.
 - Post-draft: deck context, not a guarantee of expected win rate.
 
-### 4. Open and closed lanes during a draft
+Wizards-published archetype guidance is a separate future enrichment task. Revisit acquisition, licensing/availability, provenance, and update cadence after the data-to-repo artifact pipeline is established. Do not block the initial meta report on it.
 
-Question: When is there enough evidence that a color or archetype is underdrafted at this table?
+### 4. Within-draft lane reading (priority cockpit analysis)
 
-Signals to combine:
-- Cards seen late relative to their pick distributions (ALSA and pick-position evidence).
-- Wheel observations from the same physical pack.
-- Repeated signals across multiple packs, not one attractive late card.
-- Density and quality of playable cards in the user's current colors.
-- Signals that contradict the hypothesis (strong cards missing early, low-quality late cards).
-- Draft stage and pack direction.
+Question: During this draft, what are the players passing to us likely *not* taking, and how confident should we be?
 
-Output should be a confidence-rated hypothesis, not a binary truth:
-- Emerging signal: one or two weak indicators.
-- Supported: multiple independent signals across packs.
-- Strong: repeated wheel/late-pick evidence with coherent card quality.
-- Insufficient evidence: default state.
+This is not the same as set-level archetype performance. Historical pick data supplies expectations; the live draft supplies evidence. The cockpit should help the drafter notice unusual signals early, including before the first wheel, without presenting a premature verdict.
 
-Do not call a lane open solely because a card wheels. Some cards are low-demand, narrow, or weak. Do not call a lane closed solely because one premium card is absent.
+#### Direction matters
 
-Cockpit use:
-- Explain the evidence and uncertainty.
-- Distinguish open lane from your seat receiving playable cards.
-- Update as the draft progresses; avoid false certainty in early picks.
+- Pack 1 travels left. Cards arriving to us are evidence about seats passing from our left; the upstream seats in that direction are the players whose choices shaped what we see.
+- Pack 2 travels right. It gives us a different view of the seats on our right.
+- Pack 3 travels left again.
+- Keep evidence separated by pack and direction. Do not average Pack 1 and Pack 2 into one undifferentiated table signal.
+- A signal from Pack 1 may be confirmed, weakened, or contradicted when the direction reverses.
+
+#### Signals available before the wheel
+
+Use the current pick and pack contents to compare what arrived with what would ordinarily be expected at that pick:
+- Premium-card arrivals: a high-impact rare or mythic still present later than expected is a meaningful *observation*, but one card alone is not proof of an open color.
+- Quality-weighted color supply: count and weight the cards in the pack by color using set-specific card strength and pick-position/ALSA expectations. The question is not merely “are there good blue cards?” but “is the quality and depth of a color unusually high for this pick?”
+- Unexpected depth: multiple playable cards in the same color, or multiple strong cards across a coherent strategy, can be more informative than a single standout.
+- Missing expected cards: cards that would commonly survive to this pick but are absent can be weak contrary evidence. Absence is ambiguous because we do not know exactly what each seat saw or chose.
+- Compare against the historical distribution for the same set and event type, not a universal pick threshold.
+
+The early read should be phrased as an observation such as “unusually strong white cards are reaching you” or “white is showing repeated late depth,” not “white is open.” It should be possible to show a rare/bomb signal even before enough evidence exists to infer a lane.
+
+#### Wheel and multi-pack evidence
+
+- Track physical-pack identity and whether cards from that same pack return.
+- A wheel is useful evidence about the seats that saw the pack, but a low-demand card wheeling is not equivalent to a premium card wheeling.
+- Look for repeated signals across different packs, not just repeated cards from one pack.
+- Track positive and negative evidence: late quality, repeated color depth, premium cards missing early, and weak/noisy cards arriving late.
+- Do not equate “playables are arriving in my colors” with “the lane is open.” The former may simply be a good pack.
+
+#### Confidence and UI
+
+Use a small, explainable status above the archetype/meta section:
+- **Early signal** — one notable arrival or an unusual quality/depth observation. Useful to notice, not enough to move in.
+- **Developing** — more than one independent observation supports the same color/strategy during the pack.
+- **Supported** — repeated evidence across packs or a meaningful wheel, with card quality consistent with the hypothesis.
+- **Conflicting** — evidence points in different directions or reverses after a pack-direction change.
+- **Insufficient evidence** — default when the sample is too small or the signal cannot be calculated.
+
+Show only the strongest one or two signals, with concise evidence (“premium white rare at P5; two additional above-baseline white cards”) and a direction/pack marker. Allow a tap/expand for detail. Avoid a large color heatmap or a numeric probability in v1.
+
+The UI must distinguish:
+- what was directly observed,
+- what historical data says would be unusual,
+- the current interpretation,
+- and the confidence/limitations.
+
+Do not tell the user to abandon a color, force a color, or take a card solely because of a lane indicator. Lane evidence is context for a human pick, not a replacement for card evaluation.
+
+#### Validation plan
+
+- Build a replayable draft timeline from observed pack contents and pick sequence.
+- Use historical 17Lands pick/ALSA distributions as the baseline, segmented by set and event type.
+- Start with transparent, interpretable features: card quality percentile at observed pick, color quality/depth relative to expectation, premium-card late arrivals, and same-pack wheel outcomes.
+- Evaluate signal timing: how early it appears, whether it persists, and how often it is contradicted after the direction changes.
+- Review complete draft examples manually, including false positives and drafts where a lane genuinely becomes clearer before the wheel.
+- Calibrate labels against evidence; do not hard-code “P5 means open” or a fixed count of cards.
+- If historical baselines or live observations are insufficient, show “insufficient evidence” rather than inventing a read.
+
+First deliverable: a bounded analysis report and a small set of replay fixtures demonstrating early signal, supported signal, conflicting direction, and insufficient evidence. Then implement the compact cockpit indicator. Do not wait for perfect lane prediction before shipping a useful observational v1.
 
 ### 5. Draft-time recommendation context
 
@@ -124,7 +165,13 @@ Combine the above only after each underlying analysis is independently validated
 - Set speed / format texture.
 - Splash and mana consistency costs.
 
-Keep the base card score visible. Context may adjust ranking, but should not hide why a card is recommended.
+Keep the base card score visible. Context may adjust ranking, but should not hide why a card is recommended. Lane signals should initially be informational; do not let an uncalibrated lane score silently change card rankings.
+
+## Future data delivery
+
+A near-term follow-on should make the analysis workflows publish versioned, machine-readable set artifacts into the repository (or a dedicated data branch/path) consumed by both the macOS app and the website. The website should be able to display set metrics from the same generated data the app uses; avoid separate calculations or duplicated definitions.
+
+Artifacts should include schema/engine version, set and event identity, source coverage, generated/import timestamps, sample counts, caveats, and readiness. This is intentionally not part of the current replay-audit task, but should be scheduled soon after the first analyses establish stable schemas.
 
 ## Execution order and release checkpoints
 
@@ -134,8 +181,9 @@ Keep the base card score visible. Context may adjust ranking, but should not hid
 | B | Freeze and label provisional v1 scoring | Enables production |
 | C | Set-speed profile | Cockpit enhancement |
 | D | Archetype meta report | Cockpit enhancement |
-| E | Lane confidence model | Cockpit enhancement |
-| F | Contextual ranking integration | Later improvement |
+| E | Within-draft lane-reading analysis and observational UI | High-value cockpit enhancement; v1 can show explainable early signals |
+| F | Shared set-metric artifacts for app and website | Follow-on data delivery milestone |
+| G | Contextual ranking integration | Later improvement |
 
 ### Production checkpoint
 
