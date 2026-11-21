@@ -80,17 +80,17 @@ def read_archive(path: Path, label: str, table: str, connection: sqlite3.Connect
                 missing_keys += 1
                 continue
 
-            def collect(columns: list[str]) -> dict[str, int]:
+            def collect(columns: list[str], prefix: str) -> dict[str, int]:
                 result = {}
                 for column in columns:
                     value = count_value(row.get(column, ""), column, rows + 1)
                     if value:
-                        result[column.split("_", 1)[1]] = value
+                        result[column[len(prefix):]] = value
                 return result
 
-            deck = collect(facets["deck_"])
-            sideboard = collect(facets["sideboard_"])
-            opening = collect(facets["opening_hand_"])
+            deck = collect(facets["deck_"], "deck_")
+            sideboard = collect(facets["sideboard_"], "sideboard_")
+            opening = collect(facets["opening_hand_"], "opening_hand_")
             cursor = connection.execute(
                 insert_sql,
                 (*key, json.dumps(deck, sort_keys=True), json.dumps(sideboard, sort_keys=True),
