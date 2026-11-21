@@ -85,7 +85,7 @@ First pass: use transparent two-color buckets from the game archive's `main_colo
 - Calculate each deck's game win rate, then report the unweighted mean across decks for each color pair.
 - Show both distinct deck count and game count.
 - Compare against the all-deck baseline from the same archive, event type, and date coverage.
-- Include a deterministic 95% bootstrap interval over deck-level win rates.
+- Include a deterministic 95% bootstrap interval over deck-level win rates. The public archive does not expose a stable player identifier for clustering multiple decks from the same drafter, so describe this as deck-level uncertainty rather than a fully player-clustered population interval.
 - Keep mono-color and three-or-more-color decks in the overall baseline, but outside the two-color comparison table.
 - Exclude and report deck identities whose main-color assignment conflicts across their game rows.
 - Keep splash colors separate from the main-color pair; do not silently convert a splash into a third archetype color.
