@@ -99,9 +99,9 @@ This is not the same as set-level archetype performance. Historical pick data su
 
 #### Direction matters
 
-- Pack 1 travels left. Cards arriving to us are evidence about seats passing from our left; the upstream seats in that direction are the players whose choices shaped what we see.
-- Pack 2 travels right. It gives us a different view of the seats on our right.
-- Pack 3 travels left again.
+- Pack 1 travels left, so each pack reaches us from the player on our right. The cards arriving to us are evidence about the seats on our right.
+- Pack 2 travels right, so packs reach us from the player on our left. It gives us a different view of those seats.
+- Pack 3 travels left again, returning to the right-side signal.
 - Keep evidence separated by pack and direction. Do not average Pack 1 and Pack 2 into one undifferentiated table signal.
 - A signal from Pack 1 may be confirmed, weakened, or contradicted when the direction reverses.
 
