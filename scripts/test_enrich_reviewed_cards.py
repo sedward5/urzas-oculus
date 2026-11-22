@@ -30,13 +30,14 @@ class ReviewedCardCatalogTests(unittest.TestCase):
         source = {"name": "Test Card", "relationships": [relation],
                   "source_references": [{"type": "article", "url": "https://example.test"}]}
         calls = []
-        def fetch(url):
-            calls.append(url)
-            return {"data": [payload()], "not_found": []}
+        def fetch(url, payload=None):
+            calls.append((url, payload))
+            return {"data": [globals()["payload"]()], "not_found": []}
         result = enrich(catalog_with(source), "HOB", fetcher=fetch, delay_seconds=0)
         card = result["sets"]["HOB"]["cards"][0]
         self.assertEqual(len(calls), 1)
-        self.assertIn(COLLECTION_URL, calls[0])
+        self.assertEqual(calls[0][0], COLLECTION_URL)
+        self.assertEqual(calls[0][1]["identifiers"], [{"name": "Test Card", "set": "hob"}])
         self.assertEqual(card["scryfall_id"], payload()["id"])
         self.assertEqual(card["image_uris"]["normal"], "https://img.test/normal.jpg")
         self.assertEqual(card["relationships"], [relation])
@@ -47,7 +48,7 @@ class ReviewedCardCatalogTests(unittest.TestCase):
                "relationships": [], "source_references": [],
                "identity_review_status": "resolved_from_scryfall"}
         existing = {"sets": {"HOB": {"cards": [old]}}}
-        def fail_if_called(_):
+        def fail_if_called(*args, **kwargs):
             raise AssertionError("cached card should not trigger a request")
         result = enrich(catalog_with(source), "HOB", fetcher=fail_if_called, existing=existing)
         self.assertEqual(result["sets"]["HOB"]["cards"][0]["scryfall_id"], old["scryfall_id"])
@@ -56,7 +57,7 @@ class ReviewedCardCatalogTests(unittest.TestCase):
         source = {"name": "Missing Card", "relationships": []}
         with self.assertRaisesRegex(CatalogError, "could not resolve HOB"):
             enrich(catalog_with(source), "HOB",
-                   fetcher=lambda _: {"data": [], "not_found": [{"name": "Missing Card"}]},
+                   fetcher=lambda *args, **kwargs: {"data": [], "not_found": [{"name": "Missing Card"}]},
                    delay_seconds=0)
 
     def test_rejects_wrong_set(self):

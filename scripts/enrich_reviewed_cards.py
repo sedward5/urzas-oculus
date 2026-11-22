@@ -53,8 +53,12 @@ def retry_delay(error: HTTPError, attempt: int) -> float:
     return 60.0 if error.code == 429 else min(2 ** attempt, 30.0)
 
 
-def fetch_json(url: str, timeout: int = 30) -> dict:
-    request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
+def fetch_json(url: str, timeout: int = 30, payload: dict | None = None) -> dict:
+    data = json.dumps(payload).encode("utf-8") if payload is not None else None
+    headers = {"User-Agent": USER_AGENT, "Accept": "application/json"}
+    if data is not None:
+        headers["Content-Type"] = "application/json"
+    request = Request(url, data=data, headers=headers, method="POST" if data is not None else "GET")
     for attempt in range(1, MAX_ATTEMPTS + 1):
         try:
             with urlopen(request, timeout=timeout) as response:
@@ -185,7 +189,7 @@ def enrich(catalog: dict, set_code: str | None = None,
             if chunk_index and delay_seconds:
                 time.sleep(delay_seconds)
             identifiers = [{"name": card["name"], "set": code.lower()} for card in chunk]
-            response = fetcher(COLLECTION_URL + "?" + urlencode({"identifiers": json.dumps(identifiers, separators=(",", ":"))}))
+            response = fetcher(COLLECTION_URL, payload={"identifiers": identifiers})
             not_found = response.get("not_found", [])
             if not_found:
                 missing = [item.get("name", str(item)) for item in not_found]
