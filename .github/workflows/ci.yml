@@ -69,11 +69,58 @@ jobs:
 
       - name: Package application
         run: bash ./scripts/package-app.sh
+        env:
+          APP_VERSION: 0.1.${{ github.run_number }}
+
+      - name: Verify distributable files
+        run: |
+          test -s dist/UrzasOculus-macos.zip
+          test -s dist/UrzasOculus.dmg
+          hdiutil verify dist/UrzasOculus.dmg
+          plutil -lint dist/UrzasOculus.app/Contents/Info.plist
 
       - name: Upload macOS application
         uses: actions/upload-artifact@v4
         with:
           name: UrzasOculus-macos
-          path: dist/UrzasOculus-macos.zip
+          path: |
+            dist/UrzasOculus-macos.zip
+            dist/UrzasOculus.dmg
           if-no-files-found: error
           retention-days: 14
+
+  publish-release:
+    name: Publish GitHub release
+    needs: build-and-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.build-and-test.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - name: Download packaged app
+        uses: actions/download-artifact@v4
+        with:
+          name: UrzasOculus-macos
+          path: dist
+
+      - name: Create versioned GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APP_VERSION: 0.1.${{ github.run_number }}
+          TAG_NAME: build-${{ github.run_number }}-${{ github.sha }}
+        run: |
+          gh release create "$TAG_NAME" \
+            dist/UrzasOculus.dmg \
+            dist/UrzasOculus-macos.zip \
+            --repo "$GITHUB_REPOSITORY" \
+            --target "$GITHUB_SHA" \
+            --title "Urza's Oculus $APP_VERSION" \
+            --notes "Automated macOS build from commit $GITHUB_SHA.
+
+          **Install:** Open the DMG and drag Urza's Oculus into Applications.
+
+          **Compatibility:** macOS 14 or later.
+
+          **Security note:** This build is ad-hoc signed and is not yet Developer ID signed or notarized. macOS may display an unidentified-developer warning on first launch." \
+            --latest
