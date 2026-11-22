@@ -39,7 +39,7 @@ This page distinguishes implemented foundations from an integrated, user-ready f
 - [x] Manual review of physical pack return, last-seen behavior, ALSA averaging, secondary picks, duplicate copies, and incomplete pack handling.
 - [x] Replay schema audit script and manually triggerable workflow.
 - [x] Reviewed HOB replay audit: all 323,114 game keys matched replay keys one-to-one.
-- [x] Run replay-backed deck/sideboard/opening-hand consistency audit.
+- [ ] Run replay-backed deck/sideboard/opening-hand consistency audit.
 - [ ] Establish a defensible whole-game eligibility rule consistent with 17Lands definitions.
 
 **Important limitation:** the game importer currently aggregates rows with valid win outcomes; it does not exclude inconsistent games as a whole. The public wide CSV has no documented game-valid/deck-linked flag. Do not claim exact 17Lands parity. Replay key matching does not itself establish upstream eligibility. See [metric semantics](17lands-metric-semantics.md).
