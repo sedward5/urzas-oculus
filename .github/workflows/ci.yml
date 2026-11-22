@@ -78,6 +78,12 @@ jobs:
           test -s dist/UrzasOculus.dmg
           hdiutil verify dist/UrzasOculus.dmg
           plutil -lint dist/UrzasOculus.app/Contents/Info.plist
+          codesign --verify --deep --strict dist/UrzasOculus.app
+          mkdir -p "$RUNNER_TEMP/dmg-mount"
+          hdiutil attach -readonly -nobrowse -mountpoint "$RUNNER_TEMP/dmg-mount" dist/UrzasOculus.dmg
+          test -d "$RUNNER_TEMP/dmg-mount/UrzasOculus.app"
+          test -L "$RUNNER_TEMP/dmg-mount/Applications"
+          hdiutil detach "$RUNNER_TEMP/dmg-mount"
 
       - name: Upload macOS application
         uses: actions/upload-artifact@v4
