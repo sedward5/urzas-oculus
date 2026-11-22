@@ -117,3 +117,8 @@ Before architectural work, read this document, [ARCHITECTURE.md](ARCHITECTURE.md
 ## Definition of done
 
 A feature is complete when behavior is implemented, relevant tests pass, uncertain/error states are handled, documentation is current, and the implementation respects project constraints. A scaffold, prototype, or unvalidated implementation must be labeled accordingly.
+
+
+## Published archetype acquisition prototype
+
+A manually dispatched Python stdlib workflow can fetch the official HOB, ECL, or TDM Wizards Prerelease Guide and emit candidate archetype headings, article provenance, unassigned card references, and preserved overview-image evidence. This is an acquisition/review prototype only. OCR, image mana-symbol interpretation, taxonomy completeness, and approved catalog integration are not implemented. The output must be manually reviewed before any use in recommendations.

@@ -1,0 +1,41 @@
+name: Published Archetype Catalog Acquisition
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_code:
+        description: Wizards article set code
+        required: true
+        type: choice
+        options:
+          - HOB
+          - ECL
+          - TDM
+
+permissions:
+  contents: read
+
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Show Python version
+        run: python3 --version
+      - name: Run extractor unit tests
+        run: python3 -m unittest scripts.test_acquire_published_archetypes
+      - name: Acquire published archetype evidence
+        run: |
+          python3 scripts/acquire_published_archetypes.py \
+            --set-code "${{ inputs.set_code }}" \
+            --output-dir published-archetype-output
+      - name: Upload catalog candidate and source evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: published-archetypes-${{ inputs.set_code }}-${{ github.run_id }}
+          path: published-archetype-output/
+          if-no-files-found: warn
+          retention-days: 30
