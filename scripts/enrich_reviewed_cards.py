@@ -24,7 +24,7 @@ class CatalogError(ValueError):
     pass
 
 def normalize_name(value: str) -> str:
-    return re.sub(r"\\s+", " ", value).strip().casefold()
+    return re.sub(r"\s+", " ", value).strip().casefold()
 
 def fetch_json(url: str, timeout: int = 30) -> dict:
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
@@ -125,7 +125,7 @@ def main() -> None:
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
     result = enrich(catalog, args.set_code)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
+    args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps({code: len(record["cards"]) for code, record in result["sets"].items()}, indent=2))
 
 if __name__ == "__main__":
