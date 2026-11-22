@@ -22,7 +22,41 @@
               "section": "White-Blue Humans",
               "context": "Wizards explicitly calls Bard a payoff for the draw-two deck and says it rewards drawing and buffs recruit tokens."
             }
-          ]
+          ],
+          "scryfall_id": "0b84e232-428c-424a-848c-ef95debc6e50",
+          "oracle_id": "ec076f5b-b0e3-4b6f-9293-a8fc42f20bd8",
+          "scryfall_name": "Bard the Bowman",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "145",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{W}{U}",
+          "mana_value": 3.0,
+          "type_line": "Legendary Creature — Human Archer",
+          "oracle_text": "Reach\nWhenever you draw your second card each turn, put a +1/+1 counter on target creature. It gains lifelink until end of turn.",
+          "colors": [
+            "U",
+            "W"
+          ],
+          "color_identity": [
+            "U",
+            "W"
+          ],
+          "keywords": [
+            "Reach"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/0/b/0b84e232-428c-424a-848c-ef95debc6e50.jpg?1784377009",
+            "normal": "https://cards.scryfall.io/normal/front/0/b/0b84e232-428c-424a-848c-ef95debc6e50.jpg?1784377009",
+            "large": "https://cards.scryfall.io/large/front/0/b/0b84e232-428c-424a-848c-ef95debc6e50.jpg?1784377009",
+            "png": "https://cards.scryfall.io/png/front/0/b/0b84e232-428c-424a-848c-ef95debc6e50.png?1784377009",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/0/b/0b84e232-428c-424a-848c-ef95debc6e50.jpg?1784377009",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/0/b/0b84e232-428c-424a-848c-ef95debc6e50.jpg?1784377009"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/145/bard-the-bowman?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Long Lake Nuisance",
@@ -42,7 +76,40 @@
               "section": "White-Blue Humans",
               "context": "Named as a recruit card that draws cards while building creature tokens."
             }
-          ]
+          ],
+          "scryfall_id": "cd5af94d-6321-4834-8e5f-e5d0261b3ef3",
+          "oracle_id": "a833fdf1-db0c-4846-8452-d3b2059c2355",
+          "scryfall_name": "Long Lake Nuisance",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "45",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{3}{U}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Bird",
+          "oracle_text": "Flying\nWhen this creature enters, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)",
+          "colors": [
+            "U"
+          ],
+          "color_identity": [
+            "U"
+          ],
+          "keywords": [
+            "Flying",
+            "Recruit"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/d/cd5af94d-6321-4834-8e5f-e5d0261b3ef3.jpg?1785497055",
+            "normal": "https://cards.scryfall.io/normal/front/c/d/cd5af94d-6321-4834-8e5f-e5d0261b3ef3.jpg?1785497055",
+            "large": "https://cards.scryfall.io/large/front/c/d/cd5af94d-6321-4834-8e5f-e5d0261b3ef3.jpg?1785497055",
+            "png": "https://cards.scryfall.io/png/front/c/d/cd5af94d-6321-4834-8e5f-e5d0261b3ef3.png?1785497055",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/d/cd5af94d-6321-4834-8e5f-e5d0261b3ef3.jpg?1785497055",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/d/cd5af94d-6321-4834-8e5f-e5d0261b3ef3.jpg?1785497055"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/45/long-lake-nuisance?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Esgaroth Garrison",
@@ -62,7 +129,39 @@
               "section": "White-Blue Humans",
               "context": "Named as a recruit card that draws cards while building creature tokens."
             }
-          ]
+          ],
+          "scryfall_id": "573f67b0-6ce8-4857-a703-4a5728640736",
+          "oracle_id": "84597236-2cfc-4654-b126-a8ee252f4d14",
+          "scryfall_name": "Esgaroth Garrison",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "13",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{4}{W}",
+          "mana_value": 5.0,
+          "type_line": "Creature — Human Soldier",
+          "oracle_text": "Esgaroth Garrison's power is equal to the number of creatures you control.\nWhen this creature enters, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)",
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "keywords": [
+            "Recruit"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/7/573f67b0-6ce8-4857-a703-4a5728640736.jpg?1785496934",
+            "normal": "https://cards.scryfall.io/normal/front/5/7/573f67b0-6ce8-4857-a703-4a5728640736.jpg?1785496934",
+            "large": "https://cards.scryfall.io/large/front/5/7/573f67b0-6ce8-4857-a703-4a5728640736.jpg?1785496934",
+            "png": "https://cards.scryfall.io/png/front/5/7/573f67b0-6ce8-4857-a703-4a5728640736.png?1785496934",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/7/573f67b0-6ce8-4857-a703-4a5728640736.jpg?1785496934",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/7/573f67b0-6ce8-4857-a703-4a5728640736.jpg?1785496934"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/13/esgaroth-garrison?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Celebrate the Mountain-king",
@@ -82,7 +181,39 @@
               "section": "White-Blue Humans",
               "context": "Named as a recruit card that draws cards while building creature tokens."
             }
-          ]
+          ],
+          "scryfall_id": "42fbd61d-e1a6-465d-b1a3-f5ee0869d3af",
+          "oracle_id": "d51136fa-3c13-48a5-83fd-51fe00010a4b",
+          "scryfall_name": "Celebrate the Mountain-king",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "7",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{3}{W}",
+          "mana_value": 4.0,
+          "type_line": "Enchantment",
+          "oracle_text": "When this enchantment enters, for each opponent, exile up to one target nonland permanent that player controls until this enchantment leaves the battlefield.\nWhen this enchantment enters, recruit. (Draw a card, then discard a card. If you discarded a nonland card, create a 1/1 white Human Soldier creature token.)",
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "keywords": [
+            "Recruit"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/4/2/42fbd61d-e1a6-465d-b1a3-f5ee0869d3af.jpg?1785496910",
+            "normal": "https://cards.scryfall.io/normal/front/4/2/42fbd61d-e1a6-465d-b1a3-f5ee0869d3af.jpg?1785496910",
+            "large": "https://cards.scryfall.io/large/front/4/2/42fbd61d-e1a6-465d-b1a3-f5ee0869d3af.jpg?1785496910",
+            "png": "https://cards.scryfall.io/png/front/4/2/42fbd61d-e1a6-465d-b1a3-f5ee0869d3af.png?1785496910",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/2/42fbd61d-e1a6-465d-b1a3-f5ee0869d3af.jpg?1785496910",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/2/42fbd61d-e1a6-465d-b1a3-f5ee0869d3af.jpg?1785496910"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/7/celebrate-the-mountain-king?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Thorin's Last Stand",
@@ -102,7 +233,37 @@
               "section": "White-Blue Humans",
               "context": "Explicitly named as a card that buffs the recruited creature-token board."
             }
-          ]
+          ],
+          "scryfall_id": "127367b6-9cfe-4516-9bfd-5b951468a25c",
+          "oracle_id": "3c4da169-1e50-4790-abdc-214e7b8a2ad5",
+          "scryfall_name": "Thorin's Last Stand",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "28",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{2}{W}{W}",
+          "mana_value": 4.0,
+          "type_line": "Instant",
+          "oracle_text": "Choose one —\n• Creatures you control get +2/+1 until end of turn.\n• Destroy target artifact or enchantment. You gain 2 life.",
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/1/2/127367b6-9cfe-4516-9bfd-5b951468a25c.jpg?1785497020",
+            "normal": "https://cards.scryfall.io/normal/front/1/2/127367b6-9cfe-4516-9bfd-5b951468a25c.jpg?1785497020",
+            "large": "https://cards.scryfall.io/large/front/1/2/127367b6-9cfe-4516-9bfd-5b951468a25c.jpg?1785497020",
+            "png": "https://cards.scryfall.io/png/front/1/2/127367b6-9cfe-4516-9bfd-5b951468a25c.png?1785497020",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/2/127367b6-9cfe-4516-9bfd-5b951468a25c.jpg?1785497020",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/2/127367b6-9cfe-4516-9bfd-5b951468a25c.jpg?1785497020"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/28/thorins-last-stand?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Bolg of the North",
@@ -122,7 +283,41 @@
               "section": "Black-Red Goblins",
               "context": "Featured under the Black-Red Goblins archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "7b2d2a7f-88e0-45a9-8579-a6736bcd66eb",
+          "oracle_id": "88522a0f-5377-4522-97f4-4148bef954af",
+          "scryfall_name": "Bolg of the North",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "148",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{3}{B}{R}",
+          "mana_value": 5.0,
+          "type_line": "Legendary Creature — Goblin Soldier",
+          "oracle_text": "When Bolg enters, you may sacrifice another creature. When you do, Bolg deals damage equal to that creature's power to another target creature. If excess damage was dealt this way, amass Goblins X, where X is that excess damage. (Put X +1/+1 counters on an Army you control. It's also a Goblin. If you don't control an Army, create a 0/0 black Goblin Army creature token first.)",
+          "colors": [
+            "B",
+            "R"
+          ],
+          "color_identity": [
+            "B",
+            "R"
+          ],
+          "keywords": [
+            "Amass"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/7/b/7b2d2a7f-88e0-45a9-8579-a6736bcd66eb.jpg?1784377021",
+            "normal": "https://cards.scryfall.io/normal/front/7/b/7b2d2a7f-88e0-45a9-8579-a6736bcd66eb.jpg?1784377021",
+            "large": "https://cards.scryfall.io/large/front/7/b/7b2d2a7f-88e0-45a9-8579-a6736bcd66eb.jpg?1784377021",
+            "png": "https://cards.scryfall.io/png/front/7/b/7b2d2a7f-88e0-45a9-8579-a6736bcd66eb.png?1784377021",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/7/b/7b2d2a7f-88e0-45a9-8579-a6736bcd66eb.jpg?1784377021",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/7/b/7b2d2a7f-88e0-45a9-8579-a6736bcd66eb.jpg?1784377021"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/148/bolg-of-the-north?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Misty Mountains Raider",
@@ -142,7 +337,39 @@
               "section": "Black-Red Goblins",
               "context": "Featured with the archetype; guide provides no more specific role description."
             }
-          ]
+          ],
+          "scryfall_id": "6dff14cd-b60b-48f4-9d9f-c9019b55df4c",
+          "oracle_id": "c394b767-620c-4310-b78f-ece312259e46",
+          "scryfall_name": "Misty Mountains Raider",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "105",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{4}{R}",
+          "mana_value": 5.0,
+          "type_line": "Creature — Goblin Soldier",
+          "oracle_text": "Whenever you attack, amass Goblins 2. (Put two +1/+1 counters on an Army you control. It's also a Goblin. If you don't control an Army, create a 0/0 black Goblin Army creature token first.)",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R"
+          ],
+          "keywords": [
+            "Amass"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/6/d/6dff14cd-b60b-48f4-9d9f-c9019b55df4c.jpg?1785152178",
+            "normal": "https://cards.scryfall.io/normal/front/6/d/6dff14cd-b60b-48f4-9d9f-c9019b55df4c.jpg?1785152178",
+            "large": "https://cards.scryfall.io/large/front/6/d/6dff14cd-b60b-48f4-9d9f-c9019b55df4c.jpg?1785152178",
+            "png": "https://cards.scryfall.io/png/front/6/d/6dff14cd-b60b-48f4-9d9f-c9019b55df4c.png?1785152178",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/6/d/6dff14cd-b60b-48f4-9d9f-c9019b55df4c.jpg?1785152178",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/6/d/6dff14cd-b60b-48f4-9d9f-c9019b55df4c.jpg?1785152178"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/105/misty-mountains-raider?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Stir Up Trouble",
@@ -162,7 +389,37 @@
               "section": "Black-Red Goblins",
               "context": "Named as a spell that can sacrifice the Army token for value."
             }
-          ]
+          ],
+          "scryfall_id": "fd145e3a-c889-4390-accb-863dbcc845ce",
+          "oracle_id": "dda607bd-f419-4b7f-b052-a5ce6ce22bfe",
+          "scryfall_name": "Stir Up Trouble",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "84",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{B}",
+          "mana_value": 1.0,
+          "type_line": "Sorcery",
+          "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature or pay {4}.\nDestroy target creature.",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/f/d/fd145e3a-c889-4390-accb-863dbcc845ce.jpg?1785497107",
+            "normal": "https://cards.scryfall.io/normal/front/f/d/fd145e3a-c889-4390-accb-863dbcc845ce.jpg?1785497107",
+            "large": "https://cards.scryfall.io/large/front/f/d/fd145e3a-c889-4390-accb-863dbcc845ce.jpg?1785497107",
+            "png": "https://cards.scryfall.io/png/front/f/d/fd145e3a-c889-4390-accb-863dbcc845ce.png?1785497107",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/f/d/fd145e3a-c889-4390-accb-863dbcc845ce.jpg?1785497107",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/f/d/fd145e3a-c889-4390-accb-863dbcc845ce.jpg?1785497107"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/84/stir-up-trouble?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Snowslope Hunter",
@@ -182,7 +439,37 @@
               "section": "Black-Red Goblins",
               "context": "Named as a card that can sacrifice the Army token for value."
             }
-          ]
+          ],
+          "scryfall_id": "47666099-ffb2-4d07-a801-70524dba0837",
+          "oracle_id": "fdf7f144-56e4-4f88-b81a-b85473922355",
+          "scryfall_name": "Snowslope Hunter",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "112",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{R}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Goblin Ranger",
+          "oracle_text": "Sacrifice another creature or artifact: Exile the top card of your library. You may play it until the end of your next turn. Activate only during your turn and only once each turn.",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/4/7/47666099-ffb2-4d07-a801-70524dba0837.jpg?1785497147",
+            "normal": "https://cards.scryfall.io/normal/front/4/7/47666099-ffb2-4d07-a801-70524dba0837.jpg?1785497147",
+            "large": "https://cards.scryfall.io/large/front/4/7/47666099-ffb2-4d07-a801-70524dba0837.jpg?1785497147",
+            "png": "https://cards.scryfall.io/png/front/4/7/47666099-ffb2-4d07-a801-70524dba0837.png?1785497147",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/7/47666099-ffb2-4d07-a801-70524dba0837.jpg?1785497147",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/7/47666099-ffb2-4d07-a801-70524dba0837.jpg?1785497147"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/112/snowslope-hunter?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Front Porch Sentries",
@@ -202,7 +489,37 @@
               "section": "Black-Red Goblins",
               "context": "Named as a dies-trigger creature that provides sacrifice fodder."
             }
-          ]
+          ],
+          "scryfall_id": "07bfc803-e11b-47ab-9f25-0ace7e174200",
+          "oracle_id": "b39f03cf-3d1a-42ad-903f-e3b3542878b0",
+          "scryfall_name": "Front Porch Sentries",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "67",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{1}{B}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Goblin Soldier",
+          "oracle_text": "When this creature dies, target creature an opponent controls gets -1/-1 until end of turn.",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/0/7/07bfc803-e11b-47ab-9f25-0ace7e174200.jpg?1785496282",
+            "normal": "https://cards.scryfall.io/normal/front/0/7/07bfc803-e11b-47ab-9f25-0ace7e174200.jpg?1785496282",
+            "large": "https://cards.scryfall.io/large/front/0/7/07bfc803-e11b-47ab-9f25-0ace7e174200.jpg?1785496282",
+            "png": "https://cards.scryfall.io/png/front/0/7/07bfc803-e11b-47ab-9f25-0ace7e174200.png?1785496282",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/0/7/07bfc803-e11b-47ab-9f25-0ace7e174200.jpg?1785496282",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/0/7/07bfc803-e11b-47ab-9f25-0ace7e174200.jpg?1785496282"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/67/front-porch-sentries?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "The Chief Warg",
@@ -222,7 +539,42 @@
               "section": "Black-Green Wolves",
               "context": "Featured under the Black-Green Wolves archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "c397a298-bf7f-49d7-a26a-206ccf9e8120",
+          "oracle_id": "5ebe8de1-aa3d-410d-b43d-1685259c7a97",
+          "scryfall_name": "The Chief Warg",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "150",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{B}{G}",
+          "mana_value": 4.0,
+          "type_line": "Legendary Creature — Wolf",
+          "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nFerocious — Whenever you attack while you control a creature with power 4 or greater, you draw a card and lose 1 life.",
+          "colors": [
+            "B",
+            "G"
+          ],
+          "color_identity": [
+            "B",
+            "G"
+          ],
+          "keywords": [
+            "Ferocious",
+            "Menace"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/3/c397a298-bf7f-49d7-a26a-206ccf9e8120.jpg?1784377030",
+            "normal": "https://cards.scryfall.io/normal/front/c/3/c397a298-bf7f-49d7-a26a-206ccf9e8120.jpg?1784377030",
+            "large": "https://cards.scryfall.io/large/front/c/3/c397a298-bf7f-49d7-a26a-206ccf9e8120.jpg?1784377030",
+            "png": "https://cards.scryfall.io/png/front/c/3/c397a298-bf7f-49d7-a26a-206ccf9e8120.png?1784377030",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/3/c397a298-bf7f-49d7-a26a-206ccf9e8120.jpg?1784377030",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/3/c397a298-bf7f-49d7-a26a-206ccf9e8120.jpg?1784377030"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/150/the-chief-warg?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Nighthowl Pursuer",
@@ -242,7 +594,40 @@
               "section": "Black-Green Wolves",
               "context": "Featured with the archetype; guide's strategy centers on ferocious and large Wolves."
             }
-          ]
+          ],
+          "scryfall_id": "d3cbe830-7e95-4019-89c4-cfb36bcf00f8",
+          "oracle_id": "89aa97d0-1aef-4ed8-b29c-7943bb3d0e60",
+          "scryfall_name": "Nighthowl Pursuer",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "78",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{B}",
+          "mana_value": 1.0,
+          "type_line": "Creature — Wolf",
+          "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nFerocious — Whenever this creature attacks while you control a creature with power 4 or greater, this creature gets +2/+2 until end of turn.",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Ferocious",
+            "Menace"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/d/3/d3cbe830-7e95-4019-89c4-cfb36bcf00f8.jpg?1784894860",
+            "normal": "https://cards.scryfall.io/normal/front/d/3/d3cbe830-7e95-4019-89c4-cfb36bcf00f8.jpg?1784894860",
+            "large": "https://cards.scryfall.io/large/front/d/3/d3cbe830-7e95-4019-89c4-cfb36bcf00f8.jpg?1784894860",
+            "png": "https://cards.scryfall.io/png/front/d/3/d3cbe830-7e95-4019-89c4-cfb36bcf00f8.png?1784894860",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/3/d3cbe830-7e95-4019-89c4-cfb36bcf00f8.jpg?1784894860",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/3/d3cbe830-7e95-4019-89c4-cfb36bcf00f8.jpg?1784894860"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/78/nighthowl-pursuer?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Ordinary Bear",
@@ -262,7 +647,37 @@
               "section": "Black-Green Wolves",
               "context": "Explicitly described as an on-curve option for a massive creature."
             }
-          ]
+          ],
+          "scryfall_id": "0feb9817-56e1-465a-851c-b2fe202aa8ae",
+          "oracle_id": "89a2fab8-b074-42aa-a871-d9c5de2d0895",
+          "scryfall_name": "Ordinary Bear",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "133",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{3}{G}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Bear",
+          "oracle_text": "",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/0/f/0feb9817-56e1-465a-851c-b2fe202aa8ae.jpg?1785323277",
+            "normal": "https://cards.scryfall.io/normal/front/0/f/0feb9817-56e1-465a-851c-b2fe202aa8ae.jpg?1785323277",
+            "large": "https://cards.scryfall.io/large/front/0/f/0feb9817-56e1-465a-851c-b2fe202aa8ae.jpg?1785323277",
+            "png": "https://cards.scryfall.io/png/front/0/f/0feb9817-56e1-465a-851c-b2fe202aa8ae.png?1785323277",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/0/f/0feb9817-56e1-465a-851c-b2fe202aa8ae.jpg?1785323277",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/0/f/0feb9817-56e1-465a-851c-b2fe202aa8ae.jpg?1785323277"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/133/ordinary-bear?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Gollum, Silent Slinker",
@@ -282,7 +697,39 @@
               "section": "Black-Green Wolves",
               "context": "Explicitly described as an on-curve option for a massive creature."
             }
-          ]
+          ],
+          "scryfall_id": "6cfaa182-3fec-4907-8814-b4d29c33cec3",
+          "oracle_id": "0296d57e-e5b9-456f-bb21-eb584adefb4c",
+          "scryfall_name": "Gollum, Silent Slinker // Meager Meal",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "71",
+          "rarity": "common",
+          "layout": "adventure",
+          "mana_cost": "{3}{B} // {B}",
+          "mana_value": 4.0,
+          "type_line": "Legendary Creature — Halfling Horror // Sorcery — Adventure",
+          "oracle_text": null,
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Menace"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/6/c/6cfaa182-3fec-4907-8814-b4d29c33cec3.jpg?1785323234",
+            "normal": "https://cards.scryfall.io/normal/front/6/c/6cfaa182-3fec-4907-8814-b4d29c33cec3.jpg?1785323234",
+            "large": "https://cards.scryfall.io/large/front/6/c/6cfaa182-3fec-4907-8814-b4d29c33cec3.jpg?1785323234",
+            "png": "https://cards.scryfall.io/png/front/6/c/6cfaa182-3fec-4907-8814-b4d29c33cec3.png?1785323234",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/6/c/6cfaa182-3fec-4907-8814-b4d29c33cec3.jpg?1785323234",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/6/c/6cfaa182-3fec-4907-8814-b4d29c33cec3.jpg?1785323234"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/71/gollum-silent-slinker-meager-meal?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Beorn, Reluctant Host",
@@ -302,7 +749,39 @@
               "section": "Black-Green Wolves",
               "context": "Explicitly named as a card to ramp into the deck's large creatures."
             }
-          ]
+          ],
+          "scryfall_id": "804589b7-3ef9-473d-97cc-c61a2d41f70d",
+          "oracle_id": "288da486-393c-4995-ad02-c5093a71970d",
+          "scryfall_name": "Beorn, Reluctant Host // Till and Tend",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "118",
+          "rarity": "common",
+          "layout": "adventure",
+          "mana_cost": "{4}{G} // {1}{G}",
+          "mana_value": 5.0,
+          "type_line": "Legendary Creature — Human Bear Shapeshifter // Sorcery — Adventure",
+          "oracle_text": null,
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [
+            "Trample"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
+            "normal": "https://cards.scryfall.io/normal/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
+            "large": "https://cards.scryfall.io/large/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
+            "png": "https://cards.scryfall.io/png/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.png?1785323267",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/0/804589b7-3ef9-473d-97cc-c61a2d41f70d.jpg?1785323267"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/118/beorn-reluctant-host-till-and-tend?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Long-Bodied Grey Dog",
@@ -322,7 +801,37 @@
               "section": "Black-Green Wolves",
               "context": "Explicitly named as a card to ramp into the deck's large creatures."
             }
-          ]
+          ],
+          "scryfall_id": "d1a1e520-1fe2-4529-8afb-c187bb80da3c",
+          "oracle_id": "6f83da19-fd89-44ec-88f3-0c3fddfbd1b2",
+          "scryfall_name": "Long-Bodied Grey Dog",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "1",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{3}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Dog",
+          "oracle_text": "Flash\nReach\nWhen this creature enters, create a tapped Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+          "colors": [],
+          "color_identity": [],
+          "keywords": [
+            "Reach",
+            "Treasure",
+            "Flash"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/d/1/d1a1e520-1fe2-4529-8afb-c187bb80da3c.jpg?1785639260",
+            "normal": "https://cards.scryfall.io/normal/front/d/1/d1a1e520-1fe2-4529-8afb-c187bb80da3c.jpg?1785639260",
+            "large": "https://cards.scryfall.io/large/front/d/1/d1a1e520-1fe2-4529-8afb-c187bb80da3c.jpg?1785639260",
+            "png": "https://cards.scryfall.io/png/front/d/1/d1a1e520-1fe2-4529-8afb-c187bb80da3c.png?1785639260",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/1/d1a1e520-1fe2-4529-8afb-c187bb80da3c.jpg?1785639260",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/1/d1a1e520-1fe2-4529-8afb-c187bb80da3c.jpg?1785639260"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/1/long-bodied-grey-dog?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Thorin Oakenshield",
@@ -342,7 +851,42 @@
               "section": "Red-White Dwarves",
               "context": "Explicitly named as a payoff after establishing the Storied board."
             }
-          ]
+          ],
+          "scryfall_id": "c7e18609-d1ed-4829-be11-f2ce2cfcbc49",
+          "oracle_id": "bdd41af0-bbd1-4ecd-a699-99f006f5e5ce",
+          "scryfall_name": "Thorin Oakenshield",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "165",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{R}{W}",
+          "mana_value": 2.0,
+          "type_line": "Legendary Creature — Dwarf Noble",
+          "oracle_text": "Trample\nStoried (If you control three or more artifacts, legendaries, and/or Sagas, you have an enduring story for the rest of the game.)\nAs long as you have an enduring story, artifacts and creatures you control have ward {1}.",
+          "colors": [
+            "R",
+            "W"
+          ],
+          "color_identity": [
+            "R",
+            "W"
+          ],
+          "keywords": [
+            "Trample",
+            "Storied"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/7/c7e18609-d1ed-4829-be11-f2ce2cfcbc49.jpg?1784377040",
+            "normal": "https://cards.scryfall.io/normal/front/c/7/c7e18609-d1ed-4829-be11-f2ce2cfcbc49.jpg?1784377040",
+            "large": "https://cards.scryfall.io/large/front/c/7/c7e18609-d1ed-4829-be11-f2ce2cfcbc49.jpg?1784377040",
+            "png": "https://cards.scryfall.io/png/front/c/7/c7e18609-d1ed-4829-be11-f2ce2cfcbc49.png?1784377040",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/7/c7e18609-d1ed-4829-be11-f2ce2cfcbc49.jpg?1784377040",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/7/c7e18609-d1ed-4829-be11-f2ce2cfcbc49.jpg?1784377040"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/165/thorin-oakenshield?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Iron Hills Blacksmith",
@@ -362,7 +906,39 @@
               "section": "Red-White Dwarves",
               "context": "Featured with the Red-White Dwarves archetype; no more specific role is stated."
             }
-          ]
+          ],
+          "scryfall_id": "370e09c2-36c5-4662-8350-1db798afad3e",
+          "oracle_id": "9febdfa8-8af2-4aba-b2e6-cb2baad7e02b",
+          "scryfall_name": "Iron Hills Blacksmith",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "16",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{W}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Dwarf Artificer",
+          "oracle_text": "Double strike\nWhen this creature enters, create a colorless Equipment artifact token named Axe with \"Equipped creature gets +1/+0\" and equip {2}.",
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "keywords": [
+            "Double strike"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/3/7/370e09c2-36c5-4662-8350-1db798afad3e.jpg?1784631771",
+            "normal": "https://cards.scryfall.io/normal/front/3/7/370e09c2-36c5-4662-8350-1db798afad3e.jpg?1784631771",
+            "large": "https://cards.scryfall.io/large/front/3/7/370e09c2-36c5-4662-8350-1db798afad3e.jpg?1784631771",
+            "png": "https://cards.scryfall.io/png/front/3/7/370e09c2-36c5-4662-8350-1db798afad3e.png?1784631771",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/7/370e09c2-36c5-4662-8350-1db798afad3e.jpg?1784631771",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/7/370e09c2-36c5-4662-8350-1db798afad3e.jpg?1784631771"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/16/iron-hills-blacksmith?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Dori, Bearer of Friends",
@@ -382,7 +958,40 @@
               "section": "Red-White Dwarves",
               "context": "Guide explains Dori counts as legendary and makes you an artifact for Storied."
             }
-          ]
+          ],
+          "scryfall_id": "d2f60ad0-c887-4585-85f8-afcf72fb80d0",
+          "oracle_id": "58acd6b2-730c-4472-a34a-f2784977aca8",
+          "scryfall_name": "Dori, Bearer of Friends",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "94",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{2}{R}",
+          "mana_value": 3.0,
+          "type_line": "Legendary Creature — Dwarf Warrior",
+          "oracle_text": "Trample\nWhen Dori enters, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R"
+          ],
+          "keywords": [
+            "Treasure",
+            "Trample"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/d/2/d2f60ad0-c887-4585-85f8-afcf72fb80d0.jpg?1785323237",
+            "normal": "https://cards.scryfall.io/normal/front/d/2/d2f60ad0-c887-4585-85f8-afcf72fb80d0.jpg?1785323237",
+            "large": "https://cards.scryfall.io/large/front/d/2/d2f60ad0-c887-4585-85f8-afcf72fb80d0.jpg?1785323237",
+            "png": "https://cards.scryfall.io/png/front/d/2/d2f60ad0-c887-4585-85f8-afcf72fb80d0.png?1785323237",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/2/d2f60ad0-c887-4585-85f8-afcf72fb80d0.jpg?1785323237",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/2/d2f60ad0-c887-4585-85f8-afcf72fb80d0.jpg?1785323237"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/94/dori-bearer-of-friends?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Bombur, Gentle Dreamer",
@@ -402,7 +1011,39 @@
               "section": "Red-White Dwarves",
               "context": "Explicitly named as a payoff for establishing the Storied board."
             }
-          ]
+          ],
+          "scryfall_id": "63c317e7-432c-4817-8db4-3670a1d84be3",
+          "oracle_id": "925ce68e-9323-4985-8fef-0d3f36e0d74c",
+          "scryfall_name": "Bombur, Gentle Dreamer",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "88",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{R}",
+          "mana_value": 3.0,
+          "type_line": "Legendary Creature — Dwarf Bard",
+          "oracle_text": "Storied (If you control three or more artifacts, legendaries, and/or Sagas, you have an enduring story for the rest of the game.)\nBombur doesn't untap during your untap step unless you have an enduring story.",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R"
+          ],
+          "keywords": [
+            "Storied"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/6/3/63c317e7-432c-4817-8db4-3670a1d84be3.jpg?1785496185",
+            "normal": "https://cards.scryfall.io/normal/front/6/3/63c317e7-432c-4817-8db4-3670a1d84be3.jpg?1785496185",
+            "large": "https://cards.scryfall.io/large/front/6/3/63c317e7-432c-4817-8db4-3670a1d84be3.jpg?1785496185",
+            "png": "https://cards.scryfall.io/png/front/6/3/63c317e7-432c-4817-8db4-3670a1d84be3.png?1785496185",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/6/3/63c317e7-432c-4817-8db4-3670a1d84be3.jpg?1785496185",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/6/3/63c317e7-432c-4817-8db4-3670a1d84be3.jpg?1785496185"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/88/bombur-gentle-dreamer?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Silvan Reveler",
@@ -422,7 +1063,41 @@
               "section": "Green-Blue Elves",
               "context": "Featured under the Green-Blue Elves archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "c71b74fb-fb0c-4953-b536-7a3f283c6918",
+          "oracle_id": "11932191-4b19-49b1-bfe4-abb7b83b2e59",
+          "scryfall_name": "Silvan Reveler",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "163",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{G}{U}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Elf Citizen",
+          "oracle_text": "When this creature enters, draw a card, then discard a card. If you discard a land card this way, put it from your graveyard onto the battlefield tapped.\nLandfall — Whenever a land you control enters, you may pay {1}{G}{U}. If you do, return this card from your graveyard to your hand.",
+          "colors": [
+            "G",
+            "U"
+          ],
+          "color_identity": [
+            "G",
+            "U"
+          ],
+          "keywords": [
+            "Landfall"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/7/c71b74fb-fb0c-4953-b536-7a3f283c6918.jpg?1784382379",
+            "normal": "https://cards.scryfall.io/normal/front/c/7/c71b74fb-fb0c-4953-b536-7a3f283c6918.jpg?1784382379",
+            "large": "https://cards.scryfall.io/large/front/c/7/c71b74fb-fb0c-4953-b536-7a3f283c6918.jpg?1784382379",
+            "png": "https://cards.scryfall.io/png/front/c/7/c71b74fb-fb0c-4953-b536-7a3f283c6918.png?1784382379",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/7/c71b74fb-fb0c-4953-b536-7a3f283c6918.jpg?1784382379",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/7/c71b74fb-fb0c-4953-b536-7a3f283c6918.jpg?1784382379"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/163/silvan-reveler?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Mirkwood Pathmaker",
@@ -442,7 +1117,37 @@
               "section": "Green-Blue Elves",
               "context": "Named as a large creature the deck can build toward."
             }
-          ]
+          ],
+          "scryfall_id": "50fbedc0-bc66-4ffb-87f6-a2df69995091",
+          "oracle_id": "f1b36dde-9cde-46c8-8d5a-9ad93feba41f",
+          "scryfall_name": "Mirkwood Pathmaker",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "129",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{G}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Elf Ranger",
+          "oracle_text": "Mirkwood Pathmaker's power and toughness are each equal to the number of lands you control.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/0/50fbedc0-bc66-4ffb-87f6-a2df69995091.jpg?1785152431",
+            "normal": "https://cards.scryfall.io/normal/front/5/0/50fbedc0-bc66-4ffb-87f6-a2df69995091.jpg?1785152431",
+            "large": "https://cards.scryfall.io/large/front/5/0/50fbedc0-bc66-4ffb-87f6-a2df69995091.jpg?1785152431",
+            "png": "https://cards.scryfall.io/png/front/5/0/50fbedc0-bc66-4ffb-87f6-a2df69995091.png?1785152431",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/0/50fbedc0-bc66-4ffb-87f6-a2df69995091.jpg?1785152431",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/0/50fbedc0-bc66-4ffb-87f6-a2df69995091.jpg?1785152431"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/129/mirkwood-pathmaker?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Elven Raft-Steerer",
@@ -462,7 +1167,39 @@
               "section": "Green-Blue Elves",
               "context": "Explicitly named as a way to shut down opposing creatures."
             }
-          ]
+          ],
+          "scryfall_id": "c141695c-c108-41d5-85cb-1f7485d9d533",
+          "oracle_id": "d0f62148-1015-49b8-b61f-a4332325a6b0",
+          "scryfall_name": "Elven Raft-Steerer",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "37",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{U}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Elf Pilot",
+          "oracle_text": "Landfall — Whenever a land you control enters, choose one —\n• Tap target creature an opponent controls.\n• Untap target creature you control.",
+          "colors": [
+            "U"
+          ],
+          "color_identity": [
+            "U"
+          ],
+          "keywords": [
+            "Landfall"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/1/c141695c-c108-41d5-85cb-1f7485d9d533.jpg?1784632054",
+            "normal": "https://cards.scryfall.io/normal/front/c/1/c141695c-c108-41d5-85cb-1f7485d9d533.jpg?1784632054",
+            "large": "https://cards.scryfall.io/large/front/c/1/c141695c-c108-41d5-85cb-1f7485d9d533.jpg?1784632054",
+            "png": "https://cards.scryfall.io/png/front/c/1/c141695c-c108-41d5-85cb-1f7485d9d533.png?1784632054",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/1/c141695c-c108-41d5-85cb-1f7485d9d533.jpg?1784632054",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/1/c141695c-c108-41d5-85cb-1f7485d9d533.jpg?1784632054"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/37/elven-raft-steerer?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Thranduil, Sindarin Liege",
@@ -482,7 +1219,42 @@
               "section": "Green-Blue Elves",
               "context": "Explicitly described as enabling an Elf-centric version with extra value from Elf cards."
             }
-          ]
+          ],
+          "scryfall_id": "481870ee-d1f7-421b-86e1-570ea933bbbc",
+          "oracle_id": "f6771d32-395e-4832-b33d-cbc12dff1516",
+          "scryfall_name": "Thranduil, Sindarin Liege // Silvan Rally",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "166",
+          "rarity": "uncommon",
+          "layout": "adventure",
+          "mana_cost": "{2}{G/U}{G/U} // {1}{G/U}{G/U}",
+          "mana_value": 4.0,
+          "type_line": "Legendary Creature — Elf Noble // Sorcery — Adventure",
+          "oracle_text": null,
+          "colors": [
+            "G",
+            "U"
+          ],
+          "color_identity": [
+            "G",
+            "U"
+          ],
+          "keywords": [
+            "Mill",
+            "Landfall"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/4/8/481870ee-d1f7-421b-86e1-570ea933bbbc.jpg?1785412747",
+            "normal": "https://cards.scryfall.io/normal/front/4/8/481870ee-d1f7-421b-86e1-570ea933bbbc.jpg?1785412747",
+            "large": "https://cards.scryfall.io/large/front/4/8/481870ee-d1f7-421b-86e1-570ea933bbbc.jpg?1785412747",
+            "png": "https://cards.scryfall.io/png/front/4/8/481870ee-d1f7-421b-86e1-570ea933bbbc.png?1785412747",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/8/481870ee-d1f7-421b-86e1-570ea933bbbc.jpg?1785412747",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/8/481870ee-d1f7-421b-86e1-570ea933bbbc.jpg?1785412747"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/166/thranduil-sindarin-liege-silvan-rally?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Wood Elves",
@@ -502,7 +1274,37 @@
               "section": "Green-Blue Elves",
               "context": "Named as an Elf card receiving extra value from Thranduil."
             }
-          ]
+          ],
+          "scryfall_id": "2476e42b-b209-4207-8ed9-cb668f89b218",
+          "oracle_id": "8973bd99-20f8-4867-90ef-50392147ee1b",
+          "scryfall_name": "Wood Elves",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "142",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{2}{G}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Elf Scout",
+          "oracle_text": "When this creature enters, search your library for a Forest card, put that card onto the battlefield, then shuffle.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/2/4/2476e42b-b209-4207-8ed9-cb668f89b218.jpg?1783902784",
+            "normal": "https://cards.scryfall.io/normal/front/2/4/2476e42b-b209-4207-8ed9-cb668f89b218.jpg?1783902784",
+            "large": "https://cards.scryfall.io/large/front/2/4/2476e42b-b209-4207-8ed9-cb668f89b218.jpg?1783902784",
+            "png": "https://cards.scryfall.io/png/front/2/4/2476e42b-b209-4207-8ed9-cb668f89b218.png?1783902784",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/4/2476e42b-b209-4207-8ed9-cb668f89b218.jpg?1783902784",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/4/2476e42b-b209-4207-8ed9-cb668f89b218.jpg?1783902784"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/142/wood-elves?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Woodland Weavemaster",
@@ -522,7 +1324,39 @@
               "section": "Green-Blue Elves",
               "context": "Named as an Elf card receiving extra value from Thranduil."
             }
-          ]
+          ],
+          "scryfall_id": "fe2b4bcf-56de-44d3-83af-aeb27f82c25e",
+          "oracle_id": "28ffddca-a3c4-467d-a2dc-2c5e62393e11",
+          "scryfall_name": "Woodland Weavemaster",
+          "set_code": "HOB",
+          "set_name": "The Hobbit",
+          "collector_number": "143",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{G}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Elf Druid",
+          "oracle_text": "Vigilance\nWhenever another Elf you control enters, this creature gets +1/+1 until end of turn.\n{T}: Add X mana of any one color, where X is this creature's power. Spend this mana only to cast Elf spells and activate abilities of Elf sources.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [
+            "Vigilance"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/f/e/fe2b4bcf-56de-44d3-83af-aeb27f82c25e.jpg?1785237990",
+            "normal": "https://cards.scryfall.io/normal/front/f/e/fe2b4bcf-56de-44d3-83af-aeb27f82c25e.jpg?1785237990",
+            "large": "https://cards.scryfall.io/large/front/f/e/fe2b4bcf-56de-44d3-83af-aeb27f82c25e.jpg?1785237990",
+            "png": "https://cards.scryfall.io/png/front/f/e/fe2b4bcf-56de-44d3-83af-aeb27f82c25e.png?1785237990",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/fe2b4bcf-56de-44d3-83af-aeb27f82c25e.jpg?1785237990",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/f/e/fe2b4bcf-56de-44d3-83af-aeb27f82c25e.jpg?1785237990"
+          },
+          "scryfall_uri": "https://scryfall.com/card/hob/143/woodland-weavemaster?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         }
       ]
     },
@@ -546,7 +1380,39 @@
               "section": "White-Blue Merfolk",
               "context": "Featured under the White-Blue Merfolk archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "1b742172-7118-45e7-9945-62bd77d94e85",
+          "oracle_id": "c892d28c-4a78-4a7f-b8d5-c3663b819c5e",
+          "scryfall_name": "Deepchannel Duelist",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "213",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{W}{U}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Merfolk Soldier",
+          "oracle_text": "At the beginning of your end step, untap target Merfolk you control.\nOther Merfolk you control get +1/+1.",
+          "colors": [
+            "U",
+            "W"
+          ],
+          "color_identity": [
+            "U",
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/1/b/1b742172-7118-45e7-9945-62bd77d94e85.jpg?1783904414",
+            "normal": "https://cards.scryfall.io/normal/front/1/b/1b742172-7118-45e7-9945-62bd77d94e85.jpg?1783904414",
+            "large": "https://cards.scryfall.io/large/front/1/b/1b742172-7118-45e7-9945-62bd77d94e85.jpg?1783904414",
+            "png": "https://cards.scryfall.io/png/front/1/b/1b742172-7118-45e7-9945-62bd77d94e85.png?1783904414",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/b/1b742172-7118-45e7-9945-62bd77d94e85.jpg?1783904414",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/b/1b742172-7118-45e7-9945-62bd77d94e85.jpg?1783904414"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/213/deepchannel-duelist?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Wanderwine Distracter",
@@ -566,7 +1432,37 @@
               "section": "White-Blue Merfolk",
               "context": "Named as a Merfolk with an ability that triggers when it becomes tapped."
             }
-          ]
+          ],
+          "scryfall_id": "cbf593a7-d4ae-4771-926a-3c1b2c8c901a",
+          "oracle_id": "6c0f6673-bc24-4c84-b4e7-736283ffd60e",
+          "scryfall_name": "Wanderwine Distracter",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "82",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{3}{U}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Merfolk Wizard",
+          "oracle_text": "Whenever this creature becomes tapped, target creature an opponent controls gets -3/-0 until end of turn.",
+          "colors": [
+            "U"
+          ],
+          "color_identity": [
+            "U"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/b/cbf593a7-d4ae-4771-926a-3c1b2c8c901a.jpg?1783904475",
+            "normal": "https://cards.scryfall.io/normal/front/c/b/cbf593a7-d4ae-4771-926a-3c1b2c8c901a.jpg?1783904475",
+            "large": "https://cards.scryfall.io/large/front/c/b/cbf593a7-d4ae-4771-926a-3c1b2c8c901a.jpg?1783904475",
+            "png": "https://cards.scryfall.io/png/front/c/b/cbf593a7-d4ae-4771-926a-3c1b2c8c901a.png?1783904475",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/b/cbf593a7-d4ae-4771-926a-3c1b2c8c901a.jpg?1783904475",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/b/cbf593a7-d4ae-4771-926a-3c1b2c8c901a.jpg?1783904475"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/82/wanderwine-distracter?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Silvergill Peddler",
@@ -586,7 +1482,37 @@
               "section": "White-Blue Merfolk",
               "context": "Named as a Merfolk with an ability that triggers when it becomes tapped."
             }
-          ]
+          ],
+          "scryfall_id": "feba2bb6-6005-4ade-a4c5-97bbd54b43a3",
+          "oracle_id": "08688903-d9cc-4d57-ba91-14a8523551b9",
+          "scryfall_name": "Silvergill Peddler",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "70",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{2}{U}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Merfolk Citizen",
+          "oracle_text": "Whenever this creature becomes tapped, draw a card, then discard a card.",
+          "colors": [
+            "U"
+          ],
+          "color_identity": [
+            "U"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/f/e/feba2bb6-6005-4ade-a4c5-97bbd54b43a3.jpg?1783904482",
+            "normal": "https://cards.scryfall.io/normal/front/f/e/feba2bb6-6005-4ade-a4c5-97bbd54b43a3.jpg?1783904482",
+            "large": "https://cards.scryfall.io/large/front/f/e/feba2bb6-6005-4ade-a4c5-97bbd54b43a3.jpg?1783904482",
+            "png": "https://cards.scryfall.io/png/front/f/e/feba2bb6-6005-4ade-a4c5-97bbd54b43a3.png?1783904482",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/f/e/feba2bb6-6005-4ade-a4c5-97bbd54b43a3.jpg?1783904482",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/f/e/feba2bb6-6005-4ade-a4c5-97bbd54b43a3.jpg?1783904482"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/70/silvergill-peddler?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Wanderwine Farewell",
@@ -606,7 +1532,39 @@
               "section": "White-Blue Merfolk",
               "context": "Its convoke spell can tap Merfolk to trigger their abilities without attacking."
             }
-          ]
+          ],
+          "scryfall_id": "473123a0-1366-406b-9b9e-154c0e9c224f",
+          "oracle_id": "7e1da4a1-5922-4a2e-8bbc-25fbcbf20935",
+          "scryfall_name": "Wanderwine Farewell",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "83",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{5}{U}{U}",
+          "mana_value": 7.0,
+          "type_line": "Kindred Sorcery — Merfolk",
+          "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nReturn one or two target nonland permanents to their owners' hands. Then if you control a Merfolk, create a 1/1 white and blue Merfolk creature token for each permanent returned to its owner's hand this way.",
+          "colors": [
+            "U"
+          ],
+          "color_identity": [
+            "U"
+          ],
+          "keywords": [
+            "Convoke"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/4/7/473123a0-1366-406b-9b9e-154c0e9c224f.jpg?1783904472",
+            "normal": "https://cards.scryfall.io/normal/front/4/7/473123a0-1366-406b-9b9e-154c0e9c224f.jpg?1783904472",
+            "large": "https://cards.scryfall.io/large/front/4/7/473123a0-1366-406b-9b9e-154c0e9c224f.jpg?1783904472",
+            "png": "https://cards.scryfall.io/png/front/4/7/473123a0-1366-406b-9b9e-154c0e9c224f.png?1783904472",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/7/473123a0-1366-406b-9b9e-154c0e9c224f.jpg?1783904472",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/7/473123a0-1366-406b-9b9e-154c0e9c224f.jpg?1783904472"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/83/wanderwine-farewell?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Boggart Cursecrafter",
@@ -626,7 +1584,41 @@
               "section": "Black-Red Goblins",
               "context": "Featured under the Black-Red Goblins archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "b0b67eb9-0d88-4f2c-8063-e8bedfa78556",
+          "oracle_id": "5d58aefe-a3df-4e0a-b679-b967cd5fd2c6",
+          "scryfall_name": "Boggart Cursecrafter",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "206",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{B}{R}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Goblin Warlock",
+          "oracle_text": "Deathtouch\nWhenever another Goblin you control dies, this creature deals 1 damage to each opponent.",
+          "colors": [
+            "B",
+            "R"
+          ],
+          "color_identity": [
+            "B",
+            "R"
+          ],
+          "keywords": [
+            "Deathtouch"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/b/0/b0b67eb9-0d88-4f2c-8063-e8bedfa78556.jpg?1783904418",
+            "normal": "https://cards.scryfall.io/normal/front/b/0/b0b67eb9-0d88-4f2c-8063-e8bedfa78556.jpg?1783904418",
+            "large": "https://cards.scryfall.io/large/front/b/0/b0b67eb9-0d88-4f2c-8063-e8bedfa78556.jpg?1783904418",
+            "png": "https://cards.scryfall.io/png/front/b/0/b0b67eb9-0d88-4f2c-8063-e8bedfa78556.png?1783904418",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/b/0/b0b67eb9-0d88-4f2c-8063-e8bedfa78556.jpg?1783904418",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/b/0/b0b67eb9-0d88-4f2c-8063-e8bedfa78556.jpg?1783904418"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/206/boggart-cursecrafter?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Mudbutton Cursetosser",
@@ -646,7 +1638,39 @@
               "section": "Black-Red Goblins",
               "context": "Named as a Goblin whose death trigger makes putting -1/-1 counters on your own creatures beneficial."
             }
-          ]
+          ],
+          "scryfall_id": "35bc841a-9a21-4c17-a60a-a3ee01472fcb",
+          "oracle_id": "b63e5518-61f3-4cde-a799-5f3ee6aba70b",
+          "scryfall_name": "Mudbutton Cursetosser",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "112",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{B}",
+          "mana_value": 1.0,
+          "type_line": "Creature — Goblin Warlock",
+          "oracle_text": "As an additional cost to cast this spell, behold a Goblin or pay {2}. (To behold a Goblin, choose a Goblin you control or reveal a Goblin card from your hand.)\nThis creature can't block.\nWhen this creature dies, destroy target creature an opponent controls with power 2 or less.",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Behold"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/3/5/35bc841a-9a21-4c17-a60a-a3ee01472fcb.jpg?1783904459",
+            "normal": "https://cards.scryfall.io/normal/front/3/5/35bc841a-9a21-4c17-a60a-a3ee01472fcb.jpg?1783904459",
+            "large": "https://cards.scryfall.io/large/front/3/5/35bc841a-9a21-4c17-a60a-a3ee01472fcb.jpg?1783904459",
+            "png": "https://cards.scryfall.io/png/front/3/5/35bc841a-9a21-4c17-a60a-a3ee01472fcb.png?1783904459",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/5/35bc841a-9a21-4c17-a60a-a3ee01472fcb.jpg?1783904459",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/5/35bc841a-9a21-4c17-a60a-a3ee01472fcb.jpg?1783904459"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/112/mudbutton-cursetosser?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Stoic Grove-Guide",
@@ -666,7 +1690,39 @@
               "section": "Black-Red Goblins",
               "context": "Named as a non-Goblin token creator that supports the sacrifice/death-trigger plan."
             }
-          ]
+          ],
+          "scryfall_id": "3d5a3e25-c17a-47b1-a36d-d24d50e5bab3",
+          "oracle_id": "96c4b51c-8a10-428c-a948-e1ba9c652bfd",
+          "scryfall_name": "Stoic Grove-Guide",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "243",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{4}{B/G}",
+          "mana_value": 5.0,
+          "type_line": "Creature — Elf Druid",
+          "oracle_text": "{1}{B/G}, Exile this card from your graveyard: Create a 2/2 black and green Elf creature token. Activate only as a sorcery.",
+          "colors": [
+            "B",
+            "G"
+          ],
+          "color_identity": [
+            "B",
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/3/d/3d5a3e25-c17a-47b1-a36d-d24d50e5bab3.jpg?1783904402",
+            "normal": "https://cards.scryfall.io/normal/front/3/d/3d5a3e25-c17a-47b1-a36d-d24d50e5bab3.jpg?1783904402",
+            "large": "https://cards.scryfall.io/large/front/3/d/3d5a3e25-c17a-47b1-a36d-d24d50e5bab3.jpg?1783904402",
+            "png": "https://cards.scryfall.io/png/front/3/d/3d5a3e25-c17a-47b1-a36d-d24d50e5bab3.png?1783904402",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/d/3d5a3e25-c17a-47b1-a36d-d24d50e5bab3.jpg?1783904402",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/d/3d5a3e25-c17a-47b1-a36d-d24d50e5bab3.jpg?1783904402"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/243/stoic-grove-guide?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Thoughtweft Lieutenant",
@@ -686,7 +1742,39 @@
               "section": "Green-White Kithkin",
               "context": "Featured under the Green-White Kithkin archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "2c54ec67-9317-455e-a045-fa4ed9cb676f",
+          "oracle_id": "50dd9e17-6dae-4ff6-8a38-50088c71283f",
+          "scryfall_name": "Thoughtweft Lieutenant",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "246",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{G}{W}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Kithkin Soldier",
+          "oracle_text": "Whenever this creature or another Kithkin you control enters, target creature you control gets +1/+1 and gains trample until end of turn.",
+          "colors": [
+            "G",
+            "W"
+          ],
+          "color_identity": [
+            "G",
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/2/c/2c54ec67-9317-455e-a045-fa4ed9cb676f.jpg?1783904401",
+            "normal": "https://cards.scryfall.io/normal/front/2/c/2c54ec67-9317-455e-a045-fa4ed9cb676f.jpg?1783904401",
+            "large": "https://cards.scryfall.io/large/front/2/c/2c54ec67-9317-455e-a045-fa4ed9cb676f.jpg?1783904401",
+            "png": "https://cards.scryfall.io/png/front/2/c/2c54ec67-9317-455e-a045-fa4ed9cb676f.png?1783904401",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/c/2c54ec67-9317-455e-a045-fa4ed9cb676f.jpg?1783904401",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/c/2c54ec67-9317-455e-a045-fa4ed9cb676f.jpg?1783904401"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/246/thoughtweft-lieutenant?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Clachan Festival",
@@ -706,7 +1794,37 @@
               "section": "Green-White Kithkin",
               "context": "Named as a card to establish the board before spreading abilities."
             }
-          ]
+          ],
+          "scryfall_id": "324b5234-ffbf-4801-a475-8f693679ae2f",
+          "oracle_id": "5396045d-744b-435e-8324-a1bfbb03449d",
+          "scryfall_name": "Clachan Festival",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "10",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{W}",
+          "mana_value": 3.0,
+          "type_line": "Kindred Enchantment — Kithkin",
+          "oracle_text": "When this enchantment enters, create two 1/1 green and white Kithkin creature tokens.\n{4}{W}: Create a 1/1 green and white Kithkin creature token.",
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1783904510",
+            "normal": "https://cards.scryfall.io/normal/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1783904510",
+            "large": "https://cards.scryfall.io/large/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1783904510",
+            "png": "https://cards.scryfall.io/png/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.png?1783904510",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1783904510",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/3/2/324b5234-ffbf-4801-a475-8f693679ae2f.jpg?1783904510"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/10/clachan-festival?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Mistmeadow Council",
@@ -726,7 +1844,37 @@
               "section": "Green-White Kithkin",
               "context": "Named as a card to establish the board before spreading abilities."
             }
-          ]
+          ],
+          "scryfall_id": "d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f",
+          "oracle_id": "9acfec0d-05a0-4b28-a883-e6863f1cb773",
+          "scryfall_name": "Mistmeadow Council",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "183",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{4}{G}",
+          "mana_value": 5.0,
+          "type_line": "Creature — Kithkin Advisor",
+          "oracle_text": "This spell costs {1} less to cast if you control a Kithkin.\nWhen this creature enters, draw a card.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.jpg?1783904429",
+            "normal": "https://cards.scryfall.io/normal/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.jpg?1783904429",
+            "large": "https://cards.scryfall.io/large/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.jpg?1783904429",
+            "png": "https://cards.scryfall.io/png/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.png?1783904429",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.jpg?1783904429",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/d/4/d4a7c9bc-81c8-4c31-96a9-eb6ba7715e7f.jpg?1783904429"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/183/mistmeadow-council?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Timid Shieldbearer",
@@ -746,7 +1894,37 @@
               "section": "Green-White Kithkin",
               "context": "Its activated ability is explicitly named as the way to buff the Kithkin board."
             }
-          ]
+          ],
+          "scryfall_id": "1c672d38-a1a6-4912-a9a6-b11e7bf0cc67",
+          "oracle_id": "8bef3511-ceeb-4d57-972a-ab363ecacd5b",
+          "scryfall_name": "Timid Shieldbearer",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "39",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{1}{W}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Kithkin Soldier",
+          "oracle_text": "{4}{W}: Creatures you control get +1/+1 until end of turn.",
+          "colors": [
+            "W"
+          ],
+          "color_identity": [
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1783904496",
+            "normal": "https://cards.scryfall.io/normal/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1783904496",
+            "large": "https://cards.scryfall.io/large/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1783904496",
+            "png": "https://cards.scryfall.io/png/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.png?1783904496",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1783904496",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/c/1c672d38-a1a6-4912-a9a6-b11e7bf0cc67.jpg?1783904496"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/39/timid-shieldbearer?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Dundoolin Weaver",
@@ -766,7 +1944,37 @@
               "section": "Green-White Kithkin",
               "context": "Named as a way for the go-wide deck to recover after a board wipe."
             }
-          ]
+          ],
+          "scryfall_id": "2260912b-4dfb-49dd-bf95-060d44333645",
+          "oracle_id": "28564d10-bfc5-4beb-b0e2-b9aa5c03f740",
+          "scryfall_name": "Dundoolin Weaver",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "175",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{G}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Kithkin Druid",
+          "oracle_text": "When this creature enters, if you control three or more creatures, return target permanent card from your graveyard to your hand.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/2/2/2260912b-4dfb-49dd-bf95-060d44333645.jpg?1783904429",
+            "normal": "https://cards.scryfall.io/normal/front/2/2/2260912b-4dfb-49dd-bf95-060d44333645.jpg?1783904429",
+            "large": "https://cards.scryfall.io/large/front/2/2/2260912b-4dfb-49dd-bf95-060d44333645.jpg?1783904429",
+            "png": "https://cards.scryfall.io/png/front/2/2/2260912b-4dfb-49dd-bf95-060d44333645.png?1783904429",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/2/2260912b-4dfb-49dd-bf95-060d44333645.jpg?1783904429",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/2/2260912b-4dfb-49dd-bf95-060d44333645.jpg?1783904429"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/175/dundoolin-weaver?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Twinflame Travelers",
@@ -786,7 +1994,41 @@
               "section": "Blue-Red Elementals",
               "context": "Featured under the Blue-Red Elementals archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "5fc9f409-3aef-4403-bf17-6e9a72ecfada",
+          "oracle_id": "341cf69a-246c-4eb5-910c-18c13a4c3dce",
+          "scryfall_name": "Twinflame Travelers",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "248",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{U}{R}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Elemental Sorcerer",
+          "oracle_text": "Flying\nIf a triggered ability of another Elemental you control triggers, it triggers an additional time.",
+          "colors": [
+            "R",
+            "U"
+          ],
+          "color_identity": [
+            "R",
+            "U"
+          ],
+          "keywords": [
+            "Flying"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/f/5fc9f409-3aef-4403-bf17-6e9a72ecfada.jpg?1783904400",
+            "normal": "https://cards.scryfall.io/normal/front/5/f/5fc9f409-3aef-4403-bf17-6e9a72ecfada.jpg?1783904400",
+            "large": "https://cards.scryfall.io/large/front/5/f/5fc9f409-3aef-4403-bf17-6e9a72ecfada.jpg?1783904400",
+            "png": "https://cards.scryfall.io/png/front/5/f/5fc9f409-3aef-4403-bf17-6e9a72ecfada.png?1783904400",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/f/5fc9f409-3aef-4403-bf17-6e9a72ecfada.jpg?1783904400",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/f/5fc9f409-3aef-4403-bf17-6e9a72ecfada.jpg?1783904400"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/248/twinflame-travelers?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Flamebraider",
@@ -806,7 +2048,37 @@
               "section": "Blue-Red Elementals",
               "context": "Explicitly recommended to accelerate mana for spells with mana value four or greater."
             }
-          ]
+          ],
+          "scryfall_id": "b8aa428c-5a77-444f-b75e-a113e46fe4e0",
+          "oracle_id": "c552bd73-ce75-40fd-9d80-9e90b6f45274",
+          "scryfall_name": "Flamebraider",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "139",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{R}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Elemental Bard",
+          "oracle_text": "{T}: Add two mana in any combination of colors. Spend this mana only to cast Elemental spells or activate abilities of Elemental sources.",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/b/8/b8aa428c-5a77-444f-b75e-a113e46fe4e0.jpg?1783904449",
+            "normal": "https://cards.scryfall.io/normal/front/b/8/b8aa428c-5a77-444f-b75e-a113e46fe4e0.jpg?1783904449",
+            "large": "https://cards.scryfall.io/large/front/b/8/b8aa428c-5a77-444f-b75e-a113e46fe4e0.jpg?1783904449",
+            "png": "https://cards.scryfall.io/png/front/b/8/b8aa428c-5a77-444f-b75e-a113e46fe4e0.png?1783904449",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/b/8/b8aa428c-5a77-444f-b75e-a113e46fe4e0.jpg?1783904449",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/b/8/b8aa428c-5a77-444f-b75e-a113e46fe4e0.jpg?1783904449"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/139/flamebraider?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Morcant's Loyalist",
@@ -826,7 +2098,39 @@
               "section": "Black-Green Elves",
               "context": "Featured under the Black-Green Elves archetype heading."
             }
-          ]
+          ],
+          "scryfall_id": "175c6b1c-8790-41a2-ae15-5031206c410f",
+          "oracle_id": "b2c30683-cc7f-4341-add1-b08cb9b93eeb",
+          "scryfall_name": "Morcant's Loyalist",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "236",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{B}{G}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Elf Warrior",
+          "oracle_text": "Other Elves you control get +1/+1.\nWhen this creature dies, return another target Elf card from your graveyard to your hand.",
+          "colors": [
+            "B",
+            "G"
+          ],
+          "color_identity": [
+            "B",
+            "G"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/1/7/175c6b1c-8790-41a2-ae15-5031206c410f.jpg?1783904405",
+            "normal": "https://cards.scryfall.io/normal/front/1/7/175c6b1c-8790-41a2-ae15-5031206c410f.jpg?1783904405",
+            "large": "https://cards.scryfall.io/large/front/1/7/175c6b1c-8790-41a2-ae15-5031206c410f.jpg?1783904405",
+            "png": "https://cards.scryfall.io/png/front/1/7/175c6b1c-8790-41a2-ae15-5031206c410f.png?1783904405",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/7/175c6b1c-8790-41a2-ae15-5031206c410f.jpg?1783904405",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/7/175c6b1c-8790-41a2-ae15-5031206c410f.jpg?1783904405"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/236/morcants-loyalist?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Scarblade Scout",
@@ -846,7 +2150,40 @@
               "section": "Black-Green Elves",
               "context": "Named as a two-mana Elf that develops the board while setting up the graveyard."
             }
-          ]
+          ],
+          "scryfall_id": "c2412fea-4591-4345-913f-edc2da9ad975",
+          "oracle_id": "f6758e8f-5462-48a7-96d3-60d07b1563fc",
+          "scryfall_name": "Scarblade Scout",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "118",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{1}{B}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Elf Scout",
+          "oracle_text": "Lifelink\nWhen this creature enters, mill two cards. (Put the top two cards of your library into your graveyard.)",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Lifelink",
+            "Mill"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/c/2/c2412fea-4591-4345-913f-edc2da9ad975.jpg?1783904456",
+            "normal": "https://cards.scryfall.io/normal/front/c/2/c2412fea-4591-4345-913f-edc2da9ad975.jpg?1783904456",
+            "large": "https://cards.scryfall.io/large/front/c/2/c2412fea-4591-4345-913f-edc2da9ad975.jpg?1783904456",
+            "png": "https://cards.scryfall.io/png/front/c/2/c2412fea-4591-4345-913f-edc2da9ad975.png?1783904456",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/c/2/c2412fea-4591-4345-913f-edc2da9ad975.jpg?1783904456",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/c/2/c2412fea-4591-4345-913f-edc2da9ad975.jpg?1783904456"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/118/scarblade-scout?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Lys Alana Informant",
@@ -866,7 +2203,39 @@
               "section": "Black-Green Elves",
               "context": "Named as a two-mana Elf that develops the board while setting up the graveyard."
             }
-          ]
+          ],
+          "scryfall_id": "a79649c4-559e-4306-a102-5fd8750629c7",
+          "oracle_id": "b5058b5c-0359-42ec-ba9e-ae1371bb9c22",
+          "scryfall_name": "Lys Alana Informant",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "181",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{1}{G}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Elf Scout",
+          "oracle_text": "When this creature enters or dies, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [
+            "Surveil"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/7/a79649c4-559e-4306-a102-5fd8750629c7.jpg?1783904427",
+            "normal": "https://cards.scryfall.io/normal/front/a/7/a79649c4-559e-4306-a102-5fd8750629c7.jpg?1783904427",
+            "large": "https://cards.scryfall.io/large/front/a/7/a79649c4-559e-4306-a102-5fd8750629c7.jpg?1783904427",
+            "png": "https://cards.scryfall.io/png/front/a/7/a79649c4-559e-4306-a102-5fd8750629c7.png?1783904427",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/7/a79649c4-559e-4306-a102-5fd8750629c7.jpg?1783904427",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/7/a79649c4-559e-4306-a102-5fd8750629c7.jpg?1783904427"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/181/lys-alana-informant?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Moon-Vigil Adherents",
@@ -886,7 +2255,39 @@
               "section": "Black-Green Elves",
               "context": "Named as a powerful graveyard-enabled finisher."
             }
-          ]
+          ],
+          "scryfall_id": "60621c37-62e1-4261-ae76-3946b4a0cfa3",
+          "oracle_id": "d0fa43f6-d8f6-4674-b538-6d546b7dcf40",
+          "scryfall_name": "Moon-Vigil Adherents",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "184",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{G}{G}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Elf Druid",
+          "oracle_text": "Trample\nThis creature gets +1/+1 for each creature you control and each creature card in your graveyard.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [
+            "Trample"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/6/0/60621c37-62e1-4261-ae76-3946b4a0cfa3.jpg?1783904429",
+            "normal": "https://cards.scryfall.io/normal/front/6/0/60621c37-62e1-4261-ae76-3946b4a0cfa3.jpg?1783904429",
+            "large": "https://cards.scryfall.io/large/front/6/0/60621c37-62e1-4261-ae76-3946b4a0cfa3.jpg?1783904429",
+            "png": "https://cards.scryfall.io/png/front/6/0/60621c37-62e1-4261-ae76-3946b4a0cfa3.png?1783904429",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/6/0/60621c37-62e1-4261-ae76-3946b4a0cfa3.jpg?1783904429",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/6/0/60621c37-62e1-4261-ae76-3946b4a0cfa3.jpg?1783904429"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/184/moon-vigil-adherents?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Morcant's Eyes",
@@ -906,7 +2307,39 @@
               "section": "Black-Green Elves",
               "context": "Named as a powerful graveyard-enabled finisher."
             }
-          ]
+          ],
+          "scryfall_id": "a730b254-ff7c-4f89-a559-b44ad7fd6c6c",
+          "oracle_id": "c55a27cc-8e25-4714-b1da-86e5c1c6661a",
+          "scryfall_name": "Morcant's Eyes",
+          "set_code": "ECL",
+          "set_name": "Lorwyn Eclipsed",
+          "collector_number": "185",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{G}",
+          "mana_value": 2.0,
+          "type_line": "Kindred Enchantment — Elf",
+          "oracle_text": "At the beginning of your upkeep, surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\n{4}{G}{G}, Sacrifice this enchantment: Create X 2/2 black and green Elf creature tokens, where X is the number of Elf cards in your graveyard. Activate only as a sorcery.",
+          "colors": [
+            "G"
+          ],
+          "color_identity": [
+            "G"
+          ],
+          "keywords": [
+            "Surveil"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/7/a730b254-ff7c-4f89-a559-b44ad7fd6c6c.jpg?1783904431",
+            "normal": "https://cards.scryfall.io/normal/front/a/7/a730b254-ff7c-4f89-a559-b44ad7fd6c6c.jpg?1783904431",
+            "large": "https://cards.scryfall.io/large/front/a/7/a730b254-ff7c-4f89-a559-b44ad7fd6c6c.jpg?1783904431",
+            "png": "https://cards.scryfall.io/png/front/a/7/a730b254-ff7c-4f89-a559-b44ad7fd6c6c.png?1783904431",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/7/a730b254-ff7c-4f89-a559-b44ad7fd6c6c.jpg?1783904431",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/7/a730b254-ff7c-4f89-a559-b44ad7fd6c6c.jpg?1783904431"
+          },
+          "scryfall_uri": "https://scryfall.com/card/ecl/185/morcants-eyes?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         }
       ]
     },
@@ -930,7 +2363,43 @@
               "section": "Abzan Endure",
               "context": "Explicitly named as a card that strengthens the team with +1/+1 counters."
             }
-          ]
+          ],
+          "scryfall_id": "17f61c01-0a41-4fa1-ac34-ffa83baad989",
+          "oracle_id": "23c75386-8011-4ee4-97e2-eaafeb20b788",
+          "scryfall_name": "Armament Dragon",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "168",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{3}{W}{B}{G}",
+          "mana_value": 6.0,
+          "type_line": "Creature — Dragon",
+          "oracle_text": "Flying\nWhen this creature enters, distribute three +1/+1 counters among one, two, or three target creatures you control.",
+          "colors": [
+            "B",
+            "G",
+            "W"
+          ],
+          "color_identity": [
+            "B",
+            "G",
+            "W"
+          ],
+          "keywords": [
+            "Flying"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/1/7/17f61c01-0a41-4fa1-ac34-ffa83baad989.jpg?1783907328",
+            "normal": "https://cards.scryfall.io/normal/front/1/7/17f61c01-0a41-4fa1-ac34-ffa83baad989.jpg?1783907328",
+            "large": "https://cards.scryfall.io/large/front/1/7/17f61c01-0a41-4fa1-ac34-ffa83baad989.jpg?1783907328",
+            "png": "https://cards.scryfall.io/png/front/1/7/17f61c01-0a41-4fa1-ac34-ffa83baad989.png?1783907328",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/1/7/17f61c01-0a41-4fa1-ac34-ffa83baad989.jpg?1783907328",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/1/7/17f61c01-0a41-4fa1-ac34-ffa83baad989.jpg?1783907328"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/168/armament-dragon?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Stalwart Successor",
@@ -950,7 +2419,41 @@
               "section": "Abzan Endure",
               "context": "Explicitly named as a way to supercharge the battlefield with +1/+1 counters."
             }
-          ]
+          ],
+          "scryfall_id": "4a7b206f-8190-46e6-bb9e-44763d3eb4ac",
+          "oracle_id": "45392882-e4b9-4c74-a10f-985c2b4e2be9",
+          "scryfall_name": "Stalwart Successor",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "227",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{B}{G}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Human Warrior",
+          "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhenever one or more counters are put on a creature you control, if it's the first time counters have been put on that creature this turn, put a +1/+1 counter on that creature.",
+          "colors": [
+            "B",
+            "G"
+          ],
+          "color_identity": [
+            "B",
+            "G"
+          ],
+          "keywords": [
+            "Menace"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/4/a/4a7b206f-8190-46e6-bb9e-44763d3eb4ac.jpg?1783907296",
+            "normal": "https://cards.scryfall.io/normal/front/4/a/4a7b206f-8190-46e6-bb9e-44763d3eb4ac.jpg?1783907296",
+            "large": "https://cards.scryfall.io/large/front/4/a/4a7b206f-8190-46e6-bb9e-44763d3eb4ac.jpg?1783907296",
+            "png": "https://cards.scryfall.io/png/front/4/a/4a7b206f-8190-46e6-bb9e-44763d3eb4ac.png?1783907296",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/a/4a7b206f-8190-46e6-bb9e-44763d3eb4ac.jpg?1783907296",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/a/4a7b206f-8190-46e6-bb9e-44763d3eb4ac.jpg?1783907296"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/227/stalwart-successor?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Jeskai Brushmaster",
@@ -970,7 +2473,44 @@
               "section": "Jeskai Flurry",
               "context": "Explicitly named as a card to buff after Narset's Rebuke helps cast a second spell."
             }
-          ]
+          ],
+          "scryfall_id": "2eb06c36-cf7e-47a9-819e-adfc54284153",
+          "oracle_id": "eff690a7-c2c7-4750-894c-0667d3151165",
+          "scryfall_name": "Jeskai Brushmaster",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "195",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{U}{R}{W}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Orc Monk",
+          "oracle_text": "Double strike\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+          "colors": [
+            "R",
+            "U",
+            "W"
+          ],
+          "color_identity": [
+            "R",
+            "U",
+            "W"
+          ],
+          "keywords": [
+            "Prowess",
+            "Double strike"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/2/e/2eb06c36-cf7e-47a9-819e-adfc54284153.jpg?1783907313",
+            "normal": "https://cards.scryfall.io/normal/front/2/e/2eb06c36-cf7e-47a9-819e-adfc54284153.jpg?1783907313",
+            "large": "https://cards.scryfall.io/large/front/2/e/2eb06c36-cf7e-47a9-819e-adfc54284153.jpg?1783907313",
+            "png": "https://cards.scryfall.io/png/front/2/e/2eb06c36-cf7e-47a9-819e-adfc54284153.png?1783907313",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/2/e/2eb06c36-cf7e-47a9-819e-adfc54284153.jpg?1783907313",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/2/e/2eb06c36-cf7e-47a9-819e-adfc54284153.jpg?1783907313"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/195/jeskai-brushmaster?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Cori Mountain Stalwart",
@@ -990,7 +2530,41 @@
               "section": "Jeskai Flurry",
               "context": "Featured with the Jeskai Flurry archetype; no more specific role is stated."
             }
-          ]
+          ],
+          "scryfall_id": "b6cbf54e-f30e-4e7b-b17c-217fa424971c",
+          "oracle_id": "322a2d97-cf71-4bfc-b52d-f642f2d0dcbd",
+          "scryfall_name": "Cori Mountain Stalwart",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "175",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{R}{W}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Human Monk",
+          "oracle_text": "Flurry — Whenever you cast your second spell each turn, this creature deals 2 damage to each opponent and you gain 2 life.",
+          "colors": [
+            "R",
+            "W"
+          ],
+          "color_identity": [
+            "R",
+            "W"
+          ],
+          "keywords": [
+            "Flurry"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/b/6/b6cbf54e-f30e-4e7b-b17c-217fa424971c.jpg?1783907325",
+            "normal": "https://cards.scryfall.io/normal/front/b/6/b6cbf54e-f30e-4e7b-b17c-217fa424971c.jpg?1783907325",
+            "large": "https://cards.scryfall.io/large/front/b/6/b6cbf54e-f30e-4e7b-b17c-217fa424971c.jpg?1783907325",
+            "png": "https://cards.scryfall.io/png/front/b/6/b6cbf54e-f30e-4e7b-b17c-217fa424971c.png?1783907325",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/b/6/b6cbf54e-f30e-4e7b-b17c-217fa424971c.jpg?1783907325",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/b/6/b6cbf54e-f30e-4e7b-b17c-217fa424971c.jpg?1783907325"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/175/cori-mountain-stalwart?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Narset's Rebuke",
@@ -1010,7 +2584,39 @@
               "section": "Jeskai Flurry",
               "context": "Explicitly clears the way and provides mana for a second spell."
             }
-          ]
+          ],
+          "scryfall_id": "5098bd73-d51c-4db4-bf06-fd4854089d37",
+          "oracle_id": "247075c5-62f8-41a1-91b3-562ff0aabb30",
+          "scryfall_name": "Narset's Rebuke",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "114",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{4}{R}",
+          "mana_value": 5.0,
+          "type_line": "Instant",
+          "oracle_text": "Narset's Rebuke deals 5 damage to target creature. Add {U}{R}{W}. If that creature would die this turn, exile it instead.",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R",
+            "U",
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/5/0/5098bd73-d51c-4db4-bf06-fd4854089d37.jpg?1783907358",
+            "normal": "https://cards.scryfall.io/normal/front/5/0/5098bd73-d51c-4db4-bf06-fd4854089d37.jpg?1783907358",
+            "large": "https://cards.scryfall.io/large/front/5/0/5098bd73-d51c-4db4-bf06-fd4854089d37.jpg?1783907358",
+            "png": "https://cards.scryfall.io/png/front/5/0/5098bd73-d51c-4db4-bf06-fd4854089d37.png?1783907358",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/5/0/5098bd73-d51c-4db4-bf06-fd4854089d37.jpg?1783907358",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/5/0/5098bd73-d51c-4db4-bf06-fd4854089d37.jpg?1783907358"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/114/narsets-rebuke?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Kheru Goldkeeper",
@@ -1030,7 +2636,45 @@
               "section": "Sultai Renew",
               "context": "Featured with the Sultai Renew archetype; no more specific role is stated."
             }
-          ]
+          ],
+          "scryfall_id": "8d11183a-57f5-4ddb-8a6e-15fff704b114",
+          "oracle_id": "aef4ab0e-c81f-428c-ab23-64504a9fb989",
+          "scryfall_name": "Kheru Goldkeeper",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "199",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{B}{G}{U}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Dragon",
+          "oracle_text": "Flying\nWhenever one or more cards leave your graveyard during your turn, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")\nRenew — {2}{B}{G}{U}, Exile this card from your graveyard: Put two +1/+1 counters and a flying counter on target creature. Activate only as a sorcery.",
+          "colors": [
+            "B",
+            "G",
+            "U"
+          ],
+          "color_identity": [
+            "B",
+            "G",
+            "U"
+          ],
+          "keywords": [
+            "Flying",
+            "Renew",
+            "Treasure"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/8/d/8d11183a-57f5-4ddb-8a6e-15fff704b114.jpg?1783907312",
+            "normal": "https://cards.scryfall.io/normal/front/8/d/8d11183a-57f5-4ddb-8a6e-15fff704b114.jpg?1783907312",
+            "large": "https://cards.scryfall.io/large/front/8/d/8d11183a-57f5-4ddb-8a6e-15fff704b114.jpg?1783907312",
+            "png": "https://cards.scryfall.io/png/front/8/d/8d11183a-57f5-4ddb-8a6e-15fff704b114.png?1783907312",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/d/8d11183a-57f5-4ddb-8a6e-15fff704b114.jpg?1783907312",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/d/8d11183a-57f5-4ddb-8a6e-15fff704b114.jpg?1783907312"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/199/kheru-goldkeeper?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Kishla Skimmer",
@@ -1050,7 +2694,41 @@
               "section": "Sultai Renew",
               "context": "Explicitly named as a source of repeated card draw as cards leave the graveyard."
             }
-          ]
+          ],
+          "scryfall_id": "b5f1acb0-d73e-4814-8158-3645daf5c4cc",
+          "oracle_id": "a3275d80-112b-4839-a014-e44ef48d2e6b",
+          "scryfall_name": "Kishla Skimmer",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "201",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{G}{U}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Bird Scout",
+          "oracle_text": "Flying\nWhenever a card leaves your graveyard during your turn, draw a card. This ability triggers only once each turn.",
+          "colors": [
+            "G",
+            "U"
+          ],
+          "color_identity": [
+            "G",
+            "U"
+          ],
+          "keywords": [
+            "Flying"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/b/5/b5f1acb0-d73e-4814-8158-3645daf5c4cc.jpg?1783907309",
+            "normal": "https://cards.scryfall.io/normal/front/b/5/b5f1acb0-d73e-4814-8158-3645daf5c4cc.jpg?1783907309",
+            "large": "https://cards.scryfall.io/large/front/b/5/b5f1acb0-d73e-4814-8158-3645daf5c4cc.jpg?1783907309",
+            "png": "https://cards.scryfall.io/png/front/b/5/b5f1acb0-d73e-4814-8158-3645daf5c4cc.png?1783907309",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/b/5/b5f1acb0-d73e-4814-8158-3645daf5c4cc.jpg?1783907309",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/b/5/b5f1acb0-d73e-4814-8158-3645daf5c4cc.jpg?1783907309"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/201/kishla-skimmer?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Agent of Kotis",
@@ -1070,7 +2748,39 @@
               "section": "Sultai Renew",
               "context": "Explicitly named with Kishla Skimmer as a source of repeated value."
             }
-          ]
+          ],
+          "scryfall_id": "812d0462-0158-467f-951d-a7a121188a10",
+          "oracle_id": "584fe1e4-029d-43fe-8c9e-6995dd392d65",
+          "scryfall_name": "Agent of Kotis",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "36",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{1}{U}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Human Rogue",
+          "oracle_text": "Renew — {3}{U}, Exile this card from your graveyard: Put two +1/+1 counters on target creature. Activate only as a sorcery.",
+          "colors": [
+            "U"
+          ],
+          "color_identity": [
+            "U"
+          ],
+          "keywords": [
+            "Renew"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/8/1/812d0462-0158-467f-951d-a7a121188a10.jpg?1783907402",
+            "normal": "https://cards.scryfall.io/normal/front/8/1/812d0462-0158-467f-951d-a7a121188a10.jpg?1783907402",
+            "large": "https://cards.scryfall.io/large/front/8/1/812d0462-0158-467f-951d-a7a121188a10.jpg?1783907402",
+            "png": "https://cards.scryfall.io/png/front/8/1/812d0462-0158-467f-951d-a7a121188a10.png?1783907402",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/1/812d0462-0158-467f-951d-a7a121188a10.jpg?1783907402",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/1/812d0462-0158-467f-951d-a7a121188a10.jpg?1783907402"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/36/agent-of-kotis?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Cruel Truths",
@@ -1090,7 +2800,39 @@
               "section": "Sultai Renew",
               "context": "Explicitly named as a way to fill the graveyard."
             }
-          ]
+          ],
+          "scryfall_id": "6852b4d5-74e0-44ba-ba44-20aa91e3c4c8",
+          "oracle_id": "2e68e3f7-b168-4541-b8a0-791a8a6ebde8",
+          "scryfall_name": "Cruel Truths",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "76",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{3}{B}",
+          "mana_value": 4.0,
+          "type_line": "Instant",
+          "oracle_text": "Surveil 2, then draw two cards. You lose 2 life. (To surveil 2, look at the top two cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Surveil"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/6/8/6852b4d5-74e0-44ba-ba44-20aa91e3c4c8.jpg?1783907380",
+            "normal": "https://cards.scryfall.io/normal/front/6/8/6852b4d5-74e0-44ba-ba44-20aa91e3c4c8.jpg?1783907380",
+            "large": "https://cards.scryfall.io/large/front/6/8/6852b4d5-74e0-44ba-ba44-20aa91e3c4c8.jpg?1783907380",
+            "png": "https://cards.scryfall.io/png/front/6/8/6852b4d5-74e0-44ba-ba44-20aa91e3c4c8.png?1783907380",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/6/8/6852b4d5-74e0-44ba-ba44-20aa91e3c4c8.jpg?1783907380",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/6/8/6852b4d5-74e0-44ba-ba44-20aa91e3c4c8.jpg?1783907380"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/76/cruel-truths?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Feral Deathgorger",
@@ -1110,7 +2852,40 @@
               "section": "Sultai Renew",
               "context": "Explicitly named as a finisher after generating value."
             }
-          ]
+          ],
+          "scryfall_id": "a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e",
+          "oracle_id": "1722f814-2d4e-4d59-9b74-10ef8e89def9",
+          "scryfall_name": "Feral Deathgorger // Dusk Sight",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "80",
+          "rarity": "common",
+          "layout": "adventure",
+          "mana_cost": "{5}{B} // {1}{B}",
+          "mana_value": 6.0,
+          "type_line": "Creature — Dragon // Sorcery — Omen",
+          "oracle_text": null,
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Deathtouch",
+            "Flying"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/1/a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e.jpg?1783907376",
+            "normal": "https://cards.scryfall.io/normal/front/a/1/a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e.jpg?1783907376",
+            "large": "https://cards.scryfall.io/large/front/a/1/a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e.jpg?1783907376",
+            "png": "https://cards.scryfall.io/png/front/a/1/a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e.png?1783907376",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/1/a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e.jpg?1783907376",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/1/a147b94f-dfcf-44ce-8a73-b2fe6c4efc0e.jpg?1783907376"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/80/feral-deathgorger-dusk-sight?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Bone-Cairn Butcher",
@@ -1130,7 +2905,43 @@
               "section": "Mardu Mobilize",
               "context": "Featured with the Mardu Mobilize archetype; no more specific role is stated."
             }
-          ]
+          ],
+          "scryfall_id": "78bf36bc-6702-4c5d-b52d-ab7217cc8787",
+          "oracle_id": "449db6bf-d766-4d09-a7bd-9c45b3d4c4c3",
+          "scryfall_name": "Bone-Cairn Butcher",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "173",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{R}{W}{B}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Demon",
+          "oracle_text": "Mobilize 2 (Whenever this creature attacks, create two tapped and attacking 1/1 red Warrior creature tokens. Sacrifice them at the beginning of the next end step.)\nAttacking tokens you control have deathtouch.",
+          "colors": [
+            "B",
+            "R",
+            "W"
+          ],
+          "color_identity": [
+            "B",
+            "R",
+            "W"
+          ],
+          "keywords": [
+            "Mobilize"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/7/8/78bf36bc-6702-4c5d-b52d-ab7217cc8787.jpg?1783907326",
+            "normal": "https://cards.scryfall.io/normal/front/7/8/78bf36bc-6702-4c5d-b52d-ab7217cc8787.jpg?1783907326",
+            "large": "https://cards.scryfall.io/large/front/7/8/78bf36bc-6702-4c5d-b52d-ab7217cc8787.jpg?1783907326",
+            "png": "https://cards.scryfall.io/png/front/7/8/78bf36bc-6702-4c5d-b52d-ab7217cc8787.png?1783907326",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/7/8/78bf36bc-6702-4c5d-b52d-ab7217cc8787.jpg?1783907326",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/7/8/78bf36bc-6702-4c5d-b52d-ab7217cc8787.jpg?1783907326"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/173/bone-cairn-butcher?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Hardened Tactician",
@@ -1150,7 +2961,39 @@
               "section": "Mardu Mobilize",
               "context": "Explicitly named as a card that gains additional value from mobilize tokens."
             }
-          ]
+          ],
+          "scryfall_id": "86b225cb-5c45-4da1-a64e-b04091e483e8",
+          "oracle_id": "ca1dc6f0-3ec2-4f62-a08a-1395201bd93f",
+          "scryfall_name": "Hardened Tactician",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "191",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{W}{B}",
+          "mana_value": 3.0,
+          "type_line": "Creature — Human Warrior",
+          "oracle_text": "{1}, Sacrifice a token: Draw a card.",
+          "colors": [
+            "B",
+            "W"
+          ],
+          "color_identity": [
+            "B",
+            "W"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/8/6/86b225cb-5c45-4da1-a64e-b04091e483e8.jpg?1783907316",
+            "normal": "https://cards.scryfall.io/normal/front/8/6/86b225cb-5c45-4da1-a64e-b04091e483e8.jpg?1783907316",
+            "large": "https://cards.scryfall.io/large/front/8/6/86b225cb-5c45-4da1-a64e-b04091e483e8.jpg?1783907316",
+            "png": "https://cards.scryfall.io/png/front/8/6/86b225cb-5c45-4da1-a64e-b04091e483e8.png?1783907316",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/8/6/86b225cb-5c45-4da1-a64e-b04091e483e8.jpg?1783907316",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/8/6/86b225cb-5c45-4da1-a64e-b04091e483e8.jpg?1783907316"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/191/hardened-tactician?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Worthy Cost",
@@ -1170,7 +3013,37 @@
               "section": "Mardu Mobilize",
               "context": "Explicitly named as a sacrifice outlet for mobilize tokens."
             }
-          ]
+          ],
+          "scryfall_id": "adc18edc-01d8-4a7e-a87b-a854e50aa75e",
+          "oracle_id": "0f8ebf11-b5ec-4f21-8c49-90d569b5a4c5",
+          "scryfall_name": "Worthy Cost",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "99",
+          "rarity": "common",
+          "layout": "normal",
+          "mana_cost": "{B}",
+          "mana_value": 1.0,
+          "type_line": "Sorcery",
+          "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nExile target creature or planeswalker.",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.jpg?1783907367",
+            "normal": "https://cards.scryfall.io/normal/front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.jpg?1783907367",
+            "large": "https://cards.scryfall.io/large/front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.jpg?1783907367",
+            "png": "https://cards.scryfall.io/png/front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.png?1783907367",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.jpg?1783907367",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/d/adc18edc-01d8-4a7e-a87b-a854e50aa75e.jpg?1783907367"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/99/worthy-cost?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Venerated Stormsinger",
@@ -1190,7 +3063,39 @@
               "section": "Mardu Mobilize",
               "context": "Explicitly named as a way to drain opponents while sacrificing tokens."
             }
-          ]
+          ],
+          "scryfall_id": "a4a4e985-facd-47e6-b680-3023c82c2957",
+          "oracle_id": "4aff2f31-619f-406e-b2c9-a2c733c04bc4",
+          "scryfall_name": "Venerated Stormsinger",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "97",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{3}{B}",
+          "mana_value": 4.0,
+          "type_line": "Creature — Orc Cleric",
+          "oracle_text": "Mobilize 1 (Whenever this creature attacks, create a tapped and attacking 1/1 red Warrior creature token. Sacrifice it at the beginning of the next end step.)\nWhenever this creature or another creature you control dies, each opponent loses 1 life and you gain 1 life.",
+          "colors": [
+            "B"
+          ],
+          "color_identity": [
+            "B"
+          ],
+          "keywords": [
+            "Mobilize"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/a/4/a4a4e985-facd-47e6-b680-3023c82c2957.jpg?1783907367",
+            "normal": "https://cards.scryfall.io/normal/front/a/4/a4a4e985-facd-47e6-b680-3023c82c2957.jpg?1783907367",
+            "large": "https://cards.scryfall.io/large/front/a/4/a4a4e985-facd-47e6-b680-3023c82c2957.jpg?1783907367",
+            "png": "https://cards.scryfall.io/png/front/a/4/a4a4e985-facd-47e6-b680-3023c82c2957.png?1783907367",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/a/4/a4a4e985-facd-47e6-b680-3023c82c2957.jpg?1783907367",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/a/4/a4a4e985-facd-47e6-b680-3023c82c2957.jpg?1783907367"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/97/venerated-stormsinger?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Mammoth Bellow",
@@ -1210,7 +3115,43 @@
               "section": "Temur Harmonize",
               "context": "Explicitly named as a powerful spell fueled by cheap, high-power creatures."
             }
-          ]
+          ],
+          "scryfall_id": "468b17b4-79ce-4dfa-8873-a9cfc347e38f",
+          "oracle_id": "6f2e4607-bece-42ba-a2a3-5dc50f246793",
+          "scryfall_name": "Mammoth Bellow",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "205",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{2}{G}{U}{R}",
+          "mana_value": 5.0,
+          "type_line": "Sorcery",
+          "oracle_text": "Create a 5/5 green Elephant creature token.\nHarmonize {5}{G}{U}{R} (You may cast this card from your graveyard for its harmonize cost. You may tap a creature you control to reduce that cost by {X}, where X is its power. Then exile this spell.)",
+          "colors": [
+            "G",
+            "R",
+            "U"
+          ],
+          "color_identity": [
+            "G",
+            "R",
+            "U"
+          ],
+          "keywords": [
+            "Harmonize"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/4/6/468b17b4-79ce-4dfa-8873-a9cfc347e38f.jpg?1783907308",
+            "normal": "https://cards.scryfall.io/normal/front/4/6/468b17b4-79ce-4dfa-8873-a9cfc347e38f.jpg?1783907308",
+            "large": "https://cards.scryfall.io/large/front/4/6/468b17b4-79ce-4dfa-8873-a9cfc347e38f.jpg?1783907308",
+            "png": "https://cards.scryfall.io/png/front/4/6/468b17b4-79ce-4dfa-8873-a9cfc347e38f.png?1783907308",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/4/6/468b17b4-79ce-4dfa-8873-a9cfc347e38f.jpg?1783907308",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/4/6/468b17b4-79ce-4dfa-8873-a9cfc347e38f.jpg?1783907308"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/205/mammoth-bellow?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Glacial Dragonhunt",
@@ -1230,7 +3171,41 @@
               "section": "Temur Harmonize",
               "context": "Featured with the Temur Harmonize archetype; no more specific role is stated."
             }
-          ]
+          ],
+          "scryfall_id": "95994c88-e404-4a4f-8be6-b99d703d4609",
+          "oracle_id": "8f976399-29a9-4eb7-844d-3d3f2fdf6ea7",
+          "scryfall_name": "Glacial Dragonhunt",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "188",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{U}{R}",
+          "mana_value": 2.0,
+          "type_line": "Sorcery",
+          "oracle_text": "Draw a card, then you may discard a card. When you discard a nonland card this way, Glacial Dragonhunt deals 3 damage to target creature.\nHarmonize {4}{U}{R} (You may cast this card from your graveyard for its harmonize cost. You may tap a creature you control to reduce that cost by {X}, where X is its power. Then exile this spell.)",
+          "colors": [
+            "R",
+            "U"
+          ],
+          "color_identity": [
+            "R",
+            "U"
+          ],
+          "keywords": [
+            "Harmonize"
+          ],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/9/5/95994c88-e404-4a4f-8be6-b99d703d4609.jpg?1783907317",
+            "normal": "https://cards.scryfall.io/normal/front/9/5/95994c88-e404-4a4f-8be6-b99d703d4609.jpg?1783907317",
+            "large": "https://cards.scryfall.io/large/front/9/5/95994c88-e404-4a4f-8be6-b99d703d4609.jpg?1783907317",
+            "png": "https://cards.scryfall.io/png/front/9/5/95994c88-e404-4a4f-8be6-b99d703d4609.png?1783907317",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/9/5/95994c88-e404-4a4f-8be6-b99d703d4609.jpg?1783907317",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/9/5/95994c88-e404-4a4f-8be6-b99d703d4609.jpg?1783907317"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/188/glacial-dragonhunt?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         },
         {
           "name": "Sunset Strikemaster",
@@ -1250,7 +3225,37 @@
               "section": "Temur Harmonize",
               "context": "Explicitly named as a cheap, high-power creature that fuels powerful spells."
             }
-          ]
+          ],
+          "scryfall_id": "f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee",
+          "oracle_id": "d81ade13-e7c7-4fe3-bb0c-5007ed9f1198",
+          "scryfall_name": "Sunset Strikemaster",
+          "set_code": "TDM",
+          "set_name": "Tarkir: Dragonstorm",
+          "collector_number": "126",
+          "rarity": "uncommon",
+          "layout": "normal",
+          "mana_cost": "{1}{R}",
+          "mana_value": 2.0,
+          "type_line": "Creature — Human Monk",
+          "oracle_text": "{T}: Add {R}.\n{2}{R}, {T}, Sacrifice this creature: It deals 6 damage to target creature with flying.",
+          "colors": [
+            "R"
+          ],
+          "color_identity": [
+            "R"
+          ],
+          "keywords": [],
+          "image_uris": {
+            "small": "https://cards.scryfall.io/small/front/f/8/f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee.jpg?1783907352",
+            "normal": "https://cards.scryfall.io/normal/front/f/8/f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee.jpg?1783907352",
+            "large": "https://cards.scryfall.io/large/front/f/8/f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee.jpg?1783907352",
+            "png": "https://cards.scryfall.io/png/front/f/8/f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee.png?1783907352",
+            "art_crop": "https://cards.scryfall.io/art_crop/front/f/8/f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee.jpg?1783907352",
+            "border_crop": "https://cards.scryfall.io/border_crop/front/f/8/f8f1a2f2-526d-4b2c-985b-0acfdc21a2ee.jpg?1783907352"
+          },
+          "scryfall_uri": "https://scryfall.com/card/tdm/126/sunset-strikemaster?utm_source=api",
+          "resolved_at_source": "Scryfall API",
+          "identity_review_status": "resolved_from_scryfall"
         }
       ]
     }
