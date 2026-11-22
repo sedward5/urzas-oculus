@@ -99,7 +99,65 @@ Cockpit use:
 - During draft: current colors/likely archetype compared with the set baseline.
 - Post-draft: deck context, not a guarantee of expected win rate.
 
-Wizards-published archetype guidance is a separate future enrichment task. Revisit acquisition, licensing/availability, provenance, and update cadence after the data-to-repo artifact pipeline is established. Do not block the initial meta report on it.
+Wizards-published archetype guidance is a separate enrichment layer. The acquisition investigation below defines the bounded next steps for building it, including provenance and manual review. Do not block the initial meta report on catalog acquisition.
+
+#### Recorded baseline: HOB PremierDraft
+
+Workflow run [44949303784](https://github.com/sedward5/urzas-oculus/actions/runs/44949303784), artifact `14724829292`:
+
+- 323,114 source game rows; 70,362 valid deck identities; 323,111 valid games.
+- One conflicting deck identity excluded (3 otherwise-valid game rows); no incomplete deck identities.
+- 4,790 valid non-two-color decks remain in the overall baseline but are not in the exact two-color comparison table.
+- Overall pooled game win rate: 56.2% (95% deck-cluster bootstrap interval 56.0–56.3%).
+- BR: 17,476 decks / 85,459 games; 57.6%, +1.9 percentage points versus the rest of the field (95% delta interval +1.5 to +2.3).
+- BG: 12,225 decks / 57,277 games; 56.9%, +0.9 pp (+0.4 to +1.3).
+- UB: 2,959 decks / 12,745 games; 53.2%, -3.1 pp (-4.0 to -2.2).
+- UG: 5,404 decks / 22,250 games; 52.5%, -3.9 pp (-4.6 to -3.3).
+- The other pair comparisons' intervals include zero. WG had the lowest observed win rate (49.7%) but only 326 decks, so its exact rank is uncertain.
+
+Interpretation: BR and BG were above the field in this sample; UB and UG were below it. These are descriptive color-pair proxy results, not official archetype evaluations. The intervals are nominal across ten comparisons and are not multiple-comparison adjusted. Results are not adjusted for player skill, rank, date, or event subgroup. The public archive has no stable player ID for clustering multiple decks from the same drafter.
+
+**Taxonomy caveat:** Do not assume every set has ten two-color archetypes. Sets may feature five two-color archetypes, a subset of pairs, five three-color factions with overlapping two-color strategies, or other structures. A missing color pair is not a missing-data defect. Keep the full color-pair performance audit separate from the set's published archetype catalog. Never synthesize absent archetypes from the ten possible pairs.
+ 
+### 3a. Published archetype catalog — acquisition investigation
+
+Published archetype definitions are a separate, set-specific source layer that should contextualize (not replace) empirical color-pair performance.
+
+Initial source investigation found that Wizards' Prerelease Guide pages expose an archetype section in HTML, with a labeled overview image and, in many cases, individual archetype headings, mana-symbol image alt text, descriptive prose, and card references. This is promising for repeatable acquisition, but not all information is duplicated in the HTML. For example, the Tarkir: Dragonstorm guide describes five three-color clans in prose while its labeled overview image also presents five overlapping two-color strategies. A heading-only scraper would miss those additional strategies.
+
+#### Proposed acquisition pipeline
+
+1. Discover the official Wizards Prerelease Guide URL for a set. Keep discovery separate from extraction so source changes are observable.
+2. Fetch the article HTML and extract the archetype-section boundary, article title/date, section headings, text, mana-symbol image alt text, card references, and the image explicitly labeled as the archetype overview.
+3. Download and preserve the overview image as source evidence. Run OCR on it for names and strategy descriptions that do not appear in article text. Treat mana-symbol recognition as a separate extraction problem; OCR text alone does not reliably identify the colors represented by symbol artwork.
+4. Reconcile HTML and image candidates. Match by normalized name and colors only when evidence supports the match. Record extraction method and confidence per field.
+5. Emit unresolved candidates for manual review. Never infer missing colors, invent archetypes from the ten possible pairs, or mark a set complete solely because extraction returned some rows.
+6. Persist a normalized, versioned set catalog with source URL, article publication date, retrieval time, overview-image URL and checksum, extraction version, evidence references, and review status.
+
+The catalog must support two-, three-, and potentially other-color identities. It must also support overlapping archetypes (for example, clan archetypes and two-color themes), distinguish an archetype's published name from its color identity, and allow the source to describe only a subset of the full Limited environment.
+
+#### Signpost metadata and interpretation
+
+Where the published guide identifies signpost cards, preserve those associations as catalog metadata rather than treating the cards as authoritative evidence that an archetype is strong or open.
+
+For each signpost association, retain the evidence and, when available, join these independent attributes:
+- Published archetype association and source evidence.
+- Rarity and card identity.
+- Historical ATA and ALSA for the same set/event scope.
+- Game win rate when drawn, deck win rate when included, and inclusion rate in successful decks, with sample counts and scope.
+- Explicit supporting-card or mechanical relationships when the source documents them; do not invent a support graph from color identity alone.
+
+Keep four evidence layers distinct: published association describes intended strategy identity; historical pick behavior describes how players value the card; performance data describes observed outcomes; live pack observations describe what is arriving unusually late in this draft. A published signpost can be weak, unpopular, or simply passed by a drafter committed elsewhere. Its performance may also depend on being played in the intended shell.
+
+Do not let a signpost alone establish that a lane is open or move lane confidence from insufficient evidence to supported. It can contribute an early signal. Stronger interpretation requires corroboration from other cards supporting the same strategy, repeated depth across independent packs, or meaningful wheel evidence. A weak signpost must not invalidate otherwise strong supporting-card evidence. Treat disagreement between design intent, pick behavior, and performance as a useful finding to investigate, not as a reason to discard the archetype.
+
+#### Initial validation fixtures
+
+- HOB: five published two-color archetypes, useful for validating the common case.
+- Lorwyn Eclipsed: five featured two-color typal archetypes plus five other color-pair mechanical themes; useful for checking that a guide can explicitly distinguish featured and non-featured themes.
+- Tarkir: Dragonstorm: five three-color clan archetypes plus five overlapping two-color strategies; useful for validating image-only or image-primary definitions.
+
+Do not feed published definitions into scoring yet. First establish extraction coverage and manual-review accuracy across these contrasting layouts. The published catalog should later join to performance results by set and color identity, while preserving the distinction between a broad color-pair proxy and a named archetype.
 
 ### 4. Within-draft lane reading (priority cockpit analysis)
 
@@ -118,6 +176,8 @@ This is not the same as set-level archetype performance. Historical pick data su
 #### Signals available before the wheel
 
 Use the current pick and pack contents to compare what arrived with what would ordinarily be expected at that pick:
+- Signpost arrivals: when a published signpost is present later than its historical pick/ALSA expectations, record that as one archetype-specific observation. Compare actual arrival with the card's historical behavior and performance; do not use a fixed pick cutoff or treat gold rarity as proof of openness.
+- Signpost corroboration: look for supporting cards from the same published strategy arriving later than expected, and for repeated evidence across independent packs. A signpost by itself is only an early clue; it is not sufficient to label a lane supported.
 - Premium-card arrivals: a high-impact rare or mythic still present later than expected is a meaningful *observation*, but one card alone is not proof of an open color.
 - Quality-weighted color supply: count and weight the cards in the pack by color using set-specific card strength and pick-position/ALSA expectations. The question is not merely “are there good blue cards?” but “is the quality and depth of a color unusually high for this pick?”
 - Unexpected depth: multiple playable cards in the same color, or multiple strong cards across a coherent strategy, can be more informative than a single standout.
