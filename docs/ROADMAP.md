@@ -39,7 +39,7 @@ This page distinguishes implemented foundations from an integrated, user-ready f
 - [x] Manual review of physical pack return, last-seen behavior, ALSA averaging, secondary picks, duplicate copies, and incomplete pack handling.
 - [x] Replay schema audit script and manually triggerable workflow.
 - [x] Reviewed HOB replay audit: all 323,114 game keys matched replay keys one-to-one.
-- [ ] Run replay-backed deck/sideboard/opening-hand consistency audit.
+- [x] Run replay-backed deck/sideboard/opening-hand consistency audit.
 - [ ] Establish a defensible whole-game eligibility rule consistent with 17Lands definitions.
 
 **Important limitation:** the game importer currently aggregates rows with valid win outcomes; it does not exclude inconsistent games as a whole. The public wide CSV has no documented game-valid/deck-linked flag. Do not claim exact 17Lands parity. Replay key matching does not itself establish upstream eligibility. See [metric semantics](17lands-metric-semantics.md).
@@ -81,7 +81,7 @@ The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_C
 
 The bounded data-analysis sequence and production checkpoint are documented in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md).
 
-The HOB PremierDraft set-speed baseline is recorded in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md) from successful workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947). The historical user win-rate bucket terminology and missing-value count are corrected. A first reproducible two-color archetype-proxy audit is implemented in `scripts/analyze_17lands_archetypes.py`, with manual workflow `17lands-archetype-audit.yml`. Run it for HOB PremierDraft and review its artifact before drawing conclusions. Lane inference remains a separate follow-on analysis. These are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
+The reviewed published archetype catalog now records HOB, ECL, and TDM taxonomies from official Wizards overview images. HOB/ECL each contain five two-color archetypes; TDM contains five three-color clans and five overlapping two-color themes. Card associations remain unassigned, and this metadata does not affect recommendations. The HOB PremierDraft set-speed baseline is recorded in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md) from successful workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947). The historical user win-rate bucket terminology and missing-value count are corrected. A first reproducible two-color archetype-proxy audit is implemented in `scripts/analyze_17lands_archetypes.py`, with manual workflow `17lands-archetype-audit.yml`. Run it for HOB PremierDraft and review its artifact before drawing conclusions. Lane inference remains a separate follow-on analysis. These are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
 
 ## Next phases
 
