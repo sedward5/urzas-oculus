@@ -17,6 +17,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 DEFAULT_CATALOG = Path(__file__).parent / "data" / "reviewed_cards.json"
+ARCHETYPE_CATALOG = Path(__file__).parent / "data" / "reviewed_archetypes.json"
 USER_AGENT = "UrzasOculusCardCatalog/0.1 (+https://github.com/sedward5/urzas-oculus)"
 ALLOWED_ROLES = {"signpost", "enabler", "payoff", "supporting"}
 
@@ -34,6 +35,7 @@ def fetch_json(url: str, timeout: int = 30) -> dict:
         return json.loads(response.read().decode("utf-8"))
 
 def validate_catalog(catalog: dict) -> None:
+    archetypes = json.loads(ARCHETYPE_CATALOG.read_text(encoding="utf-8"))["sets"]
     if catalog.get("schema_version") != 1 or not isinstance(catalog.get("sets"), dict):
         raise CatalogError("Expected reviewed card catalog schema_version 1 with a sets object.")
     for set_code, set_record in catalog["sets"].items():
@@ -54,8 +56,12 @@ def validate_catalog(catalog: dict) -> None:
             for relationship in card.get("relationships", []):
                 if relationship.get("role") not in ALLOWED_ROLES:
                     raise CatalogError(f"Unsupported card role for {name}: {relationship.get('role')}")
-                if not relationship.get("archetype_id"):
+                archetype_id = relationship.get("archetype_id")
+                if not archetype_id:
                     raise CatalogError(f"Relationship for {name} needs an archetype_id.")
+                valid_ids = {item["id"] for item in archetypes.get(set_code, {}).get("archetypes", [])}
+                if archetype_id not in valid_ids:
+                    raise CatalogError(f"Unknown {set_code} archetype ID for {name}: {archetype_id}")
                 if relationship.get("review_status") not in {"needs_review", "reviewed", "rejected"}:
                     raise CatalogError(f"Relationship for {name} needs an explicit review_status.")
                 if relationship.get("review_status") == "reviewed" and not relationship.get("evidence"):
