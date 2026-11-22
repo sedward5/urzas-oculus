@@ -2,8 +2,1257 @@
   "schema_version": 1,
   "description": "Human-maintained card identities; Scryfall metadata is enriched separately and archetype relationships are never inferred.",
   "sets": {
-    "HOB": {"cards": []},
-    "ECL": {"cards": []},
-    "TDM": {"cards": []}
+    "HOB": {
+      "cards": [
+        {
+          "name": "Bard the Bowman",
+          "relationships": [
+            {
+              "archetype_id": "humans",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Wizards explicitly calls Bard a payoff for the draw-two deck and says it rewards drawing and buffs recruit tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "White-Blue Humans",
+              "context": "Wizards explicitly calls Bard a payoff for the draw-two deck and says it rewards drawing and buffs recruit tokens."
+            }
+          ]
+        },
+        {
+          "name": "Long Lake Nuisance",
+          "relationships": [
+            {
+              "archetype_id": "humans",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a recruit card that draws cards while building creature tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "White-Blue Humans",
+              "context": "Named as a recruit card that draws cards while building creature tokens."
+            }
+          ]
+        },
+        {
+          "name": "Esgaroth Garrison",
+          "relationships": [
+            {
+              "archetype_id": "humans",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a recruit card that draws cards while building creature tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "White-Blue Humans",
+              "context": "Named as a recruit card that draws cards while building creature tokens."
+            }
+          ]
+        },
+        {
+          "name": "Celebrate the Mountain-king",
+          "relationships": [
+            {
+              "archetype_id": "humans",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a recruit card that draws cards while building creature tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "White-Blue Humans",
+              "context": "Named as a recruit card that draws cards while building creature tokens."
+            }
+          ]
+        },
+        {
+          "name": "Thorin's Last Stand",
+          "relationships": [
+            {
+              "archetype_id": "humans",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a card that buffs the recruited creature-token board."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "White-Blue Humans",
+              "context": "Explicitly named as a card that buffs the recruited creature-token board."
+            }
+          ]
+        },
+        {
+          "name": "Bolg of the North",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Black-Red Goblins archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Featured under the Black-Red Goblins archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Misty Mountains Raider",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the archetype; guide provides no more specific role description."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Featured with the archetype; guide provides no more specific role description."
+            }
+          ]
+        },
+        {
+          "name": "Stir Up Trouble",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Named as a spell that can sacrifice the Army token for value."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Named as a spell that can sacrifice the Army token for value."
+            }
+          ]
+        },
+        {
+          "name": "Snowslope Hunter",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Named as a card that can sacrifice the Army token for value."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Named as a card that can sacrifice the Army token for value."
+            }
+          ]
+        },
+        {
+          "name": "Front Porch Sentries",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Named as a dies-trigger creature that provides sacrifice fodder."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Named as a dies-trigger creature that provides sacrifice fodder."
+            }
+          ]
+        },
+        {
+          "name": "The Chief Warg",
+          "relationships": [
+            {
+              "archetype_id": "wolves",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Black-Green Wolves archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Green Wolves",
+              "context": "Featured under the Black-Green Wolves archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Nighthowl Pursuer",
+          "relationships": [
+            {
+              "archetype_id": "wolves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the archetype; guide's strategy centers on ferocious and large Wolves."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Green Wolves",
+              "context": "Featured with the archetype; guide's strategy centers on ferocious and large Wolves."
+            }
+          ]
+        },
+        {
+          "name": "Ordinary Bear",
+          "relationships": [
+            {
+              "archetype_id": "wolves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Explicitly described as an on-curve option for a massive creature."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Green Wolves",
+              "context": "Explicitly described as an on-curve option for a massive creature."
+            }
+          ]
+        },
+        {
+          "name": "Gollum, Silent Slinker",
+          "relationships": [
+            {
+              "archetype_id": "wolves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Explicitly described as an on-curve option for a massive creature."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Green Wolves",
+              "context": "Explicitly described as an on-curve option for a massive creature."
+            }
+          ]
+        },
+        {
+          "name": "Beorn, Reluctant Host",
+          "relationships": [
+            {
+              "archetype_id": "wolves",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a card to ramp into the deck's large creatures."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Green Wolves",
+              "context": "Explicitly named as a card to ramp into the deck's large creatures."
+            }
+          ]
+        },
+        {
+          "name": "Long-Bodied Grey Dog",
+          "relationships": [
+            {
+              "archetype_id": "wolves",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a card to ramp into the deck's large creatures."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Black-Green Wolves",
+              "context": "Explicitly named as a card to ramp into the deck's large creatures."
+            }
+          ]
+        },
+        {
+          "name": "Thorin Oakenshield",
+          "relationships": [
+            {
+              "archetype_id": "dwarves",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a payoff after establishing the Storied board."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Red-White Dwarves",
+              "context": "Explicitly named as a payoff after establishing the Storied board."
+            }
+          ]
+        },
+        {
+          "name": "Iron Hills Blacksmith",
+          "relationships": [
+            {
+              "archetype_id": "dwarves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the Red-White Dwarves archetype; no more specific role is stated."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Red-White Dwarves",
+              "context": "Featured with the Red-White Dwarves archetype; no more specific role is stated."
+            }
+          ]
+        },
+        {
+          "name": "Dori, Bearer of Friends",
+          "relationships": [
+            {
+              "archetype_id": "dwarves",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Guide explains Dori counts as legendary and makes you an artifact for Storied."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Red-White Dwarves",
+              "context": "Guide explains Dori counts as legendary and makes you an artifact for Storied."
+            }
+          ]
+        },
+        {
+          "name": "Bombur, Gentle Dreamer",
+          "relationships": [
+            {
+              "archetype_id": "dwarves",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a payoff for establishing the Storied board."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Red-White Dwarves",
+              "context": "Explicitly named as a payoff for establishing the Storied board."
+            }
+          ]
+        },
+        {
+          "name": "Silvan Reveler",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Green-Blue Elves archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Green-Blue Elves",
+              "context": "Featured under the Green-Blue Elves archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Mirkwood Pathmaker",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Named as a large creature the deck can build toward."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Green-Blue Elves",
+              "context": "Named as a large creature the deck can build toward."
+            }
+          ]
+        },
+        {
+          "name": "Elven Raft-Steerer",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a way to shut down opposing creatures."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Green-Blue Elves",
+              "context": "Explicitly named as a way to shut down opposing creatures."
+            }
+          ]
+        },
+        {
+          "name": "Thranduil, Sindarin Liege",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly described as enabling an Elf-centric version with extra value from Elf cards."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Green-Blue Elves",
+              "context": "Explicitly described as enabling an Elf-centric version with extra value from Elf cards."
+            }
+          ]
+        },
+        {
+          "name": "Wood Elves",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Named as an Elf card receiving extra value from Thranduil."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Green-Blue Elves",
+              "context": "Named as an Elf card receiving extra value from Thranduil."
+            }
+          ]
+        },
+        {
+          "name": "Woodland Weavemaster",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Named as an Elf card receiving extra value from Thranduil."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Magic: The Gathering | The Hobbit Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+              "section": "Green-Blue Elves",
+              "context": "Named as an Elf card receiving extra value from Thranduil."
+            }
+          ]
+        }
+      ]
+    },
+    "ECL": {
+      "cards": [
+        {
+          "name": "Deepchannel Duelist",
+          "relationships": [
+            {
+              "archetype_id": "merfolk",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the White-Blue Merfolk archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "White-Blue Merfolk",
+              "context": "Featured under the White-Blue Merfolk archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Wanderwine Distracter",
+          "relationships": [
+            {
+              "archetype_id": "merfolk",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a Merfolk with an ability that triggers when it becomes tapped."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "White-Blue Merfolk",
+              "context": "Named as a Merfolk with an ability that triggers when it becomes tapped."
+            }
+          ]
+        },
+        {
+          "name": "Silvergill Peddler",
+          "relationships": [
+            {
+              "archetype_id": "merfolk",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a Merfolk with an ability that triggers when it becomes tapped."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "White-Blue Merfolk",
+              "context": "Named as a Merfolk with an ability that triggers when it becomes tapped."
+            }
+          ]
+        },
+        {
+          "name": "Wanderwine Farewell",
+          "relationships": [
+            {
+              "archetype_id": "merfolk",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Its convoke spell can tap Merfolk to trigger their abilities without attacking."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "White-Blue Merfolk",
+              "context": "Its convoke spell can tap Merfolk to trigger their abilities without attacking."
+            }
+          ]
+        },
+        {
+          "name": "Boggart Cursecrafter",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Black-Red Goblins archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Featured under the Black-Red Goblins archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Mudbutton Cursetosser",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Named as a Goblin whose death trigger makes putting -1/-1 counters on your own creatures beneficial."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Named as a Goblin whose death trigger makes putting -1/-1 counters on your own creatures beneficial."
+            }
+          ]
+        },
+        {
+          "name": "Stoic Grove-Guide",
+          "relationships": [
+            {
+              "archetype_id": "goblins",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Named as a non-Goblin token creator that supports the sacrifice/death-trigger plan."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Red Goblins",
+              "context": "Named as a non-Goblin token creator that supports the sacrifice/death-trigger plan."
+            }
+          ]
+        },
+        {
+          "name": "Thoughtweft Lieutenant",
+          "relationships": [
+            {
+              "archetype_id": "kithkin",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Green-White Kithkin archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Green-White Kithkin",
+              "context": "Featured under the Green-White Kithkin archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Clachan Festival",
+          "relationships": [
+            {
+              "archetype_id": "kithkin",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a card to establish the board before spreading abilities."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Green-White Kithkin",
+              "context": "Named as a card to establish the board before spreading abilities."
+            }
+          ]
+        },
+        {
+          "name": "Mistmeadow Council",
+          "relationships": [
+            {
+              "archetype_id": "kithkin",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a card to establish the board before spreading abilities."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Green-White Kithkin",
+              "context": "Named as a card to establish the board before spreading abilities."
+            }
+          ]
+        },
+        {
+          "name": "Timid Shieldbearer",
+          "relationships": [
+            {
+              "archetype_id": "kithkin",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Its activated ability is explicitly named as the way to buff the Kithkin board."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Green-White Kithkin",
+              "context": "Its activated ability is explicitly named as the way to buff the Kithkin board."
+            }
+          ]
+        },
+        {
+          "name": "Dundoolin Weaver",
+          "relationships": [
+            {
+              "archetype_id": "kithkin",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Named as a way for the go-wide deck to recover after a board wipe."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Green-White Kithkin",
+              "context": "Named as a way for the go-wide deck to recover after a board wipe."
+            }
+          ]
+        },
+        {
+          "name": "Twinflame Travelers",
+          "relationships": [
+            {
+              "archetype_id": "elementals",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Blue-Red Elementals archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Blue-Red Elementals",
+              "context": "Featured under the Blue-Red Elementals archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Flamebraider",
+          "relationships": [
+            {
+              "archetype_id": "elementals",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly recommended to accelerate mana for spells with mana value four or greater."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Blue-Red Elementals",
+              "context": "Explicitly recommended to accelerate mana for spells with mana value four or greater."
+            }
+          ]
+        },
+        {
+          "name": "Morcant's Loyalist",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "signpost",
+              "review_status": "reviewed",
+              "evidence": "Featured under the Black-Green Elves archetype heading."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Green Elves",
+              "context": "Featured under the Black-Green Elves archetype heading."
+            }
+          ]
+        },
+        {
+          "name": "Scarblade Scout",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a two-mana Elf that develops the board while setting up the graveyard."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Green Elves",
+              "context": "Named as a two-mana Elf that develops the board while setting up the graveyard."
+            }
+          ]
+        },
+        {
+          "name": "Lys Alana Informant",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Named as a two-mana Elf that develops the board while setting up the graveyard."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Green Elves",
+              "context": "Named as a two-mana Elf that develops the board while setting up the graveyard."
+            }
+          ]
+        },
+        {
+          "name": "Moon-Vigil Adherents",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Named as a powerful graveyard-enabled finisher."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Green Elves",
+              "context": "Named as a powerful graveyard-enabled finisher."
+            }
+          ]
+        },
+        {
+          "name": "Morcant's Eyes",
+          "relationships": [
+            {
+              "archetype_id": "elves",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Named as a powerful graveyard-enabled finisher."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Lorwyn Eclipsed Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+              "section": "Black-Green Elves",
+              "context": "Named as a powerful graveyard-enabled finisher."
+            }
+          ]
+        }
+      ]
+    },
+    "TDM": {
+      "cards": [
+        {
+          "name": "Armament Dragon",
+          "relationships": [
+            {
+              "archetype_id": "abzan-endure",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a card that strengthens the team with +1/+1 counters."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Abzan Endure",
+              "context": "Explicitly named as a card that strengthens the team with +1/+1 counters."
+            }
+          ]
+        },
+        {
+          "name": "Stalwart Successor",
+          "relationships": [
+            {
+              "archetype_id": "abzan-endure",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a way to supercharge the battlefield with +1/+1 counters."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Abzan Endure",
+              "context": "Explicitly named as a way to supercharge the battlefield with +1/+1 counters."
+            }
+          ]
+        },
+        {
+          "name": "Jeskai Brushmaster",
+          "relationships": [
+            {
+              "archetype_id": "jeskai-flurry",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a card to buff after Narset's Rebuke helps cast a second spell."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Jeskai Flurry",
+              "context": "Explicitly named as a card to buff after Narset's Rebuke helps cast a second spell."
+            }
+          ]
+        },
+        {
+          "name": "Cori Mountain Stalwart",
+          "relationships": [
+            {
+              "archetype_id": "jeskai-flurry",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the Jeskai Flurry archetype; no more specific role is stated."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Jeskai Flurry",
+              "context": "Featured with the Jeskai Flurry archetype; no more specific role is stated."
+            }
+          ]
+        },
+        {
+          "name": "Narset's Rebuke",
+          "relationships": [
+            {
+              "archetype_id": "jeskai-flurry",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly clears the way and provides mana for a second spell."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Jeskai Flurry",
+              "context": "Explicitly clears the way and provides mana for a second spell."
+            }
+          ]
+        },
+        {
+          "name": "Kheru Goldkeeper",
+          "relationships": [
+            {
+              "archetype_id": "sultai-renew",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the Sultai Renew archetype; no more specific role is stated."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Sultai Renew",
+              "context": "Featured with the Sultai Renew archetype; no more specific role is stated."
+            }
+          ]
+        },
+        {
+          "name": "Kishla Skimmer",
+          "relationships": [
+            {
+              "archetype_id": "sultai-renew",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a source of repeated card draw as cards leave the graveyard."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Sultai Renew",
+              "context": "Explicitly named as a source of repeated card draw as cards leave the graveyard."
+            }
+          ]
+        },
+        {
+          "name": "Agent of Kotis",
+          "relationships": [
+            {
+              "archetype_id": "sultai-renew",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named with Kishla Skimmer as a source of repeated value."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Sultai Renew",
+              "context": "Explicitly named with Kishla Skimmer as a source of repeated value."
+            }
+          ]
+        },
+        {
+          "name": "Cruel Truths",
+          "relationships": [
+            {
+              "archetype_id": "sultai-renew",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a way to fill the graveyard."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Sultai Renew",
+              "context": "Explicitly named as a way to fill the graveyard."
+            }
+          ]
+        },
+        {
+          "name": "Feral Deathgorger",
+          "relationships": [
+            {
+              "archetype_id": "sultai-renew",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a finisher after generating value."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Sultai Renew",
+              "context": "Explicitly named as a finisher after generating value."
+            }
+          ]
+        },
+        {
+          "name": "Bone-Cairn Butcher",
+          "relationships": [
+            {
+              "archetype_id": "mardu-mobilize",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the Mardu Mobilize archetype; no more specific role is stated."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Mardu Mobilize",
+              "context": "Featured with the Mardu Mobilize archetype; no more specific role is stated."
+            }
+          ]
+        },
+        {
+          "name": "Hardened Tactician",
+          "relationships": [
+            {
+              "archetype_id": "mardu-mobilize",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a card that gains additional value from mobilize tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Mardu Mobilize",
+              "context": "Explicitly named as a card that gains additional value from mobilize tokens."
+            }
+          ]
+        },
+        {
+          "name": "Worthy Cost",
+          "relationships": [
+            {
+              "archetype_id": "mardu-mobilize",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a sacrifice outlet for mobilize tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Mardu Mobilize",
+              "context": "Explicitly named as a sacrifice outlet for mobilize tokens."
+            }
+          ]
+        },
+        {
+          "name": "Venerated Stormsinger",
+          "relationships": [
+            {
+              "archetype_id": "mardu-mobilize",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a way to drain opponents while sacrificing tokens."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Mardu Mobilize",
+              "context": "Explicitly named as a way to drain opponents while sacrificing tokens."
+            }
+          ]
+        },
+        {
+          "name": "Mammoth Bellow",
+          "relationships": [
+            {
+              "archetype_id": "temur-harmonize",
+              "role": "payoff",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a powerful spell fueled by cheap, high-power creatures."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Temur Harmonize",
+              "context": "Explicitly named as a powerful spell fueled by cheap, high-power creatures."
+            }
+          ]
+        },
+        {
+          "name": "Glacial Dragonhunt",
+          "relationships": [
+            {
+              "archetype_id": "temur-harmonize",
+              "role": "supporting",
+              "review_status": "reviewed",
+              "evidence": "Featured with the Temur Harmonize archetype; no more specific role is stated."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Temur Harmonize",
+              "context": "Featured with the Temur Harmonize archetype; no more specific role is stated."
+            }
+          ]
+        },
+        {
+          "name": "Sunset Strikemaster",
+          "relationships": [
+            {
+              "archetype_id": "temur-harmonize",
+              "role": "enabler",
+              "review_status": "reviewed",
+              "evidence": "Explicitly named as a cheap, high-power creature that fuels powerful spells."
+            }
+          ],
+          "source_references": [
+            {
+              "source": "Wizards of the Coast",
+              "title": "Tarkir: Dragonstorm Prerelease Guide",
+              "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+              "section": "Temur Harmonize",
+              "context": "Explicitly named as a cheap, high-power creature that fuels powerful spells."
+            }
+          ]
+        }
+      ]
+    }
   }
 }
