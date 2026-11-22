@@ -122,16 +122,31 @@ def image_uris(payload: dict) -> dict:
                       for face in faces if face.get("image_uris")]}
 
 
+def payload_name_aliases(payload: dict) -> set[str]:
+    """Return exact Scryfall card and face names for matching reviewed entries."""
+    aliases = set()
+    full_name = payload.get("name", "")
+    if full_name:
+        aliases.add(normalize_name(full_name))
+        aliases.update(normalize_name(part) for part in full_name.split(" // ") if part.strip())
+    for face in payload.get("card_faces") or []:
+        face_name = face.get("name")
+        if face_name:
+            aliases.add(normalize_name(face_name))
+    return aliases
+
+
 def card_metadata(payload: dict, expected_set: str, expected_name: str) -> dict:
     actual_set = str(payload.get("set", "")).upper()
     if actual_set != expected_set:
         raise CatalogError(f"Set mismatch for {expected_name}: expected {expected_set}, got {actual_set or 'missing'}.")
     actual_name = payload.get("name", "")
-    if normalize_name(actual_name) != normalize_name(expected_name):
+    if normalize_name(expected_name) not in payload_name_aliases(payload):
         raise CatalogError(f"Name mismatch: expected {expected_name!r}, got {actual_name!r}.")
     return {
         "scryfall_id": payload["id"], "oracle_id": payload.get("oracle_id"),
-        "name": actual_name, "set_code": actual_set, "set_name": payload.get("set_name"),
+        "name": expected_name, "scryfall_name": actual_name,
+        "set_code": actual_set, "set_name": payload.get("set_name"),
         "collector_number": payload.get("collector_number"), "rarity": payload.get("rarity"),
         "layout": payload.get("layout"), "mana_cost": payload.get("mana_cost"),
         "mana_value": payload.get("cmc"), "type_line": payload.get("type_line"),
@@ -196,10 +211,11 @@ def enrich(catalog: dict, set_code: str | None = None,
             returned = response.get("data", [])
             by_name = {}
             for payload in returned:
-                key = normalize_name(payload.get("name", ""))
-                if key in by_name:
-                    raise CatalogError(f"Scryfall returned duplicate card name in {code}: {payload.get('name')}")
-                by_name[key] = payload
+                for key in payload_name_aliases(payload):
+                    previous = by_name.get(key)
+                    if previous is not None and previous.get("id") != payload.get("id"):
+                        raise CatalogError(f"Scryfall returned ambiguous card/face name in {code}: {key}")
+                    by_name[key] = payload
             for card in chunk:
                 key = normalize_name(card["name"])
                 payload = by_name.get(key)
