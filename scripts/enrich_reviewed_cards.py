@@ -6,7 +6,6 @@ infers archetype relationships from article co-occurrence, color identity,
 oracle text, or card names.
 """
 from __future__ import annotations
-
 import argparse
 import json
 import re
@@ -21,14 +20,11 @@ DEFAULT_CATALOG = Path(__file__).parent / "data" / "reviewed_cards.json"
 USER_AGENT = "UrzasOculusCardCatalog/0.1 (+https://github.com/sedward5/urzas-oculus)"
 ALLOWED_ROLES = {"signpost", "enabler", "payoff", "supporting"}
 
-
 class CatalogError(ValueError):
     pass
 
-
 def normalize_name(value: str) -> str:
-    return re.sub(r"\s+", " ", value).strip().casefold()
-
+    return re.sub(r"\\s+", " ", value).strip().casefold()
 
 def fetch_json(url: str, timeout: int = 30) -> dict:
     request = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
@@ -36,7 +32,6 @@ def fetch_json(url: str, timeout: int = 30) -> dict:
         if response.status != 200:
             raise CatalogError(f"Scryfall returned HTTP {response.status}: {url}")
         return json.loads(response.read().decode("utf-8"))
-
 
 def validate_catalog(catalog: dict) -> None:
     if catalog.get("schema_version") != 1 or not isinstance(catalog.get("sets"), dict):
@@ -66,19 +61,13 @@ def validate_catalog(catalog: dict) -> None:
                 if relationship.get("review_status") == "reviewed" and not relationship.get("evidence"):
                     raise CatalogError(f"Reviewed relationship for {name} needs evidence.")
 
-
 def image_uris(payload: dict) -> dict:
     images = payload.get("image_uris") or {}
     if images:
         return {key: images[key] for key in ("small", "normal", "large", "png", "art_crop", "border_crop") if images.get(key)}
     faces = payload.get("card_faces") or []
-    return {
-        "faces": [
-            {"name": face.get("name"), "image_uris": image_uris(face)}
-            for face in faces if face.get("image_uris")
-        ]
-    }
-
+    return {"faces": [{"name": face.get("name"), "image_uris": image_uris(face)}
+                      for face in faces if face.get("image_uris")]}
 
 def card_metadata(payload: dict, expected_set: str, expected_name: str) -> dict:
     actual_set = str(payload.get("set", "")).upper()
@@ -88,54 +77,34 @@ def card_metadata(payload: dict, expected_set: str, expected_name: str) -> dict:
     if normalize_name(actual_name) != normalize_name(expected_name):
         raise CatalogError(f"Name mismatch: expected {expected_name!r}, got {actual_name!r}.")
     return {
-        "scryfall_id": payload["id"],
-        "oracle_id": payload.get("oracle_id"),
-        "name": actual_name,
-        "set_code": actual_set,
-        "set_name": payload.get("set_name"),
-        "collector_number": payload.get("collector_number"),
-        "rarity": payload.get("rarity"),
-        "layout": payload.get("layout"),
-        "mana_cost": payload.get("mana_cost"),
-        "mana_value": payload.get("cmc"),
-        "type_line": payload.get("type_line"),
-        "oracle_text": payload.get("oracle_text"),
-        "colors": payload.get("colors", []),
-        "color_identity": payload.get("color_identity", []),
-        "keywords": payload.get("keywords", []),
-        "image_uris": image_uris(payload),
-        "scryfall_uri": payload.get("scryfall_uri"),
+        "scryfall_id": payload["id"], "oracle_id": payload.get("oracle_id"),
+        "name": actual_name, "set_code": actual_set, "set_name": payload.get("set_name"),
+        "collector_number": payload.get("collector_number"), "rarity": payload.get("rarity"),
+        "layout": payload.get("layout"), "mana_cost": payload.get("mana_cost"),
+        "mana_value": payload.get("cmc"), "type_line": payload.get("type_line"),
+        "oracle_text": payload.get("oracle_text"), "colors": payload.get("colors", []),
+        "color_identity": payload.get("color_identity", []), "keywords": payload.get("keywords", []),
+        "image_uris": image_uris(payload), "scryfall_uri": payload.get("scryfall_uri"),
         "resolved_at_source": "Scryfall API",
     }
 
-
-def resolve_card(card: dict, set_code: str,
-                 fetcher: Callable[[str], dict] = fetch_json) -> dict:
+def resolve_card(card: dict, set_code: str, fetcher: Callable[[str], dict] = fetch_json) -> dict:
     if card.get("scryfall_id"):
         url = f"https://api.scryfall.com/cards/{card['scryfall_id']}"
     else:
-        query = urlencode({"exact": card["name"], "set": set_code.lower()})
-        url = f"https://api.scryfall.com/cards/named?{query}"
-    payload = fetcher(url)
-    metadata = card_metadata(payload, set_code, card["name"])
-    return {
-        **metadata,
-        "relationships": card.get("relationships", []),
-        "source_references": card.get("source_references", []),
-        "identity_review_status": "resolved_from_scryfall",
-    }
-
+        url = "https://api.scryfall.com/cards/named?" + urlencode({"exact": card["name"], "set": set_code.lower()})
+    metadata = card_metadata(fetcher(url), set_code, card["name"])
+    return {**metadata, "relationships": card.get("relationships", []),
+            "source_references": card.get("source_references", []),
+            "identity_review_status": "resolved_from_scryfall"}
 
 def enrich(catalog: dict, set_code: str | None = None,
-           fetcher: Callable[[str], dict] = fetch_json,
-           delay_seconds: float = 0.1) -> dict:
+           fetcher: Callable[[str], dict] = fetch_json, delay_seconds: float = 0.1) -> dict:
     validate_catalog(catalog)
     selected = [set_code] if set_code else sorted(catalog["sets"])
-    output = {
-        "schema_version": 1,
-        "source": {"name": "Scryfall", "attribution": "Card data and images © Scryfall"},
-        "sets": {},
-    }
+    output = {"schema_version": 1,
+              "source": {"name": "Scryfall", "attribution": "Card data and images © Scryfall"},
+              "sets": {}}
     for code in selected:
         if code not in catalog["sets"]:
             raise CatalogError(f"Set {code} is not present in the reviewed card catalog.")
@@ -147,7 +116,6 @@ def enrich(catalog: dict, set_code: str | None = None,
         output["sets"][code] = {"cards": enriched}
     return output
 
-
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--catalog", type=Path, default=DEFAULT_CATALOG)
@@ -157,9 +125,8 @@ def main() -> None:
     catalog = json.loads(args.catalog.read_text(encoding="utf-8"))
     result = enrich(catalog, args.set_code)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
     print(json.dumps({code: len(record["cards"]) for code, record in result["sets"].items()}, indent=2))
-
 
 if __name__ == "__main__":
     try:

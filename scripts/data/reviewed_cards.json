@@ -1,21 +1,9 @@
 {
   "schema_version": 1,
-  "description": "Manually curated card identities for set guides. Card metadata is enriched from Scryfall; archetype relationships remain separately reviewed.",
-  "role_types": [
-    "signpost",
-    "enabler",
-    "payoff",
-    "supporting"
-  ],
+  "description": "Human-maintained card identities; Scryfall metadata is enriched separately and archetype relationships are never inferred.",
   "sets": {
-    "HOB": {
-      "cards": []
-    },
-    "ECL": {
-      "cards": []
-    },
-    "TDM": {
-      "cards": []
-    }
+    "HOB": {"cards": []},
+    "ECL": {"cards": []},
+    "TDM": {"cards": []}
   }
 }
