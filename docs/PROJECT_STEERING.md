@@ -1,6 +1,6 @@
 # Urza's Oculus — Project Steering
 
-Last reviewed: 2026-11-20
+Last reviewed: 2026-11-21
 
 This document defines product goals, constraints, and architectural guardrails. The current implementation status and milestone sequence live in [ROADMAP.md](ROADMAP.md).
 
