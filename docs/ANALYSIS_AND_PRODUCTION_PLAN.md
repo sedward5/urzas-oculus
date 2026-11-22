@@ -99,7 +99,7 @@ Cockpit use:
 - During draft: current colors/likely archetype compared with the set baseline.
 - Post-draft: deck context, not a guarantee of expected win rate.
 
-Wizards-published archetype guidance is a separate future enrichment task. Revisit acquisition, licensing/availability, provenance, and update cadence after the data-to-repo artifact pipeline is established. Do not block the initial meta report on it.
+Wizards-published archetype guidance is a separate enrichment layer. The acquisition investigation below defines the bounded next steps for building it, including provenance and manual review. Do not block the initial meta report on catalog acquisition.
 
 #### Recorded baseline: HOB PremierDraft
 
