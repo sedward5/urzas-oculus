@@ -1,4 +1,5 @@
 import AppKit
+import CryptoKit
 import SwiftUI
 
 private struct ArchetypeCatalog: Decodable {
@@ -17,7 +18,7 @@ private struct ArchetypeSet: Decodable {
     let archetypes: [ArchetypeEntry]
     let overviewImage: OverviewImage
 }
-private struct OverviewImage: Decodable { let sourceUrl: URL; let alt: String; let attribution: String }
+private struct OverviewImage: Decodable { let sourceUrl: URL; let sourceSha256: String; let alt: String; let attribution: String }
 private struct ArchetypeEntry: Decodable, Identifiable {
     let id: String; let displayName: String; let colorIdentity: String
     let archetypeType: String; let strategyText: String
@@ -29,26 +30,31 @@ private struct ArchetypeEntry: Decodable, Identifiable {
     private let folder = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
         .appendingPathComponent("UrzasOculus/ArchetypeImages", isDirectory: true)
 
+    private func matchesChecksum(_ data: Data, expected: String) -> Bool {
+        SHA256.hash(data: data).map { String(format: "%02x", $0) }.joined() == expected
+    }
+
     func load(_ sets: [String: ArchetypeSet]) async {
-        for (code, _) in sets {
+        for (code, set) in sets {
             let file = folder.appendingPathComponent("\(code).jpg")
-            if let image = NSImage(contentsOf: file) { images[code] = image }
+            if let data = try? Data(contentsOf: file),
+               matchesChecksum(data, expected: set.overviewImage.sourceSha256),
+               let image = NSImage(data: data) {
+                images[code] = image
+            }
         }
         let missing = sets.filter { images[$0.key] == nil }
         guard !missing.isEmpty else { return }
         loading = true
         defer { loading = false }
         try? FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true)
-        await withTaskGroup(of: (String, NSImage?).self) { group in
-            for (code, set) in missing {
-                group.addTask {
-                    guard let (data, _) = try? await URLSession.shared.data(from: set.overviewImage.sourceUrl),
-                          let image = NSImage(data: data) else { return (code, nil) }
-                    try? data.write(to: self.folder.appendingPathComponent("\(code).jpg"), options: .atomic)
-                    return (code, image)
-                }
-            }
-            for await (code, image) in group { if let image { images[code] = image } }
+        for (code, set) in missing {
+            guard let (data, response) = try? await URLSession.shared.data(from: set.overviewImage.sourceUrl),
+                  (response as? HTTPURLResponse)?.statusCode == 200,
+                  matchesChecksum(data, expected: set.overviewImage.sourceSha256),
+                  let image = NSImage(data: data) else { continue }
+            try? data.write(to: folder.appendingPathComponent("\(code).jpg"), options: .atomic)
+            images[code] = image
         }
     }
 }
