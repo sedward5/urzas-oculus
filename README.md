@@ -69,7 +69,7 @@ swift run
 ./scripts/package-app.sh
 ```
 
-The package script creates dist/UrzasOculus-macos.zip.
+The package script creates both `dist/UrzasOculus-macos.zip` and `dist/UrzasOculus.dmg`. The DMG contains the app and an Applications shortcut for drag-to-install.
 
 Python tests:
 
@@ -97,6 +97,7 @@ Third-party datasets, card images, and trademarks are not relicensed by this rep
 ## Documentation
 
 - [Roadmap and implementation status](docs/ROADMAP.md)
+- [macOS app distribution and releases](docs/DISTRIBUTION.md)
 - [Project steering](docs/PROJECT_STEERING.md)
 - [Architecture](docs/ARCHITECTURE.md)
 - [Architecture decisions](docs/DECISIONS.md)
