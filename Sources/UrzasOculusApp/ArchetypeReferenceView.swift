@@ -7,7 +7,9 @@ private struct ArchetypeCatalog: Decodable {
     static func load() -> ArchetypeCatalog? {
         guard let url = Bundle.module.url(forResource: "reviewed_archetypes", withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
-        return try? JSONDecoder().decode(ArchetypeCatalog.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return try? decoder.decode(ArchetypeCatalog.self, from: data)
     }
 }
 private struct ArchetypeSet: Decodable {
@@ -22,7 +24,9 @@ private struct ReviewedCardCatalog: Decodable {
     static func load() -> ReviewedCardCatalog? {
         guard let url = Bundle.module.url(forResource: "reviewed_cards", withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
-        return try? JSONDecoder().decode(ReviewedCardCatalog.self, from: data)
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return try? decoder.decode(ReviewedCardCatalog.self, from: data)
     }
 }
 private struct ReviewedCardSet: Decodable { let cards: [ReviewedCard] }
