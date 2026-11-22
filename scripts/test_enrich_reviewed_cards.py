@@ -41,6 +41,48 @@ class ReviewedCardCatalogTests(unittest.TestCase):
         self.assertEqual(card["image_uris"]["normal"], "https://img.test/normal.jpg")
         self.assertEqual(card["relationships"], [relation])
 
+
+    def test_adventure_card_matches_front_face_name(self):
+        adventure = {
+            **payload(name="Gollum, Silent Slinker // Meager Meal"),
+            "layout": "adventure",
+            "card_faces": [
+                {"name": "Gollum, Silent Slinker", "image_uris": {"normal": "https://img.test/gollum.jpg"}},
+                {"name": "Meager Meal", "image_uris": {"normal": "https://img.test/meal.jpg"}},
+            ],
+        }
+        source = {"name": "Gollum, Silent Slinker", "relationships": []}
+        result = enrich(catalog_with(source), "HOB",
+                        fetcher=lambda *args, **kwargs: {"data": [adventure], "not_found": []},
+                        delay_seconds=0)
+        card = result["sets"]["HOB"]["cards"][0]
+        self.assertEqual(card["name"], "Gollum, Silent Slinker")
+        self.assertEqual(card["scryfall_name"], "Gollum, Silent Slinker // Meager Meal")
+        self.assertEqual(card["layout"], "adventure")
+
+    def test_mdfc_matches_front_face_name(self):
+        mdfc = {
+            **payload(name="Front Name // Back Name"),
+            "layout": "transform",
+            "card_faces": [
+                {"name": "Front Name", "image_uris": {"normal": "https://img.test/front.jpg"}},
+                {"name": "Back Name", "image_uris": {"normal": "https://img.test/back.jpg"}},
+            ],
+        }
+        metadata = card_metadata(mdfc, "HOB", "Front Name")
+        self.assertEqual(metadata["name"], "Front Name")
+        self.assertEqual(metadata["scryfall_name"], "Front Name // Back Name")
+
+    def test_face_alias_collision_is_rejected(self):
+        first = {**payload(name="Front // Back"), "card_faces": [{"name": "Front"}, {"name": "Back"}]}
+        second = {**payload(name="Front // Other"), "id": "different-id",
+                  "card_faces": [{"name": "Front"}, {"name": "Other"}]}
+        source = {"name": "Front", "relationships": []}
+        with self.assertRaisesRegex(CatalogError, "ambiguous card/face name"):
+            enrich(catalog_with(source), "HOB",
+                   fetcher=lambda *args, **kwargs: {"data": [first, second], "not_found": []},
+                   delay_seconds=0)
+
     def test_reuses_matching_existing_metadata_without_request(self):
         source = {"name": "Test Card", "relationships": []}
         old = {**card_metadata(payload(), "HOB", "Test Card"),
