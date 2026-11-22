@@ -1,13 +1,17 @@
 # Promoting Scryfall card enrichment
 
-The enrichment workflow deliberately uploads a candidate artifact without changing the reviewed catalog. After reviewing a successful run, promote it through the **Promote Scryfall Card Enrichment** workflow.
+The enrichment workflow deliberately uploads a candidate artifact without changing the reviewed catalog. Promote a successful run through **Promote Scryfall Card Enrichment**.
 
-1. Open the successful **Scryfall Card Catalog Enrichment** run and copy its run ID.
-2. Open **Actions → Promote Scryfall Card Enrichment**.
-3. Select the branch containing the promotion PR (not `main`).
-4. Enter the enrichment run ID and run the workflow.
-5. The workflow downloads that run's artifact, validates exact set/card coverage and Scryfall identity, then merges only Scryfall metadata into the human-reviewed catalog.
-6. It regenerates the website and native app copies and commits the result to the selected branch.
+For this initial promotion, opening or updating the promotion PR automatically downloads run `45059767031`, validates it, and commits the result to the PR branch. This lets the full catalog diff be reviewed before merging.
+
+For future promotions, after this workflow is present on the default branch, run it manually:
+
+1. Open **Actions → Promote Scryfall Card Enrichment**.
+2. Select the target branch.
+3. Enter the successful enrichment run ID.
+4. Run the workflow.
+
+The workflow downloads that run's artifact, validates exact set/card coverage and Scryfall identity, then merges only Scryfall metadata into the human-reviewed catalog. It regenerates the website and native app copies.
 
 The promotion never changes archetype relationships, evidence, or source references. It rejects missing/extra cards, set mismatches, unresolved identities, and missing image metadata. Re-running the same promotion is safe and produces no extra commit when nothing changed.
 
