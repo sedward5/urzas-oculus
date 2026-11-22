@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "description": "Manually curated card identities for set guides. Card metadata is enriched from Scryfall; archetype relationships remain separately reviewed.",
+  "role_types": [
+    "signpost",
+    "enabler",
+    "payoff",
+    "supporting"
+  ],
+  "sets": {
+    "HOB": {
+      "cards": []
+    },
+    "ECL": {
+      "cards": []
+    },
+    "TDM": {
+      "cards": []
+    }
+  }
+}
