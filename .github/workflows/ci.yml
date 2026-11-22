@@ -61,6 +61,9 @@ jobs:
       - name: Show Swift version
         run: swift --version
 
+      - name: Sync reviewed card catalog
+        run: python3 scripts/sync_reviewed_card_catalog.py
+
       - name: Run tests
         run: swift test
 

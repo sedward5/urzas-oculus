@@ -32,6 +32,9 @@ jobs:
       - name: Show Hugo version
         run: hugo version
 
+      - name: Sync reviewed card catalog
+        run: python3 scripts/sync_reviewed_card_catalog.py
+
       - name: Build site
         working-directory: website
         run: hugo --minify --panicOnWarning --destination public
