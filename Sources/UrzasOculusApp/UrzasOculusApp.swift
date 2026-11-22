@@ -15,6 +15,9 @@ struct UrzasOculusApp: App {
                     .tabItem {
                         Label("Draft Cockpit", systemImage: "rectangle.3.group")
                     }
+
+                ArchetypeReferenceView()
+                    .tabItem { Label("Archetypes", systemImage: "books.vertical") }
             }
             .frame(minWidth: 1040, minHeight: 720)
         }

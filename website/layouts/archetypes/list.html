@@ -1,5 +1,1 @@
-{{ define "main" }}
-<section class="page-content archetypes-page"><div class="eyebrow"><span class="eyebrow-line"></span> FORMAT REFERENCE</div><h1>{{ .Title }}</h1><p class="page-lede">{{ .Content }}</p>
-{{ $sets := site.Data.reviewed_archetypes.sets }}{{ range slice "HOB" "ECL" "TDM" }}{{ $set := index $sets . }}<article class="archetype-set"><div class="archetype-set-heading"><div><div class="eyebrow">{{ . }}</div><h2>{{ $set.set_name }}</h2></div><a class="text-link" href="{{ $set.source_url }}" rel="external noopener">Wizards source ↗</a></div>
-{{ with $set.overview_image }}<figure class="archetype-overview"><img src="{{ .source_url }}" alt="{{ .alt }}" width="{{ .width }}" height="{{ .height }}" loading="lazy" decoding="async"><figcaption>Official archetype overview · © Wizards of the Coast</figcaption></figure>{{ end }}
-<div class="archetype-list">{{ range $set.archetypes }}<div class="archetype-entry"><h3>{{ .display_name }} <span>{{ .color_identity }}</span></h3><p>{{ .strategy_text }}</p></div>{{ end }}</div></article>{{ end }}</section>{{ end }}
+{{ define "main" }}<section class="page-content"><div class="eyebrow"><span class="eyebrow-line"></span> FORMAT REFERENCE</div><h1>{{ .Title }}</h1><div class="prose">{{ .Content }}</div></section>{{ end }}

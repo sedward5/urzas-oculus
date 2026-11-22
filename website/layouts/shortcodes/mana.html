@@ -1,0 +1,1 @@
+{{- $raw := .Get 0 | default "" -}}{{- $symbol := upper (replaceRE "[{}]" "" $raw) -}}{{- $filename := replace $symbol "/" "" -}}<img class="mana-symbol" src="https://svgs.scryfall.io/card-symbols/{{ $filename }}.svg" alt="{{ $raw }}" title="{{ $raw }}" loading="lazy" decoding="async">

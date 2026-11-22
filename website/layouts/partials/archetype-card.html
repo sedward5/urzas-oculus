@@ -1,0 +1,1 @@
+<article class="archetype-card"><div class="archetype-card-heading"><h3>{{ .display_name }}</h3><span class="mana-identity">{{ range split .color_identity "" }}{{ partial "mana-symbol.html" . }}{{ end }}</span></div><p>{{ .strategy_text }}</p><span class="archetype-kind">{{ replace .archetype_type "_" " " | title }}</span></article>
