@@ -15,7 +15,6 @@ from email.utils import parsedate_to_datetime
 from pathlib import Path
 from typing import Callable
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 DEFAULT_CATALOG = Path(__file__).parent / "data" / "reviewed_cards.json"
