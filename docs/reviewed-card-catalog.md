@@ -7,7 +7,7 @@ This catalog is a first reviewed pass over cards explicitly named in the officia
 - Every card has a source reference to the guide and archetype subsection where it is named.
 - Archetype relationships are recorded only where the guide explicitly connects the card to that archetype's plan.
 - The role labels (`signpost`, `enabler`, `payoff`, `supporting`) are Oculus editorial classifications of those explicit descriptions, not Wizards terminology except where the guide itself calls out signpost uncommons.
-- A featured card under an archetype heading is recorded as `signpost` only when it is the guide's highlighted archetype card; this is not a claim about rarity or actual draft performance.
+- Featured cards are classified as `supporting` unless the guide explicitly describes a signpost role. The guide's featured-card callouts alone do not establish that a card is a signpost uncommon.
 - TDM's guide discusses the five three-color clans in detail. It does not provide equivalent detailed card lists for all five two-color themes, so this first pass does not invent those relationships.
 - General removal/threat examples and curve-only examples are not assigned archetype relationships by this pass.
 - This is not a complete set card database. It is a source-backed starting catalog for review and enrichment.

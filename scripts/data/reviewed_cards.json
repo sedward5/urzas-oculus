@@ -109,9 +109,9 @@
           "relationships": [
             {
               "archetype_id": "goblins",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Black-Red Goblins archetype heading."
+              "evidence": "Featured in the Black-Red Goblins archetype heading."
             }
           ],
           "source_references": [
@@ -209,9 +209,9 @@
           "relationships": [
             {
               "archetype_id": "wolves",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Black-Green Wolves archetype heading."
+              "evidence": "Featured in the Black-Green Wolves archetype heading."
             }
           ],
           "source_references": [
@@ -409,9 +409,9 @@
           "relationships": [
             {
               "archetype_id": "elves",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Green-Blue Elves archetype heading."
+              "evidence": "Featured in the Green-Blue Elves archetype heading."
             }
           ],
           "source_references": [
@@ -533,9 +533,9 @@
           "relationships": [
             {
               "archetype_id": "merfolk",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the White-Blue Merfolk archetype heading."
+              "evidence": "Featured in the White-Blue Merfolk archetype heading."
             }
           ],
           "source_references": [
@@ -613,9 +613,9 @@
           "relationships": [
             {
               "archetype_id": "goblins",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Black-Red Goblins archetype heading."
+              "evidence": "Featured in the Black-Red Goblins archetype heading."
             }
           ],
           "source_references": [
@@ -673,9 +673,9 @@
           "relationships": [
             {
               "archetype_id": "kithkin",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Green-White Kithkin archetype heading."
+              "evidence": "Featured in the Green-White Kithkin archetype heading."
             }
           ],
           "source_references": [
@@ -773,9 +773,9 @@
           "relationships": [
             {
               "archetype_id": "elementals",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Blue-Red Elementals archetype heading."
+              "evidence": "Featured in the Blue-Red Elementals archetype heading."
             }
           ],
           "source_references": [
@@ -813,9 +813,9 @@
           "relationships": [
             {
               "archetype_id": "elves",
-              "role": "signpost",
+              "role": "supporting",
               "review_status": "reviewed",
-              "evidence": "Featured under the Black-Green Elves archetype heading."
+              "evidence": "Featured in the Black-Green Elves archetype heading."
             }
           ],
           "source_references": [
