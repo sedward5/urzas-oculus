@@ -32,6 +32,11 @@ class ReviewedCardCatalogTests(unittest.TestCase):
             "archetype_id":"humans","role":"payoff","review_status":"reviewed","evidence":[]}]}]}}}
         with self.assertRaisesRegex(CatalogError,"needs evidence"): validate_catalog(catalog)
 
+    def test_rejects_unknown_archetype_id(self):
+        catalog={"schema_version":1,"sets":{"HOB":{"cards":[{"name":"Test Card","relationships":[{
+            "archetype_id":"not-a-hob-archetype","role":"payoff","review_status":"needs_review","evidence":[]}]}]}}}
+        with self.assertRaisesRegex(CatalogError,"Unknown HOB archetype ID"): validate_catalog(catalog)
+
     def test_rejects_unknown_role(self):
         catalog={"schema_version":1,"sets":{"HOB":{"cards":[{"name":"Test Card","relationships":[{
             "archetype_id":"humans","role":"bomb","review_status":"needs_review","evidence":[]}]}]}}}
