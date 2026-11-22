@@ -249,7 +249,7 @@ def acquire(set_code: str, output_dir: Path, html_override: Path | None = None) 
     }
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / f"{set_code.lower()}-catalog-candidate.json").write_text(
-        json.dumps(catalog, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8"
+        json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     (output_dir / f"{set_code.lower()}-source-notes.md").write_text(
         render_notes(catalog, article_text), encoding="utf-8"
@@ -294,7 +294,7 @@ def render_notes(catalog: dict, article_text: str) -> str:
         article_text[:12000] if article_text else "_No paragraph text was extracted._",
         "",
     ])
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def main() -> None:
