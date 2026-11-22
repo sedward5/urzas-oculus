@@ -1,47 +1,35 @@
-# Reviewed card catalog
+# Reviewed card guide relationships
 
-Urza's Oculus keeps card identity separate from archetype relationships.
+This catalog is a first reviewed pass over cards explicitly named in the official Wizards of the Coast Limited/prerelease guides for HOB, ECL, and TDM.
 
-## Source of truth
+## Scope and evidence
 
-`scripts/data/reviewed_cards.json` is the human-maintained input. It contains cards selected for review in each set. Each card entry begins with an exact card name and may include a Scryfall UUID to disambiguate printings.
+- Every card has a source reference to the guide and archetype subsection where it is named.
+- Archetype relationships are recorded only where the guide explicitly connects the card to that archetype's plan.
+- The role labels (`signpost`, `enabler`, `payoff`, `supporting`) are Oculus editorial classifications of those explicit descriptions, not Wizards terminology except where the guide itself calls out signpost uncommons.
+- Featured cards are classified as `supporting` unless the guide explicitly describes a signpost role. The guide's featured-card callouts alone do not establish that a card is a signpost uncommon.
+- TDM's guide discusses the five three-color clans in detail. It does not provide equivalent detailed card lists for all five two-color themes, so this first pass does not invent those relationships.
+- General removal/threat examples and curve-only examples are not assigned archetype relationships by this pass.
+- This is not a complete set card database. It is a source-backed starting catalog for review and enrichment.
 
-Supported relationship roles:
+## Source guides
 
-- `signpost`: explicitly points toward an archetype.
-- `enabler`: helps turn on an archetype mechanic or plan.
-- `payoff`: rewards the archetype's plan.
-- `supporting`: contributes to the plan without being a defining signpost, enabler, or payoff.
-
-Each relationship includes an archetype ID, review status (`needs_review`, `reviewed`, or `rejected`), and evidence. A relationship cannot be marked reviewed without evidence.
+- HOB: [Magic: The Gathering | The Hobbit Prerelease Guide](https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide)
+- ECL: [Lorwyn Eclipsed Prerelease Guide](https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide)
+- TDM: [Tarkir: Dragonstorm Prerelease Guide](https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide)
 
 ## Enrich Scryfall metadata
 
-After adding exact card names to a set's `cards` array:
+After reviewing the names, resolve exact identities and fetch image/card metadata:
 
 ```sh
 python3 scripts/enrich_reviewed_cards.py --set-code HOB --output /tmp/hob-card-catalog.json
+python3 scripts/enrich_reviewed_cards.py --set-code ECL --output /tmp/ecl-card-catalog.json
+python3 scripts/enrich_reviewed_cards.py --set-code TDM --output /tmp/tdm-card-catalog.json
 ```
 
-Or enrich all configured sets:
+The resolver validates exact name and set, then extracts Scryfall metadata. It does not alter relationship roles or evidence.
 
-```sh
-python3 scripts/enrich_reviewed_cards.py --output /tmp/card-catalog-candidate.json
-```
+## Limitations
 
-The script uses Scryfall's exact-name endpoint scoped to the set, or a supplied Scryfall UUID. It validates the returned name and set. It preserves Scryfall and Oracle UUIDs, collector number, rarity, mana cost/value, type line, rules text, colors, keywords, image URIs, and per-face images for double-faced cards.
-
-Requests are spaced by 100 ms. Output is a candidate artifact; the tool never updates the reviewed source file.
-
-## Evidence boundaries
-
-- Article co-occurrence does not establish archetype membership.
-- A card's color identity does not establish its role.
-- Oracle text or keyword matching does not establish its role.
-- The resolver enriches identity and presentation metadata only. It copies relationship records without changing them.
-- A reviewed relationship requires explicit evidence and review status.
-- Scryfall metadata is attributed to Scryfall; Wizards article evidence remains separately attributed to Wizards.
-
-## Website and app consumption
-
-Join the reviewed archetype taxonomy and card catalog by set code, archetype ID, and Scryfall UUID. Display card names and image URLs from resolved Scryfall records, not hand-built URLs or name-only lookups.
+These guides are written primarily for Sealed/Prerelease instruction, even where they describe draft archetypes. They establish documented design intent and card roles, not Arena Draft pick order, card strength, or win-rate contribution. Empirical performance should be joined separately from 17Lands.
