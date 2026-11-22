@@ -68,7 +68,7 @@ jobs:
         run: swift test
 
       - name: Package application
-        run: ./scripts/package-app.sh
+        run: bash ./scripts/package-app.sh
 
       - name: Upload macOS application
         uses: actions/upload-artifact@v4
