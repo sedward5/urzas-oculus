@@ -1,0 +1,54 @@
+name: Promote Scryfall Card Enrichment
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: Successful Scryfall Card Catalog Enrichment run ID
+        required: true
+        type: string
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out selected branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
+
+      - name: Download enrichment artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: scryfall-reviewed-cards-All-${{ inputs.source_run_id }}
+          repository: ${{ github.repository }}
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: candidate
+
+      - name: Run promotion tests
+        run: python3 -m unittest scripts.test_promote_scryfall_enrichment
+
+      - name: Promote and sync app and website catalogs
+        run: |
+          python3 scripts/promote_scryfall_enrichment.py --candidate candidate/reviewed_cards.enriched.json
+          python3 scripts/sync_reviewed_card_catalog.py
+          python3 scripts/test_sync_reviewed_card_catalog.py
+
+      - name: Commit promoted catalog to selected branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/data/reviewed_cards.json website/data/reviewed_cards.json Sources/UrzasOculusApp/Resources/reviewed_cards.json
+          if git diff --cached --quiet; then
+            echo "Catalog already contains this enrichment; no commit needed."
+            exit 0
+          fi
+          git commit -m "Promote reviewed Scryfall card metadata"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
