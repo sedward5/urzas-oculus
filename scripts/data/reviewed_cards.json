@@ -149,7 +149,7 @@
           "relationships": [
             {
               "archetype_id": "goblins",
-              "role": "payoff",
+              "role": "enabler",
               "review_status": "reviewed",
               "evidence": "Named as a spell that can sacrifice the Army token for value."
             }
@@ -169,7 +169,7 @@
           "relationships": [
             {
               "archetype_id": "goblins",
-              "role": "payoff",
+              "role": "enabler",
               "review_status": "reviewed",
               "evidence": "Named as a card that can sacrifice the Army token for value."
             }
