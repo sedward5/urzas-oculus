@@ -136,6 +136,21 @@ Initial source investigation found that Wizards' Prerelease Guide pages expose a
 
 The catalog must support two-, three-, and potentially other-color identities. It must also support overlapping archetypes (for example, clan archetypes and two-color themes), distinguish an archetype's published name from its color identity, and allow the source to describe only a subset of the full Limited environment.
 
+#### Signpost metadata and interpretation
+
+Where the published guide identifies signpost cards, preserve those associations as catalog metadata rather than treating the cards as authoritative evidence that an archetype is strong or open.
+
+For each signpost association, retain the evidence and, when available, join these independent attributes:
+- Published archetype association and source evidence.
+- Rarity and card identity.
+- Historical ATA and ALSA for the same set/event scope.
+- Game win rate when drawn, deck win rate when included, and inclusion rate in successful decks, with sample counts and scope.
+- Explicit supporting-card or mechanical relationships when the source documents them; do not invent a support graph from color identity alone.
+
+Keep four evidence layers distinct: published association describes intended strategy identity; historical pick behavior describes how players value the card; performance data describes observed outcomes; live pack observations describe what is arriving unusually late in this draft. A published signpost can be weak, unpopular, or simply passed by a drafter committed elsewhere. Its performance may also depend on being played in the intended shell.
+
+Do not let a signpost alone establish that a lane is open or move lane confidence from insufficient evidence to supported. It can contribute an early signal. Stronger interpretation requires corroboration from other cards supporting the same strategy, repeated depth across independent packs, or meaningful wheel evidence. A weak signpost must not invalidate otherwise strong supporting-card evidence. Treat disagreement between design intent, pick behavior, and performance as a useful finding to investigate, not as a reason to discard the archetype.
+
 #### Initial validation fixtures
 
 - HOB: five published two-color archetypes, useful for validating the common case.
@@ -161,6 +176,8 @@ This is not the same as set-level archetype performance. Historical pick data su
 #### Signals available before the wheel
 
 Use the current pick and pack contents to compare what arrived with what would ordinarily be expected at that pick:
+- Signpost arrivals: when a published signpost is present later than its historical pick/ALSA expectations, record that as one archetype-specific observation. Compare actual arrival with the card's historical behavior and performance; do not use a fixed pick cutoff or treat gold rarity as proof of openness.
+- Signpost corroboration: look for supporting cards from the same published strategy arriving later than expected, and for repeated evidence across independent packs. A signpost by itself is only an early clue; it is not sufficient to label a lane supported.
 - Premium-card arrivals: a high-impact rare or mythic still present later than expected is a meaningful *observation*, but one card alone is not proof of an open color.
 - Quality-weighted color supply: count and weight the cards in the pack by color using set-specific card strength and pick-position/ALSA expectations. The question is not merely “are there good blue cards?” but “is the quality and depth of a color unusually high for this pick?”
 - Unexpected depth: multiple playable cards in the same color, or multiple strong cards across a coherent strategy, can be more informative than a single standout.
