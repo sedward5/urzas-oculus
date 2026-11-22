@@ -117,3 +117,29 @@ Consequences:
 - Dataset snapshots and scoring configuration are pinned to a draft session.
 - The detailed UX specification is maintained in docs/DRAFT_COCKPIT_UX.md.
 - This ADR defines product behavior, not a claim that the interface is implemented.
+
+
+## ADR-009: Separate reviewed archetype taxonomy from article extraction
+
+**Status:** Accepted
+
+Published archetype taxonomy is maintained as a small, explicit reviewed data file,
+separate from scraped article headings. Wizards overview images are the source for
+archetype names, color identities, and concise strategy summaries. The acquisition
+script preserves article provenance, image evidence, and unassigned card references,
+but its heading extraction is diagnostic only and cannot add taxonomy entries.
+
+Tarkir: Dragonstorm intentionally has two overlapping dimensions: five three-color
+clans and five secondary two-color themes. These entries must retain distinct
+archetype types rather than being collapsed into ten mutually exclusive decks.
+
+Signpost and supporting-card associations remain unassigned until article context
+and card identities are manually reviewed. Published design intent is contextual
+metadata, not evidence of player valuation, archetype performance, or lane openness.
+The catalog does not change recommendation scoring.
+
+Consequences:
+- False-positive article headings cannot pollute the reviewed taxonomy.
+- Image-only archetypes can be represented without OCR or fragile heading heuristics.
+- Taxonomy review status and source provenance are explicit.
+- Future card associations and performance joins remain separate, auditable steps.

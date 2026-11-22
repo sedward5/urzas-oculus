@@ -119,6 +119,6 @@ Before architectural work, read this document, [ARCHITECTURE.md](ARCHITECTURE.md
 A feature is complete when behavior is implemented, relevant tests pass, uncertain/error states are handled, documentation is current, and the implementation respects project constraints. A scaffold, prototype, or unvalidated implementation must be labeled accordingly.
 
 
-## Published archetype acquisition prototype
+## Published archetype catalog
 
-A manually dispatched Python stdlib workflow can fetch the official HOB, ECL, or TDM Wizards Prerelease Guide and emit candidate archetype headings, article provenance, unassigned card references, and preserved overview-image evidence. This is an acquisition/review prototype only. OCR, image mana-symbol interpretation, taxonomy completeness, and approved catalog integration are not implemented. The output must be manually reviewed before any use in recommendations.
+A manually dispatched Python stdlib workflow fetches the official HOB, ECL, or TDM Wizards Prerelease Guide and emits article provenance, unassigned card references, and preserved overview-image evidence. A separate, manually reviewed catalog records the overview-image archetype names, color identities, and concise strategy summaries. HOB and ECL each have five two-color archetypes. TDM has five three-color clan archetypes plus five overlapping two-color themes. Article heading extraction is diagnostic only; it does not define the taxonomy. OCR and automatic mana-symbol interpretation are not implemented. Signpost and supporting-card associations remain unassigned, and the reviewed catalog is contextual metadata rather than recommendation or lane-scoring input.
