@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Acquire Wizards-published Limited archetype evidence for manual review.
 
-This is an evidence extractor, not an OCR system or an authoritative taxonomy
-builder. It deliberately leaves image-only and ambiguous fields unresolved.
+Reviewed taxonomy is maintained separately from article extraction. This script
+preserves upstream evidence and never assigns signpost/supporting cards.
 """
 from __future__ import annotations
 
@@ -11,36 +11,28 @@ import hashlib
 import json
 import re
 import time
-from dataclasses import asdict, dataclass
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.error import URLError
 from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 
-EXTRACTOR_VERSION = "0.1.0"
+EXTRACTOR_VERSION = "0.2.0"
 SOURCES = {
-    "HOB": {
-        "name": "Magic: The Gathering | The Hobbit",
-        "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
-    },
-    "ECL": {
-        "name": "Lorwyn Eclipsed",
-        "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
-    },
-    "TDM": {
-        "name": "Tarkir: Dragonstorm",
-        "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
-    },
+    "HOB": {"name": "Magic: The Gathering | The Hobbit", "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide"},
+    "ECL": {"name": "Lorwyn Eclipsed", "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide"},
+    "TDM": {"name": "Tarkir: Dragonstorm", "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide"},
 }
+CATALOG_PATH = Path(__file__).parent / "data" / "reviewed_archetypes.json"
+COLOR_HEADING = re.compile(r"^(White|Blue|Black|Red|Green)[ -](White|Blue|Black|Red|Green)\\s+(.+)$", re.IGNORECASE)
 
 
 def clean(value: str) -> str:
-    return re.sub(r"\s+", " ", value).strip()
+    return re.sub(r"\\s+", " ", value).strip()
 
 
 class ArticleParser(HTMLParser):
-    """Small dependency-free parser that retains article headings and evidence."""
+    """Dependency-free parser retaining article headings, paragraphs, and images."""
 
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
@@ -52,39 +44,31 @@ class ArticleParser(HTMLParser):
         self._tag: str | None = None
         self._buffer: list[str] = []
         self._paragraph: list[str] = []
-        self._heading: dict | None = None
         self._in_title = False
         self._in_time = False
         self._article_depth = 0
         self._capture_article = False
-        self._archetype_mode = False
-        self._archetype_done = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attrs_map = dict(attrs)
         if tag == "title":
-            self._in_title = True
-            self._buffer = []
+            self._in_title, self._buffer = True, []
         if tag == "time":
-            self._in_time = True
-            self._buffer = []
+            self._in_time, self._buffer = True, []
             if attrs_map.get("datetime"):
                 self.date_parts.append(attrs_map["datetime"] or "")
-        if tag in {"article", "main"} and not self._capture_article:
-            self._capture_article = True
-            self._article_depth = 1
-        elif self._capture_article and tag in {"article", "main"}:
-            self._article_depth += 1
+        if tag in {"article", "main"}:
+            if not self._capture_article:
+                self._capture_article, self._article_depth = True, 1
+            else:
+                self._article_depth += 1
         if tag in {"h1", "h2", "h3", "h4"}:
-            self._tag = tag
-            self._buffer = []
+            self._tag, self._buffer = tag, []
         if tag == "p":
             self._paragraph = []
         if tag == "img":
-            self.images.append({
-                "alt": clean(attrs_map.get("alt") or ""),
-                "src": attrs_map.get("src") or attrs_map.get("data-src") or "",
-            })
+            self.images.append({"alt": clean(attrs_map.get("alt") or ""),
+                                "src": attrs_map.get("src") or attrs_map.get("data-src") or ""})
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "title" and self._in_title:
@@ -97,18 +81,12 @@ class ArticleParser(HTMLParser):
         if tag == self._tag and self._tag:
             heading = clean("".join(self._buffer))
             if heading:
-                if self._archetype_mode and tag in {"h2", "h3"} and "archetype" not in heading.lower():
-                    if tag == "h2":
-                        self._archetype_done = True
-                        self._archetype_mode = False
-                self.headings.append({"level": tag, "text": heading})
-                if "draft archetype" in heading.lower():
-                    self._archetype_mode = True
+                self.headings.append({"level": self._tag, "text": heading})
             self._tag = None
         if tag == "p":
-            text = clean("".join(self._paragraph))
-            if text:
-                self.paragraphs.append(text)
+            paragraph = clean("".join(self._paragraph))
+            if paragraph:
+                self.paragraphs.append(paragraph)
             self._paragraph = []
         if tag in {"article", "main"} and self._capture_article:
             self._article_depth -= 1
@@ -123,32 +101,21 @@ class ArticleParser(HTMLParser):
 
 
 def extract_candidates(parser: ArticleParser) -> list[dict]:
-    """Extract headings following the archetype section; preserve uncertainty."""
-    start = next((i for i, h in enumerate(parser.headings)
-                  if "draft archetype" in h["text"].lower()), None)
-    if start is None:
-        return []
+    """Extract only explicit two-color headings; never promote arbitrary H3/H4s."""
     candidates = []
-    for heading in parser.headings[start + 1:]:
-        if heading["level"] == "h2":
-            break
+    color_map = {"white": "W", "blue": "U", "black": "B", "red": "R", "green": "G"}
+    for heading in parser.headings:
         if heading["level"] not in {"h3", "h4"}:
             continue
-        match = re.match(
-            r"^(White|Blue|Black|Red|Green)[ -](White|Blue|Black|Red|Green)\s+(.+)$",
-            heading["text"], re.IGNORECASE,
-        )
-        colors = None
-        name = heading["text"]
-        if match:
-            color_map = {"white": "W", "blue": "U", "black": "B", "red": "R", "green": "G"}
-            colors = "".join(c for c in "WUBRG" if c in {color_map[x.lower()] for x in match.groups()[:2]})
-            name = match.group(3).strip()
+        match = COLOR_HEADING.match(heading["text"])
+        if not match:
+            continue
+        colors = "".join(c for c in "WUBRG" if c in {color_map[x.lower()] for x in match.groups()[:2]})
         candidates.append({
-            "display_name": name,
+            "display_name": match.group(3).strip(),
             "heading_text": heading["text"],
             "published_color_identity": colors,
-            "color_identity_status": "extracted_from_heading" if colors else "unresolved",
+            "color_identity_status": "extracted_from_heading",
             "signpost_card_references": [],
             "supporting_card_references": [],
             "strategy_text": "",
@@ -158,8 +125,33 @@ def extract_candidates(parser: ArticleParser) -> list[dict]:
     return candidates
 
 
+def load_reviewed_catalog() -> dict:
+    return json.loads(CATALOG_PATH.read_text(encoding="utf-8"))
+
+
+def reviewed_candidates(set_code: str) -> list[dict]:
+    set_record = load_reviewed_catalog()["sets"][set_code]
+    return [{
+        "id": item["id"],
+        "display_name": item["display_name"],
+        "heading_text": None,
+        "published_color_identity": item["color_identity"],
+        "color_identity_status": "manually_reviewed_from_official_overview",
+        "archetype_type": item["archetype_type"],
+        "signpost_card_references": [],
+        "supporting_card_references": [],
+        "strategy_text": item["strategy_text"],
+        "evidence": [{
+            "type": "official_overview_image_manual_review",
+            "source_url": set_record["source_url"],
+            "review_note": set_record["overview_image_review"],
+        }],
+        "review_status": "reviewed",
+    } for item in set_record["archetypes"]]
+
+
 def fetch_bytes(url: str, timeout: int = 30) -> bytes:
-    request = Request(url, headers={"User-Agent": "UrzasOculusCatalogResearch/0.1 (+https://github.com/sedward5/urzas-oculus)"})
+    request = Request(url, headers={"User-Agent": "UrzasOculusCatalogResearch/0.2 (+https://github.com/sedward5/urzas-oculus)"})
     with urlopen(request, timeout=timeout) as response:
         return response.read()
 
@@ -167,18 +159,14 @@ def fetch_bytes(url: str, timeout: int = 30) -> bytes:
 def acquire(set_code: str, output_dir: Path, html_override: Path | None = None) -> dict:
     source = SOURCES[set_code]
     retrieved_at = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    if html_override:
-        html_bytes = html_override.read_bytes()
-    else:
-        html_bytes = fetch_bytes(source["url"])
+    html_bytes = html_override.read_bytes() if html_override else fetch_bytes(source["url"])
     parser = ArticleParser()
     parser.feed(html_bytes.decode("utf-8", errors="replace"))
-    candidates = extract_candidates(parser)
+    observed_headings = extract_candidates(parser)
+    taxonomy = load_reviewed_catalog()["sets"][set_code]
+    candidates = reviewed_candidates(set_code)
 
-    archetype_images = [
-        item for item in parser.images
-        if item["src"] and re.search(r"archetype|draft", item["alt"], re.IGNORECASE)
-    ]
+    archetype_images = [item for item in parser.images if item["src"] and re.search(r"archetype|draft", item["alt"], re.IGNORECASE)]
     image_records = []
     image_dir = output_dir / "evidence" / set_code
     image_dir.mkdir(parents=True, exist_ok=True)
@@ -192,107 +180,94 @@ def acquire(set_code: str, output_dir: Path, html_override: Path | None = None) 
                 suffix = Path(urlparse(image_url).path).suffix or ".img"
                 filename = f"overview-{index}-{digest[:12]}{suffix}"
                 (image_dir / filename).write_bytes(image_bytes)
-                record.update({
-                    "download_status": "downloaded",
-                    "local_path": str(Path("evidence") / set_code / filename),
-                    "sha256": digest,
-                    "byte_length": len(image_bytes),
-                })
+                record.update({"download_status": "downloaded",
+                               "local_path": str(Path("evidence") / set_code / filename),
+                               "sha256": digest, "byte_length": len(image_bytes)})
             except (OSError, URLError, TimeoutError) as error:
                 record.update({"download_status": "failed", "error": str(error)})
+
         image_records.append(record)
 
-    # Card-number/name strings are retained as article evidence, not assigned
-    # to archetypes until a human reviews their local context.
-    card_refs = sorted(set(re.findall(
-        r"\b\d{4}_MTG[A-Z0-9]+_(?:Main|ToknBstr):\s*[^\n<]+",
-        html_bytes.decode("utf-8", errors="replace"),
-    )))
+    card_refs = sorted(set(re.findall(r"\\b\\d{4}_MTG[A-Z0-9]+_(?:Main|ToknBstr):\\s*[^\\n<]+",
+                                      html_bytes.decode("utf-8", errors="replace"))))
     article_text = "\\n".join(parser.paragraphs)
     for candidate in candidates:
-        # Conservative text association: no automated proximity guess. Human
-        # review assigns paragraphs/cards to an archetype in a later step.
-        candidate["strategy_text"] = ""
-        candidate["evidence"].append({
-            "type": "article_paragraphs_available",
-            "paragraph_count": len(parser.paragraphs),
-        })
+        candidate["evidence"].append({"type": "article_paragraphs_available", "paragraph_count": len(parser.paragraphs)})
 
     catalog = {
-        "schema_version": 1,
+        "schema_version": 2,
         "extractor_version": EXTRACTOR_VERSION,
         "set_code": set_code,
         "set_name": source["name"],
         "source": {
-            "publisher": "Wizards of the Coast",
-            "url": source["url"],
+            "publisher": "Wizards of the Coast", "url": source["url"],
             "article_title": parser.title_parts[0] if parser.title_parts else None,
             "publication_date": parser.date_parts[0] if parser.date_parts else None,
-            "retrieved_at": retrieved_at,
-            "html_sha256": hashlib.sha256(html_bytes).hexdigest(),
+            "retrieved_at": retrieved_at, "html_sha256": hashlib.sha256(html_bytes).hexdigest(),
+        },
+        "taxonomy": {
+            "status": taxonomy["taxonomy_status"],
+            "dimensions": taxonomy["taxonomy_dimensions"],
+            "review_method": load_reviewed_catalog()["review_method"],
+            "source_overview_image_review": taxonomy["overview_image_review"],
         },
         "candidates": candidates,
+        "observed_article_heading_candidates": observed_headings,
         "article_card_references_unassigned": card_refs,
         "overview_images": image_records,
         "review": {
-            "status": "needs_manual_review",
+            "status": "reviewed_taxonomy_with_unassigned_card_associations",
             "image_text_ocr": "not_performed",
             "image_color_symbol_extraction": "not_performed",
-            "taxonomy_completeness": "not_assessed",
+            "taxonomy_completeness": "manually_reviewed",
             "notes": [
-                "This output is an evidence bundle, not a verified archetype catalog.",
-                "Overview-image text and mana symbols require manual review.",
-                "Card references are intentionally unassigned to avoid false associations.",
-                "No missing archetypes are inferred from the ten possible color pairs.",
+                "Archetype names, color identities, and short strategy summaries were manually transcribed from the official overview image.",
+                "TDM clan archetypes and secondary two-color themes are separate, intentionally overlapping taxonomy dimensions.",
+                "Signpost and supporting card references remain unassigned.",
+                "Article heading extraction is diagnostic only; it does not define the reviewed taxonomy.",
             ],
         },
     }
     output_dir.mkdir(parents=True, exist_ok=True)
-    (output_dir / f"{set_code.lower()}-catalog-candidate.json").write_text(
-        json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
-    )
-    (output_dir / f"{set_code.lower()}-source-notes.md").write_text(
-        render_notes(catalog, article_text), encoding="utf-8"
-    )
+    (output_dir / f"{set_code.lower()}-catalog-candidate.json").write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (output_dir / f"{set_code.lower()}-source-notes.md").write_text(render_notes(catalog, article_text), encoding="utf-8")
     return catalog
 
 
 def render_notes(catalog: dict, article_text: str) -> str:
     lines = [
-        f"# {catalog['set_name']} — published archetype extraction",
+        f"# {catalog['set_name']} — published archetype catalog",
         "",
         f"- Source: {catalog['source']['url']}",
         f"- Article date: {catalog['source']['publication_date'] or 'not extracted'}",
         f"- Retrieved: {catalog['source']['retrieved_at']}",
         f"- HTML SHA-256: `{catalog['source']['html_sha256']}`",
-        f"- Extracted heading candidates: {len(catalog['candidates'])}",
+        f"- Reviewed archetypes: {len(catalog['candidates'])}",
+        f"- Taxonomy status: {catalog['taxonomy']['status']}",
         "",
-        "## Candidate headings",
-        "",
+        "## Reviewed archetypes", "",
     ]
     for item in catalog["candidates"]:
-        colors = item["published_color_identity"] or "UNRESOLVED"
-        lines.append(f"- **{item['display_name']}** — {colors}; manual review required")
-    lines.extend(["", "## Overview images", ""])
-    if catalog["overview_images"]:
-        for item in catalog["overview_images"]:
-            lines.append(f"- {item['alt'] or 'Image without alt text'} — {item['download_status']}: {item.get('local_path', item['url'])}")
+        lines.append(f"- **{item['display_name']}** — {item['published_color_identity']} ({item['archetype_type']}): {item['strategy_text']}")
+    lines.extend(["", "## Article heading diagnostics", ""])
+    if catalog["observed_article_heading_candidates"]:
+        for item in catalog["observed_article_heading_candidates"]:
+            lines.append(f"- {item['heading_text']} — diagnostic extraction only")
     else:
+        lines.append("- No explicit two-color headings were detected.")
+    lines.extend(["", "## Overview images", ""])
+    for item in catalog["overview_images"]:
+        lines.append(f"- {item['alt'] or 'Image without alt text'} — {item['download_status']}: {item.get('local_path', item['url'])}")
+    if not catalog["overview_images"]:
         lines.append("- No image with an archetype/draft label was confidently identified.")
     lines.extend([
-        "",
-        "## Review requirements",
-        "",
-        "- Compare candidate headings and taxonomy against the official article.",
-        "- Inspect preserved overview image(s); transcribe image-only archetypes and strategy text.",
-        "- Verify color identities from mana symbols, not guessed from strategy names.",
-        "- Assign signpost and supporting cards only after checking article context.",
-        "- Mark taxonomy completeness only after all source content has been reviewed.",
-        "",
-        "## Article prose available to reviewer",
-        "",
-        article_text[:12000] if article_text else "_No paragraph text was extracted._",
-        "",
+        "", "## Review boundaries", "",
+        "- Names, color identities, and short strategy summaries were manually reviewed from the official overview image.",
+        "- TDM three-color clans and two-color themes intentionally overlap; do not collapse them into one taxonomy.",
+        "- Signpost and supporting card associations remain unassigned pending article-context review.",
+        "- The article prose below is retained as source evidence, not automatically attributed to an archetype.",
+        "", "## Article prose available to reviewer", "",
+        article_text[:12000] if article_text else "_No paragraph text was extracted._", "",
     ])
     return "\n".join(lines)
 
@@ -304,12 +279,10 @@ def main() -> None:
     parser.add_argument("--html-fixture", type=Path, help="Use local HTML instead of fetching the official page (tests only).")
     args = parser.parse_args()
     result = acquire(args.set_code, args.output_dir, args.html_fixture)
-    print(json.dumps({
-        "set_code": args.set_code,
-        "candidate_count": len(result["candidates"]),
-        "overview_image_count": len(result["overview_images"]),
-        "review_status": result["review"]["status"],
-    }, indent=2))
+    print(json.dumps({"set_code": args.set_code, "candidate_count": len(result["candidates"]),
+                      "observed_heading_candidate_count": len(result["observed_article_heading_candidates"]),
+                      "overview_image_count": len(result["overview_images"]),
+                      "review_status": result["review"]["status"]}, indent=2))
 
 
 if __name__ == "__main__":
