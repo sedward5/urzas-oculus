@@ -142,7 +142,7 @@ def extract_candidates(parser: ArticleParser) -> list[dict]:
         name = heading["text"]
         if match:
             color_map = {"white": "W", "blue": "U", "black": "B", "red": "R", "green": "G"}
-            colors = "".join(sorted(color_map[c.lower()] for c in match.groups()[:2]))
+            colors = "".join(c for c in "WUBRG" if c in {color_map[x.lower()] for x in match.groups()[:2]})
             name = match.group(3).strip()
         candidates.append({
             "display_name": name,
