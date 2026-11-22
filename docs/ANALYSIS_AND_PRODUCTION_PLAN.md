@@ -260,3 +260,17 @@ Artifacts should include schema/engine version, set and event identity, source c
 Once the current scoring pipeline has repeatable imports, defensible metric calculations and fixtures, versioned artifacts, provenance and caveat metadata, and clear unavailable/insufficient-data behavior, we should ship v1 even if replay eligibility, set-speed classification, archetype strength, and lane inference are still being improved.
 
 The analysis workstreams should produce bounded reports and decisions. If a question cannot be answered from available evidence, document the limitation and move to the next useful deliverable rather than endlessly expanding the investigation.
+
+
+#### Acquisition prototype implementation
+
+The manual-dispatch workflow `.github/workflows/published-archetype-catalog.yml` now runs `scripts/acquire_published_archetypes.py` for HOB, ECL, and TDM. It fetches the curated official Wizards Prerelease Guide URL, records article metadata and an HTML checksum, extracts explicitly named archetype headings and explicit two-color heading identities, and preserves candidate JSON plus a reviewer-oriented Markdown report. It attempts to download images whose alt text identifies them as archetype/draft overviews and records their SHA-256 checksums.
+
+This is deliberately a **candidate evidence bundle**, not a normalized/approved catalog:
+- Only explicit two-color heading labels yield a color identity; three-color or other headings remain unresolved.
+- Card references found in the article are retained as unassigned evidence rather than guessed into archetypes.
+- OCR and mana-symbol interpretation are not implemented. Overview images are preserved for human inspection.
+- The extractor does not claim taxonomy completeness or infer missing color pairs.
+- Unit tests use a committed synthetic HTML fixture and require no network. Live source acquisition is performed only by manual workflow dispatch.
+
+Initial source URLs are the official [HOB guide](https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide), [Lorwyn Eclipsed guide](https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide), and [Tarkir: Dragonstorm guide](https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide). The TDM guide's overlapping two-color themes appear in its overview image, so image review remains necessary; the extractor does not pretend that heading extraction captures them.
