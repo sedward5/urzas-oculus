@@ -1,0 +1,71 @@
+name: Scryfall Card Catalog Enrichment
+
+on:
+  workflow_dispatch:
+    inputs:
+      set_code:
+        description: Set to enrich (All processes every reviewed card)
+        required: true
+        type: choice
+        default: All
+        options:
+          - All
+          - HOB
+          - ECL
+          - TDM
+
+permissions:
+  contents: read
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show Python version
+        run: python3 --version
+
+      - name: Run enrichment unit tests
+        run: python3 -m unittest scripts.test_enrich_reviewed_cards
+
+      - name: Enrich reviewed card catalog
+        env:
+          SET_CODE: ${{ inputs.set_code }}
+        run: |
+          mkdir -p scryfall-enrichment-output
+          if [ "$SET_CODE" = "All" ]; then
+            python3 scripts/enrich_reviewed_cards.py \
+              --output scryfall-enrichment-output/reviewed_cards.enriched.json
+          else
+            python3 scripts/enrich_reviewed_cards.py \
+              --set-code "$SET_CODE" \
+              --output scryfall-enrichment-output/reviewed_cards.enriched.json
+          fi
+
+      - name: Validate candidate and summarize coverage
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("scryfall-enrichment-output/reviewed_cards.enriched.json")
+          catalog = json.loads(path.read_text(encoding="utf-8"))
+          total = 0
+          for set_code, record in sorted(catalog["sets"].items()):
+              cards = record["cards"]
+              total += len(cards)
+              missing_images = sum(not card.get("image_uris") for card in cards)
+              print(f"{set_code}: {len(cards)} resolved; {missing_images} without image data")
+          print(f"Total: {total} resolved cards")
+          PY
+
+      - name: Upload enriched candidate
+        uses: actions/upload-artifact@v4
+        with:
+          name: scryfall-reviewed-cards-${{ inputs.set_code }}-${{ github.run_id }}
+          path: scryfall-enrichment-output/reviewed_cards.enriched.json
+          if-no-files-found: error
+          retention-days: 30
