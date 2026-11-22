@@ -24,11 +24,11 @@ SOURCES = {
     "TDM": {"name": "Tarkir: Dragonstorm", "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide"},
 }
 CATALOG_PATH = Path(__file__).parent / "data" / "reviewed_archetypes.json"
-COLOR_HEADING = re.compile(r"^(White|Blue|Black|Red|Green)[ -](White|Blue|Black|Red|Green)\\s+(.+)$", re.IGNORECASE)
+COLOR_HEADING = re.compile(r"^(White|Blue|Black|Red|Green)[ -](White|Blue|Black|Red|Green)\s+(.+)$", re.IGNORECASE)
 
 
 def clean(value: str) -> str:
-    return re.sub(r"\\s+", " ", value).strip()
+    return re.sub(r"\s+", " ", value).strip()
 
 
 class ArticleParser(HTMLParser):
@@ -188,9 +188,9 @@ def acquire(set_code: str, output_dir: Path, html_override: Path | None = None) 
 
         image_records.append(record)
 
-    card_refs = sorted(set(re.findall(r"\\b\\d{4}_MTG[A-Z0-9]+_(?:Main|ToknBstr):\\s*[^\\n<]+",
+    card_refs = sorted(set(re.findall(r"\b\d{4}_MTG[A-Z0-9]+_(?:Main|ToknBstr):\s*[^\n<]+",
                                       html_bytes.decode("utf-8", errors="replace"))))
-    article_text = "\\n".join(parser.paragraphs)
+    article_text = "\n".join(parser.paragraphs)
     for candidate in candidates:
         candidate["evidence"].append({"type": "article_paragraphs_available", "paragraph_count": len(parser.paragraphs)})
 
