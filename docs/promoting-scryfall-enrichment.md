@@ -1,6 +1,6 @@
 # Promoting Scryfall card enrichment
 
-The enrichment workflow deliberately uploads a candidate artifact without changing the reviewed catalog. Promote a successful run through **Promote Scryfall Card Enrichment**.
+The enrichment workflow deliberately uploads a candidate artifact without changing the reviewed catalog. Promote a successful run through **Promote Scryfall Card Enrichment**. The initial catalog promotion uses successful enrichment run [45059767031](https://github.com/sedward5/urzas-oculus/actions/runs/45059767031), which resolved 62 reviewed cards across HOB, ECL, and TDM.
 
 For this initial promotion, opening or updating the promotion PR automatically downloads run `45059767031`, validates it, and commits the result to the PR branch. This lets the full catalog diff be reviewed before merging.
 
