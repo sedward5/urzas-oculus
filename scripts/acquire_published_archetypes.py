@@ -36,7 +36,7 @@ SOURCES = {
 
 
 def clean(value: str) -> str:
-    return re.sub(r"\\s+", " ", value).strip()
+    return re.sub(r"\s+", " ", value).strip()
 
 
 class ArticleParser(HTMLParser):
@@ -135,7 +135,7 @@ def extract_candidates(parser: ArticleParser) -> list[dict]:
         if heading["level"] not in {"h3", "h4"}:
             continue
         match = re.match(
-            r"^(White|Blue|Black|Red|Green)[ -](White|Blue|Black|Red|Green)\\s+(.+)$",
+            r"^(White|Blue|Black|Red|Green)[ -](White|Blue|Black|Red|Green)\s+(.+)$",
             heading["text"], re.IGNORECASE,
         )
         colors = None
@@ -205,7 +205,7 @@ def acquire(set_code: str, output_dir: Path, html_override: Path | None = None) 
     # Card-number/name strings are retained as article evidence, not assigned
     # to archetypes until a human reviews their local context.
     card_refs = sorted(set(re.findall(
-        r"\\b\\d{4}_MTG[A-Z0-9]+_(?:Main|ToknBstr):\\s*[^\\n<]+",
+        r"\b\d{4}_MTG[A-Z0-9]+_(?:Main|ToknBstr):\s*[^\n<]+",
         html_bytes.decode("utf-8", errors="replace"),
     )))
     article_text = "\\n".join(parser.paragraphs)
