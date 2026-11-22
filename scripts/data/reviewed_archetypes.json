@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "review_method": "Manual transcription of the official Wizards of the Coast archetype overview images preserved by the acquisition workflow. Color identities and short strategy summaries were visually reviewed; card associations were not inferred.",
+  "sets": {
+    "HOB": {
+      "set_name": "Magic: The Gathering | The Hobbit",
+      "source_url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+      "overview_image_review": "Official prerelease-guide archetype overview image; manually inspected from acquisition artifact.",
+      "taxonomy_dimensions": ["two_color"],
+      "taxonomy_status": "reviewed",
+      "archetypes": [
+        {"id":"humans","display_name":"Humans","color_identity":"WU","archetype_type":"two_color","strategy_text":"Recruit, draw your second card, and create Human Soldier tokens."},
+        {"id":"goblins","display_name":"Goblins","color_identity":"BR","archetype_type":"two_color","strategy_text":"Amass, then sacrifice creatures and artifacts for value."},
+        {"id":"wolves","display_name":"Wolves","color_identity":"BG","archetype_type":"two_color","strategy_text":"Use ferocious and creatures with power 4 or greater."},
+        {"id":"dwarves","display_name":"Dwarves","color_identity":"WR","archetype_type":"two_color","strategy_text":"Build around legendary cards, artifacts, and Sagas."},
+        {"id":"elves","display_name":"Elves","color_identity":"UG","archetype_type":"two_color","strategy_text":"Develop mana and take advantage of landfall."}
+      ]
+    },
+    "ECL": {
+      "set_name": "Lorwyn Eclipsed",
+      "source_url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+      "overview_image_review": "Official prerelease-guide archetype overview image; manually inspected from acquisition artifact.",
+      "taxonomy_dimensions": ["two_color"],
+      "taxonomy_status": "reviewed",
+      "archetypes": [
+        {"id":"merfolk","display_name":"Merfolk","color_identity":"WU","archetype_type":"two_color","strategy_text":"Use tapping synergies and cheap spells."},
+        {"id":"goblins","display_name":"Goblins","color_identity":"BR","archetype_type":"two_color","strategy_text":"Use -1/-1 counters and disposable creatures."},
+        {"id":"kithkin","display_name":"Kithkin","color_identity":"GW","archetype_type":"two_color","strategy_text":"Build around shared consciousness and shared abilities."},
+        {"id":"elementals","display_name":"Elementals","color_identity":"UR","archetype_type":"two_color","strategy_text":"Cast big spells and unleash elemental power."},
+        {"id":"elves","display_name":"Elves","color_identity":"BG","archetype_type":"two_color","strategy_text":"Use the graveyard as a resource."}
+      ]
+    },
+    "TDM": {
+      "set_name": "Tarkir: Dragonstorm",
+      "source_url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+      "overview_image_review": "Official prerelease-guide archetype overview image; manually inspected from acquisition artifact.",
+      "taxonomy_dimensions": ["three_color_clans", "two_color_themes"],
+      "taxonomy_status": "reviewed",
+      "archetypes": [
+        {"id":"abzan-endure","display_name":"Abzan Endure","color_identity":"WBG","archetype_type":"three_color_clan","strategy_text":"Use +1/+1 counters and Spirit tokens."},
+        {"id":"jeskai-flurry","display_name":"Jeskai Flurry","color_identity":"WUR","archetype_type":"three_color_clan","strategy_text":"Cast two or more spells in a turn."},
+        {"id":"sultai-renew","display_name":"Sultai Renew","color_identity":"UBG","archetype_type":"three_color_clan","strategy_text":"Use graveyard value to strengthen creatures."},
+        {"id":"mardu-mobilize","display_name":"Mardu Mobilize","color_identity":"WBR","archetype_type":"three_color_clan","strategy_text":"Create additional tokens."},
+        {"id":"temur-harmonize","display_name":"Temur Harmonize","color_identity":"UGR","archetype_type":"three_color_clan","strategy_text":"Cast spells twice, enabled by large creatures."},
+        {"id":"sacrifice","display_name":"Sacrifice","color_identity":"BR","archetype_type":"two_color_theme","strategy_text":"Secondary two-color theme: sacrifice."},
+        {"id":"two-spells","display_name":"Two Spells","color_identity":"UR","archetype_type":"two_color_theme","strategy_text":"Secondary two-color theme: cast two spells."},
+        {"id":"counters","display_name":"Counters","color_identity":"BG","archetype_type":"two_color_theme","strategy_text":"Secondary two-color theme: counters."},
+        {"id":"go-wide-tokens","display_name":"Go Wide Tokens","color_identity":"RW","archetype_type":"two_color_theme","strategy_text":"Secondary two-color theme: go-wide tokens."},
+        {"id":"leaves-the-graveyard","display_name":"Leaves the Graveyard","color_identity":"GU","archetype_type":"two_color_theme","strategy_text":"Secondary two-color theme: cards leaving the graveyard."}
+      ]
+    }
+  }
+}
