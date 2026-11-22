@@ -20,6 +20,8 @@ The intended journey is: refresh/check local Scryfall and 17Lands data at launch
 
 Recognition is never authoritative. Unresolved cards remain visibly unresolved, picks require explicit confirmation, and the drafted pool is derived from append-only events. Strategic guidance must expose evidence and uncertainty. In particular, archetype openness is not the same as the user's own color direction, and splash advice must account for fixing and mana requirements.
 
+Published archetype guidance and signpost cards are contextual metadata, not ground truth about draft strength or lane availability. Keep published design intent, historical pick behavior, observed card performance, and live-pack evidence separate and traceable. A signpost can contribute an early lane signal, but must never establish an open lane or produce a supported confidence state on its own. Require corroborating supporting-card depth, independent pack observations, or meaningful wheel evidence. A weak signpost does not invalidate a strategy whose supporting cards are arriving unusually late. Treat discrepancies between intended archetype, player valuation, and actual performance as evidence to investigate rather than silently resolving them in scoring.
+
 The detailed interaction hierarchy, states, acceptance scenarios, and open design questions are in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). This is accepted product direction, not implemented functionality.
 
 ## Core philosophy
