@@ -249,9 +249,6 @@ public enum CardEvaluationEngine {
     }
 
     public static func evaluate(card: CardRecord, review: CardEvaluationReview? = nil) -> CardEvaluationResult {
-        if let review {
-            try? validate(review: review, for: card)
-        }
         let text = ([card.oracleText] + card.cardFaces.map(\.oracleText))
             .compactMap { $0 }
             .joined(separator: "\n")
