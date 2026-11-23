@@ -4,13 +4,13 @@
   <h1>{{ .Title }}</h1>
   <p class="page-lede">Explore the Limited archetypes published and reviewed for each supported set.</p>
   <div class="archetype-grid">
-    {{ range $code, $set := site.Data.reviewed_archetypes.sets }}
-      {{ $slug := lower $code }}
+    {{ $sets := where site.Pages "Params.set_code" "ne" nil }}
+    {{ range sort $sets "Params.release_date" "desc" }}
       <article class="set-link-card">
-        <div class="eyebrow">{{ $code }}</div>
-        <h2><a href="{{ printf "/archetypes/%s/" $slug | relURL }}">{{ $set.set_name }}</a></h2>
-        <p>{{ len $set.archetypes }} reviewed archetype entries</p>
-        <a class="text-link" href="{{ printf "/archetypes/%s/" $slug | relURL }}">Explore set guide ↗</a>
+        <div class="eyebrow">{{ .Params.set_code }} · RELEASED {{ dateFormat "Jan 2, 2006" .Params.release_date | upper }}</div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Description }}</p>
+        <a class="text-link" href="{{ .RelPermalink }}">Explore set guide ↗</a>
       </article>
     {{ end }}
   </div>

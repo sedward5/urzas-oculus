@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ $evidence := readFile .Params.evidence_path | transform.Unmarshal }}
+<article class="page-content archetype-set-page">
+  <div class="eyebrow"><span class="eyebrow-line"></span> {{ .Params.set_code }} · PRELIMINARY LIMITED INTELLIGENCE</div>
+  <h1>{{ .Title }}</h1>
+  <p class="page-lede">{{ .Description }}</p>
+  <div class="source-status">
+    <strong>Source acquired · Oculus review pending</strong>
+    <p>These archetype names come from the official Wizards prerelease guide. They are not yet Oculus-reviewed classifications, card-role assignments, or performance conclusions.</p>
+    <p>Evidence retrieved {{ dateFormat "Jan 2, 2006" $evidence.retrieved_at }} · <a href="{{ .Params.source_url }}" rel="external noopener">Read the official Wizards prerelease guide ↗</a></p>
+  </div>
+  <h2>Archetypes identified by Wizards</h2>
+  <div class="archetype-grid">
+    {{ $show := false }}
+    {{ range $evidence.headings }}
+      {{ if eq .level "h2" }}
+        {{ if strings.Contains .text "Draft Archetypes" }}{{ $show = true }}{{ else if $show }}{{ $show = false }}{{ end }}
+      {{ else if and $show (eq .level "h3") }}
+        <article class="archetype-card">
+          <h3>{{ .text }}</h3>
+          <span class="archetype-kind">Official guide heading · awaiting Oculus review</span>
+        </article>
+      {{ end }}
+    {{ end }}
+  </div>
+  <p class="page-note">This page will gain card relationships, role classifications, and explainable predictions as the set analysis is reviewed. Performance data will be added when permitted public datasets become available.</p>
+</article>
+{{ end }}
