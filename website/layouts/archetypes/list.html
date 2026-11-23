@@ -4,7 +4,7 @@
   <h1>{{ .Title }}</h1>
   <p class="page-lede">Explore Limited archetypes and prerelease themes, with their review status clearly identified.</p>
   <div class="archetype-grid">
-    {{ range sort .Pages "Params.release_date" "desc" }}
+    {{ range sort .Pages "Date" "desc" }}
       {{ $code := .Params.set_code }}
       {{ $reviewed := index site.Data.reviewed_archetypes.sets $code }}
       <article class="set-link-card">

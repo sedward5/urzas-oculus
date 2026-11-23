@@ -1,8 +1,8 @@
 ---
 title: "Magic: The Gathering | Star Trek"
 description: "The ten two-color draft archetypes and highlighted cards from the official Star Trek prerelease guide."
+date: 2026-11-13T00:00:00Z
 set_code: "TRK"
-release_date: "2026-11-13"
 content_status: "preliminary"
 layout: "archetype-set-preliminary"
 evidence_path: "static/data/sets/TRK/wizards/guide-evidence.json"

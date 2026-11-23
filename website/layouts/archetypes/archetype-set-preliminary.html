@@ -34,14 +34,14 @@
             {{ range .cards }}
               {{ $card := index $cardsByName . }}
               {{ if $card }}
+                {{ $image := "" }}
+                {{ with $card.image_uris }}{{ $image = .normal }}{{ end }}
+                {{ if not $image }}
+                  {{ with $card.card_faces }}{{ with index . 0 }}{{ with .image_uris }}{{ $image = .normal }}{{ end }}{{ end }}{{ end }}
+                {{ end }}
                 <li>
-                  <details class="card-preview">
-                    <summary title="{{ $card.name }}">#{{ $card.collector_number }}</summary>
-                    {{ with $card.image_uris.normal }}
-                      <span class="card-preview-image"><img src="{{ . }}" alt="{{ $card.name }}" loading="lazy" decoding="async"></span>
-                    {{ end }}
-                  </details>
-                  <span class="card-links"><a href="{{ $card.scryfall_uri }}" rel="external noopener">{{ $card.name }} · Scryfall</a></span>
+                  {{ partial "card-preview.html" (dict "name" $card.name "image" $image) }}
+                  {{ with $card.scryfall_uri }}<span class="card-links"><a href="{{ . }}" rel="external noopener">Scryfall</a></span>{{ end }}
                 </li>
               {{ else }}
                 <li><span class="card-name">{{ . }}</span><span class="card-links">Card metadata not yet available</span></li>
@@ -52,6 +52,6 @@
       </article>
     {{ end }}
   </div>
-  <p class="page-note">Hover or select a collector number to preview its card. Card links open the matching TRK printing on Scryfall. The guide highlights these cards but does not assign Oculus roles such as enabler or payoff; those classifications will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
+  <p class="page-note">Hover or select a card name to preview its image. Scryfall links open the matching TRK printing. The guide highlights these cards but does not assign Oculus roles such as enabler or payoff; those classifications will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
 </article>
 {{ end }}

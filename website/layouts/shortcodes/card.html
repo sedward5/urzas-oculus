@@ -1,1 +1,3 @@
-{{- $name := .Get "name" | default (.Get 0) -}}{{- $image := .Get "image" -}}{{- if $image -}}<details class="card-preview"><summary>{{ $name }}</summary><span class="card-preview-image"><img src="{{ $image }}" alt="{{ $name }}" loading="lazy" decoding="async"></span></details>{{- else -}}<span class="card-name" title="{{ $name }}">{{ $name }}</span>{{- end -}}
+{{- $name := .Get "name" | default (.Get 0) -}}
+{{- $image := .Get "image" -}}
+{{- partial "card-preview.html" (dict "name" $name "image" $image) -}}
