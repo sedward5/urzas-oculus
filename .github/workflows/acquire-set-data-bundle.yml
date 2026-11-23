@@ -55,7 +55,7 @@ jobs:
           else
             cp "${files[@]}" "$DEST/"
           fi
-          if find website/static/data/17lands -type f \\( -name 'card-data-all-time.json' -o -name 'trophy-decks.json' \\) -print -quit | grep -q .; then
+          if find website/static/data/17lands -type f -name 'card-data-all-time.json' -o -type f -name 'trophy-decks.json' | grep -q .; then
             echo "Restricted 17Lands API snapshots remain in the public tree."
             exit 1
           fi
