@@ -1,4 +1,4 @@
-name: Acquire Set Data Bundle
+name: Acquire Set Data (Recommended)
 on:
   schedule:
     - cron: "23 11 * * 1"
