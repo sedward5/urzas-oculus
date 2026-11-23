@@ -36,6 +36,16 @@ final class DataEngineTests: XCTestCase {
         XCTAssertEqual(try store.cards(named: "Lightning Bolt").count, 2)
     }
 
+    func testCardsBySetReturnsOnlyMatchingSetInStableOrder() throws {
+        let (store, url) = try makeStore()
+        defer { try? store.close(); try? FileManager.default.removeItem(at: url) }
+        try store.upsert(card: CardRecord(id: "b", name: "Zulu", setCode: "TRK"))
+        try store.upsert(card: CardRecord(id: "a", name: "Alpha", setCode: "TRK"))
+        try store.upsert(card: CardRecord(id: "c", name: "Beta", setCode: "HOB"))
+
+        XCTAssertEqual(try store.cards(setCode: "trk").map(\\.id), ["a", "b"])
+    }
+
     func testSeventeenLandsImportLinksMetricsAndPreservesContext() throws {
         let (store, url) = try makeStore()
         defer { try? store.close(); try? FileManager.default.removeItem(at: url) }
