@@ -168,12 +168,13 @@ Next implementation steps:
 The `CardEvaluationTool` executable runs the same Swift-core structural suggester used by the app. It accepts an array of normalized `CardRecord` JSON objects and an optional array of reviewer-authored `CardEvaluationReview` records:
 
 ```sh
-swift run CardEvaluationTool --input cards.json > evaluation-suggestions.json
-swift run CardEvaluationTool --input cards.json --reviews reviewed-cards.json > evaluation-results.json
+swift run CardEvaluationTool --database "$HOME/Library/Application Support/UrzasOculus/oculus.sqlite" --set TRK --template > trk-review-template.json
+# Edit the template: confirm/reject roles and add evidence-backed assessments.
+swift run CardEvaluationTool --database "$HOME/Library/Application Support/UrzasOculus/oculus.sqlite" --set TRK --reviews trk-reviewed.json > trk-evaluation.json
 ```
 
 The JSON input is the core Codable card-record format, not raw Scryfall bulk JSON. For normal use, point the tool at the local Oculus SQLite database and select a set; it reads the already-imported normalized card records directly. The JSON option is intended for fixtures and reproducible tests. Do not build a second Scryfall parser in the CLI. The output is deterministic JSON, sorted by the input card order and with each card's role suggestions sorted by role identifier.
 
-The CLI can read directly from the local database (for example, `swift run CardEvaluationTool --database ~/Library/Application\\ Support/UrzasOculus/oculus.sqlite --set TRK`) or from a normalized JSON fixture. It rejects duplicate printing IDs and reviews whose printing ID, set code, or Oracle ID do not match the supplied card. It never modifies the review file. Review updates are authored as a new versioned input file and should be retained as immutable snapshots.
+The CLI can read directly from the local database or from a normalized JSON fixture. The `--template` option emits one editable review record per card; after review, pass that file with `--reviews` to validate and combine the human assessments with the structural suggestions. It rejects duplicate printing IDs and reviews whose printing ID, set code, or Oracle ID do not match the supplied card. It never modifies the review file. Review updates are authored as a new versioned input file and should be retained as immutable snapshots.
 
 The CLI is a batch analysis aid, not yet a graphical review interface. Its current rules are intentionally conservative and produce candidate labels only. Reviewers must inspect the complete card, including all faces and costs, before confirming roles or making a rate/dimension assessment.
