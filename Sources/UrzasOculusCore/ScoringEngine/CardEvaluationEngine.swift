@@ -296,6 +296,17 @@ public enum CardEvaluationEngine {
             add(.removal, "rules.removal.targeted-destroy-exile-bounce", "Rules text contains a targeted destroy, exile, or bounce effect.")
             add(.interaction, "rules.interaction.targeted-answer", "Rules text contains a targeted answer to a game object.")
         }
+        if containsAny(text, ["destroy all creatures", "exile all creatures", "destroy all artifacts", "destroy all enchantments"]) {
+            add(.sweeper, "rules.sweeper.mass-destroy-exile", "Rules text affects all permanents or creatures of a class; symmetry and scope require review.")
+            add(.removal, "rules.removal.mass-answer", "Rules text can remove multiple opposing permanents; symmetry and board impact require review.")
+        }
+        if containsAny(text, ["exile all cards from target player's graveyard", "exile all cards from all graveyards", "target player exiles their graveyard"]) {
+            add(.graveyardHate, "rules.hate.graveyard", "Rules text removes cards from graveyards.")
+        }
+        if containsAny(text, ["destroy target artifact", "exile target artifact", "destroy target enchantment", "exile target enchantment"]) {
+            add(.artifactHate, "rules.hate.artifact-or-enchantment", "Rules text specifically answers an artifact or enchantment; verify the relevant permanent type.")
+            add(.interaction, "rules.interaction.permanent-type-answer", "Rules text answers a restricted permanent type.")
+        }
         if text.contains("deals ") && text.contains(" damage to target ") {
             add(.removal, "rules.removal.targeted-damage", "Rules text contains damage directed at a target; effectiveness depends on damage amount and target restrictions.")
             add(.interaction, "rules.interaction.targeted-damage", "Rules text contains targeted damage interaction.")
