@@ -89,6 +89,36 @@ final class CardEvaluationEngineTests: XCTestCase {
         XCTAssertEqual(decoded, result)
     }
 
+    func testRejectsInvalidReviewDimensionsAndMissingEvidence() throws {
+        let card = CardRecord(id: "printing-5", name: "Invalid", setCode: "TRK")
+        let invalid = CardEvaluationReview(
+            modelVersion: "prediction-v1",
+            scryfallID: "printing-5",
+            setCode: "TRK",
+            baselinePower: CardDimensionAssessment(
+                value: 6,
+                confidence: .high,
+                evidence: [],
+                rationale: "Invalid scale."
+            ),
+            rate: .onRate,
+            rateRationale: "Looks fine."
+        )
+
+        XCTAssertThrowsError(try CardEvaluationEngine.validate(review: invalid, for: card)) {
+            XCTAssertEqual($0 as? CardEvaluationValidationError, .invalidDimension("baselinePower"))
+        }
+
+        let mismatched = CardEvaluationReview(
+            modelVersion: "prediction-v1",
+            scryfallID: "another-printing",
+            setCode: "TRK"
+        )
+        XCTAssertThrowsError(try CardEvaluationEngine.validate(review: mismatched, for: card)) {
+            XCTAssertEqual($0 as? CardEvaluationValidationError, .mismatchedCardIdentity)
+        }
+    }
+
     func testSuggestionsAreDeterministicAndSorted() {
         let card = CardRecord(
             id: "printing-4",
