@@ -12,7 +12,7 @@ Run Actions → Discover Limited Sets → Run workflow, or let the weekly schedu
 
 Run Actions → Acquire Set Data Bundle → Run workflow. Supply a Scryfall set code, event type, and optionally an official Wizards guide URL.
 
-The workflow retrieves English Scryfall card records and image URIs, downloads only 17Lands archives actually linked for that set/event, and optionally preserves Wizards guide HTML, headings, paragraphs, and explicitly labeled archetype/draft images with checksums. If 17Lands has not published the selected event, it records not_yet_published and continues.
+The workflow retrieves English Scryfall card records and image URIs, downloads each available 17Lands S3 archive, and optionally preserves Wizards guide evidence. Source selection is automatic: when both draft and game archives exist, they are preferred and the card-analytics web API is skipped. If either archive is missing, GitHub requests one ALL_TIME card-analytics snapshot to fill the gap. Trophy decks are a separate supplemental source and are requested once per acquisition run because they are not included in the public CSV archives. API failures are recorded without discarding successfully acquired sources. The workflow runs weekly for TRK by default and can be manually dispatched for another set/event.
 
 Acquisition creates a candidate artifact. It does not infer archetypes, assign card roles, promote reviewed catalogs, calculate recommendation metrics, or claim 17Lands eligibility parity. Human review and promotion remain separate.
 
@@ -28,3 +28,16 @@ Use that URL in the optional guide field. Re-run acquisition after 17Lands publi
 - https://scryfall.com/docs/api
 - https://www.17lands.com/public_datasets
 - https://www.17lands.com/faq
+
+
+## 17Lands request policy
+
+- The native app never calls the 17Lands web API.
+- GitHub Actions is the only component that requests web API data.
+- Bulk S3 archives are preferred independently for draft and game data.
+- Card analytics uses /api/card_data with time_period=ALL_TIME only when one or both bulk archives are absent.
+- Trophy decks use one supplemental request per acquisition run; they are not present in the public CSV archive set.
+- The scheduled acquisition runs weekly, not continuously. Raw responses are timestamped and checksummed for downstream proxying.
+- 17Lands states that its API is unsupported for third-party use and discourages scraping. This deliberately low-frequency, cached snapshot approach limits requests, but does not imply endorsement or a stability guarantee.
+
+The API response is preserved as raw JSON because its schema and availability may change. Trophy decks are a selected sample of successful runs, not population-wide performance data. The native app should consume a repository-published snapshot and display its retrieval time and source; it should not make direct API requests.

@@ -109,6 +109,11 @@ def save(url,path):
     data=fetch(url,timeout=240); path.parent.mkdir(parents=True,exist_ok=True); path.write_bytes(data)
     return {"url":url,"path":str(path),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}
 
+def missing_bulk_sources(archives):
+    """Return required bulk sources not present in the official listing."""
+    return sorted({"draft","game"}-set(archives))
+
+
 def acquire(code,event,guide,out):
     code=code.upper()
     if not re.fullmatch(r"[A-Z0-9]{2,6}",code): raise ValueError("Invalid set code")
