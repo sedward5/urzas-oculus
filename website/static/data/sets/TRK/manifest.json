@@ -2,36 +2,19 @@
   "schema_version": 1,
   "set_code": "TRK",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-23T12:39:49.804453+00:00",
+  "generated_at": "2026-11-23T22:42:37.611041+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/trk-cards.json",
-      "bytes": 2032245,
-      "sha256": "52bd9e15a5f07e42eb88a2bf3195c0b5fa1e598c85293aab6cfdaf0d6166827d",
+      "bytes": 2032246,
+      "sha256": "10f1610d1b4d7ba2f942d3df3ef3e1b6cfa024e1556835c35d944cb1d31bb6a3",
       "records": 311
-    },
-    {
-      "url": "https://media.wizards.com/2026/images/daily/en_nxQ95pLAY8.webp",
-      "path": "set-acquisition-output/wizards/overview-13.webp",
-      "bytes": 176510,
-      "sha256": "5b6e828f18ef38bdd49f61ffd8a25c76ec5623d9af919a0ae8afdfc89e6fe054",
-      "alt": "TRK Draft Archetypes Insert"
-    },
-    {
-      "path": "set-acquisition-output/wizards/guide.html",
-      "bytes": 251101,
-      "sha256": "bae4e950330982e61018ac4ac7d53d4177b8b12651821820972445d64afce921"
-    },
-    {
-      "path": "set-acquisition-output/wizards/guide-evidence.json",
-      "bytes": 14345,
-      "sha256": "021c0683e36460171333d1518cb16af66051d41e0055d6829b662ffd5dbc9433"
     }
   ],
   "status": {
     "scryfall": "acquired",
     "17lands": "not_yet_published",
-    "wizards": "evidence_acquired_unreviewed"
+    "wizards": "not_requested"
   },
   "warnings": [
     "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"

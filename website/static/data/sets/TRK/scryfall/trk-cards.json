@@ -1,6 +1,6 @@
 {
   "set_code": "TRK",
-  "retrieved_at": "2026-11-23T12:39:49.804453+00:00",
+  "retrieved_at": "2026-11-23T22:42:37.611041+00:00",
   "source": "https://api.scryfall.com/cards/search",
   "cards": [
     {
@@ -116,14 +116,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24497,
+      "edhrec_rank": 24381,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.33",
+        "usd": "0.97",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.25",
-        "tix": "0.05"
+        "eur_foil": "0.24",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3D70%252C000%2BLight-Years%2Bfrom%2BHome",
@@ -251,18 +251,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32687,
+      "edhrec_rank": 32681,
       "preview": {
         "source": "Nerdist",
         "source_uri": "https://nerdist.com/article/star-trek-x-magic-the-gathering-cards-reveal-nerdist-exclusive/",
         "previewed_at": "2026-10-27"
       },
       "prices": {
-        "usd": "0.06",
-        "usd_foil": "0.23",
+        "usd": "0.07",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.23",
+        "eur": "0.08",
+        "eur_foil": "0.24",
         "tix": "0.02"
       },
       "related_uris": {
@@ -410,19 +410,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20211,
+      "edhrec_rank": 20007,
       "preview": {
         "source": "luastardust",
         "source_uri": "https://bsky.app/profile/luastardust.com/post/3myg5zzvunk22",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.58",
-        "usd_foil": "1.13",
+        "usd": "0.51",
+        "usd_foil": "0.83",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.58",
-        "tix": "0.23"
+        "eur_foil": "0.59",
+        "tix": "0.25"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DAntagonist%2BIncorporator",
@@ -568,18 +568,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26878,
+      "edhrec_rank": 26688,
       "preview": {
         "source": "Herumkommandiert",
         "source_uri": "https://www.youtube.com/shorts/gsPG4tyABcA",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.33",
+        "usd": "0.16",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.18",
+        "eur": "0.05",
+        "eur_foil": "0.17",
         "tix": "0.02"
       },
       "related_uris": {
@@ -713,13 +713,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20174,
+      "edhrec_rank": 20063,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.37",
+        "usd": "0.12",
+        "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.22",
+        "eur_foil": "0.21",
         "tix": "0.02"
       },
       "related_uris": {
@@ -875,13 +875,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25408,
+      "edhrec_rank": 25279,
       "prices": {
-        "usd": "0.29",
-        "usd_foil": "0.41",
+        "usd": "0.34",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.63",
+        "eur_foil": "0.59",
         "tix": "0.11"
       },
       "related_uris": {
@@ -1032,14 +1032,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17736,
+      "edhrec_rank": 17584,
       "prices": {
-        "usd": "8.94",
-        "usd_foil": "9.74",
+        "usd": "8.65",
+        "usd_foil": "10.10",
         "usd_etched": null,
-        "eur": "6.92",
-        "eur_foil": "8.20",
-        "tix": "1.16"
+        "eur": "6.87",
+        "eur_foil": "7.90",
+        "tix": "0.59"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCaptain%2BJean-Luc%2BPicard",
@@ -1165,12 +1165,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23861,
+      "edhrec_rank": 23695,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.20",
+        "usd": "0.13",
+        "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.03",
         "eur_foil": "0.27",
         "tix": "0.02"
       },
@@ -1300,17 +1300,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15843,
+      "edhrec_rank": 15646,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/mtgjp/status/2113182317476987013",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.36",
+        "usd": "0.16",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.19",
+        "eur": "0.18",
         "eur_foil": "0.33",
         "tix": "0.01"
       },
@@ -1459,18 +1459,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17058,
+      "edhrec_rank": 16834,
       "preview": {
         "source": "Takenuma Sage",
         "source_uri": "https://www.bilibili.com/opus/1261844213847293953",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.35",
+        "usd": "0.13",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.14",
-        "eur_foil": "0.29",
+        "eur_foil": "0.30",
         "tix": "0.01"
       },
       "related_uris": {
@@ -1603,19 +1603,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22005,
+      "edhrec_rank": 21776,
       "preview": {
         "source": "Brewer's Kitchen",
         "source_uri": "https://x.com/Brewers_Kitchen/status/2114763271807119632",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.49",
-        "usd_foil": "0.98",
+        "usd": "0.57",
+        "usd_foil": "1.10",
         "usd_etched": null,
-        "eur": "0.13",
-        "eur_foil": "1.21",
-        "tix": "0.20"
+        "eur": "0.11",
+        "eur_foil": "1.14",
+        "tix": "0.19"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDeanna%2BTroi%252C%2BPsychic%2BCounsel",
@@ -1745,10 +1745,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30014,
+      "edhrec_rank": 29927,
       "prices": {
-        "usd": "0.10",
-        "usd_foil": "0.22",
+        "usd": "0.09",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.15",
@@ -1884,14 +1884,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17129,
+      "edhrec_rank": 17036,
       "prices": {
-        "usd": "9.32",
-        "usd_foil": "10.65",
+        "usd": "9.16",
+        "usd_foil": "10.51",
         "usd_etched": null,
-        "eur": "8.53",
-        "eur_foil": "12.53",
-        "tix": "0.82"
+        "eur": "8.60",
+        "eur_foil": "12.12",
+        "tix": "0.48"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDr.%2BBeverly%2BCrusher",
@@ -2024,14 +2024,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24061,
+      "edhrec_rank": 23900,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.35",
+        "usd": "0.15",
+        "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.16",
-        "tix": "0.02"
+        "eur": "0.05",
+        "eur_foil": "0.15",
+        "tix": "0.03"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDr.%2BMcCoy%252C%2BSurly%2BSurgeon",
@@ -2159,12 +2159,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27557,
+      "edhrec_rank": 27441,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.25",
+        "usd": "0.15",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.23",
         "tix": "0.01"
       },
@@ -2314,14 +2314,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24843,
+      "edhrec_rank": 24675,
       "prices": {
-        "usd": "0.60",
-        "usd_foil": "0.72",
+        "usd": "0.56",
+        "usd_foil": "0.77",
         "usd_etched": null,
-        "eur": "1.13",
-        "eur_foil": "1.78",
-        "tix": "0.26"
+        "eur": "1.03",
+        "eur_foil": "1.69",
+        "tix": "0.23"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DExcalbian%2BGamemaster",
@@ -2451,10 +2451,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28172,
+      "edhrec_rank": 28099,
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.19",
+        "usd": "0.10",
+        "usd_foil": "0.15",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.16",
@@ -2586,19 +2586,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19486,
+      "edhrec_rank": 19201,
       "preview": {
         "source": "Hareruya",
         "source_uri": "https://article.hareruyamtg.com/article/117161/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "1.15",
-        "usd_foil": "1.45",
+        "usd": "1.14",
+        "usd_foil": "1.55",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "1.48",
-        "tix": "0.19"
+        "eur_foil": "1.38",
+        "tix": "0.16"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DFederation%2BResupply",
@@ -2731,12 +2731,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29985,
+      "edhrec_rank": 29857,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.15",
+        "usd": "0.14",
+        "usd_foil": "0.14",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.12",
         "eur_foil": "0.13",
         "tix": "0.02"
       },
@@ -2868,14 +2868,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31538,
+      "edhrec_rank": 31476,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.26",
+        "usd": "0.12",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.13",
         "eur_foil": "0.19",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGhost%2Bof%2BIllyria",
@@ -3006,19 +3006,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28340,
+      "edhrec_rank": 28258,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.instagram.com/p/De7-pirDO6e/",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.30",
+        "usd": "0.14",
+        "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.27",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHologram%2BJaneway",
@@ -3146,12 +3146,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23489,
+      "edhrec_rank": 23312,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.24",
+        "usd": "0.12",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.22",
         "tix": "0.02"
       },
@@ -3301,13 +3301,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29984,
+      "edhrec_rank": 29921,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.33",
+        "usd": "0.16",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.24",
+        "eur": "0.10",
+        "eur_foil": "0.18",
         "tix": "0.02"
       },
       "related_uris": {
@@ -3440,19 +3440,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28646,
+      "edhrec_rank": 28571,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.instagram.com/reels/DexKDcQAbnb/",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.35",
+        "usd": "0.17",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.25",
-        "tix": "0.15"
+        "eur_foil": "0.22",
+        "tix": "0.11"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMiles%2BO%2527Brien%252C%2BTransporter%2BOps",
@@ -3578,13 +3578,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19638,
+      "edhrec_rank": 19380,
       "prices": {
-        "usd": "3.11",
-        "usd_foil": "3.50",
+        "usd": "2.96",
+        "usd_foil": "4.46",
         "usd_etched": null,
-        "eur": "1.42",
-        "eur_foil": "2.32",
+        "eur": "1.41",
+        "eur_foil": "2.41",
         "tix": "0.07"
       },
       "related_uris": {
@@ -3714,17 +3714,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24434,
+      "edhrec_rank": 24172,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.32",
+        "usd": "0.13",
+        "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.13",
         "eur_foil": "0.20",
         "tix": "0.02"
       },
@@ -3856,14 +3856,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22519,
+      "edhrec_rank": 22367,
       "prices": {
-        "usd": "0.36",
-        "usd_foil": "0.53",
+        "usd": "0.37",
+        "usd_foil": "0.56",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
-        "tix": "0.05"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DPeace%2Bin%2BOur%2BTime",
@@ -3991,7 +3991,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32644,
+      "edhrec_rank": 32605,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
@@ -3999,7 +3999,7 @@
       },
       "prices": {
         "usd": "0.14",
-        "usd_foil": "0.17",
+        "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.18",
@@ -4134,13 +4134,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26687,
+      "edhrec_rank": 26554,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.33",
+        "usd": "0.17",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.19",
+        "eur_foil": "0.16",
         "tix": "0.01"
       },
       "related_uris": {
@@ -4270,14 +4270,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17073,
+      "edhrec_rank": 16862,
       "prices": {
-        "usd": "0.81",
-        "usd_foil": "2.53",
+        "usd": "0.90",
+        "usd_foil": "2.21",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.57",
-        "tix": "0.19"
+        "eur_foil": "0.56",
+        "tix": "0.11"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DPrimary%2BUnimatrix%2BAdjunct",
@@ -4405,7 +4405,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30695,
+      "edhrec_rank": 30654,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
@@ -4413,7 +4413,7 @@
       },
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.23",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.15",
@@ -4547,13 +4547,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26307,
+      "edhrec_rank": 26202,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.31",
+        "usd": "0.15",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.23",
+        "eur_foil": "0.17",
         "tix": "0.02"
       },
       "related_uris": {
@@ -4688,12 +4688,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30186,
+      "edhrec_rank": 30098,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.17",
+        "usd": "0.14",
+        "usd_foil": "0.15",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.14",
         "eur_foil": "0.24",
         "tix": "0.01"
       },
@@ -4823,10 +4823,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24251,
+      "edhrec_rank": 24132,
       "prices": {
         "usd": "0.10",
-        "usd_foil": "0.22",
+        "usd_foil": "0.14",
         "usd_etched": null,
         "eur": "0.10",
         "eur_foil": "0.27",
@@ -4956,10 +4956,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21764,
+      "edhrec_rank": 21626,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.28",
+        "usd": "0.13",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.10",
         "eur_foil": "0.22",
@@ -5091,12 +5091,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31332,
+      "edhrec_rank": 31283,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.22",
+        "usd": "0.10",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.03",
         "eur_foil": "0.14",
         "tix": "0.02"
       },
@@ -5232,14 +5232,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25932,
+      "edhrec_rank": 25808,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.35",
+        "usd": "0.26",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
-        "tix": "0.23"
+        "tix": "0.16"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSulu%252C%2BSpace%2BSwashbuckler",
@@ -5367,12 +5367,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26720,
+      "edhrec_rank": 26593,
       "prices": {
         "usd": "0.09",
-        "usd_foil": "0.22",
+        "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.13",
         "tix": "0.01"
       },
@@ -5503,15 +5503,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23416,
+      "edhrec_rank": 23231,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.bilibili.com/opus/1261875137653768196",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.33",
+        "usd": "0.17",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.06",
         "eur_foil": "0.14",
@@ -5642,19 +5642,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27184,
+      "edhrec_rank": 27041,
       "preview": {
         "source": "MaryCherry",
         "source_uri": "https://www.instagram.com/p/DexbldLks2P",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.30",
+        "usd": "0.22",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.17",
-        "eur_foil": "0.22",
-        "tix": "0.05"
+        "eur": "0.16",
+        "eur_foil": "0.24",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThere%2527s%2BCoffee%2Bin%2Bthat%2BNebula",
@@ -5801,14 +5801,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21199,
+      "edhrec_rank": 20980,
       "prices": {
-        "usd": "0.93",
-        "usd_foil": "1.52",
+        "usd": "1.00",
+        "usd_foil": "1.99",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.49",
-        "tix": "0.15"
+        "eur_foil": "0.48",
+        "tix": "0.11"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTroubling%2BTribbles",
@@ -5939,14 +5939,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30272,
+      "edhrec_rank": 30238,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.23",
+        "usd": "0.15",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.11",
         "eur_foil": "0.17",
-        "tix": "0.02"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DUna%2BChin-Riley%252C%2BNumber%2BOne",
@@ -6098,14 +6098,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18481,
+      "edhrec_rank": 18332,
       "prices": {
-        "usd": "1.49",
-        "usd_foil": "1.98",
+        "usd": "1.82",
+        "usd_foil": "1.96",
         "usd_etched": null,
-        "eur": "1.21",
-        "eur_foil": "2.27",
-        "tix": "0.28"
+        "eur": "1.20",
+        "eur_foil": "2.08",
+        "tix": "0.25"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DU.S.S.%2BEnterprise-A%252C%2BFree%2BSpirit",
@@ -6237,19 +6237,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23778,
+      "edhrec_rank": 23625,
       "preview": {
         "source": "ZBexx",
         "source_uri": "https://www.instagram.com/zbexx/reel/De98GNmsdqm/",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.34",
+        "usd": "0.11",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.19",
-        "eur_foil": "0.19",
-        "tix": "0.02"
+        "eur_foil": "0.21",
+        "tix": "0.03"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DU.S.S.%2BExcelsior%252C%2BCutting%2BEdge",
@@ -6377,17 +6377,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30060,
+      "edhrec_rank": 29954,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.26",
+        "usd": "0.15",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.26",
         "tix": "0.01"
       },
@@ -6518,19 +6518,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19330,
+      "edhrec_rank": 18807,
       "preview": {
         "source": "Der Standard",
         "source_uri": "https://www.derstandard.de/story/3000000345741/magic-the-gathering-exklusive-kartenpreview-im-universum-von-star-trek",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "3.81",
-        "usd_foil": "9.14",
+        "usd": "4.31",
+        "usd_foil": "7.60",
         "usd_etched": null,
-        "eur": "4.30",
-        "eur_foil": "7.65",
-        "tix": "12.55"
+        "eur": "4.64",
+        "eur_foil": "8.05",
+        "tix": "9.07"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DAnthropological%2BMission",
@@ -6665,14 +6665,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24872,
+      "edhrec_rank": 24652,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.38",
+        "usd": "0.17",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.59",
-        "tix": "0.09"
+        "eur_foil": "0.54",
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BCaretaker",
@@ -6802,18 +6802,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29553,
+      "edhrec_rank": 29419,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.20",
+        "usd": "0.18",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.03",
-        "eur_foil": "0.09",
+        "eur": "0.02",
+        "eur_foil": "0.07",
         "tix": "0.02"
       },
       "related_uris": {
@@ -6959,13 +6959,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31001,
+      "edhrec_rank": 30984,
       "prices": {
         "usd": "0.15",
-        "usd_foil": "0.28",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.18",
+        "eur_foil": "0.19",
         "tix": "0.01"
       },
       "related_uris": {
@@ -7096,13 +7096,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30667,
+      "edhrec_rank": 30636,
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.21",
+        "usd": "0.11",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.15",
+        "eur": "0.07",
+        "eur_foil": "0.13",
         "tix": "0.01"
       },
       "related_uris": {
@@ -7231,13 +7231,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22026,
+      "edhrec_rank": 21880,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.24",
+        "usd": "0.16",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.15",
+        "eur": "0.09",
+        "eur_foil": "0.12",
         "tix": "0.01"
       },
       "related_uris": {
@@ -7369,14 +7369,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23495,
+      "edhrec_rank": 23274,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.14",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.15",
-        "eur_foil": "0.24",
-        "tix": "0.02"
+        "eur_foil": "0.22",
+        "tix": "0.03"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DData%252C%2BNew%2BLife",
@@ -7505,14 +7505,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25442,
+      "edhrec_rank": 25258,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.32",
+        "usd": "0.17",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.21",
-        "eur_foil": "0.39",
-        "tix": "0.10"
+        "eur": "0.20",
+        "eur_foil": "0.40",
+        "tix": "0.05"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDeep%2BSpace%2BScan",
@@ -7640,14 +7640,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20255,
+      "edhrec_rank": 20088,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.21",
-        "tix": "0.02"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDominion%2BSaboteur",
@@ -7777,12 +7777,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29410,
+      "edhrec_rank": 29176,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.21",
+        "usd": "0.14",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.23",
         "tix": "0.02"
       },
@@ -7912,17 +7912,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30713,
+      "edhrec_rank": 30670,
       "preview": {
         "source": "galaxyAUS",
         "source_uri": "https://www.instagram.com/p/DexcjdME_hb",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.26",
+        "usd": "0.12",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.04",
         "eur_foil": "0.15",
         "tix": "0.01"
       },
@@ -8057,19 +8057,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26005,
+      "edhrec_rank": 25866,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.youtube.com/shorts/0G5qQWPW3O8",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.29",
+        "usd": "0.20",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.31",
-        "tix": "0.02"
+        "eur": "0.15",
+        "eur_foil": "0.29",
+        "tix": "0.03"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DEnsign%2BPavel%2BChekov",
@@ -8201,18 +8201,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26148,
+      "edhrec_rank": 25948,
       "preview": {
         "source": "ZBexx",
         "source_uri": "https://www.instagram.com/zbexx/reel/De98GNmsdqm/",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.38",
+        "usd": "0.17",
+        "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.15",
-        "eur_foil": "0.23",
+        "eur": "0.14",
+        "eur_foil": "0.24",
         "tix": "0.02"
       },
       "related_uris": {
@@ -8343,13 +8343,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24657,
+      "edhrec_rank": 24519,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.27",
+        "usd": "0.16",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.23",
+        "eur": "0.09",
+        "eur_foil": "0.29",
         "tix": "0.02"
       },
       "related_uris": {
@@ -8476,12 +8476,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31952,
+      "edhrec_rank": 31926,
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.15",
+        "usd_foil": "0.14",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.02",
         "eur_foil": "0.17",
         "tix": "0.01"
       },
@@ -8632,13 +8632,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27730,
+      "edhrec_rank": 27571,
       "prices": {
-        "usd": "0.26",
-        "usd_foil": "0.36",
+        "usd": "0.22",
+        "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.15",
-        "eur_foil": "0.33",
+        "eur": "0.14",
+        "eur_foil": "0.26",
         "tix": "0.15"
       },
       "related_uris": {
@@ -8767,12 +8767,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28264,
+      "edhrec_rank": 28175,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.34",
+        "usd": "0.10",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.13",
         "eur_foil": "0.27",
         "tix": "0.01"
       },
@@ -8907,14 +8907,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25712,
+      "edhrec_rank": 25516,
       "prices": {
-        "usd": "0.23",
+        "usd": "0.22",
         "usd_foil": "0.46",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.43",
-        "tix": "0.14"
+        "eur_foil": "0.42",
+        "tix": "0.13"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DH.M.S.%2BBounty%252C%2BUnlikely%2BTimeship",
@@ -9047,13 +9047,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30699,
+      "edhrec_rank": 30618,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.30",
+        "usd": "0.13",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.20",
+        "eur": "0.09",
+        "eur_foil": "0.51",
         "tix": "0.01"
       },
       "related_uris": {
@@ -9189,13 +9189,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28637,
+      "edhrec_rank": 28539,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.31",
+        "usd": "0.20",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.13",
+        "eur_foil": "0.16",
         "tix": "0.02"
       },
       "related_uris": {
@@ -9324,7 +9324,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32129,
+      "edhrec_rank": 32082,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
@@ -9332,7 +9332,7 @@
       },
       "prices": {
         "usd": "0.06",
-        "usd_foil": "0.21",
+        "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.15",
@@ -9470,18 +9470,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26980,
+      "edhrec_rank": 26791,
       "preview": {
         "source": "Der Standard",
         "source_uri": "https://www.derstandard.de/story/3000000345741/magic-the-gathering-exklusive-kartenpreview-im-universum-von-star-trek",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.28",
+        "usd": "0.16",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.14",
-        "eur_foil": "0.14",
+        "eur_foil": "0.16",
         "tix": "0.01"
       },
       "related_uris": {
@@ -9634,14 +9634,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25857,
+      "edhrec_rank": 25748,
       "prices": {
-        "usd": "0.84",
-        "usd_foil": "1.08",
+        "usd": "0.93",
+        "usd_foil": "1.06",
         "usd_etched": null,
-        "eur": "0.62",
-        "eur_foil": "3.42",
-        "tix": "0.59"
+        "eur": "0.67",
+        "eur_foil": "3.36",
+        "tix": "0.38"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DKobayashi%2BMaru%2BScenario",
@@ -9773,14 +9773,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21544,
+      "edhrec_rank": 21365,
       "prices": {
-        "usd": "2.69",
-        "usd_foil": "3.34",
+        "usd": "3.05",
+        "usd_foil": "3.33",
         "usd_etched": null,
-        "eur": "5.52",
+        "eur": "5.48",
         "eur_foil": "7.13",
-        "tix": "0.39"
+        "tix": "0.34"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DLieutenant%2BCommander%2BData",
@@ -9912,14 +9912,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20062,
+      "edhrec_rank": 19915,
       "prices": {
-        "usd": "0.29",
+        "usd": "0.31",
         "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.36",
-        "tix": "0.11"
+        "eur_foil": "0.35",
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DLt.%2BCmdr.%2BGeordi%2BLa%2BForge",
@@ -10062,13 +10062,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24324,
+      "edhrec_rank": 24070,
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.30",
+        "usd": "0.12",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.13",
-        "eur_foil": "0.19",
+        "eur": "0.12",
+        "eur_foil": "0.20",
         "tix": "0.02"
       },
       "related_uris": {
@@ -10200,12 +10200,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30338,
+      "edhrec_rank": 30263,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.25",
+        "usd": "0.13",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.12",
         "eur_foil": "0.19",
         "tix": "0.02"
       },
@@ -10339,10 +10339,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28916,
+      "edhrec_rank": 28716,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.19",
+        "usd": "0.10",
+        "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.19",
@@ -10478,14 +10478,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16970,
+      "edhrec_rank": 16729,
       "prices": {
-        "usd": "13.11",
-        "usd_foil": "14.17",
+        "usd": "13.58",
+        "usd_foil": "14.89",
         "usd_etched": null,
-        "eur": "8.33",
+        "eur": "8.42",
         "eur_foil": "14.87",
-        "tix": "0.36"
+        "tix": "0.37"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMr.%2BSpock%252C%2BScience%2BOfficer",
@@ -10620,13 +10620,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24573,
+      "edhrec_rank": 24387,
       "prices": {
-        "usd": "0.40",
-        "usd_foil": "0.43",
+        "usd": "0.32",
+        "usd_foil": "0.42",
         "usd_etched": null,
         "eur": "0.19",
-        "eur_foil": "0.46",
+        "eur_foil": "0.43",
         "tix": "0.05"
       },
       "related_uris": {
@@ -10755,13 +10755,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26730,
+      "edhrec_rank": 26594,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.23",
+        "usd": "0.16",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.22",
+        "eur": "0.06",
+        "eur_foil": "0.23",
         "tix": "0.02"
       },
       "related_uris": {
@@ -10893,14 +10893,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24939,
+      "edhrec_rank": 24778,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.35",
+        "usd": "0.23",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.30",
-        "tix": "0.19"
+        "eur_foil": "0.28",
+        "tix": "0.16"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRomulan%2BBird-of-Prey",
@@ -11028,12 +11028,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26753,
+      "edhrec_rank": 26561,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.27",
+        "usd": "0.14",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.12",
         "eur_foil": "0.15",
         "tix": "0.01"
       },
@@ -11166,19 +11166,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27306,
+      "edhrec_rank": 27085,
       "preview": {
         "source": "TCGplayer",
         "source_uri": "https://www.tcgplayer.com/content/article/Check-Out-Our-EXCLUSIVE-Magic-The-Gathering-Star-Trek-Preview-Card/de3e6d42-6b71-4f66-bdb7-014fb3426462/",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "1.41",
-        "usd_foil": "1.97",
+        "usd": "1.38",
+        "usd_foil": "1.90",
         "usd_etched": null,
-        "eur": "0.69",
-        "eur_foil": "3.19",
-        "tix": "0.21"
+        "eur": "0.49",
+        "eur_foil": "2.65",
+        "tix": "0.17"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DScotty%252C%2BMiracle%2BWorker",
@@ -11309,14 +11309,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21852,
+      "edhrec_rank": 21662,
       "prices": {
-        "usd": "2.70",
-        "usd_foil": "3.07",
+        "usd": "2.90",
+        "usd_foil": "3.49",
         "usd_etched": null,
-        "eur": "1.29",
-        "eur_foil": "4.20",
-        "tix": "0.28"
+        "eur": "1.22",
+        "eur_foil": "4.09",
+        "tix": "0.22"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSeven%2Bof%2BNine%252C%2BUnassimilated",
@@ -11446,15 +11446,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32638,
+      "edhrec_rank": 32635,
       "preview": {
         "source": "Nerdist",
         "source_uri": "https://nerdist.com/article/star-trek-x-magic-the-gathering-cards-reveal-nerdist-exclusive/",
         "previewed_at": "2026-10-27"
       },
       "prices": {
-        "usd": "0.10",
-        "usd_foil": "0.21",
+        "usd": "0.09",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.12",
@@ -11591,7 +11591,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25864,
+      "edhrec_rank": 25653,
       "preview": {
         "source": "YuchenLiu",
         "source_uri": "https://www.bilibili.com/opus/1262610902075572241",
@@ -11599,11 +11599,11 @@
       },
       "prices": {
         "usd": "0.22",
-        "usd_foil": "0.32",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.28",
-        "tix": "0.32"
+        "eur_foil": "0.24",
+        "tix": "0.24"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSubcommander%2BT%2527Pol",
@@ -11732,7 +11732,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25817,
+      "edhrec_rank": 25662,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
@@ -11740,9 +11740,9 @@
       },
       "prices": {
         "usd": "0.20",
-        "usd_foil": "0.29",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.17",
         "tix": "0.02"
       },
@@ -11874,7 +11874,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31447,
+      "edhrec_rank": 31415,
       "preview": {
         "source": "Nerdist",
         "source_uri": "https://nerdist.com/article/star-trek-x-magic-the-gathering-cards-reveal-nerdist-exclusive/",
@@ -11882,9 +11882,9 @@
       },
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.17",
+        "usd_foil": "0.16",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.03",
         "eur_foil": "0.13",
         "tix": "0.02"
       },
@@ -12015,18 +12015,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22169,
+      "edhrec_rank": 21956,
       "preview": {
         "source": "Emperor's Uncle Liu",
         "source_uri": "https://www.bilibili.com/opus/1262973496088068099",
         "previewed_at": "2026-10-24"
       },
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.31",
+        "usd": "0.16",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.13",
-        "eur_foil": "0.24",
+        "eur_foil": "0.23",
         "tix": "0.02"
       },
       "related_uris": {
@@ -12155,18 +12155,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29349,
+      "edhrec_rank": 29205,
       "preview": {
         "source": "Quest Daily",
         "source_uri": "https://questdaily.com.au/news/magic-the-gathering-card-reveal-star-trek-those-old-scientists/",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.36",
+        "usd": "0.18",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.15",
-        "eur_foil": "0.20",
+        "eur_foil": "0.19",
         "tix": "0.01"
       },
       "related_uris": {
@@ -12299,13 +12299,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27745,
+      "edhrec_rank": 27562,
       "prices": {
         "usd": "0.18",
-        "usd_foil": "0.28",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.23",
+        "eur": "0.12",
+        "eur_foil": "0.21",
         "tix": "0.02"
       },
       "related_uris": {
@@ -12432,13 +12432,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30441,
+      "edhrec_rank": 30241,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.34",
+        "usd": "0.20",
+        "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.18",
-        "eur_foil": "0.34",
+        "eur_foil": "0.30",
         "tix": "0.02"
       },
       "related_uris": {
@@ -12572,14 +12572,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25882,
+      "edhrec_rank": 25658,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.37",
+        "usd": "0.30",
+        "usd_foil": "0.39",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
-        "tix": "0.15"
+        "tix": "0.09"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DWesley%2BCrusher%252C%2BStarfleet%2BCadet",
@@ -12710,13 +12710,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23114,
+      "edhrec_rank": 22964,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.36",
+        "usd": "0.14",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.16",
+        "eur": "0.09",
+        "eur_foil": "0.15",
         "tix": "0.02"
       },
       "related_uris": {
@@ -12851,14 +12851,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29215,
+      "edhrec_rank": 29032,
       "prices": {
-        "usd": "0.28",
+        "usd": "0.27",
         "usd_foil": "0.40",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "1.02",
-        "tix": "0.20"
+        "eur_foil": "0.87",
+        "tix": "0.15"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DArmus%252C%2BSkin%2Bof%2BEvil",
@@ -12986,13 +12986,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26679,
+      "edhrec_rank": 26528,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.26",
+        "usd": "0.14",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.23",
+        "eur": "0.10",
+        "eur_foil": "0.24",
         "tix": "0.02"
       },
       "related_uris": {
@@ -13123,10 +13123,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28829,
+      "edhrec_rank": 28707,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.20",
+        "usd": "0.17",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.08",
         "eur_foil": "0.17",
@@ -13258,13 +13258,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30880,
+      "edhrec_rank": 30836,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.15",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.12",
-        "eur_foil": "0.16",
+        "eur": "0.13",
+        "eur_foil": "0.19",
         "tix": "0.02"
       },
       "related_uris": {
@@ -13395,13 +13395,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29476,
+      "edhrec_rank": 29367,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.24",
+        "usd": "0.19",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.23",
+        "eur": "0.05",
+        "eur_foil": "0.20",
         "tix": "0.02"
       },
       "related_uris": {
@@ -13549,17 +13549,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29632,
+      "edhrec_rank": 29517,
       "preview": {
         "source": "AleksDavidRoyt",
         "source_uri": "https://www.instagram.com/p/DezeK-Cuc6i",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.27",
+        "usd": "0.19",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.23",
         "tix": "0.03"
       },
@@ -13707,10 +13707,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29966,
+      "edhrec_rank": 29939,
       "prices": {
-        "usd": "0.09",
-        "usd_foil": "0.22",
+        "usd": "0.08",
+        "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.12",
@@ -13843,14 +13843,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21572,
+      "edhrec_rank": 21335,
       "prices": {
-        "usd": "0.64",
-        "usd_foil": "0.78",
+        "usd": "0.65",
+        "usd_foil": "0.72",
         "usd_etched": null,
-        "eur": "0.02",
-        "eur_foil": "1.52",
-        "tix": "2.06"
+        "eur": "0.08",
+        "eur_foil": "1.38",
+        "tix": "1.88"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCollation%2BTrimatrix",
@@ -13978,14 +13978,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24556,
+      "edhrec_rank": 24440,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.33",
+        "usd": "0.90",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.13",
         "eur_foil": "0.04",
-        "tix": "0.05"
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCollective%2BDrone",
@@ -14135,12 +14135,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29630,
+      "edhrec_rank": 29476,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.29",
+        "usd": "0.10",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.12",
         "eur_foil": "0.20",
         "tix": "0.01"
       },
@@ -14270,18 +14270,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25036,
+      "edhrec_rank": 24757,
       "preview": {
         "source": "Miabyte",
         "source_uri": "https://www.instagram.com/reels/DezWOtsMQko/",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.29",
+        "usd": "0.11",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.25",
+        "eur_foil": "0.22",
         "tix": "0.02"
       },
       "related_uris": {
@@ -14414,19 +14414,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19173,
+      "edhrec_rank": 18947,
       "preview": {
         "source": "luastardust",
         "source_uri": "https://bsky.app/profile/luastardust.com/post/3myg5zzvunk22",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "9.33",
-        "usd_foil": "13.85",
+        "usd": "10.40",
+        "usd_foil": "14.72",
         "usd_etched": null,
-        "eur": "1.29",
-        "eur_foil": "5.06",
-        "tix": "0.26"
+        "eur": "1.42",
+        "eur_foil": "5.79",
+        "tix": "0.20"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDeath%2BIs%2BIrrelevant",
@@ -14573,14 +14573,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29911,
+      "edhrec_rank": 29762,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.19",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.56",
-        "tix": "0.18"
+        "eur": "0.08",
+        "eur_foil": "0.57",
+        "tix": "0.09"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BDestruction%2Bof%2BPraxis",
@@ -14711,12 +14711,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30850,
+      "edhrec_rank": 30808,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.31",
+        "usd": "0.15",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.11",
         "eur_foil": "0.11",
         "tix": "0.01"
       },
@@ -14845,12 +14845,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30108,
+      "edhrec_rank": 29996,
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.23",
+        "usd": "0.12",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.20",
         "tix": "0.01"
       },
@@ -14987,13 +14987,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23873,
+      "edhrec_rank": 23711,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.34",
+        "usd": "0.17",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.21",
-        "eur_foil": "0.49",
+        "eur": "0.20",
+        "eur_foil": "0.47",
         "tix": "0.19"
       },
       "related_uris": {
@@ -15122,17 +15122,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31917,
+      "edhrec_rank": 31882,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.09",
-        "usd_foil": "0.17",
+        "usd": "0.08",
+        "usd_foil": "0.16",
         "usd_etched": null,
-        "eur": "0.02",
+        "eur": "0.03",
         "eur_foil": "0.08",
         "tix": "0.01"
       },
@@ -15268,18 +15268,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30846,
+      "edhrec_rank": 30751,
       "preview": {
         "source": "MoQiQi",
         "source_uri": "https://www.bilibili.com/opus/1263715717939724291",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.24",
+        "usd": "0.14",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.12",
-        "eur_foil": "0.23",
+        "eur": "0.09",
+        "eur_foil": "0.22",
         "tix": "0.01"
       },
       "related_uris": {
@@ -15412,14 +15412,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28117,
+      "edhrec_rank": 28004,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.40",
+        "usd": "0.17",
+        "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.33",
-        "tix": "0.17"
+        "eur_foil": "0.36",
+        "tix": "0.11"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGeneral%2BChang%252C%2BCold%2BWarrior",
@@ -15569,14 +15569,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23482,
+      "edhrec_rank": 23378,
       "prices": {
-        "usd": "2.12",
-        "usd_foil": "3.50",
+        "usd": "2.10",
+        "usd_foil": "3.35",
         "usd_etched": null,
-        "eur": "2.13",
-        "eur_foil": "4.86",
-        "tix": "7.35"
+        "eur": "2.22",
+        "eur_foil": "4.87",
+        "tix": "5.34"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGeorgiou%252C%2BTerran%2BEmperor",
@@ -15702,12 +15702,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28320,
+      "edhrec_rank": 28244,
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.22",
+        "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.03",
         "eur_foil": "0.22",
         "tix": "0.02"
       },
@@ -15868,14 +15868,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26881,
+      "edhrec_rank": 26676,
       "prices": {
-        "usd": "0.29",
-        "usd_foil": "0.45",
+        "usd": "0.26",
+        "usd_foil": "0.42",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.55",
-        "tix": "0.18"
+        "eur_foil": "0.52",
+        "tix": "0.16"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGrand%2BNagus%2BZek",
@@ -16009,14 +16009,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25123,
+      "edhrec_rank": 24887,
       "prices": {
-        "usd": "1.29",
-        "usd_foil": "1.94",
+        "usd": "1.35",
+        "usd_foil": "1.93",
         "usd_etched": null,
-        "eur": "1.22",
+        "eur": "1.05",
         "eur_foil": "4.53",
-        "tix": "0.38"
+        "tix": "0.33"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGul%2BDukat%252C%2BColonial%2BPrefect",
@@ -16144,12 +16144,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30034,
+      "edhrec_rank": 29894,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.27",
+        "usd": "0.16",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.08",
         "eur_foil": "0.13",
         "tix": "0.02"
       },
@@ -16279,13 +16279,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18187,
+      "edhrec_rank": 17965,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.34",
+        "usd": "0.09",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.13",
+        "eur": "0.11",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16433,18 +16433,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22562,
+      "edhrec_rank": 22319,
       "preview": {
         "source": "Ella Lowgren",
         "source_uri": "https://www.instagram.com/p/De2lNxlGVav",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "0.29",
-        "usd_foil": "0.29",
+        "usd": "0.19",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.15",
+        "eur_foil": "0.27",
         "tix": "0.01"
       },
       "related_uris": {
@@ -16601,12 +16601,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29550,
+      "edhrec_rank": 29420,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.36",
+        "usd": "0.16",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.15",
         "eur_foil": "0.26",
         "tix": "0.01"
       },
@@ -16740,13 +16740,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31378,
+      "edhrec_rank": 31285,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.33",
+        "usd": "0.21",
+        "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.42",
+        "eur_foil": "0.39",
         "tix": "0.11"
       },
       "related_uris": {
@@ -16879,14 +16879,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23690,
+      "edhrec_rank": 23618,
       "prices": {
-        "usd": "2.42",
-        "usd_foil": "4.20",
+        "usd": "2.28",
+        "usd_foil": "4.13",
         "usd_etched": null,
-        "eur": "2.98",
-        "eur_foil": "7.41",
-        "tix": "0.99"
+        "eur": "2.85",
+        "eur_foil": "7.82",
+        "tix": "0.52"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DKhan%252C%2BVengeful%2BHeart",
@@ -17016,18 +17016,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25373,
+      "edhrec_rank": 25192,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.27",
+        "usd": "0.14",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.22",
+        "eur": "0.08",
+        "eur_foil": "0.23",
         "tix": "0.02"
       },
       "related_uris": {
@@ -17156,10 +17156,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24487,
+      "edhrec_rank": 24360,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.28",
+        "usd": "0.18",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.16",
         "eur_foil": "0.25",
@@ -17292,15 +17292,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22668,
+      "edhrec_rank": 22439,
       "preview": {
         "source": "Sol4r1s",
         "source_uri": "https://www.instagram.com/sol4r1s/p/De8zLpzCKVj/",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.39",
-        "usd_foil": "0.47",
+        "usd": "0.38",
+        "usd_foil": "0.49",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
@@ -17431,18 +17431,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31028,
+      "edhrec_rank": 30878,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.26",
+        "usd": "0.12",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.17",
+        "eur": "0.07",
+        "eur_foil": "0.19",
         "tix": "0.01"
       },
       "related_uris": {
@@ -17573,13 +17573,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30045,
+      "edhrec_rank": 29997,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.21",
+        "usd": "0.12",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.15",
+        "eur_foil": "0.17",
         "tix": "0.01"
       },
       "related_uris": {
@@ -17705,10 +17705,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20895,
+      "edhrec_rank": 20695,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.34",
+        "usd": "0.17",
+        "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.04",
         "eur_foil": "0.27",
@@ -17845,12 +17845,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28639,
+      "edhrec_rank": 28507,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.30",
+        "usd": "0.14",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.22",
         "tix": "0.02"
       },
@@ -17983,14 +17983,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29408,
+      "edhrec_rank": 29331,
       "prices": {
-        "usd": "0.92",
-        "usd_foil": "2.08",
+        "usd": "1.00",
+        "usd_foil": "1.85",
         "usd_etched": null,
-        "eur": "2.45",
-        "eur_foil": "4.08",
-        "tix": "2.31"
+        "eur": "2.39",
+        "eur_foil": "4.15",
+        "tix": "2.27"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSalt%2BVampire",
@@ -18140,14 +18140,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29983,
+      "edhrec_rank": 29847,
       "prices": {
-        "usd": "0.23",
+        "usd": "0.17",
         "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
-        "tix": "0.04"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSela%252C%2BTal%2BShiar%2BParadox",
@@ -18275,13 +18275,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30358,
+      "edhrec_rank": 30286,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.24",
+        "usd": "0.19",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.18",
-        "eur_foil": "0.27",
+        "eur": "0.16",
+        "eur_foil": "0.22",
         "tix": "0.03"
       },
       "related_uris": {
@@ -18410,12 +18410,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28670,
+      "edhrec_rank": 28457,
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.19",
+        "usd": "0.14",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.17",
         "tix": "0.02"
       },
@@ -18547,10 +18547,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28191,
+      "edhrec_rank": 27921,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.24",
+        "usd": "0.14",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.23",
@@ -18686,14 +18686,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26726,
+      "edhrec_rank": 26488,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.28",
+        "usd": "0.15",
+        "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.20",
+        "eur": "0.19",
         "eur_foil": "0.24",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTell%2BMe%2BWhat%2BYou%2BSee",
@@ -18839,10 +18839,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29707,
+      "edhrec_rank": 29538,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.25",
+        "usd": "0.15",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.12",
         "eur_foil": "0.30",
@@ -18975,14 +18975,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24651,
+      "edhrec_rank": 24502,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.33",
+        "usd": "0.12",
+        "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.23",
-        "tix": "0.05"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTest%2Bof%2BLoyalty",
@@ -19115,13 +19115,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26952,
+      "edhrec_rank": 26808,
       "prices": {
         "usd": "0.30",
-        "usd_foil": "0.44",
+        "usd_foil": "0.42",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.15",
+        "eur_foil": "0.11",
         "tix": "0.07"
       },
       "related_uris": {
@@ -19251,19 +19251,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27531,
+      "edhrec_rank": 27356,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.facebook.com/MagicTheGathering.jp/posts/pfbid0jfuaE2zZ7KphcvJETsoj3Aj7BntxGk57gT2XcBWxkTUgtsjY5HD3GBaQCxva3E1Vl",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.19",
+        "usd": "0.16",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.16",
         "eur_foil": "0.23",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DVengeance%2BMission",
@@ -19409,12 +19409,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25328,
+      "edhrec_rank": 25082,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.31",
+        "usd": "0.20",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.02",
         "tix": "0.01"
       },
@@ -19549,13 +19549,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29204,
+      "edhrec_rank": 29120,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.31",
+        "usd": "0.12",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.17",
+        "eur_foil": "0.18",
         "tix": "0.01"
       },
       "related_uris": {
@@ -19702,18 +19702,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30568,
+      "edhrec_rank": 30429,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.18",
+        "usd": "0.14",
+        "usd_foil": "0.16",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.13",
+        "eur": "0.07",
+        "eur_foil": "0.16",
         "tix": "0.02"
       },
       "related_uris": {
@@ -19841,14 +19841,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19014,
+      "edhrec_rank": 18750,
       "prices": {
-        "usd": "2.61",
-        "usd_foil": "3.69",
+        "usd": "2.73",
+        "usd_foil": "3.23",
         "usd_etched": null,
-        "eur": "1.03",
-        "eur_foil": "3.01",
-        "tix": "0.25"
+        "eur": "1.04",
+        "eur_foil": "2.80",
+        "tix": "0.20"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DBrazen%2BBluff",
@@ -19976,12 +19976,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31716,
+      "edhrec_rank": 31680,
       "prices": {
         "usd": "0.08",
-        "usd_foil": "0.19",
+        "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.18",
         "tix": "0.01"
       },
@@ -20132,14 +20132,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22987,
+      "edhrec_rank": 22873,
       "prices": {
-        "usd": "16.37",
-        "usd_foil": "20.05",
+        "usd": "18.11",
+        "usd_foil": "19.27",
         "usd_etched": null,
-        "eur": "16.55",
-        "eur_foil": "19.52",
-        "tix": "39.65"
+        "eur": "17.62",
+        "eur_foil": "20.68",
+        "tix": "40.24"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCaptain%2BJames%2BT.%2BKirk",
@@ -20273,14 +20273,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21770,
+      "edhrec_rank": 21519,
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.37",
+        "usd": "0.18",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.15",
-        "eur_foil": "0.26",
-        "tix": "0.03"
+        "eur": "0.14",
+        "eur_foil": "0.27",
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCaptain%2BMichael%2BBurnham",
@@ -20412,12 +20412,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32026,
+      "edhrec_rank": 31934,
       "prices": {
-        "usd": "0.08",
-        "usd_foil": "0.19",
+        "usd": "0.07",
+        "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.12",
         "eur_foil": "0.14",
         "tix": "0.01"
       },
@@ -20567,14 +20567,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24032,
+      "edhrec_rank": 23809,
       "prices": {
-        "usd": "0.30",
-        "usd_foil": "0.43",
+        "usd": "0.28",
+        "usd_foil": "0.44",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.45",
-        "tix": "0.19"
+        "tix": "0.15"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DD-7%2BBattle%2BCruiser",
@@ -20702,17 +20702,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31566,
+      "edhrec_rank": 31544,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.20",
+        "usd": "0.13",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.15",
         "tix": "0.02"
       },
@@ -20859,14 +20859,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29149,
+      "edhrec_rank": 28930,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.34",
+        "usd": "0.18",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.31",
-        "tix": "0.06"
+        "eur_foil": "0.32",
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDominion%2BInfiltration",
@@ -20995,9 +20995,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26157,
+      "edhrec_rank": 25857,
       "prices": {
-        "usd": "0.39",
+        "usd": "0.31",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.02",
@@ -21135,18 +21135,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28421,
+      "edhrec_rank": 28225,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.youtube.com/watch?v=g5OL_rHOQFU",
         "previewed_at": "2026-10-24"
       },
       "prices": {
-        "usd": "0.16",
+        "usd": "0.15",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.21",
+        "eur": "0.09",
+        "eur_foil": "0.20",
         "tix": "0.01"
       },
       "related_uris": {
@@ -21280,18 +21280,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23648,
+      "edhrec_rank": 23399,
       "preview": {
         "source": "Press Start",
         "source_uri": "https://press-start.com.au/news/2026/10/24/heres-our-exclusive-magic-the-gathering-x-star-trek-card-reveal/",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.33",
+        "usd": "0.17",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.15",
+        "eur_foil": "0.16",
         "tix": "0.02"
       },
       "related_uris": {
@@ -21443,18 +21443,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30089,
+      "edhrec_rank": 29814,
       "preview": {
         "source": "Nerdist",
         "source_uri": "https://nerdist.com/article/star-trek-x-magic-the-gathering-cards-reveal-nerdist-exclusive/",
         "previewed_at": "2026-10-27"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.47",
+        "usd": "0.15",
+        "usd_foil": "0.43",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.21",
+        "eur": "0.06",
+        "eur_foil": "0.17",
         "tix": "0.01"
       },
       "related_uris": {
@@ -21589,12 +21589,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31013,
+      "edhrec_rank": 30893,
       "prices": {
-        "usd": "0.10",
-        "usd_foil": "0.27",
+        "usd": "0.11",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.06",
         "eur_foil": "0.20",
         "tix": "0.02"
       },
@@ -21725,19 +21725,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28275,
+      "edhrec_rank": 28152,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.youtube.com/watch?v=g5OL_rHOQFU",
         "previewed_at": "2026-10-24"
       },
       "prices": {
-        "usd": "0.31",
+        "usd": "0.38",
         "usd_foil": "0.52",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.10",
-        "tix": "0.19"
+        "eur_foil": "0.02",
+        "tix": "0.16"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DInfinite%2BDiversity",
@@ -21863,13 +21863,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28862,
+      "edhrec_rank": 28672,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.36",
+        "usd": "0.14",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.20",
+        "eur": "0.08",
+        "eur_foil": "0.21",
         "tix": "0.01"
       },
       "related_uris": {
@@ -22003,13 +22003,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31739,
+      "edhrec_rank": 31638,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.29",
+        "usd": "0.14",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.11",
+        "eur": "0.09",
+        "eur_foil": "0.13",
         "tix": "0.01"
       },
       "related_uris": {
@@ -22141,14 +22141,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31933,
+      "edhrec_rank": 31901,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.22",
+        "usd": "0.10",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.09",
         "eur_foil": "0.12",
-        "tix": "0.02"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DLa%2527An%2BNoonien-Singh%252C%2BSecurity",
@@ -22280,18 +22280,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19375,
+      "edhrec_rank": 19170,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.youtube.com/shorts/QBK9-rr6cis",
         "previewed_at": "2026-10-24"
       },
       "prices": {
-        "usd": "0.64",
-        "usd_foil": "1.20",
+        "usd": "0.72",
+        "usd_foil": "1.21",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.25",
+        "eur_foil": "0.28",
         "tix": "0.23"
       },
       "related_uris": {
@@ -22422,10 +22422,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30352,
+      "edhrec_rank": 30202,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.30",
+        "usd": "0.19",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.12",
         "eur_foil": "0.08",
@@ -22557,14 +22557,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27686,
+      "edhrec_rank": 27334,
       "prices": {
-        "usd": "1.75",
-        "usd_foil": "2.11",
+        "usd": "1.81",
+        "usd_foil": "1.82",
         "usd_etched": null,
-        "eur": "3.58",
-        "eur_foil": "5.33",
-        "tix": "0.45"
+        "eur": "3.65",
+        "eur_foil": "5.38",
+        "tix": "0.84"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BNaked%2BTime",
@@ -22697,14 +22697,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30134,
+      "edhrec_rank": 30017,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.27",
+        "usd": "0.18",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.67",
-        "tix": "0.16"
+        "tix": "0.17"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DPah-Wraith",
@@ -22833,10 +22833,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28291,
+      "edhrec_rank": 28087,
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.20",
+        "usd": "0.09",
+        "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.20",
@@ -22966,12 +22966,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31549,
+      "edhrec_rank": 31426,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.26",
+        "usd": "0.10",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.03",
+        "eur": "0.02",
         "eur_foil": "0.16",
         "tix": "0.02"
       },
@@ -23103,10 +23103,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31751,
+      "edhrec_rank": 31685,
       "prices": {
-        "usd": "0.08",
-        "usd_foil": "0.19",
+        "usd": "0.07",
+        "usd_foil": "0.14",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.16",
@@ -23236,12 +23236,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30223,
+      "edhrec_rank": 30116,
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.20",
+        "usd": "0.11",
+        "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.04",
         "eur_foil": "0.27",
         "tix": "0.02"
       },
@@ -23393,14 +23393,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20110,
+      "edhrec_rank": 20022,
       "prices": {
-        "usd": "5.14",
-        "usd_foil": "6.20",
+        "usd": "4.96",
+        "usd_foil": "6.48",
         "usd_etched": null,
-        "eur": "0.66",
+        "eur": "0.72",
         "eur_foil": "3.08",
-        "tix": "2.85"
+        "tix": "2.20"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DQ%252C%2BStacking%2Bthe%2BDeck",
@@ -23559,14 +23559,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21172,
+      "edhrec_rank": 20959,
       "prices": {
-        "usd": "7.08",
-        "usd_foil": "8.33",
+        "usd": "6.70",
+        "usd_foil": "9.45",
         "usd_etched": null,
-        "eur": "4.86",
-        "eur_foil": "7.24",
-        "tix": "0.13"
+        "eur": "4.76",
+        "eur_foil": "7.09",
+        "tix": "0.09"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DQuark%252C%2BHumble%2BProprietor",
@@ -23697,7 +23697,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32579,
+      "edhrec_rank": 32541,
       "preview": {
         "source": "TechRadar Gaming",
         "source_uri": "https://www.techradar.com/gaming/exclusive-weve-got-a-first-look-at-two-new-star-trek-magic-the-gathering-cards-including-a-red-tolarian-terror-that-im-very-glad-isnt-common",
@@ -23705,11 +23705,11 @@
       },
       "prices": {
         "usd": "0.17",
-        "usd_foil": "0.35",
+        "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.20",
         "eur_foil": "0.46",
-        "tix": "0.05"
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRavenous%2BCosmozoan",
@@ -23835,14 +23835,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 2105,
+      "edhrec_rank": 2103,
       "penny_rank": 363,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.16",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.03",
-        "eur_foil": "0.27",
+        "eur": "0.04",
+        "eur_foil": "0.31",
         "tix": "0.01"
       },
       "related_uris": {
@@ -23969,12 +23969,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32185,
+      "edhrec_rank": 32087,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.27",
+        "usd": "0.14",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.05",
         "eur_foil": "0.22",
         "tix": "0.01"
       },
@@ -24108,18 +24108,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27266,
+      "edhrec_rank": 26984,
       "preview": {
         "source": "Big Cotton Candy",
         "source_uri": "https://www.bilibili.com/video/BV1WAxL62EAL/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.32",
+        "usd": "0.16",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.11",
-        "eur_foil": "0.16",
+        "eur_foil": "0.14",
         "tix": "0.01"
       },
       "related_uris": {
@@ -24275,13 +24275,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26286,
+      "edhrec_rank": 25936,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.32",
+        "usd": "0.18",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.25",
+        "eur": "0.12",
+        "eur_foil": "0.24",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24412,10 +24412,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32582,
+      "edhrec_rank": 32561,
       "prices": {
         "usd": "0.05",
-        "usd_foil": "0.22",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.06",
@@ -24568,13 +24568,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31414,
+      "edhrec_rank": 31301,
       "prices": {
-        "usd": "0.09",
-        "usd_foil": "0.23",
+        "usd": "0.10",
+        "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.10",
+        "eur": "0.05",
+        "eur_foil": "0.11",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24703,17 +24703,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29658,
+      "edhrec_rank": 29316,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.13",
+        "usd": "0.11",
         "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.15",
         "tix": "0.01"
       },
@@ -24845,15 +24845,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31708,
+      "edhrec_rank": 31618,
       "preview": {
         "source": "Rubee",
         "source_uri": "https://x.com/RubeePlays/status/2114843193254748466",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.28",
+        "usd": "0.13",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.17",
@@ -25008,19 +25008,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29982,
+      "edhrec_rank": 29956,
       "preview": {
         "source": "ScreenHub",
         "source_uri": "https://www.screenhub.com.au/news/games/magic-the-gathering-star-trek-exclusive-preview-card-2709700/",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.42",
+        "usd": "0.22",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.16",
-        "tix": "0.05"
+        "eur_foil": "0.09",
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTasha%2BYar%252C%2BOut%2Bof%2BTime",
@@ -25149,13 +25149,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28435,
+      "edhrec_rank": 28180,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.28",
+        "usd": "0.17",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.22",
-        "eur_foil": "0.30",
+        "eur": "0.19",
+        "eur_foil": "0.33",
         "tix": "0.02"
       },
       "related_uris": {
@@ -25284,12 +25284,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32016,
+      "edhrec_rank": 31935,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.18",
+        "usd": "0.12",
+        "usd_foil": "0.15",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.08",
         "eur_foil": "0.12",
         "tix": "0.01"
       },
@@ -25423,14 +25423,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21753,
+      "edhrec_rank": 21532,
       "prices": {
         "usd": "0.49",
-        "usd_foil": "1.09",
+        "usd_foil": "1.10",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.88",
-        "tix": "0.15"
+        "eur_foil": "0.82",
+        "tix": "0.13"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DWill%2BRiker%252C%2BFirst%2Bin%2Bthe%2BField",
@@ -25562,13 +25562,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24903,
+      "edhrec_rank": 24752,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.37",
+        "usd": "0.24",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.74",
+        "eur_foil": "0.69",
         "tix": "0.08"
       },
       "related_uris": {
@@ -25698,14 +25698,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27050,
+      "edhrec_rank": 26935,
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.46",
+        "usd": "1.02",
+        "usd_foil": "0.42",
         "usd_etched": null,
-        "eur": "0.21",
-        "eur_foil": "0.73",
-        "tix": "0.24"
+        "eur": "0.18",
+        "eur_foil": "0.70",
+        "tix": "0.22"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BWrath%2Bof%2BKhan",
@@ -25851,18 +25851,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32526,
+      "edhrec_rank": 32520,
       "preview": {
         "source": "Beijing Premodern",
         "source_uri": "https://www.bilibili.com/opus/1262632789216329766",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.36",
+        "usd": "0.11",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.14",
-        "eur_foil": "0.15",
+        "eur": "0.12",
+        "eur_foil": "0.22",
         "tix": "0.01"
       },
       "related_uris": {
@@ -25993,14 +25993,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27231,
+      "edhrec_rank": 27151,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.34",
+        "usd": "0.18",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.28",
-        "tix": "0.05"
+        "eur_foil": "0.33",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DAmok%2BTime",
@@ -26130,15 +26130,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32116,
+      "edhrec_rank": 32107,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.22",
+        "usd": "0.11",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.10",
@@ -26271,19 +26271,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23882,
+      "edhrec_rank": 23701,
       "preview": {
         "source": "Magic Small White",
         "source_uri": "https://www.bilibili.com/opus/1262988412473835528",
         "previewed_at": "2026-10-24"
       },
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.37",
+        "usd": "0.20",
+        "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.32",
-        "tix": "0.20"
+        "eur_foil": "0.29",
+        "tix": "0.15"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DBranching%2BTimeline",
@@ -26434,14 +26434,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27097,
+      "edhrec_rank": 27016,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.38",
+        "usd": "0.13",
+        "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.08",
-        "eur_foil": "0.44",
-        "tix": "0.12"
+        "eur_foil": "0.45",
+        "tix": "0.08"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCaptain%2BJonathan%2BArcher",
@@ -26574,14 +26574,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17456,
+      "edhrec_rank": 17293,
       "prices": {
-        "usd": "6.67",
-        "usd_foil": "7.28",
+        "usd": "7.04",
+        "usd_foil": "8.09",
         "usd_etched": null,
-        "eur": "2.86",
+        "eur": "2.83",
         "eur_foil": "7.90",
-        "tix": "0.31"
+        "tix": "0.23"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCaptain%2BKathryn%2BJaneway",
@@ -26714,14 +26714,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22956,
+      "edhrec_rank": 22738,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.38",
+        "usd": "0.32",
+        "usd_foil": "0.41",
         "usd_etched": null,
-        "eur": "0.18",
-        "eur_foil": "0.50",
-        "tix": "0.25"
+        "eur": "0.17",
+        "eur_foil": "0.53",
+        "tix": "0.21"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCaptain%2BPike%252C%2BFullness%2Bof%2BTime",
@@ -26853,13 +26853,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29684,
+      "edhrec_rank": 29616,
       "prices": {
         "usd": "0.12",
-        "usd_foil": "0.21",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.13",
+        "eur_foil": "0.10",
         "tix": "0.02"
       },
       "related_uris": {
@@ -26986,13 +26986,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30000,
+      "edhrec_rank": 29845,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.23",
+        "usd": "0.10",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.03",
-        "eur_foil": "0.19",
+        "eur": "0.04",
+        "eur_foil": "0.21",
         "tix": "0.02"
       },
       "related_uris": {
@@ -27131,7 +27131,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30412,
+      "edhrec_rank": 30293,
       "preview": {
         "source": "Checkpoint",
         "source_uri": "https://checkpointgaming.net/news/2026/10/mtg-star-trek-exclusive-card-reveal-culber-and-stamets-star-crossed/",
@@ -27139,11 +27139,11 @@
       },
       "prices": {
         "usd": "0.17",
-        "usd_foil": "0.27",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.11",
         "eur_foil": "0.12",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCulber%2Band%2BStamets%252C%2BStar-Crossed",
@@ -27271,13 +27271,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27345,
+      "edhrec_rank": 27219,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.26",
+        "usd": "0.19",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.16",
+        "eur": "0.06",
+        "eur_foil": "0.18",
         "tix": "0.02"
       },
       "related_uris": {
@@ -27434,13 +27434,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26494,
+      "edhrec_rank": 26265,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.34",
+        "usd": "0.15",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.15",
+        "eur_foil": "0.13",
         "tix": "0.01"
       },
       "related_uris": {
@@ -27572,10 +27572,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31805,
+      "edhrec_rank": 31764,
       "prices": {
         "usd": "0.08",
-        "usd_foil": "0.18",
+        "usd_foil": "0.16",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.13",
@@ -27707,13 +27707,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24866,
+      "edhrec_rank": 24725,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.23",
+        "usd": "0.13",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.08",
-        "eur_foil": "0.18",
+        "eur_foil": "0.12",
         "tix": "0.01"
       },
       "related_uris": {
@@ -27846,14 +27846,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18517,
+      "edhrec_rank": 18318,
       "prices": {
-        "usd": "9.38",
-        "usd_foil": "9.54",
+        "usd": "9.82",
+        "usd_foil": "9.67",
         "usd_etched": null,
-        "eur": "5.49",
-        "eur_foil": "10.70",
-        "tix": "0.75"
+        "eur": "5.53",
+        "eur_foil": "10.71",
+        "tix": "0.38"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDr.%2BJoseph%2BM%2527Benga",
@@ -27986,18 +27986,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24814,
+      "edhrec_rank": 24542,
       "preview": {
         "source": "ScottNoMana",
         "source_uri": "https://www.instagram.com/p/DfA4TlDko_8",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.40",
-        "usd_foil": "0.48",
+        "usd": "0.32",
+        "usd_foil": "0.46",
         "usd_etched": null,
-        "eur": "0.12",
-        "eur_foil": "0.88",
+        "eur": "0.09",
+        "eur_foil": "0.91",
         "tix": "0.09"
       },
       "related_uris": {
@@ -28125,13 +28125,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23802,
+      "edhrec_rank": 23558,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.28",
+        "usd": "0.16",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.12",
+        "eur": "0.06",
+        "eur_foil": "0.11",
         "tix": "0.02"
       },
       "related_uris": {
@@ -28260,10 +28260,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29369,
+      "edhrec_rank": 29281,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.25",
+        "usd": "0.14",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.08",
@@ -28396,14 +28396,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19640,
+      "edhrec_rank": 19287,
       "prices": {
         "usd": "6.43",
-        "usd_foil": "7.44",
+        "usd_foil": "7.22",
         "usd_etched": null,
-        "eur": "2.91",
-        "eur_foil": "7.20",
-        "tix": "1.07"
+        "eur": "3.03",
+        "eur_foil": "7.07",
+        "tix": "0.92"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGenesis%2BDevice",
@@ -28550,19 +28550,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31145,
+      "edhrec_rank": 31105,
       "preview": {
         "source": "denfaminicogamer",
         "source_uri": "https://news.denfaminicogamer.jp/kikakuthetower/261027c",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.35",
+        "usd": "0.22",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.94",
-        "tix": "0.17"
+        "eur_foil": "0.82",
+        "tix": "0.14"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHolo-Engineer",
@@ -28707,19 +28707,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31123,
+      "edhrec_rank": 31040,
       "preview": {
         "source": "Kess Wylie",
         "source_uri": "https://bsky.app/profile/kesswylie.kess.co/post/3mygjjmxxkk22",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.23",
+        "usd": "0.15",
+        "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.28",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHologram%2BStalker",
@@ -28845,12 +28845,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28556,
+      "edhrec_rank": 28450,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.23",
+        "usd": "0.20",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.12",
         "tix": "0.02"
       },
@@ -28989,19 +28989,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20527,
+      "edhrec_rank": 20275,
       "preview": {
         "source": "Chen Mingyang",
         "source_uri": "https://www.bilibili.com/opus/1263004054766747672",
         "previewed_at": "2026-10-24"
       },
       "prices": {
-        "usd": "21.57",
-        "usd_foil": "31.04",
+        "usd": "22.10",
+        "usd_foil": "31.28",
         "usd_etched": null,
-        "eur": "9.35",
-        "eur_foil": "15.79",
-        "tix": "1.46"
+        "eur": "9.66",
+        "eur_foil": "15.85",
+        "tix": "0.95"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DJadzia%2BDax%252C%2BLiving%2BLegacy",
@@ -29153,18 +29153,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26502,
+      "edhrec_rank": 26257,
       "preview": {
         "source": "TechRadar Gaming",
         "source_uri": "https://www.techradar.com/gaming/exclusive-weve-got-a-first-look-at-two-new-star-trek-magic-the-gathering-cards-including-a-red-tolarian-terror-that-im-very-glad-isnt-common",
         "previewed_at": "2026-10-23"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.33",
+        "usd": "0.12",
+        "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.04",
-        "eur_foil": "0.24",
+        "eur": "0.03",
+        "eur_foil": "0.25",
         "tix": "0.02"
       },
       "related_uris": {
@@ -29312,14 +29312,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31157,
+      "edhrec_rank": 31134,
       "prices": {
         "usd": "0.26",
-        "usd_foil": "0.34",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.13",
         "eur_foil": "0.84",
-        "tix": "0.11"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMACO%2BStrike%2BTeam",
@@ -29449,13 +29449,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28493,
+      "edhrec_rank": 28301,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.27",
+        "usd": "0.17",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.19",
+        "eur": "0.07",
+        "eur_foil": "0.17",
         "tix": "0.02"
       },
       "related_uris": {
@@ -29588,12 +29588,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26616,
+      "edhrec_rank": 26510,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.37",
+        "usd": "0.19",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.18",
         "tix": "0.02"
       },
@@ -29746,14 +29746,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31284,
+      "edhrec_rank": 31165,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.31",
+        "usd": "0.14",
+        "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.03",
         "eur_foil": "0.23",
-        "tix": "0.04"
+        "tix": "0.03"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DNeelix%252C%2BMoral%2BSupport",
@@ -29901,7 +29901,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31864,
+      "edhrec_rank": 31799,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
@@ -29909,10 +29909,10 @@
       },
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.21",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.04",
-        "eur_foil": "0.11",
+        "eur": "0.03",
+        "eur_foil": "0.19",
         "tix": "0.01"
       },
       "related_uris": {
@@ -30066,19 +30066,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25627,
+      "edhrec_rank": 25468,
       "preview": {
         "source": "Good Games Morley",
         "source_uri": "https://www.threads.com/@goodgamesmorley/post/DfDq0kgkvt_",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "1.29",
-        "usd_foil": "2.09",
+        "usd": "1.44",
+        "usd_foil": "2.11",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "3.21",
-        "tix": "0.43"
+        "eur_foil": "2.96",
+        "tix": "0.36"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRok-Tahk%252C%2BBudding%2BScientist",
@@ -30211,7 +30211,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30931,
+      "edhrec_rank": 30877,
       "preview": {
         "source": "NGA",
         "source_uri": "https://bbs.nga.cn/read.php?tid=47799927&rand=433",
@@ -30219,9 +30219,9 @@
       },
       "prices": {
         "usd": "0.17",
-        "usd_foil": "0.44",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.18",
         "tix": "0.01"
       },
@@ -30378,12 +30378,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27414,
+      "edhrec_rank": 27301,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.26",
+        "usd": "0.15",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.06",
         "eur_foil": "0.14",
         "tix": "0.01"
       },
@@ -30514,17 +30514,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30969,
+      "edhrec_rank": 30866,
       "preview": {
         "source": "Based Deck Department",
         "source_uri": "https://x.com/BasedDeckDept/status/2115564884939403649",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.30",
+        "usd": "0.14",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.07",
         "eur_foil": "0.34",
         "tix": "0.02"
       },
@@ -30681,14 +30681,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19613,
+      "edhrec_rank": 19282,
       "prices": {
-        "usd": "3.21",
-        "usd_foil": "6.42",
+        "usd": "3.55",
+        "usd_foil": "4.42",
         "usd_etched": null,
-        "eur": "5.12",
-        "eur_foil": "8.06",
-        "tix": "0.19"
+        "eur": "5.15",
+        "eur_foil": "8.84",
+        "tix": "0.07"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DStable%2BWormhole",
@@ -30817,14 +30817,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25727,
+      "edhrec_rank": 25534,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.31",
+        "usd": "0.25",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.30",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSupport%2BMission",
@@ -30956,18 +30956,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31839,
+      "edhrec_rank": 31814,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.youtube.com/shorts/OO96lBhM9hw",
         "previewed_at": "2026-10-26"
       },
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.28",
+        "usd": "0.12",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.26",
+        "eur_foil": "0.25",
         "tix": "0.01"
       },
       "related_uris": {
@@ -31099,12 +31099,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24633,
+      "edhrec_rank": 24474,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.25",
+        "usd": "0.12",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.09",
         "eur_foil": "0.18",
         "tix": "0.01"
       },
@@ -31255,7 +31255,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 31248,
+      "edhrec_rank": 31235,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
@@ -31263,9 +31263,9 @@
       },
       "prices": {
         "usd": "0.08",
-        "usd_foil": "0.29",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.05",
         "eur_foil": "0.25",
         "tix": "0.01"
       },
@@ -31396,19 +31396,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26420,
+      "edhrec_rank": 26221,
       "preview": {
         "source": "Kess Wylie",
         "source_uri": "https://bsky.app/profile/kesswylie.kess.co/post/3mygjjmxxkk22",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.36",
+        "usd": "0.30",
+        "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.12",
-        "eur_foil": "0.50",
-        "tix": "0.07"
+        "eur": "0.11",
+        "eur_foil": "0.45",
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTest%2Bof%2BCourage",
@@ -31542,14 +31542,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18893,
+      "edhrec_rank": 18682,
       "prices": {
-        "usd": "0.58",
-        "usd_foil": "1.30",
+        "usd": "0.71",
+        "usd_foil": "1.27",
         "usd_etched": null,
-        "eur": "0.36",
-        "eur_foil": "1.11",
-        "tix": "0.22"
+        "eur": "0.37",
+        "eur_foil": "1.01",
+        "tix": "0.15"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DU.S.S.%2BDiscovery%252C%2Bat%2BBlack%2BAlert",
@@ -31681,13 +31681,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20592,
+      "edhrec_rank": 20280,
       "prices": {
-        "usd": "0.26",
-        "usd_foil": "0.42",
+        "usd": "0.27",
+        "usd_foil": "0.40",
         "usd_etched": null,
         "eur": "0.15",
-        "eur_foil": "0.27",
+        "eur_foil": "0.28",
         "tix": "0.03"
       },
       "related_uris": {
@@ -31819,13 +31819,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22175,
+      "edhrec_rank": 21904,
       "prices": {
-        "usd": "0.25",
+        "usd": "0.21",
         "usd_foil": "0.39",
         "usd_etched": null,
-        "eur": "0.32",
-        "eur_foil": "0.32",
+        "eur": "0.31",
+        "eur_foil": "0.31",
         "tix": "0.04"
       },
       "related_uris": {
@@ -31961,13 +31961,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26792,
+      "edhrec_rank": 26582,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.25",
+        "usd": "0.18",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.23",
+        "eur_foil": "0.28",
         "tix": "0.01"
       },
       "related_uris": {
@@ -32098,12 +32098,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29509,
+      "edhrec_rank": 29299,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.24",
+        "usd": "0.14",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.12",
         "eur_foil": "0.11",
         "tix": "0.01"
       },
@@ -32236,18 +32236,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30858,
+      "edhrec_rank": 30765,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.37",
+        "usd": "0.17",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.22",
-        "eur_foil": "0.44",
+        "eur_foil": "0.42",
         "tix": "0.19"
       },
       "related_uris": {
@@ -32382,14 +32382,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17983,
+      "edhrec_rank": 17791,
       "prices": {
-        "usd": "17.34",
-        "usd_foil": "21.09",
+        "usd": "21.45",
+        "usd_foil": "26.74",
         "usd_etched": null,
-        "eur": "2.93",
-        "eur_foil": "8.75",
-        "tix": "0.26"
+        "eur": "3.13",
+        "eur_foil": "8.89",
+        "tix": "0.25"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DBorg%2BCube",
@@ -32538,14 +32538,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29741,
+      "edhrec_rank": 29679,
       "prices": {
         "usd": "0.27",
-        "usd_foil": "0.40",
+        "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.23",
-        "tix": "0.13"
+        "eur_foil": "0.22",
+        "tix": "0.12"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BCity%2Bon%2Bthe%2BEdge%2Bof%2BForever",
@@ -32698,14 +32698,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28522,
+      "edhrec_rank": 28255,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.28",
+        "usd": "0.14",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.27",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCleveland%2BBooker%252C%2BEmpath",
@@ -32857,14 +32857,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27815,
+      "edhrec_rank": 27694,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.27",
+        "usd": "0.15",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.19",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DConstable%2BOdo",
@@ -33003,14 +33003,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21761,
+      "edhrec_rank": 21414,
       "prices": {
-        "usd": "0.21",
+        "usd": "0.25",
         "usd_foil": "0.40",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.26",
-        "tix": "0.02"
+        "eur_foil": "0.25",
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDal%2BR%2527El%252C%2BAugment%2BOrphan",
@@ -33143,14 +33143,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32394,
+      "edhrec_rank": 32392,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.16",
         "eur_foil": "0.22",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDaniels%252C%2BTemporal%2BAgent",
@@ -33286,15 +33286,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24073,
+      "edhrec_rank": 23979,
       "preview": {
         "source": "Nerdist",
         "source_uri": "https://nerdist.com/article/star-trek-x-magic-the-gathering-cards-reveal-nerdist-exclusive/",
         "previewed_at": "2026-10-27"
       },
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.39",
+        "usd": "0.21",
+        "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
@@ -33431,13 +33431,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29068,
+      "edhrec_rank": 29034,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.34",
+        "usd": "0.16",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.15",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -33589,13 +33589,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29022,
+      "edhrec_rank": 28904,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.30",
+        "usd": "0.15",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.14",
-        "eur_foil": "0.21",
+        "eur": "0.13",
+        "eur_foil": "0.22",
         "tix": "0.02"
       },
       "related_uris": {
@@ -33731,10 +33731,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29321,
+      "edhrec_rank": 29174,
       "prices": {
         "usd": "0.17",
-        "usd_foil": "0.33",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.27",
@@ -33872,10 +33872,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27831,
+      "edhrec_rank": 27714,
       "prices": {
-        "usd": "0.30",
-        "usd_foil": "0.37",
+        "usd": "0.20",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.17",
         "eur_foil": "0.33",
@@ -34030,12 +34030,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28488,
+      "edhrec_rank": 28322,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.35",
+        "usd": "0.15",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.24",
         "tix": "0.01"
       },
@@ -34170,12 +34170,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24148,
+      "edhrec_rank": 24049,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.33",
+        "usd": "0.17",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.12",
         "eur_foil": "0.13",
         "tix": "0.01"
       },
@@ -34309,14 +34309,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22119,
+      "edhrec_rank": 21822,
       "prices": {
-        "usd": "1.48",
-        "usd_foil": "2.90",
+        "usd": "1.63",
+        "usd_foil": "3.14",
         "usd_etched": null,
-        "eur": "1.63",
-        "eur_foil": "2.82",
-        "tix": "1.37"
+        "eur": "1.64",
+        "eur_foil": "2.70",
+        "tix": "0.69"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHit%2BIt%2521",
@@ -34467,19 +34467,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29055,
+      "edhrec_rank": 28898,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/magic-the-gathering-star-trek-exclusive-reveal/",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.35",
+        "usd": "0.20",
+        "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.21",
         "eur_foil": "0.41",
-        "tix": "0.22"
+        "tix": "0.17"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BInner%2BLight",
@@ -34614,10 +34614,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24376,
+      "edhrec_rank": 24245,
       "prices": {
-        "usd": "0.37",
-        "usd_foil": "0.48",
+        "usd": "0.34",
+        "usd_foil": "0.43",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
@@ -34754,12 +34754,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28311,
+      "edhrec_rank": 28184,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.13",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.24",
         "tix": "0.01"
       },
@@ -34892,14 +34892,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24592,
+      "edhrec_rank": 24476,
       "prices": {
         "usd": "0.32",
-        "usd_foil": "0.53",
+        "usd_foil": "0.50",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
-        "tix": "0.10"
+        "tix": "0.08"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DLive%2BLong%2Band%2BProsper",
@@ -35032,13 +35032,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17499,
+      "edhrec_rank": 17294,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.38",
+        "usd": "0.14",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.17",
+        "eur_foil": "0.16",
         "tix": "0.02"
       },
       "related_uris": {
@@ -35173,14 +35173,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30561,
+      "edhrec_rank": 30454,
       "prices": {
-        "usd": "0.15",
+        "usd": "0.12",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.08",
         "eur_foil": "0.18",
-        "tix": "0.02"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DLore%252C%2BPositronic%2BProvocateur",
@@ -35333,12 +35333,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26041,
+      "edhrec_rank": 25867,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.26",
+        "usd": "0.19",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.22",
         "tix": "0.01"
       },
@@ -35488,19 +35488,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29324,
+      "edhrec_rank": 29192,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.33",
-        "usd_foil": "0.34",
+        "usd": "0.31",
+        "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.21",
-        "eur_foil": "0.64",
-        "tix": "0.07"
+        "eur": "0.20",
+        "eur_foil": "0.59",
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DMirror%2BUniverse%2BIntrusion",
@@ -35636,14 +35636,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26290,
+      "edhrec_rank": 26127,
       "prices": {
-        "usd": "0.36",
-        "usd_foil": "0.40",
+        "usd": "0.38",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.29",
-        "tix": "0.17"
+        "eur_foil": "0.22",
+        "tix": "0.13"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DNog%252C%2BAmbitious%2BCadet",
@@ -35778,10 +35778,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26882,
+      "edhrec_rank": 26730,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.34",
+        "usd": "0.20",
+        "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.10",
         "eur_foil": "0.23",
@@ -35923,19 +35923,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26971,
+      "edhrec_rank": 26868,
       "preview": {
         "source": "Collider",
         "source_uri": "https://collider.com/star-trek-magic-the-gathering-sarek-cards-images/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.30",
-        "usd_foil": "0.28",
+        "usd": "0.23",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.02",
-        "tix": "0.08"
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSarek%252C%2BFederation%2BAmbassador",
@@ -36070,10 +36070,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23239,
+      "edhrec_rank": 23075,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.32",
+        "usd": "0.14",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.22",
@@ -36210,10 +36210,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 30789,
+      "edhrec_rank": 30772,
       "prices": {
         "usd": "0.20",
-        "usd_foil": "0.27",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.02",
         "eur_foil": "0.08",
@@ -36354,14 +36354,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28344,
+      "edhrec_rank": 28165,
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.32",
+        "usd": "0.15",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.11",
         "eur_foil": "0.23",
-        "tix": "0.02"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BTraveler",
@@ -36496,13 +36496,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27606,
+      "edhrec_rank": 27384,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.31",
+        "usd": "0.15",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.19",
+        "eur_foil": "0.20",
         "tix": "0.03"
       },
       "related_uris": {
@@ -36638,13 +36638,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27775,
+      "edhrec_rank": 27637,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.31",
+        "usd": "0.19",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.11",
-        "eur_foil": "0.15",
+        "eur_foil": "0.16",
         "tix": "0.01"
       },
       "related_uris": {
@@ -36776,14 +36776,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 28276,
+      "edhrec_rank": 28168,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.16",
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.20",
         "eur_foil": "0.30",
-        "tix": "0.16"
+        "tix": "0.08"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DYear%2Bof%2BHell",
@@ -36918,14 +36918,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 32313,
+      "edhrec_rank": 32240,
       "prices": {
         "usd": "0.16",
-        "usd_foil": "0.34",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.14",
-        "tix": "0.03"
+        "eur": "0.09",
+        "eur_foil": "0.12",
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DZero%252C%2BIncorporeal%2BSensate",
@@ -37057,19 +37057,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20073,
+      "edhrec_rank": 19863,
       "preview": {
         "source": "Nerdist",
         "source_uri": "https://nerdist.com/article/star-trek-x-magic-the-gathering-cards-reveal-nerdist-exclusive/",
         "previewed_at": "2026-10-27"
       },
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.31",
+        "usd": "0.19",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.15",
-        "eur_foil": "0.18",
-        "tix": "0.02"
+        "eur_foil": "0.16",
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DClass-F%2BShuttlecraft",
@@ -37192,12 +37192,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26496,
+      "edhrec_rank": 26307,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.34",
+        "usd": "0.12",
+        "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.16",
         "tix": "0.01"
       },
@@ -37326,14 +37326,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17002,
+      "edhrec_rank": 16857,
       "prices": {
-        "usd": "5.21",
-        "usd_foil": "5.66",
+        "usd": "5.41",
+        "usd_foil": "5.38",
         "usd_etched": null,
-        "eur": "3.35",
-        "eur_foil": "8.77",
-        "tix": "0.92"
+        "eur": "3.44",
+        "eur_foil": "8.59",
+        "tix": "0.48"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DCrystalline%2BEntity",
@@ -37459,12 +37459,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27744,
+      "edhrec_rank": 27583,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.19",
+        "usd": "0.14",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.08",
         "eur_foil": "0.31",
         "tix": "0.02"
       },
@@ -37593,14 +37593,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12850,
+      "edhrec_rank": 12637,
       "prices": {
-        "usd": "41.36",
-        "usd_foil": "44.79",
+        "usd": "40.43",
+        "usd_foil": "48.71",
         "usd_etched": null,
-        "eur": "23.34",
-        "eur_foil": "37.59",
-        "tix": "3.25"
+        "eur": "23.77",
+        "eur_foil": "38.27",
+        "tix": "2.74"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDeep%2BSpace%2B9",
@@ -37725,14 +37725,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12744,
+      "edhrec_rank": 12741,
       "prices": {
-        "usd": "0.45",
-        "usd_foil": "1.12",
+        "usd": "0.44",
+        "usd_foil": "1.24",
         "usd_etched": null,
-        "eur": "0.81",
-        "eur_foil": "1.39",
-        "tix": "0.74"
+        "eur": "0.80",
+        "eur_foil": "1.34",
+        "tix": "0.68"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DEngineered%2BExplosives",
@@ -37858,14 +37858,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24796,
+      "edhrec_rank": 24642,
       "prices": {
-        "usd": "0.44",
-        "usd_foil": "0.66",
+        "usd": "0.56",
+        "usd_foil": "0.76",
         "usd_etched": null,
-        "eur": "0.40",
-        "eur_foil": "0.69",
-        "tix": "0.06"
+        "eur": "0.34",
+        "eur_foil": "0.65",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BHolodeck",
@@ -37990,19 +37990,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25921,
+      "edhrec_rank": 25766,
       "preview": {
         "source": "Chroniques du Duel Commander",
         "source_uri": "https://www.youtube.com/shorts/1l4S627xofg",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.18",
-        "usd_foil": "0.35",
+        "usd": "0.13",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.19",
-        "tix": "0.02"
+        "tix": "0.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DIsolinear%2BProcessor",
@@ -38145,13 +38145,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19372,
+      "edhrec_rank": 19157,
       "prices": {
-        "usd": "1.21",
-        "usd_foil": "1.87",
+        "usd": "1.05",
+        "usd_foil": "1.94",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "1.13",
+        "eur_foil": "1.14",
         "tix": "0.17"
       },
       "related_uris": {
@@ -38274,13 +38274,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27238,
+      "edhrec_rank": 26982,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.32",
+        "usd": "0.20",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.17",
-        "eur_foil": "0.15",
+        "eur_foil": "0.12",
         "tix": "0.01"
       },
       "related_uris": {
@@ -38403,14 +38403,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24996,
+      "edhrec_rank": 24782,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.15",
+        "usd": "0.16",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.02",
@@ -38539,12 +38539,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 27818,
+      "edhrec_rank": 27636,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.23",
+        "usd": "0.18",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.14",
         "tix": "0.02"
       },
@@ -38669,18 +38669,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 29080,
+      "edhrec_rank": 28977,
       "preview": {
         "source": "yystv",
         "source_uri": "https://www.bilibili.com/opus/1262230760931196930",
         "previewed_at": "2026-10-22"
       },
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.30",
+        "usd": "0.09",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.17",
+        "eur_foil": "0.19",
         "tix": "0.01"
       },
       "related_uris": {
@@ -38827,17 +38827,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23663,
+      "edhrec_rank": 23436,
       "preview": {
         "source": "PixelsMixel",
         "source_uri": "https://x.com/pixelsmixel/status/2115929824997113952",
         "previewed_at": "2026-10-30"
       },
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.29",
+        "usd": "0.15",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.17",
         "eur_foil": "0.20",
         "tix": "0.02"
       },
@@ -38968,14 +38968,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16444,
+      "edhrec_rank": 16307,
       "prices": {
-        "usd": "0.37",
-        "usd_foil": "1.73",
+        "usd": "0.54",
+        "usd_foil": "1.89",
         "usd_etched": null,
-        "eur": "0.18",
-        "eur_foil": "1.43",
-        "tix": "0.13"
+        "eur": "0.15",
+        "eur_foil": "1.33",
+        "tix": "0.11"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DU.S.S.%2BEnterprise-D%252C%2BGalaxy-Class",
@@ -39097,18 +39097,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21313,
+      "edhrec_rank": 21138,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.29",
+        "usd": "0.12",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.19",
+        "eur_foil": "0.18",
         "tix": "0.01"
       },
       "related_uris": {
@@ -39238,13 +39238,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25015,
+      "edhrec_rank": 24775,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.26",
+        "usd": "0.16",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.22",
+        "eur_foil": "0.21",
         "tix": "0.02"
       },
       "related_uris": {
@@ -39395,14 +39395,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26233,
+      "edhrec_rank": 26022,
       "preview": {
         "source": "Dark Scale",
         "source_uri": "https://www.bilibili.com/opus/1264472733857611778",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.19",
+        "usd": "0.13",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.16",
@@ -39536,13 +39536,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24826,
+      "edhrec_rank": 24603,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.23",
+        "usd": "0.15",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.11",
-        "eur_foil": "0.22",
+        "eur_foil": "0.21",
         "tix": "0.02"
       },
       "related_uris": {
@@ -39674,14 +39674,14 @@
         "universesbeyond"
       ],
       "edhrec_rank": 67,
-      "penny_rank": 52,
+      "penny_rank": 50,
       "prices": {
-        "usd": "6.67",
-        "usd_foil": "7.60",
+        "usd": "6.55",
+        "usd_foil": "7.15",
         "usd_etched": null,
         "eur": "6.90",
-        "eur_foil": "7.92",
-        "tix": "0.06"
+        "eur_foil": "7.55",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DBlood%2BCrypt",
@@ -39814,12 +39814,12 @@
       "edhrec_rank": 61,
       "penny_rank": 28,
       "prices": {
-        "usd": "5.93",
-        "usd_foil": "7.16",
+        "usd": "6.09",
+        "usd_foil": "7.31",
         "usd_etched": null,
-        "eur": "5.76",
-        "eur_foil": "8.10",
-        "tix": "0.01"
+        "eur": "5.79",
+        "eur_foil": "7.60",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DBreeding%2BPool",
@@ -39948,13 +39948,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25020,
+      "edhrec_rank": 24826,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.23",
+        "usd": "0.14",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.22",
+        "eur_foil": "0.20",
         "tix": "0.01"
       },
       "related_uris": {
@@ -40084,10 +40084,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21964,
+      "edhrec_rank": 21731,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.23",
+        "usd": "0.13",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.08",
         "eur_foil": "0.19",
@@ -40220,13 +40220,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17348,
+      "edhrec_rank": 17147,
       "prices": {
-        "usd": "0.65",
-        "usd_foil": "0.76",
+        "usd": "0.71",
+        "usd_foil": "0.92",
         "usd_etched": null,
-        "eur": "0.48",
-        "eur_foil": "1.24",
+        "eur": "0.50",
+        "eur_foil": "1.19",
         "tix": "0.27"
       },
       "related_uris": {
@@ -40356,12 +40356,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25970,
+      "edhrec_rank": 25797,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.22",
+        "usd": "0.12",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.12",
         "eur_foil": "0.21",
         "tix": "0.02"
       },
@@ -40513,19 +40513,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25461,
+      "edhrec_rank": 25232,
       "preview": {
         "source": "MKAU Gaming",
         "source_uri": "https://www.mkaugaming.com/all-review-list/magic-the-gathering-star-trek-gaseous-anomaly-card-preview/",
         "previewed_at": "2026-10-30"
       },
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.31",
+        "usd": "0.19",
+        "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.15",
-        "eur_foil": "0.28",
-        "tix": "0.01"
+        "eur": "0.16",
+        "eur_foil": "0.29",
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGaseous%2BAnomaly",
@@ -40658,11 +40658,11 @@
       "edhrec_rank": 60,
       "penny_rank": 35,
       "prices": {
-        "usd": "6.71",
-        "usd_foil": "7.30",
+        "usd": "6.92",
+        "usd_foil": "7.70",
         "usd_etched": null,
-        "eur": "6.93",
-        "eur_foil": "7.72",
+        "eur": "6.90",
+        "eur_foil": "7.64",
         "tix": "0.03"
       },
       "related_uris": {
@@ -40796,11 +40796,11 @@
       "edhrec_rank": 59,
       "penny_rank": 17,
       "prices": {
-        "usd": "6.31",
-        "usd_foil": "7.14",
+        "usd": "6.35",
+        "usd_foil": "7.18",
         "usd_etched": null,
-        "eur": "6.57",
-        "eur_foil": "8.41",
+        "eur": "6.48",
+        "eur_foil": "8.04",
         "tix": "0.04"
       },
       "related_uris": {
@@ -40930,19 +40930,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18316,
+      "edhrec_rank": 18041,
       "preview": {
         "source": "White kite",
         "source_uri": "https://www.bilibili.com/opus/1264457271996317715/",
         "previewed_at": "2026-10-28"
       },
       "prices": {
-        "usd": "0.74",
-        "usd_foil": "0.93",
+        "usd": "0.75",
+        "usd_foil": "0.91",
         "usd_etched": null,
-        "eur": "1.39",
-        "eur_foil": "2.16",
-        "tix": "0.44"
+        "eur": "1.35",
+        "eur_foil": "1.95",
+        "tix": "0.29"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DNi%2527Var%2BScience%2BAcademy",
@@ -41071,13 +41071,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26576,
+      "edhrec_rank": 26256,
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.24",
+        "usd": "0.13",
+        "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.25",
+        "eur": "0.06",
+        "eur_foil": "0.23",
         "tix": "0.01"
       },
       "related_uris": {
@@ -41209,14 +41209,14 @@
         "universesbeyond"
       ],
       "edhrec_rank": 71,
-      "penny_rank": 66,
+      "penny_rank": 67,
       "prices": {
-        "usd": "5.24",
-        "usd_foil": "5.91",
+        "usd": "5.17",
+        "usd_foil": "5.40",
         "usd_etched": null,
-        "eur": "6.70",
-        "eur_foil": "8.34",
-        "tix": "0.03"
+        "eur": "6.65",
+        "eur_foil": "8.02",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DOvergrown%2BTomb",
@@ -41345,13 +41345,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21092,
+      "edhrec_rank": 20792,
       "prices": {
         "usd": "0.45",
         "usd_foil": "0.62",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.92",
+        "eur_foil": "0.83",
         "tix": "0.11"
       },
       "related_uris": {
@@ -41481,13 +41481,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26408,
+      "edhrec_rank": 26277,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.22",
+        "usd": "0.15",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.24",
+        "eur_foil": "0.23",
         "tix": "0.02"
       },
       "related_uris": {
@@ -41617,14 +41617,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17871,
+      "edhrec_rank": 17658,
       "prices": {
-        "usd": "0.51",
-        "usd_foil": "1.13",
+        "usd": "0.60",
+        "usd_foil": "1.23",
         "usd_etched": null,
-        "eur": "0.65",
-        "eur_foil": "1.57",
-        "tix": "0.04"
+        "eur": "0.63",
+        "eur_foil": "1.52",
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DQuark%2527s%2BBar",
@@ -41753,13 +41753,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22249,
+      "edhrec_rank": 21998,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.22",
+        "usd": "0.12",
+        "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.11",
-        "eur_foil": "0.18",
+        "eur_foil": "0.17",
         "tix": "0.02"
       },
       "related_uris": {
@@ -41889,13 +41889,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26470,
+      "edhrec_rank": 26182,
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.21",
+        "usd": "0.21",
+        "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.22",
+        "eur": "0.11",
+        "eur_foil": "0.20",
         "tix": "0.02"
       },
       "related_uris": {
@@ -42029,11 +42029,11 @@
       "edhrec_rank": 73,
       "penny_rank": 105,
       "prices": {
-        "usd": "6.87",
+        "usd": "7.24",
         "usd_foil": "7.84",
         "usd_etched": null,
-        "eur": "6.73",
-        "eur_foil": "7.17",
+        "eur": "6.75",
+        "eur_foil": "7.04",
         "tix": "0.08"
       },
       "related_uris": {
@@ -42184,14 +42184,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 26987,
+      "edhrec_rank": 26825,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.32",
+        "usd": "0.17",
+        "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.10",
         "eur_foil": "0.18",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSpatial%2BAnomaly",
@@ -42327,12 +42327,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21891,
+      "edhrec_rank": 21790,
       "prices": {
-        "usd": "1.22",
-        "usd_foil": "3.12",
+        "usd": "1.42",
+        "usd_foil": "2.75",
         "usd_etched": null,
-        "eur": "1.67",
+        "eur": "1.55",
         "eur_foil": "0.49",
         "tix": "0.29"
       },
@@ -42466,11 +42466,11 @@
       ],
       "edhrec_rank": 62,
       "prices": {
-        "usd": "6.40",
-        "usd_foil": "8.27",
+        "usd": "6.42",
+        "usd_foil": "8.07",
         "usd_etched": null,
-        "eur": "6.75",
-        "eur_foil": "7.35",
+        "eur": "6.68",
+        "eur_foil": "7.25",
         "tix": "0.09"
       },
       "related_uris": {
@@ -42602,13 +42602,13 @@
         "universesbeyond"
       ],
       "edhrec_rank": 70,
-      "penny_rank": 33,
+      "penny_rank": 34,
       "prices": {
-        "usd": "5.42",
-        "usd_foil": "5.67",
+        "usd": "5.52",
+        "usd_foil": "5.74",
         "usd_etched": null,
-        "eur": "5.54",
-        "eur_foil": "6.23",
+        "eur": "5.51",
+        "eur_foil": "5.96",
         "tix": "0.04"
       },
       "related_uris": {
@@ -42767,13 +42767,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23972,
+      "edhrec_rank": 23815,
       "prices": {
-        "usd": "0.23",
-        "usd_foil": "0.30",
+        "usd": "0.17",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.22",
+        "eur_foil": "0.20",
         "tix": "0.01"
       },
       "related_uris": {
@@ -42907,11 +42907,11 @@
       "edhrec_rank": 81,
       "penny_rank": 54,
       "prices": {
-        "usd": "5.15",
-        "usd_foil": "5.65",
+        "usd": "4.75",
+        "usd_foil": "5.74",
         "usd_etched": null,
-        "eur": "5.33",
-        "eur_foil": "5.69",
+        "eur": "5.28",
+        "eur_foil": "5.57",
         "tix": "0.01"
       },
       "related_uris": {
@@ -43064,18 +43064,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25226,
+      "edhrec_rank": 25011,
       "preview": {
         "source": "Magic Arena - MundoTK",
         "source_uri": "",
         "previewed_at": "2026-10-30"
       },
       "prices": {
-        "usd": "0.20",
+        "usd": "0.17",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.24",
+        "eur": "0.15",
+        "eur_foil": "0.25",
         "tix": "0.01"
       },
       "related_uris": {
@@ -43201,18 +43201,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23509,
+      "edhrec_rank": 23251,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/exclusive-see-7-new-cards-from-magic-the-gathering-star-trek-including-1-that-remembers-the-most-iconic-drink-of-tng",
         "previewed_at": "2026-10-21"
       },
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.28",
+        "usd": "0.14",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.31",
+        "eur_foil": "0.40",
         "tix": "0.02"
       },
       "related_uris": {
@@ -43342,14 +43342,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16362,
+      "edhrec_rank": 16109,
       "prices": {
-        "usd": "1.20",
-        "usd_foil": "1.62",
+        "usd": "1.37",
+        "usd_foil": "1.46",
         "usd_etched": null,
-        "eur": "0.69",
-        "eur_foil": "2.72",
-        "tix": "0.23"
+        "eur": "0.78",
+        "eur_foil": "2.98",
+        "tix": "0.19"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BUnicomplex",
@@ -43478,13 +43478,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21591,
+      "edhrec_rank": 21383,
       "prices": {
-        "usd": "0.21",
+        "usd": "0.13",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.21",
+        "eur": "0.09",
+        "eur_foil": "0.20",
         "tix": "0.02"
       },
       "related_uris": {
@@ -43618,12 +43618,12 @@
       "edhrec_rank": 49,
       "penny_rank": 47,
       "prices": {
-        "usd": "7.36",
-        "usd_foil": "7.63",
+        "usd": "7.80",
+        "usd_foil": "7.29",
         "usd_etched": null,
-        "eur": "7.06",
-        "eur_foil": "7.74",
-        "tix": "0.01"
+        "eur": "7.10",
+        "eur_foil": "7.53",
+        "tix": "0.04"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DWatery%2BGrave",
@@ -43750,8 +43750,8 @@
         "universesbeyond"
       ],
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.27",
+        "usd": "0.17",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.10",
         "eur_foil": "0.17",
@@ -43882,10 +43882,10 @@
         "universesbeyond"
       ],
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.23",
+        "usd": "0.14",
+        "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.12",
         "eur_foil": "0.17",
         "tix": "0.01"
       },
@@ -44014,12 +44014,12 @@
         "universesbeyond"
       ],
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.25",
+        "usd": "0.17",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.09",
         "eur_foil": "0.18",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DSwamp",
@@ -44146,11 +44146,11 @@
         "universesbeyond"
       ],
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.26",
+        "usd": "0.19",
+        "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.19",
+        "eur_foil": "0.18",
         "tix": "0.01"
       },
       "related_uris": {
@@ -44297,11 +44297,11 @@
       ],
       "prices": {
         "usd": "0.15",
-        "usd_foil": "0.24",
+        "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.15",
-        "tix": "0.01"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DForest",
