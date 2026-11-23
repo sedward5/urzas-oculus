@@ -57,6 +57,24 @@ public struct CardDimensionAssessment: Codable, Equatable, Sendable {
     }
 }
 
+/// A per-archetype fit assessment; one card may fit multiple archetypes differently.
+public struct CardArchetypeFitAssessment: Codable, Equatable, Sendable {
+    public let archetypeID: String
+    public let value: Int
+    public let confidence: EvaluationConfidence
+    public let evidence: [EvaluationEvidence]
+    public let rationale: String
+
+    public init(archetypeID: String, value: Int, confidence: EvaluationConfidence,
+                evidence: [EvaluationEvidence], rationale: String) {
+        self.archetypeID = archetypeID
+        self.value = value
+        self.confidence = confidence
+        self.evidence = evidence
+        self.rationale = rationale
+    }
+}
+
 /// A traceable evidence item. References should point to source records or review artifacts.
 public struct EvaluationEvidence: Codable, Equatable, Sendable {
     public let kind: EvaluationEvidenceKind
@@ -111,7 +129,7 @@ public struct CardEvaluationReview: Codable, Equatable, Sendable {
     public let baselinePower: CardDimensionAssessment?
     public let roleValue: CardDimensionAssessment?
     public let synergyPotential: CardDimensionAssessment?
-    public let archetypeFit: CardDimensionAssessment?
+    public let archetypeFits: [CardArchetypeFitAssessment]
     public let contextSensitivity: CardDimensionAssessment?
     public let rate: RateAssessment
     public let rateRationale: String
@@ -121,7 +139,7 @@ public struct CardEvaluationReview: Codable, Equatable, Sendable {
     public init(schemaVersion: Int = 1, modelVersion: String, scryfallID: String,
                 oracleID: String? = nil, setCode: String, roles: [CardRoleAnnotation] = [],
                 baselinePower: CardDimensionAssessment? = nil, roleValue: CardDimensionAssessment? = nil,
-                synergyPotential: CardDimensionAssessment? = nil, archetypeFit: CardDimensionAssessment? = nil,
+                synergyPotential: CardDimensionAssessment? = nil, archetypeFits: [CardArchetypeFitAssessment] = [],
                 contextSensitivity: CardDimensionAssessment? = nil,
                 rate: RateAssessment = .insufficientEvidence, rateRationale: String = "",
                 reviewer: String? = nil, reviewedAt: String? = nil) {
@@ -134,7 +152,7 @@ public struct CardEvaluationReview: Codable, Equatable, Sendable {
         self.baselinePower = baselinePower
         self.roleValue = roleValue
         self.synergyPotential = synergyPotential
-        self.archetypeFit = archetypeFit
+        self.archetypeFits = archetypeFits
         self.contextSensitivity = contextSensitivity
         self.rate = rate
         self.rateRationale = rateRationale
@@ -228,7 +246,6 @@ public enum CardEvaluationEngine {
             ("baselinePower", review.baselinePower),
             ("roleValue", review.roleValue),
             ("synergyPotential", review.synergyPotential),
-            ("archetypeFit", review.archetypeFit),
             ("contextSensitivity", review.contextSensitivity)
         ]
         for (name, assessment) in dimensions {
@@ -239,6 +256,17 @@ public enum CardEvaluationEngine {
             if assessment.value != nil &&
                 (assessment.evidence.isEmpty || assessment.rationale.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) {
                 throw CardEvaluationValidationError.invalidDimension(name)
+            }
+        }
+
+        var seenArchetypes = Set<String>()
+        for assessment in review.archetypeFits {
+            guard !assessment.archetypeID.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+                  seenArchetypes.insert(assessment.archetypeID).inserted,
+                  (1...5).contains(assessment.value),
+                  !assessment.evidence.isEmpty,
+                  !assessment.rationale.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                throw CardEvaluationValidationError.invalidDimension("archetypeFits")
             }
         }
 
