@@ -181,13 +181,77 @@ public struct CardEvaluationResult: Codable, Equatable, Sendable {
     }
 }
 
+public enum CardEvaluationValidationError: Error, Equatable {
+    case mismatchedCardIdentity
+    case unsupportedSchemaVersion
+    case emptyModelVersion
+    case duplicateRole(CardRole)
+    case invalidDimension(String)
+    case missingRoleRationale(CardRole)
+    case missingRoleEvidence(CardRole)
+    case missingRateRationale
+}
+
 /// Deterministic structural suggestions. This engine deliberately does not infer
 /// strategic strength, archetype fit, or "on rate" from keywords alone.
 public enum CardEvaluationEngine {
     public static let engineVersion = "1.0.0"
     public static let schemaVersion = 1
 
+    public static func validate(review: CardEvaluationReview, for card: CardRecord) throws {
+        guard review.schemaVersion == schemaVersion else {
+            throw CardEvaluationValidationError.unsupportedSchemaVersion
+        }
+        guard !review.modelVersion.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            throw CardEvaluationValidationError.emptyModelVersion
+        }
+        guard review.scryfallID == card.id,
+              review.oracleID == card.oracleID,
+              review.setCode == card.setCode else {
+            throw CardEvaluationValidationError.mismatchedCardIdentity
+        }
+
+        var seenRoles = Set<CardRole>()
+        for annotation in review.roles {
+            guard seenRoles.insert(annotation.role).inserted else {
+                throw CardEvaluationValidationError.duplicateRole(annotation.role)
+            }
+            guard !annotation.rationale.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+                throw CardEvaluationValidationError.missingRoleRationale(annotation.role)
+            }
+            guard !annotation.evidence.isEmpty else {
+                throw CardEvaluationValidationError.missingRoleEvidence(annotation.role)
+            }
+        }
+
+        let dimensions: [(String, CardDimensionAssessment?)] = [
+            ("baselinePower", review.baselinePower),
+            ("roleValue", review.roleValue),
+            ("synergyPotential", review.synergyPotential),
+            ("archetypeFit", review.archetypeFit),
+            ("contextSensitivity", review.contextSensitivity)
+        ]
+        for (name, assessment) in dimensions {
+            guard let assessment else { continue }
+            if let value = assessment.value, !(1...5).contains(value) {
+                throw CardEvaluationValidationError.invalidDimension(name)
+            }
+            if assessment.value != nil &&
+                (assessment.evidence.isEmpty || assessment.rationale.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty) {
+                throw CardEvaluationValidationError.invalidDimension(name)
+            }
+        }
+
+        if ![RateAssessment.insufficientEvidence, .notApplicable].contains(review.rate) &&
+            review.rateRationale.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            throw CardEvaluationValidationError.missingRateRationale
+        }
+    }
+
     public static func evaluate(card: CardRecord, review: CardEvaluationReview? = nil) -> CardEvaluationResult {
+        if let review {
+            try? validate(review: review, for: card)
+        }
         let text = ([card.oracleText] + card.cardFaces.map(\.oracleText))
             .compactMap { $0 }
             .joined(separator: "\n")
@@ -258,6 +322,6 @@ public enum CardEvaluationEngine {
     }
 
     private static func containsAny(_ value: String, _ fragments: [String]) -> Bool {
-        fragments.contains(where: value.contains)
+        fragments.contains { value.contains($0) }
     }
 }
