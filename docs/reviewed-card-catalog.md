@@ -18,6 +18,12 @@ This catalog is a first reviewed pass over cards explicitly named in the officia
 - ECL: [Lorwyn Eclipsed Prerelease Guide](https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide)
 - TDM: [Tarkir: Dragonstorm Prerelease Guide](https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide)
 
+## Current reviewed catalog status (2026-11-22)
+
+The catalog currently contains 62 cards: HOB 26, ECL 19, and TDM 17. All 62 have Scryfall identities and card metadata/image URIs. Enrichment is a separate metadata operation; it does not infer, add, or modify archetype relationships. Relationship role totals are HOB: 8 enablers, 6 payoffs, 12 supporting; ECL: 8 enablers, 3 payoffs, 8 supporting; TDM: 4 enablers, 9 payoffs, 4 supporting. These roles are Oculus editorial classifications.
+
+The canonical reviewed catalog is `scripts/data/reviewed_cards.json`; website and native app catalogs are synchronized from it. The promotion workflow promotes a specific enrichment artifact rather than editing the human-reviewed relationship source. See [promotion workflow](promoting-scryfall-enrichment.md).
+
 ## Enrich Scryfall metadata
 
 After reviewing the names, resolve exact identities and fetch image/card metadata:
