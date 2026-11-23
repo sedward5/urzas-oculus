@@ -179,3 +179,10 @@ A separate pack-history projection retains prior pack observations and known whe
 The session coordinator will orchestrate capture, recognition, user confirmation, event persistence, and scoring, but domain boundaries remain intact. Recognition hypotheses cannot directly add cards to the drafted pool. The user-confirmed pick becomes an append-only draft event; corrections append a compensating/correction event. The deck panel is a deterministic projection of the event history.
 
 The intended workspace hierarchy and interaction contracts are specified in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). The document describes desired behavior; it does not imply those UI features exist today.
+
+
+## Prediction and card evaluation
+
+The shared Swift core also owns the versioned pre-release card evaluation model. It keeps card identity, reviewed understanding/prediction, and observed performance separate. Structural rules may suggest multi-label roles from card text and type data, but suggestions are not confirmed classifications. Reviewer-authored records carry five independent ordinal dimensions, a separate rate assessment, evidence, confidence, and model version.
+
+The `CardEvaluationTool` executable is a local batch adapter around this core. It accepts normalized `CardRecord` JSON and optional reviewed records, validates identity and evidence requirements, and emits deterministic suggestion/review JSON. It does not parse raw Scryfall bulk data or implement a second scoring engine. Future app and CI workflows must call the same core. Website pages may display immutable prediction and calibration artifacts but must not reproduce classification or evaluation logic.
