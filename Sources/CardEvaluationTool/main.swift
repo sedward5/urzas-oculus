@@ -30,16 +30,33 @@ func argumentValue(_ flag: String, in arguments: [String]) -> String? {
 
 do {
     let arguments = Array(CommandLine.arguments.dropFirst())
-    guard let inputPath = argumentValue("--input", in: arguments) else {
+    let inputPath = argumentValue("--input", in: arguments)
+    let databasePath = argumentValue("--database", in: arguments)
+    guard (inputPath != nil) != (databasePath != nil) else {
         throw CardEvaluationToolError.usage
     }
 
-    let inputData = try Data(contentsOf: URL(fileURLWithPath: inputPath))
     let cards: [CardRecord]
-    do {
-        cards = try JSONDecoder().decode([CardRecord].self, from: inputData)
-    } catch {
-        throw CardEvaluationToolError.invalidInput("Unable to decode normalized card records: \(error)")
+    if let inputPath {
+        let inputData = try Data(contentsOf: URL(fileURLWithPath: inputPath))
+        do {
+            cards = try JSONDecoder().decode([CardRecord].self, from: inputData)
+        } catch {
+            throw CardEvaluationToolError.invalidInput("Unable to decode normalized card records: \(error)")
+        }
+    } else if let databasePath, let setCode = argumentValue("--set", in: arguments) {
+        let databaseURL = URL(fileURLWithPath: databasePath)
+        guard FileManager.default.fileExists(atPath: databaseURL.path) else {
+            throw CardEvaluationToolError.invalidInput("Database does not exist: \(databasePath)")
+        }
+        let store = try LocalDataStore(url: databaseURL)
+        defer { try? store.close() }
+        cards = try store.cards(setCode: setCode)
+        guard !cards.isEmpty else {
+            throw CardEvaluationToolError.invalidInput("No stored cards found for set \(setCode.uppercased()).")
+        }
+    } else {
+        throw CardEvaluationToolError.usage
     }
 
     var seen = Set<String>()
