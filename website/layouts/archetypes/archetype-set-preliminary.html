@@ -1,28 +1,39 @@
 {{ define "main" }}
 {{ $evidence := readFile .Params.evidence_path | transform.Unmarshal }}
+{{ $overview := index $evidence.overview_images 0 }}
 <article class="page-content archetype-set-page">
   <div class="eyebrow"><span class="eyebrow-line"></span> {{ .Params.set_code }} · PRELIMINARY LIMITED INTELLIGENCE</div>
   <h1>{{ .Title }}</h1>
   <p class="page-lede">{{ .Description }}</p>
+  <figure class="archetype-overview">
+    <img src="{{ $overview.url }}" alt="{{ $overview.alt }}" fetchpriority="high" loading="eager">
+    <figcaption>Official Wizards of the Coast archetype overview · <a href="{{ .Params.source_url }}" rel="external noopener">Prerelease Guide ↗</a></figcaption>
+  </figure>
   <div class="source-status">
-    <strong>Source acquired · Oculus review pending</strong>
-    <p>These archetype names come from the official Wizards prerelease guide. They are not yet Oculus-reviewed classifications, card-role assignments, or performance conclusions.</p>
-    <p>Evidence retrieved {{ dateFormat "Jan 2, 2006" $evidence.retrieved_at }} · <a href="{{ .Params.source_url }}" rel="external noopener">Read the official Wizards prerelease guide ↗</a></p>
+    <strong>Official prerelease content · Oculus review pending</strong>
+    <p>All ten archetypes, strategy summaries, and highlighted card examples on this page are drawn from Wizards' Star Trek Prerelease Guide. They describe Wizards' intended draft themes; they are not yet independent Oculus evaluations or performance conclusions.</p>
+    <p>Evidence retrieved {{ dateFormat "Jan 2, 2006" $evidence.retrieved_at }} · <a href="{{ .Params.source_url }}" rel="external noopener">Read the full Wizards guide ↗</a></p>
   </div>
-  <h2>Archetypes identified by Wizards</h2>
+  <h2>Draft archetypes</h2>
   <div class="archetype-grid">
-    {{ $show := false }}
-    {{ range $evidence.headings }}
-      {{ if eq .level "h2" }}
-        {{ if strings.Contains .text "Draft Archetypes" }}{{ $show = true }}{{ else if $show }}{{ $show = false }}{{ end }}
-      {{ else if and $show (eq .level "h3") }}
-        <article class="archetype-card">
-          <h3>{{ .text }}</h3>
-          <span class="archetype-kind">Official guide heading · awaiting Oculus review</span>
-        </article>
-      {{ end }}
+    {{ range .Params.archetypes }}
+      <article class="archetype-card">
+        <div class="archetype-card-heading">
+          <h3>{{ .name }}</h3>
+          <span class="mana-identity">{{ range split .colors "" }}{{ partial "mana-symbol.html" . }}{{ end }}</span>
+        </div>
+        <p>{{ .strategy }}</p>
+        <span class="archetype-kind">Wizards-highlighted cards</span>
+        <section class="archetype-role">
+          <ul>
+            {{ range .cards }}
+              <li><a href="https://scryfall.com/search?q=set%3Atrk+%22{{ . | urlquery }}%22" rel="external noopener">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </section>
+      </article>
     {{ end }}
   </div>
-  <p class="page-note">This page will gain card relationships, role classifications, and explainable predictions as the set analysis is reviewed. Performance data will be added when permitted public datasets become available.</p>
+  <p class="page-note">Card links open Scryfall searches restricted to the TRK set. Oculus card-role classifications, synergy relationships, and predictions will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
 </article>
 {{ end }}
