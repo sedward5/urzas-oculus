@@ -1,4 +1,6 @@
 import sys, unittest
+from unittest.mock import patch, MagicMock
+from urllib.error import HTTPError
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import set_catalog
@@ -31,6 +33,27 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(set_catalog.missing_bulk_sources({"game":{}}), ["draft"])
         self.assertEqual(set_catalog.missing_bulk_sources({"draft":{},"game":{}}), [])
         self.assertEqual(set_catalog.missing_bulk_sources({}), ["draft","game"])
+
+
+    def test_archive_url_uses_expected_public_key(self):
+        self.assertEqual(
+            set_catalog.archive_url("TRK","PremierDraft","draft"),
+            "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.TRK.PremierDraft.csv.gz"
+        )
+
+    def test_probe_archive_success_and_not_found(self):
+        response=MagicMock()
+        response.status=200
+        response.__enter__.return_value=response
+        with patch.object(set_catalog,"urlopen",return_value=response):
+            self.assertTrue(set_catalog.probe_archive("https://example.test/archive"))
+        with patch.object(set_catalog,"urlopen",side_effect=HTTPError("u",404,"Not Found",{},None)):
+            self.assertFalse(set_catalog.probe_archive("https://example.test/missing"))
+
+    def test_probe_archive_does_not_hide_access_denied(self):
+        with patch.object(set_catalog,"urlopen",side_effect=HTTPError("u",403,"Forbidden",{},None)):
+            with self.assertRaisesRegex(RuntimeError,"denied access"):
+                set_catalog.probe_archive("https://example.test/private")
 
     def test_guide_domain_guard_runs_before_network(self):
         from tempfile import TemporaryDirectory
