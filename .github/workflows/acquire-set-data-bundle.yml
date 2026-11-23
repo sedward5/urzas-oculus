@@ -34,7 +34,7 @@ jobs:
       - name: Acquire source bundle
         env:
           SET_CODE: ${{ inputs.set_code || 'TRK' }}
-          EVENT_TYPE: ${{ inputs.event_type }}
+          EVENT_TYPE: ${{ inputs.event_type || 'PremierDraft' }}
           GUIDE_URL: ${{ inputs.guide_url }}
         run: |
           ARGS=(acquire --set-code "$SET_CODE" --event-type "$EVENT_TYPE" --output set-acquisition-output)
