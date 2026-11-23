@@ -4,6 +4,7 @@
   "sets": {
     "HOB": {
       "set_name": "Magic: The Gathering | The Hobbit",
+      "release_date": "2026-08-14",
       "source_url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
       "overview_image_review": "Official prerelease-guide archetype overview image; manually inspected from acquisition artifact.",
       "taxonomy_dimensions": [
@@ -62,6 +63,7 @@
     },
     "ECL": {
       "set_name": "Lorwyn Eclipsed",
+      "release_date": "2026-01-23",
       "source_url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
       "overview_image_review": "Official prerelease-guide archetype overview image; manually inspected from acquisition artifact.",
       "taxonomy_dimensions": [
@@ -120,6 +122,7 @@
     },
     "TDM": {
       "set_name": "Tarkir: Dragonstorm",
+      "release_date": "2025-04-11",
       "source_url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
       "overview_image_review": "Official prerelease-guide archetype overview image; manually inspected from acquisition artifact.",
       "taxonomy_dimensions": [
