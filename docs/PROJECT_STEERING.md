@@ -1,6 +1,6 @@
 # Urza's Oculus — Project Steering
 
-Last reviewed: 2026-11-21
+Last reviewed: 2026-11-22
 
 This document defines product goals, constraints, and architectural guardrails. The current implementation status and milestone sequence live in [ROADMAP.md](ROADMAP.md).
 
@@ -121,4 +121,4 @@ A feature is complete when behavior is implemented, relevant tests pass, uncerta
 
 ## Published archetype catalog
 
-A manually dispatched Python stdlib workflow fetches the official HOB, ECL, or TDM Wizards Prerelease Guide and emits article provenance, unassigned card references, and preserved overview-image evidence. A separate, manually reviewed catalog records the overview-image archetype names, color identities, and concise strategy summaries. HOB and ECL each have five two-color archetypes. TDM has five three-color clan archetypes plus five overlapping two-color themes. Article heading extraction is diagnostic only; it does not define the taxonomy. OCR and automatic mana-symbol interpretation are not implemented. Signpost and supporting-card associations remain unassigned, and the reviewed catalog is contextual metadata rather than recommendation or lane-scoring input.
+A manually dispatched Python stdlib workflow fetches the official HOB, ECL, or TDM Wizards Prerelease Guide and emits article provenance, unassigned card references, and preserved overview-image evidence. A separate, manually reviewed catalog records the overview-image archetype names, color identities, and concise strategy summaries. HOB and ECL each have five two-color archetypes. TDM has five three-color clan archetypes plus five overlapping two-color themes. Article heading extraction is diagnostic only; it does not define the taxonomy. OCR and automatic mana-symbol interpretation are not implemented. The reviewed card catalog contains 62 source-backed relationships across HOB (26), ECL (19), and TDM (17), all enriched with Scryfall identity and display metadata. Roles are Oculus editorial classifications (enabler, payoff, supporting), not Wizards terminology. TDM's guide does not supply equivalent card lists for all five two-color themes, so those relationships remain absent rather than inferred. The catalog is contextual metadata and does not currently affect recommendations or lane scoring.

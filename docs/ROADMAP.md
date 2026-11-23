@@ -1,10 +1,12 @@
 # Roadmap and implementation status
 
-Last reviewed: 2026-11-20
+Last reviewed: 2026-11-22
 
 This page distinguishes implemented foundations from an integrated, user-ready feature. Code and tests existing does not mean a feature is connected to the macOS workflow or validated with real users.
 
 ## Current milestone: Phase 0 real-world capture validation
+
+The macOS app is distributed through automated GitHub Releases as a DMG and ZIP. Builds are ad-hoc signed, not Developer ID signed or notarized; macOS may warn on first launch. See [distribution](DISTRIBUTION.md). The immediate action is maintainer-led testing of the installed app during a representative Arena draft. See [the project-state handoff](PROJECT_STATE.md) for accumulated data findings and durable product decisions.
 
 **In progress.** The ScreenCaptureKit prototype is merged. The next step is a representative Arena draft recording from the target Mac.
 
@@ -81,7 +83,7 @@ The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_C
 
 The bounded data-analysis sequence and production checkpoint are documented in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md).
 
-The reviewed published archetype catalog now records HOB, ECL, and TDM taxonomies from official Wizards overview images. HOB/ECL each contain five two-color archetypes; TDM contains five three-color clans and five overlapping two-color themes. Card associations remain unassigned, and this metadata does not affect recommendations. The HOB PremierDraft set-speed baseline is recorded in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md) from successful workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947). The historical user win-rate bucket terminology and missing-value count are corrected. A first reproducible two-color archetype-proxy audit is implemented in `scripts/analyze_17lands_archetypes.py`, with manual workflow `17lands-archetype-audit.yml`. Run it for HOB PremierDraft and review its artifact before drawing conclusions. Lane inference remains a separate follow-on analysis. These are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
+The reviewed published archetype catalog records HOB, ECL, and TDM taxonomies from official Wizards overview images. HOB has five two-color archetypes; ECL has five featured two-color typal archetypes plus five overlapping two-color mechanical themes; TDM has five three-color clans plus five overlapping two-color themes. The reviewed card catalog contains 62 source-backed relationships (HOB 26, ECL 19, TDM 17), all enriched with Scryfall identity and display metadata. These are reviewed design-intent relationships, not empirical pick or performance claims, and do not currently affect recommendations. The HOB PremierDraft set-speed baseline is recorded in [ANALYSIS_AND_PRODUCTION_PLAN.md](ANALYSIS_AND_PRODUCTION_PLAN.md) from successful workflow run [44861481947](https://github.com/sedward5/urzas-oculus/actions/runs/44861481947). The historical user win-rate bucket terminology and missing-value count are corrected. A first reproducible two-color archetype-proxy audit is implemented in `scripts/analyze_17lands_archetypes.py`, with manual workflow `17lands-archetype-audit.yml`. Run it for HOB PremierDraft and review its artifact before drawing conclusions. Lane inference remains a separate follow-on analysis. These are cockpit enhancements, not reasons to hold the first useful production release indefinitely.
 
 ## Next phases
 
