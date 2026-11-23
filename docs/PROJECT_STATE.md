@@ -97,6 +97,10 @@ The accepted workspace has three coordinated areas: **current pack** (primary), 
 
 Do not let further data analysis delay capture validation unless it identifies a material correctness issue.
 
+## Set discovery and acquisition
+
+The repository now has a weekly read-only discovery workflow comparing Scryfall Limited set releases, 17Lands public archive availability/freshness, and local reviewed archetype/card coverage. A separate manual acquisition workflow downloads Scryfall card metadata, only 17Lands archives actually published for the selected event, and optional official Wizards guide evidence. Outputs are immutable candidate artifacts; human review and promotion remain separate. See [SET_DISCOVERY_AND_ACQUISITION.md](SET_DISCOVERY_AND_ACQUISITION.md).
+
 ## Releases and repository workflow
 
 The macOS app is distributed as a DMG and ZIP through GitHub Releases after successful macOS CI on main. Stable DMG: `https://github.com/sedward5/urzas-oculus/releases/latest/download/UrzasOculus.dmg`. Website-only and Python-only changes do not publish app releases. Current builds are ad-hoc signed, not Developer ID signed or notarized; macOS may warn on first launch. Hugo deploys through Cloudflare Pages; GitHub Actions validates builds. Keep PRs bounded; the maintainer reviews and merges. Never merge without explicit approval.

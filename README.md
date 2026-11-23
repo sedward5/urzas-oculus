@@ -114,6 +114,7 @@ Third-party datasets, card images, and trademarks are not relicensed by this rep
 - [Reviewed card catalog and methodology](docs/reviewed-card-catalog.md)
 - [Data analysis and production plan](docs/ANALYSIS_AND_PRODUCTION_PLAN.md)
 - [macOS distribution](docs/DISTRIBUTION.md)
+- [Set discovery and acquisition](docs/SET_DISCOVERY_AND_ACQUISITION.md)
 - [Brand and visual style guide](docs/BRANDING.md)
 
 ## License
