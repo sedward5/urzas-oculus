@@ -133,6 +133,26 @@ def missing_bulk_sources(archives):
     """Return required bulk sources not present in the official listing."""
     return sorted({"draft","game"}-set(archives))
 
+def archive_url(code,event,kind):
+    """Build the public S3 object key for one set/event archive."""
+    if kind not in {"draft","game","replay"}: raise ValueError(f"Unsupported archive kind: {kind}")
+    return (f"https://17lands-public.s3.amazonaws.com/analysis_data/{kind}_data/"
+            f"{kind}_data_public.{code}.{event}.csv.gz")
+
+def probe_archive(url):
+    """Check one known S3 object without scraping the 17Lands HTML listing."""
+    req=Request(url,headers={"User-Agent":UA},method="HEAD")
+    try:
+        with urlopen(req,timeout=30) as response:
+            return response.status == 200
+    except Exception as exc:
+        status=getattr(exc,"code",None)
+        if status == 404: return False
+        if status == 403:
+            raise RuntimeError(f"17Lands S3 denied access while checking {url}; refusing to treat this as unpublished data.") from exc
+        raise RuntimeError(f"Could not check 17Lands archive {url}: {exc}") from exc
+
+
 
 def acquire(code,event,guide,out):
     code=code.upper()
@@ -151,16 +171,18 @@ def acquire(code,event,guide,out):
     cp.write_text(json.dumps({"set_code":code,"retrieved_at":now,"source":CARDS_API,"cards":cards},indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     manifest["files"].append({"path":str(cp),"bytes":cp.stat().st_size,"sha256":hashlib.sha256(cp.read_bytes()).hexdigest(),"records":len(cards)})
     manifest["status"]["scryfall"]="acquired"
-    matches=[r for r in parse_lands(fetch(LANDS).decode("utf-8",errors="replace")) if r["set_code"]==code and r["event_type"]==event]
-    if not matches:
-        manifest["status"]["17lands"]="not_yet_published"; manifest["17lands"]={"event_type":event,"archives":[]}
-    else:
-        archives={}
-        for row in matches:
-            for kind,u in row["archives"].items():
-                rec=save(u,out/"17lands"/f"{kind}.csv.gz"); archives[kind]=rec; manifest["files"].append(rec)
-            manifest["17lands"]={"last_updated":row["last_updated"],"archives":archives}
-        manifest["status"]["17lands"]="acquired"
+    # Probe deterministic public S3 object keys. Acquisition must not depend
+    # on scraping the public_datasets presentation page.
+    archives={}
+    for kind in ("draft","game","replay"):
+        u=archive_url(code,event,kind)
+        if probe_archive(u):
+            rec=save(u,out/"17lands"/f"{kind}.csv.gz")
+            archives[kind]=rec; manifest["files"].append(rec)
+    manifest["17lands"]={"event_type":event,"archives":archives,
+        "source_selection":{"bulk_available":sorted(archives),
+            "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
+    manifest["status"]["17lands"]="acquired" if archives else "not_yet_published"
     if guide:
         if not guide.startswith("https://magic.wizards.com/"): raise ValueError("Guide URL must use magic.wizards.com over HTTPS")
         raw=fetch(guide); p=GuideParser(); p.feed(raw.decode("utf-8",errors="replace"))
