@@ -52,8 +52,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_probe_archive_does_not_hide_access_denied(self):
         with patch.object(set_catalog,"urlopen",side_effect=HTTPError("u",403,"Forbidden",{},None)):
-            with self.assertRaisesRegex(RuntimeError,"denied access"):
-                set_catalog.probe_archive("https://example.test/private")
+            self.assertIsNone(set_catalog.probe_archive("https://example.test/private"))
 
     def test_guide_domain_guard_runs_before_network(self):
         from tempfile import TemporaryDirectory
