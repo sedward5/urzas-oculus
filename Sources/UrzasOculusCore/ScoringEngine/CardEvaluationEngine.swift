@@ -1,7 +1,7 @@
 import Foundation
 
 /// A functional role a card may fill. Cards may have multiple roles.
-public enum CardRole: String, Codable, CaseIterable, Sendable {
+public enum CardRole: String, Codable, CaseIterable, Equatable, Sendable {
     case removal
     case interaction
     case enabler
