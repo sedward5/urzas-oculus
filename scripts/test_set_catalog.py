@@ -11,6 +11,10 @@ class CatalogTests(unittest.TestCase):
         rows=set_catalog.parse_lands(html)
         self.assertEqual(rows[0]["set_code"],"TRK")
         self.assertEqual(set(rows[0]["archives"]),{"draft","game"})
+    def test_reject_untrusted_archive_host(self):
+        html="""<table><tr><td>TRK</td><td>PremierDraft</td><td>2026-11-22</td>
+        <td><a href="https://example.com/draft_data_public.TRK.PremierDraft.csv.gz">draft</a></td></tr></table>"""
+        with self.assertRaises(ValueError): set_catalog.parse_lands(html)
     def test_empty_listing_fails_closed(self):
         with self.assertRaises(ValueError): set_catalog.parse_lands("<html>maintenance</html>")
     def test_guide_domain_guard_runs_before_network(self):

@@ -4,7 +4,7 @@ import argparse, hashlib, json, re, time
 from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import quote, urljoin
+from urllib.parse import quote, urljoin, urlparse
 from urllib.request import Request, urlopen
 
 SETS_API="https://api.scryfall.com/sets"
@@ -71,7 +71,8 @@ def parse_lands(raw):
         archives={}
         for cell in row[3:]:
             for href in cell["links"]:
-                u=urljoin(LANDS,href); name=u.rsplit("/",1)[-1].lower()
+                u=urljoin(LANDS,href); parsed=urlparse(u); name=u.rsplit("/",1)[-1].lower()
+                if parsed.scheme!="https" or parsed.hostname!="17lands-public.s3.amazonaws.com": continue
                 for kind,prefix in (("draft","draft_data_public."),("game","game_data_public."),("replay","replay_data_public.")):
                     if prefix in name: archives[kind]=u
         if archives: result.append({"set_code":code.upper(),"event_type":event,"last_updated":updated,"archives":archives})
@@ -142,7 +143,10 @@ def acquire(code,event,guide,out):
         imgs=[]
         for i,img in enumerate(p.images,1):
             if not re.search(r"archetype|draft",img["alt"],re.I): continue
-            u=urljoin(guide,img["src"])
+            u=urljoin(guide,img["src"]); host=urlparse(u).hostname or ""
+            if urlparse(u).scheme!="https" or not (host=="wizards.com" or host.endswith(".wizards.com")):
+                imgs.append({"url":u,"alt":img["alt"],"error":"Image URL is outside the official Wizards HTTPS domain."})
+                continue
             try:
                 suffix=Path(u.split("?")[0]).suffix or ".img"; rec=save(u,wd/f"overview-{i}{suffix}")
                 rec["alt"]=img["alt"]; imgs.append(rec); manifest["files"].append(rec)
@@ -175,7 +179,7 @@ def main():
         (x.output/"set-discovery.json").write_text(json.dumps(report,indent=2)+"\n",encoding="utf-8")
         lines=["# Limited set discovery","",f"Generated: {report['generated_at']}","","| Set | Release | Age | 17Lands | Archetypes | Cards |","|---|---:|---:|---|---|---|"]
         for s in report["sets"][:50]:
-            ev=", ".join(sorted({r["event_type"] for r in s["17lands"]})) or s["17lands_status"]
+            ev="; ".join(f"{r['event_type']} [{', '.join(sorted(r['archives']))}] updated {r['last_updated']}" for r in s["17lands"]) or s["17lands_status"]
             lines.append(f"| {s['code']} — {s['name']} | {s['released_at']} | {s['age_days']}d | {ev} | {s['local_archetypes']} | {s['local_reviewed_cards']} |")
         lines += ["","17Lands publication guidance: draft ~14 days, game ~21 days, replay ~35 days after set start. These are expectations, not guarantees.",
           "Discovery is read-only. Missing local catalogs are gaps to review, not automatic errors.",""]
