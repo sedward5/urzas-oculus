@@ -161,3 +161,19 @@ Next implementation steps:
 3. Review TRK as the pre-release test set, keeping Wizards' official highlights distinct from Oculus judgments.
 4. Add a prediction snapshot and immutable publication artifact.
 5. Add a comparison/calibration report that joins predictions to later 17Lands observations without modifying predictions.
+
+
+## Local batch tool
+
+The `CardEvaluationTool` executable runs the same Swift-core structural suggester used by the app. It accepts an array of normalized `CardRecord` JSON objects and an optional array of reviewer-authored `CardEvaluationReview` records:
+
+```sh
+swift run CardEvaluationTool --input cards.json > evaluation-suggestions.json
+swift run CardEvaluationTool --input cards.json --reviews reviewed-cards.json > evaluation-results.json
+```
+
+The input is the core Codable card-record format, not raw Scryfall bulk JSON. Use the existing Scryfall importer/normalization path to create these records; do not build a second Scryfall parser in the CLI. The output is deterministic JSON, sorted by the input card order and with each card's role suggestions sorted by role identifier.
+
+The CLI rejects duplicate printing IDs and reviews whose printing ID, set code, or Oracle ID do not match the supplied card. It never modifies the review file. Review updates are authored as a new versioned input file and should be retained as immutable snapshots.
+
+The CLI is a batch analysis aid, not yet a graphical review interface. Its current rules are intentionally conservative and produce candidate labels only. Reviewers must inspect the complete card, including all faces and costs, before confirming roles or making a rate/dimension assessment.
