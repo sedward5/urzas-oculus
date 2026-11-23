@@ -23,22 +23,6 @@ def fetch(url,timeout=90):
 def fetch_json(url):
     return json.loads(fetch(url).decode("utf-8"))
 
-def post_json(url,payload):
-    data=json.dumps(payload).encode("utf-8")
-    req=Request(url,data=data,headers={"User-Agent":UA,"Accept":"application/json","Content-Type":"application/json"},method="POST")
-    with urlopen(req,timeout=90) as response:
-        if response.status!=200: raise RuntimeError(f"HTTP {response.status}: {url}")
-        return json.loads(response.read().decode("utf-8"))
-
-def write_snapshot(out,name,source,payload,code,event,now):
-    path=out/"17lands"/name
-    path.parent.mkdir(parents=True,exist_ok=True)
-    wrapper={"set_code":code,"event_type":event,"retrieved_at":now,"source":source,"data":payload}
-    raw=(json.dumps(wrapper,indent=2,ensure_ascii=False)+"\n").encode("utf-8")
-    path.write_bytes(raw)
-    return {"path":str(path),"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest()}
-
-
 def clean(v): return re.sub(r"\s+"," ",v or "").strip()
 
 class LandsParser(HTMLParser):
@@ -148,10 +132,6 @@ def save(url,path):
     data=fetch(url,timeout=240); path.parent.mkdir(parents=True,exist_ok=True); path.write_bytes(data)
     return {"url":url,"path":str(path),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}
 
-def missing_bulk_sources(archives):
-    """Return required bulk sources not present in the official listing."""
-    return sorted({"draft","game"}-set(archives))
-
 def archive_url(code,event,kind):
     """Build the public S3 object key for one set/event archive."""
     if kind not in {"draft","game","replay"}: raise ValueError(f"Unsupported archive kind: {kind}")
@@ -210,33 +190,6 @@ def acquire(code,event,guide,out):
         "source_selection":{"bulk_available":sorted(archives),
             "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
     manifest["status"]["17lands"]="acquired" if archives else "not_yet_published"
-    # The aggregate Card Analytics API is a fallback when either required
-    # bulk dataset is not yet published. 17Lands does not officially support
-    # third-party API use; requests are deliberately limited to one snapshot.
-    missing=missing_bulk_sources(archives)
-    if missing:
-        api_url=f"https://www.17lands.com/api/card_data?expansion={code}&event_type={event}&time_period=ALL_TIME"
-        try:
-            payload=fetch_json(api_url)
-            rec=write_snapshot(out,"card-data-all-time.json",api_url,payload,code,event,now)
-            manifest["files"].append(rec)
-            manifest["status"]["card_analytics_api"]="acquired"
-        except Exception as exc:
-            manifest["status"]["card_analytics_api"]="unavailable"
-            manifest.setdefault("warnings",[]).append(f"Card Analytics API fallback failed: {exc}")
-    else:
-        manifest["status"]["card_analytics_api"]="skipped_bulk_complete"
-    # Trophy Decks are supplemental and are not present in bulk CSV archives.
-    # This endpoint/payload is community-observed, not an official API contract.
-    trophy_url="https://www.17lands.com/api/trophy_decks"
-    try:
-        payload=post_json(trophy_url,{"expansion":code,"format":event})
-        rec=write_snapshot(out,"trophy-decks.json",trophy_url,payload,code,event,now)
-        manifest["files"].append(rec)
-        manifest["status"]["trophy_decks_api"]="acquired"
-    except Exception as exc:
-        manifest["status"]["trophy_decks_api"]="unavailable"
-        manifest.setdefault("warnings",[]).append(f"Trophy Decks API request failed: {exc}")
     if guide:
         if not guide.startswith("https://magic.wizards.com/"): raise ValueError("Guide URL must use magic.wizards.com over HTTPS")
         raw=fetch(guide); p=GuideParser(); p.feed(raw.decode("utf-8",errors="replace"))

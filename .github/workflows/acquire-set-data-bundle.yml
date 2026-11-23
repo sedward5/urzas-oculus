@@ -41,7 +41,7 @@ jobs:
           ARGS=(acquire --set-code "$SET_CODE" --event-type "$EVENT_TYPE" --output set-acquisition-output)
           if [ -n "$GUIDE_URL" ]; then ARGS+=(--guide-url "$GUIDE_URL"); fi
           python3 scripts/set_catalog.py "${ARGS[@]}"
-      - name: Stage GitHub-acquired 17Lands snapshots
+      - name: Stage permitted 17Lands public bulk archives
         env:
           SET_CODE: ${{ inputs.set_code || 'TRK' }}
           EVENT_TYPE: ${{ inputs.event_type || 'PremierDraft' }}
@@ -49,31 +49,35 @@ jobs:
           shopt -s nullglob
           DEST="website/static/data/17lands/${SET_CODE}/${EVENT_TYPE}"
           mkdir -p "$DEST"
-          files=(set-acquisition-output/17lands/*.json)
+          files=(set-acquisition-output/17lands/*.csv.gz)
           if [ ${#files[@]} -eq 0 ]; then
-            echo "No 17Lands JSON snapshots were produced; nothing to publish."
-            exit 0
+            echo "No official 17Lands public bulk archives are available yet."
+          else
+            cp "${files[@]}" "$DEST/"
           fi
-          cp "${files[@]}" "$DEST/"
+          if find website/static/data/17lands -type f -name 'card-data-all-time.json' -o -type f -name 'trophy-decks.json' | grep -q .; then
+            echo "Restricted 17Lands API snapshots remain in the public tree."
+            exit 1
+          fi
       - name: Create or update data publication pull request
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
-            website/static/data/17lands/${{ inputs.set_code || 'TRK' }}/${{ inputs.event_type || 'PremierDraft' }}/
+            website/static/data/17lands/
           branch: data/17lands-${{ inputs.set_code || 'TRK' }}-${{ inputs.event_type || 'PremierDraft' }}
           base: main
           delete-branch: false
-          commit-message: "Publish ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands snapshots"
-          title: "Publish ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands snapshots"
+          commit-message: "Publish permitted ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands bulk archives"
+          title: "Publish permitted ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands bulk archives"
           body: |
-            Automated publication of the latest GitHub-acquired 17Lands JSON snapshots.
+            Automated publication of permitted 17Lands public bulk archives only.
 
             - Set: ${{ inputs.set_code || 'TRK' }}
             - Event: ${{ inputs.event_type || 'PremierDraft' }}
             - Source acquisition run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
 
-            Please review the snapshot provenance and source status before merging.
+            No 17Lands API snapshots are requested, retained, or published.
       - uses: actions/upload-artifact@v4
         with:
           name: set-acquisition-${{ inputs.set_code || 'TRK' }}-${{ github.run_id }}

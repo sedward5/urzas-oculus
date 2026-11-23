@@ -5,11 +5,13 @@ on:
     branches: [main]
     paths:
       - 'website/**'
+      - 'scripts/generate_website_archetype_pages.py'
       - '.github/workflows/website-ci.yml'
   push:
     branches: [main]
     paths:
       - 'website/**'
+      - 'scripts/generate_website_archetype_pages.py'
       - '.github/workflows/website-ci.yml'
 
 permissions:
@@ -34,6 +36,9 @@ jobs:
 
       - name: Sync reviewed card catalog
         run: python3 scripts/sync_reviewed_card_catalog.py
+
+      - name: Generate reviewed set pages
+        run: python3 scripts/generate_website_archetype_pages.py
 
       - name: Build site
         working-directory: website

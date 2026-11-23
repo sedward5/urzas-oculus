@@ -8,12 +8,14 @@ Install Hugo Extended, then run:
 
 ```sh
 cd website
+python3 ../scripts/generate_website_archetype_pages.py
 hugo server
 ```
 
 Build a production copy:
 
 ```sh
+python3 ../scripts/generate_website_archetype_pages.py
 hugo --minify --destination public
 ```
 
@@ -22,9 +24,11 @@ hugo --minify --destination public
 Configure the Pages project with:
 
 - **Root directory:** `website`
-- **Build command:** `hugo --minify`
+- **Build command:** `python3 ../scripts/generate_website_archetype_pages.py && hugo --minify`
 - **Build output directory:** `public`
 - **Environment variable:** `HUGO_VERSION` set to the version used by `.github/workflows/website-ci.yml`
+
+The page generator reads only `scripts/data/reviewed_archetypes.json`; acquired evidence is not promoted automatically. A set page appears only after its archetypes enter the human-reviewed catalog.
 
 Cloudflare Pages handles deployment and preview deployments. GitHub Actions validates pull requests but does not deploy the site. Keep the Hugo version in this file, the GitHub workflow, and the Cloudflare environment variable in sync.
 
