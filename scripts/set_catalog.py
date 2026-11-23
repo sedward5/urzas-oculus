@@ -20,6 +20,25 @@ def fetch(url,timeout=90):
         if r.status!=200: raise RuntimeError(f"HTTP {r.status}: {url}")
         return r.read()
 
+def fetch_json(url):
+    return json.loads(fetch(url).decode("utf-8"))
+
+def post_json(url,payload):
+    data=json.dumps(payload).encode("utf-8")
+    req=Request(url,data=data,headers={"User-Agent":UA,"Accept":"application/json","Content-Type":"application/json"},method="POST")
+    with urlopen(req,timeout=90) as response:
+        if response.status!=200: raise RuntimeError(f"HTTP {response.status}: {url}")
+        return json.loads(response.read().decode("utf-8"))
+
+def write_snapshot(out,name,source,payload,code,event,now):
+    path=out/"17lands"/name
+    path.parent.mkdir(parents=True,exist_ok=True)
+    wrapper={"set_code":code,"event_type":event,"retrieved_at":now,"source":source,"data":payload}
+    raw=(json.dumps(wrapper,indent=2,ensure_ascii=False)+"\n").encode("utf-8")
+    path.write_bytes(raw)
+    return {"path":str(path),"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest()}
+
+
 def clean(v): return re.sub(r"\s+"," ",v or "").strip()
 
 class LandsParser(HTMLParser):
@@ -133,6 +152,28 @@ def missing_bulk_sources(archives):
     """Return required bulk sources not present in the official listing."""
     return sorted({"draft","game"}-set(archives))
 
+def archive_url(code,event,kind):
+    """Build the public S3 object key for one set/event archive."""
+    if kind not in {"draft","game","replay"}: raise ValueError(f"Unsupported archive kind: {kind}")
+    return (f"https://17lands-public.s3.amazonaws.com/analysis_data/{kind}_data/"
+            f"{kind}_data_public.{code}.{event}.csv.gz")
+
+def probe_archive(url):
+    """Check one known S3 object without scraping the 17Lands HTML listing."""
+    req=Request(url,headers={"User-Agent":UA},method="HEAD")
+    try:
+        with urlopen(req,timeout=30) as response:
+            return response.status == 200
+    except Exception as exc:
+        status=getattr(exc,"code",None)
+        if status == 404: return False
+        if status == 403:
+            # S3 may return 403 for a missing key when bucket listing is private.
+            # Treat it as unavailable for acquisition, but preserve the ambiguity.
+            return None
+        raise RuntimeError(f"Could not check 17Lands archive {url}: {exc}") from exc
+
+
 
 def acquire(code,event,guide,out):
     code=code.upper()
@@ -151,16 +192,51 @@ def acquire(code,event,guide,out):
     cp.write_text(json.dumps({"set_code":code,"retrieved_at":now,"source":CARDS_API,"cards":cards},indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     manifest["files"].append({"path":str(cp),"bytes":cp.stat().st_size,"sha256":hashlib.sha256(cp.read_bytes()).hexdigest(),"records":len(cards)})
     manifest["status"]["scryfall"]="acquired"
-    matches=[r for r in parse_lands(fetch(LANDS).decode("utf-8",errors="replace")) if r["set_code"]==code and r["event_type"]==event]
-    if not matches:
-        manifest["status"]["17lands"]="not_yet_published"; manifest["17lands"]={"event_type":event,"archives":[]}
+    # Probe deterministic public S3 object keys. Acquisition must not depend
+    # on scraping the public_datasets presentation page.
+    archives={}; probes={}
+    for kind in ("draft","game","replay"):
+        u=archive_url(code,event,kind)
+        exists=probe_archive(u)
+        probes[kind]="available" if exists is True else ("not_found" if exists is False else "inaccessible_or_missing")
+        if exists is True:
+            rec=save(u,out/"17lands"/f"{kind}.csv.gz")
+            archives[kind]=rec; manifest["files"].append(rec)
+    ambiguous=[kind for kind,status in probes.items() if status=="inaccessible_or_missing"]
+    if ambiguous:
+        manifest.setdefault("warnings",[]).append(
+            "S3 returned 403 for these keys; they may be missing or inaccessible: "+", ".join(ambiguous))
+    manifest["17lands"]={"event_type":event,"archives":archives,"probes":probes,
+        "source_selection":{"bulk_available":sorted(archives),
+            "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
+    manifest["status"]["17lands"]="acquired" if archives else "not_yet_published"
+    # The aggregate Card Analytics API is a fallback when either required
+    # bulk dataset is not yet published. 17Lands does not officially support
+    # third-party API use; requests are deliberately limited to one snapshot.
+    missing=missing_bulk_sources(archives)
+    if missing:
+        api_url=f"https://www.17lands.com/api/card_data?expansion={code}&event_type={event}&time_period=ALL_TIME"
+        try:
+            payload=fetch_json(api_url)
+            rec=write_snapshot(out,"card-data-all-time.json",api_url,payload,code,event,now)
+            manifest["files"].append(rec)
+            manifest["status"]["card_analytics_api"]="acquired"
+        except Exception as exc:
+            manifest["status"]["card_analytics_api"]="unavailable"
+            manifest.setdefault("warnings",[]).append(f"Card Analytics API fallback failed: {exc}")
     else:
-        archives={}
-        for row in matches:
-            for kind,u in row["archives"].items():
-                rec=save(u,out/"17lands"/f"{kind}.csv.gz"); archives[kind]=rec; manifest["files"].append(rec)
-            manifest["17lands"]={"last_updated":row["last_updated"],"archives":archives}
-        manifest["status"]["17lands"]="acquired"
+        manifest["status"]["card_analytics_api"]="skipped_bulk_complete"
+    # Trophy Decks are supplemental and are not present in bulk CSV archives.
+    # This endpoint/payload is community-observed, not an official API contract.
+    trophy_url="https://www.17lands.com/api/trophy_decks"
+    try:
+        payload=post_json(trophy_url,{"expansion":code,"format":event})
+        rec=write_snapshot(out,"trophy-decks.json",trophy_url,payload,code,event,now)
+        manifest["files"].append(rec)
+        manifest["status"]["trophy_decks_api"]="acquired"
+    except Exception as exc:
+        manifest["status"]["trophy_decks_api"]="unavailable"
+        manifest.setdefault("warnings",[]).append(f"Trophy Decks API request failed: {exc}")
     if guide:
         if not guide.startswith("https://magic.wizards.com/"): raise ValueError("Guide URL must use magic.wizards.com over HTTPS")
         raw=fetch(guide); p=GuideParser(); p.feed(raw.decode("utf-8",errors="replace"))
