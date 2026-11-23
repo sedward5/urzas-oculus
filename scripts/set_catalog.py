@@ -34,7 +34,7 @@ def write_snapshot(out,name,source,payload,code,event,now):
     path=out/"17lands"/name
     path.parent.mkdir(parents=True,exist_ok=True)
     wrapper={"set_code":code,"event_type":event,"retrieved_at":now,"source":source,"data":payload}
-    raw=(json.dumps(wrapper,indent=2,ensure_ascii=False)+"\\n").encode("utf-8")
+    raw=(json.dumps(wrapper,indent=2,ensure_ascii=False)+"\n").encode("utf-8")
     path.write_bytes(raw)
     return {"path":str(path),"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest()}
 
