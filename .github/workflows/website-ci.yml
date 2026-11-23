@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'website/**'
+      - 'scripts/generate_website_archetype_pages.py'
       - '.github/workflows/website-ci.yml'
   push:
     branches: [main]

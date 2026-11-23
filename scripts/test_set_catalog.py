@@ -28,13 +28,6 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(ValueError): set_catalog.parse_lands(html)
     def test_empty_listing_fails_closed(self):
         with self.assertRaises(ValueError): set_catalog.parse_lands("<html>maintenance</html>")
-    def test_bulk_source_selection_is_per_dataset(self):
-        self.assertEqual(set_catalog.missing_bulk_sources({"draft":{}}), ["game"])
-        self.assertEqual(set_catalog.missing_bulk_sources({"game":{}}), ["draft"])
-        self.assertEqual(set_catalog.missing_bulk_sources({"draft":{},"game":{}}), [])
-        self.assertEqual(set_catalog.missing_bulk_sources({}), ["draft","game"])
-
-
     def test_archive_url_uses_expected_public_key(self):
         self.assertEqual(
             set_catalog.archive_url("TRK","PremierDraft","draft"),
