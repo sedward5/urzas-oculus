@@ -6,7 +6,8 @@ let package = Package(
     products: [
         .library(name: "UrzasOculusCore", targets: ["UrzasOculusCore"]),
         .executable(name: "UrzasOculus", targets: ["UrzasOculusApp"]),
-        .executable(name: "SeventeenLandsArchiveProbe", targets: ["SeventeenLandsArchiveProbe"])
+        .executable(name: "SeventeenLandsArchiveProbe", targets: ["SeventeenLandsArchiveProbe"]),
+        .executable(name: "CardEvaluationTool", targets: ["CardEvaluationTool"])
     ],
     targets: [
         .systemLibrary(name: "CSQLite"),
@@ -14,6 +15,7 @@ let package = Package(
         .target(name: "UrzasOculusCore", dependencies: ["CSQLite", "CZlib"]),
         .executableTarget(name: "UrzasOculusApp", dependencies: ["UrzasOculusCore"], resources: [.process("Resources")]),
         .executableTarget(name: "SeventeenLandsArchiveProbe", dependencies: ["UrzasOculusCore"]),
+        .executableTarget(name: "CardEvaluationTool", dependencies: ["UrzasOculusCore"]),
         .testTarget(name: "UrzasOculusCoreTests", dependencies: ["UrzasOculusCore"])
     ],
     swiftLanguageVersions: [.v5]
