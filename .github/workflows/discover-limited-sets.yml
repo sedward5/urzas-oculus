@@ -1,4 +1,4 @@
-name: Discover Limited Sets
+name: Optional - Discover Limited Sets (Read-only)
 on:
   workflow_dispatch:
   schedule:

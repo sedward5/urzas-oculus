@@ -11,6 +11,15 @@ class CatalogTests(unittest.TestCase):
         rows=set_catalog.parse_lands(html)
         self.assertEqual(rows[0]["set_code"],"TRK")
         self.assertEqual(set(rows[0]["archives"]),{"draft","game"})
+    def test_parse_archive_links_outside_table_markup(self):
+        html="""<main><div><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.TRK.PremierDraft.csv.gz">draft</a></div>
+        <div><a href="https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.TRK.PremierDraft.csv.gz">game</a></div></main>"""
+        rows=set_catalog.parse_lands(html)
+        self.assertEqual(len(rows),1)
+        self.assertEqual(rows[0]["set_code"],"TRK")
+        self.assertEqual(rows[0]["last_updated"],None)
+        self.assertEqual(set(rows[0]["archives"]),{"draft","game"})
+
     def test_reject_untrusted_archive_host(self):
         html="""<table><tr><td>TRK</td><td>PremierDraft</td><td>2026-11-22</td>
         <td><a href="https://example.com/draft_data_public.TRK.PremierDraft.csv.gz">draft</a></td></tr></table>"""
