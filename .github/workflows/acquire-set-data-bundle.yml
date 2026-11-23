@@ -1,0 +1,45 @@
+name: Acquire Set Data Bundle
+on:
+  workflow_dispatch:
+    inputs:
+      set_code:
+        description: Scryfall set code (for example TRK)
+        required: true
+        type: string
+      event_type:
+        description: 17Lands event type
+        required: true
+        type: choice
+        default: PremierDraft
+        options: [PremierDraft, TradDraft, PickTwoDraft, Sealed, TradSealed]
+      guide_url:
+        description: Optional official Wizards guide URL
+        required: false
+        type: string
+permissions:
+  contents: read
+jobs:
+  acquire:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 -m unittest scripts.test_set_catalog
+      - name: Acquire source bundle
+        env:
+          SET_CODE: ${{ inputs.set_code }
+          EVENT_TYPE: ${{ inputs.event_type }
+          GUIDE_URL: ${{ inputs.guide_url }
+        run: |
+          ARGS=(acquire --set-code "$SET_CODE" --event-type "$EVENT_TYPE" --output set-acquisition-output)
+          if [ -n "$GUIDE_URL" ]; then ARGS+=(--guide-url "$GUIDE_URL"); fi
+          python3 scripts/set_catalog.py "${ARGS[@]}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: set-acquisition-${{ inputs.set_code }-${{ github.run_id }
+          path: set-acquisition-output/
+          if-no-files-found: error
+          retention-days: 30
