@@ -59,19 +59,37 @@ jobs:
             echo "Restricted 17Lands API snapshots remain in the public tree."
             exit 1
           fi
+      - name: Stage Scryfall and Wizards source evidence
+        env:
+          SET_CODE: ${{ inputs.set_code || 'TRK' }}
+        run: |
+          # Publish structured card metadata and extracted source evidence only.
+          # Do not republish the full Wizards article HTML or downloaded images.
+          mkdir -p "website/static/data/sets/${SET_CODE}/scryfall"
+          mkdir -p "website/static/data/sets/${SET_CODE}/wizards"
+          cp set-acquisition-output/scryfall/*.json "website/static/data/sets/${SET_CODE}/scryfall/"
+          if [ -f set-acquisition-output/wizards/guide-evidence.json ]; then
+            cp set-acquisition-output/wizards/guide-evidence.json "website/static/data/sets/${SET_CODE}/wizards/"
+          fi
+          cp set-acquisition-output/manifest.json "website/static/data/sets/${SET_CODE}/"
       - name: Create or update data publication pull request
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           add-paths: |
             website/static/data/17lands/
+            website/static/data/sets/${{ inputs.set_code || 'TRK' }}/
           branch: data/17lands-${{ inputs.set_code || 'TRK' }}-${{ inputs.event_type || 'PremierDraft' }}
           base: main
           delete-branch: false
-          commit-message: "Publish permitted ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands bulk archives"
-          title: "Publish permitted ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands bulk archives"
+          commit-message: "Publish ${{ inputs.set_code || 'TRK' }} set source data and permitted 17Lands archives"
+          title: "Publish ${{ inputs.set_code || 'TRK' }} set source data and permitted 17Lands archives"
           body: |
-            Automated publication of permitted 17Lands public bulk archives only.
+            Automated publication of permitted set source data and official 17Lands public bulk archives.
+
+            - Scryfall card metadata and structured Wizards prerelease-guide evidence are included.
+            - Full Wizards article HTML and downloaded images are not republished.
+            - 17Lands API snapshots are never requested, retained, or published.
 
             - Set: ${{ inputs.set_code || 'TRK' }}
             - Event: ${{ inputs.event_type || 'PremierDraft' }}
