@@ -29,7 +29,9 @@ class LandsParser(HTMLParser):
         a=dict(a)
         if t=="tr": self.row=[]
         elif t in {"td","th"} and self.row is not None: self.cell={"text":"","links":[]}
-        elif t=="a" and a.get("href"):\n            self.links.append(a["href"])\n            if self.cell is not None: self.cell["links"].append(a["href"])
+        elif t=="a" and a.get("href"):
+            self.links.append(a["href"])
+            if self.cell is not None: self.cell["links"].append(a["href"])
     def handle_data(self,d):
         if self.cell is not None: self.cell["text"]+=d
     def handle_endtag(self,t):
@@ -86,7 +88,7 @@ def parse_lands(raw):
         kind,code,event=match.groups(); key=(code.upper(),event)
         record=grouped.setdefault(key,{"set_code":code.upper(),"event_type":event,
             "last_updated":None,"archives":{}})
-        record["archives"][kind.lower()]=u; trusted+=1
+        record["archives"][kind.lower()]=u
     result=[row for row in grouped.values() if row["archives"]]
     if not result:
         preview=clean(raw[:240])
