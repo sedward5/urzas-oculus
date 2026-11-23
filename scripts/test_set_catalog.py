@@ -13,7 +13,7 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(set(rows[0]["archives"]),{"draft","game"})
     def test_empty_listing_fails_closed(self):
         with self.assertRaises(ValueError): set_catalog.parse_lands("<html>maintenance</html>")
-    def test_guide_domain_guard(self):
+    def test_guide_domain_guard_runs_before_network(self):
         from tempfile import TemporaryDirectory
         with TemporaryDirectory() as d:
             with self.assertRaises(ValueError): set_catalog.acquire("TRK","PremierDraft","https://example.com/x",Path(d))

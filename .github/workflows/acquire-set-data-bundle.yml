@@ -30,16 +30,16 @@ jobs:
       - run: python3 -m unittest scripts.test_set_catalog
       - name: Acquire source bundle
         env:
-          SET_CODE: ${{ inputs.set_code }
-          EVENT_TYPE: ${{ inputs.event_type }
-          GUIDE_URL: ${{ inputs.guide_url }
+          SET_CODE: ${{ inputs.set_code }}
+          EVENT_TYPE: ${{ inputs.event_type }}
+          GUIDE_URL: ${{ inputs.guide_url }}
         run: |
           ARGS=(acquire --set-code "$SET_CODE" --event-type "$EVENT_TYPE" --output set-acquisition-output)
           if [ -n "$GUIDE_URL" ]; then ARGS+=(--guide-url "$GUIDE_URL"); fi
           python3 scripts/set_catalog.py "${ARGS[@]}"
       - uses: actions/upload-artifact@v4
         with:
-          name: set-acquisition-${{ inputs.set_code }-${{ github.run_id }
+          name: set-acquisition-${{ inputs.set_code }}-${{ github.run_id }}
           path: set-acquisition-output/
           if-no-files-found: error
           retention-days: 30

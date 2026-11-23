@@ -112,6 +112,7 @@ def acquire(code,event,guide,out):
     code=code.upper()
     if not re.fullmatch(r"[A-Z0-9]{2,6}",code): raise ValueError("Invalid set code")
     if event not in EVENTS: raise ValueError("Unsupported event type")
+    if guide and not guide.startswith("https://magic.wizards.com/"): raise ValueError("Guide URL must use magic.wizards.com over HTTPS")
     out.mkdir(parents=True,exist_ok=True); now=datetime.now(timezone.utc).isoformat()
     manifest={"schema_version":1,"set_code":code,"event_type":event,"generated_at":now,"files":[],"status":{}}
     # Scryfall metadata includes image URIs; image binaries are not downloaded.

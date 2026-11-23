@@ -18,7 +18,7 @@ jobs:
       - run: python3 scripts/set_catalog.py discover --output set-discovery-output
       - uses: actions/upload-artifact@v4
         with:
-          name: limited-set-discovery-${{ github.run_id }
+          name: limited-set-discovery-${{ github.run_id }}
           path: set-discovery-output/
           if-no-files-found: error
           retention-days: 30
