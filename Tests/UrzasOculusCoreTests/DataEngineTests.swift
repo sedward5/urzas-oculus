@@ -43,7 +43,7 @@ final class DataEngineTests: XCTestCase {
         try store.upsert(card: CardRecord(id: "a", name: "Alpha", setCode: "TRK"))
         try store.upsert(card: CardRecord(id: "c", name: "Beta", setCode: "HOB"))
 
-        XCTAssertEqual(try store.cards(setCode: "trk").map(\\.id), ["a", "b"])
+        XCTAssertEqual(try store.cards(setCode: "trk").map(\.id), ["a", "b"])
     }
 
     func testSeventeenLandsImportLinksMetricsAndPreservesContext() throws {
