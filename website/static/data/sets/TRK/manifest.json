@@ -2,12 +2,12 @@
   "schema_version": 1,
   "set_code": "TRK",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-23T05:09:34.756352+00:00",
+  "generated_at": "2026-11-23T12:39:49.804453+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/trk-cards.json",
       "bytes": 2032245,
-      "sha256": "45fa82ebcdcb2b1871e3aa2cad29e9885fd74a2917aab0e81b4bf2d7d23427be",
+      "sha256": "52bd9e15a5f07e42eb88a2bf3195c0b5fa1e598c85293aab6cfdaf0d6166827d",
       "records": 311
     },
     {
@@ -25,7 +25,7 @@
     {
       "path": "set-acquisition-output/wizards/guide-evidence.json",
       "bytes": 14345,
-      "sha256": "97186aa223b313c79ae4e080b9619b9fa019e87c98c636661e76318994268439"
+      "sha256": "021c0683e36460171333d1518cb16af66051d41e0055d6829b662ffd5dbc9433"
     }
   ],
   "status": {
