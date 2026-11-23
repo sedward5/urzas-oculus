@@ -3,28 +3,55 @@
 {{ $scryfall := readFile .Params.scryfall_cards_path | transform.Unmarshal }}
 {{ $overview := index $evidence.overview_images 0 }}
 {{ $cardsByName := dict }}
-{{ range $scryfall.cards }}{{ $cardsByName = merge $cardsByName (dict .name .) }}{{ end }}
+{{ range $scryfall.cards }}
+  {{ $cardsByName = merge $cardsByName (dict .name .) }}
+{{ end }}
 <article class="page-content archetype-set-page">
   <div class="eyebrow"><span class="eyebrow-line"></span> {{ .Params.set_code }} · PRELIMINARY LIMITED INTELLIGENCE</div>
-  <h1>{{ .Title }}</h1><p class="page-lede">{{ .Description }}</p>
-  <figure class="archetype-overview"><img src="{{ $overview.url }}" alt="{{ $overview.alt }}" fetchpriority="high" loading="eager"><figcaption>Official Wizards of the Coast archetype overview · <a href="{{ .Params.source_url }}" rel="external noopener">Prerelease Guide ↗</a></figcaption></figure>
-  <div class="source-status"><strong>Official prerelease content · Oculus review pending</strong>
+  <h1>{{ .Title }}</h1>
+  <p class="page-lede">{{ .Description }}</p>
+  <figure class="archetype-overview">
+    <img src="{{ $overview.url }}" alt="{{ $overview.alt }}" fetchpriority="high" loading="eager">
+    <figcaption>Official Wizards of the Coast archetype overview · <a href="{{ .Params.source_url }}" rel="external noopener">Prerelease Guide ↗</a></figcaption>
+  </figure>
+  <div class="source-status">
+    <strong>Official prerelease content · Oculus review pending</strong>
     <p>All ten archetypes, strategy summaries, and highlighted card examples on this page are drawn from Wizards' Star Trek Prerelease Guide. They describe Wizards' intended draft themes; they are not yet independent Oculus evaluations or performance conclusions.</p>
     <p>Evidence retrieved {{ dateFormat "Jan 2, 2006" $evidence.retrieved_at }} · <a href="{{ .Params.source_url }}" rel="external noopener">Read the full Wizards guide ↗</a></p>
   </div>
-  <h2>Draft archetypes</h2><div class="archetype-grid">
-    {{ range .Params.archetypes }}<article class="archetype-card">
-      <div class="archetype-card-heading"><h3>{{ .name }}</h3><span class="mana-identity">{{ range split .colors "" }}{{ partial "mana-symbol.html" . }}{{ end }}</span></div>
-      <p>{{ .strategy }}</p><span class="archetype-kind">Wizards-highlighted cards</span>
-      <section class="archetype-role"><ul>
-        {{ range .cards }}{{ $card := index $cardsByName . }}{{ if $card }}
-          <li><details class="card-preview"><summary title="{{ $card.name }}"><a href="{{ $card.scryfall_uri }}" rel="external noopener">{{ $card.name }}</a></summary>
-            {{ with $card.image_uris.normal }}<span class="card-preview-image"><img src="{{ . }}" alt="{{ $card.name }}" loading="lazy" decoding="async"></span>{{ end }}
-          </details></li>
-        {{ else }}<li><span class="card-name">{{ . }}</span><span class="card-links">Card metadata not yet available</span></li>{{ end }}{{ end }}
-      </ul></section>
-    </article>{{ end }}
+  <h2>Draft archetypes</h2>
+  <div class="archetype-grid">
+    {{ range .Params.archetypes }}
+      <article class="archetype-card">
+        <div class="archetype-card-heading">
+          <h3>{{ .name }}</h3>
+          <span class="mana-identity">{{ range split .colors "" }}{{ partial "mana-symbol.html" . }}{{ end }}</span>
+        </div>
+        <p>{{ .strategy }}</p>
+        <span class="archetype-kind">Wizards-highlighted cards</span>
+        <section class="archetype-role">
+          <ul>
+            {{ range .cards }}
+              {{ $card := index $cardsByName . }}
+              {{ if $card }}
+                {{ $image := "" }}
+                {{ with $card.image_uris }}{{ $image = .normal }}{{ end }}
+                {{ if not $image }}
+                  {{ with $card.card_faces }}{{ with index . 0 }}{{ with .image_uris }}{{ $image = .normal }}{{ end }}{{ end }}{{ end }}
+                {{ end }}
+                <li>
+                  {{ partial "card-preview.html" (dict "name" $card.name "image" $image) }}
+                  {{ with $card.scryfall_uri }}<span class="card-links"><a href="{{ . }}" rel="external noopener">Scryfall</a></span>{{ end }}
+                </li>
+              {{ else }}
+                <li><span class="card-name">{{ . }}</span><span class="card-links">Card metadata not yet available</span></li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </section>
+      </article>
+    {{ end }}
   </div>
-  <p class="page-note">Hover a card name to preview its image. Card names link directly to the matching TRK printing on Scryfall. The guide highlights these cards but does not assign Oculus roles such as enabler or payoff; those classifications will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
+  <p class="page-note">Hover or select a card name to preview its image. Scryfall links open the matching TRK printing. The guide highlights these cards but does not assign Oculus roles such as enabler or payoff; those classifications will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
 </article>
 {{ end }}
