@@ -32,7 +32,7 @@ The five dimensions are:
 - **Baseline power:** contribution without requiring a particular synergy package or narrow board state.
 - **Role value:** quality and reliability in the jobs the card performs (for example removal, card advantage, fixing, or early defense).
 - **Synergy potential:** how well the card enables, rewards, or participates in interactions with other cards.
-- **Archetype fit:** how strongly the card advances one or more explicitly identified set strategies. Fit is recorded per archetype in the review catalog, not inferred from color identity alone.
+- **Archetype fit:** how strongly the card advances an explicitly identified set strategy. The review schema stores a separate 1–5 assessment for each named archetype, because a card can be an excellent fit in one lane and a poor fit in another. Fit is not inferred from color identity alone.
 - **Context sensitivity:** how much the card's value changes with board state, format speed, deck composition, or matchup. This is a descriptive dimension: a high value means the card is especially context-dependent, not especially strong.
 
 Every dimension assessment includes rationale, evidence, and confidence. Do not average the five dimensions into one number in v1. The dimensions answer different questions and have no validated exchange rate.
