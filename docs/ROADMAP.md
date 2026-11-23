@@ -63,9 +63,14 @@ The macOS app is distributed through automated GitHub Releases as a DMG and ZIP.
 - [x] Deterministic results with scoring configuration, engine/schema versions, and explanations.
 - [ ] Review/tune prior weight against held-out data.
 - [ ] Integrate recognized pack candidates and draft state into the app.
-- [ ] Add synergy, archetype, curve, and deck-needs factors only after explicit input contracts and tests.
+- [x] Document prediction model v1: five independent dimensions, multi-label roles, evidence/confidence, rate assessment, immutable predictions, and later calibration.
+- [x] Add deterministic structural role suggestions in the shared Swift core and a local batch CLI.
+- [ ] Build the reviewed set catalog and reviewer workflow for accepting/rejecting suggestions and recording dimension/rate assessments.
+- [ ] Review TRK as the first pre-release prediction set and publish a reproducible prediction snapshot.
+- [ ] Add prediction-versus-observation calibration reports when permitted 17Lands public datasets are available.
+- [ ] Integrate pool synergy, archetype, curve, and deck-needs factors only after explicit input contracts and tests.
 
-The current evaluator is a baseline, not a complete Limited strategy model. ALSA and ATA are carried as context but do not affect ranking. GIH observations are copy-weighted and are not independent game samples.
+The current 17Lands evaluator is a baseline, not a complete Limited strategy model. The new prediction model is documented in [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md); its initial structural role suggester and batch CLI are implemented, but set review, card ratings, and calibration are not yet complete. ALSA and ATA are carried as context but do not affect ranking. GIH observations are copy-weighted and are not independent game samples.
 
 ## Product UX design
 
