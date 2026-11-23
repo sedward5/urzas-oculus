@@ -7,6 +7,7 @@ public enum CardRole: String, Codable, CaseIterable, Equatable, Sendable {
     case enabler
     case payoff
     case buildAround
+    case supporting
     case cardAdvantage
     case twoForOne
     case modal
