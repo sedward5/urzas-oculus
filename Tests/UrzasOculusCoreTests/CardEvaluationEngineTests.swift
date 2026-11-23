@@ -39,7 +39,7 @@ final class CardEvaluationEngineTests: XCTestCase {
             colorIdentity: ["U"]
         )
 
-        let roles = Set(CardEvaluationEngine.evaluate(card: card).suggestions.map(\\.role))
+        let roles = Set(CardEvaluationEngine.evaluate(card: card).suggestions.map(\.role))
 
         XCTAssertTrue(roles.contains(.modal))
         XCTAssertTrue(roles.contains(.cardAdvantage))
@@ -128,7 +128,7 @@ final class CardEvaluationEngineTests: XCTestCase {
             oracleText: "Destroy all creatures. Exile all cards from target player's graveyard."
         )
 
-        let roles = Set(CardEvaluationEngine.evaluate(card: card).suggestions.map(\\.role))
+        let roles = Set(CardEvaluationEngine.evaluate(card: card).suggestions.map(\.role))
         XCTAssertTrue(roles.contains(.sweeper))
         XCTAssertTrue(roles.contains(.removal))
         XCTAssertTrue(roles.contains(.graveyardHate))
