@@ -62,6 +62,7 @@ do {
             guard reviewsByID[review.scryfallID] == nil else {
                 throw CardEvaluationToolError.invalidReview("duplicate review for \(review.scryfallID)")
             }
+            try CardEvaluationEngine.validate(review: review, for: card)
             reviewsByID[review.scryfallID] = review
         }
     }
