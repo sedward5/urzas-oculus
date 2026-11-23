@@ -119,6 +119,21 @@ final class CardEvaluationEngineTests: XCTestCase {
         }
     }
 
+    func testSuggestsSweeperAndGraveyardHateSeparately() {
+        let card = CardRecord(
+            id: "printing-6",
+            name: "Clean the Board",
+            setCode: "TRK",
+            typeLine: "Sorcery",
+            oracleText: "Destroy all creatures. Exile all cards from target player's graveyard."
+        )
+
+        let roles = Set(CardEvaluationEngine.evaluate(card: card).suggestions.map(\\.role))
+        XCTAssertTrue(roles.contains(.sweeper))
+        XCTAssertTrue(roles.contains(.removal))
+        XCTAssertTrue(roles.contains(.graveyardHate))
+    }
+
     func testSuggestionsAreDeterministicAndSorted() {
         let card = CardRecord(
             id: "printing-4",
