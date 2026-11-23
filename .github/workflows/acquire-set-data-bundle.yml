@@ -21,6 +21,7 @@ on:
         type: string
 permissions:
   contents: write
+  pull-requests: write
 jobs:
   acquire:
     runs-on: ubuntu-latest
@@ -40,7 +41,7 @@ jobs:
           ARGS=(acquire --set-code "$SET_CODE" --event-type "$EVENT_TYPE" --output set-acquisition-output)
           if [ -n "$GUIDE_URL" ]; then ARGS+=(--guide-url "$GUIDE_URL"); fi
           python3 scripts/set_catalog.py "${ARGS[@]}"
-      - name: Publish GitHub-acquired 17Lands snapshots to the website feed
+      - name: Stage GitHub-acquired 17Lands snapshots
         env:
           SET_CODE: ${{ inputs.set_code || 'TRK' }}
           EVENT_TYPE: ${{ inputs.event_type || 'PremierDraft' }}
@@ -48,18 +49,31 @@ jobs:
           shopt -s nullglob
           DEST="website/static/data/17lands/${SET_CODE}/${EVENT_TYPE}"
           mkdir -p "$DEST"
-          for file in set-acquisition-output/17lands/*.json; do
-            cp "$file" "$DEST/"
-          done
-          if [ -n "$(git status --porcelain -- "$DEST")" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add "$DEST"
-            git commit -m "Publish ${SET_CODE} ${EVENT_TYPE} 17Lands snapshots"
-            git push
-          else
-            echo "No changed 17Lands snapshots to publish."
+          files=(set-acquisition-output/17lands/*.json)
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "No 17Lands JSON snapshots were produced; nothing to publish."
+            exit 0
           fi
+          cp "${files[@]}" "$DEST/"
+      - name: Create or update data publication pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: |
+            website/static/data/17lands/${{ inputs.set_code || 'TRK' }}/${{ inputs.event_type || 'PremierDraft' }}/
+          branch: data/17lands-${{ inputs.set_code || 'TRK' }}-${{ inputs.event_type || 'PremierDraft' }}
+          base: main
+          delete-branch: false
+          commit-message: "Publish ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands snapshots"
+          title: "Publish ${{ inputs.set_code || 'TRK' }} ${{ inputs.event_type || 'PremierDraft' }} 17Lands snapshots"
+          body: |
+            Automated publication of the latest GitHub-acquired 17Lands JSON snapshots.
+
+            - Set: ${{ inputs.set_code || 'TRK' }}
+            - Event: ${{ inputs.event_type || 'PremierDraft' }}
+            - Source acquisition run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Please review the snapshot provenance and source status before merging.
       - uses: actions/upload-artifact@v4
         with:
           name: set-acquisition-${{ inputs.set_code || 'TRK' }}-${{ github.run_id }}
