@@ -10,7 +10,7 @@ enum CardEvaluationToolError: Error, CustomStringConvertible {
     var description: String {
         switch self {
         case .usage:
-            return "Usage: CardEvaluationTool --input cards.json [--reviews reviews.json]\nInput must be a JSON array of normalized UrzasOculusCore CardRecord objects. Output is a JSON array on stdout."
+            return "Usage: CardEvaluationTool (--input cards.json | --database oculus.sqlite --set TRK) [--reviews reviews.json]\nInput JSON must contain normalized UrzasOculusCore CardRecord objects. Database mode reads one set from the local Oculus store. Output is JSON on stdout."
         case .duplicateCardID(let id):
             return "Duplicate Scryfall printing ID in input: \(id)"
         case .invalidReview(let id):
