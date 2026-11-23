@@ -4,21 +4,17 @@
   <h1>{{ .Title }}</h1>
   <p class="page-lede">Explore Limited archetypes and prerelease themes, with their review status clearly identified.</p>
   <div class="archetype-grid">
-    {{ range sort .Pages "Params.release_date" "desc" }}
-      {{ $code := .Params.set_code }}
-      {{ $reviewed := index site.Data.reviewed_archetypes.sets $code }}
-      <article class="set-link-card">
-        <div class="eyebrow">{{ $code }}</div>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        {{ if eq .Params.content_status "preliminary" }}
-          <p>Official prerelease themes · Oculus review pending</p>
-        {{ else if $reviewed }}
-          <p>{{ len $reviewed.archetypes }} reviewed archetype entries</p>
-        {{ else }}
-          <p>Set guide</p>
-        {{ end }}
-        <a class="text-link" href="{{ .RelPermalink }}">Explore set guide ↗</a>
-      </article>
+    {{ range where .Pages "Params.set_code" "TRK" }}
+      {{ $code := .Params.set_code }}{{ $reviewed := index site.Data.reviewed_archetypes.sets $code }}
+      <article class="set-link-card"><div class="eyebrow">{{ $code }}</div><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if eq .Params.content_status "preliminary" }}<p>Official prerelease themes · Oculus review pending</p>{{ else if $reviewed }}<p>{{ len $reviewed.archetypes }} reviewed archetype entries</p>{{ else }}<p>Set guide</p>{{ end }}
+        <a class="text-link" href="{{ .RelPermalink }}">Explore set guide ↗</a></article>
+    {{ end }}
+    {{ range sort (where .Pages "Params.set_code" "ne" "TRK") "Title" }}
+      {{ $code := .Params.set_code }}{{ $reviewed := index site.Data.reviewed_archetypes.sets $code }}
+      <article class="set-link-card"><div class="eyebrow">{{ $code }}</div><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ if eq .Params.content_status "preliminary" }}<p>Official prerelease themes · Oculus review pending</p>{{ else if $reviewed }}<p>{{ len $reviewed.archetypes }} reviewed archetype entries</p>{{ else }}<p>Set guide</p>{{ end }}
+        <a class="text-link" href="{{ .RelPermalink }}">Explore set guide ↗</a></article>
     {{ end }}
   </div>
 </section>
