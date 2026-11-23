@@ -24,12 +24,12 @@ def clean(v): return re.sub(r"\s+"," ",v or "").strip()
 
 class LandsParser(HTMLParser):
     def __init__(self):
-        super().__init__(convert_charrefs=True); self.rows=[]; self.row=None; self.cell=None
+        super().__init__(convert_charrefs=True); self.rows=[]; self.row=None; self.cell=None; self.links=[]
     def handle_starttag(self,t,a):
         a=dict(a)
         if t=="tr": self.row=[]
         elif t in {"td","th"} and self.row is not None: self.cell={"text":"","links":[]}
-        elif t=="a" and self.cell is not None and a.get("href"): self.cell["links"].append(a["href"])
+        elif t=="a" and a.get("href"):\n            self.links.append(a["href"])\n            if self.cell is not None: self.cell["links"].append(a["href"])
     def handle_data(self,d):
         if self.cell is not None: self.cell["text"]+=d
     def handle_endtag(self,t):
@@ -63,21 +63,39 @@ class GuideParser(HTMLParser):
             self.p=None
 
 def parse_lands(raw):
-    p=LandsParser(); p.feed(raw); result=[]
+    """Parse the public listing without depending on its presentation markup.
+
+    17Lands has changed the page's table/layout markup over time. Archive
+    filenames are self-describing, so collect trusted S3 links globally and
+    use table rows only as an optional source for last-updated metadata.
+    """
+    p=LandsParser(); p.feed(raw); grouped={}
     for row in p.rows:
         if len(row)<3: continue
         code,event,updated=(clean(c["text"]) for c in row[:3])
-        if not code or not event or not re.fullmatch(r"[A-Za-z0-9 ]+",code): continue
-        archives={}
-        for cell in row[3:]:
-            for href in cell["links"]:
-                u=urljoin(LANDS,href); parsed=urlparse(u); name=u.rsplit("/",1)[-1].lower()
-                if parsed.scheme!="https" or parsed.hostname!="17lands-public.s3.amazonaws.com": continue
-                for kind,prefix in (("draft","draft_data_public."),("game","game_data_public."),("replay","replay_data_public.")):
-                    if prefix in name: archives[kind]=u
-        if archives: result.append({"set_code":code.upper(),"event_type":event,"last_updated":updated,"archives":archives})
-    if not result: raise ValueError("17Lands listing parsed no archive rows; refusing empty result.")
-    return result
+        if code and event and re.fullmatch(r"[A-Za-z0-9 ]+",code):
+            grouped[(code.upper(),event)]={"set_code":code.upper(),"event_type":event,
+                "last_updated":updated,"archives":{}}
+    trusted=0
+    for href in p.links:
+        u=urljoin(LANDS,href); parsed=urlparse(u)
+        if parsed.scheme!="https" or parsed.hostname!="17lands-public.s3.amazonaws.com": continue
+        name=parsed.path.rsplit("/",1)[-1]
+        match=re.fullmatch(r"(draft|game|replay)_data_public\.([A-Za-z0-9]+)\.([A-Za-z0-9_-]+)\.csv\.gz",name,re.I)
+        if not match: continue
+        kind,code,event=match.groups(); key=(code.upper(),event)
+        record=grouped.setdefault(key,{"set_code":code.upper(),"event_type":event,
+            "last_updated":None,"archives":{}})
+        record["archives"][kind.lower()]=u; trusted+=1
+    result=[row for row in grouped.values() if row["archives"]]
+    if not result:
+        preview=clean(raw[:240])
+        raise ValueError(
+            "17Lands listing contained no recognizable trusted S3 archive links "
+            f"(response bytes: {len(raw.encode('utf-8',errors='replace'))}). "
+            f"The page markup may have changed or returned a challenge page. Preview: {preview!r}"
+        )
+    return sorted(result,key=lambda row:(row["set_code"],row["event_type"]))
 
 def local_catalogs(root):
     result={}
