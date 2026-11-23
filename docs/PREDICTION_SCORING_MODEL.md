@@ -172,8 +172,8 @@ swift run CardEvaluationTool --input cards.json > evaluation-suggestions.json
 swift run CardEvaluationTool --input cards.json --reviews reviewed-cards.json > evaluation-results.json
 ```
 
-The input is the core Codable card-record format, not raw Scryfall bulk JSON. Use the existing Scryfall importer/normalization path to create these records; do not build a second Scryfall parser in the CLI. The output is deterministic JSON, sorted by the input card order and with each card's role suggestions sorted by role identifier.
+The JSON input is the core Codable card-record format, not raw Scryfall bulk JSON. For normal use, point the tool at the local Oculus SQLite database and select a set; it reads the already-imported normalized card records directly. The JSON option is intended for fixtures and reproducible tests. Do not build a second Scryfall parser in the CLI. The output is deterministic JSON, sorted by the input card order and with each card's role suggestions sorted by role identifier.
 
-The CLI rejects duplicate printing IDs and reviews whose printing ID, set code, or Oracle ID do not match the supplied card. It never modifies the review file. Review updates are authored as a new versioned input file and should be retained as immutable snapshots.
+The CLI can read directly from the local database (for example, `swift run CardEvaluationTool --database ~/Library/Application\\ Support/UrzasOculus/oculus.sqlite --set TRK`) or from a normalized JSON fixture. It rejects duplicate printing IDs and reviews whose printing ID, set code, or Oracle ID do not match the supplied card. It never modifies the review file. Review updates are authored as a new versioned input file and should be retained as immutable snapshots.
 
 The CLI is a batch analysis aid, not yet a graphical review interface. Its current rules are intentionally conservative and produce candidate labels only. Reviewers must inspect the complete card, including all faces and costs, before confirming roles or making a rate/dimension assessment.
