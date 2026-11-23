@@ -168,7 +168,9 @@ def probe_archive(url):
         status=getattr(exc,"code",None)
         if status == 404: return False
         if status == 403:
-            raise RuntimeError(f"17Lands S3 denied access while checking {url}; refusing to treat this as unpublished data.") from exc
+            # S3 may return 403 for a missing key when bucket listing is private.
+            # Treat it as unavailable for acquisition, but preserve the ambiguity.
+            return None
         raise RuntimeError(f"Could not check 17Lands archive {url}: {exc}") from exc
 
 
@@ -192,13 +194,19 @@ def acquire(code,event,guide,out):
     manifest["status"]["scryfall"]="acquired"
     # Probe deterministic public S3 object keys. Acquisition must not depend
     # on scraping the public_datasets presentation page.
-    archives={}
+    archives={}; probes={}
     for kind in ("draft","game","replay"):
         u=archive_url(code,event,kind)
-        if probe_archive(u):
+        exists=probe_archive(u)
+        probes[kind]="available" if exists is True else ("not_found" if exists is False else "inaccessible_or_missing")
+        if exists is True:
             rec=save(u,out/"17lands"/f"{kind}.csv.gz")
             archives[kind]=rec; manifest["files"].append(rec)
-    manifest["17lands"]={"event_type":event,"archives":archives,
+    ambiguous=[kind for kind,status in probes.items() if status=="inaccessible_or_missing"]
+    if ambiguous:
+        manifest.setdefault("warnings",[]).append(
+            "S3 returned 403 for these keys; they may be missing or inaccessible: "+", ".join(ambiguous))
+    manifest["17lands"]={"event_type":event,"archives":archives,"probes":probes,
         "source_selection":{"bulk_available":sorted(archives),
             "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
     manifest["status"]["17lands"]="acquired" if archives else "not_yet_published"
