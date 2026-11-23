@@ -1,6 +1,11 @@
 {{ define "main" }}
 {{ $evidence := readFile .Params.evidence_path | transform.Unmarshal }}
+{{ $scryfall := readFile .Params.scryfall_cards_path | transform.Unmarshal }}
 {{ $overview := index $evidence.overview_images 0 }}
+{{ $cardsByName := dict }}
+{{ range $scryfall.cards }}
+  {{ $cardsByName = merge $cardsByName (dict .name .) }}
+{{ end }}
 <article class="page-content archetype-set-page">
   <div class="eyebrow"><span class="eyebrow-line"></span> {{ .Params.set_code }} · PRELIMINARY LIMITED INTELLIGENCE</div>
   <h1>{{ .Title }}</h1>
@@ -27,13 +32,26 @@
         <section class="archetype-role">
           <ul>
             {{ range .cards }}
-              <li><a href="https://scryfall.com/search?q=set%3Atrk+%22{{ . | urlquery }}%22" rel="external noopener">{{ . }}</a></li>
+              {{ $card := index $cardsByName . }}
+              {{ if $card }}
+                <li>
+                  <details class="card-preview">
+                    <summary title="{{ $card.name }}">#{{ $card.collector_number }}</summary>
+                    {{ with $card.image_uris.normal }}
+                      <span class="card-preview-image"><img src="{{ . }}" alt="{{ $card.name }}" loading="lazy" decoding="async"></span>
+                    {{ end }}
+                  </details>
+                  <span class="card-links"><a href="{{ $card.scryfall_uri }}" rel="external noopener">{{ $card.name }} · Scryfall</a></span>
+                </li>
+              {{ else }}
+                <li><span class="card-name">{{ . }}</span><span class="card-links">Card metadata not yet available</span></li>
+              {{ end }}
             {{ end }}
           </ul>
         </section>
       </article>
     {{ end }}
   </div>
-  <p class="page-note">Card links open Scryfall searches restricted to the TRK set. Oculus card-role classifications, synergy relationships, and predictions will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
+  <p class="page-note">Hover or select a collector number to preview its card. Card links open the matching TRK printing on Scryfall. The guide highlights these cards but does not assign Oculus roles such as enabler or payoff; those classifications will be added separately after review. Performance data will be incorporated when permitted public datasets become available.</p>
 </article>
 {{ end }}
