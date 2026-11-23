@@ -66,8 +66,30 @@ do {
         }
     }
 
-    var reviewsByID: [String: CardEvaluationReview] = [:]
-    if let reviewsPath = argumentValue("--reviews", in: arguments) {
+    let makeTemplate = arguments.contains("--template")
+    let reviewsPath = argumentValue("--reviews", in: arguments)
+    guard !(makeTemplate && reviewsPath != nil) else {
+        throw CardEvaluationToolError.usage
+    }
+
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
+
+    if makeTemplate {
+        let templates = cards.map { card in
+            CardEvaluationReview(
+                modelVersion: "prediction-v1",
+                scryfallID: card.id,
+                oracleID: card.oracleID,
+                setCode: card.setCode
+            )
+        }
+        let output = try encoder.encode(templates)
+        FileHandle.standardOutput.write(output)
+        FileHandle.standardOutput.write(Data([0x0A]))
+    } else {
+        var reviewsByID: [String: CardEvaluationReview] = [:]
+        if let reviewsPath {
         let data = try Data(contentsOf: URL(fileURLWithPath: reviewsPath))
         let reviews = try JSONDecoder().decode([CardEvaluationReview].self, from: data)
         for review in reviews {
@@ -82,16 +104,15 @@ do {
             try CardEvaluationEngine.validate(review: review, for: card)
             reviewsByID[review.scryfallID] = review
         }
-    }
+        }
 
-    let results = cards.map { card in
-        CardEvaluationEngine.evaluate(card: card, review: reviewsByID[card.id])
+        let results = cards.map { card in
+            CardEvaluationEngine.evaluate(card: card, review: reviewsByID[card.id])
+        }
+        let output = try encoder.encode(results)
+        FileHandle.standardOutput.write(output)
+        FileHandle.standardOutput.write(Data([0x0A]))
     }
-    let encoder = JSONEncoder()
-    encoder.outputFormatting = [.prettyPrinted, .sortedKeys, .withoutEscapingSlashes]
-    let output = try encoder.encode(results)
-    FileHandle.standardOutput.write(output)
-    FileHandle.standardOutput.write(Data([0x0A]))
 } catch {
     FileHandle.standardError.write(Data("CardEvaluationTool: \(error)\n".utf8))
     exit(EXIT_FAILURE)
