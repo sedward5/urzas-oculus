@@ -1,0 +1,130 @@
+{
+  "set_code": "ECL",
+  "source_url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+  "retrieved_at": "2026-11-24T02:40:14.554581+00:00",
+  "article_title": "Lorwyn Eclipsed Prerelease Guide",
+  "html_sha256": "d7bb5047224a48717eed5fb40ac373a9664f0d6dcdc87f11f17f08a3b8385827",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Lorwyn Eclipsed Prerelease Guide"
+    },
+    {
+      "level": "h2",
+      "text": "Building Your Prerelease Deck"
+    },
+    {
+      "level": "h2",
+      "text": "Mana Curve and Colors in Lorwyn Eclipsed"
+    },
+    {
+      "level": "h3",
+      "text": "A Note on Your Deck's Colors"
+    },
+    {
+      "level": "h2",
+      "text": "Lorwyn Eclipsed Draft Archetypes"
+    },
+    {
+      "level": "h3",
+      "text": "White-Blue Merfolk"
+    },
+    {
+      "level": "h3",
+      "text": "Black-Red Goblins"
+    },
+    {
+      "level": "h3",
+      "text": "Green-White Kithkin"
+    },
+    {
+      "level": "h3",
+      "text": "Blue-Red Elementals"
+    },
+    {
+      "level": "h3",
+      "text": "Black-Green Elves"
+    },
+    {
+      "level": "h3",
+      "text": "Magic Rules Blog: Mana Abilities"
+    },
+    {
+      "level": "h3",
+      "text": "Collecting Nauctis: The Sunken Realm | A First Look"
+    },
+    {
+      "level": "h3",
+      "text": "IDIC: Infinite Diversity in Infinite Combinations"
+    },
+    {
+      "level": "h2",
+      "text": "Magic: The Gathering Footer"
+    },
+    {
+      "level": "h3",
+      "text": "Find a store"
+    },
+    {
+      "level": "h3",
+      "text": "Social"
+    },
+    {
+      "level": "h3",
+      "text": "Find"
+    },
+    {
+      "level": "h3",
+      "text": "Company"
+    },
+    {
+      "level": "h3",
+      "text": "Magic"
+    },
+    {
+      "level": "h3",
+      "text": "Brands"
+    }
+  ],
+  "paragraphs": [
+    "Greet the Magic Multiverse with open arms in our first set of 2026: Lorwyn Eclipsed! This hotly anticipated return to the twinned plane of Lorwyn-Shadowmoor takes everything you love about our first visit—typal themes, dazzling traditional artwork, and a strangely beautiful setting—and combines it with the brilliance of our modern Magic designers. There's never been a better time to explore this plane, and the best place to get started is at your local game store's Prerelease events!",
+    "When you register for a Prerelease event, you'll receive a Lorwyn Eclipsed Prerelease Pack. Each Prerelease Pack contains the following:",
+    "Using the contents of your Prerelease Pack and any number of basic lands, you'll build a 40-card sealed deck and face off against your fellow Prerelease attendees. Since these events come before the set's global tabletop release, everyone gets to learn about these new cards together. It's the perfect place to welcome a friend into the world of Magic or reignite your spark with a fresh set.",
+    "Are you ready to start your adventure? Prerelease events begin on January 16, 2026, and you can start preparing today with this guide to Lorwyn Eclipsed Prerelease. You can register for your local game store's Prerelease events now and preorder Lorwyn Eclipsed from your local game store, Amazon, TCGplayer, and elsewhere Magic is sold.",
+    "Your sealed deck should primarily be two colors, meaning you'll only cast spells and play cards from two of Magic's colors. Open your six Play Boosters and sort your cards by color, then look for the most powerful, threatening cards that you opened. A good rule of thumb is that these cards should ask your opponents the question, \"Can you stop this card?\" If they can't answer the card, that should set you on the path to winning the game.",
+    "These powerful cards will help dictate your deck's colors. For example, take the card Spinerock Tyrant. Not only is this a massive 6/6 creature that can fly over your opponent's creatures, but it also gives you additional value off your instants and sorceries. That's a great reason to play red. Plus, it's a Dragon with some of the coolest artwork in the set. What more do you need in life?",
+    "Once you've found a threat or two that pulls you into your first color, it's time to look for the other key piece of a sealed deck: removal. These are spells that get rid of your opponent's cards or shut down their game plan, effectively answering the question mentioned above.",
+    "Below, you'll find a list of key removal spells in Lorwyn Eclipsed. You can use this as a reference when building your deck or during gameplay. For example, if your blue-playing opponent controls two untapped Islands, attacking them risks enabling their copy of Swat Away.",
+    "| | | |",
+    "Select a mana symbol to see key removal spells.",
+    "If you have a powerful threat in one color and a handful of removal spells in another color, that's a clear sign to play those two colors. The rest of your deck should be constructed to support those cards. Luckily, some of Magic's brightest minds have built a template for you to follow. You just have to keep an eye on your mana curve.",
+    "The mana curve helps you balance the average mana value of your cards. In short, it ensures your deck has enough low-cost spells to start off the game and some high-cost spells to finish off your opponent. Your average sealed deck should look something like this:",
+    "Building your deck in this way ensures you can start the game strong and keep up the pace as the game progresses. While your deck likely won't perfectly match this template, it's a good outline to keep in mind. If you're unsure about your deck, try drawing a random hand of seven cards. If you consistently have a few lands and cheap spells to start off the game, that's a sign that you've built your deck well.",
+    "Remember that the cards at the bottom of your mana curve should be cards you actually want to cast early in the game. While Bark of Doran may have a mana value of 2, casting it without a creature to equip it to doesn't progress your game plan. The same goes for Auras that you want to attach to creatures.",
+    "While you may be tempted to play all the flashiest and most powerful cards from all five colors, Limited Magic is all about consistency. Splitting your deck between three, four, or even five colors will likely leave you unable to cast your spells. Anyone who has been stuck with a handful of white-blue lands and black cards knows the feeling, and it's not fun.",
+    "Instead, focus on your two best colors. This will help you build a deck that lets you reliably cast your spells, especially if you throw in some mana-fixing cards. Mana-producing creatures and artifacts like Firdoch Core are invaluable resources for any sealed deck.",
+    "That means you should only play cards in your two colors, right?",
+    "Not exactly. Lorwyn Eclipsed is different than most Magic sets. You'll notice that some particularly prismatic cards have the vivid ability word, meaning they care about the number of colors from among permanents you control. While drawing two cards off Shinestriker is solid, there are a few sneaky ways you can increase your colors without dramatically altering the cards in your deck.",
+    "The cycle of uncommon Eclipsed creatures have hybrid mana symbols in their mana costs. This means that they count as both of those colors, even if you're only spending mana of one color to cast them. Eclipsed Merrow is technically a white-blue card, even if you're playing it in a green-white deck.",
+    "There are also monocolor cards like Elder Auntie that create two-color tokens. If you're playing a red-green deck and looking for ways to up your vivid count, try including some cards that create black-red Goblin tokens and black-green Elf tokens. This leads us to the last, and possibly most important, step of the deck-building process: learning your deck's draft archetype.",
+    "When playing with a Magic set, you'll find a series of strategies that extend across cards of a shared color. These strategies are called draft archetypes, and they're meant to guide your Limited experience and push you toward building an effective deck. There are five two-color draft archetypes in Lorwyn Eclipsed, each of which is tied to one of the set's prominent creature types. There are also draft archetypes for the other five color pairs, but those are focused on mechanical themes rather than creature types, and they aren't the focus of this guide.",
+    "While it isn't impossible to build a deck that's outside of these five color pairs, we'd recommend sticking to one of the suggested draft archetypes for your first few outings with Lorwyn Eclipsed. Don't worry, there's plenty of texture to be found in these five archetypes. Here's each draft archetype, their key cards, and some tips on how to build your deck.",
+    "This deck wants you to slowly accrue over the course of the game by disrupting your opponent with tricksy Merfolk. Several key Merfolk creatures, such as Wanderwine Distracter and Silvergill Peddler, have abilities that trigger when they become tapped. While the easiest way to accomplish this is by attacking, convoke spells like Wanderwine Farewell let you trigger these abilities without endangering your creatures.",
+    "Black-red combines Lorwyn-Shadowmoor's rambunctious boggarts with the blight mechanic. While putting -1/-1 counters on your own creatures might seem like a downside, Mudbutton Cursetosser and other Goblins that trigger when they die can turn it into a positive situation. Creatures that create a token are particularly useful here, so don't be afraid to run non-Goblins like Stoic Grove-Guide.",
+    "Kithkin creatures care about going wide and spreading their abilities throughout your board. Start out by establishing your board with Clachan Festival and Mistmeadow Council before buffing your creatures with Timid Shieldbearer's activated ability. Be careful not to overextend and risk dying to Darkness Descends. Go-wide decks are historically weak to spells that wipe the board, but cards like Dundoolin Weaver can help you recover in a pinch.",
+    "Flamekin and rimekin are capable of some especially explosive magic, and that power extends to their cards! This deck wants you to cast spells with mana value 4 or greater, so keep an eye out for cards like Flamebraider to accelerate your mana. Keep in mind that a blue-red deck's mana curve may lean more toward four-, five-, and six-mana spells.",
+    "Black-green decks have a delightfully macabre strategy that's focused on dumping cards into your graveyard to bolster your spells and creatures. Two-mana Elves like Scarblade Scout and Lys Alana Informant establish your board presence while setting up your graveyard for powerful finishers like Moon-Vigil Adherents or Morcant's Eyes. Even if your opponents remove your creatures, that just fuels your future threats.",
+    "Your local game store's Prerelease is only the beginning of your journey with Lorwyn Eclipsed. As you continue to explore the set's many mechanics, don't be afraid to try new things. Try including Maralen, Fae Ascendant in your Elf deck, or try drafting a monocolor deck using the many hybrid cards in Lorwyn Eclipsed. No matter how your games go, you'll walk away with an exciting story to share with your fellow Magic players. If you're looking for more places to play with these cards, check out our guide to Lorwyn Eclipsed events.",
+    "Weave a new tale at Lorwyn Eclipsed Prerelease events, which run from January 16–22. Lorwyn Eclipsed releases worldwide on January 23 and is available now from your local game store, Amazon, TCGplayer, and elsewhere Magic is sold."
+  ],
+  "overview_images": [
+    {
+      "url": "https://media.wizards.com/2025/images/daily/A76WcOQnJa.jpg",
+      "path": "set-acquisition-output/wizards/overview-12.jpg",
+      "bytes": 691938,
+      "sha256": "16db7d965f36119af666a418f71fd04d37c47e9eee561102ca65932ba473aab4",
+      "alt": "Draft Archetypes"
+    }
+  ],
+  "review_status": "source_evidence_only_not_reviewed"
+}
