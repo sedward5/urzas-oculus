@@ -1,0 +1,6036 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-11-24T01:48:56.538545+00:00",
+  "sets": [
+    {
+      "code": "MDD",
+      "name": "Marvel: Darkhold Destiny",
+      "released_at": "2027-04-09",
+      "set_type": "expansion",
+      "card_count": 12,
+      "age_days": -136,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Marvel%3A%20Darkhold%20Destiny%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "NAU",
+      "name": "Nauctis: The Sunken Realm",
+      "released_at": "2027-02-05",
+      "set_type": "expansion",
+      "card_count": 24,
+      "age_days": -73,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Nauctis%3A%20The%20Sunken%20Realm%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TRK",
+      "name": "Star Trek",
+      "released_at": "2026-11-13",
+      "set_type": "expansion",
+      "card_count": 587,
+      "age_days": 11,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "acquired",
+        "generated_at": "2026-11-23T22:42:37.611041+00:00",
+        "manifest_present": true,
+        "card_file_present": true,
+        "manifest_status": {
+          "scryfall": "acquired",
+          "17lands": "not_yet_published",
+          "wizards": "not_requested"
+        }
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Star%20Trek%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MBC",
+      "name": "Mystery Booster Commander Edition",
+      "released_at": "2026-10-19",
+      "set_type": "draft_innovation",
+      "card_count": 80,
+      "age_days": 36,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Mystery%20Booster%20Commander%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FRA",
+      "name": "Reality Fracture",
+      "released_at": "2026-10-02",
+      "set_type": "expansion",
+      "card_count": 462,
+      "age_days": 53,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Reality%20Fracture%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "HOB",
+      "name": "The Hobbit",
+      "released_at": "2026-08-14",
+      "set_type": "expansion",
+      "card_count": 321,
+      "age_days": 102,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "present",
+      "local_reviewed_cards": "present",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "present",
+        "url": "https://media.wizards.com/2026/images/daily/JfAIekUv4l/en_ML8RY4G1kB.jpg",
+        "review_status": "verified_against_acquisition_artifact"
+      },
+      "wizards_guide": {
+        "status": "found_in_reviewed_catalog",
+        "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MSH",
+      "name": "Marvel Super Heroes",
+      "released_at": "2026-06-26",
+      "set_type": "expansion",
+      "card_count": 453,
+      "age_days": 151,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Marvel%20Super%20Heroes%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SOS",
+      "name": "Secrets of Strixhaven",
+      "released_at": "2026-04-24",
+      "set_type": "expansion",
+      "card_count": 368,
+      "age_days": 214,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Secrets%20of%20Strixhaven%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TMT",
+      "name": "Teenage Mutant Ninja Turtles",
+      "released_at": "2026-03-06",
+      "set_type": "expansion",
+      "card_count": 320,
+      "age_days": 263,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Teenage%20Mutant%20Ninja%20Turtles%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ECL",
+      "name": "Lorwyn Eclipsed",
+      "released_at": "2026-01-23",
+      "set_type": "expansion",
+      "card_count": 408,
+      "age_days": 305,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "present",
+      "local_reviewed_cards": "present",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "present",
+        "url": "https://media.wizards.com/2025/images/daily/A76WcOQnJa.jpg",
+        "review_status": "verified_against_acquisition_artifact"
+      },
+      "wizards_guide": {
+        "status": "found_in_reviewed_catalog",
+        "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TLA",
+      "name": "Avatar: The Last Airbender",
+      "released_at": "2025-11-21",
+      "set_type": "expansion",
+      "card_count": 394,
+      "age_days": 368,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Avatar%3A%20The%20Last%20Airbender%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SPM",
+      "name": "Marvel's Spider-Man",
+      "released_at": "2025-09-26",
+      "set_type": "expansion",
+      "card_count": 286,
+      "age_days": 424,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Marvel%27s%20Spider-Man%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "EOE",
+      "name": "Edge of Eternities",
+      "released_at": "2025-08-01",
+      "set_type": "expansion",
+      "card_count": 400,
+      "age_days": 480,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Edge%20of%20Eternities%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FIN",
+      "name": "Final Fantasy",
+      "released_at": "2025-06-13",
+      "set_type": "expansion",
+      "card_count": 598,
+      "age_days": 529,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Final%20Fantasy%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TDM",
+      "name": "Tarkir: Dragonstorm",
+      "released_at": "2025-04-11",
+      "set_type": "expansion",
+      "card_count": 426,
+      "age_days": 592,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "present",
+      "local_reviewed_cards": "present",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "present",
+        "url": "https://media.wizards.com/2025/images/daily/en_NRKDiesx5U.jpg",
+        "review_status": "verified_against_acquisition_artifact"
+      },
+      "wizards_guide": {
+        "status": "found_in_reviewed_catalog",
+        "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DFT",
+      "name": "Aetherdrift",
+      "released_at": "2025-02-14",
+      "set_type": "expansion",
+      "card_count": 553,
+      "age_days": 648,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Aetherdrift%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "INR",
+      "name": "Innistrad Remastered",
+      "released_at": "2025-01-24",
+      "set_type": "masters",
+      "card_count": 495,
+      "age_days": 669,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Innistrad%20Remastered%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "J25",
+      "name": "Foundations Jumpstart",
+      "released_at": "2024-11-15",
+      "set_type": "draft_innovation",
+      "card_count": 779,
+      "age_days": 739,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Foundations%20Jumpstart%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FDN",
+      "name": "Foundations",
+      "released_at": "2024-11-15",
+      "set_type": "core",
+      "card_count": 771,
+      "age_days": 739,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Foundations%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DSK",
+      "name": "Duskmourn: House of Horror",
+      "released_at": "2024-09-27",
+      "set_type": "expansion",
+      "card_count": 417,
+      "age_days": 788,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Duskmourn%3A%20House%20of%20Horror%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MB2",
+      "name": "Mystery Booster 2",
+      "released_at": "2024-08-02",
+      "set_type": "masters",
+      "card_count": 385,
+      "age_days": 844,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Mystery%20Booster%202%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BLB",
+      "name": "Bloomburrow",
+      "released_at": "2024-08-02",
+      "set_type": "expansion",
+      "card_count": 397,
+      "age_days": 844,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Bloomburrow%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ACR",
+      "name": "Assassin's Creed",
+      "released_at": "2024-07-05",
+      "set_type": "draft_innovation",
+      "card_count": 309,
+      "age_days": 872,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Assassin%27s%20Creed%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MH3",
+      "name": "Modern Horizons 3",
+      "released_at": "2024-06-14",
+      "set_type": "draft_innovation",
+      "card_count": 524,
+      "age_days": 893,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Horizons%203%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "H2R",
+      "name": "Modern Horizons 2 Timeshifts",
+      "released_at": "2024-06-14",
+      "set_type": "draft_innovation",
+      "card_count": 16,
+      "age_days": 893,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Horizons%202%20Timeshifts%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "OTJ",
+      "name": "Outlaws of Thunder Junction",
+      "released_at": "2024-04-19",
+      "set_type": "expansion",
+      "card_count": 374,
+      "age_days": 949,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Outlaws%20of%20Thunder%20Junction%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BIG",
+      "name": "The Big Score",
+      "released_at": "2024-04-19",
+      "set_type": "expansion",
+      "card_count": 95,
+      "age_days": 949,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=The%20Big%20Score%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CLU",
+      "name": "Ravnica: Clue Edition",
+      "released_at": "2024-02-23",
+      "set_type": "draft_innovation",
+      "card_count": 284,
+      "age_days": 1005,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ravnica%3A%20Clue%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MKM",
+      "name": "Murders at Karlov Manor",
+      "released_at": "2024-02-09",
+      "set_type": "expansion",
+      "card_count": 451,
+      "age_days": 1019,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Murders%20at%20Karlov%20Manor%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "RVR",
+      "name": "Ravnica Remastered",
+      "released_at": "2024-01-12",
+      "set_type": "masters",
+      "card_count": 531,
+      "age_days": 1047,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ravnica%20Remastered%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LCI",
+      "name": "The Lost Caverns of Ixalan",
+      "released_at": "2023-11-17",
+      "set_type": "expansion",
+      "card_count": 415,
+      "age_days": 1103,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=The%20Lost%20Caverns%20of%20Ixalan%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "WOE",
+      "name": "Wilds of Eldraine",
+      "released_at": "2023-09-08",
+      "set_type": "expansion",
+      "card_count": 381,
+      "age_days": 1173,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Wilds%20of%20Eldraine%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CMM",
+      "name": "Commander Masters",
+      "released_at": "2023-08-04",
+      "set_type": "masters",
+      "card_count": 1067,
+      "age_days": 1208,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Commander%20Masters%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LTR",
+      "name": "The Lord of the Rings: Tales of Middle-earth",
+      "released_at": "2023-06-23",
+      "set_type": "draft_innovation",
+      "card_count": 854,
+      "age_days": 1250,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=The%20Lord%20of%20the%20Rings%3A%20Tales%20of%20Middle-earth%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MAT",
+      "name": "March of the Machine: The Aftermath",
+      "released_at": "2023-05-12",
+      "set_type": "expansion",
+      "card_count": 230,
+      "age_days": 1292,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=March%20of%20the%20Machine%3A%20The%20Aftermath%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MOM",
+      "name": "March of the Machine",
+      "released_at": "2023-04-21",
+      "set_type": "expansion",
+      "card_count": 387,
+      "age_days": 1313,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=March%20of%20the%20Machine%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ONE",
+      "name": "Phyrexia: All Will Be One",
+      "released_at": "2023-02-10",
+      "set_type": "expansion",
+      "card_count": 479,
+      "age_days": 1383,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Phyrexia%3A%20All%20Will%20Be%20One%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DMR",
+      "name": "Dominaria Remastered",
+      "released_at": "2023-01-13",
+      "set_type": "masters",
+      "card_count": 457,
+      "age_days": 1411,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dominaria%20Remastered%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "J22",
+      "name": "Jumpstart 2022",
+      "released_at": "2022-12-02",
+      "set_type": "draft_innovation",
+      "card_count": 835,
+      "age_days": 1453,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Jumpstart%202022%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BRO",
+      "name": "The Brothers' War",
+      "released_at": "2022-11-18",
+      "set_type": "expansion",
+      "card_count": 387,
+      "age_days": 1467,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=The%20Brothers%27%20War%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DMU",
+      "name": "Dominaria United",
+      "released_at": "2022-09-09",
+      "set_type": "expansion",
+      "card_count": 436,
+      "age_days": 1537,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dominaria%20United%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "2X2",
+      "name": "Double Masters 2022",
+      "released_at": "2022-07-08",
+      "set_type": "masters",
+      "card_count": 579,
+      "age_days": 1600,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Double%20Masters%202022%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CLB",
+      "name": "Commander Legends: Battle for Baldur's Gate",
+      "released_at": "2022-06-10",
+      "set_type": "draft_innovation",
+      "card_count": 936,
+      "age_days": 1628,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Commander%20Legends%3A%20Battle%20for%20Baldur%27s%20Gate%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SNC",
+      "name": "Streets of New Capenna",
+      "released_at": "2022-04-29",
+      "set_type": "expansion",
+      "card_count": 469,
+      "age_days": 1670,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Streets%20of%20New%20Capenna%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SLX",
+      "name": "Universes Within",
+      "released_at": "2022-03-03",
+      "set_type": "masters",
+      "card_count": 30,
+      "age_days": 1727,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Universes%20Within%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "NEO",
+      "name": "Kamigawa: Neon Dynasty",
+      "released_at": "2022-02-18",
+      "set_type": "expansion",
+      "card_count": 515,
+      "age_days": 1740,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Kamigawa%3A%20Neon%20Dynasty%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DBL",
+      "name": "Innistrad: Double Feature",
+      "released_at": "2022-01-28",
+      "set_type": "draft_innovation",
+      "card_count": 535,
+      "age_days": 1761,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Innistrad%3A%20Double%20Feature%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "VOW",
+      "name": "Innistrad: Crimson Vow",
+      "released_at": "2021-11-19",
+      "set_type": "expansion",
+      "card_count": 412,
+      "age_days": 1831,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Innistrad%3A%20Crimson%20Vow%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MID",
+      "name": "Innistrad: Midnight Hunt",
+      "released_at": "2021-09-24",
+      "set_type": "expansion",
+      "card_count": 392,
+      "age_days": 1887,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Innistrad%3A%20Midnight%20Hunt%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "AFR",
+      "name": "Adventures in the Forgotten Realms",
+      "released_at": "2021-07-23",
+      "set_type": "expansion",
+      "card_count": 402,
+      "age_days": 1950,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Adventures%20in%20the%20Forgotten%20Realms%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MH2",
+      "name": "Modern Horizons 2",
+      "released_at": "2021-06-18",
+      "set_type": "draft_innovation",
+      "card_count": 492,
+      "age_days": 1985,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Horizons%202%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "H1R",
+      "name": "Modern Horizons 1 Timeshifts",
+      "released_at": "2021-06-18",
+      "set_type": "draft_innovation",
+      "card_count": 40,
+      "age_days": 1985,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Horizons%201%20Timeshifts%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "STX",
+      "name": "Strixhaven: School of Mages",
+      "released_at": "2021-04-23",
+      "set_type": "expansion",
+      "card_count": 383,
+      "age_days": 2041,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Strixhaven%3A%20School%20of%20Mages%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TSR",
+      "name": "Time Spiral Remastered",
+      "released_at": "2021-03-19",
+      "set_type": "masters",
+      "card_count": 411,
+      "age_days": 2076,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Time%20Spiral%20Remastered%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "KHM",
+      "name": "Kaldheim",
+      "released_at": "2021-02-05",
+      "set_type": "expansion",
+      "card_count": 407,
+      "age_days": 2118,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Kaldheim%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CMR",
+      "name": "Commander Legends",
+      "released_at": "2020-11-20",
+      "set_type": "draft_innovation",
+      "card_count": 718,
+      "age_days": 2195,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Commander%20Legends%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "PLST",
+      "name": "The List",
+      "released_at": "2020-09-26",
+      "set_type": "masters",
+      "card_count": 5742,
+      "age_days": 2250,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=The%20List%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ZNR",
+      "name": "Zendikar Rising",
+      "released_at": "2020-09-25",
+      "set_type": "expansion",
+      "card_count": 392,
+      "age_days": 2251,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Zendikar%20Rising%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "2XM",
+      "name": "Double Masters",
+      "released_at": "2020-08-07",
+      "set_type": "masters",
+      "card_count": 384,
+      "age_days": 2300,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Double%20Masters%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "JMP",
+      "name": "Jumpstart",
+      "released_at": "2020-07-17",
+      "set_type": "draft_innovation",
+      "card_count": 496,
+      "age_days": 2321,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Jumpstart%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M21",
+      "name": "Core Set 2021",
+      "released_at": "2020-07-03",
+      "set_type": "core",
+      "card_count": 397,
+      "age_days": 2335,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Core%20Set%202021%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "IKO",
+      "name": "Ikoria: Lair of Behemoths",
+      "released_at": "2020-04-24",
+      "set_type": "expansion",
+      "card_count": 389,
+      "age_days": 2405,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ikoria%3A%20Lair%20of%20Behemoths%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "THB",
+      "name": "Theros Beyond Death",
+      "released_at": "2020-01-24",
+      "set_type": "expansion",
+      "card_count": 358,
+      "age_days": 2496,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Theros%20Beyond%20Death%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ELD",
+      "name": "Throne of Eldraine",
+      "released_at": "2019-10-04",
+      "set_type": "expansion",
+      "card_count": 397,
+      "age_days": 2608,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Throne%20of%20Eldraine%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M20",
+      "name": "Core Set 2020",
+      "released_at": "2019-07-12",
+      "set_type": "core",
+      "card_count": 345,
+      "age_days": 2692,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Core%20Set%202020%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MH1",
+      "name": "Modern Horizons",
+      "released_at": "2019-06-14",
+      "set_type": "draft_innovation",
+      "card_count": 255,
+      "age_days": 2720,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Horizons%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "WAR",
+      "name": "War of the Spark",
+      "released_at": "2019-05-03",
+      "set_type": "expansion",
+      "card_count": 311,
+      "age_days": 2762,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=War%20of%20the%20Spark%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "RNA",
+      "name": "Ravnica Allegiance",
+      "released_at": "2019-01-25",
+      "set_type": "expansion",
+      "card_count": 273,
+      "age_days": 2860,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ravnica%20Allegiance%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "UMA",
+      "name": "Ultimate Masters",
+      "released_at": "2018-12-07",
+      "set_type": "masters",
+      "card_count": 254,
+      "age_days": 2909,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ultimate%20Masters%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "GRN",
+      "name": "Guilds of Ravnica",
+      "released_at": "2018-10-05",
+      "set_type": "expansion",
+      "card_count": 273,
+      "age_days": 2972,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Guilds%20of%20Ravnica%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M19",
+      "name": "Core Set 2019",
+      "released_at": "2018-07-13",
+      "set_type": "core",
+      "card_count": 314,
+      "age_days": 3056,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Core%20Set%202019%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BBD",
+      "name": "Battlebond",
+      "released_at": "2018-06-08",
+      "set_type": "draft_innovation",
+      "card_count": 256,
+      "age_days": 3091,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Battlebond%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DOM",
+      "name": "Dominaria",
+      "released_at": "2018-04-27",
+      "set_type": "expansion",
+      "card_count": 280,
+      "age_days": 3133,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dominaria%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "A25",
+      "name": "Masters 25",
+      "released_at": "2018-03-16",
+      "set_type": "masters",
+      "card_count": 249,
+      "age_days": 3175,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Masters%2025%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "RIX",
+      "name": "Rivals of Ixalan",
+      "released_at": "2018-01-19",
+      "set_type": "expansion",
+      "card_count": 205,
+      "age_days": 3231,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Rivals%20of%20Ixalan%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "IMA",
+      "name": "Iconic Masters",
+      "released_at": "2017-11-17",
+      "set_type": "masters",
+      "card_count": 249,
+      "age_days": 3294,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Iconic%20Masters%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "XLN",
+      "name": "Ixalan",
+      "released_at": "2017-09-29",
+      "set_type": "expansion",
+      "card_count": 289,
+      "age_days": 3343,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ixalan%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "HOU",
+      "name": "Hour of Devastation",
+      "released_at": "2017-07-14",
+      "set_type": "expansion",
+      "card_count": 209,
+      "age_days": 3420,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Hour%20of%20Devastation%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "AKH",
+      "name": "Amonkhet",
+      "released_at": "2017-04-28",
+      "set_type": "expansion",
+      "card_count": 287,
+      "age_days": 3497,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Amonkhet%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MM3",
+      "name": "Modern Masters 2017",
+      "released_at": "2017-03-17",
+      "set_type": "masters",
+      "card_count": 249,
+      "age_days": 3539,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Masters%202017%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "AER",
+      "name": "Aether Revolt",
+      "released_at": "2017-01-20",
+      "set_type": "expansion",
+      "card_count": 197,
+      "age_days": 3595,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Aether%20Revolt%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "KLD",
+      "name": "Kaladesh",
+      "released_at": "2016-09-30",
+      "set_type": "expansion",
+      "card_count": 278,
+      "age_days": 3707,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Kaladesh%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CN2",
+      "name": "Conspiracy: Take the Crown",
+      "released_at": "2016-08-26",
+      "set_type": "draft_innovation",
+      "card_count": 222,
+      "age_days": 3742,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Conspiracy%3A%20Take%20the%20Crown%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "EMN",
+      "name": "Eldritch Moon",
+      "released_at": "2016-07-22",
+      "set_type": "expansion",
+      "card_count": 208,
+      "age_days": 3777,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Eldritch%20Moon%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "EMA",
+      "name": "Eternal Masters",
+      "released_at": "2016-06-10",
+      "set_type": "masters",
+      "card_count": 249,
+      "age_days": 3819,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Eternal%20Masters%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SOI",
+      "name": "Shadows over Innistrad",
+      "released_at": "2016-04-08",
+      "set_type": "expansion",
+      "card_count": 302,
+      "age_days": 3882,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Shadows%20over%20Innistrad%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "OGW",
+      "name": "Oath of the Gatewatch",
+      "released_at": "2016-01-22",
+      "set_type": "expansion",
+      "card_count": 187,
+      "age_days": 3959,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Oath%20of%20the%20Gatewatch%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BFZ",
+      "name": "Battle for Zendikar",
+      "released_at": "2015-10-02",
+      "set_type": "expansion",
+      "card_count": 299,
+      "age_days": 4071,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Battle%20for%20Zendikar%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ORI",
+      "name": "Magic Origins",
+      "released_at": "2015-07-17",
+      "set_type": "core",
+      "card_count": 288,
+      "age_days": 4148,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%20Origins%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MM2",
+      "name": "Modern Masters 2015",
+      "released_at": "2015-05-22",
+      "set_type": "masters",
+      "card_count": 249,
+      "age_days": 4204,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Masters%202015%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DTK",
+      "name": "Dragons of Tarkir",
+      "released_at": "2015-03-27",
+      "set_type": "expansion",
+      "card_count": 264,
+      "age_days": 4260,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dragons%20of%20Tarkir%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FRF",
+      "name": "Fate Reforged",
+      "released_at": "2015-01-23",
+      "set_type": "expansion",
+      "card_count": 191,
+      "age_days": 4323,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Fate%20Reforged%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "KTK",
+      "name": "Khans of Tarkir",
+      "released_at": "2014-09-26",
+      "set_type": "expansion",
+      "card_count": 293,
+      "age_days": 4442,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Khans%20of%20Tarkir%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M15",
+      "name": "Magic 2015",
+      "released_at": "2014-07-18",
+      "set_type": "core",
+      "card_count": 284,
+      "age_days": 4512,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%202015%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CNS",
+      "name": "Conspiracy",
+      "released_at": "2014-06-06",
+      "set_type": "draft_innovation",
+      "card_count": 210,
+      "age_days": 4554,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Conspiracy%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "JOU",
+      "name": "Journey into Nyx",
+      "released_at": "2014-05-02",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 4589,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Journey%20into%20Nyx%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BNG",
+      "name": "Born of the Gods",
+      "released_at": "2014-02-07",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 4673,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Born%20of%20the%20Gods%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "THS",
+      "name": "Theros",
+      "released_at": "2013-09-27",
+      "set_type": "expansion",
+      "card_count": 249,
+      "age_days": 4806,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Theros%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M14",
+      "name": "Magic 2014",
+      "released_at": "2013-07-19",
+      "set_type": "core",
+      "card_count": 249,
+      "age_days": 4876,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%202014%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MMA",
+      "name": "Modern Masters",
+      "released_at": "2013-06-07",
+      "set_type": "masters",
+      "card_count": 229,
+      "age_days": 4918,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Modern%20Masters%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DGM",
+      "name": "Dragon's Maze",
+      "released_at": "2013-05-03",
+      "set_type": "expansion",
+      "card_count": 156,
+      "age_days": 4953,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dragon%27s%20Maze%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "GTC",
+      "name": "Gatecrash",
+      "released_at": "2013-02-01",
+      "set_type": "expansion",
+      "card_count": 249,
+      "age_days": 5044,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Gatecrash%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "RTR",
+      "name": "Return to Ravnica",
+      "released_at": "2012-10-05",
+      "set_type": "expansion",
+      "card_count": 274,
+      "age_days": 5163,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Return%20to%20Ravnica%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M13",
+      "name": "Magic 2013",
+      "released_at": "2012-07-13",
+      "set_type": "core",
+      "card_count": 249,
+      "age_days": 5247,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%202013%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "AVR",
+      "name": "Avacyn Restored",
+      "released_at": "2012-05-04",
+      "set_type": "expansion",
+      "card_count": 244,
+      "age_days": 5317,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Avacyn%20Restored%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DKA",
+      "name": "Dark Ascension",
+      "released_at": "2012-02-03",
+      "set_type": "expansion",
+      "card_count": 158,
+      "age_days": 5408,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dark%20Ascension%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ISD",
+      "name": "Innistrad",
+      "released_at": "2011-09-30",
+      "set_type": "expansion",
+      "card_count": 264,
+      "age_days": 5534,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Innistrad%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M12",
+      "name": "Magic 2012",
+      "released_at": "2011-07-15",
+      "set_type": "core",
+      "card_count": 249,
+      "age_days": 5611,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%202012%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "NPH",
+      "name": "New Phyrexia",
+      "released_at": "2011-05-13",
+      "set_type": "expansion",
+      "card_count": 175,
+      "age_days": 5674,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=New%20Phyrexia%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MBS",
+      "name": "Mirrodin Besieged",
+      "released_at": "2011-02-04",
+      "set_type": "expansion",
+      "card_count": 155,
+      "age_days": 5772,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Mirrodin%20Besieged%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SOM",
+      "name": "Scars of Mirrodin",
+      "released_at": "2010-10-01",
+      "set_type": "expansion",
+      "card_count": 249,
+      "age_days": 5898,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Scars%20of%20Mirrodin%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M11",
+      "name": "Magic 2011",
+      "released_at": "2010-07-16",
+      "set_type": "core",
+      "card_count": 249,
+      "age_days": 5975,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%202011%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ROE",
+      "name": "Rise of the Eldrazi",
+      "released_at": "2010-04-23",
+      "set_type": "expansion",
+      "card_count": 248,
+      "age_days": 6059,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Rise%20of%20the%20Eldrazi%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "WWK",
+      "name": "Worldwake",
+      "released_at": "2010-02-05",
+      "set_type": "expansion",
+      "card_count": 145,
+      "age_days": 6136,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Worldwake%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ZEN",
+      "name": "Zendikar",
+      "released_at": "2009-10-02",
+      "set_type": "expansion",
+      "card_count": 269,
+      "age_days": 6262,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Zendikar%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "M10",
+      "name": "Magic 2010",
+      "released_at": "2009-07-17",
+      "set_type": "core",
+      "card_count": 249,
+      "age_days": 6339,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Magic%202010%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ARB",
+      "name": "Alara Reborn",
+      "released_at": "2009-04-30",
+      "set_type": "expansion",
+      "card_count": 145,
+      "age_days": 6417,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Alara%20Reborn%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CON",
+      "name": "Conflux",
+      "released_at": "2009-02-06",
+      "set_type": "expansion",
+      "card_count": 145,
+      "age_days": 6500,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Conflux%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ALA",
+      "name": "Shards of Alara",
+      "released_at": "2008-10-03",
+      "set_type": "expansion",
+      "card_count": 250,
+      "age_days": 6626,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Shards%20of%20Alara%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "EVE",
+      "name": "Eventide",
+      "released_at": "2008-07-25",
+      "set_type": "expansion",
+      "card_count": 180,
+      "age_days": 6696,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Eventide%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SHM",
+      "name": "Shadowmoor",
+      "released_at": "2008-05-02",
+      "set_type": "expansion",
+      "card_count": 302,
+      "age_days": 6780,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Shadowmoor%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MOR",
+      "name": "Morningtide",
+      "released_at": "2008-02-01",
+      "set_type": "expansion",
+      "card_count": 150,
+      "age_days": 6871,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Morningtide%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LRW",
+      "name": "Lorwyn",
+      "released_at": "2007-10-12",
+      "set_type": "expansion",
+      "card_count": 301,
+      "age_days": 6983,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Lorwyn%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "10E",
+      "name": "Tenth Edition",
+      "released_at": "2007-07-13",
+      "set_type": "core",
+      "card_count": 510,
+      "age_days": 7074,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Tenth%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FUT",
+      "name": "Future Sight",
+      "released_at": "2007-05-04",
+      "set_type": "expansion",
+      "card_count": 180,
+      "age_days": 7144,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Future%20Sight%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "PLC",
+      "name": "Planar Chaos",
+      "released_at": "2007-02-02",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 7235,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Planar%20Chaos%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TSP",
+      "name": "Time Spiral",
+      "released_at": "2006-10-06",
+      "set_type": "expansion",
+      "card_count": 301,
+      "age_days": 7354,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Time%20Spiral%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TSB",
+      "name": "Time Spiral Timeshifted",
+      "released_at": "2006-10-06",
+      "set_type": "expansion",
+      "card_count": 121,
+      "age_days": 7354,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Time%20Spiral%20Timeshifted%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CSP",
+      "name": "Coldsnap",
+      "released_at": "2006-07-21",
+      "set_type": "expansion",
+      "card_count": 155,
+      "age_days": 7431,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Coldsnap%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DIS",
+      "name": "Dissension",
+      "released_at": "2006-05-05",
+      "set_type": "expansion",
+      "card_count": 180,
+      "age_days": 7508,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Dissension%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "GPT",
+      "name": "Guildpact",
+      "released_at": "2006-02-03",
+      "set_type": "expansion",
+      "card_count": 167,
+      "age_days": 7599,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Guildpact%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "RAV",
+      "name": "Ravnica: City of Guilds",
+      "released_at": "2005-10-07",
+      "set_type": "expansion",
+      "card_count": 306,
+      "age_days": 7718,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ravnica%3A%20City%20of%20Guilds%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "9ED",
+      "name": "Ninth Edition",
+      "released_at": "2005-07-29",
+      "set_type": "core",
+      "card_count": 710,
+      "age_days": 7788,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ninth%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SOK",
+      "name": "Saviors of Kamigawa",
+      "released_at": "2005-06-03",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 7844,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Saviors%20of%20Kamigawa%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BOK",
+      "name": "Betrayers of Kamigawa",
+      "released_at": "2005-02-04",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 7963,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Betrayers%20of%20Kamigawa%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CHK",
+      "name": "Champions of Kamigawa",
+      "released_at": "2004-10-01",
+      "set_type": "expansion",
+      "card_count": 307,
+      "age_days": 8089,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Champions%20of%20Kamigawa%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "5DN",
+      "name": "Fifth Dawn",
+      "released_at": "2004-06-04",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 8208,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Fifth%20Dawn%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DST",
+      "name": "Darksteel",
+      "released_at": "2004-02-06",
+      "set_type": "expansion",
+      "card_count": 165,
+      "age_days": 8327,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Darksteel%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MRD",
+      "name": "Mirrodin",
+      "released_at": "2003-10-02",
+      "set_type": "expansion",
+      "card_count": 306,
+      "age_days": 8454,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Mirrodin%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "8ED",
+      "name": "Eighth Edition",
+      "released_at": "2003-07-28",
+      "set_type": "core",
+      "card_count": 711,
+      "age_days": 8520,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Eighth%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SCG",
+      "name": "Scourge",
+      "released_at": "2003-05-26",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 8583,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Scourge%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LGN",
+      "name": "Legions",
+      "released_at": "2003-02-03",
+      "set_type": "expansion",
+      "card_count": 145,
+      "age_days": 8695,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Legions%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ONS",
+      "name": "Onslaught",
+      "released_at": "2002-10-07",
+      "set_type": "expansion",
+      "card_count": 351,
+      "age_days": 8814,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Onslaught%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "JUD",
+      "name": "Judgment",
+      "released_at": "2002-05-27",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 8947,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Judgment%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TOR",
+      "name": "Torment",
+      "released_at": "2002-02-04",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 9059,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Torment%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ODY",
+      "name": "Odyssey",
+      "released_at": "2001-10-01",
+      "set_type": "expansion",
+      "card_count": 353,
+      "age_days": 9185,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Odyssey%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "APC",
+      "name": "Apocalypse",
+      "released_at": "2001-06-04",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 9304,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Apocalypse%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "7ED",
+      "name": "Seventh Edition",
+      "released_at": "2001-04-11",
+      "set_type": "core",
+      "card_count": 708,
+      "age_days": 9358,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Seventh%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "PLS",
+      "name": "Planeshift",
+      "released_at": "2001-02-05",
+      "set_type": "expansion",
+      "card_count": 146,
+      "age_days": 9423,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Planeshift%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "INV",
+      "name": "Invasion",
+      "released_at": "2000-10-02",
+      "set_type": "expansion",
+      "card_count": 354,
+      "age_days": 9549,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Invasion%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "PCY",
+      "name": "Prophecy",
+      "released_at": "2000-06-05",
+      "set_type": "expansion",
+      "card_count": 144,
+      "age_days": 9668,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Prophecy%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "NEM",
+      "name": "Nemesis",
+      "released_at": "2000-02-14",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 9780,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Nemesis%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MMQ",
+      "name": "Mercadian Masques",
+      "released_at": "1999-10-04",
+      "set_type": "expansion",
+      "card_count": 350,
+      "age_days": 9913,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Mercadian%20Masques%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "UDS",
+      "name": "Urza's Destiny",
+      "released_at": "1999-06-07",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 10032,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Urza%27s%20Destiny%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "6ED",
+      "name": "Classic Sixth Edition",
+      "released_at": "1999-04-21",
+      "set_type": "core",
+      "card_count": 351,
+      "age_days": 10079,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Classic%20Sixth%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ULG",
+      "name": "Urza's Legacy",
+      "released_at": "1999-02-15",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 10144,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Urza%27s%20Legacy%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "USG",
+      "name": "Urza's Saga",
+      "released_at": "1998-10-12",
+      "set_type": "expansion",
+      "card_count": 357,
+      "age_days": 10270,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Urza%27s%20Saga%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "EXO",
+      "name": "Exodus",
+      "released_at": "1998-06-15",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 10389,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Exodus%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "STH",
+      "name": "Stronghold",
+      "released_at": "1998-03-02",
+      "set_type": "expansion",
+      "card_count": 143,
+      "age_days": 10494,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Stronghold%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "TMP",
+      "name": "Tempest",
+      "released_at": "1997-10-14",
+      "set_type": "expansion",
+      "card_count": 350,
+      "age_days": 10633,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Tempest%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "WTH",
+      "name": "Weatherlight",
+      "released_at": "1997-06-09",
+      "set_type": "expansion",
+      "card_count": 167,
+      "age_days": 10760,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Weatherlight%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "5ED",
+      "name": "Fifth Edition",
+      "released_at": "1997-03-24",
+      "set_type": "core",
+      "card_count": 460,
+      "age_days": 10837,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Fifth%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "VIS",
+      "name": "Visions",
+      "released_at": "1997-02-03",
+      "set_type": "expansion",
+      "card_count": 167,
+      "age_days": 10886,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Visions%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "MIR",
+      "name": "Mirage",
+      "released_at": "1996-10-08",
+      "set_type": "expansion",
+      "card_count": 353,
+      "age_days": 11004,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Mirage%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ALL",
+      "name": "Alliances",
+      "released_at": "1996-06-10",
+      "set_type": "expansion",
+      "card_count": 199,
+      "age_days": 11124,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Alliances%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "HML",
+      "name": "Homelands",
+      "released_at": "1995-10-01",
+      "set_type": "expansion",
+      "card_count": 140,
+      "age_days": 11377,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Homelands%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "RIN",
+      "name": "Rinascimento",
+      "released_at": "1995-08-01",
+      "set_type": "masters",
+      "card_count": 69,
+      "age_days": 11438,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Rinascimento%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "REN",
+      "name": "Renaissance",
+      "released_at": "1995-08-01",
+      "set_type": "masters",
+      "card_count": 122,
+      "age_days": 11438,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Renaissance%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "CHR",
+      "name": "Chronicles",
+      "released_at": "1995-07-01",
+      "set_type": "masters",
+      "card_count": 125,
+      "age_days": 11469,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Chronicles%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "BCHR",
+      "name": "Chronicles Foreign Black Border",
+      "released_at": "1995-07-01",
+      "set_type": "masters",
+      "card_count": 125,
+      "age_days": 11469,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Chronicles%20Foreign%20Black%20Border%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ICE",
+      "name": "Ice Age",
+      "released_at": "1995-06-03",
+      "set_type": "expansion",
+      "card_count": 383,
+      "age_days": 11497,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Ice%20Age%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "4ED",
+      "name": "Fourth Edition",
+      "released_at": "1995-04-01",
+      "set_type": "core",
+      "card_count": 380,
+      "age_days": 11560,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Fourth%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "4BB",
+      "name": "Fourth Edition Foreign Black Border",
+      "released_at": "1995-04-01",
+      "set_type": "core",
+      "card_count": 378,
+      "age_days": 11560,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Fourth%20Edition%20Foreign%20Black%20Border%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FEM",
+      "name": "Fallen Empires",
+      "released_at": "1994-11-01",
+      "set_type": "expansion",
+      "card_count": 187,
+      "age_days": 11711,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Fallen%20Empires%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "DRK",
+      "name": "The Dark",
+      "released_at": "1994-08-01",
+      "set_type": "expansion",
+      "card_count": 122,
+      "age_days": 11803,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=The%20Dark%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "SUM",
+      "name": "Summer Magic / Edgar",
+      "released_at": "1994-06-21",
+      "set_type": "core",
+      "card_count": 306,
+      "age_days": 11844,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Summer%20Magic%20/%20Edgar%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LEG",
+      "name": "Legends",
+      "released_at": "1994-06-01",
+      "set_type": "expansion",
+      "card_count": 310,
+      "age_days": 11864,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Legends%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "FBB",
+      "name": "Foreign Black Border",
+      "released_at": "1994-04-11",
+      "set_type": "core",
+      "card_count": 307,
+      "age_days": 11915,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Foreign%20Black%20Border%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "3ED",
+      "name": "Revised Edition",
+      "released_at": "1994-04-11",
+      "set_type": "core",
+      "card_count": 306,
+      "age_days": 11915,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Revised%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ATQ",
+      "name": "Antiquities",
+      "released_at": "1994-03-04",
+      "set_type": "expansion",
+      "card_count": 102,
+      "age_days": 11953,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Antiquities%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "ARN",
+      "name": "Arabian Nights",
+      "released_at": "1993-12-17",
+      "set_type": "expansion",
+      "card_count": 92,
+      "age_days": 12030,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Arabian%20Nights%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "2ED",
+      "name": "Unlimited Edition",
+      "released_at": "1993-12-01",
+      "set_type": "core",
+      "card_count": 302,
+      "age_days": 12046,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Unlimited%20Edition%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LEB",
+      "name": "Limited Edition Beta",
+      "released_at": "1993-10-04",
+      "set_type": "core",
+      "card_count": 302,
+      "age_days": 12104,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Limited%20Edition%20Beta%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    },
+    {
+      "code": "LEA",
+      "name": "Limited Edition Alpha",
+      "released_at": "1993-08-05",
+      "set_type": "core",
+      "card_count": 295,
+      "age_days": 12164,
+      "17lands": [],
+      "17lands_status": "unavailable",
+      "local_archetypes": "missing",
+      "local_reviewed_cards": "missing",
+      "acquisition": {
+        "status": "not_run",
+        "generated_at": null,
+        "manifest_present": false,
+        "card_file_present": false,
+        "manifest_status": {}
+      },
+      "archetype_image": {
+        "status": "missing",
+        "url": null,
+        "review_status": null
+      },
+      "wizards_guide": {
+        "status": "search_available",
+        "url": "https://magic.wizards.com/en/search?search=Limited%20Edition%20Alpha%20prerelease%20guide"
+      },
+      "prediction": {
+        "status": "not_run",
+        "artifacts": []
+      }
+    }
+  ],
+  "sources": {
+    "scryfall": "https://api.scryfall.com/sets",
+    "17lands": "https://www.17lands.com/public_datasets"
+  },
+  "source_status": {
+    "scryfall": {
+      "status": "available",
+      "retrieved_at": "2026-11-24T01:48:56.538545+00:00"
+    },
+    "17lands": {
+      "status": "unavailable",
+      "retrieved_at": "2026-11-24T01:48:56.538545+00:00",
+      "error_type": "ValueError",
+      "error": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The page markup may have changed or returned a challenge page. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"ico'"
+    }
+  },
+  "17lands_publication_guidance": {
+    "draft_days": 14,
+    "game_days": 21,
+    "replay_days": 35,
+    "note": "17Lands stated intentions, not guaranteed dates."
+  },
+  "workflow_runs": [
+    {
+      "workflow": "discover-limited-sets.yml",
+      "name": "Discover Limited Sets and Refresh Ops Inventory",
+      "run_number": 6,
+      "status": "in_progress",
+      "conclusion": null,
+      "created_at": "2026-11-24T01:48:48Z",
+      "updated_at": "2026-11-24T01:48:52Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45307796858",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "discover-limited-sets.yml",
+      "name": "Discover Limited Sets and Refresh Ops Inventory",
+      "run_number": 5,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-24T01:44:30Z",
+      "updated_at": "2026-11-24T01:44:41Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45307272226",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "discover-limited-sets.yml",
+      "name": "Discover Limited Sets and Refresh Ops Inventory",
+      "run_number": 4,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-24T01:39:55Z",
+      "updated_at": "2026-11-24T01:40:06Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45306707077",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 9,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-23T22:42:30Z",
+      "updated_at": "2026-11-23T22:42:51Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45282219746",
+      "event": "schedule"
+    },
+    {
+      "workflow": "discover-limited-sets.yml",
+      "name": "Optional - Discover Limited Sets (Read-only)",
+      "run_number": 3,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-23T22:06:15Z",
+      "updated_at": "2026-11-23T22:06:23Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45276353865",
+      "event": "schedule"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 8,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-23T12:39:41Z",
+      "updated_at": "2026-11-23T12:40:00Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45176411728",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 7,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-23T05:09:26Z",
+      "updated_at": "2026-11-23T05:09:45Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45115999207",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 6,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-23T05:00:19Z",
+      "updated_at": "2026-11-23T05:00:36Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45115100848",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 5,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-23T04:36:01Z",
+      "updated_at": "2026-11-23T04:36:29Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45112820815",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "discover-limited-sets.yml",
+      "name": "Discover Limited Sets",
+      "run_number": 2,
+      "status": "completed",
+      "conclusion": "failure",
+      "created_at": "2026-11-23T03:46:53Z",
+      "updated_at": "2026-11-23T03:47:12Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45107978506",
+      "event": "workflow_dispatch"
+    }
+  ],
+  "workflow_urls": {
+    "discovery": "https://github.com/sedward5/urzas-oculus/actions/workflows/discover-limited-sets.yml",
+    "acquisition": "https://github.com/sedward5/urzas-oculus/actions/workflows/acquire-set-data-bundle.yml"
+  }
+}
