@@ -55,6 +55,25 @@ jobs:
           else
             cp "${files[@]}" "$DEST/"
           fi
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          source = json.loads(Path("set-acquisition-output/manifest.json").read_text())
+          event = source.get("17lands", {})
+          destination = Path("website/static/data/17lands") / os.environ["SET_CODE"] / os.environ["EVENT_TYPE"] / "manifest.json"
+          destination.parent.mkdir(parents=True, exist_ok=True)
+          payload = {
+              "schema_version": 1,
+              "set_code": os.environ["SET_CODE"],
+              "event_type": os.environ["EVENT_TYPE"],
+              "generated_at": source.get("generated_at"),
+              "archives": event.get("archives", {}),
+              "probes": event.get("probes", {}),
+          }
+          destination.write_text(json.dumps(payload, indent=2) + "\n")
+          PY
           if find website/static/data/17lands -type f -name 'card-data-all-time.json' -o -type f -name 'trophy-decks.json' | grep -q .; then
             echo "Restricted 17Lands API snapshots remain in the public tree."
             exit 1

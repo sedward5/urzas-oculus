@@ -186,3 +186,12 @@ The intended workspace hierarchy and interaction contracts are specified in [DRA
 The shared Swift core also owns the versioned pre-release card evaluation model. It keeps card identity, reviewed understanding/prediction, and observed performance separate. Structural rules may suggest multi-label roles from card text and type data, but suggestions are not confirmed classifications. Reviewer-authored records carry five independent ordinal dimensions, a separate rate assessment, evidence, confidence, and model version.
 
 The `CardEvaluationTool` executable is a local batch adapter around this core. It accepts normalized `CardRecord` JSON and optional reviewed records, validates identity and evidence requirements, and emits deterministic suggestion/review JSON. It does not parse raw Scryfall bulk data or implement a second scoring engine. Future app and CI workflows must call the same core. Website pages may display immutable prediction and calibration artifacts but must not reproduce classification or evaluation logic.
+
+
+## Predictive evaluation and calibration pipeline
+
+The predictive model is a separate ScoringEngine mode from the live-draft GIH baseline. It must be deterministic, versioned, and runnable against current and historical sets. Inputs are normalized card facts, explicitly reviewed official set context, and a cutoff-bounded source manifest. Rarity is metadata only and must never enter a feature, rule, score, or recommendation path.
+
+Prediction artifacts are immutable and identify model/configuration/engine/schema versions, set, evaluation timestamp, source cutoff, source snapshot IDs/hashes, and per-card explanations. Observed performance is stored separately and joined only by stable card identity and explicit set/event/user-group/color scope. Calibration reports compare distinct outcome families, including coverage, sample sizes, missingness, limitations, residuals, and outliers. Historical replay uses only inputs available by the declared cutoff. Model changes require a version bump and regression replay across historical sets.
+
+The static website's `/ops` surface is an operations view over published inventory and prediction artifacts. It is not authenticated, contains no secrets, and delegates workflow execution to GitHub Actions. It must not implement prediction logic in browser code.

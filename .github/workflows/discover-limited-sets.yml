@@ -1,10 +1,11 @@
-name: Optional - Discover Limited Sets (Read-only)
+name: Discover Limited Sets and Refresh Ops Inventory
 on:
   workflow_dispatch:
   schedule:
     - cron: "23 10 * * 1"
 permissions:
-  contents: read
+  contents: write
+  actions: read
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -14,8 +15,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python3 -m unittest scripts.test_set_catalog
-      - run: python3 scripts/set_catalog.py discover --output set-discovery-output
+      - run: python3 -m unittest scripts.test_set_catalog scripts.test_build_ops_inventory
+      - name: Build operations inventory
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python3 scripts/set_catalog.py discover --output set-discovery-output
+          python3 scripts/build_ops_inventory.py --discovery set-discovery-output/set-discovery.json --output website/static/data/ops/limited-sets.json
+      - name: Publish inventory update
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          add-paths: website/static/data/ops/limited-sets.json
+          branch: ops/limited-set-inventory
+          base: main
+          delete-branch: false
+          commit-message: "Refresh Limited set operations inventory"
+          title: "Refresh Limited set operations inventory"
+          body: |
+            Automated inventory from Scryfall, the 17Lands public archive listing, local acquisition manifests, reviewed archetypes, and GitHub Actions run history.
+
+            This workflow does not call 17Lands analytics APIs or modify prediction artifacts.
       - uses: actions/upload-artifact@v4
         with:
           name: limited-set-discovery-${{ github.run_id }}
