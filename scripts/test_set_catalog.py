@@ -208,4 +208,61 @@ class CatalogTests(unittest.TestCase):
         self.assertEqual(report["sets"][0]["17lands_status"],"unavailable")
         self.assertEqual(report["source_status"]["17lands"]["error_type"],"TimeoutError")
 
+
+    def test_candidate_archive_url_uses_public_filename_convention(self):
+        self.assertEqual(
+            set_catalog.candidate_archive_url("draft", "FRA", "PremierDraft"),
+            "https://data.17landscapes.com/analysis_data/draft_data/draft_data_public.FRA.PremierDraft.csv.gz",
+        )
+        self.assertEqual(
+            set_catalog.candidate_archive_url("game", "ECL", "PremierDraft"),
+            "https://data.17landscapes.com/analysis_data/game_data/game_data_public.ECL.PremierDraft.csv.gz",
+        )
+
+    def test_candidate_archive_url_rejects_unknown_archive_kind(self):
+        with self.assertRaises(ValueError):
+            set_catalog.candidate_archive_url("other", "FRA", "PremierDraft")
+
+    def test_candidate_probe_requires_gzip_response(self):
+        response=MagicMock()
+        response.status=206
+        response.__enter__.return_value=response
+        response.read.return_value=bytes((31, 139))
+        with patch.object(set_catalog,"urlopen",return_value=response):
+            result=set_catalog.probe_candidate_url("https://data.17landscapes.com/example.csv.gz")
+        self.assertEqual(result["status"],"available")
+
+    def test_candidate_probe_reports_missing_url(self):
+        from urllib.error import HTTPError
+        with patch.object(set_catalog,"urlopen",side_effect=HTTPError("https://example.test",404,"Not Found",{},None)):
+            result=set_catalog.probe_candidate_url("https://data.17landscapes.com/example.csv.gz")
+        self.assertEqual(result,{"status":"url_not_available","http_status":404})
+
+    def test_acquire_falls_back_to_convention_urls_when_catalog_unavailable(self):
+        from tempfile import TemporaryDirectory
+        import json
+        cards={"data":[{"set_name":"Foundations Example","name":"Test Card"}]}
+        def fake_fetch(url,timeout=90):
+            if url.startswith(set_catalog.CARDS_API): return json.dumps(cards).encode()
+            if url==set_catalog.LANDS: return b"<html><head></head></html>"
+            raise AssertionError(url)
+        downloaded=[]
+        def fake_download(url,path):
+            downloaded.append(url)
+            return {"url":url,"path":str(path),"bytes":12,"sha256":"abc","physical_lines":3,"gzip_valid":True}
+        with TemporaryDirectory() as directory:
+            with (
+                patch.object(set_catalog,"fetch",side_effect=fake_fetch),
+                patch.object(set_catalog,"download_archive",side_effect=fake_download),
+                patch.object(set_catalog,"discover_guide",return_value=(None,"not_found")),
+            ):
+                result=set_catalog.acquire("FRA","PremierDraft","",Path(directory))
+        self.assertEqual(set(downloaded),{
+            "https://data.17landscapes.com/analysis_data/draft_data/draft_data_public.FRA.PremierDraft.csv.gz",
+            "https://data.17landscapes.com/analysis_data/game_data/game_data_public.FRA.PremierDraft.csv.gz",
+        })
+        self.assertEqual(result["17lands"]["probes"]["draft"],"acquired")
+        self.assertEqual(result["17lands"]["probes"]["game"],"acquired")
+        self.assertEqual(result["status"]["17lands"],"acquired")
+
 if __name__=="__main__": unittest.main()
