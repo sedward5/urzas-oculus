@@ -22,7 +22,7 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python3 scripts/set_catalog.py discover --output set-discovery-output
-          python3 scripts/build_ops_inventory.py --output website/static/data/ops/limited-sets.json
+          python3 scripts/build_ops_inventory.py --discovery set-discovery-output/set-discovery.json --output website/static/data/ops/limited-sets.json
       - name: Publish inventory update
         uses: peter-evans/create-pull-request@v7
         with:
