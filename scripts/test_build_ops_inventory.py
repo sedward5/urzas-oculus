@@ -34,6 +34,33 @@ class OpsInventoryTests(unittest.TestCase):
             self.assertEqual(item["prediction"]["status"], "not_run")
             self.assertEqual(result["workflow_runs"], [])
 
+    def test_uses_preliminary_page_evidence_and_manifest_card_count(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            set_root = root / "website/static/data/sets/TRK"
+            (set_root / "scryfall").mkdir(parents=True)
+            (set_root / "wizards").mkdir()
+            (set_root / "manifest.json").write_text(json.dumps({
+                "generated_at": "2026-11-23T12:00:00Z",
+                "status": {"scryfall": "acquired"},
+                "files": [{"path": "scryfall/trk-cards.json", "records": 311}]
+            }))
+            (set_root / "scryfall/trk-cards.json").write_text("{}")
+            (set_root / "wizards/guide-evidence.json").write_text(json.dumps({
+                "source_url": "https://magic.wizards.com/en/news/feature/star-trek-prerelease-guide",
+                "overview_images": [{"url": "https://media.wizards.com/example.jpg"}]
+            }))
+            page = root / "website/content/archetypes/trk"
+            page.mkdir(parents=True)
+            (page / "_index.md").write_text(
+                '---\\ncontent_status: "preliminary"\\nevidence_path: "static/data/sets/TRK/wizards/guide-evidence.json"\\n---\\n')
+            report = {"sets": [{"code": "TRK", "name": "Star Trek", "17lands": []}]}
+            item = build_ops_inventory.build_inventory(root, report, runs=[])["sets"][0]
+            self.assertEqual(item["acquisition"]["card_record_count"], 311)
+            self.assertEqual(item["archetype_page"]["status"], "preliminary")
+            self.assertEqual(item["archetype_image"]["status"], "present")
+            self.assertEqual(item["wizards_guide"]["status"], "found_in_acquisition_evidence")
+
     def test_missing_sources_are_explicit_not_success(self):
         with tempfile.TemporaryDirectory() as directory:
             result = build_ops_inventory.build_inventory(directory,
