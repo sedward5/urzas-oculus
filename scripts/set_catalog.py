@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Read-only Limited set discovery and provenance-preserving set source acquisition."""
-import argparse, hashlib, json, re, time
+import argparse, gzip, hashlib, json, re, time
 from datetime import date, datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
@@ -170,6 +170,30 @@ def discover_guide(set_name):
     return url, "discovered"
 
 
+def download_archive(url,path):
+    """Stream a catalog-listed public archive to disk and validate its gzip CRC."""
+    path.parent.mkdir(parents=True,exist_ok=True)
+    digest=hashlib.sha256(); size=0
+    req=Request(url,headers={"User-Agent":UA,"Accept":"application/gzip, application/octet-stream, */*"})
+    try:
+        with urlopen(req,timeout=240) as response, path.open("wb") as output:
+            while True:
+                chunk=response.read(1024*1024)
+                if not chunk: break
+                output.write(chunk); digest.update(chunk); size+=len(chunk)
+        records=0
+        with gzip.open(path,"rb") as archive:
+            while True:
+                chunk=archive.read(1024*1024)
+                if not chunk: break
+                records += chunk.count(b"\\n")
+        return {"url":url,"path":str(path),"bytes":size,"sha256":digest.hexdigest(),
+                "records_including_header":records,"gzip_valid":True}
+    except Exception:
+        path.unlink(missing_ok=True)
+        raise
+
+
 def save(url,path):
     data=fetch(url,timeout=240); path.parent.mkdir(parents=True,exist_ok=True); path.write_bytes(data)
     return {"url":url,"path":str(path),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}
@@ -220,24 +244,45 @@ def acquire(code,event,guide,out):
     if not guide:
         guide,guide_discovery=discover_guide(set_name)
     manifest["wizards_guide"]={"url":guide,"discovery":guide_discovery}
-    # Probe deterministic public S3 object keys. Acquisition must not depend
-    # on scraping the public_datasets presentation page.
-    archives={}; probes={}
-    for kind in ("draft","game","replay"):
-        u=archive_url(code,event,kind)
-        exists=probe_archive(u)
-        probes[kind]="available" if exists is True else ("not_found" if exists is False else "inaccessible_or_missing")
-        if exists is True:
-            rec=save(u,out/"17lands"/f"{kind}.csv.gz")
-            archives[kind]=rec; manifest["files"].append(rec)
-    ambiguous=[kind for kind,status in probes.items() if status=="inaccessible_or_missing"]
-    if ambiguous:
-        manifest.setdefault("warnings",[]).append(
-            "S3 returned 403 for these keys; they may be missing or inaccessible: "+", ".join(ambiguous))
-    manifest["17lands"]={"event_type":event,"archives":archives,"probes":probes,
+    # Resolve exact public archive URLs from 17Lands' catalog. Do not guess
+    # S3 keys or treat a HEAD response as proof that an archive is unavailable.
+    archives={}; probes={}; catalog_status="available"; catalog_last_updated=None
+    catalog_error=None
+    try:
+        catalog_rows=parse_lands(fetch(LANDS).decode("utf-8",errors="replace"))
+        listing=next((row for row in catalog_rows
+                      if row["set_code"]==code and row["event_type"]==event),None)
+        if listing:
+            catalog_last_updated=listing.get("last_updated")
+            for kind,url in listing.get("archives",{}).items():
+                if kind not in {"draft","game","replay"}: continue
+                try:
+                    rec=download_archive(url,out/"17lands"/f"{kind}.csv.gz")
+                    archives[kind]=rec; manifest["files"].append(rec); probes[kind]="acquired"
+                except Exception as exc:
+                    probes[kind]="download_failed"
+                    manifest.setdefault("warnings",[]).append(
+                        f"17Lands {kind} archive download failed: {type(exc).__name__}: {clean(str(exc))[:300]}")
+            for kind in ("draft","game","replay"):
+                if kind not in listing["archives"]: probes[kind]="not_listed"
+        else:
+            catalog_status="set_event_not_listed"
+            probes={kind:"not_listed" for kind in ("draft","game","replay")}
+    except (OSError,RuntimeError,ValueError,UnicodeError) as exc:
+        catalog_status="unavailable"
+        catalog_error={"type":type(exc).__name__,"message":clean(str(exc))[:500]}
+        probes={kind:"catalog_unavailable" for kind in ("draft","game","replay")}
+    manifest["17lands"]={"event_type":event,"catalog_url":LANDS,
+        "catalog_status":catalog_status,"catalog_last_updated":catalog_last_updated,
+        "catalog_error":catalog_error,"archives":archives,"probes":probes,
         "source_selection":{"bulk_available":sorted(archives),
             "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
-    manifest["status"]["17lands"]="acquired" if archives else "not_yet_published"
+    required=("draft","game")
+    manifest["status"]["17lands"]=("acquired" if all(probes.get(k) in {"acquired","not_listed"} for k in required)
+        and any(k in archives for k in required) else
+        ("partially_acquired" if archives else
+         ("not_listed" if catalog_status=="set_event_not_listed" else
+          ("unavailable" if catalog_status=="unavailable" else "not_yet_published"))))
     if guide:
         if not guide.startswith("https://magic.wizards.com/"): raise ValueError("Guide URL must use magic.wizards.com over HTTPS")
         raw=fetch(guide); p=GuideParser(); p.feed(raw.decode("utf-8",errors="replace"))
