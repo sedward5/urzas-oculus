@@ -179,10 +179,10 @@ def discover(root):
         records.append({"code":code,"name":s["name"],"released_at":s["released_at"],"set_type":s["set_type"],
           "card_count":s.get("card_count"),"age_days":age,"17lands":events,
           "17lands_candidates":candidates,
-          "17lands_status":("available" if events or any(v.get("status")=="available" for v in candidates.values()) else
+          "17lands_status":("available" if events else ("candidate_url_available" if any(v.get("status")=="available" for v in candidates.values()) else
               ("url_not_available" if candidates and all(v.get("status")=="url_not_available" for v in candidates.values()) else
                ("unavailable" if lands_status["status"]=="unavailable" and not any(v.get("status")=="available" for v in candidates.values()) else
-                ("awaiting_expected_publication" if age<35 else "not_listed")))),
+                ("awaiting_expected_publication" if age<35 else "not_listed"))))),
           "local_archetypes":"present" if "archetypes" in layers else "missing",
           "local_reviewed_cards":"present" if "cards" in layers else "missing"})
     return {"schema_version":1,"generated_at":now.isoformat(),"sets":records,
