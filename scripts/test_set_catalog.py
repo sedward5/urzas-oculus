@@ -180,11 +180,12 @@ class CatalogTests(unittest.TestCase):
             (root/"scripts/data").mkdir(parents=True)
             (root/"scripts/data/reviewed_archetypes.json").write_text('{"sets":{}}')
             (root/"scripts/data/reviewed_cards.json").write_text('{"sets":{}}')
-            with patch.object(set_catalog,"fetch",side_effect=fake_fetch):
+            with patch.object(set_catalog,"fetch",side_effect=fake_fetch), patch.object(set_catalog,"probe_candidate_url",return_value={"status":"url_not_available"}):
                 report=set_catalog.discover(root)
         self.assertEqual(len(report["sets"]),1)
         self.assertEqual(report["sets"][0]["code"],"TRK")
-        self.assertEqual(report["sets"][0]["17lands_status"],"unavailable")
+        self.assertEqual(report["sets"][0]["17lands_status"],"url_not_available")
+        self.assertEqual(report["sets"][0]["17lands_candidates"]["draft"]["status"],"url_not_available")
         self.assertEqual(report["source_status"]["17lands"]["status"],"unavailable")
         self.assertEqual(report["source_status"]["17lands"]["error_type"],"ValueError")
 
@@ -203,9 +204,9 @@ class CatalogTests(unittest.TestCase):
             (root/"scripts/data").mkdir(parents=True)
             (root/"scripts/data/reviewed_archetypes.json").write_text('{"sets":{}}')
             (root/"scripts/data/reviewed_cards.json").write_text('{"sets":{}}')
-            with patch.object(set_catalog,"fetch",side_effect=fake_fetch):
+            with patch.object(set_catalog,"fetch",side_effect=fake_fetch), patch.object(set_catalog,"probe_candidate_url",return_value={"status":"url_not_available"}):
                 report=set_catalog.discover(root)
-        self.assertEqual(report["sets"][0]["17lands_status"],"unavailable")
+        self.assertEqual(report["sets"][0]["17lands_status"],"url_not_available")
         self.assertEqual(report["source_status"]["17lands"]["error_type"],"TimeoutError")
 
 
