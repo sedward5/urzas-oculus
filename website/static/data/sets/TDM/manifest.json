@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "set_code": "TDM",
+  "event_type": "PremierDraft",
+  "generated_at": "2026-11-24T02:40:27.415404+00:00",
+  "files": [
+    {
+      "path": "set-acquisition-output/scryfall/tdm-cards.json",
+      "bytes": 1847647,
+      "sha256": "525cb0768ddd17b563f9d473d8031daaf81b0b2b30f1998b56c51e31091b2b4a",
+      "records": 276
+    },
+    {
+      "url": "https://media.wizards.com/2025/images/daily/en_NRKDiesx5U.jpg",
+      "path": "set-acquisition-output/wizards/overview-16.jpg",
+      "bytes": 518333,
+      "sha256": "7cf27eb646e3727b7f622961da626bc1302e280d26cc488caa4c978fef8a1190",
+      "alt": "Tarkir: Dragonstorm Draft Archetypes"
+    },
+    {
+      "path": "set-acquisition-output/wizards/guide.html",
+      "bytes": 253676,
+      "sha256": "ee43b5f47f3239b45628e2a057fb855652804b132c9cb6664dd6118a8e5ab2a0"
+    },
+    {
+      "path": "set-acquisition-output/wizards/guide-evidence.json",
+      "bytes": 13839,
+      "sha256": "b1567d8ef2ef4cb45c4ceb60f9f7b4219b06248be8ec9383b5cd8ab72225b3e1"
+    }
+  ],
+  "status": {
+    "scryfall": "acquired",
+    "17lands": "not_yet_published",
+    "wizards": "evidence_acquired_unreviewed"
+  },
+  "set_name": "Tarkir: Dragonstorm",
+  "wizards_guide": {
+    "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+    "discovery": "discovered"
+  },
+  "warnings": [
+    "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"
+  ],
+  "17lands": {
+    "event_type": "PremierDraft",
+    "archives": {},
+    "probes": {
+      "draft": "inaccessible_or_missing",
+      "game": "inaccessible_or_missing",
+      "replay": "inaccessible_or_missing"
+    },
+    "source_selection": {
+      "bulk_available": [],
+      "bulk_missing": [
+        "draft",
+        "game"
+      ]
+    }
+  }
+}

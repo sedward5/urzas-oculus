@@ -1,0 +1,231 @@
+{
+  "set_code": "TDM",
+  "source_url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
+  "retrieved_at": "2026-11-24T02:40:27.415404+00:00",
+  "article_title": "Tarkir: Dragonstorm Prerelease Guide: What You Need to Know",
+  "html_sha256": "ee43b5f47f3239b45628e2a057fb855652804b132c9cb6664dd6118a8e5ab2a0",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Tarkir: Dragonstorm Prerelease Guide: What You Need to Know"
+    },
+    {
+      "level": "h2",
+      "text": "Building Your Prerelease Deck"
+    },
+    {
+      "level": "h2",
+      "text": "Removal in Tarkir: Dragonstorm"
+    },
+    {
+      "level": "h3",
+      "text": "Common and Uncommon Removal in Tarkir: Dragonstorm"
+    },
+    {
+      "level": "h2",
+      "text": "White"
+    },
+    {
+      "level": "h2",
+      "text": "Blue"
+    },
+    {
+      "level": "h2",
+      "text": "Black"
+    },
+    {
+      "level": "h2",
+      "text": "Red"
+    },
+    {
+      "level": "h2",
+      "text": "Green"
+    },
+    {
+      "level": "h2",
+      "text": "Multicolor"
+    },
+    {
+      "level": "h2",
+      "text": "The Mana Curve in Tarkir: Dragonstorm"
+    },
+    {
+      "level": "h2",
+      "text": "Tarkir: Dragonstorm Draft Archetypes"
+    },
+    {
+      "level": "h3",
+      "text": "Abzan Endure"
+    },
+    {
+      "level": "h3",
+      "text": "Jeskai Flurry"
+    },
+    {
+      "level": "h3",
+      "text": "Sultai Renew"
+    },
+    {
+      "level": "h3",
+      "text": "Mardu Mobilize"
+    },
+    {
+      "level": "h3",
+      "text": "Temur Harmonize"
+    },
+    {
+      "level": "h2",
+      "text": "The Lands and Mana of Tarkir: Dragonstorm"
+    },
+    {
+      "level": "h2",
+      "text": "Prereleases Take Flight from April 4–10"
+    },
+    {
+      "level": "h3",
+      "text": "Magic Rules Blog: Mana Abilities"
+    },
+    {
+      "level": "h3",
+      "text": "Collecting Nauctis: The Sunken Realm | A First Look"
+    },
+    {
+      "level": "h3",
+      "text": "IDIC: Infinite Diversity in Infinite Combinations"
+    },
+    {
+      "level": "h2",
+      "text": "Magic: The Gathering Footer"
+    },
+    {
+      "level": "h3",
+      "text": "Find a store"
+    },
+    {
+      "level": "h3",
+      "text": "Social"
+    },
+    {
+      "level": "h3",
+      "text": "Find"
+    },
+    {
+      "level": "h3",
+      "text": "Company"
+    },
+    {
+      "level": "h3",
+      "text": "Magic"
+    },
+    {
+      "level": "h3",
+      "text": "Brands"
+    }
+  ],
+  "paragraphs": [
+    "Return to the plane of Tarkir and join up with one of five clans in Tarkir: Dragonstorm! We recently wrapped up previews for this dragon-size set, and it's shaping up to be a fitting return to one of Magic's most beloved settings. If you're looking to start casting massive dragons and assembling armies of brave warriors, there's no better place to start than at your local game store's Tarkir: Dragonstorm Prerelease events.",
+    "Prerelease events are a casual and friendly way to get your first taste of a brand-new Magic set. They're typically run as Sealed events, where you build a deck from the contents of a Prerelease Pack and any number of basic lands. Tarkir: Dragonstorm has added a twist, which we'll get to shortly.",
+    "When you register for a Tarkir: Dragonstorm Prerelease event, you'll receive one of five different Prerelease Packs. Each Tarkir: Dragonstorm Prerelease Pack contains the following:",
+    "At a Prerelease event, it's everyone's first time playing with these brand-new cards. No matter how long someone has been playing, it's everyone's first time with Tarkir: Dragonstorm. Don't be afraid to ask questions, try new things, and be bold! Prereleases are an exciting time to be a Magic fan, and we hope to see you at your local game store taking part in the fun.",
+    "There are five different Prerelease Packs for Tarkir: Dragonstorm, each themed around one of the five clans of Tarkir. Depending on the event, you may be given a Prerelease Pack at random or get to choose one of the five clans. The only difference between the Prerelease Packs is the spindown die and the Prerelease Booster.",
+    "Each Prerelease Booster contains fourteen cards, including one rare or mythic rare card, that are themed around your chosen clan. While you don't have to build a deck around your Prerelease Pack's clan, your Prerelease Booster will give you the building blocks of a deck for that clan. As you open your Play Boosters, think about how those cards synergize with your Prerelease Pack's theme.",
+    "Every deck needs a way to win, so the first cards you should look for are game-winning threats. A threat is any card that presents your opponent with a must-answer problem. That can be a massive creature with evasion, a power-boosting effect, or a consistent source of card draw. These are often rare or mythic rare cards.",
+    "In Tarkir: Dragonstorm, many threats are two or three colors, meaning you're unlikely to be able to play all your top-tier threats. Your deck should be based on three colors of mana, ideally being the three colors of your Prerelease Pack's clan. If you have a powerful three-color card like Roar of Endless Song, you might want to make a green-blue-red deck. However, if you've opened several monocolor threats, such as multiple copies of Yathan Tombguard, you might consider making a black deck, even if the individual threats are less exciting than a single multicolor card.",
+    "Once you've settled on your core threats, it's time to figure out the other major portion of your deck: removal and interaction. Your opponents will also be playing their strongest threats, and removal lets you stop their plans dead in their tracks.",
+    "Removal can take many forms. White and black have the most direct creature-removal options, with spells that excel at getting rid of even the biggest, baddest Dragons.",
+    "Red and blue have more conditional forms of removal, letting them deal with a threat under specific circumstances. Red can get rid of creatures through direct damage, making high-toughness creatures a problem. Blue can return creatures to their owner's hand, prevent them from untapping, or reduce their power, but it struggles to find permanent solutions to threats.",
+    "Green can destroy artifacts and enchantments outright while relying on its own creatures to remove opponent's creatures. By utilizing your own massive creatures, you can quickly outmuscle even the mightiest of Tarkir's dragons.",
+    "For your reference, we've put together a list of the common and uncommon removal in Tarkir: Dragonstorm. Check back here while building your Prerelease deck or playing games on MTG Arena to stay on top of your Limited games.",
+    "Worthy Cost",
+    "1",
+    "Desperate Measures",
+    "1",
+    "Caustic Exhale",
+    "1",
+    "Strategic Betrayal",
+    "2",
+    "Wail of War",
+    "3",
+    "Dragon's Prey",
+    "3",
+    "Salt Road Skirmish",
+    "4",
+    "Gurmag Rakshasa",
+    "6",
+    "Card Name",
+    "Mana Value",
+    "Channeled Dragonfire",
+    "1",
+    "Molten Exhale",
+    "2",
+    "Sunset Strikemaster",
+    "2",
+    "Twin Bolt",
+    "2",
+    "Unsparing Boltcaster",
+    "3",
+    "Overwhelming Surge",
+    "3",
+    "Narset's Rebuke",
+    "5",
+    "Card Name",
+    "Mana Value",
+    "Heritage Reclamation",
+    "2",
+    "Piercing Exhale",
+    "2",
+    "Sarkhan's Resolve",
+    "2",
+    "Undergrowth Leopard",
+    "2",
+    "Knockout Maneuver",
+    "3",
+    "Card Name",
+    "Mana Value",
+    "Glacial Dragonhunt",
+    "2",
+    "Lie in Wait",
+    "3",
+    "Runescale Stormbrood",
+    "4",
+    "Disruptive Stormbrood",
+    "5",
+    "Sonic Shrieker",
+    "5",
+    "Defibrillating Current",
+    "6",
+    "Kin-Tree Severance",
+    "6",
+    "Riverwheel Sweep",
+    "6",
+    "Twinmaw Stormbrood",
+    "6",
+    "Surviving on Tarkir means making the most out of what you have, and that's exactly what the mana curve helps you do in Limited. This is a concept that helps you efficiently and effectively cast your spells. If your average spell's mana cost is around two or three, you can reliably cast spells early while having larger spells for later in the game. In Sealed, your mana curve should look something like this:",
+    "Normally, you calculate a spell's mana value by adding up the number of mana symbols in its mana cost. For example, a spell with a mana cost would have mana value 3. But Tarkir: Dragonstorm has two aspects that add some texture here: Omens and hybrid mana.",
+    "Cards with Omen spells effectively have two costs: the larger Dragon creature spell and the smaller Omen spell. Because of this, should Marang River Regent count as a four-mana card or a six-mana card on your mana curve?",
+    "Additionally, there is a cycle of common creatures with hybrid mana costs. These symbols, colloquially known as \"twobrid\" mana, can be paid with two generic mana or one mana of the indicated color. That means you can end up paying three to six mana depending on what lands you have. So, where should these fall on your mana curve?",
+    "The answer is … it depends! That might not be satisfying, but it really depends on what kind of deck you have. When placing these on your mana curve, think about when you're most likely to cast these spells. If your deck is mostly focused on white and black, running only a handful of green sources, you're not likely to cast Reputable Merchant for three mana. Instead, you should count that as a four-mana card.",
+    "Omen cards should be treated similarly. If you have a deck focused on accruing as much mana as possible with cards like Encroaching Dragonstorm, you should treat Marang River Regent as a six-mana creature. But if you're just running it for the sweet, sweet card draw, then you should treat it as a four-mana spell.",
+    "Most Tarkir: Dragonstorm Limited decks will be themed around one of the five clans, each of which is centered on three colors. Each of those three-color combinations has its own strategy, known as a draft archetype. Additionally, each two-color pair shared by the clans has its own draft archetype.",
+    "Here's a brief guide to each of the three-color combinations that are highlighted in the set. This is meant to be a general overview of their themes, teaching you the clan's strategy, some key cards, as well as a few tricks that you can employ in your deck.",
+    "The Abzan take on the greatest foes by strengthening themselves and their allies with +1/+1 counters, either through the endure mechanic or with cards like Armament Dragon. Accelerate toward victory by supercharging your battlefield with Stalwart Successor and other cards with +1/+1 counter effects. If you find yourself without a creature to put counters on, don't forget that you can create Spirit tokens with endure!",
+    "These decks want to cast two spells in a turn, so low-cost spells or effects that provide you with extra mana are at a premium. Narset's Rebuke clears the way while giving you the mana for a second spell, which you can use to buff your Jeskai Brushmaster.",
+    "Cards with renew or harmonize will be leaving your graveyard like a flight of migrating dragons, and the Sultai take advantage of this by providing extra value. First, fill up your graveyard with Cruel Truths, then draw cards turn after turn with Kishla Skimmer, Agent of Kotis, and more. Once you've outvalued your opponents, go for the win with Feral Deathgorger!",
+    "Mobilize provides you with a deluge of creature tokens whenever you attack. Normally, you sacrifice them at the next end step, but you can eek out additional value through cards like Hardened Tactician. Send your tokens toward a great death with their swords in hand as you sacrifice them to Worthy Cost and drain your opponents with Venerated Stormsinger.",
+    "Go big or go home with the Temur as you cast spells from your graveyard through the power of your massive creatures. Harmonize synergizes nicely with the Jeskai's flurry cards and the Sultai's leaves-the-graveyard effects. Cheap, high-power creatures like Sunset Strikemaster can fuel powerful spells like Mammoth Bellow, making for a hard-hitting deck.",
+    "If you're looking for an extra challenge in Tarkir: Dragonstorm Limited, try building a Dragon typal deck. There's a cycle of Dragonstorms that let you replay them after a Dragon you control enters, giving you extra value from Tarkir's mightiest denizens.",
+    "Tarkir: Dragonstorm offers an intense and engaging Limited format where players harness all three colors of their clans. To help you play all those colors, we've included several cards—two-color lands, three-color lands, and mana rocks (mana-generating artifacts)—that provide an invaluable resource in Tarkir: Dragonstorm Limited: letting you actually play all your cool cards!",
+    "You've learned the secrets of Tarkir: Dragonstorm Limited, now prepare to take on your local game store's community at the set's Prerelease events, running from April 4–10! We're excited to see all the unique decks you build during this upcoming Prerelease weekend. Hop onto the back of a dragon (or public transport) and head down to your local game store's Prerelease!",
+    "Brave the storm and join up with one of the plane's clans when Tarkir: Dragonstorm releases worldwide on April 11, 2025! You can preorder Tarkir: Dragonstorm products now at your local game store, online retailers like Amazon, and elsewhere Magic products are sold."
+  ],
+  "overview_images": [
+    {
+      "url": "https://media.wizards.com/2025/images/daily/en_NRKDiesx5U.jpg",
+      "path": "set-acquisition-output/wizards/overview-16.jpg",
+      "bytes": 518333,
+      "sha256": "7cf27eb646e3727b7f622961da626bc1302e280d26cc488caa4c978fef8a1190",
+      "alt": "Tarkir: Dragonstorm Draft Archetypes"
+    }
+  ],
+  "review_status": "source_evidence_only_not_reviewed"
+}
