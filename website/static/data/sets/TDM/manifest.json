@@ -2,12 +2,12 @@
   "schema_version": 1,
   "set_code": "TDM",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T02:40:27.415404+00:00",
+  "generated_at": "2026-11-24T12:49:49.827790+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/tdm-cards.json",
       "bytes": 1847647,
-      "sha256": "525cb0768ddd17b563f9d473d8031daaf81b0b2b30f1998b56c51e31091b2b4a",
+      "sha256": "8e564760f21b1fd6b6e1b6638d605bbd3f48c7b1f1ffa549d4f4154bec135d56",
       "records": 276
     },
     {
@@ -25,7 +25,7 @@
     {
       "path": "set-acquisition-output/wizards/guide-evidence.json",
       "bytes": 13839,
-      "sha256": "b1567d8ef2ef4cb45c4ceb60f9f7b4219b06248be8ec9383b5cd8ab72225b3e1"
+      "sha256": "feb279fa4a94e85ea9cf55162ac07daf7b88e0f9421371c756051fae8609fd0b"
     }
   ],
   "status": {

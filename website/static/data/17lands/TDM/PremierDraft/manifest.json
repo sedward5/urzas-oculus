@@ -2,7 +2,7 @@
   "schema_version": 1,
   "set_code": "TDM",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T02:40:27.415404+00:00",
+  "generated_at": "2026-11-24T12:49:49.827790+00:00",
   "archives": {},
   "probes": {
     "draft": "inaccessible_or_missing",
