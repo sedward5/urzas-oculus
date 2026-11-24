@@ -28,6 +28,50 @@ class CatalogTests(unittest.TestCase):
         with self.assertRaises(ValueError): set_catalog.parse_lands(html)
     def test_empty_listing_fails_closed(self):
         with self.assertRaises(ValueError): set_catalog.parse_lands("<html>maintenance</html>")
+
+    def test_acquire_uses_catalog_urls_and_records_missing_replay(self):
+        from tempfile import TemporaryDirectory
+        import json
+        cards={"data":[{"set_name":"The Hobbit","name":"Test Card"}]}
+        html="""<table><tr><td>HOB</td><td>PremierDraft</td><td>2026-08-30</td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz">draft</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.HOB.PremierDraft.csv.gz">game</a></td></tr></table>"""
+        def fake_fetch(url,timeout=90):
+            if url.startswith(set_catalog.CARDS_API): return json.dumps(cards).encode()
+            if url==set_catalog.LANDS: return html.encode()
+            raise AssertionError(url)
+        downloaded=[]
+        def fake_download(url,path):
+            downloaded.append(url)
+            return {"url":url,"path":str(path),"bytes":12,"sha256":"abc","records_including_header":3,"gzip_valid":True}
+        with TemporaryDirectory() as directory:
+            with patch.object(set_catalog,"fetch",side_effect=fake_fetch), \
+                 patch.object(set_catalog,"download_archive",side_effect=fake_download):
+                result=set_catalog.acquire("HOB","PremierDraft","",Path(directory))
+            self.assertEqual(set(downloaded),{
+                "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz",
+                "https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.HOB.PremierDraft.csv.gz"})
+            self.assertEqual(result["17lands"]["catalog_last_updated"],"2026-08-30")
+            self.assertEqual(result["17lands"]["probes"]["replay"],"not_listed")
+            self.assertEqual(result["status"]["17lands"],"acquired")
+
+    def test_download_archive_validates_gzip_and_counts_records(self):
+        import gzip
+        from tempfile import TemporaryDirectory
+        from io import BytesIO
+        from unittest.mock import MagicMock
+        payload=BytesIO()
+        with gzip.GzipFile(fileobj=payload,mode="wb") as archive:
+            archive.write(b"header\\nrow1\\nrow2\\n")
+        response=MagicMock()
+        response.read=MagicMock(side_effect=[payload.getvalue(),b""])
+        response.__enter__.return_value=response
+        with TemporaryDirectory() as directory:
+            with patch.object(set_catalog,"urlopen",return_value=response):
+                result=set_catalog.download_archive("https://example.test/data.csv.gz",Path(directory)/"data.csv.gz")
+            self.assertTrue(result["gzip_valid"])
+            self.assertEqual(result["records_including_header"],3)
+
     def test_archive_url_uses_expected_public_key(self):
         self.assertEqual(
             set_catalog.archive_url("TRK","PremierDraft","draft"),
