@@ -84,6 +84,10 @@ jobs:
             echo "Restricted 17Lands API snapshots remain in the public tree."
             exit 1
           fi
+          if find website/static/data/17lands -type f -name '*.csv.gz' | grep -q .; then
+            echo "Raw 17Lands archives must remain ephemeral CI inputs, not published assets."
+            exit 1
+          fi
       - name: Stage Scryfall and Wizards source evidence
         env:
           SET_CODE: ${{ inputs.set_code || 'TRK' }}
