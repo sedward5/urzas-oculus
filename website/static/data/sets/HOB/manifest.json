@@ -2,12 +2,12 @@
   "schema_version": 1,
   "set_code": "HOB",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T17:39:40.275740+00:00",
+  "generated_at": "2026-11-24T18:33:33.462944+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/hob-cards.json",
       "bytes": 1292177,
-      "sha256": "19df8e853aea88f66fb68c966b5627a859404803a8a12d086255c84fb4349dcb",
+      "sha256": "401a6de6260e3fe12d63d2dfdd7d719e8b03ce9f2d5659f074ee73c6b31d7a03",
       "records": 193
     },
     {
@@ -19,13 +19,13 @@
     },
     {
       "path": "set-acquisition-output/wizards/guide.html",
-      "bytes": 228841,
-      "sha256": "60fd6e7b6f978c66e6127e683544bb9a0d049b79e8d8aae3b98729b7781a1a73"
+      "bytes": 228834,
+      "sha256": "170d0f55670a766d2d64331139787e2e88cd0bb265b9331567f3c386b1c47414"
     },
     {
       "path": "set-acquisition-output/wizards/guide-evidence.json",
       "bytes": 12513,
-      "sha256": "a55e00d4dda98c9726de2370da7045fab02e56b7c519eb8f2a60de31c9e107f6"
+      "sha256": "ab1fb5254a505fed5c26c3d92d8a9a8e433e2632aa0e3ba76113450f75e82b46"
     }
   ],
   "status": {
@@ -45,7 +45,7 @@
     "catalog_last_updated": null,
     "catalog_error": {
       "type": "ValueError",
-      "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The page markup may have changed or returned a challenge page. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"ico'"
+      "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The response may be an access-denied page or changed markup. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/favicon-32x32.png\" /> <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/favicon-16x16.png\" /> <link rel=\"manifest\" href=\"/static/site.webmanifest\" /> <!-- style sheets --> <link'"
     },
     "archives": {},
     "probes": {

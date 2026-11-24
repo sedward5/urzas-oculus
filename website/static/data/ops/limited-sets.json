@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-24T17:46:36.851529+00:00",
+  "generated_at": "2026-11-24T18:33:37.050208+00:00",
   "sets": [
     {
       "code": "MDD",
@@ -204,7 +204,7 @@
       "local_reviewed_cards": "present",
       "acquisition": {
         "status": "acquired",
-        "generated_at": "2026-11-24T17:39:40.275740+00:00",
+        "generated_at": "2026-11-24T18:33:33.462944+00:00",
         "manifest_present": true,
         "card_file_present": true,
         "card_record_count": 193,
@@ -6853,11 +6853,22 @@
     {
       "workflow": "acquire-set-data-bundle.yml",
       "name": "Acquire Set Data (Recommended)",
-      "run_number": 19,
+      "run_number": 20,
       "status": "in_progress",
       "conclusion": null,
+      "created_at": "2026-11-24T18:33:23Z",
+      "updated_at": "2026-11-24T18:33:29Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45460789213",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 19,
+      "status": "completed",
+      "conclusion": "success",
       "created_at": "2026-11-24T17:46:24Z",
-      "updated_at": "2026-11-24T17:46:29Z",
+      "updated_at": "2026-11-24T17:46:48Z",
       "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45452248060",
       "event": "workflow_dispatch"
     },
@@ -6892,17 +6903,6 @@
       "created_at": "2026-11-24T17:39:51Z",
       "updated_at": "2026-11-24T17:40:09Z",
       "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45451045646",
-      "event": "workflow_dispatch"
-    },
-    {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 15,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-24T17:39:33Z",
-      "updated_at": "2026-11-24T17:39:51Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45450991147",
       "event": "workflow_dispatch"
     },
     {
