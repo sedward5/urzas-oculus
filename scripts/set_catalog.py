@@ -198,29 +198,6 @@ def save(url,path):
     data=fetch(url,timeout=240); path.parent.mkdir(parents=True,exist_ok=True); path.write_bytes(data)
     return {"url":url,"path":str(path),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}
 
-def archive_url(code,event,kind):
-    """Build the public S3 object key for one set/event archive."""
-    if kind not in {"draft","game","replay"}: raise ValueError(f"Unsupported archive kind: {kind}")
-    return (f"https://17lands-public.s3.amazonaws.com/analysis_data/{kind}_data/"
-            f"{kind}_data_public.{code}.{event}.csv.gz")
-
-def probe_archive(url):
-    """Check one known S3 object without scraping the 17Lands HTML listing."""
-    req=Request(url,headers={"User-Agent":UA},method="HEAD")
-    try:
-        with urlopen(req,timeout=30) as response:
-            return response.status == 200
-    except Exception as exc:
-        status=getattr(exc,"code",None)
-        if status == 404: return False
-        if status == 403:
-            # S3 may return 403 for a missing key when bucket listing is private.
-            # Treat it as unavailable for acquisition, but preserve the ambiguity.
-            return None
-        raise RuntimeError(f"Could not check 17Lands archive {url}: {exc}") from exc
-
-
-
 def acquire(code,event,guide,out):
     code=code.upper()
     if not re.fullmatch(r"[A-Z0-9]{2,6}",code): raise ValueError("Invalid set code")
