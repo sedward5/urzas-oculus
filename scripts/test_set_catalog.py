@@ -85,7 +85,7 @@ class CatalogTests(unittest.TestCase):
         from unittest.mock import MagicMock
         payload=BytesIO()
         with gzip.GzipFile(fileobj=payload,mode="wb") as archive:
-            archive.write(b"header\\nrow1\\nrow2\\n")
+            archive.write(b"header\nrow1\nrow2\n")
         response=MagicMock()
         response.read=MagicMock(side_effect=[payload.getvalue(),b""])
         response.__enter__.return_value=response
