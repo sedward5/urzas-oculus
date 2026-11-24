@@ -180,8 +180,9 @@ def discover(root):
           "card_count":s.get("card_count"),"age_days":age,"17lands":events,
           "17lands_candidates":candidates,
           "17lands_status":("available" if events or any(v.get("status")=="available" for v in candidates.values()) else
-              ("unavailable" if lands_status["status"]=="unavailable" and not candidates else
-               ("awaiting_expected_publication" if age<35 else "not_listed"))),
+              ("url_not_available" if candidates and all(v.get("status")=="url_not_available" for v in candidates.values()) else
+               ("unavailable" if lands_status["status"]=="unavailable" and not any(v.get("status")=="available" for v in candidates.values()) else
+                ("awaiting_expected_publication" if age<35 else "not_listed")))),
           "local_archetypes":"present" if "archetypes" in layers else "missing",
           "local_reviewed_cards":"present" if "cards" in layers else "missing"})
     return {"schema_version":1,"generated_at":now.isoformat(),"sets":records,
@@ -299,7 +300,7 @@ def acquire(code,event,guide,out):
         catalog_error={"type":type(exc).__name__,"message":clean(str(exc))[:800]}
         probes={kind:"catalog_unavailable" for kind in ("draft","game","replay")}
     candidate_urls={}
-    for kind in ("draft","game","replay"):
+    for kind in ("draft","game"):
         if kind in archives:
             continue
         candidate=candidate_archive_url(kind,code,event)
