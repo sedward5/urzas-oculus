@@ -1,6 +1,5 @@
 import sys, unittest
 from unittest.mock import patch, MagicMock
-from urllib.error import HTTPError
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 import set_catalog
@@ -80,7 +79,7 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(result["17lands"]["probes"]["replay"],"not_listed")
             self.assertEqual(result["status"]["17lands"],"acquired")
 
-    def test_download_archive_validates_gzip_and_counts_records(self):
+    def test_download_archive_validates_gzip_and_counts_physical_lines(self):
         import gzip
         from tempfile import TemporaryDirectory
         from io import BytesIO
