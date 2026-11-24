@@ -1,6 +1,6 @@
 {
   "set_code": "ECL",
-  "retrieved_at": "2026-11-24T02:40:14.554581+00:00",
+  "retrieved_at": "2026-11-24T17:43:33.899391+00:00",
   "source": "https://api.scryfall.com/cards/search",
   "cards": [
     {
@@ -114,14 +114,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4291,
+      "edhrec_rank": 4289,
       "penny_rank": 4115,
       "prices": {
-        "usd": "0.30",
-        "usd_foil": "0.36",
+        "usd": "0.29",
+        "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.17",
+        "eur": "0.09",
+        "eur_foil": "0.18",
         "tix": "0.03"
       },
       "related_uris": {
@@ -246,13 +246,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14047,
+      "edhrec_rank": 14040,
       "prices": {
-        "usd": "0.22",
+        "usd": "0.20",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.13",
-        "eur_foil": "0.12",
+        "eur": "0.12",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -380,13 +380,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6196,
+      "edhrec_rank": 6189,
       "penny_rank": 7896,
       "prices": {
-        "usd": "0.36",
+        "usd": "0.34",
         "usd_foil": "0.45",
         "usd_etched": null,
-        "eur": "0.41",
+        "eur": "0.40",
         "eur_foil": "0.77",
         "tix": "0.02"
       },
@@ -531,13 +531,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10108,
+      "edhrec_rank": 10098,
       "penny_rank": 372,
       "prices": {
-        "usd": "1.98",
+        "usd": "2.15",
         "usd_foil": "1.96",
         "usd_etched": null,
-        "eur": "1.70",
+        "eur": "1.88",
         "eur_foil": "1.68",
         "tix": "0.68"
       },
@@ -665,7 +665,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23085,
+      "edhrec_rank": 23076,
       "prices": {
         "usd": "0.04",
         "usd_foil": "0.18",
@@ -798,12 +798,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14919,
+      "edhrec_rank": 14918,
       "prices": {
         "usd": "0.22",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.11",
         "eur_foil": "0.22",
         "tix": "0.03"
       },
@@ -998,13 +998,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5300,
+      "edhrec_rank": 5287,
       "penny_rank": 4428,
       "prices": {
-        "usd": "0.36",
-        "usd_foil": "0.76",
+        "usd": "0.35",
+        "usd_foil": "0.75",
         "usd_etched": null,
-        "eur": "0.59",
+        "eur": "0.56",
         "eur_foil": "0.67",
         "tix": "0.02"
       },
@@ -1137,7 +1137,7 @@
         "usd": "0.11",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.15",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -1268,14 +1268,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18564,
+      "edhrec_rank": 18571,
       "penny_rank": 9565,
       "prices": {
         "usd": "0.18",
-        "usd_foil": "0.21",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.14",
-        "eur_foil": "0.18",
+        "eur_foil": "0.17",
         "tix": "0.02"
       },
       "related_uris": {
@@ -1421,12 +1421,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16474,
+      "edhrec_rank": 16472,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.18",
         "tix": "0.03"
       },
@@ -1575,10 +1575,10 @@
       "edhrec_rank": 2480,
       "penny_rank": 3562,
       "prices": {
-        "usd": "0.30",
+        "usd": "0.29",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.24",
         "tix": "0.03"
       },
@@ -1707,13 +1707,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7711,
+      "edhrec_rank": 7702,
       "prices": {
-        "usd": "0.90",
-        "usd_foil": "0.75",
+        "usd": "0.94",
+        "usd_foil": "0.76",
         "usd_etched": null,
-        "eur": "1.32",
-        "eur_foil": "1.67",
+        "eur": "1.33",
+        "eur_foil": "1.72",
         "tix": "0.71"
       },
       "related_uris": {
@@ -1888,12 +1888,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5688,
+      "edhrec_rank": 5683,
       "prices": {
-        "usd": "2.59",
-        "usd_foil": "2.79",
+        "usd": "2.41",
+        "usd_foil": "2.85",
         "usd_etched": null,
-        "eur": "3.58",
+        "eur": "3.57",
         "eur_foil": "4.64",
         "tix": "0.73"
       },
@@ -2021,13 +2021,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22540,
+      "edhrec_rank": 22534,
       "penny_rank": 6204,
       "prices": {
         "usd": "0.18",
-        "usd_foil": "0.23",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.16",
         "tix": "0.03"
       },
@@ -2159,13 +2159,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17565,
+      "edhrec_rank": 17554,
       "penny_rank": 8130,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.18",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.12",
         "tix": "0.03"
       },
@@ -2296,12 +2296,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10371,
+      "edhrec_rank": 10356,
       "prices": {
         "usd": "0.27",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.21",
         "eur_foil": "0.21",
         "tix": "0.03"
       },
@@ -2429,7 +2429,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20715,
+      "edhrec_rank": 20723,
       "prices": {
         "usd": "0.06",
         "usd_foil": "0.17",
@@ -2580,7 +2580,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18714,
+      "edhrec_rank": 18715,
       "penny_rank": 5389,
       "prices": {
         "usd": "0.13",
@@ -2712,13 +2712,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14860,
+      "edhrec_rank": 14855,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.17",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.21",
+        "eur": "0.07",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -2865,13 +2865,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6401,
+      "edhrec_rank": 6395,
       "penny_rank": 6821,
       "prices": {
         "usd": "0.32",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.21",
         "eur_foil": "0.42",
         "tix": "0.02"
       },
@@ -3000,7 +3000,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19891,
+      "edhrec_rank": 19894,
       "penny_rank": 4122,
       "prices": {
         "usd": "0.11",
@@ -3137,13 +3137,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7065,
+      "edhrec_rank": 7059,
       "penny_rank": 2672,
       "prices": {
         "usd": "0.29",
         "usd_foil": "0.42",
         "usd_etched": null,
-        "eur": "0.58",
+        "eur": "0.61",
         "eur_foil": "0.76",
         "tix": "0.02"
       },
@@ -3290,12 +3290,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23744,
+      "edhrec_rank": 23741,
       "prices": {
         "usd": "0.08",
-        "usd_foil": "0.23",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.08",
         "tix": "0.03"
       },
@@ -3424,12 +3424,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18027,
+      "edhrec_rank": 18007,
       "prices": {
         "usd": "0.09",
         "usd_foil": "0.16",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.08",
         "eur_foil": "0.10",
         "tix": "0.03"
       },
@@ -3557,7 +3557,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18731,
+      "edhrec_rank": 18732,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.34",
@@ -3690,12 +3690,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16079,
+      "edhrec_rank": 16078,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.10",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -3821,13 +3821,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6153,
+      "edhrec_rank": 6149,
       "penny_rank": 2818,
       "prices": {
-        "usd": "2.91",
-        "usd_foil": "2.50",
+        "usd": "2.89",
+        "usd_foil": "2.53",
         "usd_etched": null,
-        "eur": "2.37",
+        "eur": "2.44",
         "eur_foil": "2.42",
         "tix": "0.70"
       },
@@ -3971,14 +3971,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4900,
+      "edhrec_rank": 4893,
       "penny_rank": 3165,
       "prices": {
-        "usd": "0.34",
-        "usd_foil": "0.39",
+        "usd": "0.36",
+        "usd_foil": "0.40",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.31",
+        "eur": "0.18",
+        "eur_foil": "0.30",
         "tix": "0.03"
       },
       "related_uris": {
@@ -4105,12 +4105,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16701,
+      "edhrec_rank": 16700,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.13",
         "eur_foil": "0.20",
         "tix": "0.03"
       },
@@ -4237,13 +4237,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17077,
+      "edhrec_rank": 17080,
       "penny_rank": 8157,
       "prices": {
-        "usd": "0.29",
-        "usd_foil": "0.26",
+        "usd": "0.31",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.14",
         "eur_foil": "0.21",
         "tix": "0.04"
       },
@@ -4371,7 +4371,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22667,
+      "edhrec_rank": 22668,
       "prices": {
         "usd": "0.06",
         "usd_foil": "0.12",
@@ -4509,13 +4509,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11013,
+      "edhrec_rank": 11000,
       "penny_rank": 4957,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.32",
+        "usd": "0.25",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.39",
+        "eur": "0.38",
         "eur_foil": "0.46",
         "tix": "0.02"
       },
@@ -4641,7 +4641,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18867,
+      "edhrec_rank": 18864,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.22",
@@ -4777,13 +4777,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24429,
+      "edhrec_rank": 24444,
       "prices": {
         "usd": "0.07",
-        "usd_foil": "0.16",
+        "usd_foil": "0.14",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.04",
+        "eur_foil": "0.03",
         "tix": "0.03"
       },
       "related_uris": {
@@ -4910,12 +4910,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16382,
+      "edhrec_rank": 16372,
       "prices": {
         "usd": "0.19",
-        "usd_foil": "0.26",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.13",
         "eur_foil": "0.17",
         "tix": "0.02"
       },
@@ -5047,13 +5047,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17070,
+      "edhrec_rank": 17068,
       "penny_rank": 7719,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.17",
         "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -5184,13 +5184,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21535,
+      "edhrec_rank": 21542,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.08",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5317,13 +5317,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19171,
+      "edhrec_rank": 19168,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.16",
+        "eur": "0.08",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5450,7 +5450,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21736,
+      "edhrec_rank": 21737,
       "prices": {
         "usd": "0.06",
         "usd_foil": "0.14",
@@ -5585,7 +5585,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23765,
+      "edhrec_rank": 23764,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.17",
@@ -5718,7 +5718,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17674,
+      "edhrec_rank": 17664,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.26",
@@ -5851,13 +5851,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20395,
+      "edhrec_rank": 20383,
       "penny_rank": 1884,
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.32",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.18",
         "tix": "0.03"
       },
@@ -5985,12 +5985,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6256,
+      "edhrec_rank": 6240,
       "prices": {
-        "usd": "0.32",
+        "usd": "0.31",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.28",
+        "eur": "0.27",
         "eur_foil": "0.46",
         "tix": "0.02"
       },
@@ -6121,12 +6121,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13665,
+      "edhrec_rank": 13655,
       "prices": {
-        "usd": "0.28",
+        "usd": "0.26",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.03",
+        "eur": "0.02",
         "eur_foil": "0.06",
         "tix": "0.03"
       },
@@ -6257,14 +6257,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13989,
+      "edhrec_rank": 13981,
       "penny_rank": 12759,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.05",
+        "eur_foil": "0.04",
         "tix": "0.03"
       },
       "related_uris": {
@@ -6393,12 +6393,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15703,
+      "edhrec_rank": 15695,
       "prices": {
         "usd": "0.29",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.16",
         "eur_foil": "0.14",
         "tix": "0.02"
       },
@@ -6529,13 +6529,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13112,
+      "edhrec_rank": 13111,
       "penny_rank": 4068,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.23",
+        "eur": "0.21",
         "eur_foil": "0.29",
         "tix": "0.02"
       },
@@ -6665,13 +6665,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8160,
+      "edhrec_rank": 8153,
       "penny_rank": 2485,
       "prices": {
-        "usd": "0.35",
-        "usd_foil": "0.27",
+        "usd": "0.36",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.36",
+        "eur": "0.34",
         "eur_foil": "0.39",
         "tix": "0.02"
       },
@@ -6802,7 +6802,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12408,
+      "edhrec_rank": 12399,
       "penny_rank": 3772,
       "prices": {
         "usd": "0.20",
@@ -6939,13 +6939,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12882,
+      "edhrec_rank": 12868,
       "penny_rank": 453,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.15",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.10",
         "eur_foil": "0.10",
         "tix": "0.03"
       },
@@ -7077,13 +7077,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5491,
+      "edhrec_rank": 5488,
       "penny_rank": 2014,
       "prices": {
-        "usd": "0.32",
+        "usd": "0.33",
         "usd_foil": "0.51",
         "usd_etched": null,
-        "eur": "0.58",
+        "eur": "0.67",
         "eur_foil": "0.64",
         "tix": "0.02"
       },
@@ -7228,14 +7228,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6806,
+      "edhrec_rank": 6799,
       "penny_rank": 6053,
       "prices": {
-        "usd": "0.92",
-        "usd_foil": "0.96",
+        "usd": "0.94",
+        "usd_foil": "1.11",
         "usd_etched": null,
-        "eur": "1.19",
-        "eur_foil": "1.86",
+        "eur": "1.17",
+        "eur_foil": "2.02",
         "tix": "0.64"
       },
       "related_uris": {
@@ -7364,7 +7364,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19946,
+      "edhrec_rank": 19949,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.25",
@@ -7498,13 +7498,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2401,
+      "edhrec_rank": 2397,
       "penny_rank": 10941,
       "prices": {
-        "usd": "0.96",
-        "usd_foil": "1.33",
+        "usd": "0.91",
+        "usd_foil": "1.35",
         "usd_etched": null,
-        "eur": "0.67",
+        "eur": "0.70",
         "eur_foil": "0.67",
         "tix": "0.02"
       },
@@ -7767,7 +7767,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 25408,
+      "edhrec_rank": 25402,
       "prices": {
         "usd": "0.04",
         "usd_foil": "0.10",
@@ -7900,12 +7900,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14470,
+      "edhrec_rank": 14461,
       "prices": {
-        "usd": "0.43",
+        "usd": "0.44",
         "usd_foil": "0.81",
         "usd_etched": null,
-        "eur": "0.85",
+        "eur": "0.81",
         "eur_foil": "1.53",
         "tix": "0.84"
       },
@@ -8036,12 +8036,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19329,
+      "edhrec_rank": 19323,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.13",
         "eur_foil": "0.15",
         "tix": "0.03"
       },
@@ -8168,12 +8168,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6100,
+      "edhrec_rank": 6092,
       "prices": {
-        "usd": "1.90",
+        "usd": "1.96",
         "usd_foil": "2.15",
         "usd_etched": null,
-        "eur": "2.46",
+        "eur": "2.38",
         "eur_foil": "3.61",
         "tix": "0.81"
       },
@@ -8304,10 +8304,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10513,
+      "edhrec_rank": 10503,
       "penny_rank": 8153,
       "prices": {
-        "usd": "0.21",
+        "usd": "0.22",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.09",
@@ -8506,13 +8506,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12744,
+      "edhrec_rank": 12741,
       "prices": {
         "usd": "0.73",
         "usd_foil": "0.97",
         "usd_etched": null,
         "eur": "1.04",
-        "eur_foil": "1.42",
+        "eur_foil": "1.39",
         "tix": "0.94"
       },
       "related_uris": {
@@ -8641,14 +8641,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4818,
+      "edhrec_rank": 4804,
       "penny_rank": 3439,
       "prices": {
-        "usd": "0.32",
+        "usd": "0.31",
         "usd_foil": "0.44",
         "usd_etched": null,
-        "eur": "0.25",
-        "eur_foil": "0.49",
+        "eur": "0.24",
+        "eur_foil": "0.46",
         "tix": "0.03"
       },
       "related_uris": {
@@ -8793,12 +8793,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16379,
+      "edhrec_rank": 16374,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.24",
         "tix": "0.03"
       },
@@ -8925,12 +8925,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21424,
+      "edhrec_rank": 21415,
       "prices": {
-        "usd": "0.09",
+        "usd": "0.07",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -9056,10 +9056,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10408,
+      "edhrec_rank": 10398,
       "prices": {
-        "usd": "0.32",
-        "usd_foil": "0.37",
+        "usd": "0.33",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.16",
         "eur_foil": "0.23",
@@ -9189,14 +9189,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18904,
+      "edhrec_rank": 18886,
       "penny_rank": 3012,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.17",
+        "eur": "0.06",
+        "eur_foil": "0.16",
         "tix": "0.03"
       },
       "related_uris": {
@@ -9324,11 +9324,11 @@
       "edhrec_rank": 1678,
       "penny_rank": 15308,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.18",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.08",
-        "eur_foil": "0.18",
+        "eur_foil": "0.17",
         "tix": "0.03"
       },
       "related_uris": {
@@ -9458,7 +9458,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10434,
+      "edhrec_rank": 10425,
       "prices": {
         "usd": "0.27",
         "usd_foil": "0.35",
@@ -9610,13 +9610,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16002,
+      "edhrec_rank": 15992,
       "penny_rank": 1957,
       "prices": {
         "usd": "0.25",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.18",
+        "eur": "0.15",
         "eur_foil": "0.18",
         "tix": "0.03"
       },
@@ -9744,13 +9744,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18279,
+      "edhrec_rank": 18283,
       "prices": {
         "usd": "0.18",
-        "usd_foil": "0.25",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.04",
+        "eur_foil": "0.03",
         "tix": "0.03"
       },
       "related_uris": {
@@ -9875,9 +9875,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8295,
+      "edhrec_rank": 8296,
       "prices": {
-        "usd": "0.50",
+        "usd": "0.52",
         "usd_foil": "0.65",
         "usd_etched": null,
         "eur": "0.66",
@@ -10014,7 +10014,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22676,
+      "edhrec_rank": 22662,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.10",
@@ -10147,7 +10147,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21609,
+      "edhrec_rank": 21578,
       "prices": {
         "usd": "0.07",
         "usd_foil": "0.15",
@@ -10282,13 +10282,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5805,
+      "edhrec_rank": 5800,
       "penny_rank": 3758,
       "prices": {
-        "usd": "1.62",
+        "usd": "1.56",
         "usd_foil": "1.96",
         "usd_etched": null,
-        "eur": "2.43",
+        "eur": "2.25",
         "eur_foil": "2.44",
         "tix": "0.06"
       },
@@ -10414,7 +10414,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17735,
+      "edhrec_rank": 17731,
       "penny_rank": 7611,
       "prices": {
         "usd": "0.15",
@@ -10594,13 +10594,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11231,
+      "edhrec_rank": 11223,
       "penny_rank": 1494,
       "prices": {
-        "usd": "0.30",
+        "usd": "0.29",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.25",
+        "eur": "0.28",
         "eur_foil": "0.39",
         "tix": "0.02"
       },
@@ -10728,14 +10728,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11350,
+      "edhrec_rank": 11337,
       "penny_rank": 8173,
       "prices": {
-        "usd": "0.21",
+        "usd": "0.22",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.25",
+        "eur": "0.09",
+        "eur_foil": "0.23",
         "tix": "0.03"
       },
       "related_uris": {
@@ -10862,7 +10862,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12836,
+      "edhrec_rank": 12833,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.21",
@@ -10993,13 +10993,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9661,
+      "edhrec_rank": 9653,
       "penny_rank": 1467,
       "prices": {
         "usd": "0.31",
-        "usd_foil": "0.32",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.12",
         "eur_foil": "0.22",
         "tix": "0.03"
       },
@@ -11127,7 +11127,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 10437,
+      "edhrec_rank": 10433,
       "penny_rank": 8179,
       "preview": {
         "source": "Wizards of the Coast",
@@ -11135,10 +11135,10 @@
         "previewed_at": "2025-12-11"
       },
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.34",
+        "usd": "0.22",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.15",
         "tix": "0.03"
       },
@@ -11268,13 +11268,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12532,
+      "edhrec_rank": 12519,
       "penny_rank": 8180,
       "prices": {
         "usd": "0.24",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.12",
         "eur_foil": "0.24",
         "tix": "0.03"
       },
@@ -11402,7 +11402,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23155,
+      "edhrec_rank": 23164,
       "prices": {
         "usd": "0.09",
         "usd_foil": "0.14",
@@ -11552,12 +11552,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18523,
+      "edhrec_rank": 18524,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -11685,13 +11685,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11840,
+      "edhrec_rank": 11836,
       "penny_rank": 3128,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.18",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -11817,14 +11817,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15147,
+      "edhrec_rank": 15139,
       "penny_rank": 1975,
       "prices": {
         "usd": "0.14",
-        "usd_foil": "0.23",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.07",
+        "eur_foil": "0.06",
         "tix": "0.03"
       },
       "related_uris": {
@@ -11951,7 +11951,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16390,
+      "edhrec_rank": 16381,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.23",
@@ -12084,11 +12084,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12713,
+      "edhrec_rank": 12696,
       "penny_rank": 5044,
       "prices": {
         "usd": "0.28",
-        "usd_foil": "0.25",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.11",
         "eur_foil": "0.12",
@@ -12240,18 +12240,18 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1719,
+      "edhrec_rank": 1717,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
         "previewed_at": "2025-09-26"
       },
       "prices": {
-        "usd": "13.66",
-        "usd_foil": "14.28",
+        "usd": "13.32",
+        "usd_foil": "14.23",
         "usd_etched": null,
-        "eur": "17.47",
-        "eur_foil": "19.36",
+        "eur": "17.14",
+        "eur_foil": "18.94",
         "tix": "0.83"
       },
       "related_uris": {
@@ -12376,7 +12376,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8711,
+      "edhrec_rank": 8697,
       "prices": {
         "usd": "0.21",
         "usd_foil": "0.32",
@@ -12511,13 +12511,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16051,
+      "edhrec_rank": 16045,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.11",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -12644,13 +12644,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2287,
+      "edhrec_rank": 2283,
       "penny_rank": 8708,
       "prices": {
-        "usd": "2.68",
-        "usd_foil": "2.69",
+        "usd": "2.59",
+        "usd_foil": "2.73",
         "usd_etched": null,
-        "eur": "2.13",
+        "eur": "2.08",
         "eur_foil": "2.44",
         "tix": "0.02"
       },
@@ -12798,13 +12798,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8544,
+      "edhrec_rank": 8534,
       "penny_rank": 294,
       "prices": {
         "usd": "0.33",
-        "usd_foil": "0.38",
+        "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.16",
         "eur_foil": "0.25",
         "tix": "0.03"
       },
@@ -12937,7 +12937,7 @@
         "usd": "0.08",
         "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.07",
         "tix": "0.03"
       },
@@ -13065,7 +13065,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9881,
+      "edhrec_rank": 9876,
       "penny_rank": 7668,
       "prices": {
         "usd": "0.20",
@@ -13202,7 +13202,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13434,
+      "edhrec_rank": 13427,
       "prices": {
         "usd": "0.25",
         "usd_foil": "0.30",
@@ -13335,13 +13335,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15845,
+      "edhrec_rank": 15844,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.19",
-        "eur_foil": "0.10",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -13466,12 +13466,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 9878,
+      "edhrec_rank": 9870,
       "prices": {
         "usd": "0.29",
         "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.15",
         "eur_foil": "0.26",
         "tix": "0.03"
       },
@@ -13602,10 +13602,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6527,
+      "edhrec_rank": 6525,
       "penny_rank": 1892,
       "prices": {
-        "usd": "0.34",
+        "usd": "0.31",
         "usd_foil": "0.41",
         "usd_etched": null,
         "eur": "0.52",
@@ -13738,9 +13738,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13673,
+      "edhrec_rank": 13659,
       "prices": {
-        "usd": "0.09",
+        "usd": "0.10",
         "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.04",
@@ -13871,7 +13871,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 16721,
+      "edhrec_rank": 16717,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/news/magic-story/lorwyn-eclipsed-episode-7-the-charm-dissolves-apace",
@@ -13881,7 +13881,7 @@
         "usd": "0.16",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.08",
         "tix": "0.03"
       },
@@ -14012,10 +14012,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17613,
+      "edhrec_rank": 17590,
       "prices": {
         "usd": "0.10",
-        "usd_foil": "0.21",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.06",
         "eur_foil": "0.04",
@@ -14146,7 +14146,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11659,
+      "edhrec_rank": 11656,
       "prices": {
         "usd": "0.28",
         "usd_foil": "0.26",
@@ -14279,7 +14279,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21683,
+      "edhrec_rank": 21688,
       "prices": {
         "usd": "0.09",
         "usd_foil": "0.25",
@@ -14414,14 +14414,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2825,
+      "edhrec_rank": 2824,
       "penny_rank": 8138,
       "prices": {
-        "usd": "0.31",
-        "usd_foil": "0.41",
+        "usd": "0.33",
+        "usd_foil": "0.42",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.21",
+        "eur_foil": "0.22",
         "tix": "0.03"
       },
       "related_uris": {
@@ -14614,10 +14614,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8434,
+      "edhrec_rank": 8422,
       "penny_rank": 819,
       "prices": {
-        "usd": "0.33",
+        "usd": "0.32",
         "usd_foil": "0.41",
         "usd_etched": null,
         "eur": "0.48",
@@ -14750,12 +14750,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18976,
+      "edhrec_rank": 18975,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.09",
         "tix": "0.03"
       },
@@ -14884,12 +14884,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15191,
+      "edhrec_rank": 15183,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.03",
+        "eur": "0.04",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -15017,13 +15017,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11841,
+      "edhrec_rank": 11828,
       "penny_rank": 854,
       "prices": {
-        "usd": "0.34",
-        "usd_foil": "0.35",
+        "usd": "0.35",
+        "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.19",
+        "eur": "0.18",
         "eur_foil": "0.29",
         "tix": "0.03"
       },
@@ -15151,7 +15151,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14211,
+      "edhrec_rank": 14204,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.17",
@@ -15286,13 +15286,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7991,
+      "edhrec_rank": 7978,
       "prices": {
-        "usd": "23.90",
+        "usd": "23.81",
         "usd_foil": "26.41",
         "usd_etched": null,
-        "eur": "26.72",
-        "eur_foil": "28.96",
+        "eur": "26.18",
+        "eur_foil": "31.34",
         "tix": "63.10"
       },
       "related_uris": {
@@ -15422,11 +15422,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10497,
+      "edhrec_rank": 10486,
       "penny_rank": 7288,
       "prices": {
-        "usd": "0.31",
-        "usd_foil": "0.39",
+        "usd": "0.32",
+        "usd_foil": "0.40",
         "usd_etched": null,
         "eur": "0.23",
         "eur_foil": "0.29",
@@ -15557,7 +15557,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18317,
+      "edhrec_rank": 18308,
       "penny_rank": 148,
       "prices": {
         "usd": "0.17",
@@ -15691,11 +15691,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8327,
+      "edhrec_rank": 8326,
       "penny_rank": 1671,
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.27",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.13",
         "eur_foil": "0.22",
@@ -15828,12 +15828,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12986,
+      "edhrec_rank": 12971,
       "prices": {
         "usd": "0.24",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.16",
         "tix": "0.03"
       },
@@ -15959,7 +15959,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 18203,
+      "edhrec_rank": 18201,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/news/magic-story/lorwyn-eclipsed-episode-4-fetch-me-that-flower",
@@ -15967,9 +15967,9 @@
       },
       "prices": {
         "usd": "0.12",
-        "usd_foil": "0.28",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.08",
         "eur_foil": "0.14",
         "tix": "0.03"
       },
@@ -16096,14 +16096,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16009,
+      "edhrec_rank": 15999,
       "prices": {
-        "usd": "0.65",
-        "usd_foil": "1.04",
+        "usd": "0.67",
+        "usd_foil": "1.00",
         "usd_etched": null,
-        "eur": "0.80",
+        "eur": "0.76",
         "eur_foil": "1.32",
-        "tix": "0.20"
+        "tix": "0.17"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DRequiting%2BHex",
@@ -16229,13 +16229,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21497,
+      "edhrec_rank": 21492,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.12",
+        "eur": "0.05",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16365,7 +16365,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13522,
+      "edhrec_rank": 13515,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.26",
@@ -16514,12 +16514,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10943,
+      "edhrec_rank": 10941,
       "prices": {
-        "usd": "0.09",
+        "usd": "0.10",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.12",
         "eur_foil": "0.09",
         "tix": "0.03"
       },
@@ -16650,13 +16650,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9598,
+      "edhrec_rank": 9592,
       "prices": {
-        "usd": "0.14",
+        "usd": "0.13",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.14",
-        "eur_foil": "0.14",
+        "eur": "0.13",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16783,13 +16783,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16503,
+      "edhrec_rank": 16504,
       "penny_rank": 2544,
       "prices": {
         "usd": "0.24",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.20",
+        "eur": "0.17",
         "eur_foil": "0.32",
         "tix": "0.02"
       },
@@ -16937,14 +16937,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2647,
+      "edhrec_rank": 2638,
       "penny_rank": 2420,
       "prices": {
-        "usd": "2.90",
-        "usd_foil": "3.61",
+        "usd": "2.81",
+        "usd_foil": "3.47",
         "usd_etched": null,
-        "eur": "3.12",
-        "eur_foil": "3.93",
+        "eur": "3.21",
+        "eur_foil": "4.02",
         "tix": "0.02"
       },
       "related_uris": {
@@ -17069,12 +17069,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8077,
+      "edhrec_rank": 8071,
       "prices": {
-        "usd": "0.25",
+        "usd": "0.26",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.19",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -17255,11 +17255,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4989,
+      "edhrec_rank": 4978,
       "penny_rank": 906,
       "prices": {
-        "usd": "0.71",
-        "usd_foil": "1.01",
+        "usd": "0.73",
+        "usd_foil": "0.95",
         "usd_etched": null,
         "eur": "1.15",
         "eur_foil": "1.33",
@@ -17391,7 +17391,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16362,
+      "edhrec_rank": 16346,
       "penny_rank": 3431,
       "prices": {
         "usd": "0.14",
@@ -17525,7 +17525,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12307,
+      "edhrec_rank": 12299,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.32",
@@ -17656,7 +17656,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20516,
+      "edhrec_rank": 20508,
       "penny_rank": 12764,
       "prices": {
         "usd": "0.16",
@@ -17790,7 +17790,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21039,
+      "edhrec_rank": 21036,
       "penny_rank": 8710,
       "prices": {
         "usd": "0.10",
@@ -17924,14 +17924,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8660,
+      "edhrec_rank": 8656,
       "penny_rank": 8120,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.14",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -18060,14 +18060,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6671,
+      "edhrec_rank": 6666,
       "penny_rank": 8984,
       "prices": {
-        "usd": "0.37",
+        "usd": "0.35",
         "usd_foil": "0.50",
         "usd_etched": null,
         "eur": "0.36",
-        "eur_foil": "0.67",
+        "eur_foil": "0.62",
         "tix": "0.02"
       },
       "related_uris": {
@@ -18194,9 +18194,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16911,
+      "edhrec_rank": 16905,
       "prices": {
-        "usd": "0.10",
+        "usd": "0.12",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.05",
@@ -18331,12 +18331,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2868,
+      "edhrec_rank": 2864,
       "prices": {
         "usd": "1.29",
         "usd_foil": "2.16",
         "usd_etched": null,
-        "eur": "1.15",
+        "eur": "1.13",
         "eur_foil": "1.23",
         "tix": "0.02"
       },
@@ -18482,13 +18482,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14447,
+      "edhrec_rank": 14449,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.06",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -18613,12 +18613,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14676,
+      "edhrec_rank": 14667,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.11",
         "eur_foil": "0.26",
         "tix": "0.02"
       },
@@ -18748,7 +18748,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14288,
+      "edhrec_rank": 14276,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.23",
@@ -18883,7 +18883,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21363,
+      "edhrec_rank": 21369,
       "penny_rank": 8131,
       "prices": {
         "usd": "0.11",
@@ -19015,7 +19015,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18145,
+      "edhrec_rank": 18149,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.13",
@@ -19306,13 +19306,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5227,
+      "edhrec_rank": 5220,
       "penny_rank": 3771,
       "prices": {
         "usd": "0.22",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.11",
         "eur_foil": "0.38",
         "tix": "0.03"
       },
@@ -19468,12 +19468,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19109,
+      "edhrec_rank": 19117,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.06",
         "eur_foil": "0.07",
         "tix": "0.03"
       },
@@ -19599,13 +19599,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12174,
+      "edhrec_rank": 12170,
       "penny_rank": 12859,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.07",
         "eur_foil": "0.21",
         "tix": "0.03"
       },
@@ -19749,13 +19749,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14927,
+      "edhrec_rank": 14924,
       "penny_rank": 15911,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -19883,12 +19883,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9474,
+      "edhrec_rank": 9472,
       "prices": {
-        "usd": "0.25",
+        "usd": "0.24",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.14",
         "eur_foil": "0.20",
         "tix": "0.02"
       },
@@ -20018,9 +20018,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11836,
+      "edhrec_rank": 11826,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.22",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.07",
@@ -20154,14 +20154,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 528,
+      "edhrec_rank": 527,
       "prices": {
-        "usd": "20.40",
+        "usd": "21.94",
         "usd_foil": "23.05",
         "usd_etched": null,
-        "eur": "22.46",
+        "eur": "22.25",
         "eur_foil": "27.22",
-        "tix": "4.69"
+        "tix": "4.75"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DHexing%2BSquelcher",
@@ -20285,14 +20285,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5449,
+      "edhrec_rank": 5443,
       "penny_rank": 6212,
       "prices": {
         "usd": "0.30",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.18",
-        "eur_foil": "0.45",
+        "eur": "0.17",
+        "eur_foil": "0.52",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20437,14 +20437,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12824,
+      "edhrec_rank": 12813,
       "penny_rank": 8145,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.43",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.21",
+        "eur_foil": "0.27",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20576,7 +20576,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19023,
+      "edhrec_rank": 19017,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.24",
@@ -20710,13 +20710,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6011,
+      "edhrec_rank": 6004,
       "prices": {
         "usd": "0.28",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.12",
-        "eur_foil": "0.23",
+        "eur": "0.11",
+        "eur_foil": "0.20",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20851,10 +20851,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6896,
+      "edhrec_rank": 6888,
       "penny_rank": 9907,
       "prices": {
-        "usd": "0.30",
+        "usd": "0.33",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.20",
@@ -20987,13 +20987,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19145,
+      "edhrec_rank": 19142,
       "penny_rank": 2377,
       "prices": {
-        "usd": "0.31",
+        "usd": "0.30",
         "usd_foil": "0.44",
         "usd_etched": null,
-        "eur": "0.70",
+        "eur": "0.76",
         "eur_foil": "0.81",
         "tix": "0.59"
       },
@@ -21146,13 +21146,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6190,
+      "edhrec_rank": 6180,
       "prices": {
-        "usd": "0.29",
-        "usd_foil": "0.34",
+        "usd": "0.31",
+        "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.19",
+        "eur": "0.10",
+        "eur_foil": "0.17",
         "tix": "0.03"
       },
       "related_uris": {
@@ -21308,13 +21308,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4930,
+      "edhrec_rank": 4919,
       "penny_rank": 2169,
       "prices": {
-        "usd": "0.78",
-        "usd_foil": "0.90",
+        "usd": "0.75",
+        "usd_foil": "0.89",
         "usd_etched": null,
-        "eur": "0.80",
+        "eur": "0.78",
         "eur_foil": "0.91",
         "tix": "0.02"
       },
@@ -21440,13 +21440,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14270,
+      "edhrec_rank": 14260,
       "penny_rank": 674,
       "prices": {
-        "usd": "0.37",
-        "usd_foil": "0.35",
+        "usd": "0.39",
+        "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.30",
+        "eur": "0.37",
         "eur_foil": "0.36",
         "tix": "0.03"
       },
@@ -21576,10 +21576,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15917,
+      "edhrec_rank": 15904,
       "prices": {
         "usd": "0.22",
-        "usd_foil": "0.33",
+        "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.04",
         "eur_foil": "0.08",
@@ -21707,12 +21707,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5621,
+      "edhrec_rank": 5612,
       "prices": {
-        "usd": "2.62",
+        "usd": "2.43",
         "usd_foil": "3.30",
         "usd_etched": null,
-        "eur": "3.16",
+        "eur": "3.03",
         "eur_foil": "3.46",
         "tix": "0.81"
       },
@@ -21844,13 +21844,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16864,
+      "edhrec_rank": 16854,
       "penny_rank": 4898,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.18",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.14",
         "eur_foil": "0.15",
         "tix": "0.03"
       },
@@ -21998,9 +21998,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13481,
+      "edhrec_rank": 13479,
       "prices": {
-        "usd": "0.27",
+        "usd": "0.26",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.09",
@@ -22134,14 +22134,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9245,
+      "edhrec_rank": 9244,
       "penny_rank": 7878,
       "prices": {
-        "usd": "0.92",
-        "usd_foil": "1.48",
+        "usd": "0.93",
+        "usd_foil": "1.51",
         "usd_etched": null,
-        "eur": "1.46",
-        "eur_foil": "2.10",
+        "eur": "1.45",
+        "eur_foil": "2.09",
         "tix": "0.89"
       },
       "related_uris": {
@@ -22271,7 +22271,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 26030,
+      "edhrec_rank": 26019,
       "prices": {
         "usd": "0.04",
         "usd_foil": "0.11",
@@ -22411,8 +22411,8 @@
         "usd": "0.17",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.03",
-        "eur_foil": "0.10",
+        "eur": "0.02",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22537,12 +22537,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17336,
+      "edhrec_rank": 17328,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.13",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.10",
         "tix": "0.03"
       },
@@ -22672,13 +22672,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13774,
+      "edhrec_rank": 13766,
       "prices": {
         "usd": "0.23",
         "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.18",
-        "eur_foil": "0.19",
+        "eur_foil": "0.17",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22803,7 +22803,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17017,
+      "edhrec_rank": 17011,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.23",
@@ -22939,13 +22939,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8967,
+      "edhrec_rank": 8950,
       "penny_rank": 1396,
       "prices": {
-        "usd": "0.58",
-        "usd_foil": "1.10",
+        "usd": "0.60",
+        "usd_foil": "1.16",
         "usd_etched": null,
-        "eur": "1.41",
+        "eur": "1.43",
         "eur_foil": "2.34",
         "tix": "0.50"
       },
@@ -23086,11 +23086,11 @@
       "edhrec_rank": 247,
       "penny_rank": 4178,
       "prices": {
-        "usd": "13.84",
+        "usd": "13.53",
         "usd_foil": "13.92",
         "usd_etched": null,
-        "eur": "13.48",
-        "eur_foil": "15.21",
+        "eur": "13.42",
+        "eur_foil": "15.00",
         "tix": "0.81"
       },
       "related_uris": {
@@ -23221,7 +23221,7 @@
         "usd": "0.35",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.21",
+        "eur": "0.20",
         "eur_foil": "0.33",
         "tix": "0.03"
       },
@@ -23352,13 +23352,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10469,
+      "edhrec_rank": 10466,
       "penny_rank": 4429,
       "prices": {
         "usd": "0.32",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.33",
+        "eur": "0.32",
         "eur_foil": "0.59",
         "tix": "0.02"
       },
@@ -23486,12 +23486,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20749,
+      "edhrec_rank": 20746,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -23619,14 +23619,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 8682,
+      "edhrec_rank": 8670,
       "penny_rank": 710,
       "prices": {
-        "usd": "1.14",
-        "usd_foil": "1.66",
+        "usd": "1.18",
+        "usd_foil": "1.63",
         "usd_etched": null,
-        "eur": "1.35",
-        "eur_foil": "1.43",
+        "eur": "1.30",
+        "eur_foil": "1.37",
         "tix": "0.91"
       },
       "related_uris": {
@@ -23755,14 +23755,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3863,
+      "edhrec_rank": 3857,
       "penny_rank": 6582,
       "prices": {
-        "usd": "0.56",
-        "usd_foil": "1.36",
+        "usd": "0.54",
+        "usd_foil": "1.38",
         "usd_etched": null,
-        "eur": "1.49",
-        "eur_foil": "1.70",
+        "eur": "1.42",
+        "eur_foil": "1.76",
         "tix": "0.02"
       },
       "related_uris": {
@@ -23894,10 +23894,10 @@
       "edhrec_rank": 2230,
       "penny_rank": 602,
       "prices": {
-        "usd": "0.68",
+        "usd": "0.69",
         "usd_foil": "1.39",
         "usd_etched": null,
-        "eur": "0.60",
+        "eur": "0.59",
         "eur_foil": "1.03",
         "tix": "0.03"
       },
@@ -24027,13 +24027,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19517,
+      "edhrec_rank": 19516,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.11",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24163,7 +24163,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13251,
+      "edhrec_rank": 13253,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.26",
@@ -24296,7 +24296,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14431,
+      "edhrec_rank": 14427,
       "penny_rank": 8126,
       "prices": {
         "usd": "0.14",
@@ -24431,18 +24431,18 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1198,
+      "edhrec_rank": 1196,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.twitch.tv/videos/2577991748?t=03h20m06s",
         "previewed_at": "2025-09-29"
       },
       "prices": {
-        "usd": "6.68",
-        "usd_foil": "8.76",
+        "usd": "6.58",
+        "usd_foil": "9.17",
         "usd_etched": null,
-        "eur": "11.11",
-        "eur_foil": "14.07",
+        "eur": "10.97",
+        "eur_foil": "13.99",
         "tix": "2.23"
       },
       "related_uris": {
@@ -24572,7 +24572,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13209,
+      "edhrec_rank": 13200,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.26",
@@ -24712,13 +24712,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5035,
+      "edhrec_rank": 5027,
       "penny_rank": 8140,
       "prices": {
         "usd": "0.25",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.13",
         "eur_foil": "0.18",
         "tix": "0.03"
       },
@@ -24849,7 +24849,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22480,
+      "edhrec_rank": 22478,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.21",
@@ -24986,12 +24986,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12300,
+      "edhrec_rank": 12286,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.15",
         "eur_foil": "0.27",
         "tix": "0.03"
       },
@@ -25121,13 +25121,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14903,
+      "edhrec_rank": 14902,
       "prices": {
         "usd": "0.09",
         "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.09",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -25254,13 +25254,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8203,
+      "edhrec_rank": 8191,
       "penny_rank": 673,
       "prices": {
-        "usd": "0.32",
+        "usd": "0.33",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.13",
         "eur_foil": "0.22",
         "tix": "0.03"
       },
@@ -25388,7 +25388,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21676,
+      "edhrec_rank": 21677,
       "prices": {
         "usd": "0.04",
         "usd_foil": "0.11",
@@ -25523,7 +25523,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10325,
+      "edhrec_rank": 10315,
       "prices": {
         "usd": "0.21",
         "usd_foil": "0.30",
@@ -25676,12 +25676,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9712,
+      "edhrec_rank": 9702,
       "prices": {
         "usd": "0.24",
-        "usd_foil": "0.34",
+        "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.27",
+        "eur": "0.24",
         "eur_foil": "0.26",
         "tix": "0.03"
       },
@@ -25832,13 +25832,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3452,
+      "edhrec_rank": 3450,
       "penny_rank": 3945,
       "prices": {
         "usd": "2.10",
-        "usd_foil": "1.83",
+        "usd_foil": "1.85",
         "usd_etched": null,
-        "eur": "1.36",
+        "eur": "1.38",
         "eur_foil": "1.80",
         "tix": "0.02"
       },
@@ -25969,13 +25969,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18664,
+      "edhrec_rank": 18659,
       "prices": {
-        "usd": "0.11",
+        "usd": "0.12",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.04",
-        "eur_foil": "0.09",
+        "eur": "0.03",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -26105,12 +26105,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18447,
+      "edhrec_rank": 18424,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.09",
         "tix": "0.03"
       },
@@ -26240,12 +26240,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6391,
+      "edhrec_rank": 6383,
       "prices": {
-        "usd": "0.33",
-        "usd_foil": "0.36",
+        "usd": "0.32",
+        "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.20",
         "eur_foil": "0.35",
         "tix": "0.03"
       },
@@ -26376,9 +26376,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 25855,
+      "edhrec_rank": 25860,
       "prices": {
-        "usd": "0.13",
+        "usd": "0.12",
         "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.05",
@@ -26509,9 +26509,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17210,
+      "edhrec_rank": 17213,
       "prices": {
-        "usd": "0.13",
+        "usd": "0.14",
         "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.10",
@@ -26664,14 +26664,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3963,
+      "edhrec_rank": 3957,
       "penny_rank": 3018,
       "prices": {
-        "usd": "2.73",
-        "usd_foil": "2.74",
+        "usd": "2.53",
+        "usd_foil": "2.82",
         "usd_etched": null,
-        "eur": "1.53",
-        "eur_foil": "1.79",
+        "eur": "1.45",
+        "eur_foil": "1.94",
         "tix": "0.14"
       },
       "related_uris": {
@@ -26801,13 +26801,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3752,
+      "edhrec_rank": 3741,
       "penny_rank": 7546,
       "prices": {
-        "usd": "0.74",
+        "usd": "0.70",
         "usd_foil": "1.01",
         "usd_etched": null,
-        "eur": "1.10",
+        "eur": "1.09",
         "eur_foil": "1.37",
         "tix": "0.02"
       },
@@ -26944,13 +26944,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7549,
+      "edhrec_rank": 7542,
       "penny_rank": 2808,
       "prices": {
-        "usd": "0.28",
+        "usd": "0.29",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.15",
         "eur_foil": "0.43",
         "tix": "0.03"
       },
@@ -27077,12 +27077,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8476,
+      "edhrec_rank": 8467,
       "prices": {
         "usd": "0.30",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.21",
         "eur_foil": "0.32",
         "tix": "0.02"
       },
@@ -27359,7 +27359,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10862,
+      "edhrec_rank": 10853,
       "penny_rank": 11048,
       "prices": {
         "usd": "0.14",
@@ -27491,10 +27491,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18401,
+      "edhrec_rank": 18411,
       "prices": {
         "usd": "0.10",
-        "usd_foil": "0.21",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.10",
@@ -27672,13 +27672,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11681,
+      "edhrec_rank": 11670,
       "prices": {
-        "usd": "0.25",
+        "usd": "0.24",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.28",
-        "eur_foil": "0.36",
+        "eur": "0.27",
+        "eur_foil": "0.39",
         "tix": "0.02"
       },
       "related_uris": {
@@ -27821,9 +27821,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11313,
+      "edhrec_rank": 11299,
       "prices": {
-        "usd": "0.21",
+        "usd": "0.20",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.02",
@@ -27954,7 +27954,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16676,
+      "edhrec_rank": 16681,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.23",
@@ -28089,13 +28089,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2941,
+      "edhrec_rank": 2935,
       "penny_rank": 922,
       "prices": {
-        "usd": "0.58",
-        "usd_foil": "0.81",
+        "usd": "0.57",
+        "usd_foil": "0.80",
         "usd_etched": null,
-        "eur": "0.60",
+        "eur": "0.59",
         "eur_foil": "0.86",
         "tix": "0.03"
       },
@@ -28227,7 +28227,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20632,
+      "edhrec_rank": 20633,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.16",
@@ -28370,14 +28370,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8025,
+      "edhrec_rank": 8015,
       "penny_rank": 1998,
       "prices": {
         "usd": "0.29",
         "usd_foil": "0.57",
         "usd_etched": null,
-        "eur": "0.50",
-        "eur_foil": "0.91",
+        "eur": "0.51",
+        "eur_foil": "0.81",
         "tix": "0.02"
       },
       "related_uris": {
@@ -28532,13 +28532,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5777,
+      "edhrec_rank": 5770,
       "penny_rank": 4501,
       "prices": {
-        "usd": "0.45",
-        "usd_foil": "0.52",
+        "usd": "0.42",
+        "usd_foil": "0.51",
         "usd_etched": null,
-        "eur": "0.55",
+        "eur": "0.57",
         "eur_foil": "0.77",
         "tix": "0.02"
       },
@@ -28670,13 +28670,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8419,
+      "edhrec_rank": 8413,
       "penny_rank": 156,
       "prices": {
         "usd": "0.36",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.29",
+        "eur": "0.28",
         "eur_foil": "0.33",
         "tix": "0.04"
       },
@@ -28809,13 +28809,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7677,
+      "edhrec_rank": 7668,
       "penny_rank": 5740,
       "prices": {
         "usd": "0.27",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.15",
         "eur_foil": "0.36",
         "tix": "0.02"
       },
@@ -28971,13 +28971,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16651,
+      "edhrec_rank": 16648,
       "penny_rank": 8711,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.19",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.18",
+        "eur": "0.16",
         "eur_foil": "0.24",
         "tix": "0.02"
       },
@@ -29127,13 +29127,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16690,
+      "edhrec_rank": 16688,
       "penny_rank": 1340,
       "prices": {
-        "usd": "0.35",
+        "usd": "0.36",
         "usd_foil": "0.62",
         "usd_etched": null,
-        "eur": "0.83",
+        "eur": "0.82",
         "eur_foil": "1.04",
         "tix": "0.91"
       },
@@ -29265,13 +29265,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18143,
+      "edhrec_rank": 18136,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.13",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -29403,7 +29403,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20139,
+      "edhrec_rank": 20140,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.30",
@@ -29540,12 +29540,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14381,
+      "edhrec_rank": 14370,
       "prices": {
-        "usd": "3.53",
+        "usd": "3.60",
         "usd_foil": "3.92",
         "usd_etched": null,
-        "eur": "4.56",
+        "eur": "4.59",
         "eur_foil": "5.78",
         "tix": "3.95"
       },
@@ -29675,7 +29675,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16883,
+      "edhrec_rank": 16881,
       "penny_rank": 1806,
       "prices": {
         "usd": "0.25",
@@ -29813,14 +29813,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18024,
+      "edhrec_rank": 18012,
       "penny_rank": 5946,
       "prices": {
         "usd": "0.34",
         "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.21",
-        "eur_foil": "0.27",
+        "eur_foil": "0.28",
         "tix": "0.03"
       },
       "related_uris": {
@@ -29955,13 +29955,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5391,
+      "edhrec_rank": 5378,
       "penny_rank": 8729,
       "prices": {
-        "usd": "0.50",
+        "usd": "0.48",
         "usd_foil": "0.63",
         "usd_etched": null,
-        "eur": "0.48",
+        "eur": "0.47",
         "eur_foil": "0.65",
         "tix": "0.02"
       },
@@ -30090,9 +30090,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5778,
+      "edhrec_rank": 5766,
       "prices": {
-        "usd": "0.38",
+        "usd": "0.39",
         "usd_foil": "0.44",
         "usd_etched": null,
         "eur": "0.39",
@@ -30224,13 +30224,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11125,
+      "edhrec_rank": 11120,
       "penny_rank": 8128,
       "prices": {
         "usd": "0.25",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.20",
         "tix": "0.03"
       },
@@ -30359,12 +30359,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7827,
+      "edhrec_rank": 7818,
       "prices": {
-        "usd": "0.25",
+        "usd": "0.23",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.18",
+        "eur": "0.16",
         "eur_foil": "0.16",
         "tix": "0.03"
       },
@@ -30493,7 +30493,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8569,
+      "edhrec_rank": 8566,
       "penny_rank": 4558,
       "prices": {
         "usd": "0.17",
@@ -30628,7 +30628,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17264,
+      "edhrec_rank": 17263,
       "penny_rank": 3770,
       "prices": {
         "usd": "0.11",
@@ -30763,7 +30763,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18627,
+      "edhrec_rank": 18628,
       "penny_rank": 2670,
       "prices": {
         "usd": "0.20",
@@ -30901,12 +30901,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13182,
+      "edhrec_rank": 13180,
       "prices": {
-        "usd": "1.06",
+        "usd": "1.08",
         "usd_foil": "1.37",
         "usd_etched": null,
-        "eur": "1.44",
+        "eur": "1.41",
         "eur_foil": "1.89",
         "tix": "0.76"
       },
@@ -31043,8 +31043,8 @@
         "usd": "0.18",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.22",
+        "eur": "0.07",
+        "eur_foil": "0.21",
         "tix": "0.03"
       },
       "related_uris": {
@@ -31173,13 +31173,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15622,
+      "edhrec_rank": 15623,
       "penny_rank": 4859,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.50",
+        "usd": "0.26",
+        "usd_foil": "0.49",
         "usd_etched": null,
-        "eur": "0.28",
+        "eur": "0.27",
         "eur_foil": "0.47",
         "tix": "0.02"
       },
@@ -31309,7 +31309,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18749,
+      "edhrec_rank": 18748,
       "penny_rank": 11850,
       "prices": {
         "usd": "0.07",
@@ -31448,9 +31448,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15023,
+      "edhrec_rank": 15006,
       "prices": {
-        "usd": "0.18",
+        "usd": "0.19",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.06",
@@ -31585,13 +31585,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22648,
+      "edhrec_rank": 22646,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.15",
         "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.08",
+        "eur": "0.04",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -31738,13 +31738,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12020,
+      "edhrec_rank": 12008,
       "penny_rank": 3262,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.35",
+        "usd": "0.26",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.19",
         "eur_foil": "0.34",
         "tix": "0.03"
       },
@@ -31880,7 +31880,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3472,
+      "edhrec_rank": 3463,
       "penny_rank": 8442,
       "preview": {
         "source": "Wizards of the Coast",
@@ -31888,11 +31888,11 @@
         "previewed_at": "2025-12-11"
       },
       "prices": {
-        "usd": "1.05",
-        "usd_foil": "1.72",
+        "usd": "1.10",
+        "usd_foil": "1.74",
         "usd_etched": null,
-        "eur": "1.42",
-        "eur_foil": "1.57",
+        "eur": "1.40",
+        "eur_foil": "1.75",
         "tix": "0.02"
       },
       "related_uris": {
@@ -32021,12 +32021,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22372,
+      "edhrec_rank": 22369,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -32160,7 +32160,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 7146,
+      "edhrec_rank": 7138,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/news/magic-story/lorwyn-eclipsed-episode-5-if-we-shadows",
@@ -32170,7 +32170,7 @@
         "usd": "0.28",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.15",
         "eur_foil": "0.24",
         "tix": "0.02"
       },
@@ -32324,7 +32324,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8763,
+      "edhrec_rank": 8757,
       "penny_rank": 2624,
       "prices": {
         "usd": "0.30",
@@ -32467,12 +32467,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5460,
+      "edhrec_rank": 5454,
       "prices": {
         "usd": "0.31",
-        "usd_foil": "0.55",
+        "usd_foil": "0.57",
         "usd_etched": null,
-        "eur": "0.40",
+        "eur": "0.37",
         "eur_foil": "0.56",
         "tix": "0.02"
       },
@@ -32624,7 +32624,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20917,
+      "edhrec_rank": 20905,
       "penny_rank": 8844,
       "prices": {
         "usd": "0.19",
@@ -32763,13 +32763,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13217,
+      "edhrec_rank": 13208,
       "penny_rank": 8150,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.11",
         "eur_foil": "0.15",
         "tix": "0.03"
       },
@@ -32899,12 +32899,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5238,
+      "edhrec_rank": 5233,
       "prices": {
-        "usd": "0.31",
+        "usd": "0.32",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.23",
+        "eur": "0.22",
         "eur_foil": "0.46",
         "tix": "0.04"
       },
@@ -33061,12 +33061,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21819,
+      "edhrec_rank": 21818,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -33199,13 +33199,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16810,
+      "edhrec_rank": 16814,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.11",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -33336,12 +33336,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13007,
+      "edhrec_rank": 13003,
       "prices": {
-        "usd": "0.27",
+        "usd": "0.24",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.19",
         "eur_foil": "0.26",
         "tix": "0.02"
       },
@@ -33472,12 +33472,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14342,
+      "edhrec_rank": 14335,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.14",
         "eur_foil": "0.19",
         "tix": "0.03"
       },
@@ -33612,13 +33612,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17711,
+      "edhrec_rank": 17718,
       "prices": {
-        "usd": "0.22",
+        "usd": "0.23",
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.15",
-        "eur_foil": "0.26",
+        "eur_foil": "0.22",
         "tix": "0.02"
       },
       "related_uris": {
@@ -33749,12 +33749,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14402,
+      "edhrec_rank": 14397,
       "prices": {
         "usd": "0.24",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.18",
+        "eur": "0.16",
         "eur_foil": "0.25",
         "tix": "0.02"
       },
@@ -33902,7 +33902,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16861,
+      "edhrec_rank": 16855,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.17",
@@ -34053,13 +34053,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16217,
+      "edhrec_rank": 16206,
       "penny_rank": 3320,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.26",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.21",
         "eur_foil": "0.25",
         "tix": "0.02"
       },
@@ -34193,13 +34193,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5738,
+      "edhrec_rank": 5728,
       "penny_rank": 3690,
       "prices": {
-        "usd": "0.39",
-        "usd_foil": "0.53",
+        "usd": "0.40",
+        "usd_foil": "0.52",
         "usd_etched": null,
-        "eur": "0.47",
+        "eur": "0.44",
         "eur_foil": "0.91",
         "tix": "0.02"
       },
@@ -34329,7 +34329,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17724,
+      "edhrec_rank": 17726,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.23",
@@ -34480,13 +34480,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7305,
+      "edhrec_rank": 7294,
       "prices": {
-        "usd": "0.29",
+        "usd": "0.28",
         "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.26",
-        "eur_foil": "0.37",
+        "eur_foil": "0.47",
         "tix": "0.02"
       },
       "related_uris": {
@@ -34617,14 +34617,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5008,
+      "edhrec_rank": 5004,
       "penny_rank": 4126,
       "prices": {
-        "usd": "0.34",
+        "usd": "0.33",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.21",
-        "eur_foil": "0.21",
+        "eur": "0.20",
+        "eur_foil": "0.24",
         "tix": "0.03"
       },
       "related_uris": {
@@ -34755,12 +34755,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7964,
+      "edhrec_rank": 7950,
       "prices": {
-        "usd": "2.01",
+        "usd": "1.95",
         "usd_foil": "3.03",
         "usd_etched": null,
-        "eur": "4.08",
+        "eur": "4.17",
         "eur_foil": "5.89",
         "tix": "1.59"
       },
@@ -34892,13 +34892,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7230,
+      "edhrec_rank": 7223,
       "prices": {
         "usd": "0.24",
-        "usd_foil": "0.32",
+        "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.16",
-        "eur_foil": "0.24",
+        "eur_foil": "0.26",
         "tix": "0.03"
       },
       "related_uris": {
@@ -35029,7 +35029,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19500,
+      "edhrec_rank": 19498,
       "prices": {
         "usd": "0.07",
         "usd_foil": "0.16",
@@ -35166,13 +35166,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7884,
+      "edhrec_rank": 7880,
       "prices": {
-        "usd": "2.87",
-        "usd_foil": "3.29",
+        "usd": "2.76",
+        "usd_foil": "3.30",
         "usd_etched": null,
-        "eur": "7.33",
-        "eur_foil": "8.03",
+        "eur": "7.35",
+        "eur_foil": "7.47",
         "tix": "5.33"
       },
       "related_uris": {
@@ -35297,12 +35297,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1384,
+      "edhrec_rank": 1380,
       "prices": {
-        "usd": "22.33",
-        "usd_foil": "23.87",
+        "usd": "22.75",
+        "usd_foil": "23.73",
         "usd_etched": null,
-        "eur": "20.73",
+        "eur": "21.10",
         "eur_foil": "20.60",
         "tix": "0.75"
       },
@@ -35423,11 +35423,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6285,
+      "edhrec_rank": 6276,
       "penny_rank": 2805,
       "prices": {
         "usd": "0.37",
-        "usd_foil": "0.37",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.20",
         "eur_foil": "0.28",
@@ -35560,14 +35560,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2859,
+      "edhrec_rank": 2854,
       "penny_rank": 4118,
       "prices": {
-        "usd": "0.37",
-        "usd_foil": "0.75",
+        "usd": "0.35",
+        "usd_foil": "0.59",
         "usd_etched": null,
-        "eur": "0.22",
-        "eur_foil": "0.34",
+        "eur": "0.23",
+        "eur_foil": "0.41",
         "tix": "0.03"
       },
       "related_uris": {
@@ -35699,9 +35699,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17324,
+      "edhrec_rank": 17312,
       "prices": {
-        "usd": "0.18",
+        "usd": "0.16",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.07",
@@ -35825,12 +35825,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2989,
+      "edhrec_rank": 2987,
       "prices": {
-        "usd": "0.70",
-        "usd_foil": "0.58",
+        "usd": "0.66",
+        "usd_foil": "0.62",
         "usd_etched": null,
-        "eur": "0.41",
+        "eur": "0.40",
         "eur_foil": "0.72",
         "tix": "0.03"
       },
@@ -35973,12 +35973,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4327,
+      "edhrec_rank": 4326,
       "prices": {
-        "usd": "0.58",
+        "usd": "0.54",
         "usd_foil": "0.89",
         "usd_etched": null,
-        "eur": "0.44",
+        "eur": "0.47",
         "eur_foil": "0.71",
         "tix": "0.02"
       },
@@ -36100,7 +36100,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22237,
+      "edhrec_rank": 22228,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.21",
@@ -36237,10 +36237,10 @@
       "edhrec_rank": 558,
       "penny_rank": 403,
       "prices": {
-        "usd": "0.35",
+        "usd": "0.37",
         "usd_foil": "0.45",
         "usd_etched": null,
-        "eur": "0.38",
+        "eur": "0.37",
         "eur_foil": "0.58",
         "tix": "0.03"
       },
@@ -36381,12 +36381,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8924,
+      "edhrec_rank": 8909,
       "prices": {
         "usd": "0.19",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.06",
         "eur_foil": "0.25",
         "tix": "0.03"
       },
@@ -36519,11 +36519,11 @@
       "edhrec_rank": 67,
       "penny_rank": 50,
       "prices": {
-        "usd": "7.97",
+        "usd": "7.85",
         "usd_foil": "10.26",
         "usd_etched": null,
-        "eur": "9.15",
-        "eur_foil": "9.71",
+        "eur": "9.33",
+        "eur_foil": "9.93",
         "tix": "0.07"
       },
       "related_uris": {
@@ -36651,10 +36651,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2994,
+      "edhrec_rank": 2991,
       "penny_rank": 1807,
       "prices": {
-        "usd": "0.34",
+        "usd": "0.38",
         "usd_foil": "0.70",
         "usd_etched": null,
         "eur": "0.92",
@@ -36782,11 +36782,11 @@
       "edhrec_rank": 19,
       "penny_rank": 91,
       "prices": {
-        "usd": "0.27",
+        "usd": "0.26",
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.13",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -36918,11 +36918,11 @@
       "edhrec_rank": 59,
       "penny_rank": 17,
       "prices": {
-        "usd": "6.91",
-        "usd_foil": "8.01",
+        "usd": "7.25",
+        "usd_foil": "7.99",
         "usd_etched": null,
-        "eur": "8.02",
-        "eur_foil": "8.92",
+        "eur": "8.34",
+        "eur_foil": "9.62",
         "tix": "0.03"
       },
       "related_uris": {
@@ -37054,12 +37054,12 @@
       "edhrec_rank": 71,
       "penny_rank": 67,
       "prices": {
-        "usd": "6.06",
-        "usd_foil": "7.83",
+        "usd": "6.23",
+        "usd_foil": "7.75",
         "usd_etched": null,
-        "eur": "8.70",
+        "eur": "8.74",
         "eur_foil": "9.09",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DOvergrown%2BTomb",
@@ -37189,10 +37189,10 @@
       "story_spotlight": false,
       "edhrec_rank": 62,
       "prices": {
-        "usd": "7.74",
-        "usd_foil": "11.13",
+        "usd": "7.92",
+        "usd_foil": "10.75",
         "usd_etched": null,
-        "eur": "9.33",
+        "eur": "9.61",
         "eur_foil": "11.54",
         "tix": "0.19"
       },
@@ -37325,12 +37325,12 @@
       "edhrec_rank": 81,
       "penny_rank": 54,
       "prices": {
-        "usd": "5.36",
-        "usd_foil": "6.49",
+        "usd": "5.58",
+        "usd_foil": "6.34",
         "usd_etched": null,
-        "eur": "6.96",
+        "eur": "6.91",
         "eur_foil": "8.44",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DTemple%2BGarden",
@@ -37456,9 +37456,9 @@
       "story_spotlight": false,
       "prices": {
         "usd": "0.22",
-        "usd_foil": "0.23",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.14",
         "eur_foil": "0.22",
         "tix": "0.03"
       },
@@ -37585,7 +37585,7 @@
       "booster": true,
       "story_spotlight": false,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.17",
         "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.11",
@@ -37996,7 +37996,7 @@
         "usd": "0.16",
         "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.16",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
