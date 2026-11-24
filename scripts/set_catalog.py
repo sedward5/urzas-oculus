@@ -186,7 +186,7 @@ def download_archive(url,path):
             while True:
                 chunk=archive.read(1024*1024)
                 if not chunk: break
-                physical_lines += chunk.count(b"\\n")
+                physical_lines += chunk.count(b"\n")
         return {"url":url,"path":str(path),"bytes":size,"sha256":digest.hexdigest(),
                 "physical_lines":physical_lines,"gzip_valid":True}
     except Exception:
