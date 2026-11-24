@@ -2,11 +2,17 @@
   "schema_version": 1,
   "set_code": "HOB",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T17:39:40.275740+00:00",
+  "generated_at": "2026-11-24T18:33:33.462944+00:00",
   "archives": {},
   "probes": {
     "draft": "catalog_unavailable",
     "game": "catalog_unavailable",
     "replay": "catalog_unavailable"
+  },
+  "catalog_status": "unavailable",
+  "catalog_last_updated": null,
+  "catalog_error": {
+    "type": "ValueError",
+    "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The response may be an access-denied page or changed markup. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/favicon-32x32.png\" /> <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/favicon-16x16.png\" /> <link rel=\"manifest\" href=\"/static/site.webmanifest\" /> <!-- style sheets --> <link'"
   }
 }
