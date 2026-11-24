@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "set_code": "ECL",
+  "event_type": "PremierDraft",
+  "generated_at": "2026-11-24T02:40:14.554581+00:00",
+  "files": [
+    {
+      "path": "set-acquisition-output/scryfall/ecl-cards.json",
+      "bytes": 1761399,
+      "sha256": "2144f34f890145cba944e11b7f02bb49e5ce91d7d874e3ba87fcd6299eb848bf",
+      "records": 273
+    },
+    {
+      "url": "https://media.wizards.com/2025/images/daily/A76WcOQnJa.jpg",
+      "path": "set-acquisition-output/wizards/overview-12.jpg",
+      "bytes": 691938,
+      "sha256": "16db7d965f36119af666a418f71fd04d37c47e9eee561102ca65932ba473aab4",
+      "alt": "Draft Archetypes"
+    },
+    {
+      "path": "set-acquisition-output/wizards/guide.html",
+      "bytes": 220734,
+      "sha256": "d7bb5047224a48717eed5fb40ac373a9664f0d6dcdc87f11f17f08a3b8385827"
+    },
+    {
+      "path": "set-acquisition-output/wizards/guide-evidence.json",
+      "bytes": 12000,
+      "sha256": "4327e86fddf906dcda0938944a1513ab768204248a84fbc18e2abe7cca54101d"
+    }
+  ],
+  "status": {
+    "scryfall": "acquired",
+    "17lands": "not_yet_published",
+    "wizards": "evidence_acquired_unreviewed"
+  },
+  "set_name": "Lorwyn Eclipsed",
+  "wizards_guide": {
+    "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
+    "discovery": "discovered"
+  },
+  "warnings": [
+    "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"
+  ],
+  "17lands": {
+    "event_type": "PremierDraft",
+    "archives": {},
+    "probes": {
+      "draft": "inaccessible_or_missing",
+      "game": "inaccessible_or_missing",
+      "replay": "inaccessible_or_missing"
+    },
+    "source_selection": {
+      "bulk_available": [],
+      "bulk_missing": [
+        "draft",
+        "game"
+      ]
+    }
+  }
+}
