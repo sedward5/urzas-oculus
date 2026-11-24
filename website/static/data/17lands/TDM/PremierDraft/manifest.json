@@ -2,11 +2,11 @@
   "schema_version": 1,
   "set_code": "TDM",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T12:49:49.827790+00:00",
+  "generated_at": "2026-11-24T17:40:09.690865+00:00",
   "archives": {},
   "probes": {
-    "draft": "inaccessible_or_missing",
-    "game": "inaccessible_or_missing",
-    "replay": "inaccessible_or_missing"
+    "draft": "catalog_unavailable",
+    "game": "catalog_unavailable",
+    "replay": "catalog_unavailable"
   }
 }
