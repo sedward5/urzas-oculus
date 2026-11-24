@@ -201,6 +201,23 @@ public final class LocalDataStore: @unchecked Sendable {
         try queryOne("SELECT payload FROM cards WHERE scryfall_id = ?", value: scryfallID)
     }
 
+    /// Returns all stored printings for a set in stable collector/name/ID order.
+    public func cards(setCode: String) throws -> [CardRecord] {
+        try withStatement("""
+        SELECT payload FROM cards WHERE set_code = ?
+        ORDER BY name COLLATE NOCASE, scryfall_id
+        """) { statement in
+            bind(setCode.uppercased(), 1, statement)
+            var result: [CardRecord] = []
+            while sqlite3_step(statement) == SQLITE_ROW {
+                if let data = columnData(statement, 0) {
+                    result.append(try decoder.decode(CardRecord.self, from: data))
+                }
+            }
+            return result
+        }
+    }
+
     /// Returns every printing that shares an Arena identifier.
     public func cards(arenaID: Int) throws -> [CardRecord] {
         try withStatement("SELECT payload FROM cards WHERE arena_id = ? ORDER BY set_code") { s in

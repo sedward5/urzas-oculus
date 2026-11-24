@@ -143,3 +143,18 @@ Consequences:
 - Image-only archetypes can be represented without OCR or fragile heading heuristics.
 - Taxonomy review status and source provenance are explicit.
 - Future card associations and performance joins remain separate, auditable steps.
+
+
+## ADR-010: Versioned card prediction and classification model
+
+**Status:** Accepted
+
+Card understanding is stored separately from card identity and observed performance. A reviewed prediction records multi-label roles, five independent evaluation dimensions, a separate Limited-rate assessment, evidence, confidence, reviewer, and model version.
+
+The five dimensions are baseline power, role value, synergy potential, archetype fit, and context sensitivity. They are ordinal 1–5 assessments with explicit rationale. They are not combined into an aggregate score in v1 because no validated weighting or exchange rate exists between them.
+
+Structural text rules may suggest roles, but suggestions are not reviewed truth. The reviewer confirms or rejects them. "On rate," two-for-one status, and archetype fit require context and cannot be inferred from keyword matches alone.
+
+Predictions are immutable snapshots. Later pick/game observations, including permitted 17Lands public datasets, are stored separately and compared against the original prediction. A new rubric or correction creates a new version rather than rewriting historical assessments.
+
+The shared Swift core owns the evaluator and deterministic suggestions. The local batch executable is an adapter; the website may display published artifacts but cannot reimplement classification or evaluation.

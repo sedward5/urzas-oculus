@@ -87,7 +87,7 @@ Owns authoritative draft history. The current core model supports session start,
 Owns card identity, local reference records, importers, dataset snapshots, provenance, freshness, and readiness. 17Lands metrics are scoped by set, event, user group, color filter where applicable, and snapshot.
 
 ### ScoringEngine
-Owns the one maintained recommendation implementation in the platform-independent Swift core. The current baseline regularizes standalone GIH WR toward an explicit overall baseline from the same dataset scope and snapshot. ALSA and ATA are available as context but do not affect ranking. Pool synergy, archetype, curve, and deck-needs scoring are not implemented.
+Owns the one maintained recommendation implementation in the platform-independent Swift core. The current 17Lands baseline regularizes standalone GIH WR toward an explicit overall baseline from the same dataset scope and snapshot. ALSA and ATA are available as context but do not affect ranking. Separately, prediction model v1 records pre-release card roles, five independent evaluation dimensions, rate assessments, evidence, and confidence. Structural rules emit suggestions only; reviewed classifications and ratings require human review. Predictions remain immutable when later observations arrive. See [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md).
 
 The evaluator must not depend on SwiftUI, app lifecycle, filesystem layout, CI, web hosting, or network services. Adapters acquire inputs or publish results but call the same evaluator. The website may display versioned artifacts; it must not reproduce scoring.
 
