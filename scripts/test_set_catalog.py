@@ -67,9 +67,11 @@ class CatalogTests(unittest.TestCase):
             downloaded.append(url)
             return {"url":url,"path":str(path),"bytes":12,"sha256":"abc","physical_lines":3,"gzip_valid":True}
         with TemporaryDirectory() as directory:
-            with patch.object(set_catalog,"fetch",side_effect=fake_fetch), \
-                 patch.object(set_catalog,"download_archive",side_effect=fake_download), \\
-                 patch.object(set_catalog,"discover_guide",return_value=(None,"not_found")):
+            with (
+                patch.object(set_catalog,"fetch",side_effect=fake_fetch),
+                patch.object(set_catalog,"download_archive",side_effect=fake_download),
+                patch.object(set_catalog,"discover_guide",return_value=(None,"not_found")),
+            ):
                 result=set_catalog.acquire("HOB","PremierDraft","",Path(directory))
             self.assertEqual(set(downloaded),{
                 "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz",
