@@ -158,3 +158,16 @@ Structural text rules may suggest roles, but suggestions are not reviewed truth.
 Predictions are immutable snapshots. Later pick/game observations, including permitted 17Lands public datasets, are stored separately and compared against the original prediction. A new rubric or correction creates a new version rather than rewriting historical assessments.
 
 The shared Swift core owns the evaluator and deterministic suggestions. The local batch executable is an adapter; the website may display published artifacts but cannot reimplement classification or evaluation.
+
+
+## ADR-012: Deterministic Limited prediction and closed learning loop
+
+**Status:** Accepted
+
+Oculus will build a deterministic, versioned Limited prediction model that can run without 17Lands performance data. 17Lands public bulk datasets are subsequent observations used to evaluate predictions, not inputs to the original pre-release prediction. Prediction snapshots are immutable; later observations never overwrite them.
+
+Human and LLM analysis may identify errors, propose features, and explain outliers, but only explicit deterministic code/configuration changes alter model output. Every accepted change receives a new model version and is replayed across historical sets. Historical predictions are labeled retrospective and constrained by an explicit source cutoff; no future-data leakage is permitted.
+
+Outcome metrics remain distinct (pick behavior, play rate, game performance, and contextual metrics). The system reports scope, sample size, coverage, and missingness rather than collapsing observations into a single grade. Rarity is metadata only and is prohibited from prediction and pick-preference logic.
+
+A static, unlinked `/ops` page provides read-only inventory and workflow status. It is not an access-control boundary; GitHub remains authoritative for authenticated workflow execution and writes.
