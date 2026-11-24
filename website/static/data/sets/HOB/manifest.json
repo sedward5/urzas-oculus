@@ -2,12 +2,12 @@
   "schema_version": 1,
   "set_code": "HOB",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T04:04:51.827661+00:00",
+  "generated_at": "2026-11-24T17:39:40.275740+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/hob-cards.json",
       "bytes": 1292177,
-      "sha256": "2909fa89732119e83b6805bbefdf790a470a7896d84462ec4472cf7cc6ee0d22",
+      "sha256": "19df8e853aea88f66fb68c966b5627a859404803a8a12d086255c84fb4349dcb",
       "records": 193
     },
     {
@@ -25,12 +25,12 @@
     {
       "path": "set-acquisition-output/wizards/guide-evidence.json",
       "bytes": 12513,
-      "sha256": "9e9d3ce0aebcec7851ca2061d6b6c2ce913c4aa0591825fa8225bd2b300719ae"
+      "sha256": "a55e00d4dda98c9726de2370da7045fab02e56b7c519eb8f2a60de31c9e107f6"
     }
   ],
   "status": {
     "scryfall": "acquired",
-    "17lands": "not_yet_published",
+    "17lands": "unavailable",
     "wizards": "evidence_acquired_unreviewed"
   },
   "set_name": "The Hobbit",
@@ -38,16 +38,20 @@
     "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
     "discovery": "discovered"
   },
-  "warnings": [
-    "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"
-  ],
   "17lands": {
     "event_type": "PremierDraft",
+    "catalog_url": "https://www.17lands.com/public_datasets",
+    "catalog_status": "unavailable",
+    "catalog_last_updated": null,
+    "catalog_error": {
+      "type": "ValueError",
+      "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The page markup may have changed or returned a challenge page. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"ico'"
+    },
     "archives": {},
     "probes": {
-      "draft": "inaccessible_or_missing",
-      "game": "inaccessible_or_missing",
-      "replay": "inaccessible_or_missing"
+      "draft": "catalog_unavailable",
+      "game": "catalog_unavailable",
+      "replay": "catalog_unavailable"
     },
     "source_selection": {
       "bulk_available": [],

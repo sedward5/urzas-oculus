@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-24T12:49:54.143698+00:00",
+  "generated_at": "2026-11-24T17:39:42.895715+00:00",
   "sets": [
     {
       "code": "MDD",
@@ -204,13 +204,13 @@
       "local_reviewed_cards": "present",
       "acquisition": {
         "status": "acquired",
-        "generated_at": "2026-11-24T04:04:51.827661+00:00",
+        "generated_at": "2026-11-24T17:39:40.275740+00:00",
         "manifest_present": true,
         "card_file_present": true,
         "card_record_count": 193,
         "manifest_status": {
           "scryfall": "acquired",
-          "17lands": "not_yet_published",
+          "17lands": "unavailable",
           "wizards": "evidence_acquired_unreviewed"
         }
       },
@@ -6853,11 +6853,22 @@
     {
       "workflow": "acquire-set-data-bundle.yml",
       "name": "Acquire Set Data (Recommended)",
-      "run_number": 14,
+      "run_number": 15,
       "status": "in_progress",
       "conclusion": null,
+      "created_at": "2026-11-24T17:39:33Z",
+      "updated_at": "2026-11-24T17:39:37Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45450991147",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 14,
+      "status": "completed",
+      "conclusion": "success",
       "created_at": "2026-11-24T12:49:35Z",
-      "updated_at": "2026-11-24T12:49:39Z",
+      "updated_at": "2026-11-24T12:50:04Z",
       "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45397267556",
       "event": "workflow_dispatch"
     },
@@ -6892,17 +6903,6 @@
       "created_at": "2026-11-24T02:40:08Z",
       "updated_at": "2026-11-24T02:40:24Z",
       "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45314069984",
-      "event": "workflow_dispatch"
-    },
-    {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 10,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-24T02:39:57Z",
-      "updated_at": "2026-11-24T02:40:25Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45314046880",
       "event": "workflow_dispatch"
     },
     {
