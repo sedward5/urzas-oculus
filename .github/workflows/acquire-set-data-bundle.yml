@@ -31,7 +31,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python3 -m unittest scripts.test_set_catalog
+      - run: python3 -m unittest scripts.test_set_catalog scripts.test_build_ops_inventory
       - name: Acquire source bundle
         env:
           SET_CODE: ${{ inputs.set_code || 'TRK' }}
@@ -91,6 +91,29 @@ jobs:
             cp set-acquisition-output/wizards/guide-evidence.json "website/static/data/sets/${SET_CODE}/wizards/"
           fi
           cp set-acquisition-output/manifest.json "website/static/data/sets/${SET_CODE}/"
+      - name: Rebuild ops inventory from the existing set catalog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          # Reuse the checked-in catalog snapshot. Acquisition must not trigger
+          # a separate Scryfall/17Lands discovery pass.
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          source = Path("website/static/data/ops/limited-sets.json")
+          report = json.loads(source.read_text(encoding="utf-8"))
+          report["generated_at"] = datetime.now(timezone.utc).isoformat()
+          Path("/tmp/ops-inventory-input.json").write_text(
+              json.dumps(report, indent=2, ensure_ascii=False) + "\n",
+              encoding="utf-8",
+          )
+          PY
+          python3 scripts/build_ops_inventory.py \
+            --discovery /tmp/ops-inventory-input.json \
+            --output website/static/data/ops/limited-sets.json
       - name: Create or update data publication pull request
         uses: peter-evans/create-pull-request@v7
         with:
@@ -98,15 +121,18 @@ jobs:
           add-paths: |
             website/static/data/17lands/
             website/static/data/sets/${{ inputs.set_code || 'TRK' }}/
+            website/static/data/ops/limited-sets.json
           branch: data/17lands-${{ inputs.set_code || 'TRK' }}-${{ inputs.event_type || 'PremierDraft' }}
           base: main
           delete-branch: false
-          commit-message: "Publish ${{ inputs.set_code || 'TRK' }} set source data and permitted 17Lands archives"
-          title: "Publish ${{ inputs.set_code || 'TRK' }} set source data and permitted 17Lands archives"
+          commit-message: "Publish ${{ inputs.set_code || 'TRK' }} source data and refresh ops inventory"
+          title: "Publish ${{ inputs.set_code || 'TRK' }} set source data and refresh ops inventory"
           body: |
-            Automated publication of permitted set source data and official 17Lands public bulk archives.
+            Automated publication of permitted set source data, official 17Lands public bulk archives, and the refreshed operations inventory.
 
             - Scryfall card metadata and structured Wizards prerelease-guide evidence are included.
+            - The ops inventory is rebuilt from the existing checked-in set catalog plus all acquisition artifacts on the workflow's main-branch checkout.
+            - This does not run set discovery.
             - Full Wizards article HTML and downloaded images are not republished.
             - 17Lands API snapshots are never requested, retained, or published.
 
