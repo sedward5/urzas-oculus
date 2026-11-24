@@ -83,7 +83,7 @@ jobs:
           }
           destination.write_text(json.dumps(payload, indent=2) + "\n")
           PY
-          if find website/static/data/17lands -type f \\( -name 'card-data-all-time.json' -o -name 'trophy-decks.json' \\) | grep -q .; then
+          if find website/static/data/17lands -type f -name 'card-data-all-time.json' -o -type f -name 'trophy-decks.json' | grep -q .; then
             echo "Restricted 17Lands API snapshots remain in the public tree."
             exit 1
           fi
