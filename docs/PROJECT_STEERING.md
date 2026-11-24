@@ -122,3 +122,20 @@ A feature is complete when behavior is implemented, relevant tests pass, uncerta
 ## Published archetype catalog
 
 A manually dispatched Python stdlib workflow fetches the official HOB, ECL, or TDM Wizards Prerelease Guide and emits article provenance, unassigned card references, and preserved overview-image evidence. A separate, manually reviewed catalog records the overview-image archetype names, color identities, and concise strategy summaries. HOB and ECL each have five two-color archetypes. TDM has five three-color clan archetypes plus five overlapping two-color themes. Article heading extraction is diagnostic only; it does not define the taxonomy. OCR and automatic mana-symbol interpretation are not implemented. The reviewed card catalog contains 62 source-backed relationships across HOB (26), ECL (19), and TDM (17), all enriched with Scryfall identity and display metadata. Roles are Oculus editorial classifications (enabler, payoff, supporting), not Wizards terminology. TDM's guide does not supply equivalent card lists for all five two-color themes, so those relationships remain absent rather than inferred. The catalog is contextual metadata and does not currently affect recommendations or lane scoring.
+
+
+## Predictive Limited learning loop
+
+The goal is a reproducible, deterministic model that can be applied to any Limited set, including sets with no performance data. 17Lands is an observation and evaluation source, not a prediction input. The model produces predictions from card/set information available at a declared cutoff, then compares those immutable predictions with later permitted observations.
+
+The learning loop: discover and acquire sources with provenance; run a pinned model version; preserve the input manifest, cutoff, configuration, and immutable output; acquire later 17Lands public bulk data separately; compare predictions with distinct outcome families; investigate large residuals; revise deterministic code/configuration with a new version; and replay that version across historical sets to measure gains and regressions. Human and LLM analysis may propose explanations and hypotheses, but cannot directly mutate predictions or silently change scoring rules.
+
+Historical sets are retrospective experiments, not pre-release predictions. Every run declares a source cutoff. A source published after that cutoff cannot be represented as pre-release knowledge. Keep calibration observations separate from held-out evaluation observations to avoid leakage. Pick behavior, play rate, and game performance remain separate metrics with scope, sample counts, coverage, and missingness. Copy-weighted observations are not independent games. No single 17Lands statistic is a ground-truth grade.
+
+Rarity is retained as source metadata only. It is prohibited as a card-strength, archetype-fit, or pick-preference feature. It may be used for set-distribution analysis only.
+
+## Operations console
+
+The unlinked `/ops` page is a static, read-only presentation surface, not a security boundary. It shows discovered Limited sets, release ordering, Scryfall acquisition manifests, Wizards guide source/search, archetype overview-image metadata, public 17Lands archive availability/freshness, prediction snapshots/model versions, and recent GitHub Actions runs. Workflow actions link to GitHub, where authentication and repository permissions remain authoritative.
+
+Discovery publishes a versioned inventory JSON artifact. It may query public GitHub Actions run-history metadata using its workflow token, but it must not query 17Lands analytics APIs. The page is excluded from site navigation and declares `noindex,nofollow`; obscurity is convenience, not access control.
