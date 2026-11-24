@@ -19,7 +19,7 @@ function hasProgress(s){
  return Boolean(
  a.card_file_present||a.manifest_present||a.status==="acquired"||
  (g.status&&g.status!=="search_available")||
- s.local_archetypes==="present"||s.archetype_page?.status||
+ s.local_archetypes==="present"||(s.archetype_page?.status&&s.archetype_page.status!=="missing")||
  img.status==="present"||
  events.length||(p.artifacts||[]).length||p.status==="available"
  );
