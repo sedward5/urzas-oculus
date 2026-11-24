@@ -2,18 +2,18 @@
   "schema_version": 1,
   "set_code": "HOB",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T18:53:17.737578+00:00",
+  "generated_at": "2026-11-24T22:08:22.622314+00:00",
   "files": [
     {
       "path": "scryfall/hob-cards.json",
-      "bytes": 1292177,
-      "sha256": "e8423b5c0e082fe7ecefead01157e12a61e667a9f2a503ae55d0daf9087ecd3b",
+      "bytes": 1292176,
+      "sha256": "028c68642dd9916d3178aec737a4aeec39e9733c7f349e87c7eb7b432f5b2f4c",
       "records": 193
     },
     {
       "path": "wizards/guide-evidence.json",
       "bytes": 12513,
-      "sha256": "4102048b536dc6a1171929ce8317c3b2750c79fe26b3136a29364eb106adcc3f"
+      "sha256": "97f9a0e45cf1e523f1eeee3dba7750a02a7f4c591af0ea8aadd8dfc7447397d7"
     }
   ],
   "status": {
