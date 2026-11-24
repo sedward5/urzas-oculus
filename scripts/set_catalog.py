@@ -255,7 +255,7 @@ def acquire(code,event,guide,out):
         "source_selection":{"bulk_available":sorted(archives),
             "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
     required=("game",) if event in {"Sealed","TradSealed"} else ("draft","game")
-    if all(probes.get(kind)=="acquired" for kind in required): lands_status="acquired"
+    if all(probes.get(kind)=="acquired" for kind in required) and all(probes.get(kind) in {"acquired","not_listed"} for kind in ("draft","game","replay")): lands_status="acquired"
     elif archives: lands_status="partially_acquired"
     elif "download_failed" in probes.values(): lands_status="download_failed"
     elif catalog_status=="set_event_not_listed": lands_status="not_listed"
