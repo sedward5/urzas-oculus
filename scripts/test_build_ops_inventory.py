@@ -45,5 +45,28 @@ class OpsInventoryTests(unittest.TestCase):
             self.assertEqual(item["prediction"]["status"], "not_run")
             self.assertEqual(item["wizards_guide"]["status"], "search_available")
 
+    def test_recommends_refresh_when_public_listing_is_newer_than_local_acquisition(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            set_root = root / "website/static/data/sets/TRK"
+            set_root.mkdir(parents=True)
+            (set_root / "manifest.json").write_text(json.dumps({
+                "generated_at": "2026-11-01T12:00:00Z",
+                "event_type": "PremierDraft",
+                "status": {"scryfall": "acquired"}
+            }))
+            local_dir = root / "website/static/data/17lands/TRK/PremierDraft"
+            local_dir.mkdir(parents=True)
+            (local_dir / "draft.csv.gz").write_bytes(b"fixture")
+            report = {"sets": [{"code": "TRK", "name": "Star Trek", "17lands": [{
+                "event_type": "PremierDraft", "last_updated": "2026-11-20",
+                "archives": {"draft": "https://example.test/draft.csv.gz"}
+            }]}]}
+            result = build_ops_inventory.build_inventory(root, report, runs=[])
+            event = result["sets"][0]["17lands"][0]
+            self.assertTrue(event["refresh_recommended"])
+            self.assertEqual(event["refresh_reason"], "source listing is newer than the local acquisition")
+            self.assertEqual(event["days_since_update"], (build_ops_inventory.datetime.now(build_ops_inventory.timezone.utc).date() - build_ops_inventory.date(2026, 11, 20)).days)
+
 if __name__ == "__main__":
     unittest.main()
