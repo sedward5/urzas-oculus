@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "set_code": "HOB",
+  "event_type": "PremierDraft",
+  "generated_at": "2026-11-24T02:40:06.635843+00:00",
+  "archives": {},
+  "probes": {
+    "draft": "inaccessible_or_missing",
+    "game": "inaccessible_or_missing",
+    "replay": "inaccessible_or_missing"
+  }
+}
