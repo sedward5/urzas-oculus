@@ -181,14 +181,14 @@ def download_archive(url,path):
                 chunk=response.read(1024*1024)
                 if not chunk: break
                 output.write(chunk); digest.update(chunk); size+=len(chunk)
-        records=0
+        physical_lines=0
         with gzip.open(path,"rb") as archive:
             while True:
                 chunk=archive.read(1024*1024)
                 if not chunk: break
-                records += chunk.count(b"\\n")
+                physical_lines += chunk.count(b"\\n")
         return {"url":url,"path":str(path),"bytes":size,"sha256":digest.hexdigest(),
-                "records_including_header":records,"gzip_valid":True}
+                "physical_lines":physical_lines,"gzip_valid":True}
     except Exception:
         path.unlink(missing_ok=True)
         raise
@@ -277,12 +277,14 @@ def acquire(code,event,guide,out):
         "catalog_error":catalog_error,"archives":archives,"probes":probes,
         "source_selection":{"bulk_available":sorted(archives),
             "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
-    required=("draft","game")
-    manifest["status"]["17lands"]=("acquired" if all(probes.get(k) in {"acquired","not_listed"} for k in required)
-        and any(k in archives for k in required) else
-        ("partially_acquired" if archives else
-         ("not_listed" if catalog_status=="set_event_not_listed" else
-          ("unavailable" if catalog_status=="unavailable" else "not_yet_published"))))
+    required=("game",) if event in {"Sealed","TradSealed"} else ("draft","game")
+    if all(probes.get(kind)=="acquired" for kind in required): lands_status="acquired"
+    elif archives: lands_status="partially_acquired"
+    elif "download_failed" in probes.values(): lands_status="download_failed"
+    elif catalog_status=="set_event_not_listed": lands_status="not_listed"
+    elif catalog_status=="unavailable": lands_status="unavailable"
+    else: lands_status="not_yet_published"
+    manifest["status"]["17lands"]=lands_status
     if guide:
         if not guide.startswith("https://magic.wizards.com/"): raise ValueError("Guide URL must use magic.wizards.com over HTTPS")
         raw=fetch(guide); p=GuideParser(); p.feed(raw.decode("utf-8",errors="replace"))
