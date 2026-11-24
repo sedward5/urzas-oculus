@@ -51,7 +51,16 @@ jobs:
           mkdir -p "$DEST"
           files=(set-acquisition-output/17lands/*.csv.gz)
           if [ ${#files[@]} -eq 0 ]; then
-            echo "No official 17Lands public bulk archives are available yet."
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          event = json.loads(Path("set-acquisition-output/manifest.json").read_text()).get("17lands", {})
+          print("17Lands catalog status:", event.get("catalog_status"))
+          if event.get("catalog_error"):
+              print("17Lands catalog diagnostic:", json.dumps(event["catalog_error"], sort_keys=True))
+          else:
+              print("The official catalog did not list archives for this set/event.")
+          PY
           else
             cp "${files[@]}" "$DEST/"
           fi
@@ -71,6 +80,9 @@ jobs:
               "generated_at": source.get("generated_at"),
               "archives": event.get("archives", {}),
               "probes": event.get("probes", {}),
+              "catalog_status": event.get("catalog_status"),
+              "catalog_last_updated": event.get("catalog_last_updated"),
+              "catalog_error": event.get("catalog_error"),
           }
           destination.write_text(json.dumps(payload, indent=2) + "\n")
           PY

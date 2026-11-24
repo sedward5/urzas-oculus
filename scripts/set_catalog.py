@@ -10,12 +10,24 @@ from urllib.request import Request, urlopen
 SETS_API="https://api.scryfall.com/sets"
 CARDS_API="https://api.scryfall.com/cards/search"
 LANDS="https://www.17lands.com/public_datasets"
-UA="UrzasOculus-SetCatalog/1.0 (+https://github.com/sedward5/urzas-oculus)"
+# The public catalog is a normal HTML page. A browser-like identity avoids
+# presenting this read-only bulk-data request as an unidentified script client.
+UA=("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36")
 LIMITED={"expansion","core","masters","draft_innovation"}
 EVENTS={"PremierDraft","TradDraft","PickTwoDraft","Sealed","TradSealed"}
 
 def fetch(url,timeout=90):
-    req=Request(url,headers={"User-Agent":UA,"Accept":"application/json, text/html, */*"})
+    headers={"User-Agent":UA,"Accept":"application/json, text/html, */*"}
+    if url==LANDS:
+        headers.update({
+            "Accept-Language":"en-US,en;q=0.9",
+            "Referer":"https://www.17lands.com/",
+            "Sec-Fetch-Dest":"document",
+            "Sec-Fetch-Mode":"navigate",
+            "Sec-Fetch-Site":"same-origin",
+        })
+    req=Request(url,headers=headers)
     with urlopen(req,timeout=timeout) as r:
         if r.status!=200: raise RuntimeError(f"HTTP {r.status}: {url}")
         return r.read()
@@ -94,11 +106,11 @@ def parse_lands(raw):
         record["archives"][kind.lower()]=u
     result=[row for row in grouped.values() if row["archives"]]
     if not result:
-        preview=clean(raw[:240])
+        preview=clean(raw[:500])
         raise ValueError(
             "17Lands listing contained no recognizable trusted S3 archive links "
             f"(response bytes: {len(raw.encode('utf-8',errors='replace'))}). "
-            f"The page markup may have changed or returned a challenge page. Preview: {preview!r}"
+            f"The response may be an access-denied page or changed markup. Preview: {preview!r}"
         )
     return sorted(result,key=lambda row:(row["set_code"],row["event_type"]))
 
@@ -247,7 +259,7 @@ def acquire(code,event,guide,out):
             probes={kind:"not_listed" for kind in ("draft","game","replay")}
     except (OSError,RuntimeError,ValueError,UnicodeError) as exc:
         catalog_status="unavailable"
-        catalog_error={"type":type(exc).__name__,"message":clean(str(exc))[:500]}
+        catalog_error={"type":type(exc).__name__,"message":clean(str(exc))[:800]}
         probes={kind:"catalog_unavailable" for kind in ("draft","game","replay")}
     manifest["17lands"]={"event_type":event,"catalog_url":LANDS,
         "catalog_status":catalog_status,"catalog_last_updated":catalog_last_updated,

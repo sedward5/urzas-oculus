@@ -6,6 +6,21 @@ import set_catalog
 
 class CatalogTests(unittest.TestCase):
 
+
+    def test_17lands_catalog_request_uses_browser_headers(self):
+        from unittest.mock import patch, MagicMock
+        response=MagicMock()
+        response.status=200
+        response.__enter__.return_value=response
+        response.read.return_value=b"<html></html>"
+        with patch.object(set_catalog,"urlopen",return_value=response) as mocked:
+            set_catalog.fetch(set_catalog.LANDS)
+        request=mocked.call_args.args[0]
+        self.assertIn("Mozilla/5.0",request.get_header("User-agent"))
+        self.assertEqual(request.get_header("Accept-language"),"en-US,en;q=0.9")
+        self.assertEqual(request.get_header("Referer"),"https://www.17lands.com/")
+        self.assertEqual(request.get_header("Sec-fetch-mode"),"navigate")
+
     def test_catalog_discovery_includes_hob_ecl_and_tdm(self):
         html="""<table>
         <tr><td>HOB</td><td>PremierDraft</td><td>2026-08-30</td>
