@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-24T01:48:56.538545+00:00",
+  "generated_at": "2026-11-24T12:49:54.143698+00:00",
   "sets": [
     {
       "code": "MDD",
@@ -18,6 +18,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -32,6 +33,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -50,6 +55,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -64,6 +70,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -82,12 +92,12 @@
         "generated_at": "2026-11-23T22:42:37.611041+00:00",
         "manifest_present": true,
         "card_file_present": true,
+        "card_record_count": 311,
         "manifest_status": {
           "scryfall": "acquired",
           "17lands": "not_yet_published",
           "wizards": "not_requested"
-        },
-        "card_record_count": 311
+        }
       },
       "archetype_image": {
         "status": "present",
@@ -123,6 +133,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -137,6 +148,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -155,6 +170,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -169,6 +185,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -183,11 +203,16 @@
       "local_archetypes": "present",
       "local_reviewed_cards": "present",
       "acquisition": {
-        "status": "not_run",
-        "generated_at": null,
-        "manifest_present": false,
-        "card_file_present": false,
-        "manifest_status": {}
+        "status": "acquired",
+        "generated_at": "2026-11-24T04:04:51.827661+00:00",
+        "manifest_present": true,
+        "card_file_present": true,
+        "card_record_count": 193,
+        "manifest_status": {
+          "scryfall": "acquired",
+          "17lands": "not_yet_published",
+          "wizards": "evidence_acquired_unreviewed"
+        }
       },
       "archetype_image": {
         "status": "present",
@@ -223,6 +248,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -237,6 +263,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -255,6 +285,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -269,6 +300,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -287,6 +322,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -301,6 +337,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -315,11 +355,16 @@
       "local_archetypes": "present",
       "local_reviewed_cards": "present",
       "acquisition": {
-        "status": "not_run",
-        "generated_at": null,
-        "manifest_present": false,
-        "card_file_present": false,
-        "manifest_status": {}
+        "status": "acquired",
+        "generated_at": "2026-11-24T02:40:14.554581+00:00",
+        "manifest_present": true,
+        "card_file_present": true,
+        "card_record_count": 273,
+        "manifest_status": {
+          "scryfall": "acquired",
+          "17lands": "not_yet_published",
+          "wizards": "evidence_acquired_unreviewed"
+        }
       },
       "archetype_image": {
         "status": "present",
@@ -355,6 +400,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -369,6 +415,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -387,6 +437,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -401,6 +452,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -419,6 +474,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -433,6 +489,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -451,6 +511,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -465,6 +526,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -479,11 +544,16 @@
       "local_archetypes": "present",
       "local_reviewed_cards": "present",
       "acquisition": {
-        "status": "not_run",
-        "generated_at": null,
-        "manifest_present": false,
-        "card_file_present": false,
-        "manifest_status": {}
+        "status": "acquired",
+        "generated_at": "2026-11-24T12:49:49.827790+00:00",
+        "manifest_present": true,
+        "card_file_present": true,
+        "card_record_count": 276,
+        "manifest_status": {
+          "scryfall": "acquired",
+          "17lands": "not_yet_published",
+          "wizards": "evidence_acquired_unreviewed"
+        }
       },
       "archetype_image": {
         "status": "present",
@@ -519,6 +589,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -533,6 +604,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -551,6 +626,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -565,6 +641,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -583,6 +663,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -597,6 +678,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -615,6 +700,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -629,6 +715,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -647,6 +737,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -661,6 +752,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -679,6 +774,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -693,6 +789,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -711,6 +811,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -725,6 +826,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -743,6 +848,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -757,6 +863,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -775,6 +885,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -789,6 +900,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -807,6 +922,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -821,6 +937,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -839,6 +959,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -853,6 +974,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -871,6 +996,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -885,6 +1011,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -903,6 +1033,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -917,6 +1048,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -935,6 +1070,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -949,6 +1085,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -967,6 +1107,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -981,6 +1122,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -999,6 +1144,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1013,6 +1159,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1031,6 +1181,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1045,6 +1196,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1063,6 +1218,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1077,6 +1233,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1095,6 +1255,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1109,6 +1270,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1127,6 +1292,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1141,6 +1307,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1159,6 +1329,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1173,6 +1344,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1191,6 +1366,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1205,6 +1381,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1223,6 +1403,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1237,6 +1418,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1255,6 +1440,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1269,6 +1455,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1287,6 +1477,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1301,6 +1492,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1319,6 +1514,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1333,6 +1529,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1351,6 +1551,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1365,6 +1566,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1383,6 +1588,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1397,6 +1603,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1415,6 +1625,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1429,6 +1640,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1447,6 +1662,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1461,6 +1677,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1479,6 +1699,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1493,6 +1714,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1511,6 +1736,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1525,6 +1751,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1543,6 +1773,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1557,6 +1788,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1575,6 +1810,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1589,6 +1825,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1607,6 +1847,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1621,6 +1862,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1639,6 +1884,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1653,6 +1899,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1671,6 +1921,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1685,6 +1936,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1703,6 +1958,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1717,6 +1973,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1735,6 +1995,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1749,6 +2010,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1767,6 +2032,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1781,6 +2047,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1799,6 +2069,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1813,6 +2084,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1831,6 +2106,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1845,6 +2121,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1863,6 +2143,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1877,6 +2158,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1895,6 +2180,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1909,6 +2195,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1927,6 +2217,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1941,6 +2232,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1959,6 +2254,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -1973,6 +2269,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -1991,6 +2291,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2005,6 +2306,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2023,6 +2328,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2037,6 +2343,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2055,6 +2365,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2069,6 +2380,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2087,6 +2402,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2101,6 +2417,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2119,6 +2439,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2133,6 +2454,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2151,6 +2476,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2165,6 +2491,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2183,6 +2513,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2197,6 +2528,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2215,6 +2550,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2229,6 +2565,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2247,6 +2587,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2261,6 +2602,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2279,6 +2624,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2293,6 +2639,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2311,6 +2661,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2325,6 +2676,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2343,6 +2698,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2357,6 +2713,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2375,6 +2735,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2389,6 +2750,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2407,6 +2772,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2421,6 +2787,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2439,6 +2809,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2453,6 +2824,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2471,6 +2846,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2485,6 +2861,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2503,6 +2883,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2517,6 +2898,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2535,6 +2920,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2549,6 +2935,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2567,6 +2957,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2581,6 +2972,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2599,6 +2994,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2613,6 +3009,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2631,6 +3031,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2645,6 +3046,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2663,6 +3068,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2677,6 +3083,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2695,6 +3105,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2709,6 +3120,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2727,6 +3142,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2741,6 +3157,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2759,6 +3179,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2773,6 +3194,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2791,6 +3216,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2805,6 +3231,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2823,6 +3253,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2837,6 +3268,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2855,6 +3290,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2869,6 +3305,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2887,6 +3327,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2901,6 +3342,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2919,6 +3364,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2933,6 +3379,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2951,6 +3401,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2965,6 +3416,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -2983,6 +3438,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -2997,6 +3453,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3015,6 +3475,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3029,6 +3490,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3047,6 +3512,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3061,6 +3527,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3079,6 +3549,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3093,6 +3564,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3111,6 +3586,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3125,6 +3601,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3143,6 +3623,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3157,6 +3638,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3175,6 +3660,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3189,6 +3675,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3207,6 +3697,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3221,6 +3712,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3239,6 +3734,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3253,6 +3749,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3271,6 +3771,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3285,6 +3786,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3303,6 +3808,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3317,6 +3823,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3335,6 +3845,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3349,6 +3860,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3367,6 +3882,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3381,6 +3897,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3399,6 +3919,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3413,6 +3934,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3431,6 +3956,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3445,6 +3971,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3463,6 +3993,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3477,6 +4008,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3495,6 +4030,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3509,6 +4045,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3527,6 +4067,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3541,6 +4082,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3559,6 +4104,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3573,6 +4119,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3591,6 +4141,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3605,6 +4156,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3623,6 +4178,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3637,6 +4193,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3655,6 +4215,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3669,6 +4230,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3687,6 +4252,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3701,6 +4267,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3719,6 +4289,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3733,6 +4304,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3751,6 +4326,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3765,6 +4341,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3783,6 +4363,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3797,6 +4378,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3815,6 +4400,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3829,6 +4415,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3847,6 +4437,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3861,6 +4452,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3879,6 +4474,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3893,6 +4489,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3911,6 +4511,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3925,6 +4526,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3943,6 +4548,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3957,6 +4563,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -3975,6 +4585,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -3989,6 +4600,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4007,6 +4622,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4021,6 +4637,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4039,6 +4659,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4053,6 +4674,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4071,6 +4696,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4085,6 +4711,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4103,6 +4733,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4117,6 +4748,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4135,6 +4770,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4149,6 +4785,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4167,6 +4807,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4181,6 +4822,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4199,6 +4844,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4213,6 +4859,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4231,6 +4881,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4245,6 +4896,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4263,6 +4918,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4277,6 +4933,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4295,6 +4955,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4309,6 +4970,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4327,6 +4992,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4341,6 +5007,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4359,6 +5029,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4373,6 +5044,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4391,6 +5066,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4405,6 +5081,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4423,6 +5103,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4437,6 +5118,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4455,6 +5140,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4469,6 +5155,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4487,6 +5177,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4501,6 +5192,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4519,6 +5214,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4533,6 +5229,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4551,6 +5251,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4565,6 +5266,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4583,6 +5288,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4597,6 +5303,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4615,6 +5325,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4629,6 +5340,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4647,6 +5362,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4661,6 +5377,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4679,6 +5399,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4693,6 +5414,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4711,6 +5436,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4725,6 +5451,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4743,6 +5473,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4757,6 +5488,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4775,6 +5510,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4789,6 +5525,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4807,6 +5547,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4821,6 +5562,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4839,6 +5584,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4853,6 +5599,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4871,6 +5621,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4885,6 +5636,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4903,6 +5658,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4917,6 +5673,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4935,6 +5695,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4949,6 +5710,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4967,6 +5732,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -4981,6 +5747,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -4999,6 +5769,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5013,6 +5784,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5031,6 +5806,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5045,6 +5821,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5063,6 +5843,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5077,6 +5858,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5095,6 +5880,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5109,6 +5895,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5127,6 +5917,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5141,6 +5932,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5159,6 +5954,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5173,6 +5969,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5191,6 +5991,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5205,6 +6006,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5223,6 +6028,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5237,6 +6043,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5255,6 +6065,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5269,6 +6080,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5287,6 +6102,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5301,6 +6117,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5319,6 +6139,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5333,6 +6154,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5351,6 +6176,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5365,6 +6191,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5383,6 +6213,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5397,6 +6228,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5415,6 +6250,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5429,6 +6265,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5447,6 +6287,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5461,6 +6302,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5479,6 +6324,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5493,6 +6339,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5511,6 +6361,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5525,6 +6376,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5543,6 +6398,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5557,6 +6413,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5575,6 +6435,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5589,6 +6450,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5607,6 +6472,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5621,6 +6487,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5639,6 +6509,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5653,6 +6524,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5671,6 +6546,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5685,6 +6561,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5703,6 +6583,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5717,6 +6598,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5735,6 +6620,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5749,6 +6635,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5767,6 +6657,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5781,6 +6672,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5799,6 +6694,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5813,6 +6709,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5831,6 +6731,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5845,6 +6746,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5863,6 +6768,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5877,6 +6783,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     },
     {
@@ -5895,6 +6805,7 @@
         "generated_at": null,
         "manifest_present": false,
         "card_file_present": false,
+        "card_record_count": null,
         "manifest_status": {}
       },
       "archetype_image": {
@@ -5909,6 +6820,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "missing",
+        "url": null
       }
     }
   ],
@@ -5936,13 +6851,68 @@
   },
   "workflow_runs": [
     {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 14,
+      "status": "in_progress",
+      "conclusion": null,
+      "created_at": "2026-11-24T12:49:35Z",
+      "updated_at": "2026-11-24T12:49:39Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45397267556",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 13,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-24T04:04:36Z",
+      "updated_at": "2026-11-24T04:05:05Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45323832133",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 12,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-24T02:40:20Z",
+      "updated_at": "2026-11-24T02:40:41Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45314094038",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 11,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-24T02:40:08Z",
+      "updated_at": "2026-11-24T02:40:24Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45314069984",
+      "event": "workflow_dispatch"
+    },
+    {
+      "workflow": "acquire-set-data-bundle.yml",
+      "name": "Acquire Set Data (Recommended)",
+      "run_number": 10,
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-11-24T02:39:57Z",
+      "updated_at": "2026-11-24T02:40:25Z",
+      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45314046880",
+      "event": "workflow_dispatch"
+    },
+    {
       "workflow": "discover-limited-sets.yml",
       "name": "Discover Limited Sets and Refresh Ops Inventory",
       "run_number": 6,
-      "status": "in_progress",
-      "conclusion": null,
+      "status": "completed",
+      "conclusion": "success",
       "created_at": "2026-11-24T01:48:48Z",
-      "updated_at": "2026-11-24T01:48:52Z",
+      "updated_at": "2026-11-24T01:49:06Z",
       "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45307796858",
       "event": "workflow_dispatch"
     },
@@ -5969,17 +6939,6 @@
       "event": "workflow_dispatch"
     },
     {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 9,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-23T22:42:30Z",
-      "updated_at": "2026-11-23T22:42:51Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45282219746",
-      "event": "schedule"
-    },
-    {
       "workflow": "discover-limited-sets.yml",
       "name": "Optional - Discover Limited Sets (Read-only)",
       "run_number": 3,
@@ -5989,50 +6948,6 @@
       "updated_at": "2026-11-23T22:06:23Z",
       "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45276353865",
       "event": "schedule"
-    },
-    {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 8,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-23T12:39:41Z",
-      "updated_at": "2026-11-23T12:40:00Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45176411728",
-      "event": "workflow_dispatch"
-    },
-    {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 7,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-23T05:09:26Z",
-      "updated_at": "2026-11-23T05:09:45Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45115999207",
-      "event": "workflow_dispatch"
-    },
-    {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 6,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-23T05:00:19Z",
-      "updated_at": "2026-11-23T05:00:36Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45115100848",
-      "event": "workflow_dispatch"
-    },
-    {
-      "workflow": "acquire-set-data-bundle.yml",
-      "name": "Acquire Set Data (Recommended)",
-      "run_number": 5,
-      "status": "completed",
-      "conclusion": "success",
-      "created_at": "2026-11-23T04:36:01Z",
-      "updated_at": "2026-11-23T04:36:29Z",
-      "html_url": "https://github.com/sedward5/urzas-oculus/actions/runs/45112820815",
-      "event": "workflow_dispatch"
     },
     {
       "workflow": "discover-limited-sets.yml",
