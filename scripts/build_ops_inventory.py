@@ -80,6 +80,9 @@ def build_inventory(root, discovered=None, runs=None):
             "artifacts": prediction_files}
         for event in item.get("17lands", []):
             local_dir = root / "website" / "static" / "data" / "17lands" / code / event["event_type"]
+            event_manifest = read_json(local_dir / "manifest.json")
+            if not event_manifest and manifest.get("event_type") == event["event_type"]:
+                event_manifest = manifest
             local = sorted(path.name for path in local_dir.glob("*.csv.gz")) if local_dir.is_dir() else []
             event["local_archives"] = local
             raw_date = (event.get("last_updated") or "")[:10]
@@ -90,7 +93,7 @@ def build_inventory(root, discovered=None, runs=None):
             except ValueError:
                 event["last_updated_date"] = None
                 event["days_since_update"] = None
-            acquired_at = manifest.get("generated_at") if manifest.get("event_type") == event["event_type"] else None
+            acquired_at = event_manifest.get("generated_at")
             acquired_date = acquired_at[:10] if acquired_at else None
             source_is_newer = bool(event["last_updated_date"] and acquired_date
                 and event["last_updated_date"] > acquired_date)
