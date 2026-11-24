@@ -53,7 +53,7 @@ class OpsInventoryTests(unittest.TestCase):
             page = root / "website/content/archetypes/trk"
             page.mkdir(parents=True)
             (page / "_index.md").write_text(
-                '---\\ncontent_status: "preliminary"\\nevidence_path: "static/data/sets/TRK/wizards/guide-evidence.json"\\n---\\n')
+                '---\ncontent_status: "preliminary"\nevidence_path: "static/data/sets/TRK/wizards/guide-evidence.json"\n---\n')
             report = {"sets": [{"code": "TRK", "name": "Star Trek", "17lands": []}]}
             item = build_ops_inventory.build_inventory(root, report, runs=[])["sets"][0]
             self.assertEqual(item["acquisition"]["card_record_count"], 311)
