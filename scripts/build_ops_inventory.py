@@ -27,12 +27,12 @@ def read_front_matter(path):
         content = path.read_text(encoding="utf-8")
     except OSError:
         return {}
-    match = __import__("re").match(r"^---\\s*\\n(.*?)\\n---", content, __import__("re").S)
+    match = re.match(r"^---\\s*\\n(.*?)\\n---", content, re.S)
     if not match:
         return {}
     values = {}
     for key in ("content_status", "evidence_path", "source_url"):
-        found = __import__("re").search(rf"(?m)^{key}:\\s*[\\"']?([^\\"'\\n]+)", match.group(1))
+        found = re.search(rf"(?m)^{key}:\\s*['\\"]?([^'\\"]+)", match.group(1))
         if found:
             values[key] = found.group(1).strip()
     return values
