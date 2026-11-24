@@ -86,20 +86,25 @@
           "scryfall": "acquired",
           "17lands": "not_yet_published",
           "wizards": "not_requested"
-        }
+        },
+        "card_record_count": 311
       },
       "archetype_image": {
-        "status": "missing",
-        "url": null,
-        "review_status": null
+        "status": "present",
+        "url": "https://media.wizards.com/2026/images/daily/placeholder.jpg",
+        "review_status": "source_evidence_only_not_reviewed"
       },
       "wizards_guide": {
-        "status": "search_available",
-        "url": "https://magic.wizards.com/en/search?search=Star%20Trek%20prerelease%20guide"
+        "status": "found_in_acquisition_evidence",
+        "url": "https://magic.wizards.com/en/news/feature/star-trek-prerelease-guide"
       },
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "preliminary",
+        "url": "/archetypes/trk/"
       }
     },
     {
@@ -196,6 +201,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "reviewed",
+        "url": "/archetypes/hob/"
       }
     },
     {
@@ -324,6 +333,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "reviewed",
+        "url": "/archetypes/ecl/"
       }
     },
     {
@@ -484,6 +497,10 @@
       "prediction": {
         "status": "not_run",
         "artifacts": []
+      },
+      "archetype_page": {
+        "status": "reviewed",
+        "url": "/archetypes/tdm/"
       }
     },
     {
