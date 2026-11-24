@@ -1,6 +1,6 @@
 {
   "set_code": "TDM",
-  "retrieved_at": "2026-11-24T12:49:49.827790+00:00",
+  "retrieved_at": "2026-11-24T17:46:33.495978+00:00",
   "source": "https://api.scryfall.com/cards/search",
   "cards": [
     {
@@ -118,10 +118,10 @@
       "story_spotlight": false,
       "edhrec_rank": 1634,
       "prices": {
-        "usd": "39.72",
-        "usd_foil": "45.77",
+        "usd": "39.80",
+        "usd_foil": "45.75",
         "usd_etched": null,
-        "eur": "42.97",
+        "eur": "42.74",
         "eur_foil": "50.23",
         "tix": "9.16"
       },
@@ -279,13 +279,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7610,
+      "edhrec_rank": 7608,
       "penny_rank": 16671,
       "prices": {
-        "usd": "0.27",
+        "usd": "0.28",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.20",
+        "eur": "0.21",
         "eur_foil": "0.33",
         "tix": "0.02"
       },
@@ -416,7 +416,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21711,
+      "edhrec_rank": 21713,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.14",
@@ -552,7 +552,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23144,
+      "edhrec_rank": 23139,
       "prices": {
         "usd": "0.07",
         "usd_foil": "0.14",
@@ -691,13 +691,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6200,
+      "edhrec_rank": 6202,
       "prices": {
-        "usd": "4.03",
+        "usd": "4.09",
         "usd_foil": "4.29",
         "usd_etched": null,
-        "eur": "2.96",
-        "eur_foil": "3.25",
+        "eur": "3.01",
+        "eur_foil": "3.43",
         "tix": "0.39"
       },
       "related_uris": {
@@ -825,7 +825,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11323,
+      "edhrec_rank": 11327,
       "penny_rank": 12114,
       "preview": {
         "source": "Geekculture",
@@ -989,7 +989,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5841,
+      "edhrec_rank": 5849,
       "preview": {
         "source": "Good Games Morley",
         "source_uri": "https://www.tiktok.com/@goodgamesmorley/video/7483837653415251207",
@@ -1000,7 +1000,7 @@
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.18",
-        "eur_foil": "0.42",
+        "eur_foil": "0.21",
         "tix": "0.03"
       },
       "related_uris": {
@@ -1151,7 +1151,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18089,
+      "edhrec_rank": 18092,
       "penny_rank": 722,
       "preview": {
         "source": "Wizards of the Coast",
@@ -1159,7 +1159,7 @@
         "previewed_at": "2025-03-20"
       },
       "prices": {
-        "usd": "0.23",
+        "usd": "0.24",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.12",
@@ -1315,7 +1315,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12812,
+      "edhrec_rank": 12815,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.34",
@@ -1448,10 +1448,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2165,
+      "edhrec_rank": 2168,
       "penny_rank": 15800,
       "prices": {
-        "usd": "0.29",
+        "usd": "0.30",
         "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.26",
@@ -1602,13 +1602,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 624,
+      "edhrec_rank": 625,
       "prices": {
-        "usd": "52.79",
-        "usd_foil": "56.55",
+        "usd": "52.83",
+        "usd_foil": "56.20",
         "usd_etched": null,
-        "eur": "40.95",
-        "eur_foil": "38.72",
+        "eur": "41.66",
+        "eur_foil": "39.29",
         "tix": "0.65"
       },
       "related_uris": {
@@ -1759,7 +1759,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16445,
+      "edhrec_rank": 16447,
       "penny_rank": 13241,
       "preview": {
         "source": "Polygon",
@@ -1770,7 +1770,7 @@
         "usd": "0.15",
         "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.03",
         "eur_foil": "0.09",
         "tix": "0.03"
       },
@@ -1901,7 +1901,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22970,
+      "edhrec_rank": 22968,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.25",
@@ -2035,7 +2035,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10032,
+      "edhrec_rank": 10036,
       "penny_rank": 11914,
       "preview": {
         "source": "Wizards of the Coast",
@@ -2177,7 +2177,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18617,
+      "edhrec_rank": 18616,
       "preview": {
         "source": "Gamerbraves",
         "source_uri": "https://www.gamerbraves.com/counter-by-counter-loxodon-battle-priest-joins-mtg-tarkir-dragonstorm/",
@@ -2328,7 +2328,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14045,
+      "edhrec_rank": 14053,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/magic-the-gathering-tarkir-dragonstorm-spoilers-reveal",
@@ -2468,11 +2468,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17228,
+      "edhrec_rank": 17224,
       "penny_rank": 10992,
       "prices": {
         "usd": "0.17",
-        "usd_foil": "0.24",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.11",
@@ -2609,7 +2609,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18934,
+      "edhrec_rank": 18935,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.18",
@@ -2760,7 +2760,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 12352,
+      "edhrec_rank": 12354,
       "penny_rank": 2084,
       "preview": {
         "source": "Wizards of the Coast",
@@ -2768,7 +2768,7 @@
         "previewed_at": "2025-03-04"
       },
       "prices": {
-        "usd": "0.26",
+        "usd": "0.25",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.12",
@@ -2900,14 +2900,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9291,
+      "edhrec_rank": 9289,
       "preview": {
         "source": "yystv",
         "source_uri": "https://www.yystv.cn/n/1007855",
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.24",
+        "usd": "0.25",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.07",
@@ -3247,7 +3247,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12598,
+      "edhrec_rank": 12600,
       "penny_rank": 5251,
       "preview": {
         "source": "TCGplayer",
@@ -3255,11 +3255,11 @@
         "previewed_at": "2025-03-25"
       },
       "prices": {
-        "usd": "0.83",
-        "usd_foil": "0.75",
+        "usd": "0.74",
+        "usd_foil": "0.79",
         "usd_etched": null,
-        "eur": "0.50",
-        "eur_foil": "0.59",
+        "eur": "0.51",
+        "eur_foil": "0.58",
         "tix": "0.02"
       },
       "related_uris": {
@@ -3394,11 +3394,11 @@
       "edhrec_rank": 16766,
       "penny_rank": 9786,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.19",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.21",
+        "eur": "0.10",
+        "eur_foil": "0.17",
         "tix": "0.03"
       },
       "related_uris": {
@@ -3531,7 +3531,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3517,
+      "edhrec_rank": 3525,
       "penny_rank": 12004,
       "preview": {
         "source": "Wizards of the Coast",
@@ -3542,8 +3542,8 @@
         "usd": "3.70",
         "usd_foil": "3.82",
         "usd_etched": null,
-        "eur": "2.79",
-        "eur_foil": "3.47",
+        "eur": "2.71",
+        "eur_foil": "3.28",
         "tix": "0.25"
       },
       "related_uris": {
@@ -3675,7 +3675,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8204,
+      "edhrec_rank": 8208,
       "prices": {
         "usd": "0.28",
         "usd_foil": "0.31",
@@ -3813,7 +3813,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16294,
+      "edhrec_rank": 16300,
       "penny_rank": 9523,
       "preview": {
         "source": "Wizards of the Coast",
@@ -3955,12 +3955,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12291,
+      "edhrec_rank": 12299,
       "prices": {
         "usd": "0.31",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.12",
         "eur_foil": "0.12",
         "tix": "0.03"
       },
@@ -4092,7 +4092,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 14631,
+      "edhrec_rank": 14638,
       "penny_rank": 13034,
       "preview": {
         "source": "Wizards of the Coast",
@@ -4103,7 +4103,7 @@
         "usd": "0.20",
         "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -4236,7 +4236,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12663,
+      "edhrec_rank": 12683,
       "penny_rank": 4382,
       "preview": {
         "source": "Wizards of the Coast",
@@ -4244,7 +4244,7 @@
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "0.32",
+        "usd": "0.31",
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.36",
@@ -4397,7 +4397,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17066,
+      "edhrec_rank": 17061,
       "penny_rank": 9805,
       "preview": {
         "source": "iYingdi",
@@ -4405,7 +4405,7 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.22",
+        "usd": "0.19",
         "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.10",
@@ -4540,7 +4540,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11474,
+      "edhrec_rank": 11480,
       "penny_rank": 12029,
       "preview": {
         "source": "Polygon",
@@ -4548,10 +4548,10 @@
         "previewed_at": "2025-03-19"
       },
       "prices": {
-        "usd": "0.47",
-        "usd_foil": "1.28",
+        "usd": "0.48",
+        "usd_foil": "1.31",
         "usd_etched": null,
-        "eur": "0.28",
+        "eur": "0.29",
         "eur_foil": "0.32",
         "tix": "0.03"
       },
@@ -4681,7 +4681,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 14200,
+      "edhrec_rank": 14198,
       "penny_rank": 834,
       "preview": {
         "source": "Wizards of the Coast",
@@ -4847,11 +4847,11 @@
       "story_spotlight": false,
       "edhrec_rank": 481,
       "prices": {
-        "usd": "18.73",
-        "usd_foil": "18.60",
+        "usd": "18.31",
+        "usd_foil": "18.69",
         "usd_etched": null,
-        "eur": "19.51",
-        "eur_foil": "23.82",
+        "eur": "19.73",
+        "eur_foil": "23.78",
         "tix": "7.59"
       },
       "related_uris": {
@@ -4983,7 +4983,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21955,
+      "edhrec_rank": 21952,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.21",
@@ -5121,12 +5121,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21944,
+      "edhrec_rank": 21937,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.17",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.05",
         "eur_foil": "0.10",
         "tix": "0.03"
       },
@@ -5260,7 +5260,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21924,
+      "edhrec_rank": 21911,
       "prices": {
         "usd": "0.07",
         "usd_foil": "0.14",
@@ -5398,7 +5398,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14228,
+      "edhrec_rank": 14238,
       "penny_rank": 12371,
       "preview": {
         "source": "Wizards of the Coast",
@@ -5681,7 +5681,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21620,
+      "edhrec_rank": 21616,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.20",
@@ -5841,10 +5841,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9488,
+      "edhrec_rank": 9494,
       "penny_rank": 4217,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.19",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.09",
@@ -5980,8 +5980,8 @@
       "edhrec_rank": 8839,
       "penny_rank": 2076,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.26",
+        "usd": "0.26",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.06",
         "eur_foil": "0.20",
@@ -6114,7 +6114,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6173,
+      "edhrec_rank": 6181,
       "penny_rank": 6009,
       "preview": {
         "source": "HamHocks42",
@@ -6123,7 +6123,7 @@
       },
       "prices": {
         "usd": "0.53",
-        "usd_foil": "5.49",
+        "usd_foil": "5.76",
         "usd_etched": null,
         "eur": "0.26",
         "eur_foil": "0.54",
@@ -6282,7 +6282,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20303,
+      "edhrec_rank": 20308,
       "penny_rank": 9710,
       "preview": {
         "source": "mxdwn",
@@ -6441,12 +6441,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8544,
+      "edhrec_rank": 8548,
       "prices": {
-        "usd": "0.23",
+        "usd": "0.24",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.09",
         "eur_foil": "0.14",
         "tix": "0.03"
       },
@@ -6575,13 +6575,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9544,
+      "edhrec_rank": 9551,
       "penny_rank": 12487,
       "prices": {
-        "usd": "0.28",
+        "usd": "0.27",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.12",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -6716,7 +6716,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12671,
+      "edhrec_rank": 12678,
       "penny_rank": 1490,
       "preview": {
         "source": "Wizards of the Coast",
@@ -6727,8 +6727,8 @@
         "usd": "0.27",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.18",
-        "eur_foil": "0.21",
+        "eur": "0.20",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -6860,7 +6860,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10897,
+      "edhrec_rank": 10900,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.29",
@@ -6998,7 +6998,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22418,
+      "edhrec_rank": 22419,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.facebook.com/photo/?fbid=1107237784749124",
@@ -7139,9 +7139,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19815,
+      "edhrec_rank": 19814,
       "prices": {
-        "usd": "0.11",
+        "usd": "0.09",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.07",
@@ -7286,7 +7286,7 @@
         "usd": "0.11",
         "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.20",
         "tix": "0.03"
       },
@@ -7441,14 +7441,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3083,
+      "edhrec_rank": 3086,
       "penny_rank": 1429,
       "prices": {
-        "usd": "1.41",
-        "usd_foil": "2.42",
+        "usd": "1.44",
+        "usd_foil": "2.54",
         "usd_etched": null,
-        "eur": "1.83",
-        "eur_foil": "1.91",
+        "eur": "1.87",
+        "eur_foil": "1.93",
         "tix": "0.03"
       },
       "related_uris": {
@@ -7581,7 +7581,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4765,
+      "edhrec_rank": 4768,
       "penny_rank": 8081,
       "preview": {
         "source": "Press Start",
@@ -7589,10 +7589,10 @@
         "previewed_at": "2025-03-22"
       },
       "prices": {
-        "usd": "0.32",
+        "usd": "0.33",
         "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.24",
+        "eur": "0.22",
         "eur_foil": "0.40",
         "tix": "0.02"
       },
@@ -7725,10 +7725,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14357,
+      "edhrec_rank": 14367,
       "penny_rank": 985,
       "prices": {
-        "usd": "0.12",
+        "usd": "0.13",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.13",
@@ -7860,7 +7860,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18019,
+      "edhrec_rank": 18026,
       "prices": {
         "usd": "0.21",
         "usd_foil": "0.27",
@@ -7997,10 +7997,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5314,
+      "edhrec_rank": 5315,
       "penny_rank": 1206,
       "prices": {
-        "usd": "0.33",
+        "usd": "0.32",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.16",
@@ -8134,7 +8134,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18796,
+      "edhrec_rank": 18803,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.18",
@@ -8272,9 +8272,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24489,
+      "edhrec_rank": 24492,
       "prices": {
-        "usd": "0.09",
+        "usd": "0.10",
         "usd_foil": "0.14",
         "usd_etched": null,
         "eur": "0.10",
@@ -8406,7 +8406,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7855,
+      "edhrec_rank": 7863,
       "penny_rank": 7038,
       "preview": {
         "source": "Wizards of the Coast",
@@ -8417,7 +8417,7 @@
         "usd": "0.35",
         "usd_foil": "0.39",
         "usd_etched": null,
-        "eur": "0.24",
+        "eur": "0.25",
         "eur_foil": "0.37",
         "tix": "0.03"
       },
@@ -8552,7 +8552,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 10587,
+      "edhrec_rank": 10592,
       "penny_rank": 11246,
       "preview": {
         "source": "Wizards of the Coast",
@@ -8560,7 +8560,7 @@
         "previewed_at": "2025-03-26"
       },
       "prices": {
-        "usd": "0.24",
+        "usd": "0.25",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.12",
@@ -8718,12 +8718,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4723,
+      "edhrec_rank": 4724,
       "prices": {
-        "usd": "0.92",
+        "usd": "0.96",
         "usd_foil": "1.50",
         "usd_etched": null,
-        "eur": "1.12",
+        "eur": "1.13",
         "eur_foil": "1.08",
         "tix": "0.56"
       },
@@ -8864,7 +8864,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20896,
+      "edhrec_rank": 20899,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/magic-the-gathering-tarkir-dragonstorm-spoilers-reveal",
@@ -9006,7 +9006,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9893,
+      "edhrec_rank": 9895,
       "penny_rank": 2520,
       "preview": {
         "source": "Wizards of the Coast",
@@ -9149,12 +9149,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17332,
+      "edhrec_rank": 17327,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.07",
         "eur_foil": "0.25",
         "tix": "0.03"
       },
@@ -9287,13 +9287,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14181,
+      "edhrec_rank": 14190,
       "penny_rank": 9828,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.26",
+        "usd": "0.22",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.16",
+        "eur": "0.17",
         "eur_foil": "0.23",
         "tix": "0.03"
       },
@@ -9446,12 +9446,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12938,
+      "edhrec_rank": 12939,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.15",
         "eur_foil": "0.20",
         "tix": "0.03"
       },
@@ -9585,9 +9585,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11442,
+      "edhrec_rank": 11445,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.25",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.04",
@@ -9722,18 +9722,18 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5700,
+      "edhrec_rank": 5708,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/mtg-magic-the-gathering/542602/tarkir-dragonstorm-previews-tempest-hawk-fortress-kin-guard-winternight-stories",
         "previewed_at": "2025-03-19"
       },
       "prices": {
-        "usd": "0.95",
+        "usd": "0.93",
         "usd_foil": "1.52",
         "usd_etched": null,
-        "eur": "1.72",
-        "eur_foil": "1.98",
+        "eur": "1.77",
+        "eur_foil": "2.03",
         "tix": "0.09"
       },
       "related_uris": {
@@ -10034,13 +10034,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20231,
+      "edhrec_rank": 20242,
       "prices": {
-        "usd": "0.15",
+        "usd": "0.14",
         "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.11",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -10168,9 +10168,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15345,
+      "edhrec_rank": 15341,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.20",
         "usd_foil": "0.16",
         "usd_etched": null,
         "eur": "0.14",
@@ -10308,14 +10308,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14434,
+      "edhrec_rank": 14437,
       "penny_rank": 14075,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.25",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.24",
+        "eur": "0.04",
+        "eur_foil": "0.23",
         "tix": "0.03"
       },
       "related_uris": {
@@ -10443,7 +10443,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6720,
+      "edhrec_rank": 6724,
       "penny_rank": 11765,
       "preview": {
         "source": "The Commander Tavern",
@@ -10454,7 +10454,7 @@
         "usd": "0.24",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -10607,7 +10607,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3853,
+      "edhrec_rank": 3858,
       "penny_rank": 11295,
       "preview": {
         "source": "The Commander Tavern",
@@ -10615,10 +10615,10 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.56",
+        "usd": "0.59",
         "usd_foil": "0.89",
         "usd_etched": null,
-        "eur": "0.42",
+        "eur": "0.43",
         "eur_foil": "0.38",
         "tix": "0.02"
       },
@@ -10748,7 +10748,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16725,
+      "edhrec_rank": 16724,
       "penny_rank": 2594,
       "prices": {
         "usd": "0.18",
@@ -10887,7 +10887,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10615,
+      "edhrec_rank": 10621,
       "penny_rank": 4951,
       "prices": {
         "usd": "0.24",
@@ -11024,13 +11024,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11995,
+      "edhrec_rank": 11997,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.12",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -11162,7 +11162,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16172,
+      "edhrec_rank": 16168,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.26",
@@ -11296,7 +11296,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11568,
+      "edhrec_rank": 11576,
       "penny_rank": 2602,
       "prices": {
         "usd": "0.22",
@@ -11431,7 +11431,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16653,
+      "edhrec_rank": 16659,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -11596,7 +11596,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9800,
+      "edhrec_rank": 9809,
       "penny_rank": 14255,
       "preview": {
         "source": "mtgso",
@@ -11740,12 +11740,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21833,
+      "edhrec_rank": 21841,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -11876,7 +11876,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 25780,
+      "edhrec_rank": 25760,
       "preview": {
         "source": "MTG Collectors Corner",
         "source_uri": "https://www.youtube.com/shorts/uPL6NzeI_uI",
@@ -12039,13 +12039,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20929,
+      "edhrec_rank": 20937,
       "prices": {
         "usd": "0.05",
         "usd_foil": "0.07",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.06",
+        "eur_foil": "0.03",
         "tix": "0.03"
       },
       "related_uris": {
@@ -12196,12 +12196,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19688,
+      "edhrec_rank": 19686,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.09",
         "eur_foil": "0.09",
         "tix": "0.03"
       },
@@ -12354,14 +12354,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10069,
+      "edhrec_rank": 10075,
       "penny_rank": 12586,
       "prices": {
         "usd": "0.16",
-        "usd_foil": "0.26",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.10",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -12498,13 +12498,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2276,
+      "edhrec_rank": 2279,
       "penny_rank": 761,
       "prices": {
-        "usd": "2.27",
-        "usd_foil": "2.91",
+        "usd": "2.25",
+        "usd_foil": "3.01",
         "usd_etched": null,
-        "eur": "1.43",
+        "eur": "1.46",
         "eur_foil": "1.89",
         "tix": "0.02"
       },
@@ -12640,7 +12640,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6110,
+      "edhrec_rank": 6114,
       "penny_rank": 8583,
       "preview": {
         "source": "Gameshub",
@@ -12651,9 +12651,9 @@
         "usd": "2.54",
         "usd_foil": "2.13",
         "usd_etched": null,
-        "eur": "2.18",
-        "eur_foil": "2.90",
-        "tix": "0.02"
+        "eur": "2.02",
+        "eur_foil": "3.01",
+        "tix": "0.03"
       },
       "related_uris": {
         "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=693567&printed=false",
@@ -12804,7 +12804,7 @@
         "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.11",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -12956,13 +12956,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20757,
+      "edhrec_rank": 20765,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.09",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.08",
+        "eur_foil": "0.06",
         "tix": "0.03"
       },
       "related_uris": {
@@ -13117,7 +13117,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5987,
+      "edhrec_rank": 5991,
       "penny_rank": 3531,
       "preview": {
         "source": "Numot The Nummy",
@@ -13281,7 +13281,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8428,
+      "edhrec_rank": 8448,
       "penny_rank": 3376,
       "preview": {
         "source": "Caschys Blog",
@@ -13289,10 +13289,10 @@
         "previewed_at": "2025-03-19"
       },
       "prices": {
-        "usd": "0.35",
-        "usd_foil": "0.55",
+        "usd": "0.36",
+        "usd_foil": "0.53",
         "usd_etched": null,
-        "eur": "0.25",
+        "eur": "0.26",
         "eur_foil": "0.34",
         "tix": "0.02"
       },
@@ -13427,14 +13427,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6140,
+      "edhrec_rank": 6142,
       "penny_rank": 6224,
       "prices": {
         "usd": "0.31",
         "usd_foil": "0.40",
         "usd_etched": null,
-        "eur": "0.35",
-        "eur_foil": "0.62",
+        "eur": "0.32",
+        "eur_foil": "0.65",
         "tix": "0.02"
       },
       "related_uris": {
@@ -13587,7 +13587,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9057,
+      "edhrec_rank": 9063,
       "penny_rank": 4283,
       "preview": {
         "source": "Callie Shae",
@@ -13727,15 +13727,15 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10925,
+      "edhrec_rank": 10936,
       "penny_rank": 1661,
       "prices": {
-        "usd": "1.01",
-        "usd_foil": "1.26",
+        "usd": "1.02",
+        "usd_foil": "1.32",
         "usd_etched": null,
-        "eur": "0.60",
-        "eur_foil": "0.71",
-        "tix": "0.22"
+        "eur": "0.64",
+        "eur_foil": "0.82",
+        "tix": "0.20"
       },
       "related_uris": {
         "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=693574&printed=false",
@@ -13864,13 +13864,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22366,
+      "edhrec_rank": 22365,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.06",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.12",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -14008,7 +14008,7 @@
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.12",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -14158,10 +14158,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5347,
+      "edhrec_rank": 5349,
       "penny_rank": 9827,
       "prices": {
-        "usd": "0.31",
+        "usd": "0.30",
         "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.23",
@@ -14293,13 +14293,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14361,
+      "edhrec_rank": 14366,
       "penny_rank": 12049,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.18",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.05",
         "eur_foil": "0.12",
         "tix": "0.03"
       },
@@ -14428,7 +14428,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5528,
+      "edhrec_rank": 5529,
       "penny_rank": 8698,
       "prices": {
         "usd": "0.30",
@@ -14567,13 +14567,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10099,
+      "edhrec_rank": 10103,
       "prices": {
         "usd": "0.28",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.22",
+        "eur": "0.06",
+        "eur_foil": "0.20",
         "tix": "0.03"
       },
       "related_uris": {
@@ -14703,7 +14703,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3669,
+      "edhrec_rank": 3676,
       "penny_rank": 4113,
       "preview": {
         "source": "MTG Salvation",
@@ -14711,10 +14711,10 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.27",
+        "usd": "0.26",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.17",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -14845,7 +14845,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15990,
+      "edhrec_rank": 16000,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -15006,18 +15006,18 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4117,
+      "edhrec_rank": 4120,
       "preview": {
         "source": "SAYS",
         "source_uri": "https://says.com/my/entertainment/exclusive-preview-magic-the-gathering-tarkir-dragonstorm",
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "3.99",
-        "usd_foil": "5.92",
+        "usd": "3.97",
+        "usd_foil": "5.85",
         "usd_etched": null,
-        "eur": "6.97",
-        "eur_foil": "8.37",
+        "eur": "7.38",
+        "eur_foil": "8.45",
         "tix": "6.94"
       },
       "related_uris": {
@@ -15151,7 +15151,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12024,
+      "edhrec_rank": 12027,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.30",
@@ -15297,10 +15297,10 @@
         "previewed_at": "2025-03-17"
       },
       "prices": {
-        "usd": "12.71",
+        "usd": "12.69",
         "usd_foil": "14.11",
         "usd_etched": null,
-        "eur": "6.12",
+        "eur": "6.32",
         "eur_foil": "6.50",
         "tix": "0.09"
       },
@@ -15434,7 +15434,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21170,
+      "edhrec_rank": 21169,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.29",
@@ -15573,7 +15573,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17921,
+      "edhrec_rank": 17919,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.13",
@@ -15711,14 +15711,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14760,
+      "edhrec_rank": 14761,
       "penny_rank": 8640,
       "prices": {
         "usd": "0.21",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.23",
+        "eur": "0.08",
+        "eur_foil": "0.24",
         "tix": "0.03"
       },
       "related_uris": {
@@ -15859,7 +15859,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21348,
+      "edhrec_rank": 21342,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.28",
@@ -16005,7 +16005,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22884,
+      "edhrec_rank": 22885,
       "penny_rank": 9746,
       "preview": {
         "source": "IGN",
@@ -16014,7 +16014,7 @@
       },
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.14",
+        "usd_foil": "0.12",
         "usd_etched": null,
         "eur": "0.04",
         "eur_foil": "0.04",
@@ -16158,9 +16158,9 @@
       },
       "prices": {
         "usd": "0.78",
-        "usd_foil": "0.73",
+        "usd_foil": "0.74",
         "usd_etched": null,
-        "eur": "0.65",
+        "eur": "0.63",
         "eur_foil": "0.84",
         "tix": "0.02"
       },
@@ -16319,7 +16319,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20536,
+      "edhrec_rank": 20539,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.13",
@@ -16454,7 +16454,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13398,
+      "edhrec_rank": 13401,
       "penny_rank": 4235,
       "prices": {
         "usd": "0.17",
@@ -16736,12 +16736,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13738,
+      "edhrec_rank": 13747,
       "prices": {
         "usd": "0.24",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.03",
         "eur_foil": "0.08",
         "tix": "0.03"
       },
@@ -16872,12 +16872,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18553,
+      "edhrec_rank": 18557,
       "prices": {
         "usd": "0.11",
         "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.10",
         "tix": "0.03"
       },
@@ -17008,7 +17008,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24433,
+      "edhrec_rank": 24424,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -17173,7 +17173,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6768,
+      "edhrec_rank": 6778,
       "penny_rank": 3326,
       "preview": {
         "source": "Wizards of the Coast",
@@ -17181,11 +17181,11 @@
         "previewed_at": "2025-02-21"
       },
       "prices": {
-        "usd": "0.37",
+        "usd": "0.38",
         "usd_foil": "0.45",
         "usd_etched": null,
-        "eur": "0.47",
-        "eur_foil": "0.69",
+        "eur": "0.49",
+        "eur_foil": "0.71",
         "tix": "0.02"
       },
       "related_uris": {
@@ -17313,12 +17313,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11441,
+      "edhrec_rank": 11440,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -17471,7 +17471,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7881,
+      "edhrec_rank": 7882,
       "penny_rank": 9266,
       "preview": {
         "source": "Goblin Lore Podcast",
@@ -17479,7 +17479,7 @@
         "previewed_at": "2025-03-20"
       },
       "prices": {
-        "usd": "0.18",
+        "usd": "0.19",
         "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.10",
@@ -17615,7 +17615,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6842,
+      "edhrec_rank": 6847,
       "penny_rank": 8674,
       "prices": {
         "usd": "0.32",
@@ -17773,7 +17773,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4863,
+      "edhrec_rank": 4868,
       "penny_rank": 222,
       "preview": {
         "source": "BIG MAGIC",
@@ -17781,11 +17781,11 @@
         "previewed_at": "2025-03-27"
       },
       "prices": {
-        "usd": "0.66",
-        "usd_foil": "0.70",
+        "usd": "0.69",
+        "usd_foil": "0.74",
         "usd_etched": null,
-        "eur": "0.52",
-        "eur_foil": "0.73",
+        "eur": "0.55",
+        "eur_foil": "0.69",
         "tix": "0.02"
       },
       "related_uris": {
@@ -17919,17 +17919,17 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4703,
+      "edhrec_rank": 4705,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/products/tarkir-dragonstorm/card-image-gallery",
         "previewed_at": "2025-02-21"
       },
       "prices": {
-        "usd": "3.17",
-        "usd_foil": "3.81",
+        "usd": "3.25",
+        "usd_foil": "3.78",
         "usd_etched": null,
-        "eur": "2.90",
+        "eur": "2.89",
         "eur_foil": "3.21",
         "tix": "0.35"
       },
@@ -18084,7 +18084,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6486,
+      "edhrec_rank": 6492,
       "penny_rank": 2347,
       "preview": {
         "source": "Wizards of the Coast",
@@ -18095,7 +18095,7 @@
         "usd": "0.27",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.09",
         "tix": "0.03"
       },
@@ -18228,9 +18228,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 25248,
+      "edhrec_rank": 25237,
       "prices": {
-        "usd": "0.05",
+        "usd": "0.06",
         "usd_foil": "0.13",
         "usd_etched": null,
         "eur": "0.02",
@@ -18369,7 +18369,7 @@
       "story_spotlight": false,
       "edhrec_rank": 4759,
       "prices": {
-        "usd": "0.33",
+        "usd": "0.31",
         "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.17",
@@ -18509,7 +18509,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6049,
+      "edhrec_rank": 6054,
       "penny_rank": 2343,
       "preview": {
         "source": "Wizards of the Coast",
@@ -18517,11 +18517,11 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.69",
-        "usd_foil": "1.13",
+        "usd": "0.71",
+        "usd_foil": "1.20",
         "usd_etched": null,
-        "eur": "0.91",
-        "eur_foil": "1.07",
+        "eur": "0.88",
+        "eur_foil": "1.09",
         "tix": "0.02"
       },
       "related_uris": {
@@ -18649,10 +18649,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12747,
+      "edhrec_rank": 12745,
       "penny_rank": 12687,
       "prices": {
-        "usd": "0.07",
+        "usd": "0.08",
         "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.07",
@@ -18804,7 +18804,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12395,
+      "edhrec_rank": 12397,
       "preview": {
         "source": "Goblin Lore Podcast",
         "source_uri": "https://bsky.app/profile/goblinlore.bsky.social/post/3lksx4mffps2d",
@@ -18812,7 +18812,7 @@
       },
       "prices": {
         "usd": "0.26",
-        "usd_foil": "0.26",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.03",
         "eur_foil": "0.09",
@@ -18945,7 +18945,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24405,
+      "edhrec_rank": 24404,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.24",
@@ -19100,12 +19100,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10603,
+      "edhrec_rank": 10607,
       "prices": {
-        "usd": "0.26",
+        "usd": "0.24",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.20",
+        "eur": "0.21",
         "eur_foil": "0.19",
         "tix": "0.03"
       },
@@ -19236,14 +19236,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5737,
+      "edhrec_rank": 5741,
       "penny_rank": 5403,
       "prices": {
-        "usd": "0.29",
+        "usd": "0.30",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.11",
-        "eur_foil": "0.23",
+        "eur": "0.12",
+        "eur_foil": "0.24",
         "tix": "0.03"
       },
       "related_uris": {
@@ -19393,12 +19393,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10039,
+      "edhrec_rank": 10040,
       "prices": {
         "usd": "0.24",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.15",
         "eur_foil": "0.12",
         "tix": "0.03"
       },
@@ -19531,14 +19531,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11823,
+      "edhrec_rank": 11827,
       "penny_rank": 2032,
       "prices": {
         "usd": "0.21",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.20",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -19670,13 +19670,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20204,
+      "edhrec_rank": 20214,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.12",
-        "eur_foil": "0.17",
+        "eur": "0.13",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -19830,13 +19830,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3420,
+      "edhrec_rank": 3424,
       "penny_rank": 5086,
       "prices": {
-        "usd": "1.00",
-        "usd_foil": "1.19",
+        "usd": "0.97",
+        "usd_foil": "1.17",
         "usd_etched": null,
-        "eur": "0.71",
+        "eur": "0.62",
         "eur_foil": "1.03",
         "tix": "0.02"
       },
@@ -19971,13 +19971,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14652,
+      "edhrec_rank": 14659,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.21",
         "usd_foil": "0.34",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.21",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20110,14 +20110,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 294,
+      "edhrec_rank": 295,
       "prices": {
-        "usd": "25.30",
+        "usd": "25.58",
         "usd_foil": "26.03",
         "usd_etched": null,
-        "eur": "23.44",
-        "eur_foil": "28.78",
-        "tix": "0.02"
+        "eur": "23.49",
+        "eur_foil": "28.53",
+        "tix": "0.03"
       },
       "related_uris": {
         "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=693618&printed=false",
@@ -20250,14 +20250,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3828,
+      "edhrec_rank": 3831,
       "penny_rank": 9209,
       "prices": {
         "usd": "1.14",
-        "usd_foil": "1.66",
+        "usd_foil": "1.67",
         "usd_etched": null,
-        "eur": "0.58",
-        "eur_foil": "0.77",
+        "eur": "0.60",
+        "eur_foil": "0.74",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20413,7 +20413,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20611,
+      "edhrec_rank": 20603,
       "penny_rank": 11830,
       "preview": {
         "source": "ThrabenU",
@@ -20577,7 +20577,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20610,
+      "edhrec_rank": 20604,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.13",
@@ -20721,11 +20721,11 @@
         "previewed_at": "2025-03-25"
       },
       "prices": {
-        "usd": "0.30",
+        "usd": "0.29",
         "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.17",
-        "eur_foil": "0.21",
+        "eur_foil": "0.22",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20855,7 +20855,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21404,
+      "edhrec_rank": 21409,
       "penny_rank": 6274,
       "prices": {
         "usd": "0.16",
@@ -20997,7 +20997,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1047,
+      "edhrec_rank": 1050,
       "penny_rank": 11592,
       "preview": {
         "source": "ModernSpike",
@@ -21005,8 +21005,8 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "4.89",
-        "usd_foil": "5.94",
+        "usd": "5.09",
+        "usd_foil": "5.55",
         "usd_etched": null,
         "eur": "4.07",
         "eur_foil": "4.76",
@@ -21137,14 +21137,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2551,
+      "edhrec_rank": 2552,
       "penny_rank": 904,
       "prices": {
-        "usd": "0.34",
+        "usd": "0.35",
         "usd_foil": "0.40",
         "usd_etched": null,
-        "eur": "0.29",
-        "eur_foil": "0.48",
+        "eur": "0.26",
+        "eur_foil": "0.45",
         "tix": "0.03"
       },
       "related_uris": {
@@ -21295,13 +21295,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20967,
+      "edhrec_rank": 20964,
       "prices": {
         "usd": "0.04",
         "usd_foil": "0.09",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.15",
+        "eur_foil": "0.13",
         "tix": "0.04"
       },
       "related_uris": {
@@ -21429,10 +21429,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10893,
+      "edhrec_rank": 10905,
       "prices": {
         "usd": "0.12",
-        "usd_foil": "0.25",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.04",
         "eur_foil": "0.11",
@@ -21567,7 +21567,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24263,
+      "edhrec_rank": 24262,
       "prices": {
         "usd": "0.04",
         "usd_foil": "0.17",
@@ -21707,7 +21707,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11232,
+      "edhrec_rank": 11241,
       "penny_rank": 5392,
       "preview": {
         "source": "PC Gamer",
@@ -21718,7 +21718,7 @@
         "usd": "0.28",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.16",
         "eur_foil": "0.12",
         "tix": "0.02"
       },
@@ -21850,7 +21850,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 826,
+      "edhrec_rank": 827,
       "penny_rank": 20,
       "preview": {
         "source": "MTGGoldfish",
@@ -21858,12 +21858,12 @@
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "4.77",
-        "usd_foil": "6.24",
+        "usd": "4.85",
+        "usd_foil": "6.26",
         "usd_etched": null,
-        "eur": "5.33",
-        "eur_foil": "7.65",
-        "tix": "0.09"
+        "eur": "5.16",
+        "eur_foil": "7.11",
+        "tix": "0.26"
       },
       "related_uris": {
         "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=693630&printed=false",
@@ -21992,10 +21992,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13967,
+      "edhrec_rank": 13964,
       "penny_rank": 11407,
       "prices": {
-        "usd": "0.30",
+        "usd": "0.29",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.09",
@@ -22134,13 +22134,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13102,
+      "edhrec_rank": 13110,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.19",
+        "eur": "0.10",
+        "eur_foil": "0.16",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22273,8 +22273,8 @@
         "usd": "0.16",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.16",
+        "eur": "0.09",
+        "eur_foil": "0.15",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22404,14 +22404,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7116,
+      "edhrec_rank": 7119,
       "penny_rank": 9641,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.19",
-        "eur_foil": "0.15",
+        "eur": "0.14",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22544,13 +22544,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14615,
+      "edhrec_rank": 14614,
       "prices": {
         "usd": "0.19",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.17",
+        "eur": "0.11",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22686,11 +22686,11 @@
       "story_spotlight": false,
       "edhrec_rank": 20726,
       "prices": {
-        "usd": "0.07",
+        "usd": "0.08",
         "usd_foil": "0.15",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.10",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22843,14 +22843,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6552,
+      "edhrec_rank": 6551,
       "penny_rank": 2956,
       "prices": {
         "usd": "0.30",
-        "usd_foil": "0.28",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.22",
-        "eur_foil": "0.41",
+        "eur": "0.23",
+        "eur_foil": "0.43",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22978,7 +22978,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 15029,
+      "edhrec_rank": 15031,
       "penny_rank": 12640,
       "preview": {
         "source": "The Vorthos Cast",
@@ -22989,8 +22989,8 @@
         "usd": "0.17",
         "usd_foil": "0.19",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.16",
+        "eur": "0.06",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23118,7 +23118,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 426,
+      "edhrec_rank": 425,
       "penny_rank": 2920,
       "preview": {
         "source": "Wizards of the Coast",
@@ -23126,8 +23126,8 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.20",
-        "usd_foil": "0.34",
+        "usd": "0.23",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.11",
         "eur_foil": "0.26",
@@ -23270,7 +23270,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18230,
+      "edhrec_rank": 18235,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/magic-the-gathering-tarkir-dragonstorm-spoilers-reveal",
@@ -23280,7 +23280,7 @@
         "usd": "0.19",
         "usd_foil": "0.15",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.06",
         "eur_foil": "0.04",
         "tix": "0.03"
       },
@@ -23418,13 +23418,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7127,
+      "edhrec_rank": 7129,
       "penny_rank": 2080,
       "prices": {
-        "usd": "1.42",
+        "usd": "1.29",
         "usd_foil": "1.52",
         "usd_etched": null,
-        "eur": "0.57",
+        "eur": "0.62",
         "eur_foil": "1.09",
         "tix": "0.14"
       },
@@ -23555,7 +23555,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11287,
+      "edhrec_rank": 11289,
       "penny_rank": 2369,
       "preview": {
         "source": "Duniaku",
@@ -23567,7 +23567,7 @@
         "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.19",
+        "eur_foil": "0.16",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23697,7 +23697,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17622,
+      "edhrec_rank": 17628,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.18",
@@ -23833,13 +23833,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14605,
+      "edhrec_rank": 14606,
       "prices": {
         "usd": "0.23",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.27",
+        "eur_foil": "0.25",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23971,14 +23971,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10709,
+      "edhrec_rank": 10716,
       "penny_rank": 3818,
       "prices": {
         "usd": "0.28",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.20",
+        "eur": "0.08",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24129,14 +24129,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2162,
+      "edhrec_rank": 2163,
       "penny_rank": 6719,
       "prices": {
-        "usd": "2.20",
+        "usd": "2.21",
         "usd_foil": "2.70",
         "usd_etched": null,
-        "eur": "1.39",
-        "eur_foil": "1.10",
+        "eur": "1.33",
+        "eur_foil": "1.22",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24272,12 +24272,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3462,
+      "edhrec_rank": 3465,
       "prices": {
-        "usd": "3.49",
-        "usd_foil": "4.45",
+        "usd": "3.58",
+        "usd_foil": "4.30",
         "usd_etched": null,
-        "eur": "2.22",
+        "eur": "2.20",
         "eur_foil": "2.86",
         "tix": "0.30"
       },
@@ -24415,7 +24415,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16980,
+      "edhrec_rank": 16976,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -24425,8 +24425,8 @@
         "usd": "0.18",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.22",
+        "eur": "0.10",
+        "eur_foil": "0.21",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24556,7 +24556,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3429,
+      "edhrec_rank": 3432,
       "penny_rank": 4525,
       "preview": {
         "source": "SpielRaumWien",
@@ -24567,8 +24567,8 @@
         "usd": "0.35",
         "usd_foil": "0.69",
         "usd_etched": null,
-        "eur": "0.36",
-        "eur_foil": "0.67",
+        "eur": "0.33",
+        "eur_foil": "0.51",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24705,7 +24705,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5043,
+      "edhrec_rank": 5045,
       "penny_rank": 1410,
       "preview": {
         "source": "ThingsInTheIce",
@@ -24716,8 +24716,8 @@
         "usd": "0.36",
         "usd_foil": "0.58",
         "usd_etched": null,
-        "eur": "0.42",
-        "eur_foil": "0.63",
+        "eur": "0.40",
+        "eur_foil": "0.50",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24850,7 +24850,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4817,
+      "edhrec_rank": 4823,
       "penny_rank": 7747,
       "preview": {
         "source": "Wizards of the Coast",
@@ -24858,7 +24858,7 @@
         "previewed_at": "2025-02-21"
       },
       "prices": {
-        "usd": "0.45",
+        "usd": "0.43",
         "usd_foil": "0.40",
         "usd_etched": null,
         "eur": "0.37",
@@ -25002,10 +25002,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3093,
+      "edhrec_rank": 3096,
       "prices": {
-        "usd": "7.39",
-        "usd_foil": "7.21",
+        "usd": "7.40",
+        "usd_foil": "7.16",
         "usd_etched": null,
         "eur": "6.30",
         "eur_foil": "6.84",
@@ -25163,10 +25163,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4403,
+      "edhrec_rank": 4404,
       "prices": {
         "usd": "0.32",
-        "usd_foil": "0.36",
+        "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.18",
         "eur_foil": "0.38",
@@ -25309,18 +25309,18 @@
       "textless": false,
       "booster": true,
       "story_spotlight": true,
-      "edhrec_rank": 4487,
+      "edhrec_rank": 4488,
       "preview": {
         "source": "TCGplayer",
         "source_uri": "https://infinite.tcgplayer.com/article/Call-the-Spirit-Dragons-is-Your-Next-MTG-Dragon-Deck-Win-Condition-and-is-Our-EXCLUSIVE-Tarkir-Dragonstorm-Preview-Card/e4d3d682-3d32-4c54-8508-2b2193c7d273/",
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "2.78",
+        "usd": "2.81",
         "usd_foil": "3.46",
         "usd_etched": null,
         "eur": "1.62",
-        "eur_foil": "2.53",
+        "eur_foil": "2.30",
         "tix": "0.21"
       },
       "related_uris": {
@@ -25455,7 +25455,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15497,
+      "edhrec_rank": 15494,
       "preview": {
         "source": "YuchenLiu",
         "source_uri": "https://www.bilibili.com/opus/1046834889022767126",
@@ -25601,17 +25601,17 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7740,
+      "edhrec_rank": 7744,
       "preview": {
         "source": "Good Luck High Five",
         "source_uri": "https://bsky.app/profile/glhfmagic.bsky.social/post/3lkvicucy3k2j",
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.44",
+        "usd": "0.45",
         "usd_foil": "0.76",
         "usd_etched": null,
-        "eur": "0.48",
+        "eur": "0.46",
         "eur_foil": "0.70",
         "tix": "0.41"
       },
@@ -25745,7 +25745,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21065,
+      "edhrec_rank": 21066,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -25910,7 +25910,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11808,
+      "edhrec_rank": 11811,
       "penny_rank": 2336,
       "preview": {
         "source": "GameSpot",
@@ -25922,7 +25922,7 @@
         "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.21",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -26078,7 +26078,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5607,
+      "edhrec_rank": 5613,
       "penny_rank": 6459,
       "preview": {
         "source": "Sol4r1s",
@@ -26086,10 +26086,10 @@
         "previewed_at": "2025-03-19"
       },
       "prices": {
-        "usd": "1.81",
+        "usd": "1.79",
         "usd_foil": "3.16",
         "usd_etched": null,
-        "eur": "1.78",
+        "eur": "1.76",
         "eur_foil": "2.26",
         "tix": "0.19"
       },
@@ -26226,7 +26226,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11935,
+      "edhrec_rank": 11943,
       "prices": {
         "usd": "0.22",
         "usd_foil": "0.30",
@@ -26366,7 +26366,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 22669,
+      "edhrec_rank": 22674,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/wizards_magicIT/status/1903086878628212815",
@@ -26376,7 +26376,7 @@
         "usd": "0.11",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.02",
+        "eur": "0.03",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -26520,7 +26520,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10595,
+      "edhrec_rank": 10602,
       "penny_rank": 6502,
       "preview": {
         "source": "Rebell Lily",
@@ -26531,7 +26531,7 @@
         "usd": "0.21",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.16",
         "eur_foil": "0.32",
         "tix": "0.02"
       },
@@ -26670,7 +26670,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11045,
+      "edhrec_rank": 11052,
       "penny_rank": 6650,
       "preview": {
         "source": "gamesradar",
@@ -26679,7 +26679,7 @@
       },
       "prices": {
         "usd": "0.25",
-        "usd_foil": "0.37",
+        "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.17",
         "eur_foil": "0.48",
@@ -26823,7 +26823,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8928,
+      "edhrec_rank": 8930,
       "penny_rank": 6853,
       "preview": {
         "source": "Benjithebrewer",
@@ -26831,10 +26831,10 @@
         "previewed_at": "2025-03-25"
       },
       "prices": {
-        "usd": "0.26",
+        "usd": "0.27",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.19",
+        "eur": "0.21",
         "eur_foil": "0.27",
         "tix": "0.02"
       },
@@ -26991,7 +26991,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12139,
+      "edhrec_rank": 12140,
       "penny_rank": 6205,
       "preview": {
         "source": "Brandon Sanderson",
@@ -27002,7 +27002,7 @@
         "usd": "0.26",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.23",
+        "eur": "0.24",
         "eur_foil": "0.27",
         "tix": "0.02"
       },
@@ -27150,7 +27150,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7511,
+      "edhrec_rank": 7515,
       "penny_rank": 5935,
       "preview": {
         "source": "Wizards of the Coast",
@@ -27158,11 +27158,11 @@
         "previewed_at": "2025-03-25"
       },
       "prices": {
-        "usd": "0.26",
+        "usd": "0.27",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.14",
-        "eur_foil": "0.31",
+        "eur_foil": "0.35",
         "tix": "0.03"
       },
       "related_uris": {
@@ -27296,14 +27296,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1548,
+      "edhrec_rank": 1550,
       "penny_rank": 5602,
       "prices": {
-        "usd": "2.59",
+        "usd": "2.55",
         "usd_foil": "2.40",
         "usd_etched": null,
-        "eur": "2.38",
-        "eur_foil": "3.31",
+        "eur": "2.37",
+        "eur_foil": "3.44",
         "tix": "0.02"
       },
       "related_uris": {
@@ -27435,7 +27435,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13314,
+      "edhrec_rank": 13312,
       "penny_rank": 2937,
       "preview": {
         "source": "Star City Games",
@@ -27583,7 +27583,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4934,
+      "edhrec_rank": 4937,
       "penny_rank": 6854,
       "preview": {
         "source": "PleasantKenobi",
@@ -27591,8 +27591,8 @@
         "previewed_at": "2025-03-20"
       },
       "prices": {
-        "usd": "0.35",
-        "usd_foil": "0.36",
+        "usd": "0.36",
+        "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.32",
         "eur_foil": "0.60",
@@ -27730,7 +27730,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21978,
+      "edhrec_rank": 21980,
       "penny_rank": 11871,
       "prices": {
         "usd": "0.10",
@@ -27869,12 +27869,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6415,
+      "edhrec_rank": 6418,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.14",
         "eur_foil": "0.37",
         "tix": "0.03"
       },
@@ -28016,10 +28016,10 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.82",
+        "usd": "0.81",
         "usd_foil": "1.19",
         "usd_etched": null,
-        "eur": "0.75",
+        "eur": "0.81",
         "eur_foil": "0.77",
         "tix": "0.02"
       },
@@ -28152,7 +28152,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 7558,
+      "edhrec_rank": 7564,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/wizards_magicES/status/1903090391387345126",
@@ -28162,7 +28162,7 @@
         "usd": "0.24",
         "usd_foil": "0.37",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.15",
         "eur_foil": "0.27",
         "tix": "0.03"
       },
@@ -28297,7 +28297,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6477,
+      "edhrec_rank": 6480,
       "penny_rank": 4598,
       "preview": {
         "source": "Wizards of the Coast",
@@ -28305,10 +28305,10 @@
         "previewed_at": "2025-02-21"
       },
       "prices": {
-        "usd": "0.56",
-        "usd_foil": "0.82",
+        "usd": "0.57",
+        "usd_foil": "0.72",
         "usd_etched": null,
-        "eur": "0.39",
+        "eur": "0.41",
         "eur_foil": "0.56",
         "tix": "0.02"
       },
@@ -28447,7 +28447,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19563,
+      "edhrec_rank": 19564,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -28457,7 +28457,7 @@
         "usd": "0.17",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.10",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -28610,17 +28610,17 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12320,
+      "edhrec_rank": 12334,
       "preview": {
         "source": "Callie Shae",
         "source_uri": "https://bsky.app/profile/calliemtg.bsky.social/post/3ll7iwpmt3k2h",
         "previewed_at": "2025-03-25"
       },
       "prices": {
-        "usd": "3.92",
+        "usd": "3.99",
         "usd_foil": "7.74",
         "usd_etched": null,
-        "eur": "4.44",
+        "eur": "4.58",
         "eur_foil": "4.44",
         "tix": "0.85"
       },
@@ -28759,7 +28759,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13637,
+      "edhrec_rank": 13642,
       "preview": {
         "source": "Rubee",
         "source_uri": "",
@@ -28769,7 +28769,7 @@
         "usd": "0.23",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.15",
         "tix": "0.03"
       },
@@ -28909,7 +28909,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13510,
+      "edhrec_rank": 13511,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "",
@@ -28917,7 +28917,7 @@
       },
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.32",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.10",
         "eur_foil": "0.13",
@@ -29083,7 +29083,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4188,
+      "edhrec_rank": 4193,
       "penny_rank": 6281,
       "preview": {
         "source": "Wizards of the Coast",
@@ -29091,10 +29091,10 @@
         "previewed_at": "2025-03-26"
       },
       "prices": {
-        "usd": "0.31",
+        "usd": "0.29",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.21",
+        "eur": "0.22",
         "eur_foil": "0.35",
         "tix": "0.03"
       },
@@ -29228,7 +29228,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14253,
+      "edhrec_rank": 14262,
       "preview": {
         "source": "Benjithebrewer",
         "source_uri": "https://bsky.app/profile/benjithebrewer.bsky.social/post/3ll7njbetrk2u",
@@ -29373,14 +29373,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4959,
+      "edhrec_rank": 4960,
       "penny_rank": 3422,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.15",
-        "eur_foil": "0.30",
+        "eur": "0.14",
+        "eur_foil": "0.28",
         "tix": "0.03"
       },
       "related_uris": {
@@ -29520,12 +29520,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5254,
+      "edhrec_rank": 5261,
       "prices": {
-        "usd": "0.36",
+        "usd": "0.39",
         "usd_foil": "0.52",
         "usd_etched": null,
-        "eur": "0.27",
+        "eur": "0.28",
         "eur_foil": "0.44",
         "tix": "0.02"
       },
@@ -29659,13 +29659,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13097,
+      "edhrec_rank": 13100,
       "penny_rank": 7772,
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.33",
+        "usd": "0.23",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.12",
         "eur_foil": "0.19",
         "tix": "0.03"
       },
@@ -29804,7 +29804,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 8701,
+      "edhrec_rank": 8705,
       "penny_rank": 8453,
       "preview": {
         "source": "The Faerie Conclave",
@@ -29812,10 +29812,10 @@
         "previewed_at": "2025-03-27"
       },
       "prices": {
-        "usd": "0.28",
+        "usd": "0.29",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.15",
         "eur_foil": "0.15",
         "tix": "0.02"
       },
@@ -29968,9 +29968,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23421,
+      "edhrec_rank": 23418,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.20",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.06",
@@ -30130,7 +30130,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3624,
+      "edhrec_rank": 3629,
       "penny_rank": 11630,
       "preview": {
         "source": "Zullie the Witch",
@@ -30138,8 +30138,8 @@
         "previewed_at": "2025-03-27"
       },
       "prices": {
-        "usd": "0.42",
-        "usd_foil": "0.53",
+        "usd": "0.43",
+        "usd_foil": "0.52",
         "usd_etched": null,
         "eur": "0.50",
         "eur_foil": "0.67",
@@ -30276,7 +30276,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12483,
+      "edhrec_rank": 12488,
       "prices": {
         "usd": "0.19",
         "usd_foil": "0.27",
@@ -30420,7 +30420,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 21135,
+      "edhrec_rank": 21133,
       "penny_rank": 10398,
       "preview": {
         "source": "Wizards of the Coast",
@@ -30571,17 +30571,17 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12074,
+      "edhrec_rank": 12077,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/news/feature/collecting-tarkir-dragonstorm",
         "previewed_at": "2025-02-21"
       },
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.25",
+        "eur": "0.27",
         "eur_foil": "0.45",
         "tix": "0.49"
       },
@@ -30723,13 +30723,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4716,
+      "edhrec_rank": 4721,
       "prices": {
-        "usd": "2.86",
-        "usd_foil": "3.31",
+        "usd": "2.74",
+        "usd_foil": "3.10",
         "usd_etched": null,
-        "eur": "1.70",
-        "eur_foil": "2.28",
+        "eur": "1.64",
+        "eur_foil": "2.42",
         "tix": "0.61"
       },
       "related_uris": {
@@ -30862,7 +30862,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11207,
+      "edhrec_rank": 11212,
       "preview": {
         "source": "Jack Torrance",
         "source_uri": "https://www.instagram.com/p/DHa7h3miK5f/",
@@ -30872,8 +30872,8 @@
         "usd": "0.25",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.19",
-        "eur_foil": "0.26",
+        "eur": "0.18",
+        "eur_foil": "0.29",
         "tix": "0.02"
       },
       "related_uris": {
@@ -31007,7 +31007,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10999,
+      "edhrec_rank": 11000,
       "preview": {
         "source": "Bobbie-Christine",
         "source_uri": "https://bsky.app/profile/bobbiechristine.bsky.social/post/3lks4ycrmp22m",
@@ -31173,12 +31173,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12929,
+      "edhrec_rank": 12934,
       "prices": {
         "usd": "0.21",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.08",
         "eur_foil": "0.12",
         "tix": "0.03"
       },
@@ -31312,12 +31312,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11742,
+      "edhrec_rank": 11751,
       "prices": {
         "usd": "0.31",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.31",
+        "eur": "0.29",
         "eur_foil": "0.78",
         "tix": "0.03"
       },
@@ -31453,13 +31453,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12471,
+      "edhrec_rank": 12473,
       "penny_rank": 5906,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.14",
         "eur_foil": "0.30",
         "tix": "0.02"
       },
@@ -31614,10 +31614,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13540,
+      "edhrec_rank": 13552,
       "penny_rank": 11966,
       "prices": {
-        "usd": "0.18",
+        "usd": "0.17",
         "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.07",
@@ -31756,12 +31756,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24658,
+      "edhrec_rank": 24648,
       "prices": {
         "usd": "0.07",
         "usd_foil": "0.09",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.02",
         "tix": "0.03"
       },
@@ -31915,18 +31915,18 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11629,
+      "edhrec_rank": 11632,
       "preview": {
         "source": "jellboi",
         "source_uri": "https://bsky.app/profile/jellboi.bsky.social/post/3ll54cor2oc2o",
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.11",
-        "eur_foil": "0.30",
+        "eur_foil": "0.31",
         "tix": "0.02"
       },
       "related_uris": {
@@ -32058,7 +32058,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20772,
+      "edhrec_rank": 20773,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/wizards_magicFR/status/1903090796414505104",
@@ -32224,17 +32224,17 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13115,
+      "edhrec_rank": 13119,
       "preview": {
         "source": "Dueller's Point",
         "source_uri": "https://www.facebook.com/photo/?fbid=1473143574076682&set=a.752092429515137",
         "previewed_at": "2025-03-26"
       },
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.10",
         "eur_foil": "0.14",
         "tix": "0.02"
       },
@@ -32389,7 +32389,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10188,
+      "edhrec_rank": 10187,
       "penny_rank": 1720,
       "preview": {
         "source": "Sol4r1s",
@@ -32397,7 +32397,7 @@
         "previewed_at": "2025-03-19"
       },
       "prices": {
-        "usd": "0.32",
+        "usd": "0.30",
         "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.16",
@@ -32556,7 +32556,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 24588,
+      "edhrec_rank": 24582,
       "penny_rank": 2556,
       "preview": {
         "source": "Wizards of the Coast",
@@ -32567,7 +32567,7 @@
         "usd": "0.12",
         "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.11",
         "eur_foil": "0.22",
         "tix": "0.02"
       },
@@ -32727,7 +32727,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 11270,
+      "edhrec_rank": 11273,
       "penny_rank": 3405,
       "preview": {
         "source": "Wizards of the Coast",
@@ -32738,7 +32738,7 @@
         "usd": "0.64",
         "usd_foil": "1.32",
         "usd_etched": null,
-        "eur": "1.27",
+        "eur": "1.24",
         "eur_foil": "1.30",
         "tix": "0.02"
       },
@@ -32876,7 +32876,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 17310,
+      "edhrec_rank": 17313,
       "penny_rank": 4204,
       "preview": {
         "source": "Wizards of the Coast",
@@ -32888,7 +32888,7 @@
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.13",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -33174,14 +33174,14 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15395,
+      "edhrec_rank": 15390,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.youtube.com/watch?v=sv_UrAb59Q0",
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.23",
+        "usd": "0.22",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.11",
@@ -33318,7 +33318,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13662,
+      "edhrec_rank": 13670,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.32",
@@ -33460,13 +33460,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2178,
+      "edhrec_rank": 2183,
       "penny_rank": 2193,
       "prices": {
-        "usd": "0.83",
-        "usd_foil": "1.13",
+        "usd": "0.80",
+        "usd_foil": "1.12",
         "usd_etched": null,
-        "eur": "0.57",
+        "eur": "0.60",
         "eur_foil": "1.11",
         "tix": "0.02"
       },
@@ -33602,7 +33602,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 23060,
+      "edhrec_rank": 23051,
       "preview": {
         "source": "jellboi",
         "source_uri": "https://bsky.app/profile/jellboi.bsky.social/post/3ll53j7ruik2o",
@@ -33755,9 +33755,9 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 10964,
+      "edhrec_rank": 10970,
       "prices": {
-        "usd": "0.31",
+        "usd": "0.32",
         "usd_foil": "0.57",
         "usd_etched": null,
         "eur": "0.47",
@@ -33896,7 +33896,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 9754,
+      "edhrec_rank": 9755,
       "preview": {
         "source": "Journal du Geek",
         "source_uri": "https://www.journaldugeek.com/2025/03/25/magic-the-gathering-voici-en-exclusivite-une-nouvelle-carte-de-lextension-tarkir-la-tempete-des-dragons/",
@@ -33904,9 +33904,9 @@
       },
       "prices": {
         "usd": "0.27",
-        "usd_foil": "0.31",
+        "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.12",
+        "eur": "0.14",
         "eur_foil": "0.35",
         "tix": "0.02"
       },
@@ -34061,7 +34061,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14347,
+      "edhrec_rank": 14356,
       "penny_rank": 2026,
       "preview": {
         "source": "Quest for the Janklord",
@@ -34214,12 +34214,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 5153,
+      "edhrec_rank": 5157,
       "prices": {
-        "usd": "2.78",
+        "usd": "2.73",
         "usd_foil": "2.85",
         "usd_etched": null,
-        "eur": "2.42",
+        "eur": "2.36",
         "eur_foil": "3.06",
         "tix": "0.02"
       },
@@ -34375,7 +34375,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6585,
+      "edhrec_rank": 6582,
       "penny_rank": 8695,
       "preview": {
         "source": "GameSpot",
@@ -34383,10 +34383,10 @@
         "previewed_at": "2025-03-20"
       },
       "prices": {
-        "usd": "0.25",
+        "usd": "0.24",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.14",
         "tix": "0.03"
       },
@@ -34546,10 +34546,10 @@
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "2.65",
+        "usd": "2.68",
         "usd_foil": "4.08",
         "usd_etched": null,
-        "eur": "1.17",
+        "eur": "1.08",
         "eur_foil": "2.63",
         "tix": "0.02"
       },
@@ -34688,7 +34688,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19399,
+      "edhrec_rank": 19402,
       "penny_rank": 8883,
       "preview": {
         "source": "Quest for the Janklord",
@@ -34699,7 +34699,7 @@
         "usd": "0.16",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.19",
+        "eur": "0.14",
         "eur_foil": "0.18",
         "tix": "0.02"
       },
@@ -34859,7 +34859,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4920,
+      "edhrec_rank": 4928,
       "preview": {
         "source": "The Spike Feeders",
         "source_uri": "https://bsky.app/profile/spikefeeders.com/post/3lksvxaevhc2h",
@@ -34867,9 +34867,9 @@
       },
       "prices": {
         "usd": "0.38",
-        "usd_foil": "0.39",
+        "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.28",
+        "eur": "0.27",
         "eur_foil": "0.67",
         "tix": "0.02"
       },
@@ -35016,7 +35016,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 15175,
+      "edhrec_rank": 15176,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/products/tarkir-dragonstorm/card-image-gallery",
@@ -35175,13 +35175,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 12590,
+      "edhrec_rank": 12593,
       "penny_rank": 12403,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.06",
         "eur_foil": "0.15",
         "tix": "0.03"
       },
@@ -35309,7 +35309,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2085,
+      "edhrec_rank": 2088,
       "penny_rank": 425,
       "preview": {
         "source": "Air Bubbles Cosplay",
@@ -35317,10 +35317,10 @@
         "previewed_at": "2025-03-24"
       },
       "prices": {
-        "usd": "2.77",
-        "usd_foil": "2.83",
+        "usd": "2.81",
+        "usd_foil": "2.82",
         "usd_etched": null,
-        "eur": "1.03",
+        "eur": "0.95",
         "eur_foil": "0.97",
         "tix": "0.02"
       },
@@ -35470,7 +35470,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2735,
+      "edhrec_rank": 2739,
       "penny_rank": 6268,
       "preview": {
         "source": "mxdwn",
@@ -35478,11 +35478,11 @@
         "previewed_at": "2025-03-21"
       },
       "prices": {
-        "usd": "0.30",
+        "usd": "0.31",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.15",
+        "eur": "0.09",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -35608,13 +35608,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 13078,
+      "edhrec_rank": 13082,
       "prices": {
         "usd": "0.15",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.08",
+        "eur_foil": "0.06",
         "tix": "0.03"
       },
       "related_uris": {
@@ -35742,7 +35742,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18126,
+      "edhrec_rank": 18131,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.24",
@@ -35894,12 +35894,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 18839,
+      "edhrec_rank": 18833,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.04",
+        "eur": "0.05",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -36046,12 +36046,12 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 14297,
+      "edhrec_rank": 14303,
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.24",
+        "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.16",
         "tix": "0.03"
       },
@@ -36187,7 +36187,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 2428,
+      "edhrec_rank": 2431,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://magic.wizards.com/en/products/tarkir-dragonstorm/card-image-gallery",
@@ -36197,9 +36197,9 @@
         "usd": "12.68",
         "usd_foil": "14.00",
         "usd_etched": null,
-        "eur": "9.16",
+        "eur": "9.21",
         "eur_foil": "11.42",
-        "tix": "0.37"
+        "tix": "0.35"
       },
       "related_uris": {
         "gatherer": "https://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=693726&printed=false",
@@ -36344,7 +36344,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 20369,
+      "edhrec_rank": 20375,
       "prices": {
         "usd": "0.22",
         "usd_foil": "0.22",
@@ -36496,7 +36496,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 19677,
+      "edhrec_rank": 19669,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.22",
@@ -36630,13 +36630,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 16014,
+      "edhrec_rank": 16023,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.19",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.11",
+        "eur_foil": "0.06",
         "tix": "0.03"
       },
       "related_uris": {
@@ -36770,8 +36770,8 @@
       "edhrec_rank": 969,
       "penny_rank": 1254,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.25",
+        "usd": "0.18",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.06",
         "eur_foil": "0.11",
@@ -36908,11 +36908,11 @@
       "edhrec_rank": 1075,
       "penny_rank": 1406,
       "prices": {
-        "usd": "0.34",
+        "usd": "0.35",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.12",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -37043,13 +37043,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3441,
+      "edhrec_rank": 3442,
       "penny_rank": 1611,
       "prices": {
-        "usd": "0.89",
+        "usd": "0.99",
         "usd_foil": "0.89",
         "usd_etched": null,
-        "eur": "0.73",
+        "eur": "0.80",
         "eur_foil": "1.51",
         "tix": "0.06"
       },
@@ -37198,11 +37198,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 3352,
+      "edhrec_rank": 3357,
       "penny_rank": 5258,
       "prices": {
-        "usd": "0.45",
-        "usd_foil": "0.64",
+        "usd": "0.46",
+        "usd_foil": "0.61",
         "usd_etched": null,
         "eur": "0.55",
         "eur_foil": "0.51",
@@ -37336,7 +37336,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1044,
+      "edhrec_rank": 1043,
       "penny_rank": 713,
       "prices": {
         "usd": "0.20",
@@ -37470,7 +37470,7 @@
       "edhrec_rank": 19,
       "penny_rank": 91,
       "prices": {
-        "usd": "0.27",
+        "usd": "0.29",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.06",
@@ -37611,7 +37611,7 @@
       "edhrec_rank": 405,
       "penny_rank": 571,
       "prices": {
-        "usd": "0.30",
+        "usd": "0.37",
         "usd_foil": "0.32",
         "usd_etched": null,
         "eur": "0.18",
@@ -37763,13 +37763,13 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 6945,
+      "edhrec_rank": 6950,
       "penny_rank": 5604,
       "prices": {
         "usd": "0.27",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.30",
+        "eur": "0.29",
         "eur_foil": "0.37",
         "tix": "0.02"
       },
@@ -38040,10 +38040,10 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 4794,
+      "edhrec_rank": 4801,
       "penny_rank": 3106,
       "prices": {
-        "usd": "0.32",
+        "usd": "0.31",
         "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.24",
@@ -38179,11 +38179,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1947,
+      "edhrec_rank": 1948,
       "penny_rank": 3395,
       "prices": {
-        "usd": "2.55",
-        "usd_foil": "2.65",
+        "usd": "2.72",
+        "usd_foil": "2.81",
         "usd_etched": null,
         "eur": "1.53",
         "eur_foil": "1.61",
@@ -38319,10 +38319,10 @@
       "story_spotlight": false,
       "edhrec_rank": 358,
       "prices": {
-        "usd": "6.13",
+        "usd": "6.11",
         "usd_foil": "7.81",
         "usd_etched": null,
-        "eur": "7.44",
+        "eur": "7.34",
         "eur_foil": "7.90",
         "tix": "0.09"
       },
@@ -38460,10 +38460,10 @@
       "edhrec_rank": 371,
       "penny_rank": 554,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.31",
+        "usd": "0.25",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.15",
+        "eur": "0.16",
         "eur_foil": "0.23",
         "tix": "0.03"
       },
@@ -38602,7 +38602,7 @@
       "penny_rank": 821,
       "prices": {
         "usd": "0.35",
-        "usd_foil": "0.38",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.16",
         "eur_foil": "0.58",
@@ -38743,10 +38743,10 @@
       "penny_rank": 558,
       "prices": {
         "usd": "0.36",
-        "usd_foil": "0.47",
+        "usd_foil": "0.48",
         "usd_etched": null,
-        "eur": "0.22",
-        "eur_foil": "0.42",
+        "eur": "0.21",
+        "eur_foil": "0.44",
         "tix": "0.03"
       },
       "related_uris": {
@@ -38877,7 +38877,7 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1469,
+      "edhrec_rank": 1470,
       "penny_rank": 1863,
       "prices": {
         "usd": "0.14",
@@ -39159,11 +39159,11 @@
       "edhrec_rank": 761,
       "penny_rank": 968,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.18",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.10",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -39432,11 +39432,11 @@
       "textless": false,
       "booster": true,
       "story_spotlight": false,
-      "edhrec_rank": 1127,
+      "edhrec_rank": 1126,
       "penny_rank": 1029,
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.21",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.03",
         "eur_foil": "0.10",
@@ -39574,7 +39574,7 @@
       "penny_rank": 498,
       "prices": {
         "usd": "0.07",
-        "usd_foil": "0.21",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.09",
@@ -39711,7 +39711,7 @@
       "edhrec_rank": 1056,
       "penny_rank": 2472,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.16",
         "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.07",
@@ -39844,7 +39844,7 @@
       "booster": false,
       "story_spotlight": false,
       "prices": {
-        "usd": "0.17",
+        "usd": "0.16",
         "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.19",
@@ -39980,7 +39980,7 @@
         "usd": "0.18",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.17",
+        "eur": "0.19",
         "eur_foil": "0.24",
         "tix": "0.03"
       },
@@ -40243,7 +40243,7 @@
       "booster": false,
       "story_spotlight": false,
       "prices": {
-        "usd": "0.22",
+        "usd": "0.23",
         "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.12",

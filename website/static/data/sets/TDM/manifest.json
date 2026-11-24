@@ -2,12 +2,12 @@
   "schema_version": 1,
   "set_code": "TDM",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T12:49:49.827790+00:00",
+  "generated_at": "2026-11-24T17:46:33.495978+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/tdm-cards.json",
       "bytes": 1847647,
-      "sha256": "8e564760f21b1fd6b6e1b6638d605bbd3f48c7b1f1ffa549d4f4154bec135d56",
+      "sha256": "5c2b3f4e1ae01a8984de4cb1fa73e9c0ed56bc5b98f11f04169ad7b229ce9bd8",
       "records": 276
     },
     {
@@ -19,18 +19,18 @@
     },
     {
       "path": "set-acquisition-output/wizards/guide.html",
-      "bytes": 253676,
-      "sha256": "ee43b5f47f3239b45628e2a057fb855652804b132c9cb6664dd6118a8e5ab2a0"
+      "bytes": 253683,
+      "sha256": "572d75a2668e11214476b233a8fce692c7ac10dd161f293852a3340a1c35eebd"
     },
     {
       "path": "set-acquisition-output/wizards/guide-evidence.json",
       "bytes": 13839,
-      "sha256": "feb279fa4a94e85ea9cf55162ac07daf7b88e0f9421371c756051fae8609fd0b"
+      "sha256": "d7e9a6761ba71062f2ac2cd2fa1732a2d7d8afa5baf4ec0e8cdb150c0c19029b"
     }
   ],
   "status": {
     "scryfall": "acquired",
-    "17lands": "not_yet_published",
+    "17lands": "unavailable",
     "wizards": "evidence_acquired_unreviewed"
   },
   "set_name": "Tarkir: Dragonstorm",
@@ -38,16 +38,20 @@
     "url": "https://magic.wizards.com/en/news/feature/tarkir-dragonstorm-prerelease-guide",
     "discovery": "discovered"
   },
-  "warnings": [
-    "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"
-  ],
   "17lands": {
     "event_type": "PremierDraft",
+    "catalog_url": "https://www.17lands.com/public_datasets",
+    "catalog_status": "unavailable",
+    "catalog_last_updated": null,
+    "catalog_error": {
+      "type": "ValueError",
+      "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The page markup may have changed or returned a challenge page. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"ico'"
+    },
     "archives": {},
     "probes": {
-      "draft": "inaccessible_or_missing",
-      "game": "inaccessible_or_missing",
-      "replay": "inaccessible_or_missing"
+      "draft": "catalog_unavailable",
+      "game": "catalog_unavailable",
+      "replay": "catalog_unavailable"
     },
     "source_selection": {
       "bulk_available": [],
