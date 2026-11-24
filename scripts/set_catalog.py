@@ -142,6 +142,34 @@ def discover(root):
       "17lands_publication_guidance":{"draft_days":14,"game_days":21,"replay_days":35,
         "note":"17Lands stated intentions, not guaranteed dates."}}
 
+def guide_slug(set_name):
+    """Create the conventional DailyMTG prerelease-guide slug from a Scryfall set name."""
+    value=clean(set_name).lower()
+    value=re.sub(r"^magic\s*:\s*the\s*gathering\s*[|—–:-]*\s*", "", value)
+    value=re.sub(r"[^a-z0-9]+","-",value).strip("-")
+    return f"{value}-prerelease-guide" if value else ""
+
+
+def discover_guide(set_name):
+    """Resolve the conventional official Wizards guide URL and verify its article title."""
+    slug=guide_slug(set_name)
+    if not slug: return None, "not_found"
+    url=f"https://magic.wizards.com/en/news/feature/{slug}"
+    try:
+        raw=fetch(url)
+    except (OSError, RuntimeError, ValueError):
+        return None, "not_found"
+    parser=GuideParser()
+    parser.feed(raw.decode("utf-8",errors="replace"))
+    title=clean(parser.title[0] if parser.title else "")
+    title_words=set(re.findall(r"[a-z0-9]+",title.lower()))
+    expected=[word for word in re.findall(r"[a-z0-9]+",clean(set_name).lower())
+              if word not in {"magic","the","gathering","universes","beyond"}]
+    if "prerelease" not in title_words or "guide" not in title_words or not expected or not all(word in title_words for word in expected):
+        return None, "title_mismatch"
+    return url, "discovered"
+
+
 def save(url,path):
     data=fetch(url,timeout=240); path.parent.mkdir(parents=True,exist_ok=True); path.write_bytes(data)
     return {"url":url,"path":str(path),"bytes":len(data),"sha256":hashlib.sha256(data).hexdigest()}
@@ -186,6 +214,12 @@ def acquire(code,event,guide,out):
     cp.write_text(json.dumps({"set_code":code,"retrieved_at":now,"source":CARDS_API,"cards":cards},indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     manifest["files"].append({"path":str(cp),"bytes":cp.stat().st_size,"sha256":hashlib.sha256(cp.read_bytes()).hexdigest(),"records":len(cards)})
     manifest["status"]["scryfall"]="acquired"
+    set_name=cards[0].get("set_name") or code
+    manifest["set_name"]=set_name
+    guide_discovery="provided" if guide else "not_attempted"
+    if not guide:
+        guide,guide_discovery=discover_guide(set_name)
+    manifest["wizards_guide"]={"url":guide,"discovery":guide_discovery}
     # Probe deterministic public S3 object keys. Acquisition must not depend
     # on scraping the public_datasets presentation page.
     archives={}; probes={}
@@ -226,7 +260,7 @@ def acquire(code,event,guide,out):
         manifest["files"] += [{"path":str(hp),"bytes":len(raw),"sha256":hashlib.sha256(raw).hexdigest()},
           {"path":str(ep),"bytes":ep.stat().st_size,"sha256":hashlib.sha256(ep.read_bytes()).hexdigest()}]
         manifest["status"]["wizards"]="evidence_acquired_unreviewed"
-    else: manifest["status"]["wizards"]="not_requested"
+    else: manifest["status"]["wizards"]="not_found" if guide_discovery in {"not_found","title_mismatch"} else "not_requested"
     (out/"manifest.json").write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     lines=["# Set acquisition report","",f"Set: {code}",f"Event: {event}",f"Generated: {now}","","## Status"]
     lines += [f"- {k}: {v}" for k,v in manifest["status"].items()]
