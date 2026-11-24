@@ -80,6 +80,9 @@ jobs:
               "generated_at": source.get("generated_at"),
               "archives": event.get("archives", {}),
               "probes": event.get("probes", {}),
+              "catalog_status": event.get("catalog_status"),
+              "catalog_last_updated": event.get("catalog_last_updated"),
+              "catalog_error": event.get("catalog_error"),
           }
           destination.write_text(json.dumps(payload, indent=2) + "\n")
           PY
