@@ -2,35 +2,23 @@
   "schema_version": 1,
   "set_code": "HOB",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T18:33:33.462944+00:00",
+  "generated_at": "2026-11-24T18:53:17.737578+00:00",
   "files": [
     {
-      "path": "set-acquisition-output/scryfall/hob-cards.json",
+      "path": "scryfall/hob-cards.json",
       "bytes": 1292177,
-      "sha256": "401a6de6260e3fe12d63d2dfdd7d719e8b03ce9f2d5659f074ee73c6b31d7a03",
+      "sha256": "e8423b5c0e082fe7ecefead01157e12a61e667a9f2a503ae55d0daf9087ecd3b",
       "records": 193
     },
     {
-      "url": "https://media.wizards.com/2026/images/daily/JfAIekUv4l/en_ML8RY4G1kB.jpg",
-      "path": "set-acquisition-output/wizards/overview-13.jpg",
-      "bytes": 1078092,
-      "sha256": "d162d4f180080556b4cf1d9a280a4ee1a64b35ef7288e77e1c7d5fe2e0cb470f",
-      "alt": "Draft Archetypes"
-    },
-    {
-      "path": "set-acquisition-output/wizards/guide.html",
-      "bytes": 228834,
-      "sha256": "170d0f55670a766d2d64331139787e2e88cd0bb265b9331567f3c386b1c47414"
-    },
-    {
-      "path": "set-acquisition-output/wizards/guide-evidence.json",
+      "path": "wizards/guide-evidence.json",
       "bytes": 12513,
-      "sha256": "ab1fb5254a505fed5c26c3d92d8a9a8e433e2632aa0e3ba76113450f75e82b46"
+      "sha256": "4102048b536dc6a1171929ce8317c3b2750c79fe26b3136a29364eb106adcc3f"
     }
   ],
   "status": {
     "scryfall": "acquired",
-    "17lands": "unavailable",
+    "17lands": "acquired",
     "wizards": "evidence_acquired_unreviewed"
   },
   "set_name": "The Hobbit",
@@ -41,24 +29,44 @@
   "17lands": {
     "event_type": "PremierDraft",
     "catalog_url": "https://www.17lands.com/public_datasets",
+    "candidate_urls": {
+      "draft": "https://data.17landscapes.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz",
+      "game": "https://data.17landscapes.com/analysis_data/game_data/game_data_public.HOB.PremierDraft.csv.gz"
+    },
     "catalog_status": "unavailable",
     "catalog_last_updated": null,
     "catalog_error": {
       "type": "ValueError",
       "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The response may be an access-denied page or changed markup. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/static/favicon-32x32.png\" /> <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/static/favicon-16x16.png\" /> <link rel=\"manifest\" href=\"/static/site.webmanifest\" /> <!-- style sheets --> <link'"
     },
-    "archives": {},
+    "archives": {
+      "draft": {
+        "url": "https://data.17landscapes.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz",
+        "bytes": 75309805,
+        "sha256": "04b16ac6971ca9a3b77c666072fb066110632eaae7e09433501cdcefac5045c0",
+        "physical_lines": 2436692,
+        "gzip_valid": true
+      },
+      "game": {
+        "url": "https://data.17landscapes.com/analysis_data/game_data/game_data_public.HOB.PremierDraft.csv.gz",
+        "bytes": 22072331,
+        "sha256": "1ca977bb415ac8fce04b889b9b2d93a6540cf21a033dfa9fb0907af443000676",
+        "physical_lines": 323115,
+        "gzip_valid": true
+      }
+    },
     "probes": {
-      "draft": "catalog_unavailable",
-      "game": "catalog_unavailable",
-      "replay": "catalog_unavailable"
+      "draft": "acquired",
+      "game": "acquired",
+      "replay": "not_checked"
     },
     "source_selection": {
-      "bulk_available": [],
-      "bulk_missing": [
+      "bulk_available": [
         "draft",
         "game"
-      ]
-    }
+      ],
+      "bulk_missing": []
+    },
+    "archive_retention": "ci_ephemeral_not_committed_or_published"
   }
 }
