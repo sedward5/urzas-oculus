@@ -53,7 +53,10 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: 17lands-validation-${{ inputs.set_code || 'scheduled' }}-${{ github.run_id }}
-          path: validation-output/
+          path: |
+            validation-output/validation-report.md
+            validation-output/swift-metrics.json
+            validation-output/validation-error.txt
           if-no-files-found: warn
           retention-days: 30
 
