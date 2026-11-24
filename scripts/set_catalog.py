@@ -37,6 +37,36 @@ def fetch_json(url):
 
 def clean(v): return re.sub(r"\s+"," ",v or "").strip()
 
+
+def candidate_archive_url(kind, code, event):
+    """Build a convention-derived public archive URL; availability must be verified."""
+    if kind not in {"draft", "game", "replay"}:
+        raise ValueError(f"Unsupported 17Lands archive kind: {kind}")
+    if not re.fullmatch(r"[A-Z0-9]{2,6}", code.upper()):
+        raise ValueError("Invalid set code for 17Lands candidate URL")
+    if event not in EVENTS:
+        raise ValueError("Unsupported event type for 17Lands candidate URL")
+    return (f"https://data.17landscapes.com/analysis_data/{kind}_data/"
+            f"{kind}_data_public.{code.upper()}.{event}.csv.gz")
+
+
+def probe_candidate_url(url):
+    """Check a candidate with a tiny GET; never treat a constructed URL as available."""
+    req=Request(url,headers={"User-Agent":UA,"Accept":"application/gzip, application/octet-stream, */*",
+                             "Range":"bytes=0-1"})
+    try:
+        with urlopen(req,timeout=30) as response:
+            magic=response.read(2)
+            if magic == bytes((31, 139)):
+                return {"status":"available","http_status":response.status}
+            return {"status":"invalid_response","http_status":response.status}
+    except Exception as exc:
+        status=getattr(exc,"code",None)
+        if status in {404,410}:
+            return {"status":"url_not_available","http_status":status}
+        return {"status":"probe_failed","error_type":type(exc).__name__,
+                "error":clean(str(exc))[:300]}
+
 class LandsParser(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True); self.rows=[]; self.row=None; self.cell=None; self.links=[]
@@ -141,10 +171,17 @@ def discover(root):
     for s in sorted(sets,key=lambda x:(x["released_at"],x["code"]),reverse=True):
         code=s["code"].upper(); age=(now.date()-date.fromisoformat(s["released_at"])).days
         events=by_set.get(code,[]); layers=local.get(code,set())
+        candidates={}
+        if not events or lands_status["status"]=="unavailable":
+            for kind in ("draft","game"):
+                url=candidate_archive_url(kind,code,"PremierDraft")
+                candidates[kind]={"url":url,**probe_candidate_url(url)}
         records.append({"code":code,"name":s["name"],"released_at":s["released_at"],"set_type":s["set_type"],
           "card_count":s.get("card_count"),"age_days":age,"17lands":events,
-          "17lands_status":("unavailable" if lands_status["status"]=="unavailable" else
-              ("available" if events else ("awaiting_expected_publication" if age<35 else "not_listed"))),
+          "17lands_candidates":candidates,
+          "17lands_status":("available" if events or any(v.get("status")=="available" for v in candidates.values()) else
+              ("unavailable" if lands_status["status"]=="unavailable" and not candidates else
+               ("awaiting_expected_publication" if age<35 else "not_listed"))),
           "local_archetypes":"present" if "archetypes" in layers else "missing",
           "local_reviewed_cards":"present" if "cards" in layers else "missing"})
     return {"schema_version":1,"generated_at":now.isoformat(),"sets":records,
@@ -261,7 +298,24 @@ def acquire(code,event,guide,out):
         catalog_status="unavailable"
         catalog_error={"type":type(exc).__name__,"message":clean(str(exc))[:800]}
         probes={kind:"catalog_unavailable" for kind in ("draft","game","replay")}
+    candidate_urls={}
+    for kind in ("draft","game","replay"):
+        if kind in archives:
+            continue
+        candidate=candidate_archive_url(kind,code,event)
+        candidate_urls[kind]=candidate
+        try:
+            rec=download_archive(candidate,out/"17lands"/f"{kind}.csv.gz")
+            archives[kind]=rec; manifest["files"].append(rec); probes[kind]="acquired"
+        except Exception as exc:
+            if getattr(exc,"code",None) in {404,410}:
+                probes[kind]="url_not_available"
+            else:
+                probes[kind]="download_failed"
+                manifest.setdefault("warnings",[]).append(
+                    f"17Lands {kind} convention URL could not be acquired: {type(exc).__name__}: {clean(str(exc))[:300]}")
     manifest["17lands"]={"event_type":event,"catalog_url":LANDS,
+        "candidate_urls":candidate_urls,
         "catalog_status":catalog_status,"catalog_last_updated":catalog_last_updated,
         "catalog_error":catalog_error,"archives":archives,"probes":probes,
         "source_selection":{"bulk_available":sorted(archives),
@@ -270,6 +324,7 @@ def acquire(code,event,guide,out):
     if all(probes.get(kind)=="acquired" for kind in required) and all(probes.get(kind) in {"acquired","not_listed"} for kind in ("draft","game","replay")): lands_status="acquired"
     elif archives: lands_status="partially_acquired"
     elif "download_failed" in probes.values(): lands_status="download_failed"
+    elif all(probes.get(kind)=="url_not_available" for kind in required): lands_status="url_not_available"
     elif catalog_status=="set_event_not_listed": lands_status="not_listed"
     elif catalog_status=="unavailable": lands_status="unavailable"
     else: lands_status="not_yet_published"
