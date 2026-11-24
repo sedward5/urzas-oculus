@@ -51,4 +51,49 @@ class CatalogTests(unittest.TestCase):
         from tempfile import TemporaryDirectory
         with TemporaryDirectory() as d:
             with self.assertRaises(ValueError): set_catalog.acquire("TRK","PremierDraft","https://example.com/x",Path(d))
+    def test_discovery_degrades_when_17lands_returns_challenge_page(self):
+        from tempfile import TemporaryDirectory
+        from unittest.mock import patch
+        import json
+        scryfall={"data":[{"code":"TRK","name":"Star Trek","set_type":"expansion",
+            "released_at":"2026-11-20","digital":False,"card_count":311}]}
+        def fake_fetch(url, timeout=90):
+            if url==set_catalog.SETS_API:
+                return json.dumps(scryfall).encode()
+            if url==set_catalog.LANDS:
+                return b"<!doctype html><html><title>Access denied</title></html>"
+            raise AssertionError(url)
+        with TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/"scripts/data").mkdir(parents=True)
+            (root/"scripts/data/reviewed_archetypes.json").write_text('{"sets":{}}')
+            (root/"scripts/data/reviewed_cards.json").write_text('{"sets":{}}')
+            with patch.object(set_catalog,"fetch",side_effect=fake_fetch):
+                report=set_catalog.discover(root)
+        self.assertEqual(len(report["sets"]),1)
+        self.assertEqual(report["sets"][0]["code"],"TRK")
+        self.assertEqual(report["sets"][0]["17lands_status"],"unavailable")
+        self.assertEqual(report["source_status"]["17lands"]["status"],"unavailable")
+        self.assertEqual(report["source_status"]["17lands"]["error_type"],"ValueError")
+
+    def test_discovery_degrades_when_17lands_network_fails(self):
+        from tempfile import TemporaryDirectory
+        from unittest.mock import patch
+        import json
+        scryfall={"data":[{"code":"TRK","name":"Star Trek","set_type":"expansion",
+            "released_at":"2026-11-20","digital":False,"card_count":311}]}
+        def fake_fetch(url, timeout=90):
+            if url==set_catalog.SETS_API: return json.dumps(scryfall).encode()
+            if url==set_catalog.LANDS: raise TimeoutError("listing timed out")
+            raise AssertionError(url)
+        with TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/"scripts/data").mkdir(parents=True)
+            (root/"scripts/data/reviewed_archetypes.json").write_text('{"sets":{}}')
+            (root/"scripts/data/reviewed_cards.json").write_text('{"sets":{}}')
+            with patch.object(set_catalog,"fetch",side_effect=fake_fetch):
+                report=set_catalog.discover(root)
+        self.assertEqual(report["sets"][0]["17lands_status"],"unavailable")
+        self.assertEqual(report["source_status"]["17lands"]["error_type"],"TimeoutError")
+
 if __name__=="__main__": unittest.main()
