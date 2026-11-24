@@ -122,6 +122,30 @@ class CatalogTests(unittest.TestCase):
         from tempfile import TemporaryDirectory
         with TemporaryDirectory() as d:
             with self.assertRaises(ValueError): set_catalog.acquire("TRK","PremierDraft","https://example.com/x",Path(d))
+
+    def test_discovery_publishes_catalog_archive_inventory(self):
+        import json
+        from tempfile import TemporaryDirectory
+        html="""<table><tr><td>HOB</td><td>PremierDraft</td><td>2026-08-30</td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz">draft</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.HOB.PremierDraft.csv.gz">game</a></td></tr></table>"""
+        sets={"data":[{"code":"HOB","name":"The Hobbit","set_type":"expansion",
+            "released_at":"2026-08-30","digital":False,"card_count":300}]}
+        def fake_fetch(url,timeout=90):
+            if url==set_catalog.SETS_API: return json.dumps(sets).encode()
+            if url==set_catalog.LANDS: return html.encode()
+            raise AssertionError(url)
+        with TemporaryDirectory() as directory:
+            root=Path(directory)
+            (root/"scripts/data").mkdir(parents=True)
+            (root/"scripts/data/reviewed_archetypes.json").write_text('{"sets":{}}')
+            (root/"scripts/data/reviewed_cards.json").write_text('{"sets":{}}')
+            with patch.object(set_catalog,"fetch",side_effect=fake_fetch):
+                report=set_catalog.discover(root)
+        self.assertEqual(report["source_status"]["17lands"]["status"],"available")
+        self.assertEqual(report["sets"][0]["17lands_status"],"available")
+        self.assertEqual(set(report["sets"][0]["17lands"][0]["archives"]),{"draft","game"})
+
     def test_discovery_degrades_when_17lands_returns_challenge_page(self):
         from tempfile import TemporaryDirectory
         from unittest.mock import patch
