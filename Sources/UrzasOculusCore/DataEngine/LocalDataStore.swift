@@ -388,7 +388,7 @@ public final class LocalDataStore: @unchecked Sendable {
         sqlite3_bind_double(s, index, value)
     }
     private func bind(_ value: Data, _ index: Int32, _ s: OpaquePointer) {
-        value.withUnsafeBytes { bytes in
+        _ = value.withUnsafeBytes { bytes in
             sqlite3_bind_blob(s, index, bytes.baseAddress, Int32(bytes.count),
                               unsafeBitCast(-1, to: sqlite3_destructor_type.self))
         }
