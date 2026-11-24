@@ -118,7 +118,7 @@ def discover(root):
     lands_status={"status":"available","retrieved_at":now.isoformat(),"error":None}
     try:
         rows=parse_lands(fetch(LANDS).decode("utf-8",errors="replace"))
-    except Exception as exc:
+    except (OSError, RuntimeError, ValueError, UnicodeError) as exc:
         rows=[]
         lands_status={"status":"unavailable","retrieved_at":now.isoformat(),
             "error_type":type(exc).__name__,
