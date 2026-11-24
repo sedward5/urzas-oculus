@@ -178,3 +178,18 @@ The JSON input is the core Codable card-record format, not raw Scryfall bulk JSO
 The CLI can read directly from the local database or from a normalized JSON fixture. The `--template` option emits one editable review record per card; after review, pass that file with `--reviews` to validate and combine the human assessments with the structural suggestions. It rejects duplicate printing IDs and reviews whose printing ID, set code, or Oracle ID do not match the supplied card. It never modifies the review file. Review updates are authored as a new versioned input file and should be retained as immutable snapshots.
 
 The CLI is a batch analysis aid, not yet a graphical review interface. Its current rules are intentionally conservative and produce candidate labels only. Reviewers must inspect the complete card, including all faces and costs, before confirming roles or making a rate/dimension assessment.
+
+
+## Deterministic model and closed-loop evaluation contract
+
+The ordinal review schema above is a human-readable evidence layer, not itself the prediction algorithm. The model implementation must produce reproducible per-card outputs from normalized structural facts and explicitly versioned rules/configuration. Human and LLM inputs are investigation annotations and candidate model hypotheses; they are not runtime scoring dependencies and do not write directly into model outputs.
+
+A prediction run records model, engine, configuration, and output-schema versions; set code; run timestamp; declared source cutoff; exact input snapshot IDs and content hashes; per-card output, contributing features/rules, exclusions, and explanation; and whether the run is pre-release or retrospective. The same model version, configuration, and input snapshots must yield canonical identical output. A rerun is a new artifact, never an overwrite.
+
+Historical runs are retrospective experiments. The evaluator must reject or clearly label any source published after the declared cutoff. Rarity remains visible source metadata and is prohibited as a feature or proxy for card strength, archetype fit, or pick preference.
+
+### Observation and calibration layer
+
+17Lands public bulk archives are acquired independently after publication. They are never retroactively included in the prediction input manifest. Comparison joins only on stable card identity and preserves set/event/user-group/color scope and source snapshot. It reports distinct outcome families (pick behavior, play rate, and game performance) with their own sample counts and limitations. Missing values remain missing; copy-weighted observations are not represented as independent games.
+
+The calibration report identifies residuals, rank disagreement, coverage, and outliers. Outlier review may use humans and LLMs to suggest explanations such as a missing mechanic, incorrect rules interpretation, archetype interaction, format-speed assumption, or data-quality issue. Every accepted change becomes a new model version and is regression-tested across historical sets. Reports show both gains and regressions. Avoid tuning and evaluating solely on the same observations; use held-out sets or time slices where possible.
