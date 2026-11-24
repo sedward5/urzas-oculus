@@ -41,29 +41,16 @@ jobs:
           ARGS=(acquire --set-code "$SET_CODE" --event-type "$EVENT_TYPE" --output set-acquisition-output)
           if [ -n "$GUIDE_URL" ]; then ARGS+=(--guide-url "$GUIDE_URL"); fi
           python3 scripts/set_catalog.py "${ARGS[@]}"
-      - name: Stage permitted 17Lands public bulk archives
+      - name: Publish 17Lands archive provenance only
         env:
           SET_CODE: ${{ inputs.set_code || 'TRK' }}
           EVENT_TYPE: ${{ inputs.event_type || 'PremierDraft' }}
         run: |
-          shopt -s nullglob
+          # Raw public CSV archives are consumed by CI analysis and are never
+          # committed to Git or copied into the website's static assets.
           DEST="website/static/data/17lands/${SET_CODE}/${EVENT_TYPE}"
           mkdir -p "$DEST"
-          files=(set-acquisition-output/17lands/*.csv.gz)
-          if [ ${#files[@]} -eq 0 ]; then
-            python3 - <<'PY'
-          import json
-          from pathlib import Path
-          event = json.loads(Path("set-acquisition-output/manifest.json").read_text()).get("17lands", {})
-          print("17Lands catalog status:", event.get("catalog_status"))
-          if event.get("catalog_error"):
-              print("17Lands catalog diagnostic:", json.dumps(event["catalog_error"], sort_keys=True))
-          else:
-              print("The official catalog did not list archives for this set/event.")
-          PY
-          else
-            cp "${files[@]}" "$DEST/"
-          fi
+          rm -f "$DEST"/*.csv.gz
           python3 - <<'PY'
           import json
           import os
@@ -71,14 +58,24 @@ jobs:
 
           source = json.loads(Path("set-acquisition-output/manifest.json").read_text())
           event = source.get("17lands", {})
-          destination = Path("website/static/data/17lands") / os.environ["SET_CODE"] / os.environ["EVENT_TYPE"] / "manifest.json"
+          archives = {
+              kind: {key: value for key, value in record.items() if key != "path"}
+              for kind, record in event.get("archives", {}).items()
+          }
+          destination = (
+              Path("website/static/data/17lands")
+              / os.environ["SET_CODE"]
+              / os.environ["EVENT_TYPE"]
+              / "manifest.json"
+          )
           destination.parent.mkdir(parents=True, exist_ok=True)
           payload = {
               "schema_version": 1,
               "set_code": os.environ["SET_CODE"],
               "event_type": os.environ["EVENT_TYPE"],
               "generated_at": source.get("generated_at"),
-              "archives": event.get("archives", {}),
+              "archives": archives,
+              "archive_retention": "ci_ephemeral_not_committed_or_published",
               "probes": event.get("probes", {}),
               "catalog_status": event.get("catalog_status"),
               "catalog_last_updated": event.get("catalog_last_updated"),
@@ -88,6 +85,10 @@ jobs:
           PY
           if find website/static/data/17lands -type f -name 'card-data-all-time.json' -o -type f -name 'trophy-decks.json' | grep -q .; then
             echo "Restricted 17Lands API snapshots remain in the public tree."
+            exit 1
+          fi
+          if find website/static/data/17lands -type f -name '*.csv.gz' | grep -q .; then
+            echo "Raw 17Lands archives must remain ephemeral CI inputs, not published assets."
             exit 1
           fi
       - name: Stage Scryfall and Wizards source evidence
@@ -102,7 +103,34 @@ jobs:
           if [ -f set-acquisition-output/wizards/guide-evidence.json ]; then
             cp set-acquisition-output/wizards/guide-evidence.json "website/static/data/sets/${SET_CODE}/wizards/"
           fi
-          cp set-acquisition-output/manifest.json "website/static/data/sets/${SET_CODE}/"
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          source = json.loads(Path("set-acquisition-output/manifest.json").read_text())
+          retained_files = []
+          for record in source.get("files", []):
+              path = record.get("path", "")
+              if path.startswith("set-acquisition-output/scryfall/"):
+                  record = {**record, "path": "scryfall/" + Path(path).name}
+              elif path == "set-acquisition-output/wizards/guide-evidence.json":
+                  record = {**record, "path": "wizards/guide-evidence.json"}
+              else:
+                  continue
+              retained_files.append(record)
+
+          source["files"] = retained_files
+          event = source.get("17lands", {})
+          event["archives"] = {
+              kind: {key: value for key, value in record.items() if key != "path"}
+              for kind, record in event.get("archives", {}).items()
+          }
+          event["archive_retention"] = "ci_ephemeral_not_committed_or_published"
+          source["17lands"] = event
+          destination = Path("website/static/data/sets") / os.environ["SET_CODE"] / "manifest.json"
+          destination.write_text(json.dumps(source, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+          PY
       - name: Rebuild ops inventory from the existing set catalog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -156,6 +184,10 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: set-acquisition-${{ inputs.set_code || 'TRK' }}-${{ github.run_id }}
-          path: set-acquisition-output/
+          path: |
+            set-acquisition-output/manifest.json
+            set-acquisition-output/acquisition-report.md
+            set-acquisition-output/scryfall/*.json
+            set-acquisition-output/wizards/guide-evidence.json
           if-no-files-found: error
           retention-days: 30
