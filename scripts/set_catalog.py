@@ -112,7 +112,18 @@ def local_catalogs(root):
 def discover(root):
     now=datetime.now(timezone.utc); sets=json.loads(fetch(SETS_API))["data"]
     sets=[s for s in sets if s.get("set_type") in LIMITED and s.get("released_at") and s.get("digital") is not True]
-    rows=parse_lands(fetch(LANDS).decode("utf-8",errors="replace")); by_set={}
+    # 17Lands publication discovery is optional. Keep Scryfall set discovery
+    # usable when the public listing is unavailable, challenged, or changes markup.
+    # The parser itself still fails closed; only this orchestration boundary degrades.
+    lands_status={"status":"available","retrieved_at":now.isoformat(),"error":None}
+    try:
+        rows=parse_lands(fetch(LANDS).decode("utf-8",errors="replace"))
+    except (OSError, RuntimeError, ValueError, UnicodeError) as exc:
+        rows=[]
+        lands_status={"status":"unavailable","retrieved_at":now.isoformat(),
+            "error_type":type(exc).__name__,
+            "error":clean(str(exc))[:500]}
+    by_set={}
     for row in rows: by_set.setdefault(row["set_code"],[]).append(row)
     local=local_catalogs(root); records=[]
     for s in sorted(sets,key=lambda x:(x["released_at"],x["code"]),reverse=True):
@@ -120,11 +131,14 @@ def discover(root):
         events=by_set.get(code,[]); layers=local.get(code,set())
         records.append({"code":code,"name":s["name"],"released_at":s["released_at"],"set_type":s["set_type"],
           "card_count":s.get("card_count"),"age_days":age,"17lands":events,
-          "17lands_status":"available" if events else ("awaiting_expected_publication" if age<35 else "not_listed"),
+          "17lands_status":("unavailable" if lands_status["status"]=="unavailable" else
+              ("available" if events else ("awaiting_expected_publication" if age<35 else "not_listed"))),
           "local_archetypes":"present" if "archetypes" in layers else "missing",
           "local_reviewed_cards":"present" if "cards" in layers else "missing"})
     return {"schema_version":1,"generated_at":now.isoformat(),"sets":records,
       "sources":{"scryfall":SETS_API,"17lands":LANDS},
+      "source_status":{"scryfall":{"status":"available","retrieved_at":now.isoformat()},
+          "17lands":lands_status},
       "17lands_publication_guidance":{"draft_days":14,"game_days":21,"replay_days":35,
         "note":"17Lands stated intentions, not guaranteed dates."}}
 
