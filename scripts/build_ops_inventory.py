@@ -11,7 +11,7 @@ from urllib.parse import quote
 
 import set_catalog
 
-WORKFLOWS = ("discover-limited-sets.yml", "acquire-set-data-bundle.yml", "prediction-evaluation.yml")
+WORKFLOWS = ("discover-limited-sets.yml", "acquire-set-data-bundle.yml")
 REPOSITORY = "sedward5/urzas-oculus"
 UA = "UrzasOculus-OpsInventory/1.0"
 
@@ -90,7 +90,16 @@ def build_inventory(root, discovered=None, runs=None):
             except ValueError:
                 event["last_updated_date"] = None
                 event["days_since_update"] = None
-            event["refresh_recommended"] = bool(event.get("archives") and not local)
+            acquired_at = manifest.get("generated_at") if manifest.get("event_type") == event["event_type"] else None
+            acquired_date = acquired_at[:10] if acquired_at else None
+            source_is_newer = bool(event["last_updated_date"] and acquired_date
+                and event["last_updated_date"] > acquired_date)
+            refresh_recommended = bool(event.get("archives") and (not local or not acquired_at or source_is_newer))
+            event["local_acquired_at"] = acquired_at
+            event["refresh_recommended"] = refresh_recommended
+            event["refresh_reason"] = ("no local archive" if not local else
+                "source listing is newer than the local acquisition" if source_is_newer else
+                "acquisition time is not recorded for this event" if not acquired_at else "local archive appears current")
     report["schema_version"] = 2
     report["workflow_runs"] = runs if runs is not None else workflow_history()
     report["workflow_urls"] = {
