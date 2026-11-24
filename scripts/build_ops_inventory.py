@@ -103,8 +103,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--output", type=Path, default=Path("website/static/data/ops/limited-sets.json"))
+    parser.add_argument("--discovery", type=Path, help="Reuse a report produced by set_catalog.py discover")
     args = parser.parse_args()
-    report = build_inventory(args.root)
+    discovered = read_json(args.discovery) if args.discovery else None
+    report = build_inventory(args.root, discovered=discovered)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Published operations inventory for {len(report.get('sets', []))} Limited sets.")
