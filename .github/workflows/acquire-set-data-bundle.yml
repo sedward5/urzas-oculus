@@ -48,6 +48,9 @@ jobs:
         run: |
           # Raw public CSV archives are consumed by CI analysis and are never
           # committed to Git or copied into the website's static assets.
+          DEST="website/static/data/17lands/${SET_CODE}/${EVENT_TYPE}"
+          mkdir -p "$DEST"
+          rm -f "$DEST"/*.csv.gz
           python3 - <<'PY'
           import json
           import os
@@ -78,7 +81,7 @@ jobs:
               "catalog_last_updated": event.get("catalog_last_updated"),
               "catalog_error": event.get("catalog_error"),
           }
-          destination.write_text(json.dumps(payload, indent=2) + "\\n")
+          destination.write_text(json.dumps(payload, indent=2) + "\n")
           PY
           if find website/static/data/17lands -type f \\( -name 'card-data-all-time.json' -o -name 'trophy-decks.json' \\) | grep -q .; then
             echo "Restricted 17Lands API snapshots remain in the public tree."
@@ -126,7 +129,7 @@ jobs:
           event["archive_retention"] = "ci_ephemeral_not_committed_or_published"
           source["17lands"] = event
           destination = Path("website/static/data/sets") / os.environ["SET_CODE"] / "manifest.json"
-          destination.write_text(json.dumps(source, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
+          destination.write_text(json.dumps(source, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
           PY
       - name: Rebuild ops inventory from the existing set catalog
         env:
