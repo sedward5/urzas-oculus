@@ -6,6 +6,28 @@ sys.path.insert(0,str(Path(__file__).resolve().parent))
 import set_catalog
 
 class CatalogTests(unittest.TestCase):
+
+    def test_catalog_discovery_includes_hob_ecl_and_tdm(self):
+        html="""<table>
+        <tr><td>HOB</td><td>PremierDraft</td><td>2026-08-30</td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.HOB.PremierDraft.csv.gz">draft</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.HOB.PremierDraft.csv.gz">game</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/replay_data/replay_data_public.HOB.PremierDraft.csv.gz">replay</a></td></tr>
+        <tr><td>ECL</td><td>PremierDraft</td><td>2026-02-08</td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.ECL.PremierDraft.csv.gz">draft</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.ECL.PremierDraft.csv.gz">game</a></td></tr>
+        <tr><td>TDM</td><td>PremierDraft</td><td>2025-05-20</td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.TDM.PremierDraft.csv.gz">draft</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/game_data/game_data_public.TDM.PremierDraft.csv.gz">game</a></td>
+        <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/replay_data/replay_data_public.TDM.PremierDraft.csv.gz">replay</a></td></tr>
+        </table>"""
+        rows=set_catalog.parse_lands(html)
+        by_code={row["set_code"]:row for row in rows}
+        self.assertEqual(set(by_code),{"HOB","ECL","TDM"})
+        self.assertEqual(set(by_code["HOB"]["archives"]),{"draft","game","replay"})
+        self.assertEqual(set(by_code["ECL"]["archives"]),{"draft","game"})
+        self.assertEqual(set(by_code["TDM"]["archives"]),{"draft","game","replay"})
+
     def test_parse_17lands_links(self):
         html="""<table><tr><td>TRK</td><td>PremierDraft</td><td>2026-11-22</td>
         <td><a href="https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.TRK.PremierDraft.csv.gz">draft</a></td>
@@ -43,7 +65,7 @@ class CatalogTests(unittest.TestCase):
         downloaded=[]
         def fake_download(url,path):
             downloaded.append(url)
-            return {"url":url,"path":str(path),"bytes":12,"sha256":"abc","records_including_header":3,"gzip_valid":True}
+            return {"url":url,"path":str(path),"bytes":12,"sha256":"abc","physical_lines":3,"gzip_valid":True}
         with TemporaryDirectory() as directory:
             with patch.object(set_catalog,"fetch",side_effect=fake_fetch), \
                  patch.object(set_catalog,"download_archive",side_effect=fake_download):
@@ -70,7 +92,7 @@ class CatalogTests(unittest.TestCase):
             with patch.object(set_catalog,"urlopen",return_value=response):
                 result=set_catalog.download_archive("https://example.test/data.csv.gz",Path(directory)/"data.csv.gz")
             self.assertTrue(result["gzip_valid"])
-            self.assertEqual(result["records_including_header"],3)
+            self.assertEqual(result["physical_lines"],3)
 
     def test_archive_url_uses_expected_public_key(self):
         self.assertEqual(
