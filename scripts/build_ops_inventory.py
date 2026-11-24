@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 from datetime import date, datetime, timezone
 from pathlib import Path
 from urllib.error import URLError
@@ -20,6 +21,22 @@ def read_json(path):
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return {}
+
+def read_front_matter(path):
+    """Read simple scalar keys from a Hugo front matter block without a YAML dependency."""
+    try:
+        content = path.read_text(encoding="utf-8")
+    except OSError:
+        return {}
+    match = re.match(r"^---\s*\n(.*?)\n---", content, re.S)
+    if not match:
+        return {}
+    values = {}
+    for key in ("content_status", "evidence_path", "source_url"):
+        found = re.search(rf"""(?m)^{key}:\s*["']?([^"'\n]+)""", match.group(1))
+        if found:
+            values[key] = found.group(1).strip()
+    return values
 
 def workflow_history(repository=None, token=None):
     """Return workflow-run metadata only; no user, secret, or analytics payloads."""
@@ -56,22 +73,43 @@ def build_inventory(root, discovered=None, runs=None):
         manifest = read_json(set_root / "manifest.json")
         card_file = set_root / "scryfall" / f"{code.lower()}-cards.json"
         archetype = archetypes.get(code, {})
+        page_path = root / "website" / "content" / "archetypes" / code.lower() / "_index.md"
+        page_meta = read_front_matter(page_path)
+        page_status = ("reviewed" if archetype else
+            page_meta.get("content_status", "preliminary") if page_path.is_file() else "missing")
+        evidence_path = page_meta.get("evidence_path")
+        evidence = read_json(root / "website" / evidence_path) if evidence_path else {}
+        evidence_images = evidence.get("overview_images") or []
+        evidence_image = next((entry for entry in evidence_images if entry.get("url")), {})
         image = archetype.get("overview_image") or {}
-        guide = archetype.get("source_url")
+        image_url = image.get("source_url") or evidence_image.get("url")
+        guide = archetype.get("source_url") or evidence.get("source_url") or page_meta.get("source_url")
+        scryfall_records = sum(
+            int(entry.get("records", 0)) for entry in manifest.get("files", [])
+            if "scryfall" in entry.get("path", "").lower() and entry.get("records") is not None
+        )
         item["acquisition"] = {
             "status": manifest.get("status", {}).get("scryfall", "not_run"),
             "generated_at": manifest.get("generated_at"),
             "manifest_present": bool(manifest),
             "card_file_present": card_file.is_file(),
+            "card_record_count": scryfall_records or None,
             "manifest_status": manifest.get("status", {})
         }
-        item["archetype_image"] = {
-            "status": "present" if image.get("source_url") else "missing",
-            "url": image.get("source_url"),
-            "review_status": image.get("review_status")
+        item["archetype_page"] = {
+            "status": page_status,
+            "url": f"/archetypes/{code.lower()}/" if page_path.is_file() else None
         }
+        item["archetype_image"] = {
+            "status": "present" if image_url else "missing",
+            "url": image_url,
+            "review_status": image.get("review_status") or evidence.get("review_status")
+        }
+        guide_status = ("found_in_reviewed_catalog" if archetype.get("source_url") else
+            "found_in_acquisition_evidence" if evidence.get("source_url") else
+            "found_on_archetype_page" if page_meta.get("source_url") else "search_available")
         item["wizards_guide"] = {
-            "status": "found_in_reviewed_catalog" if guide else "search_available",
+            "status": guide_status,
             "url": guide or f"https://magic.wizards.com/en/search?search={quote(item['name'] + ' prerelease guide')}"
         }
         prediction_dir = root / "website" / "static" / "data" / "predictions" / code
