@@ -2,12 +2,12 @@
   "schema_version": 1,
   "set_code": "ECL",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T02:40:14.554581+00:00",
+  "generated_at": "2026-11-24T17:43:33.899391+00:00",
   "files": [
     {
       "path": "set-acquisition-output/scryfall/ecl-cards.json",
       "bytes": 1761399,
-      "sha256": "2144f34f890145cba944e11b7f02bb49e5ce91d7d874e3ba87fcd6299eb848bf",
+      "sha256": "f8aceb1c116d3487d806e9ee2582a4f6672553d267e583a6bbddc71f108f264f",
       "records": 273
     },
     {
@@ -25,12 +25,12 @@
     {
       "path": "set-acquisition-output/wizards/guide-evidence.json",
       "bytes": 12000,
-      "sha256": "4327e86fddf906dcda0938944a1513ab768204248a84fbc18e2abe7cca54101d"
+      "sha256": "fa61bc6ac3918647c754157a49526080fbcb6f88774b5dbfaba655f2f12b609f"
     }
   ],
   "status": {
     "scryfall": "acquired",
-    "17lands": "not_yet_published",
+    "17lands": "unavailable",
     "wizards": "evidence_acquired_unreviewed"
   },
   "set_name": "Lorwyn Eclipsed",
@@ -38,16 +38,20 @@
     "url": "https://magic.wizards.com/en/news/feature/lorwyn-eclipsed-prerelease-guide",
     "discovery": "discovered"
   },
-  "warnings": [
-    "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"
-  ],
   "17lands": {
     "event_type": "PremierDraft",
+    "catalog_url": "https://www.17lands.com/public_datasets",
+    "catalog_status": "unavailable",
+    "catalog_last_updated": null,
+    "catalog_error": {
+      "type": "ValueError",
+      "message": "17Lands listing contained no recognizable trusted S3 archive links (response bytes: 1483). The page markup may have changed or returned a challenge page. Preview: '<!doctype html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> <!-- favicon stuff --> <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/static/apple-touch-icon.png\" /> <link rel=\"ico'"
+    },
     "archives": {},
     "probes": {
-      "draft": "inaccessible_or_missing",
-      "game": "inaccessible_or_missing",
-      "replay": "inaccessible_or_missing"
+      "draft": "catalog_unavailable",
+      "game": "catalog_unavailable",
+      "replay": "catalog_unavailable"
     },
     "source_selection": {
       "bulk_available": [],
