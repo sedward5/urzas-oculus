@@ -1,0 +1,126 @@
+{
+  "set_code": "HOB",
+  "source_url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+  "retrieved_at": "2026-11-24T02:40:06.635843+00:00",
+  "article_title": "Magic: The Gathering® | The Hobbit™ Prerelease Guide",
+  "html_sha256": "170d0f55670a766d2d64331139787e2e88cd0bb265b9331567f3c386b1c47414",
+  "headings": [
+    {
+      "level": "h1",
+      "text": "Magic: The Gathering® | The Hobbit™ Prerelease Guide"
+    },
+    {
+      "level": "h2",
+      "text": "Building a Prerelease Deck"
+    },
+    {
+      "level": "h2",
+      "text": "The Mana Curve in Magic: The Gathering | The Hobbit"
+    },
+    {
+      "level": "h2",
+      "text": "Magic: The Gathering | The Hobbit Draft Archetypes"
+    },
+    {
+      "level": "h3",
+      "text": "White-Blue Humans"
+    },
+    {
+      "level": "h3",
+      "text": "Black-Red Goblins"
+    },
+    {
+      "level": "h3",
+      "text": "Black-Green Wolves"
+    },
+    {
+      "level": "h3",
+      "text": "Red-White Dwarves"
+    },
+    {
+      "level": "h3",
+      "text": "Green-Blue Elves"
+    },
+    {
+      "level": "h3",
+      "text": "Magic Rules Blog: Mana Abilities"
+    },
+    {
+      "level": "h3",
+      "text": "Collecting Nauctis: The Sunken Realm | A First Look"
+    },
+    {
+      "level": "h3",
+      "text": "IDIC: Infinite Diversity in Infinite Combinations"
+    },
+    {
+      "level": "h2",
+      "text": "Magic: The Gathering Footer"
+    },
+    {
+      "level": "h3",
+      "text": "Find a store"
+    },
+    {
+      "level": "h3",
+      "text": "Social"
+    },
+    {
+      "level": "h3",
+      "text": "Find"
+    },
+    {
+      "level": "h3",
+      "text": "Company"
+    },
+    {
+      "level": "h3",
+      "text": "Magic"
+    },
+    {
+      "level": "h3",
+      "text": "Brands"
+    }
+  ],
+  "paragraphs": [
+    "Come in, come in! Take a seat at the table, join us for a bite, and prepare for your local game store's Magic: The Gathering® | The Hobbit™ Prerelease events! Starting on August 7, you can journey into Middle-earth ahead of schedule and experience the wonder of Bilbo's adventures in a new way. Prerelease events are approachable to new players and familiar to longtime fans, so bring your merriest party to the celebration.",
+    "When you register for a Prerelease event, you'll receive a Magic: The Gathering | The Hobbit Prerelease Pack. Each Prerelease Pack contains the following:",
+    "You'll build a 40-card sealed deck from the contents of your Prerelease Pack and any number of basic lands. Then, you'll play friendly games of Magic against your fellow Prerelease attendees. This is the perfect place to try out new strategies, test out new mechanics, and play the cards you love with the people you cherish. It's Magic with more cottagecore comforts than you can imagine!",
+    "We've put together a brief guide on how to build a deck at your Prerelease and what strategies you'll want to employ in your games. Brush up on your knowledge ahead of your local game store's Prerelease or send this guide to a friend who is interested in Magic.",
+    "Magic: The Gathering | The Hobbit Prerelease events begin on August 7, 2026, a week before the set's global release on August 14, 2026. Preorders are available now from your local game store, TCGplayer, Amazon, and elsewhere Magic is sold.",
+    "Your deck should include two of Magic's five colors, ideally focusing on one of the five core color pairs in Magic: The Gathering | The Hobbit. Each of these color pairs has its own strategy and theme, depicting one of the armies from the climax of The Hobbit. Start by opening your six Play Boosters and sorting your cards by color, separating out multicolor cards, artifacts, and colorless cards.",
+    "To decide which color pair is best for your deck, look for threats that can put pressure on your opponents. These tend to be rare and mythic rare cards that swing the game in your favor. Maybe that's a large creature like Stone-Giant of High Pass or a devastating spell like Settle the Wreckage. If you're curious if something is a good threat, ask yourself how you'd feel if it was played against you. If the answer is \"mortified and ready to run back to Hobbiton,\" congratulations! You've got a great threat on your hands.",
+    "Once you've found one or two key threats, start looking for removal. Removal is anything that can get rid of your opponent's cards or shut down their threats. Each color has its own style of removal and type of card it's effective at removing. Two of the key white removal spells in this set, Thorin's Last Stand and Stone by Sunlight, demonstrate how white can topple large creatures, artifacts, and enchantments. While blue can't destroy creatures outright, spells like Confusticate and Bebother can shut down spells before they ever get a chance to resolve.",
+    "Most removal spells are common and uncommon instants and sorceries, though there are plenty of tools you can employ to stop your opponents. You can find a list of key monocolor removal spells below, sorted by color. You can use this as a reference when building your deck or during gameplay.",
+    "| | | |",
+    "Select a mana symbol to see key removal spells.",
+    "Once you've identified your best threats and removal spells, you can decide what color pair your deck should be. Sealed Magic is all about identifying what you have the tools to build. If you opened Smaug, the Magnificent and multiple copies of Bilbo's Deadly Slice, you have the makings of a powerful black-red deck. But if you have a copy of Tom, Bert, and William but no useful green or black removal spells, you'll want to avoid building a black-green deck. Look for the right balance of splashy cards and essential effects, and you'll be well on your way to winning games at your Prerelease.",
+    "But a deck needs more than threats and removal spells. You need a solid base of creatures, spells, and lands to help you stay in the game long enough to win. Sit down, brave adventurers, for I come to you with the greatest lesson of all: the mana curve.",
+    "The mana curve helps you balance the average mana value of your cards. By building your deck with the mana curve as a guide, you'll ensure your deck has enough low-cost spells to start off the game and some high-cost spells to finish off your opponent. Your average sealed deck should look something like this:",
+    "When you draw an opening hand, you should look for at least two lands and a spell you can play early in the game. A good rule of thumb is that the player who spends the most amount of their mana over the course of the game will be in the winning position. If you cast a one-mana spell on turn one, a two-mana spell on turn two, and so on, that establishes a strong board presence and puts your opponent in a tough situation.",
+    "But what counts as a two-mana spell? Normally, the answer is obvious: anything that costs two mana to cast. But Magic: The Gathering | The Hobbit has Adventures, which are spells that come attached to permanents like creatures and artifacts. If you cast an Adventure spell, exile it as it resolves. Then you can cast the permanent card with the Adventure from exile. That's basically two spells on one card!",
+    "Velvetwing Butterflies is a three-mana creature, but it has a two-mana Adventure, Gaze in Wonder. Should you treat it as a three-mana or two-mana card? The answer to that question varies depending on how your deck is most likely going to utilize the card. Generally, you should assign these a spot on the mana curve that aligns with the Adventure part of the card. (Most Adventure spells cost less than the permanent card they are a part of.)",
+    "But maybe you're playing Most Decrepit Old Bird, which offers a most puzzling conundrum. Should you play the creature on turn one or wait to cast the Adventure on turn two? That's where you have to look at your deck. Does your deck want to play a low-cost creature early on so you can load it up with Equipment? In that case, treat Most Decrepit Old Bird as a one-mana spell. But if you would prefer to cast the Adventure spell to fill up your graveyard, treat it as a two-mana spell since that's the cost of Speak Secrets.",
+    "You've filled out your mana curve. You've built your deck. You've packed your bag with all manner of comforts and treats from home. It's time for you to play some games of Magic! This part is simple. All you have to do is follow the strategy of your deck's draft archetype, which will guide you through your games and to victory!",
+    "Draft archetypes are meant to guide your Limited experience and push you toward building an effective deck. There are five two-color draft archetypes in Magic: The Gathering | The Hobbit. Cards within these two-color pairs support a shared strategy, like landfall or drawing two cards in a turn.",
+    "Keep an eye out for uncommon two-color cards, or signpost uncommons, as those loudly signal the goals of each draft archetype. The white-blue draft archetype wants you to draw two cards in a turn, and Bard the Bowman is exactly the kind of payoff you want in your card-drawing deck. Bard rewards you for drawing and buffs the creature tokens you create with recruit, which conveniently helps you trigger Bard's ability.",
+    "We've included a list of the five draft archetypes and some key cards below. Take up the banner of your chosen army and charge into the fray! Just be sure you have a good plan before rolling into battle.",
+    "Drawing cards is already great. Getting rewarded for doing so is even better! The recruit mechanic, seen on cards like Esgaroth Garrison, Celebrate the Mountain-king, and Long Lake Nuisance, lets you draw additional cards while building a board of creature tokens. Once you've gathered your forces, buff them with Bard the Bowman or Thorin's Last Stand, then go for the win.",
+    "Take your opponents to Goblin-town with this black-red archetype. Amass provides you with a steadily growing Army token, but you can also sacrifice your Army token for spells like Stir Up Trouble or Snowslope Hunter. Cards with dies triggers like Front Porch Sentries also make for great fodder. Drain your opponents, wear away their resources, and send them to their demise.",
+    "Lead the pack with a ferocious horde of Wolves! Ferocious cares about whether you control a creature with power 4 or greater, so focus on getting your massive Wolf onto the battlefield as quickly as possible. Ordinary Bear and Gollum, Silent Slinker are on-curve options for massive creatures. If you really want to get ahead of the competition, ramp into your big creatures with Beorn, Reluctant Host or Long-Bodied Grey Dog.",
+    "Tell your opponents an unforgettable tale with the storied mechanic, which cares about whether you control three or more artifacts, legendaries, and/or Sagas. Dori, Bearer of Friends counts as a legendary and makes you an artifact, so be sure to include him in your party of Dwarves. Once you've established your enduring story, look for payoffs like Thorin Oakenshield and Bombur, Gentle Dreamer.",
+    "The Elves of Middle-earth have a deep connection to the natural world, which is represented by the landfall mechanic. This is a more controlling strategy, so focus on shutting down your opponent's creatures with Elven Raft-Steerer or building toward a towering Mirkwood Pathmaker. Thranduil, Sindarin Liege allows for an Elf-centric version of this archetype, giving you extra value off Wood Elves and Woodland Weavemaster.",
+    "Prerelease events are only the beginning of your story. After exploring what Magic: The Gathering | The Hobbit has to offer, prepare for even more events at your local game store and beyond! And if it's treasure that you seek, you can explore the flashiest, most opulent cards from this set in the Magic: The Gathering | The Hobbit Card Image Gallery.",
+    "Magic: The Gathering | The Hobbit Prerelease events begin on August 7, 2026, a week before the set's global release on August 14, 2026. Preorders are available now from your local game store, TCGplayer, Amazon, and elsewhere Magic is sold."
+  ],
+  "overview_images": [
+    {
+      "url": "https://media.wizards.com/2026/images/daily/JfAIekUv4l/en_ML8RY4G1kB.jpg",
+      "path": "set-acquisition-output/wizards/overview-13.jpg",
+      "bytes": 1078092,
+      "sha256": "d162d4f180080556b4cf1d9a280a4ee1a64b35ef7288e77e1c7d5fe2e0cb470f",
+      "alt": "Draft Archetypes"
+    }
+  ],
+  "review_status": "source_evidence_only_not_reviewed"
+}

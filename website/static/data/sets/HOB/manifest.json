@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "set_code": "HOB",
+  "event_type": "PremierDraft",
+  "generated_at": "2026-11-24T02:40:06.635843+00:00",
+  "files": [
+    {
+      "path": "set-acquisition-output/scryfall/hob-cards.json",
+      "bytes": 1292177,
+      "sha256": "040691d0489303a00b17d51588f54241464ad17c86bb3aa226e7fa0813c2d342",
+      "records": 193
+    },
+    {
+      "url": "https://media.wizards.com/2026/images/daily/JfAIekUv4l/en_ML8RY4G1kB.jpg",
+      "path": "set-acquisition-output/wizards/overview-13.jpg",
+      "bytes": 1078092,
+      "sha256": "d162d4f180080556b4cf1d9a280a4ee1a64b35ef7288e77e1c7d5fe2e0cb470f",
+      "alt": "Draft Archetypes"
+    },
+    {
+      "path": "set-acquisition-output/wizards/guide.html",
+      "bytes": 228834,
+      "sha256": "170d0f55670a766d2d64331139787e2e88cd0bb265b9331567f3c386b1c47414"
+    },
+    {
+      "path": "set-acquisition-output/wizards/guide-evidence.json",
+      "bytes": 12513,
+      "sha256": "04762c1c466f3a5d1301895bd5c6480e7a3f1bebe2cd2615a252bebaf9aadc1d"
+    }
+  ],
+  "status": {
+    "scryfall": "acquired",
+    "17lands": "not_yet_published",
+    "wizards": "evidence_acquired_unreviewed"
+  },
+  "set_name": "The Hobbit",
+  "wizards_guide": {
+    "url": "https://magic.wizards.com/en/news/feature/the-hobbit-prerelease-guide",
+    "discovery": "discovered"
+  },
+  "warnings": [
+    "S3 returned 403 for these keys; they may be missing or inaccessible: draft, game, replay"
+  ],
+  "17lands": {
+    "event_type": "PremierDraft",
+    "archives": {},
+    "probes": {
+      "draft": "inaccessible_or_missing",
+      "game": "inaccessible_or_missing",
+      "replay": "inaccessible_or_missing"
+    },
+    "source_selection": {
+      "bulk_available": [],
+      "bulk_missing": [
+        "draft",
+        "game"
+      ]
+    }
+  }
+}
