@@ -1,6 +1,6 @@
 {
   "set_code": "HOB",
-  "retrieved_at": "2026-11-24T18:33:33.462944+00:00",
+  "retrieved_at": "2026-11-24T22:08:22.622314+00:00",
   "source": "https://api.scryfall.com/cards/search",
   "cards": [
     {
@@ -144,13 +144,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16653,
+      "edhrec_rank": 16628,
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.28",
+        "usd": "0.11",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.08",
+        "eur": "0.08",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -278,10 +278,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14466,
+      "edhrec_rank": 14447,
       "prices": {
-        "usd": "0.15",
-        "usd_foil": "0.25",
+        "usd": "0.17",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.10",
@@ -410,13 +410,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 4524,
+      "edhrec_rank": 4511,
       "prices": {
         "usd": "0.40",
-        "usd_foil": "0.40",
+        "usd_foil": "0.39",
         "usd_etched": null,
         "eur": "0.22",
-        "eur_foil": "0.24",
+        "eur_foil": "0.23",
         "tix": "0.03"
       },
       "related_uris": {
@@ -550,17 +550,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 3328,
+      "edhrec_rank": 3311,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://www.instagram.com/p/DbHIf3vCWdc/",
         "previewed_at": "2026-07-23"
       },
       "prices": {
-        "usd": "2.35",
-        "usd_foil": "2.61",
+        "usd": "2.29",
+        "usd_foil": "2.76",
         "usd_etched": null,
-        "eur": "2.78",
+        "eur": "2.70",
         "eur_foil": "3.27",
         "tix": "0.14"
       },
@@ -717,18 +717,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 3917,
+      "edhrec_rank": 3906,
       "preview": {
         "source": "TCGplayer",
         "source_uri": "https://bsky.app/profile/tcgplayer.com/post/3mrd7jltfri2u",
         "previewed_at": "2026-07-23"
       },
       "prices": {
-        "usd": "1.33",
-        "usd_foil": "1.67",
+        "usd": "1.40",
+        "usd_foil": "1.64",
         "usd_etched": null,
-        "eur": "1.17",
-        "eur_foil": "1.50",
+        "eur": "1.14",
+        "eur_foil": "1.44",
         "tix": "0.02"
       },
       "related_uris": {
@@ -886,13 +886,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7797,
+      "edhrec_rank": 7784,
       "penny_rank": 1286,
       "prices": {
         "usd": "0.24",
-        "usd_foil": "0.26",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.13",
+        "eur": "0.14",
         "eur_foil": "0.07",
         "tix": "0.03"
       },
@@ -1043,14 +1043,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13163,
+      "edhrec_rank": 13141,
       "penny_rank": 12778,
       "prices": {
-        "usd": "0.15",
+        "usd": "0.16",
         "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.12",
-        "eur_foil": "0.10",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -1185,13 +1185,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7888,
+      "edhrec_rank": 7875,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.39",
+        "usd": "0.25",
+        "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.15",
-        "eur_foil": "0.20",
+        "eur": "0.14",
+        "eur_foil": "0.17",
         "tix": "0.03"
       },
       "related_uris": {
@@ -1321,7 +1321,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19634,
+      "edhrec_rank": 19611,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.24",
@@ -1475,13 +1475,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13630,
+      "edhrec_rank": 13612,
       "prices": {
         "usd": "0.16",
-        "usd_foil": "0.20",
+        "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.12",
+        "eur_foil": "0.11",
         "tix": "0.01"
       },
       "related_uris": {
@@ -1613,7 +1613,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19769,
+      "edhrec_rank": 19750,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/mtg-the-hobbit-exclusive-orcrist-thorin-sword-equipment/",
@@ -1623,8 +1623,8 @@
         "usd": "0.15",
         "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.20",
+        "eur": "0.06",
+        "eur_foil": "0.18",
         "tix": "0.01"
       },
       "related_uris": {
@@ -1772,13 +1772,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9389,
+      "edhrec_rank": 9370,
       "prices": {
-        "usd": "0.33",
+        "usd": "0.34",
         "usd_foil": "0.38",
         "usd_etched": null,
         "eur": "0.48",
-        "eur_foil": "0.60",
+        "eur_foil": "0.64",
         "tix": "0.02"
       },
       "related_uris": {
@@ -1928,10 +1928,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18989,
+      "edhrec_rank": 18969,
       "prices": {
-        "usd": "0.09",
-        "usd_foil": "0.22",
+        "usd": "0.10",
+        "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.03",
         "eur_foil": "0.05",
@@ -2087,7 +2087,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9120,
+      "edhrec_rank": 9106,
       "penny_rank": 8429,
       "preview": {
         "source": "Nerd of the Rings",
@@ -2095,11 +2095,11 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.33",
+        "usd": "0.27",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.27",
-        "eur_foil": "0.35",
+        "eur": "0.29",
+        "eur_foil": "0.30",
         "tix": "0.02"
       },
       "related_uris": {
@@ -2251,13 +2251,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 1552,
+      "edhrec_rank": 1543,
       "prices": {
-        "usd": "28.34",
-        "usd_foil": "33.02",
+        "usd": "28.46",
+        "usd_foil": "32.82",
         "usd_etched": null,
-        "eur": "28.83",
-        "eur_foil": "33.07",
+        "eur": "28.57",
+        "eur_foil": "32.49",
         "tix": "0.38"
       },
       "related_uris": {
@@ -2407,13 +2407,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 10896,
+      "edhrec_rank": 10874,
       "prices": {
-        "usd": "0.21",
+        "usd": "0.20",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.17",
+        "eur": "0.07",
+        "eur_foil": "0.15",
         "tix": "0.03"
       },
       "related_uris": {
@@ -2548,19 +2548,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 5747,
+      "edhrec_rank": 5725,
       "preview": {
         "source": "Tap for Jack",
         "source_uri": "https://www.instagram.com/p/Dba70h2DYAD?img_index=3",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.93",
-        "usd_foil": "1.26",
+        "usd": "1.03",
+        "usd_foil": "1.28",
         "usd_etched": null,
-        "eur": "1.07",
-        "eur_foil": "1.46",
-        "tix": "0.60"
+        "eur": "1.11",
+        "eur_foil": "1.61",
+        "tix": "0.55"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DK%25C3%25ADli%2Bthe%2BResourceful",
@@ -2709,7 +2709,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17743,
+      "edhrec_rank": 17720,
       "penny_rank": 6603,
       "prices": {
         "usd": "0.11",
@@ -2846,10 +2846,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24877,
+      "edhrec_rank": 24872,
       "prices": {
         "usd": "0.04",
-        "usd_foil": "0.20",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.04",
         "eur_foil": "0.09",
@@ -2980,13 +2980,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19651,
+      "edhrec_rank": 19640,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.10",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -3116,10 +3116,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18289,
+      "edhrec_rank": 18257,
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.20",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.06",
@@ -3272,14 +3272,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14615,
+      "edhrec_rank": 14597,
       "penny_rank": 4876,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.13",
-        "eur_foil": "0.16",
+        "eur": "0.12",
+        "eur_foil": "0.15",
         "tix": "0.01"
       },
       "related_uris": {
@@ -3414,13 +3414,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14801,
+      "edhrec_rank": 14785,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.08",
+        "eur_foil": "0.07",
         "tix": "0.01"
       },
       "related_uris": {
@@ -3574,14 +3574,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 2564,
+      "edhrec_rank": 2543,
       "prices": {
-        "usd": "17.68",
-        "usd_foil": "17.51",
+        "usd": "17.28",
+        "usd_foil": "17.45",
         "usd_etched": null,
-        "eur": "19.59",
-        "eur_foil": "20.32",
-        "tix": "1.41"
+        "eur": "19.40",
+        "eur_foil": "20.08",
+        "tix": "1.31"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BQueen%2Bof%2BDale",
@@ -3711,7 +3711,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14621,
+      "edhrec_rank": 14612,
       "penny_rank": 1920,
       "preview": {
         "source": "YuchenLiu",
@@ -3719,11 +3719,11 @@
         "previewed_at": "2026-07-20"
       },
       "prices": {
-        "usd": "0.23",
+        "usd": "0.25",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.28",
-        "eur_foil": "0.49",
+        "eur": "0.27",
+        "eur_foil": "0.47",
         "tix": "0.02"
       },
       "related_uris": {
@@ -3852,7 +3852,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 2731,
+      "edhrec_rank": 2730,
       "penny_rank": 823,
       "preview": {
         "source": "ZBexx",
@@ -3860,11 +3860,11 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.36",
-        "usd_foil": "0.60",
+        "usd": "0.38",
+        "usd_foil": "0.55",
         "usd_etched": null,
-        "eur": "0.42",
-        "eur_foil": "0.55",
+        "eur": "0.41",
+        "eur_foil": "0.50",
         "tix": "0.02"
       },
       "related_uris": {
@@ -3992,7 +3992,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14485,
+      "edhrec_rank": 14468,
       "preview": {
         "source": "Rubee",
         "source_uri": "https://www.instagram.com/reels/DbCEfSkO2wE/",
@@ -4000,9 +4000,9 @@
       },
       "prices": {
         "usd": "0.13",
-        "usd_foil": "0.21",
+        "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.14",
         "tix": "0.03"
       },
@@ -4131,13 +4131,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13672,
+      "edhrec_rank": 13654,
       "prices": {
-        "usd": "0.13",
-        "usd_foil": "0.20",
+        "usd": "0.12",
+        "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.14",
+        "eur": "0.04",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -4306,13 +4306,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8701,
+      "edhrec_rank": 8683,
       "prices": {
         "usd": "0.26",
         "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.21",
-        "eur_foil": "0.34",
+        "eur": "0.23",
+        "eur_foil": "0.31",
         "tix": "0.02"
       },
       "related_uris": {
@@ -4467,10 +4467,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23817,
+      "edhrec_rank": 23806,
       "prices": {
         "usd": "0.09",
-        "usd_foil": "0.19",
+        "usd_foil": "0.18",
         "usd_etched": null,
         "eur": "0.04",
         "eur_foil": "0.08",
@@ -4601,13 +4601,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15109,
+      "edhrec_rank": 15089,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.08",
+        "eur_foil": "0.06",
         "tix": "0.03"
       },
       "related_uris": {
@@ -4761,14 +4761,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9573,
+      "edhrec_rank": 9536,
       "penny_rank": 6579,
       "prices": {
         "usd": "0.22",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.24",
+        "eur_foil": "0.26",
         "tix": "0.03"
       },
       "related_uris": {
@@ -4902,13 +4902,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8115,
+      "edhrec_rank": 8091,
       "prices": {
-        "usd": "4.93",
-        "usd_foil": "4.97",
+        "usd": "5.26",
+        "usd_foil": "4.92",
         "usd_etched": null,
-        "eur": "8.82",
-        "eur_foil": "10.37",
+        "eur": "8.70",
+        "eur_foil": "10.18",
         "tix": "16.79"
       },
       "related_uris": {
@@ -5066,13 +5066,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17078,
+      "edhrec_rank": 17059,
       "prices": {
-        "usd": "0.13",
+        "usd": "0.14",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.04",
+        "eur_foil": "0.05",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5200,7 +5200,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 10018,
+      "edhrec_rank": 9980,
       "penny_rank": 384,
       "preview": {
         "source": "fellbrinkmtg",
@@ -5208,11 +5208,11 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.19",
+        "usd": "0.20",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.08",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5345,12 +5345,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9334,
+      "edhrec_rank": 9317,
       "prices": {
-        "usd": "0.94",
-        "usd_foil": "1.46",
+        "usd": "1.06",
+        "usd_foil": "1.45",
         "usd_etched": null,
-        "eur": "2.24",
+        "eur": "2.18",
         "eur_foil": "2.62",
         "tix": "0.06"
       },
@@ -5483,7 +5483,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9694,
+      "edhrec_rank": 9651,
       "penny_rank": 1663,
       "preview": {
         "source": "Wizards of the Coast",
@@ -5491,11 +5491,11 @@
         "previewed_at": "2026-07-20"
       },
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.33",
+        "usd": "0.26",
+        "usd_foil": "0.35",
         "usd_etched": null,
         "eur": "0.11",
-        "eur_foil": "0.25",
+        "eur_foil": "0.26",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5625,13 +5625,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19407,
+      "edhrec_rank": 19371,
       "prices": {
         "usd": "0.10",
         "usd_foil": "0.15",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.07",
+        "eur_foil": "0.06",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5764,13 +5764,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15922,
+      "edhrec_rank": 15887,
       "prices": {
         "usd": "0.12",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.02",
-        "eur_foil": "0.03",
+        "eur": "0.03",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -5902,13 +5902,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 6082,
+      "edhrec_rank": 6039,
       "prices": {
-        "usd": "4.90",
-        "usd_foil": "5.20",
+        "usd": "4.34",
+        "usd_foil": "5.30",
         "usd_etched": null,
-        "eur": "4.15",
-        "eur_foil": "4.42",
+        "eur": "4.24",
+        "eur_foil": "4.46",
         "tix": "0.06"
       },
       "related_uris": {
@@ -6043,17 +6043,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20891,
+      "edhrec_rank": 20855,
       "preview": {
         "source": "fellbrinkmtg",
         "source_uri": "https://www.instagram.com/p/DbYXg9nIhst/",
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.11",
+        "usd": "0.13",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.07",
         "eur_foil": "0.12",
         "tix": "0.03"
       },
@@ -6205,18 +6205,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16142,
+      "edhrec_rank": 16126,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/MTGArenaJP/status/2079571314650812864",
         "previewed_at": "2026-07-21"
       },
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.26",
+        "usd": "0.22",
+        "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.13",
-        "eur_foil": "0.35",
+        "eur_foil": "0.33",
         "tix": "0.03"
       },
       "related_uris": {
@@ -6348,13 +6348,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19437,
+      "edhrec_rank": 19411,
       "prices": {
-        "usd": "0.12",
+        "usd": "0.11",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.07",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -6508,7 +6508,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22245,
+      "edhrec_rank": 22233,
       "penny_rank": 5546,
       "preview": {
         "source": "Brandon Sanderson",
@@ -6520,7 +6520,7 @@
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.15",
+        "eur_foil": "0.14",
         "tix": "0.01"
       },
       "related_uris": {
@@ -6671,7 +6671,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22994,
+      "edhrec_rank": 22965,
       "prices": {
         "usd": "0.08",
         "usd_foil": "0.18",
@@ -6814,18 +6814,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12638,
+      "edhrec_rank": 12615,
       "preview": {
         "source": "TheOneRing.net",
         "source_uri": "https://www.instagram.com/p/DbBj57uhpwR/",
         "previewed_at": "2026-07-21"
       },
       "prices": {
-        "usd": "0.29",
+        "usd": "0.30",
         "usd_foil": "0.43",
         "usd_etched": null,
-        "eur": "0.29",
-        "eur_foil": "0.35",
+        "eur": "0.31",
+        "eur_foil": "0.32",
         "tix": "0.02"
       },
       "related_uris": {
@@ -6957,7 +6957,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20855,
+      "edhrec_rank": 20837,
       "penny_rank": 6607,
       "preview": {
         "source": "Wizards of the Coast",
@@ -6965,11 +6965,11 @@
         "previewed_at": "2026-07-22"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.27",
+        "usd": "0.19",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.13",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -7101,7 +7101,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22866,
+      "edhrec_rank": 22839,
       "prices": {
         "usd": "0.09",
         "usd_foil": "0.20",
@@ -7263,13 +7263,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16234,
+      "edhrec_rank": 16218,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.27",
+        "usd": "0.26",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.28",
-        "eur_foil": "0.37",
+        "eur": "0.30",
+        "eur_foil": "0.35",
         "tix": "0.02"
       },
       "related_uris": {
@@ -7399,9 +7399,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16137,
+      "edhrec_rank": 16106,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.21",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.06",
@@ -7535,7 +7535,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13220,
+      "edhrec_rank": 13182,
       "penny_rank": 256,
       "preview": {
         "source": "fellbrinkmtg",
@@ -7543,12 +7543,12 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.35",
+        "usd": "0.27",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.18",
-        "eur_foil": "0.40",
-        "tix": "0.04"
+        "eur_foil": "0.36",
+        "tix": "0.03"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DPlunder%2Bthe%2BTrollshaws",
@@ -7679,7 +7679,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15247,
+      "edhrec_rank": 15227,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/Wizards_MagicEU/status/2079612090273177826",
@@ -7819,12 +7819,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 11948,
+      "edhrec_rank": 11927,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.32",
+        "usd": "0.28",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.29",
+        "eur": "0.28",
         "eur_foil": "0.42",
         "tix": "0.02"
       },
@@ -7956,14 +7956,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15321,
+      "edhrec_rank": 15292,
       "penny_rank": 4872,
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.37",
+        "usd": "0.18",
+        "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.21",
-        "eur_foil": "0.41",
+        "eur_foil": "0.40",
         "tix": "0.02"
       },
       "related_uris": {
@@ -8111,14 +8111,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17451,
+      "edhrec_rank": 17415,
       "penny_rank": 6617,
       "prices": {
-        "usd": "0.07",
+        "usd": "0.06",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.11",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -8246,13 +8246,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15555,
+      "edhrec_rank": 15529,
       "prices": {
-        "usd": "0.16",
-        "usd_foil": "0.24",
+        "usd": "0.18",
+        "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.09",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -8384,18 +8384,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 11510,
+      "edhrec_rank": 11485,
       "preview": {
         "source": "Yamina Amane",
         "source_uri": "https://www.instagram.com/p/DbZiw0XBIpn/",
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.32",
+        "usd": "0.30",
+        "usd_foil": "0.33",
         "usd_etched": null,
         "eur": "0.23",
-        "eur_foil": "0.30",
+        "eur_foil": "0.29",
         "tix": "0.02"
       },
       "related_uris": {
@@ -8523,13 +8523,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 23848,
+      "edhrec_rank": 23821,
       "prices": {
         "usd": "0.07",
-        "usd_foil": "0.15",
+        "usd_foil": "0.14",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.05",
+        "eur_foil": "0.04",
         "tix": "0.01"
       },
       "related_uris": {
@@ -8659,14 +8659,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 2565,
+      "edhrec_rank": 2547,
       "prices": {
-        "usd": "3.87",
-        "usd_foil": "3.44",
+        "usd": "4.67",
+        "usd_foil": "3.42",
         "usd_etched": null,
         "eur": "3.30",
-        "eur_foil": "3.53",
-        "tix": "0.03"
+        "eur_foil": "3.51",
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DWizard%2527s%2BStaff",
@@ -8816,12 +8816,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12951,
+      "edhrec_rank": 12931,
       "prices": {
         "usd": "0.30",
         "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.20",
+        "eur": "0.18",
         "eur_foil": "0.23",
         "tix": "0.02"
       },
@@ -8975,17 +8975,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9851,
+      "edhrec_rank": 9832,
       "preview": {
         "source": "abentu",
         "source_uri": "https://www.bilibili.com/opus/1227349087410454531",
         "previewed_at": "2026-07-20"
       },
       "prices": {
-        "usd": "0.29",
+        "usd": "0.28",
         "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.28",
+        "eur": "0.27",
         "eur_foil": "0.41",
         "tix": "0.02"
       },
@@ -9114,13 +9114,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13390,
+      "edhrec_rank": 13365,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.04",
-        "eur_foil": "0.12",
+        "eur": "0.05",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -9250,7 +9250,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17642,
+      "edhrec_rank": 17617,
       "penny_rank": 2743,
       "preview": {
         "source": "Stella Chuu",
@@ -9258,11 +9258,11 @@
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.10",
-        "usd_foil": "0.99",
+        "usd": "0.09",
+        "usd_foil": "0.98",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.07",
+        "eur_foil": "0.06",
         "tix": "0.04"
       },
       "related_uris": {
@@ -9392,17 +9392,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21720,
+      "edhrec_rank": 21715,
       "preview": {
         "source": "Brandon Sanderson",
         "source_uri": "https://www.youtube.com/shorts/7IIIJGIQCEQ",
         "previewed_at": "2026-07-27"
       },
       "prices": {
-        "usd": "0.18",
+        "usd": "0.19",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.11",
+        "eur": "0.10",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -9553,14 +9553,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16436,
+      "edhrec_rank": 16408,
       "penny_rank": 5534,
       "prices": {
         "usd": "0.14",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.15",
+        "eur": "0.04",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -9693,9 +9693,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18479,
+      "edhrec_rank": 18462,
       "prices": {
-        "usd": "0.15",
+        "usd": "0.16",
         "usd_foil": "0.25",
         "usd_etched": null,
         "eur": "0.08",
@@ -9829,7 +9829,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 22272,
+      "edhrec_rank": 22249,
       "preview": {
         "source": "YoSkylerSeymour",
         "source_uri": "https://www.instagram.com/reels/DbZA3IbSRsk/",
@@ -9840,7 +9840,7 @@
         "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.03",
+        "eur_foil": "0.02",
         "tix": "0.03"
       },
       "related_uris": {
@@ -9988,12 +9988,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13198,
+      "edhrec_rank": 13184,
       "prices": {
         "usd": "0.25",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.06",
+        "eur": "0.05",
         "eur_foil": "0.07",
         "tix": "0.03"
       },
@@ -10122,7 +10122,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18214,
+      "edhrec_rank": 18197,
       "penny_rank": 5541,
       "preview": {
         "source": "EDH War Room",
@@ -10130,10 +10130,10 @@
         "previewed_at": "2026-07-22"
       },
       "prices": {
-        "usd": "0.21",
+        "usd": "0.20",
         "usd_foil": "0.22",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.07",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -10267,13 +10267,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14271,
+      "edhrec_rank": 14258,
       "prices": {
-        "usd": "1.77",
-        "usd_foil": "1.60",
+        "usd": "1.70",
+        "usd_foil": "1.64",
         "usd_etched": null,
-        "eur": "2.49",
-        "eur_foil": "3.29",
+        "eur": "2.61",
+        "eur_foil": "3.28",
         "tix": "0.39"
       },
       "related_uris": {
@@ -10431,13 +10431,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21191,
+      "edhrec_rank": 21172,
       "prices": {
-        "usd": "0.11",
+        "usd": "0.10",
         "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.10",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -10570,14 +10570,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19152,
+      "edhrec_rank": 19128,
       "penny_rank": 6593,
       "prices": {
         "usd": "0.17",
         "usd_foil": "0.20",
         "usd_etched": null,
-        "eur": "0.04",
-        "eur_foil": "0.12",
+        "eur": "0.03",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -10710,9 +10710,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18492,
+      "edhrec_rank": 18494,
       "prices": {
-        "usd": "0.22",
+        "usd": "0.21",
         "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.03",
@@ -10887,7 +10887,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13769,
+      "edhrec_rank": 13746,
       "penny_rank": 5543,
       "preview": {
         "source": "MMORPG",
@@ -10898,7 +10898,7 @@
         "usd": "0.15",
         "usd_foil": "0.21",
         "usd_etched": null,
-        "eur": "0.10",
+        "eur": "0.09",
         "eur_foil": "0.16",
         "tix": "0.03"
       },
@@ -11050,14 +11050,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12563,
+      "edhrec_rank": 12555,
       "penny_rank": 8440,
       "prices": {
-        "usd": "0.27",
-        "usd_foil": "0.35",
+        "usd": "0.28",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.35",
-        "eur_foil": "0.50",
+        "eur": "0.36",
+        "eur_foil": "0.47",
         "tix": "0.02"
       },
       "related_uris": {
@@ -11186,13 +11186,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 10445,
+      "edhrec_rank": 10431,
       "prices": {
-        "usd": "1.32",
-        "usd_foil": "1.64",
+        "usd": "1.31",
+        "usd_foil": "1.65",
         "usd_etched": null,
-        "eur": "1.92",
-        "eur_foil": "2.68",
+        "eur": "1.82",
+        "eur_foil": "2.70",
         "tix": "0.21"
       },
       "related_uris": {
@@ -11328,7 +11328,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7380,
+      "edhrec_rank": 7358,
       "penny_rank": 6623,
       "preview": {
         "source": "GameSpot",
@@ -11336,11 +11336,11 @@
         "previewed_at": "2026-07-20"
       },
       "prices": {
-        "usd": "0.43",
-        "usd_foil": "0.74",
+        "usd": "0.44",
+        "usd_foil": "0.73",
         "usd_etched": null,
-        "eur": "0.48",
-        "eur_foil": "0.57",
+        "eur": "0.49",
+        "eur_foil": "0.52",
         "tix": "0.02"
       },
       "related_uris": {
@@ -11473,7 +11473,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17649,
+      "edhrec_rank": 17641,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://bsky.app/profile/mtgarena.com/post/3mrdcrwq34q2e",
@@ -11632,7 +11632,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12404,
+      "edhrec_rank": 12387,
       "penny_rank": 8469,
       "preview": {
         "source": "YoSkylerSeymour",
@@ -11644,7 +11644,7 @@
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.11",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -11777,7 +11777,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16648,
+      "edhrec_rank": 16614,
       "prices": {
         "usd": "0.16",
         "usd_foil": "0.22",
@@ -11911,9 +11911,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15160,
+      "edhrec_rank": 15147,
       "prices": {
-        "usd": "0.22",
+        "usd": "0.20",
         "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.04",
@@ -12067,9 +12067,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13866,
+      "edhrec_rank": 13858,
       "prices": {
-        "usd": "0.26",
+        "usd": "0.25",
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.16",
@@ -12227,19 +12227,19 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7398,
+      "edhrec_rank": 7373,
       "preview": {
         "source": "TCGplayer",
         "source_uri": "https://bsky.app/profile/tcgplayer.com/post/3mrd7jltfri2u",
         "previewed_at": "2026-07-23"
       },
       "prices": {
-        "usd": "0.85",
-        "usd_foil": "1.23",
+        "usd": "0.84",
+        "usd_foil": "1.21",
         "usd_etched": null,
-        "eur": "1.07",
-        "eur_foil": "1.05",
-        "tix": "0.99"
+        "eur": "1.00",
+        "eur_foil": "1.02",
+        "tix": "1.01"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BSackville-Bagginses",
@@ -12366,10 +12366,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14793,
+      "edhrec_rank": 14769,
       "penny_rank": 8486,
       "prices": {
-        "usd": "0.12",
+        "usd": "0.13",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.04",
@@ -12503,11 +12503,11 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15017,
+      "edhrec_rank": 14986,
       "penny_rank": 6618,
       "prices": {
-        "usd": "0.12",
-        "usd_foil": "0.28",
+        "usd": "0.14",
+        "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.06",
         "eur_foil": "0.14",
@@ -12639,13 +12639,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13206,
+      "edhrec_rank": 13175,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.33",
+        "usd": "0.27",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.24",
-        "eur_foil": "0.40",
+        "eur": "0.26",
+        "eur_foil": "0.37",
         "tix": "0.02"
       },
       "related_uris": {
@@ -12780,7 +12780,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9797,
+      "edhrec_rank": 9777,
       "penny_rank": 8397,
       "preview": {
         "source": "Nerd of the Rings",
@@ -12788,10 +12788,10 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.26",
+        "usd": "0.25",
         "usd_foil": "0.39",
         "usd_etched": null,
-        "eur": "0.22",
+        "eur": "0.21",
         "eur_foil": "0.21",
         "tix": "0.02"
       },
@@ -12927,17 +12927,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13503,
+      "edhrec_rank": 13491,
       "preview": {
         "source": "RobertRedBeardMTG",
         "source_uri": "https://www.instagram.com/p/DbVtsM5jd2K/?igsh=MXBma2VybTM4cXozcA==",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.17",
-        "usd_foil": "0.33",
+        "usd": "0.18",
+        "usd_foil": "0.34",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.13",
         "tix": "0.03"
       },
@@ -13088,7 +13088,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9159,
+      "edhrec_rank": 9135,
       "penny_rank": 5530,
       "preview": {
         "source": "Heute.at",
@@ -13096,10 +13096,10 @@
         "previewed_at": "2026-07-23"
       },
       "prices": {
-        "usd": "0.22",
+        "usd": "0.27",
         "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.19",
+        "eur": "0.20",
         "eur_foil": "0.25",
         "tix": "0.03"
       },
@@ -13233,13 +13233,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14463,
+      "edhrec_rank": 14429,
       "prices": {
-        "usd": "0.19",
+        "usd": "0.20",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.15",
+        "eur": "0.09",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -13390,13 +13390,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8843,
+      "edhrec_rank": 8816,
       "penny_rank": 8412,
       "prices": {
-        "usd": "0.21",
-        "usd_foil": "0.37",
+        "usd": "0.22",
+        "usd_foil": "0.38",
         "usd_etched": null,
-        "eur": "0.21",
+        "eur": "0.23",
         "eur_foil": "0.29",
         "tix": "0.02"
       },
@@ -13528,15 +13528,15 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8125,
+      "edhrec_rank": 8102,
       "penny_rank": 8417,
       "prices": {
-        "usd": "0.38",
-        "usd_foil": "0.34",
+        "usd": "0.39",
+        "usd_foil": "0.37",
         "usd_etched": null,
         "eur": "0.28",
         "eur_foil": "0.56",
-        "tix": "0.03"
+        "tix": "0.02"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DDesert%2BWere-Worm",
@@ -13671,13 +13671,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9297,
+      "edhrec_rank": 9278,
       "prices": {
-        "usd": "0.50",
-        "usd_foil": "0.53",
+        "usd": "0.47",
+        "usd_foil": "0.51",
         "usd_etched": null,
-        "eur": "0.41",
-        "eur_foil": "0.76",
+        "eur": "0.42",
+        "eur_foil": "0.70",
         "tix": "0.02"
       },
       "related_uris": {
@@ -13838,12 +13838,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9432,
+      "edhrec_rank": 9422,
       "prices": {
-        "usd": "0.14",
+        "usd": "0.15",
         "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.06",
         "tix": "0.03"
       },
@@ -13974,14 +13974,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 11016,
+      "edhrec_rank": 10991,
       "penny_rank": 180,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.27",
+        "eur": "0.18",
+        "eur_foil": "0.37",
         "tix": "0.03"
       },
       "related_uris": {
@@ -14154,14 +14154,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7218,
+      "edhrec_rank": 7207,
       "prices": {
-        "usd": "3.46",
-        "usd_foil": "4.61",
+        "usd": "3.64",
+        "usd_foil": "4.66",
         "usd_etched": null,
-        "eur": "5.82",
-        "eur_foil": "6.89",
-        "tix": "0.65"
+        "eur": "5.65",
+        "eur_foil": "7.20",
+        "tix": "0.71"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGandalf%252C%2BGoblins%2527%2BBane%2B%252F%252F%2BFlameshape",
@@ -14295,10 +14295,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19859,
+      "edhrec_rank": 19840,
       "prices": {
         "usd": "0.12",
-        "usd_foil": "0.27",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.14",
         "eur_foil": "0.19",
@@ -14430,9 +14430,9 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18081,
+      "edhrec_rank": 18064,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.21",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.17",
@@ -14593,18 +14593,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7204,
+      "edhrec_rank": 7183,
       "preview": {
         "source": "Variety",
         "source_uri": "https://variety.com/2026/gaming/news/magic-the-gathering-hobbit-spoiler-card-gloin-1236822100/",
         "previewed_at": "2026-07-28"
       },
       "prices": {
-        "usd": "0.23",
+        "usd": "0.24",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.14",
+        "eur": "0.11",
+        "eur_foil": "0.15",
         "tix": "0.03"
       },
       "related_uris": {
@@ -14755,7 +14755,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13368,
+      "edhrec_rank": 13354,
       "penny_rank": 6592,
       "prices": {
         "usd": "0.15",
@@ -14892,13 +14892,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21036,
+      "edhrec_rank": 21006,
       "prices": {
         "usd": "0.05",
-        "usd_foil": "0.21",
+        "usd_foil": "0.19",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.07",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -15031,13 +15031,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15128,
+      "edhrec_rank": 15107,
       "prices": {
-        "usd": "0.10",
+        "usd": "0.12",
         "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.03",
-        "eur_foil": "0.08",
+        "eur_foil": "0.07",
         "tix": "0.01"
       },
       "related_uris": {
@@ -15173,17 +15173,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13439,
+      "edhrec_rank": 13413,
       "preview": {
         "source": "But Why Tho?",
         "source_uri": "https://butwhytho.net/2026/07/exclusive-preview-the-hobbit-set-magic/",
         "previewed_at": "2026-07-21"
       },
       "prices": {
-        "usd": "0.32",
+        "usd": "0.33",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.20",
+        "eur": "0.21",
         "eur_foil": "0.16",
         "tix": "0.02"
       },
@@ -15350,7 +15350,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 6619,
+      "edhrec_rank": 6596,
       "penny_rank": 3062,
       "preview": {
         "source": "Wizards of the Coast",
@@ -15358,10 +15358,10 @@
         "previewed_at": "2026-07-20"
       },
       "prices": {
-        "usd": "0.34",
-        "usd_foil": "0.38",
+        "usd": "0.31",
+        "usd_foil": "0.41",
         "usd_etched": null,
-        "eur": "0.27",
+        "eur": "0.28",
         "eur_foil": "0.43",
         "tix": "0.10"
       },
@@ -15512,17 +15512,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12886,
+      "edhrec_rank": 12869,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://bsky.app/profile/playmagic.com/post/3mrg5cpvkv52z",
         "previewed_at": "2026-07-24"
       },
       "prices": {
-        "usd": "0.15",
+        "usd": "0.16",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.09",
+        "eur": "0.08",
         "eur_foil": "0.20",
         "tix": "0.03"
       },
@@ -15658,18 +15658,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 10444,
+      "edhrec_rank": 10428,
       "preview": {
         "source": "RobertRedBeardMTG",
         "source_uri": "https://www.instagram.com/p/DbVtsM5jd2K/?igsh=MXBma2VybTM4cXozcA==",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.15",
+        "usd": "0.16",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.17",
+        "eur_foil": "0.16",
         "tix": "0.03"
       },
       "related_uris": {
@@ -15797,14 +15797,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17511,
+      "edhrec_rank": 17485,
       "preview": {
         "source": "RobertRedBeardMTG",
         "source_uri": "https://www.instagram.com/p/DbVtsM5jd2K/?igsh=MXBma2VybTM4cXozcA==",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.14",
+        "usd": "0.15",
         "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.06",
@@ -15938,14 +15938,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14950,
+      "edhrec_rank": 14925,
       "penny_rank": 4027,
       "prices": {
-        "usd": "0.20",
+        "usd": "0.18",
         "usd_foil": "0.28",
         "usd_etched": null,
         "eur": "0.14",
-        "eur_foil": "0.18",
+        "eur_foil": "0.17",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16103,13 +16103,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16007,
+      "edhrec_rank": 15981,
       "prices": {
-        "usd": "0.13",
+        "usd": "0.15",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.10",
+        "eur": "0.06",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16265,13 +16265,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 2954,
+      "edhrec_rank": 2944,
       "prices": {
-        "usd": "21.19",
-        "usd_foil": "19.80",
+        "usd": "21.15",
+        "usd_foil": "20.71",
         "usd_etched": null,
-        "eur": "21.13",
-        "eur_foil": "22.34",
+        "eur": "21.01",
+        "eur_foil": "22.27",
         "tix": "2.04"
       },
       "related_uris": {
@@ -16399,13 +16399,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16298,
+      "edhrec_rank": 16265,
       "prices": {
         "usd": "0.14",
-        "usd_foil": "0.18",
+        "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.06",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16535,13 +16535,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18096,
+      "edhrec_rank": 18072,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.18",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.08",
+        "eur": "0.08",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -16690,7 +16690,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 20364,
+      "edhrec_rank": 20337,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/PlayMTG/status/2082858769231269952",
@@ -16700,7 +16700,7 @@
         "usd": "0.25",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.14",
+        "eur": "0.13",
         "eur_foil": "0.22",
         "tix": "0.02"
       },
@@ -16837,13 +16837,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8959,
+      "edhrec_rank": 8940,
       "prices": {
-        "usd": "2.44",
-        "usd_foil": "3.59",
+        "usd": "2.46",
+        "usd_foil": "3.36",
         "usd_etched": null,
-        "eur": "4.37",
-        "eur_foil": "4.60",
+        "eur": "4.26",
+        "eur_foil": "4.50",
         "tix": "0.91"
       },
       "related_uris": {
@@ -16991,13 +16991,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13249,
+      "edhrec_rank": 13223,
       "penny_rank": 5563,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.19",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.11",
         "tix": "0.03"
       },
@@ -17132,12 +17132,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15535,
+      "edhrec_rank": 15498,
       "prices": {
-        "usd": "0.18",
+        "usd": "0.17",
         "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.07",
         "tix": "0.01"
       },
@@ -17296,18 +17296,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12490,
+      "edhrec_rank": 12476,
       "preview": {
         "source": "Zoe Marlett",
         "source_uri": "https://www.instagram.com/reels/DbY6uaRhdUe/",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.35",
-        "usd_foil": "0.40",
+        "usd": "0.44",
+        "usd_foil": "0.42",
         "usd_etched": null,
-        "eur": "0.48",
-        "eur_foil": "0.59",
+        "eur": "0.49",
+        "eur_foil": "0.61",
         "tix": "0.18"
       },
       "related_uris": {
@@ -17465,13 +17465,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 11789,
+      "edhrec_rank": 11765,
       "prices": {
-        "usd": "0.18",
+        "usd": "0.19",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.08",
+        "eur": "0.07",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -17606,18 +17606,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7211,
+      "edhrec_rank": 7200,
       "preview": {
         "source": "Based Deck Department",
         "source_uri": "https://www.youtube.com/shorts/6t4XjZ1NPq8",
         "previewed_at": "2026-07-21"
       },
       "prices": {
-        "usd": "4.01",
-        "usd_foil": "4.52",
+        "usd": "3.87",
+        "usd_foil": "4.14",
         "usd_etched": null,
-        "eur": "4.62",
-        "eur_foil": "5.19",
+        "eur": "4.54",
+        "eur_foil": "5.05",
         "tix": "0.10"
       },
       "related_uris": {
@@ -17749,7 +17749,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8399,
+      "edhrec_rank": 8374,
       "penny_rank": 8399,
       "preview": {
         "source": "Wizards of the Coast",
@@ -17757,11 +17757,11 @@
         "previewed_at": "2026-07-24"
       },
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.34",
+        "usd": "0.23",
+        "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.16",
+        "eur": "0.14",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -17892,13 +17892,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18945,
+      "edhrec_rank": 18933,
       "prices": {
         "usd": "0.09",
-        "usd_foil": "0.20",
+        "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.06",
+        "eur_foil": "0.07",
         "tix": "0.03"
       },
       "related_uris": {
@@ -18032,13 +18032,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15551,
+      "edhrec_rank": 15544,
       "penny_rank": 3445,
       "prices": {
         "usd": "0.25",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.28",
+        "eur": "0.26",
         "eur_foil": "0.30",
         "tix": "0.03"
       },
@@ -18191,13 +18191,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 5545,
+      "edhrec_rank": 5519,
       "prices": {
-        "usd": "5.56",
-        "usd_foil": "6.52",
+        "usd": "5.29",
+        "usd_foil": "6.77",
         "usd_etched": null,
         "eur": "5.78",
-        "eur_foil": "6.29",
+        "eur_foil": "6.41",
         "tix": "0.09"
       },
       "related_uris": {
@@ -18346,14 +18346,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14602,
+      "edhrec_rank": 14578,
       "penny_rank": 5533,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.37",
+        "usd": "0.31",
+        "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.20",
-        "eur_foil": "0.31",
+        "eur": "0.19",
+        "eur_foil": "0.32",
         "tix": "0.02"
       },
       "related_uris": {
@@ -18486,17 +18486,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19893,
+      "edhrec_rank": 19870,
       "preview": {
         "source": "Good Games Morley",
         "source_uri": "https://www.youtube.com/shorts/kYY_ZyG1nvM",
         "previewed_at": "2026-07-25"
       },
       "prices": {
-        "usd": "0.08",
+        "usd": "0.10",
         "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.17",
         "tix": "0.03"
       },
@@ -18631,13 +18631,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9620,
+      "edhrec_rank": 9608,
       "prices": {
-        "usd": "0.30",
-        "usd_foil": "0.48",
+        "usd": "0.32",
+        "usd_foil": "0.47",
         "usd_etched": null,
-        "eur": "0.29",
-        "eur_foil": "0.43",
+        "eur": "0.30",
+        "eur_foil": "0.44",
         "tix": "0.02"
       },
       "related_uris": {
@@ -18769,13 +18769,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18540,
+      "edhrec_rank": 18534,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.23",
+        "usd": "0.15",
+        "usd_foil": "0.22",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.06",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -18907,14 +18907,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 11138,
+      "edhrec_rank": 11126,
       "penny_rank": 4393,
       "prices": {
-        "usd": "0.26",
-        "usd_foil": "0.28",
+        "usd": "0.21",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.16",
-        "eur_foil": "0.15",
+        "eur_foil": "0.14",
         "tix": "0.04"
       },
       "related_uris": {
@@ -19044,13 +19044,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14320,
+      "edhrec_rank": 14305,
       "prices": {
-        "usd": "0.19",
-        "usd_foil": "0.44",
+        "usd": "0.18",
+        "usd_foil": "0.42",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.18",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -19182,7 +19182,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17752,
+      "edhrec_rank": 17738,
       "penny_rank": 6610,
       "preview": {
         "source": "IGN",
@@ -19193,8 +19193,8 @@
         "usd": "0.18",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.14",
-        "eur_foil": "0.15",
+        "eur": "0.13",
+        "eur_foil": "0.16",
         "tix": "0.03"
       },
       "related_uris": {
@@ -19349,17 +19349,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9326,
+      "edhrec_rank": 9302,
       "preview": {
         "source": "Wizards of the Coast",
         "source_uri": "https://x.com/mtgjp/status/2082761728425951652",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.34",
-        "usd_foil": "0.55",
+        "usd": "0.36",
+        "usd_foil": "0.53",
         "usd_etched": null,
-        "eur": "0.30",
+        "eur": "0.35",
         "eur_foil": "0.53",
         "tix": "0.02"
       },
@@ -19492,13 +19492,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 18929,
+      "edhrec_rank": 18899,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.14",
+        "eur": "0.06",
+        "eur_foil": "0.15",
         "tix": "0.01"
       },
       "related_uris": {
@@ -19628,10 +19628,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13701,
+      "edhrec_rank": 13678,
       "prices": {
         "usd": "0.20",
-        "usd_foil": "0.25",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.09",
         "eur_foil": "0.10",
@@ -19765,18 +19765,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13952,
+      "edhrec_rank": 13933,
       "preview": {
         "source": "GameSpot",
         "source_uri": "https://www.gamespot.com/articles/gamespots-exclusive-magic-the-gathering-the-hobbit-cards-turn-death-into-an-opportunity/",
         "previewed_at": "2026-07-20"
       },
       "prices": {
-        "usd": "0.22",
-        "usd_foil": "0.33",
+        "usd": "0.21",
+        "usd_foil": "0.32",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.34",
+        "eur": "0.15",
+        "eur_foil": "0.35",
         "tix": "0.02"
       },
       "related_uris": {
@@ -19904,7 +19904,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15609,
+      "edhrec_rank": 15587,
       "preview": {
         "source": "RobertRedBeardMTG",
         "source_uri": "https://www.instagram.com/p/DbVtsM5jd2K/?igsh=MXBma2VybTM4cXozcA==",
@@ -19912,10 +19912,10 @@
       },
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.24",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.07",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20049,18 +20049,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 3564,
+      "edhrec_rank": 3548,
       "preview": {
         "source": "Stella Chuu",
         "source_uri": "https://www.instagram.com/reels/DbZIeFzBnI-/",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "2.07",
-        "usd_foil": "2.34",
+        "usd": "2.13",
+        "usd_foil": "2.22",
         "usd_etched": null,
-        "eur": "2.71",
-        "eur_foil": "3.53",
+        "eur": "2.61",
+        "eur_foil": "3.58",
         "tix": "0.02"
       },
       "related_uris": {
@@ -20189,14 +20189,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 6188,
+      "edhrec_rank": 6163,
       "penny_rank": 7554,
       "prices": {
-        "usd": "1.09",
-        "usd_foil": "1.32",
+        "usd": "0.98",
+        "usd_foil": "1.31",
         "usd_etched": null,
-        "eur": "0.55",
-        "eur_foil": "0.91",
+        "eur": "0.56",
+        "eur_foil": "0.94",
         "tix": "0.02"
       },
       "related_uris": {
@@ -20326,18 +20326,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21569,
+      "edhrec_rank": 21551,
       "preview": {
         "source": "Zoe Marlett",
         "source_uri": "https://www.instagram.com/reels/DbY6uaRhdUe/",
         "previewed_at": "2026-07-30"
       },
       "prices": {
-        "usd": "0.09",
+        "usd": "0.08",
         "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.07",
+        "eur_foil": "0.05",
         "tix": "0.01"
       },
       "related_uris": {
@@ -20464,13 +20464,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13643,
+      "edhrec_rank": 13622,
       "prices": {
-        "usd": "0.25",
-        "usd_foil": "0.30",
+        "usd": "0.26",
+        "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.19",
+        "eur_foil": "0.20",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20602,13 +20602,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15945,
+      "edhrec_rank": 15931,
       "prices": {
         "usd": "0.19",
         "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.02",
-        "eur_foil": "0.08",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -20740,14 +20740,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13832,
+      "edhrec_rank": 13816,
       "preview": {
         "source": "Bandit",
         "source_uri": "https://x.com/BanditMTG1/status/2081760526846042540",
         "previewed_at": "2026-07-27"
       },
       "prices": {
-        "usd": "0.28",
+        "usd": "0.29",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.08",
@@ -20884,10 +20884,10 @@
       "edhrec_rank": 680,
       "penny_rank": 4733,
       "prices": {
-        "usd": "0.26",
-        "usd_foil": "0.24",
+        "usd": "1.06",
+        "usd_foil": "0.28",
         "usd_etched": null,
-        "eur": "0.07",
+        "eur": "0.08",
         "eur_foil": "0.14",
         "tix": "0.03"
       },
@@ -21026,7 +21026,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12147,
+      "edhrec_rank": 12135,
       "penny_rank": 3739,
       "preview": {
         "source": "Checkpoint",
@@ -21037,8 +21037,8 @@
         "usd": "0.28",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.19",
-        "eur_foil": "0.26",
+        "eur": "0.18",
+        "eur_foil": "0.27",
         "tix": "0.03"
       },
       "related_uris": {
@@ -21176,13 +21176,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 6160,
+      "edhrec_rank": 6134,
       "prices": {
-        "usd": "3.94",
-        "usd_foil": "4.80",
+        "usd": "3.91",
+        "usd_foil": "4.77",
         "usd_etched": null,
-        "eur": "4.18",
-        "eur_foil": "4.77",
+        "eur": "4.12",
+        "eur_foil": "4.90",
         "tix": "0.02"
       },
       "related_uris": {
@@ -21319,13 +21319,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13561,
+      "edhrec_rank": 13528,
       "prices": {
-        "usd": "0.24",
-        "usd_foil": "0.26",
+        "usd": "0.26",
+        "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.10",
-        "eur_foil": "0.35",
+        "eur": "0.09",
+        "eur_foil": "0.34",
         "tix": "0.03"
       },
       "related_uris": {
@@ -21477,14 +21477,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13890,
+      "edhrec_rank": 13869,
       "preview": {
         "source": "ScreenHub",
         "source_uri": "https://www.screenhub.com.au/news/games/mtg-the-hobbit-card-preview-bards-company-2704628/",
         "previewed_at": "2026-07-24"
       },
       "prices": {
-        "usd": "0.25",
+        "usd": "0.26",
         "usd_foil": "0.36",
         "usd_etched": null,
         "eur": "0.19",
@@ -21624,12 +21624,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9269,
+      "edhrec_rank": 9252,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.30",
+        "usd": "0.17",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.08",
+        "eur": "0.09",
         "eur_foil": "0.15",
         "tix": "0.01"
       },
@@ -21784,13 +21784,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12787,
+      "edhrec_rank": 12774,
       "prices": {
-        "usd": "0.26",
-        "usd_foil": "0.23",
+        "usd": "0.25",
+        "usd_foil": "0.24",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.13",
+        "eur": "0.06",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -21927,12 +21927,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12921,
+      "edhrec_rank": 12904,
       "prices": {
         "usd": "0.27",
-        "usd_foil": "0.34",
+        "usd_foil": "0.35",
         "usd_etched": null,
-        "eur": "0.27",
+        "eur": "0.28",
         "eur_foil": "0.31",
         "tix": "0.02"
       },
@@ -22071,13 +22071,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 16244,
+      "edhrec_rank": 16239,
       "prices": {
         "usd": "0.18",
         "usd_foil": "0.27",
         "usd_etched": null,
-        "eur": "0.07",
-        "eur_foil": "0.13",
+        "eur": "0.06",
+        "eur_foil": "0.15",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22230,13 +22230,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14983,
+      "edhrec_rank": 14974,
       "prices": {
         "usd": "0.34",
         "usd_foil": "0.33",
         "usd_etched": null,
-        "eur": "0.32",
-        "eur_foil": "0.51",
+        "eur": "0.31",
+        "eur_foil": "0.48",
         "tix": "0.02"
       },
       "related_uris": {
@@ -22368,13 +22368,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9396,
+      "edhrec_rank": 9389,
       "prices": {
-        "usd": "0.30",
+        "usd": "0.32",
         "usd_foil": "0.43",
         "usd_etched": null,
         "eur": "0.28",
-        "eur_foil": "0.35",
+        "eur_foil": "0.37",
         "tix": "0.13"
       },
       "related_uris": {
@@ -22506,13 +22506,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19149,
+      "edhrec_rank": 19147,
       "prices": {
         "usd": "0.13",
         "usd_foil": "0.20",
         "usd_etched": null,
         "eur": "0.08",
-        "eur_foil": "0.07",
+        "eur_foil": "0.08",
         "tix": "0.03"
       },
       "related_uris": {
@@ -22650,7 +22650,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8927,
+      "edhrec_rank": 8906,
       "penny_rank": 1287,
       "preview": {
         "source": "Nerd of the Rings",
@@ -22659,10 +22659,10 @@
       },
       "prices": {
         "usd": "0.32",
-        "usd_foil": "0.45",
+        "usd_foil": "0.44",
         "usd_etched": null,
-        "eur": "0.28",
-        "eur_foil": "0.36",
+        "eur": "0.30",
+        "eur_foil": "0.40",
         "tix": "0.02"
       },
       "related_uris": {
@@ -22797,12 +22797,12 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 25103,
+      "edhrec_rank": 25083,
       "prices": {
-        "usd": "0.11",
+        "usd": "0.12",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.05",
+        "eur": "0.04",
         "eur_foil": "0.06",
         "tix": "0.01"
       },
@@ -22955,7 +22955,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 13053,
+      "edhrec_rank": 13040,
       "preview": {
         "source": "IGN",
         "source_uri": "https://www.ign.com/articles/first-look-at-three-cards-from-the-hobbits-new-magic-the-gathering-crossover",
@@ -22963,7 +22963,7 @@
       },
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.31",
+        "usd_foil": "0.30",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.15",
@@ -23116,14 +23116,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15140,
+      "edhrec_rank": 15125,
       "penny_rank": 5542,
       "prices": {
         "usd": "0.16",
-        "usd_foil": "0.23",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.10",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23258,17 +23258,17 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8175,
+      "edhrec_rank": 8159,
       "preview": {
         "source": "TheGamer",
         "source_uri": "https://www.thegamer.com/magic-the-gathering-hobbit-exclusive-card-preview/",
         "previewed_at": "2026-07-21"
       },
       "prices": {
-        "usd": "0.65",
+        "usd": "0.63",
         "usd_foil": "0.75",
         "usd_etched": null,
-        "eur": "0.50",
+        "eur": "0.58",
         "eur_foil": "0.62",
         "tix": "0.03"
       },
@@ -23405,13 +23405,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 24077,
+      "edhrec_rank": 24080,
       "prices": {
-        "usd": "0.24",
+        "usd": "0.23",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.07",
-        "eur_foil": "0.11",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23543,13 +23543,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 19498,
+      "edhrec_rank": 19486,
       "prices": {
-        "usd": "0.08",
+        "usd": "0.09",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.10",
+        "eur": "0.08",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23684,10 +23684,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12554,
+      "edhrec_rank": 12546,
       "prices": {
         "usd": "0.14",
-        "usd_foil": "0.22",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.10",
@@ -23843,13 +23843,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 21586,
+      "edhrec_rank": 21577,
       "prices": {
         "usd": "0.06",
         "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.06",
-        "eur_foil": "0.11",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -23982,14 +23982,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15268,
+      "edhrec_rank": 15257,
       "penny_rank": 8480,
       "prices": {
         "usd": "0.20",
         "usd_foil": "0.30",
         "usd_etched": null,
-        "eur": "0.09",
-        "eur_foil": "0.13",
+        "eur": "0.08",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24145,13 +24145,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 4962,
+      "edhrec_rank": 4952,
       "prices": {
-        "usd": "1.14",
-        "usd_foil": "1.88",
+        "usd": "1.07",
+        "usd_foil": "1.85",
         "usd_etched": null,
-        "eur": "1.37",
-        "eur_foil": "1.55",
+        "eur": "1.32",
+        "eur_foil": "1.63",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24288,14 +24288,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7898,
+      "edhrec_rank": 7883,
       "penny_rank": 4748,
       "prices": {
-        "usd": "0.23",
+        "usd": "0.24",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.08",
-        "eur_foil": "0.13",
+        "eur_foil": "0.14",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24472,7 +24472,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 8052,
+      "edhrec_rank": 8032,
       "penny_rank": 6627,
       "preview": {
         "source": "Wizards of the Coast",
@@ -24481,10 +24481,10 @@
       },
       "prices": {
         "usd": "0.30",
-        "usd_foil": "0.32",
+        "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.16",
-        "eur_foil": "0.20",
+        "eur": "0.14",
+        "eur_foil": "0.21",
         "tix": "0.03"
       },
       "related_uris": {
@@ -24622,13 +24622,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9759,
+      "edhrec_rank": 9742,
       "prices": {
-        "usd": "0.28",
+        "usd": "0.32",
         "usd_foil": "0.42",
         "usd_etched": null,
-        "eur": "0.54",
-        "eur_foil": "0.60",
+        "eur": "0.50",
+        "eur_foil": "0.66",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24763,18 +24763,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 10034,
+      "edhrec_rank": 10015,
       "preview": {
         "source": "jacERROR",
         "source_uri": "https://t.bilibili.com/1230636816159211520",
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.31",
+        "usd": "0.34",
         "usd_foil": "0.44",
         "usd_etched": null,
-        "eur": "0.42",
-        "eur_foil": "0.40",
+        "eur": "0.46",
+        "eur_foil": "0.38",
         "tix": "0.02"
       },
       "related_uris": {
@@ -24909,13 +24909,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9732,
+      "edhrec_rank": 9701,
       "prices": {
-        "usd": "0.34",
-        "usd_foil": "0.35",
+        "usd": "0.35",
+        "usd_foil": "0.36",
         "usd_etched": null,
-        "eur": "0.28",
-        "eur_foil": "0.55",
+        "eur": "0.31",
+        "eur_foil": "0.53",
         "tix": "0.02"
       },
       "related_uris": {
@@ -25082,13 +25082,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 5249,
+      "edhrec_rank": 5224,
       "prices": {
-        "usd": "5.42",
-        "usd_foil": "5.93",
+        "usd": "5.46",
+        "usd_foil": "5.69",
         "usd_etched": null,
         "eur": "7.51",
-        "eur_foil": "8.03",
+        "eur_foil": "8.12",
         "tix": "0.06"
       },
       "related_uris": {
@@ -25217,7 +25217,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15632,
+      "edhrec_rank": 15608,
       "preview": {
         "source": "ZBexx",
         "source_uri": "https://www.instagram.com/zbexx/reel/DbZTYbOPboj/",
@@ -25227,8 +25227,8 @@
         "usd": "0.16",
         "usd_foil": "0.26",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.13",
+        "eur": "0.04",
+        "eur_foil": "0.12",
         "tix": "0.03"
       },
       "related_uris": {
@@ -25353,18 +25353,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12058,
+      "edhrec_rank": 12049,
       "preview": {
         "source": "Husky TCG",
         "source_uri": "https://www.instagram.com/p/DbX4WXnjcI-",
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.22",
+        "usd": "0.24",
         "usd_foil": "0.29",
         "usd_etched": null,
-        "eur": "0.06",
-        "eur_foil": "0.11",
+        "eur": "0.07",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
@@ -25496,14 +25496,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14935,
+      "edhrec_rank": 14892,
       "prices": {
-        "usd": "0.28",
-        "usd_foil": "0.46",
+        "usd": "0.27",
+        "usd_foil": "0.45",
         "usd_etched": null,
-        "eur": "0.41",
-        "eur_foil": "0.97",
-        "tix": "0.62"
+        "eur": "0.43",
+        "eur_foil": "0.87",
+        "tix": "0.53"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DGiant%2527s%2BBoulder",
@@ -25656,7 +25656,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 7700,
+      "edhrec_rank": 7673,
       "penny_rank": 3730,
       "preview": {
         "source": "Yamina Amane",
@@ -25664,11 +25664,11 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.50",
-        "usd_foil": "0.66",
+        "usd": "0.51",
+        "usd_foil": "0.64",
         "usd_etched": null,
-        "eur": "0.46",
-        "eur_foil": "0.55",
+        "eur": "0.44",
+        "eur_foil": "0.57",
         "tix": "0.02"
       },
       "related_uris": {
@@ -25792,7 +25792,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12841,
+      "edhrec_rank": 12810,
       "penny_rank": 1355,
       "preview": {
         "source": "Zenonono",
@@ -25804,7 +25804,7 @@
         "usd_foil": "0.27",
         "usd_etched": null,
         "eur": "0.16",
-        "eur_foil": "0.37",
+        "eur_foil": "0.48",
         "tix": "0.04"
       },
       "related_uris": {
@@ -25957,13 +25957,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 4495,
+      "edhrec_rank": 4483,
       "prices": {
-        "usd": "1.22",
-        "usd_foil": "1.85",
+        "usd": "1.24",
+        "usd_foil": "1.89",
         "usd_etched": null,
-        "eur": "1.30",
-        "eur_foil": "1.56",
+        "eur": "1.29",
+        "eur_foil": "1.61",
         "tix": "0.02"
       },
       "related_uris": {
@@ -26111,18 +26111,18 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 3956,
+      "edhrec_rank": 3946,
       "preview": {
         "source": "Polygon",
         "source_uri": "https://www.polygon.com/mtg-the-hobbit-exclusive-orcrist-thorin-sword-equipment/",
         "previewed_at": "2026-07-21"
       },
       "prices": {
-        "usd": "7.22",
-        "usd_foil": "7.88",
+        "usd": "7.12",
+        "usd_foil": "7.70",
         "usd_etched": null,
-        "eur": "8.08",
-        "eur_foil": "9.31",
+        "eur": "7.98",
+        "eur_foil": "9.46",
         "tix": "0.02"
       },
       "related_uris": {
@@ -26252,7 +26252,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 9106,
+      "edhrec_rank": 9090,
       "prices": {
         "usd": "0.27",
         "usd_foil": "0.45",
@@ -26385,7 +26385,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 10328,
+      "edhrec_rank": 10299,
       "penny_rank": 1602,
       "preview": {
         "source": "IGN",
@@ -26393,11 +26393,11 @@
         "previewed_at": "2026-07-28"
       },
       "prices": {
-        "usd": "0.23",
+        "usd": "0.21",
         "usd_foil": "0.31",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.23",
+        "eur_foil": "0.25",
         "tix": "0.03"
       },
       "related_uris": {
@@ -26523,7 +26523,7 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 17316,
+      "edhrec_rank": 17283,
       "penny_rank": 5567,
       "preview": {
         "source": "fellbrinkmtg",
@@ -26531,7 +26531,7 @@
         "previewed_at": "2026-07-29"
       },
       "prices": {
-        "usd": "0.09",
+        "usd": "0.10",
         "usd_foil": "0.17",
         "usd_etched": null,
         "eur": "0.05",
@@ -26662,13 +26662,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 6880,
+      "edhrec_rank": 6855,
       "prices": {
-        "usd": "0.89",
-        "usd_foil": "0.92",
+        "usd": "0.90",
+        "usd_foil": "0.94",
         "usd_etched": null,
         "eur": "0.97",
-        "eur_foil": "0.93",
+        "eur_foil": "0.91",
         "tix": "0.37"
       },
       "related_uris": {
@@ -26799,13 +26799,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 14443,
+      "edhrec_rank": 14414,
       "prices": {
         "usd": "0.11",
-        "usd_foil": "0.22",
+        "usd_foil": "0.24",
         "usd_etched": null,
         "eur": "0.04",
-        "eur_foil": "0.12",
+        "eur_foil": "0.13",
         "tix": "0.03"
       },
       "related_uris": {
@@ -26936,13 +26936,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 12255,
+      "edhrec_rank": 12231,
       "prices": {
-        "usd": "0.16",
+        "usd": "0.17",
         "usd_foil": "0.29",
         "usd_etched": null,
         "eur": "0.05",
-        "eur_foil": "0.10",
+        "eur_foil": "0.09",
         "tix": "0.03"
       },
       "related_uris": {
@@ -27069,14 +27069,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 5844,
+      "edhrec_rank": 5819,
       "penny_rank": 5544,
       "prices": {
-        "usd": "0.25",
+        "usd": "0.22",
         "usd_foil": "0.31",
         "usd_etched": null,
-        "eur": "0.08",
-        "eur_foil": "0.17",
+        "eur": "0.09",
+        "eur_foil": "0.15",
         "tix": "0.03"
       },
       "related_uris": {
@@ -27207,10 +27207,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 11654,
+      "edhrec_rank": 11643,
       "prices": {
-        "usd": "0.14",
-        "usd_foil": "0.24",
+        "usd": "0.15",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.07",
         "eur_foil": "0.13",
@@ -27344,10 +27344,10 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15581,
+      "edhrec_rank": 15555,
       "prices": {
-        "usd": "0.11",
-        "usd_foil": "0.22",
+        "usd": "0.12",
+        "usd_foil": "0.23",
         "usd_etched": null,
         "eur": "0.05",
         "eur_foil": "0.12",
@@ -27497,14 +27497,14 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 6845,
+      "edhrec_rank": 6826,
       "prices": {
-        "usd": "0.46",
-        "usd_foil": "0.73",
+        "usd": "0.48",
+        "usd_foil": "0.70",
         "usd_etched": null,
-        "eur": "0.63",
+        "eur": "0.66",
         "eur_foil": "0.57",
-        "tix": "0.09"
+        "tix": "0.06"
       },
       "related_uris": {
         "tcgplayer_infinite_articles": "https://partner.tcgplayer.com/c/4931599/1830156/21018?subId1=api&trafcat=tcgplayer.com%2Fsearch%2Farticles&u=https%3A%2F%2Fwww.tcgplayer.com%2Fsearch%2Farticles%3FproductLineName%3Dmagic%26q%3DThe%2BLonely%2BMountain",
@@ -27634,13 +27634,13 @@
       "promo_types": [
         "universesbeyond"
       ],
-      "edhrec_rank": 15252,
+      "edhrec_rank": 15223,
       "prices": {
         "usd": "0.16",
-        "usd_foil": "0.24",
+        "usd_foil": "0.25",
         "usd_etched": null,
-        "eur": "0.05",
-        "eur_foil": "0.09",
+        "eur": "0.08",
+        "eur_foil": "0.11",
         "tix": "0.03"
       },
       "related_uris": {
@@ -27773,8 +27773,8 @@
         "usd": "0.14",
         "usd_foil": "0.23",
         "usd_etched": null,
-        "eur": "0.17",
-        "eur_foil": "0.22",
+        "eur": "0.15",
+        "eur_foil": "0.21",
         "tix": "0.03"
       },
       "related_uris": {
@@ -27904,11 +27904,11 @@
         "universesbeyond"
       ],
       "prices": {
-        "usd": "0.12",
+        "usd": "0.13",
         "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.13",
-        "eur_foil": "0.20",
+        "eur_foil": "0.19",
         "tix": "0.03"
       },
       "related_uris": {
@@ -28042,7 +28042,7 @@
         "usd_foil": "0.21",
         "usd_etched": null,
         "eur": "0.09",
-        "eur_foil": "0.15",
+        "eur_foil": "0.18",
         "tix": "0.03"
       },
       "related_uris": {
@@ -28173,10 +28173,10 @@
       ],
       "prices": {
         "usd": "0.21",
-        "usd_foil": "0.24",
+        "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.16",
-        "eur_foil": "0.20",
+        "eur_foil": "0.18",
         "tix": "0.03"
       },
       "related_uris": {
@@ -28328,7 +28328,7 @@
         "usd_foil": "0.26",
         "usd_etched": null,
         "eur": "0.10",
-        "eur_foil": "0.12",
+        "eur_foil": "0.10",
         "tix": "0.03"
       },
       "related_uris": {
