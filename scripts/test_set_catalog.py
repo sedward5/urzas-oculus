@@ -47,6 +47,30 @@ class CatalogTests(unittest.TestCase):
         with patch.object(set_catalog,"urlopen",side_effect=HTTPError("u",403,"Forbidden",{},None)):
             self.assertIsNone(set_catalog.probe_archive("https://example.test/private"))
 
+    def test_guide_slug_uses_set_name(self):
+        self.assertEqual(set_catalog.guide_slug("Magic: The Gathering | Star Trek"),"star-trek-prerelease-guide")
+        self.assertEqual(set_catalog.guide_slug("The Hobbit"),"the-hobbit-prerelease-guide")
+
+    def test_discover_guide_validates_official_article_title(self):
+        html=b"<html><title>Star Trek Prerelease Guide</title><h1>Star Trek Prerelease Guide</h1></html>"
+        with patch.object(set_catalog,"fetch",return_value=html):
+            url,status=set_catalog.discover_guide("Star Trek")
+        self.assertEqual(url,"https://magic.wizards.com/en/news/feature/star-trek-prerelease-guide")
+        self.assertEqual(status,"discovered")
+
+    def test_discover_guide_rejects_wrong_article(self):
+        html=b"<html><title>Another Set Prerelease Guide</title></html>"
+        with patch.object(set_catalog,"fetch",return_value=html):
+            url,status=set_catalog.discover_guide("Star Trek")
+        self.assertIsNone(url)
+        self.assertEqual(status,"title_mismatch")
+
+    def test_discover_guide_tolerates_missing_article(self):
+        with patch.object(set_catalog,"fetch",side_effect=RuntimeError("404")):
+            url,status=set_catalog.discover_guide("Star Trek")
+        self.assertIsNone(url)
+        self.assertEqual(status,"not_found")
+
     def test_guide_domain_guard_runs_before_network(self):
         from tempfile import TemporaryDirectory
         with TemporaryDirectory() as d:
