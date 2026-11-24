@@ -2,11 +2,11 @@
   "schema_version": 1,
   "set_code": "HOB",
   "event_type": "PremierDraft",
-  "generated_at": "2026-11-24T04:04:51.827661+00:00",
+  "generated_at": "2026-11-24T17:39:40.275740+00:00",
   "archives": {},
   "probes": {
-    "draft": "inaccessible_or_missing",
-    "game": "inaccessible_or_missing",
-    "replay": "inaccessible_or_missing"
+    "draft": "catalog_unavailable",
+    "game": "catalog_unavailable",
+    "replay": "catalog_unavailable"
   }
 }
