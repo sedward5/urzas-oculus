@@ -315,12 +315,15 @@ def acquire(code,event,guide,out):
                 probes[kind]="download_failed"
                 manifest.setdefault("warnings",[]).append(
                     f"17Lands {kind} convention URL could not be acquired: {type(exc).__name__}: {clean(str(exc))[:300]}")
-    # Replay is optional and this fallback intentionally targets only draft/game archives.\n    if probes.get("replay")=="catalog_unavailable":\n        probes["replay"]="not_checked"\n    manifest["17lands"]={"event_type":event,"catalog_url":LANDS,
+    # Replay is optional and this fallback intentionally targets only draft/game archives.
+    if probes.get("replay")=="catalog_unavailable":
+        probes["replay"]="not_checked"
+    manifest["17lands"]={"event_type":event,"catalog_url":LANDS,
         "candidate_urls":candidate_urls,
         "catalog_status":catalog_status,"catalog_last_updated":catalog_last_updated,
         "catalog_error":catalog_error,"archives":archives,"probes":probes,
         "source_selection":{"bulk_available":sorted(archives),
-            "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}
+            "bulk_missing":[kind for kind in ("draft","game") if kind not in archives]}}
     required=("game",) if event in {"Sealed","TradSealed"} else ("draft","game")
     if all(probes.get(kind)=="acquired" for kind in required) and all(probes.get(kind) in {"acquired","not_listed","not_checked"} for kind in ("draft","game","replay")): lands_status="acquired"
     elif archives: lands_status="partially_acquired"
