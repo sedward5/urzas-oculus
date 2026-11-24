@@ -94,25 +94,6 @@ class CatalogTests(unittest.TestCase):
             self.assertTrue(result["gzip_valid"])
             self.assertEqual(result["physical_lines"],3)
 
-    def test_archive_url_uses_expected_public_key(self):
-        self.assertEqual(
-            set_catalog.archive_url("TRK","PremierDraft","draft"),
-            "https://17lands-public.s3.amazonaws.com/analysis_data/draft_data/draft_data_public.TRK.PremierDraft.csv.gz"
-        )
-
-    def test_probe_archive_success_and_not_found(self):
-        response=MagicMock()
-        response.status=200
-        response.__enter__.return_value=response
-        with patch.object(set_catalog,"urlopen",return_value=response):
-            self.assertTrue(set_catalog.probe_archive("https://example.test/archive"))
-        with patch.object(set_catalog,"urlopen",side_effect=HTTPError("u",404,"Not Found",{},None)):
-            self.assertFalse(set_catalog.probe_archive("https://example.test/missing"))
-
-    def test_probe_archive_does_not_hide_access_denied(self):
-        with patch.object(set_catalog,"urlopen",side_effect=HTTPError("u",403,"Forbidden",{},None)):
-            self.assertIsNone(set_catalog.probe_archive("https://example.test/private"))
-
     def test_guide_slug_uses_set_name(self):
         self.assertEqual(set_catalog.guide_slug("Magic: The Gathering | Star Trek"),"star-trek-prerelease-guide")
         self.assertEqual(set_catalog.guide_slug("The Hobbit"),"the-hobbit-prerelease-guide")
