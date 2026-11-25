@@ -31,7 +31,7 @@ class OpsInventoryTests(unittest.TestCase):
             self.assertTrue(item["acquisition"]["card_file_present"])
             self.assertEqual(item["archetype_image"]["status"], "present")
             self.assertEqual(item["wizards_guide"]["status"], "found_in_reviewed_catalog")
-            self.assertEqual(item["prediction"]["status"], "not_run")
+            self.assertEqual(item["prediction"]["status"], "not_generated")
             self.assertEqual(result["workflow_runs"], [])
 
     def test_uses_preliminary_page_evidence_and_manifest_card_count(self):
