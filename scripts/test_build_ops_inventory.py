@@ -69,7 +69,7 @@ class OpsInventoryTests(unittest.TestCase):
             self.assertEqual(item["acquisition"]["status"], "not_run")
             self.assertFalse(item["acquisition"]["card_file_present"])
             self.assertEqual(item["archetype_image"]["status"], "missing")
-            self.assertEqual(item["prediction"]["status"], "not_run")
+            self.assertEqual(item["prediction"]["status"], "not_generated")
             self.assertEqual(item["wizards_guide"]["status"], "search_available")
 
     def test_recommends_refresh_when_public_listing_is_newer_than_local_acquisition(self):
