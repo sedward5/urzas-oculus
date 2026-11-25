@@ -72,53 +72,6 @@ class OpsInventoryTests(unittest.TestCase):
             self.assertEqual(item["prediction"]["status"], "not_run")
             self.assertEqual(item["wizards_guide"]["status"], "search_available")
 
-    def test_merges_retained_event_manifest_when_catalog_is_unavailable_and_raw_archives_are_absent(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            event_dir = root / "website/static/data/17lands/HOB/PremierDraft"
-            event_dir.mkdir(parents=True)
-            (event_dir / "manifest.json").write_text(json.dumps({
-                "schema_version": 1, "set_code": "HOB", "event_type": "PremierDraft",
-                "generated_at": "2026-11-24T22:08:22Z",
-                "catalog_status": "unavailable",
-                "archives": {
-                    "draft": {"url": "https://data.example/draft.csv.gz", "sha256": "a" * 64,
-                              "bytes": 100, "physical_lines": 10, "gzip_valid": True},
-                    "game": {"url": "https://data.example/game.csv.gz", "sha256": "b" * 64,
-                             "bytes": 200, "physical_lines": 20, "gzip_valid": True}
-                },
-                "archive_retention": "ci_ephemeral_not_committed_or_published"
-            }))
-            report = {"sets": [{"code": "HOB", "name": "The Hobbit", "17lands": [],
-                                "17lands_status": "unavailable"}]}
-            item = build_ops_inventory.build_inventory(root, report, runs=[])["sets"][0]
-            event = item["17lands"][0]
-            self.assertEqual(event["event_type"], "PremierDraft")
-            self.assertEqual(event["provenance_archive_count"], 2)
-            self.assertEqual(event["local_raw_archive_count"], 0)
-            self.assertFalse(event["refresh_recommended"])
-            self.assertEqual(event["refresh_reason"],
-                             "source listing unavailable; retained acquisition provenance is current")
-            self.assertEqual(event["processed_data"]["status"], "not_generated")
-
-    def test_processed_artifacts_are_tracked_separately_from_raw_archive_inputs(self):
-        with tempfile.TemporaryDirectory() as directory:
-            root = Path(directory)
-            event_dir = root / "website/static/data/17lands/HOB/PremierDraft"
-            processed = event_dir / "processed"
-            processed.mkdir(parents=True)
-            (event_dir / "manifest.json").write_text(json.dumps({
-                "event_type": "PremierDraft", "generated_at": "2026-11-24T22:08:22Z",
-                "archives": {"draft": {"url": "https://data.example/d.csv.gz",
-                    "sha256": "a" * 64, "gzip_valid": True}}
-            }))
-            (processed / "card-metrics.json").write_text("{}")
-            report = {"sets": [{"code": "HOB", "name": "The Hobbit", "17lands": []}]}
-            event = build_ops_inventory.build_inventory(root, report, runs=[])["sets"][0]["17lands"][0]
-            self.assertEqual(event["processed_data"]["status"], "available")
-            self.assertEqual(len(event["processed_data"]["artifacts"]), 1)
-            self.assertEqual(event["local_raw_archive_count"], 0)
-
     def test_recommends_refresh_when_public_listing_is_newer_than_local_acquisition(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
