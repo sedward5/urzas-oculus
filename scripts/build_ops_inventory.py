@@ -30,16 +30,15 @@ def read_front_matter(path):
         content = path.read_text(encoding="utf-8")
     except OSError:
         return {}
-    match = re.match(r"^---\\s*\\n(.*?)\\n---", content, re.S)
+    match = re.match(r"^---\s*\n(.*?)\n---", content, re.S)
     if not match:
         return {}
     values = {}
     for key in ("content_status", "evidence_path", "source_url"):
-        found = re.search(rf\'''(?m)^{key}:\\s*["']?([^"']+)\''', match.group(1))
+        found = re.search(rf"""(?m)^{key}:\s*["']?([^"'\n]+)""", match.group(1))
         if found:
             values[key] = found.group(1).strip()
     return values
-
 
 def workflow_history(repository=None, token=None):
     """Return workflow-run metadata only; no user, secret, or analytics payloads."""
