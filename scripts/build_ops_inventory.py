@@ -16,11 +16,13 @@ WORKFLOWS = ("discover-limited-sets.yml", "acquire-set-data-bundle.yml")
 REPOSITORY = "sedward5/urzas-oculus"
 UA = "UrzasOculus-OpsInventory/1.0"
 
+
 def read_json(path):
     try:
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return {}
+
 
 def read_front_matter(path):
     """Read simple scalar keys from a Hugo front matter block without a YAML dependency."""
@@ -62,6 +64,81 @@ def workflow_history(repository=None, token=None):
         except (OSError, URLError, ValueError) as error:
             runs.append({"workflow": workflow, "status": "unavailable", "note": str(error)[:200]})
     return sorted(runs, key=lambda item: item.get("created_at") or "", reverse=True)
+
+
+def validated_archive_count(manifest):
+    """Count only archives whose retained provenance records validation evidence."""
+    archives = manifest.get("archives", {})
+    return sum(
+        1 for record in archives.values()
+        if isinstance(record, dict)
+        and record.get("sha256")
+        and record.get("gzip_valid") is True
+        and isinstance(record.get("bytes"), int)
+        and record.get("bytes", 0) > 0
+    )
+
+
+def processed_data_status(event_root):
+    """Validate the explicit processed-data manifest and each declared JSON artifact.
+
+    Contract: processed/manifest.json contains an 'artifacts' array. Each item
+    has a repository-relative-to-event-root 'path' and optional 'records'.
+    Artifact paths may not escape the event directory. A manifest is the
+    declaration of completeness; loose JSON files are not treated as products.
+    """
+    processed_root = event_root / "processed"
+    manifest_path = processed_root / "manifest.json"
+    if not manifest_path.is_file():
+        return {"status": "not_generated", "artifacts": [], "artifact_count": 0,
+                "invalid_artifacts": []}
+    manifest = read_json(manifest_path)
+    entries = manifest.get("artifacts")
+    if not isinstance(entries, list) or not entries:
+        return {"status": "invalid", "artifacts": [], "artifact_count": 0,
+                "invalid_artifacts": ["processed/manifest.json: missing non-empty artifacts list"]}
+    artifacts = []
+    invalid = []
+    base = event_root.resolve()
+    for entry in entries:
+        if not isinstance(entry, dict) or not isinstance(entry.get("path"), str):
+            invalid.append("manifest entry missing path")
+            continue
+        relative = Path(entry["path"])
+        if relative.is_absolute() or ".." in relative.parts:
+            invalid.append(entry["path"] + ": unsafe path")
+            continue
+        path = (event_root / relative).resolve()
+        if base not in path.parents:
+            invalid.append(entry["path"] + ": path escapes event directory")
+            continue
+        if not path.is_file():
+            invalid.append(entry["path"] + ": file missing")
+            continue
+        try:
+            json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            invalid.append(entry["path"] + ": invalid JSON")
+            continue
+        artifacts.append(str(path.relative_to(event_root)))
+    return {"status": "available" if not invalid else "invalid",
+            "artifacts": artifacts, "artifact_count": len(artifacts),
+            "invalid_artifacts": invalid}
+
+
+def event_manifests(root, code):
+    """Read retained per-event acquisition manifests, independent of catalog health."""
+    event_root = root / "website" / "static" / "data" / "17lands" / code
+    found = {}
+    if not event_root.is_dir():
+        return found
+    for path in sorted(event_root.glob("*/manifest.json")):
+        manifest = read_json(path)
+        event_type = manifest.get("event_type") or path.parent.name
+        if event_type:
+            found[event_type] = (path.parent, manifest)
+    return found
+
 
 def build_inventory(root, discovered=None, runs=None):
     root = Path(root)
@@ -114,15 +191,29 @@ def build_inventory(root, discovered=None, runs=None):
         }
         prediction_dir = root / "website" / "static" / "data" / "predictions" / code
         prediction_files = sorted(str(path.relative_to(root)) for path in prediction_dir.glob("*.json")) if prediction_dir.is_dir() else []
-        item["prediction"] = {"status": "available" if prediction_files else "not_run",
+        item["prediction"] = {"status": "available" if prediction_files else "not_generated",
             "artifacts": prediction_files}
-        for event in item.get("17lands", []):
-            local_dir = root / "website" / "static" / "data" / "17lands" / code / event["event_type"]
-            event_manifest = read_json(local_dir / "manifest.json")
-            if not event_manifest and manifest.get("event_type") == event["event_type"]:
-                event_manifest = manifest
-            local = sorted(path.name for path in local_dir.glob("*.csv.gz")) if local_dir.is_dir() else []
-            event["local_archives"] = local
+
+        # Merge public discovery with retained event manifests. The public
+        # listing is optional and may be unavailable long after acquisition.
+        discovered_events = {event["event_type"]: event for event in item.get("17lands", [])}
+        retained_events = event_manifests(root, code)
+        merged_events = []
+        for event_type in sorted(set(discovered_events) | set(retained_events)):
+            event = dict(discovered_events.get(event_type, {}))
+            event_root, event_manifest = retained_events.get(event_type, (None, {}))
+            event["event_type"] = event_type
+            event["archives"] = event.get("archives") or event_manifest.get("archives", {})
+            event["provenance_archive_count"] = validated_archive_count(event_manifest)
+            event["local_raw_archive_count"] = (
+                len(list(event_root.glob("*.csv.gz"))) if event_root and event_root.is_dir() else 0
+            )
+            event["processed_data"] = (
+                processed_data_status(event_root) if event_root
+                else {"status": "not_generated", "artifacts": [], "artifact_count": 0,
+                      "invalid_artifacts": []}
+            )
+            event["local_acquired_at"] = event_manifest.get("generated_at")
             raw_date = (event.get("last_updated") or "")[:10]
             try:
                 updated = date.fromisoformat(raw_date)
@@ -131,23 +222,47 @@ def build_inventory(root, discovered=None, runs=None):
             except ValueError:
                 event["last_updated_date"] = None
                 event["days_since_update"] = None
-            acquired_at = event_manifest.get("generated_at")
+            acquired_at = event.get("local_acquired_at")
             acquired_date = acquired_at[:10] if acquired_at else None
             source_is_newer = bool(event["last_updated_date"] and acquired_date
                 and event["last_updated_date"] > acquired_date)
-            refresh_recommended = bool(event.get("archives") and (not local or not acquired_at or source_is_newer))
-            event["local_acquired_at"] = acquired_at
+            has_source_listing = bool(event.get("archives"))
+            refresh_recommended = bool(has_source_listing and (not acquired_at or source_is_newer))
             event["refresh_recommended"] = refresh_recommended
-            event["refresh_reason"] = ("no local archive" if not local else
+            event["refresh_reason"] = (
                 "source listing is newer than the local acquisition" if source_is_newer else
-                "acquisition time is not recorded for this event" if not acquired_at else "local archive appears current")
-    report["schema_version"] = 2
+                "no retained acquisition manifest" if has_source_listing and not acquired_at else
+                "source listing unavailable; retained provenance preserved" if not has_source_listing and event_manifest else
+                "source listing unavailable" if report.get("source_status", {}).get("17lands", {}).get("status") == "unavailable" else
+                "local acquisition appears current" if acquired_at else "no source listing or acquisition manifest"
+            )
+            merged_events.append(event)
+        item["17lands"] = merged_events
+        if merged_events:
+            statuses = [event["processed_data"]["status"] for event in merged_events]
+            processed_status = ("available" if "available" in statuses else
+                "invalid" if "invalid" in statuses else "not_generated")
+        else:
+            processed_status = "not_checked" if report.get("source_status", {}).get("17lands", {}).get("status") == "unavailable" else "not_listed"
+        item["processed_data"] = {
+            "status": processed_status,
+            "artifact_count": sum(event["processed_data"]["artifact_count"] for event in merged_events),
+            "artifacts": [
+                f"{code}/{event['event_type']}/{artifact}"
+                for event in merged_events for artifact in event["processed_data"]["artifacts"]
+            ]
+        }
+        # Keep catalog health separate from retained acquisition evidence.
+        if retained_events and not discovered_events:
+            item["17lands_status"] = "catalog_unavailable_acquisition_retained" if report.get("source_status", {}).get("17lands", {}).get("status") == "unavailable" else "acquisition_manifest_present"
+    report["schema_version"] = 3
     report["workflow_runs"] = runs if runs is not None else workflow_history()
     report["workflow_urls"] = {
         "discovery": "https://github.com/sedward5/urzas-oculus/actions/workflows/discover-limited-sets.yml",
         "acquisition": "https://github.com/sedward5/urzas-oculus/actions/workflows/acquire-set-data-bundle.yml"
     }
     return report
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
@@ -158,8 +273,9 @@ def main():
     discovered = read_json(args.discovery) if args.discovery else None
     report = build_inventory(args.root, discovered=discovered)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    args.output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\\n", encoding="utf-8")
     print(f"Published operations inventory for {len(report.get('sets', []))} Limited sets.")
+
 
 if __name__ == "__main__":
     main()
