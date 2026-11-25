@@ -116,14 +116,38 @@ def build_inventory(root, discovered=None, runs=None):
         prediction_files = sorted(str(path.relative_to(root)) for path in prediction_dir.glob("*.json")) if prediction_dir.is_dir() else []
         item["prediction"] = {"status": "available" if prediction_files else "not_run",
             "artifacts": prediction_files}
-        for event in item.get("17lands", []):
-            local_dir = root / "website" / "static" / "data" / "17lands" / code / event["event_type"]
+        # The public listing is useful for source freshness, but it is not the
+        # authority for what Oculus actually acquired. Merge it with retained
+        # per-event provenance manifests, even when the listing is unavailable.
+        events_by_type = {entry["event_type"]: dict(entry) for entry in item.get("17lands", [])}
+        event_root = root / "website" / "static" / "data" / "17lands" / code
+        if event_root.is_dir():
+            for manifest_path in event_root.glob("*/manifest.json"):
+                retained = read_json(manifest_path)
+                event_type = retained.get("event_type") or manifest_path.parent.name
+                events_by_type.setdefault(event_type, {"event_type": event_type})
+        if manifest.get("event_type") and manifest.get("17lands"):
+            events_by_type.setdefault(manifest["event_type"], {"event_type": manifest["event_type"]})
+        item["17lands"] = sorted(events_by_type.values(), key=lambda entry: entry["event_type"])
+
+        for event in item["17lands"]:
+            local_dir = event_root / event["event_type"]
             event_manifest = read_json(local_dir / "manifest.json")
             if not event_manifest and manifest.get("event_type") == event["event_type"]:
-                event_manifest = manifest
-            local = sorted(path.name for path in local_dir.glob("*.csv.gz")) if local_dir.is_dir() else []
-            event["local_archives"] = local
-            raw_date = (event.get("last_updated") or "")[:10]
+                event_manifest = manifest.get("17lands", {})
+                event_manifest = {**event_manifest, "generated_at": manifest.get("generated_at")}
+            provenance = event_manifest.get("archives") or {}
+            validated = {
+                kind: record for kind, record in provenance.items()
+                if record.get("url") and record.get("sha256") and record.get("gzip_valid") is True
+            }
+            event["archive_provenance"] = validated
+            event["provenance_archive_count"] = len(validated)
+            # Raw CSVs are ephemeral CI inputs. Their absence is expected and
+            # must never make an otherwise successful acquisition look stale.
+            local_raw = sorted(path.name for path in local_dir.glob("*.csv.gz")) if local_dir.is_dir() else []
+            event["local_raw_archive_count"] = len(local_raw)
+            raw_date = (event.get("last_updated") or event_manifest.get("catalog_last_updated") or "")[:10]
             try:
                 updated = date.fromisoformat(raw_date)
                 event["last_updated_date"] = updated.isoformat()
@@ -135,13 +159,23 @@ def build_inventory(root, discovered=None, runs=None):
             acquired_date = acquired_at[:10] if acquired_at else None
             source_is_newer = bool(event["last_updated_date"] and acquired_date
                 and event["last_updated_date"] > acquired_date)
-            refresh_recommended = bool(event.get("archives") and (not local or not acquired_at or source_is_newer))
+            refresh_recommended = bool(event.get("archives") and (not acquired_at or source_is_newer))
             event["local_acquired_at"] = acquired_at
+            event["catalog_status"] = event_manifest.get("catalog_status", event_manifest.get("catalog_status"))
             event["refresh_recommended"] = refresh_recommended
-            event["refresh_reason"] = ("no local archive" if not local else
+            event["refresh_reason"] = (
                 "source listing is newer than the local acquisition" if source_is_newer else
-                "acquisition time is not recorded for this event" if not acquired_at else "local archive appears current")
-    report["schema_version"] = 2
+                "acquisition time is not recorded for this event" if not acquired_at else
+                "source listing unavailable; retained acquisition provenance is current" if event.get("catalog_status") == "unavailable" else
+                "acquisition provenance appears current"
+            )
+            processed_dir = local_dir / "processed"
+            processed_files = sorted(str(path.relative_to(root)) for path in processed_dir.rglob("*.json")) if processed_dir.is_dir() else []
+            event["processed_data"] = {
+                "status": "available" if processed_files else "not_generated",
+                "artifacts": processed_files,
+            }
+    report["schema_version"] = 3
     report["workflow_runs"] = runs if runs is not None else workflow_history()
     report["workflow_urls"] = {
         "discovery": "https://github.com/sedward5/urzas-oculus/actions/workflows/discover-limited-sets.yml",
