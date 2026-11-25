@@ -14,6 +14,8 @@ The script creates:
 - `dist/UrzasOculus.dmg` — a compressed disk image containing the app and an `Applications` shortcut
 - `dist/UrzasOculus-macos.zip` — a ZIP archive for alternate installation and developer workflows
 
+The app bundle includes the SwiftPM resource bundle (`Contents/Resources/UrzasOculus_UrzasOculusApp.bundle`) containing the reviewed archetype and card catalogs. Packaging fails if that bundle is missing from the build output.
+
 A local build defaults to bundle version `0.1.0`. CI supplies a monotonically increasing patch version for each macOS CI run.
 
 ## Automated releases

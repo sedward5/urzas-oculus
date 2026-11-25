@@ -5,7 +5,7 @@ import SwiftUI
 private struct ArchetypeCatalog: Decodable {
     let sets: [String: ArchetypeSet]
     static func load() -> ArchetypeCatalog? {
-        guard let url = Bundle.module.url(forResource: "reviewed_archetypes", withExtension: "json"),
+        guard let url = AppResources.bundle?.url(forResource: "reviewed_archetypes", withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -22,7 +22,7 @@ private struct ArchetypeEntry: Decodable, Identifiable {
 private struct ReviewedCardCatalog: Decodable {
     let sets: [String: ReviewedCardSet]
     static func load() -> ReviewedCardCatalog? {
-        guard let url = Bundle.module.url(forResource: "reviewed_cards", withExtension: "json"),
+        guard let url = AppResources.bundle?.url(forResource: "reviewed_cards", withExtension: "json"),
               let data = try? Data(contentsOf: url) else { return nil }
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
