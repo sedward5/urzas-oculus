@@ -46,6 +46,15 @@ iconutil -c icns "$ICONSET" -o "$APP_DIR/Contents/Resources/AppIcon.icns"
 
 cp "$ROOT_BUILD/UrzasOculus" "$APP_DIR/Contents/MacOS/UrzasOculus"
 
+# SwiftPM resource bundle (reviewed archetype and card catalogs). Without it the app
+# cannot load its bundled catalogs. It lives in Contents/Resources so codesign can seal it.
+RESOURCE_BUNDLE="$ROOT_BUILD/UrzasOculus_UrzasOculusApp.bundle"
+if [[ ! -d "$RESOURCE_BUNDLE" ]]; then
+    echo "Missing SwiftPM resource bundle: $RESOURCE_BUNDLE"
+    exit 1
+fi
+cp -R "$RESOURCE_BUNDLE" "$APP_DIR/Contents/Resources/"
+
 cat > "$APP_DIR/Contents/Info.plist" <<PLIST
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
