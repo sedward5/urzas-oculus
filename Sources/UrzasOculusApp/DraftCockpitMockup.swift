@@ -88,7 +88,7 @@ struct DraftCockpitMockupView: View {
             }
             Spacer()
             statusPill("Capture active", icon: "viewfinder", color: OculusPalette.cyan)
-            statusPill("Data ready", icon: "checkmark.circle.fill", color: OculusPalette.green)
+            statusPill("Set data ready", icon: "checkmark.circle.fill", color: OculusPalette.green)
             Button {
                 showingSetup = true
             } label: {
@@ -118,7 +118,7 @@ struct DraftCockpitMockupView: View {
                         .foregroundStyle(OculusPalette.text)
                 }
                 Spacer()
-                Label("8 sample slots · partial scan", systemImage: "square.stack.3d.up")
+                Label("7 of 8 slots recognized · scanning", systemImage: "viewfinder")
                     .font(.caption)
                     .foregroundStyle(OculusPalette.muted)
             }
@@ -134,11 +134,15 @@ struct DraftCockpitMockupView: View {
                     .font(.caption)
             }
 
-            VStack(spacing: 6) {
-                ForEach(orderedCards) { card in
-                    cardRow(card)
+            ScrollView {
+                LazyVStack(spacing: 6) {
+                    ForEach(orderedCards) { card in
+                        cardRow(card)
+                    }
                 }
+                .padding(.vertical, 2)
             }
+            .frame(minHeight: 250, maxHeight: 380)
 
             HStack(spacing: 8) {
                 Image(systemName: "info.circle")
@@ -174,6 +178,7 @@ struct DraftCockpitMockupView: View {
             }
         }
         .padding(16)
+        .frame(minHeight: 440, alignment: .top)
         .background(OculusPalette.panel)
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay {
@@ -212,12 +217,18 @@ struct DraftCockpitMockupView: View {
                         .foregroundStyle(OculusPalette.muted)
                 }
                 Spacer(minLength: 4)
-                Text(card.score.formatted(.number.precision(.fractionLength(0))))
-                    .font(.system(size: 14, weight: .bold, design: .rounded).monospacedDigit())
-                    .foregroundStyle(OculusPalette.cyan)
-                Text("score")
-                    .font(.system(size: 9, weight: .medium))
-                    .foregroundStyle(OculusPalette.muted)
+                if card.score > 0 {
+                    Text(card.score.formatted(.number.precision(.fractionLength(0))))
+                        .font(.system(size: 14, weight: .bold, design: .rounded).monospacedDigit())
+                        .foregroundStyle(OculusPalette.cyan)
+                    Text("score")
+                        .font(.system(size: 9, weight: .medium))
+                        .foregroundStyle(OculusPalette.muted)
+                } else {
+                    Label("Unresolved", systemImage: "questionmark.circle")
+                        .font(.caption2.weight(.medium))
+                        .foregroundStyle(OculusPalette.brass)
+                }
             }
             .padding(.horizontal, 10)
             .padding(.vertical, 7)
@@ -230,7 +241,7 @@ struct DraftCockpitMockupView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(card.name), mana value \(card.manaValue), recommendation score \(Int(card.score))")
+        .accessibilityLabel(card.score > 0 ? "\(card.name), mana value \(card.manaValue), recommendation score \(Int(card.score))" : "Unresolved card identity, not scored")
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 
@@ -242,7 +253,7 @@ struct DraftCockpitMockupView: View {
                     .tracking(1.4)
                     .foregroundStyle(OculusPalette.brass)
                 Spacer()
-                Text("\(drafted.count + confirmedCardIDs.count) / 45")
+                Text("\(drafted.count + confirmedCardIDs.count) cards · demo")
                     .font(.caption.monospacedDigit())
                     .foregroundStyle(OculusPalette.muted)
             }
@@ -250,6 +261,9 @@ struct DraftCockpitMockupView: View {
                 statTile("Creatures", value: "3", icon: "pawprint.fill")
                 statTile("Other", value: "1", icon: "sparkles")
             }
+            Text("Illustrative deck metrics · not live draft data")
+                .font(.caption2)
+                .foregroundStyle(OculusPalette.muted)
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
                     Text("COLOR BALANCE")
@@ -288,7 +302,7 @@ struct DraftCockpitMockupView: View {
                 .frame(height: 65, alignment: .bottom)
             }
             Divider().overlay(OculusPalette.line)
-            Text("DRAFTED CARDS")
+            Text("DRAFTED CARDS · SAMPLE POOL")
                 .font(.caption2.weight(.bold))
                 .foregroundStyle(OculusPalette.muted)
             ForEach(drafted) { card in
@@ -354,7 +368,7 @@ struct DraftCockpitMockupView: View {
             }
             ProgressView(value: 0.42)
                 .tint(OculusPalette.cyan)
-            Text("2 picks support this direction. Too early to call the archetype open.")
+            Text("Example evidence: Mnemonic Foundry and Brassbound Courier. Direction is illustrative; table openness is not inferred.")
                 .font(.caption)
                 .foregroundStyle(OculusPalette.muted)
                 .fixedSize(horizontal: false, vertical: true)
@@ -362,7 +376,7 @@ struct DraftCockpitMockupView: View {
             Label("Splash check", systemImage: "drop.fill")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(OculusPalette.text)
-            Text("No splash recommended yet. No fixing drafted; stay focused on primary colors.")
+            Text("Example splash read: no fixing shown in this sample pool. This is not a live recommendation.")
                 .font(.caption)
                 .foregroundStyle(OculusPalette.muted)
                 .fixedSize(horizontal: false, vertical: true)
