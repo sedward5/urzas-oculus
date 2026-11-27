@@ -118,7 +118,7 @@ struct DraftCockpitMockupView: View {
                         .foregroundStyle(OculusPalette.text)
                 }
                 Spacer()
-                Label("6 of 8 slots recognized · scanning", systemImage: "viewfinder")
+                Label("7 of 8 slots recognized · scanning", systemImage: "viewfinder")
                     .font(.caption)
                     .foregroundStyle(OculusPalette.muted)
             }
