@@ -152,7 +152,7 @@ The shared Swift core is authoritative for classification suggestions and evalua
 
 ## V1 limitations and next work
 
-The initial Swift engine emits structural role suggestions and carries a reviewer-authored record. It does not yet automatically score cards, infer two-for-ones, determine on-rate status, identify archetype fit, or calibrate against 17Lands. Those require explicit review inputs and tested contracts.
+The initial structural engine emits role suggestions and carries reviewer-authored records. The first experimental feature-rule predictor is now implemented, but it is not calibrated and must not be treated as a validated Limited grade. It does not yet infer two-for-ones or on-rate status, and archetype fit is only emitted when explicit reviewed relationships are supplied. Cutoff-aware artifacts and 17Lands calibration remain future work.
 
 Next implementation steps:
 
