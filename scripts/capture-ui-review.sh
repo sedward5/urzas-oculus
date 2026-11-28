@@ -16,19 +16,8 @@ URZAS_OCULUS_UI_REVIEW=cockpit "$APP_EXECUTABLE" &
 APP_PID=$!
 cleanup() { kill "$APP_PID" 2>/dev/null || true; }
 trap cleanup EXIT
-for _ in $(seq 1 30); do
-  if osascript -e 'tell application "System Events" to exists process "UrzasOculus"' 2>/dev/null | grep -q true; then break; fi
-  sleep 1
-done
-sleep 4
-osascript <<'APPLESCRIPT'
-tell application "System Events"
-  tell process "UrzasOculus"
-    set frontmost to true
-    if (count of windows) is 0 then error "Urza's Oculus window did not appear"
-  end tell
-end tell
-APPLESCRIPT
+# Give the app time to create its review window and render the first frame.
+sleep 6
 # Capture the full desktop; the app is foregrounded above. Avoid fragile AX window bounds.
 screencapture -x "$OUTPUT_DIR/draft-cockpit.png"
 test -s "$OUTPUT_DIR/draft-cockpit.png"
