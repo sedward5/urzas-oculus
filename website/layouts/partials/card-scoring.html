@@ -23,7 +23,8 @@
         {{- with $entry.observed }}
         <div class="card-score-source observed">
           <h5>17Lands observed <span>{{ .event_type }}</span></h5>
-          {{- with .gih_score }}<p class="observed-gih">{{ printf "%.1f%%" (mul . 100) }} GIH win rate</p>{{ end }}
+          {{- with .regularized_gih_score }}<p class="observed-gih">{{ printf "%.1f%%" (mul . 100) }} regularized GIH score</p>{{ end }}
+          {{- with .observed_gih_win_rate }}<p class="score-sample">Raw GIH WR: {{ printf "%.1f%%" (mul . 100) }}</p>{{ end }}
           {{- with .games_in_hand_count }}<p class="score-sample">{{ . }} copy-weighted observations</p>{{ end }}
           {{- with .snapshot_id }}<p class="score-sample">Snapshot: {{ . }}</p>{{ end }}
         </div>
