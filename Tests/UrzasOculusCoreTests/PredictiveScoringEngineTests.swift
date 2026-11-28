@@ -27,6 +27,14 @@ final class PredictiveScoringEngineTests: XCTestCase {
         XCTAssertEqual(score.synergyPotential.value, 3)
     }
 
+    func testNormalCreatureStatsContributeToBaselinePower() {
+        let card = CardRecord(
+            id: "card-4", name: "Above-Curve Bear", setCode: "TRK",
+            manaValue: 2, power: "3", toughness: "3", typeLine: "Creature — Bear"
+        )
+        XCTAssertEqual(PredictiveScoringEngine.evaluate(card: card).baselinePower.value, 4)
+    }
+
     func testNoAggregateGradeOr17LandsInputExists() {
         let card = CardRecord(id: "card-3", name: "Plain Bear", setCode: "TRK", manaValue: 2, typeLine: "Creature — Bear")
         let score = PredictiveScoringEngine.evaluate(card: card)
