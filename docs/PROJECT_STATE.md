@@ -1,6 +1,6 @@
 # Project state and accumulated decisions
 
-Last reviewed: 2026-11-22
+Last reviewed: 2026-11-27
 
 This is the durable project handoff, consolidating decisions and findings previously spread across PRs, workflow artifacts, and planning discussions. It complements [steering](PROJECT_STEERING.md), [architecture](ARCHITECTURE.md), [roadmap](ROADMAP.md), [decision records](DECISIONS.md), and the [Draft Cockpit UX specification](DRAFT_COCKPIT_UX.md).
 
@@ -22,6 +22,20 @@ Independent foundations already exist:
 - Hugo website and automated macOS DMG/ZIP releases.
 
 Do not describe independent foundations as a complete connected workflow.
+
+## Recent implementation updates (November 25–27)
+
+The latest merged work changes the operational and review workflow without changing the Phase 0 product gate:
+
+- **PR #92–93 — retained-data readiness and inventory:** the `/ops` inventory now distinguishes source archive provenance, processed event data, and prediction artifacts. Raw 17Lands CSV archives are ephemeral CI inputs; retained processed outputs are declared in `website/static/data/17lands/{SET}/{EVENT}/processed/manifest.json`. The inventory validates each declared JSON artifact and reports `not_generated`, `invalid`, or `available` rather than inferring completeness from arbitrary files.
+- **PR #94 — packaged resources:** the app bundle now includes the SwiftPM resource bundle required by the reviewed archetype catalog. Packaging fails if it is missing, and the app uses a non-trapping resource lookup for packaged and `swift run` layouts.
+- **PR #95 — cockpit review UX:** the static mockup keeps recognized cards in a dedicated scroll region, shows partial-scan progress, distinguishes data readiness from capture activity, leaves unresolved cards unscored, and labels illustrative deck/strategy values as mock data.
+- **PR #96 — visual review and workflow cleanup:** macOS CI can launch the cockpit in a deterministic review mode and upload a 14-day screenshot artifact. Screenshot capture is non-blocking. The exploratory replay-schema audit workflow was retired, and Scryfall enrichment promotion now requires an explicit source run ID and manual dispatch.
+- **PR #97 — CodeQL:** repository default setup was disabled and the advanced workflow now runs automatically on relevant PRs and pushes. Swift, Python, and GitHub Actions analysis use separate runners and path filters; manual full scans remain available. The PR and subsequent main-branch CodeQL/macOS CI runs passed.
+
+Set acquisition now includes the HOB source bundle and retained archive provenance. Verified URL-convention fallback is used only when the official 17Lands catalog omits an archive or is unavailable; candidates are not treated as acquired until the full gzip archive validates. No 17Lands analytics API snapshots are requested or retained.
+
+These changes improve data operations, packaging reliability, and visual/security review. They do not connect capture, OCR, draft persistence, or recommendations into a live workflow.
 
 ## Architecture and hard boundaries
 

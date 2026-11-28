@@ -1,6 +1,6 @@
 # Roadmap and implementation status
 
-Last reviewed: 2026-11-22
+Last reviewed: 2026-11-27
 
 This page distinguishes implemented foundations from an integrated, user-ready feature. Code and tests existing does not mean a feature is connected to the macOS workflow or validated with real users.
 
@@ -41,7 +41,7 @@ The macOS app is distributed through automated GitHub Releases as a DMG and ZIP.
 - [x] Manual review of physical pack return, last-seen behavior, ALSA averaging, secondary picks, duplicate copies, and incomplete pack handling.
 - [x] Replay schema audit script and manually triggerable workflow.
 - [x] Reviewed HOB replay audit: all 323,114 game keys matched replay keys one-to-one.
-- [ ] Run replay-backed deck/sideboard/opening-hand consistency audit.
+- [x] Run replay-backed deck/sideboard/opening-hand consistency audit (323,114 game keys matched one-to-one; no deck/sideboard count mismatches or opening-hand counts exceeding main-deck counts).
 - [ ] Establish a defensible whole-game eligibility rule consistent with 17Lands definitions.
 
 **Important limitation:** the game importer currently aggregates rows with valid win outcomes; it does not exclude inconsistent games as a whole. The public wide CSV has no documented game-valid/deck-linked flag. Do not claim exact 17Lands parity. Replay key matching does not itself establish upstream eligibility. See [metric semantics](17lands-metric-semantics.md).
@@ -82,7 +82,7 @@ The current 17Lands evaluator is a baseline, not a complete Limited strategy mod
 - [ ] Implement the draft-session shell and state projections after Phase 0 capture validation.
 - [ ] Usability-test card scanning, pick confirmation, pack history, and deck visibility.
 
-The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). Design definition is complete; implementation is not.
+The accepted product UX direction is documented in [DRAFT_COCKPIT_UX.md](DRAFT_COCKPIT_UX.md). Design definition is complete; implementation is not. The static mockup now has improved partial-scan/unresolved-card presentation, and macOS CI can capture a deterministic screenshot artifact for visual review. This does not change the Phase 0 capture-validation gate.
 
 ## Analysis and production plan
 
@@ -122,7 +122,7 @@ Do not describe Oculus as a complete draft companion until capture is validated 
 
 ## Predictive model and operations console (new priority)
 
-- [ ] Publish a static, unlinked `/ops` inventory with set acquisition, archetype image, Wizards guide, public 17Lands freshness, prediction artifact, and GitHub Actions status.
+- [x] Publish a static, unlinked `/ops` inventory with set acquisition, archetype image, Wizards guide, public 17Lands freshness, prediction artifact, and GitHub Actions status.
 - [ ] Add immutable, cutoff-aware prediction-run artifacts and deterministic canonical output.
 - [ ] Implement the first algorithmic card feature model in the shared Swift core; normal set runs must not require manual per-card ordinal ratings.
 - [ ] Generate predictions for TRK and the three existing historical sets, clearly labeling retrospective runs and cutoffs.
@@ -130,4 +130,4 @@ Do not describe Oculus as a complete draft companion until capture is validated 
 - [ ] Surface outliers and review annotations without allowing LLM/human analysis to mutate predictions.
 - [ ] Establish model-version regression tests across historical sets and held-out observations.
 
-The closed learning loop is a primary product direction. 17Lands is the observation/evaluation layer, not a source of pre-release prediction features. Model changes are deterministic, versioned, and replayable. See [PROJECT_STEERING.md](PROJECT_STEERING.md) and [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md).
+The `/ops` inventory is implemented as a static, read-only page; its processed-data status is driven by explicit per-event manifests, separate from ephemeral raw archive inputs. The closed learning loop is a primary product direction. 17Lands is the observation/evaluation layer, not a source of pre-release prediction features. Model changes are deterministic, versioned, and replayable. See [PROJECT_STEERING.md](PROJECT_STEERING.md) and [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md).
