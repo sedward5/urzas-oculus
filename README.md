@@ -31,8 +31,10 @@ The app can enumerate visible, shareable macOS windows; suggest likely iPhone Mi
 | 17Lands game eligibility | Open correctness question; exact parity is not claimed |
 | Recommendation readiness | Implemented; requires compatible draft and game snapshots |
 | Recommendation evaluator | Deterministic standalone GIH WR baseline in shared Swift core |
-| Synergy, archetype, curve, deck-needs scoring | Not implemented |
-| Website | Hugo site deployed via Cloudflare Pages |
+| Predictive model | Versioned v1 schema, five evaluation dimensions, role suggestions, and batch CLI; reviewed set ratings and calibration remain incomplete |
+| Synergy, archetype, curve, deck-needs scoring | Not integrated into live pick recommendations |
+| Website | Hugo archetype/reference site and read-only `/ops` inventory deployed via Cloudflare Pages |
+| CI and security | macOS/Python/website checks, visual-review screenshot artifact, and targeted automatic CodeQL scans |
 | Capture-to-recommendation workflow | Not integrated |
 
 GIH observations are copy-weighted, not independent game samples. ALSA and ATA are context only and do not affect baseline ranking. See [17Lands metric semantics](docs/17lands-metric-semantics.md) and [project state](docs/PROJECT_STATE.md).
