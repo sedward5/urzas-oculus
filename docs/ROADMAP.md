@@ -1,6 +1,6 @@
 # Roadmap and implementation status
 
-Last reviewed: 2026-11-27
+Last reviewed: 2026-11-28
 
 This page distinguishes implemented foundations from an integrated, user-ready feature. Code and tests existing does not mean a feature is connected to the macOS workflow or validated with real users.
 
@@ -65,12 +65,20 @@ The macOS app is distributed through automated GitHub Releases as a DMG and ZIP.
 - [ ] Integrate recognized pack candidates and draft state into the app.
 - [x] Document prediction model v1: five independent dimensions, multi-label roles, evidence/confidence, rate assessment, immutable predictions, and later calibration.
 - [x] Add deterministic structural role suggestions in the shared Swift core and a local batch CLI.
-- [ ] Build the reviewed set catalog and reviewer workflow for accepting/rejecting suggestions and recording dimension/rate assessments.
-- [ ] Review TRK as the first pre-release prediction set and publish a reproducible prediction snapshot.
-- [ ] Add prediction-versus-observation calibration reports when permitted 17Lands public datasets are available.
-- [ ] Integrate pool synergy, archetype, curve, and deck-needs factors only after explicit input contracts and tests.
+- [x] Implement the first experimental feature-rule predictor (`predictive-rules-0.1.0`) with five independent dimensions and no aggregate grade.
+- [x] Preserve top-level and multi-face creature stats as normalized Scryfall features; rarity is excluded from scoring.
+- [x] Expose per-set prediction output through `CardEvaluationTool --predictions`, with optional explicit reviewed relationship input.
+- [x] Add separate predictive-dimension and empirical-17Lands presentation to the macOS cockpit mockup and Hugo archetype cards. The website renders only when a published score artifact exists.
+- [ ] Review feature rules and ordinal anchors against TRK; record false positives, false negatives, and low-confidence cases.
+- [ ] Build the reviewed set catalog adapter that supplies explicit per-card relationships to the predictor.
+- [ ] Add immutable, cutoff-aware prediction-run artifacts, source manifests/hashes, and canonical output.
+- [ ] Generate a pre-release TRK prediction using only inputs available at a declared cutoff.
+- [ ] Generate retrospective HOB, ECL, and TDM runs with historical cutoffs.
+- [ ] Compare pick behavior, play rate, and game performance separately, including coverage, sample counts, missingness, and outliers.
+- [ ] Establish held-out model-version regression tests across historical sets; report gains and regressions.
+- [ ] Integrate pool synergy, set speed, curve, and deck-needs factors only after explicit input contracts and tests.
 
-The current 17Lands evaluator is a baseline, not a complete Limited strategy model. The new prediction model is documented in [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md); its initial structural role suggester and batch CLI are implemented, but set review, card ratings, and calibration are not yet complete. ALSA and ATA are carried as context but do not affect ranking. GIH observations are copy-weighted and are not independent game samples.
+The 17Lands evaluator remains a separate empirical baseline; its regularized GIH score requires compatible observed data and is unavailable pre-release. The predictive engine is an experimental deterministic rules model, not a trained statistical model and not yet validated against Limited outcomes. It emits independent ordinal dimensions, not a combined pick grade. See [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md). GIH observations are copy-weighted, not independent game samples.
 
 ## Product UX design
 
