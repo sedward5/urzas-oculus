@@ -103,7 +103,8 @@ jobs:
         if: always()
         run: |
           echo "## macOS UI Review Screenshots" >> "$GITHUB_STEP_SUMMARY"
-          echo "Screenshots are attached as the **UrzasOculus-UI-review-${{ github.run_number }}** artifact (14-day retention)." >> "$GITHUB_STEP_SUMMARY"
+          echo "Screenshot capture status: **${{ steps.capture-ui-review.outcome }}**." >> "$GITHUB_STEP_SUMMARY"
+          echo "When successful, find the **UrzasOculus-UI-review-${{ github.run_number }}** artifact below the run (14-day retention)." >> "$GITHUB_STEP_SUMMARY"
       - name: Upload macOS application
         uses: actions/upload-artifact@v4
         with:
