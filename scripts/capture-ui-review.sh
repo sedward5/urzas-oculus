@@ -9,6 +9,9 @@ if [[ ! -x "$APP_EXECUTABLE" ]]; then
 fi
 mkdir -p "$OUTPUT_DIR"
 rm -f "$OUTPUT_DIR"/*.png
+if command -v screenresolution >/dev/null 2>&1; then
+  screenresolution set 1600x1200 || echo "Display resize unavailable; proceeding with current resolution."
+fi
 URZAS_OCULUS_UI_REVIEW=cockpit "$APP_EXECUTABLE" &
 APP_PID=$!
 cleanup() { kill "$APP_PID" 2>/dev/null || true; }
@@ -22,6 +25,7 @@ BOUNDS="$(osascript <<'APPLESCRIPT'
 tell application "System Events"
   tell process "UrzasOculus"
     set frontmost to true
+    set bounds of front window to {10, 30, 1450, 980}
     if (count of windows) is 0 then error "Urza's Oculus window did not appear"
     set b to bounds of front window
     return (item 1 of b) & "," & (item 2 of b) & "," & ((item 3 of b) - (item 1 of b)) & "," & ((item 4 of b) - (item 2 of b))
