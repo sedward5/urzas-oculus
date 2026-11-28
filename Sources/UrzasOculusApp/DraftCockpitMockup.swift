@@ -54,6 +54,7 @@ struct DraftCockpitMockupView: View {
                 VStack(spacing: 14) {
                     deckPanel
                     strategyPanel
+                    scoreComparisonPanel
                 }
                 .frame(width: 280)
             }
@@ -386,6 +387,74 @@ struct DraftCockpitMockupView: View {
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .overlay {
             RoundedRectangle(cornerRadius: 12).stroke(OculusPalette.line, lineWidth: 1)
+        }
+    }
+
+    /// Demonstrates the two independent score sources. Values are mock data only;
+    /// the production adapter will populate each source independently when available.
+    private var scoreComparisonPanel: some View {
+        VStack(alignment: .leading, spacing: 9) {
+            HStack {
+                Text("CARD EVALUATION")
+                    .font(.caption.weight(.bold))
+                    .tracking(1.2)
+                    .foregroundStyle(OculusPalette.brass)
+                Spacer()
+                Text("EXAMPLE")
+                    .font(.system(size: 9, weight: .bold))
+                    .foregroundStyle(OculusPalette.muted)
+            }
+            Text("Predictive model · pre-17L")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(OculusPalette.text)
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], alignment: .leading, spacing: 6) {
+                scoreMetric("Baseline power", "4/5")
+                scoreMetric("Role value", "3/5")
+                scoreMetric("Synergy", "4/5")
+                scoreMetric("Context sensitivity", "2/5")
+                scoreMetric("WU archetype fit", "4/5")
+            }
+            Divider().overlay(OculusPalette.line)
+            HStack(alignment: .firstTextBaseline) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("17Lands · observed GIH")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(OculusPalette.text)
+                    Text("Premier Draft · all players")
+                        .font(.system(size: 9))
+                        .foregroundStyle(OculusPalette.muted)
+                }
+                Spacer()
+                Text("56.2%")
+                    .font(.system(size: 17, weight: .bold, design: .rounded).monospacedDigit())
+                    .foregroundStyle(OculusPalette.cyan)
+            }
+            Text("243 copy-weighted observations · sample only")
+                .font(.system(size: 9))
+                .foregroundStyle(OculusPalette.muted)
+            Text("Separate evidence. No combined grade. Missing sources remain unavailable.")
+                .font(.system(size: 9))
+                .foregroundStyle(OculusPalette.muted)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(12)
+        .background(OculusPalette.panel)
+        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .overlay {
+            RoundedRectangle(cornerRadius: 12).stroke(OculusPalette.line, lineWidth: 1)
+        }
+    }
+
+    private func scoreMetric(_ title: String, _ value: String) -> some View {
+        HStack(spacing: 4) {
+            Text(title)
+                .font(.system(size: 9))
+                .foregroundStyle(OculusPalette.muted)
+                .lineLimit(1)
+            Spacer(minLength: 2)
+            Text(value)
+                .font(.system(size: 10, weight: .bold, design: .rounded).monospacedDigit())
+                .foregroundStyle(OculusPalette.text)
         }
     }
 
