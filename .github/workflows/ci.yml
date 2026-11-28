@@ -33,6 +33,7 @@ jobs:
               - 'Tests/**'
               - 'Resources/**'
               - 'scripts/package-app.sh'
+              - 'scripts/capture-ui-review.sh'
             python:
               - 'scripts/*.py'
 
@@ -85,6 +86,25 @@ jobs:
           test -L "$RUNNER_TEMP/dmg-mount/Applications"
           hdiutil detach "$RUNNER_TEMP/dmg-mount"
 
+      - name: Capture UI review screenshots
+        id: capture-ui-review
+        if: success()
+        continue-on-error: true
+        run: bash scripts/capture-ui-review.sh dist/UrzasOculus.app screenshots/ui-review
+      - name: Upload UI review screenshots
+        if: always() && steps.capture-ui-review.outcome != 'skipped'
+        uses: actions/upload-artifact@v4
+        with:
+          name: UrzasOculus-UI-review-${{ github.run_number }}
+          path: screenshots/ui-review/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Add screenshot links to job summary
+        if: always()
+        run: |
+          echo "## macOS UI Review Screenshots" >> "$GITHUB_STEP_SUMMARY"
+          echo "Screenshot capture status: **${{ steps.capture-ui-review.outcome }}**." >> "$GITHUB_STEP_SUMMARY"
+          echo "When successful, find the **UrzasOculus-UI-review-${{ github.run_number }}** artifact below the run (14-day retention)." >> "$GITHUB_STEP_SUMMARY"
       - name: Upload macOS application
         uses: actions/upload-artifact@v4
         with:

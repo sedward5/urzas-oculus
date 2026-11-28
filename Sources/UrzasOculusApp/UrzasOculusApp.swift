@@ -5,21 +5,26 @@ import UrzasOculusCore
 struct UrzasOculusApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView {
-                ContentView()
-                    .tabItem {
-                        Label("Capture Lab", systemImage: "viewfinder")
-                    }
-
+            if ProcessInfo.processInfo.environment["URZAS_OCULUS_UI_REVIEW"] == "cockpit" {
                 DraftCockpitMockupView()
-                    .tabItem {
-                        Label("Draft Cockpit", systemImage: "rectangle.3.group")
-                    }
+                    .frame(minWidth: 1280, minHeight: 900)
+            } else {
+                TabView {
+                    ContentView()
+                        .tabItem {
+                            Label("Capture Lab", systemImage: "viewfinder")
+                        }
 
-                ArchetypeReferenceView()
-                    .tabItem { Label("Archetypes", systemImage: "books.vertical") }
+                    DraftCockpitMockupView()
+                        .tabItem {
+                            Label("Draft Cockpit", systemImage: "rectangle.3.group")
+                        }
+
+                    ArchetypeReferenceView()
+                        .tabItem { Label("Archetypes", systemImage: "books.vertical") }
+                }
+                .frame(minWidth: 1040, minHeight: 720)
             }
-            .frame(minWidth: 1040, minHeight: 720)
         }
     }
 }

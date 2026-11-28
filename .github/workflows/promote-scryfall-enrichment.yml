@@ -1,9 +1,6 @@
 name: Promote Scryfall Card Enrichment
 
 on:
-  pull_request:
-    types: [opened, synchronize]
-    branches: [main]
   workflow_dispatch:
     inputs:
       source_run_id:
@@ -20,12 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      SOURCE_RUN_ID: ${{ github.event_name == 'pull_request' && '45059767031' || inputs.source_run_id }}
+      SOURCE_RUN_ID: ${{ inputs.source_run_id }}
     steps:
       - name: Check out PR or selected branch
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
+          ref: ${{ github.ref }}
           fetch-depth: 0
 
       - name: Download enrichment artifact
@@ -46,7 +43,7 @@ jobs:
           python3 scripts/sync_reviewed_card_catalog.py
           python3 scripts/test_sync_reviewed_card_catalog.py
 
-      - name: Commit promoted catalog to PR or selected branch
+      - name: Commit promoted catalog to selected branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,5 +53,5 @@ jobs:
             exit 0
           fi
           git commit -m "Promote reviewed Scryfall card metadata"
-          TARGET_BRANCH="${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}"
+          TARGET_BRANCH="${{ github.ref_name }}"
           git push origin "HEAD:${TARGET_BRANCH}"
