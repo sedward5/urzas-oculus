@@ -1,6 +1,6 @@
 # Urza's Oculus — Project Steering
 
-Last reviewed: 2026-11-22
+Last reviewed: 2026-11-27
 
 This document defines product goals, constraints, and architectural guardrails. The current implementation status and milestone sequence live in [ROADMAP.md](ROADMAP.md).
 
@@ -10,7 +10,7 @@ Urza's Oculus is an independent native macOS companion intended to help players 
 
 The current macOS app is a **Phase 0 ScreenCaptureKit feasibility prototype**. It enumerates visible windows, suggests likely iPhone Mirroring targets, allows manual selection, captures a still frame, and samples a bounded three-second frame sequence. Real-world capture validation and a representative draft recording remain outstanding. OCR, card recognition, and an integrated draft workflow are not implemented.
 
-Foundational components already exist independently: an append-only draft-event model; SQLite/Scryfall reference data; official 17Lands archive acquisition, parsing, and metric aggregation; dataset provenance/readiness; and a shared Swift evaluator for a regularized standalone GIH WR baseline. These components are not integrated into a complete draft companion.
+Foundational components already exist independently: an append-only draft-event model; SQLite/Scryfall reference data; official 17Lands archive acquisition, parsing, and metric aggregation; dataset provenance/readiness; reviewed Wizards archetypes and card relationships; a read-only operations inventory; a versioned predictive-model foundation; and a shared Swift evaluator for a regularized standalone GIH WR baseline. These components are not integrated into a complete draft companion. The Draft Cockpit remains a static-data interaction prototype, even though CI can now capture it for visual review.
 
 ## Draft experience direction
 
@@ -136,6 +136,6 @@ Rarity is retained as source metadata only. It is prohibited as a card-strength,
 
 ## Operations console
 
-The unlinked `/ops` page is a static, read-only presentation surface, not a security boundary. It shows discovered Limited sets, release ordering, Scryfall acquisition manifests, Wizards guide source/search, archetype overview-image metadata, public 17Lands archive availability/freshness, prediction snapshots/model versions, and recent GitHub Actions runs. Workflow actions link to GitHub, where authentication and repository permissions remain authoritative.
+The unlinked `/ops` page is implemented as a static, read-only presentation surface, not a security boundary. It shows discovered Limited sets, release ordering, Scryfall acquisition manifests, Wizards guide source/search, archetype overview-image metadata, public 17Lands archive availability/freshness, prediction snapshots/model versions, and recent GitHub Actions runs. Its processed-data readiness checks use explicit per-event manifests and validate declared JSON artifacts; they do not mistake intentionally discarded raw CSV inputs for missing retained products. Workflow actions link to GitHub, where authentication and repository permissions remain authoritative.
 
 Discovery publishes a versioned inventory JSON artifact. It may query public GitHub Actions run-history metadata using its workflow token, but it must not query 17Lands analytics APIs. The page is excluded from site navigation and declares `noindex,nofollow`; obscurity is convenience, not access control.
