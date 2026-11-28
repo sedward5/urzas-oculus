@@ -12,7 +12,7 @@ The current app is a **Phase 0 ScreenCaptureKit feasibility prototype**, not a c
 
 The app can enumerate visible, shareable macOS windows; suggest likely iPhone Mirroring windows using an advisory heuristic; let you select a target; capture a still image; and capture a bounded three-second sequence (up to four frames per second, maximum twenty frames).
 
-**The next milestone is real-world validation on the target Mac.** Use Capture Lab during a representative Arena draft. Review window selection, scrolling, pack transitions, frame dimensions/cadence, permission behavior, and card-text legibility before beginning substantial OCR work.
+**The next milestone is real-world validation on the target Mac.** Use Capture Lab during a representative Arena draft. Review window selection, scrolling, pack transitions, frame dimensions/cadence, permission behavior, and card-text legibility before beginning substantial OCR work. CI can now capture a deterministic Draft Cockpit screenshot for visual review, but that screenshot validates the static prototype—not a live draft workflow.
 
 **Not implemented or integrated:** OCR, card recognition, automatic draft observation, persistent user-facing draft tracking, and live pick recommendations. A static Draft Cockpit UI prototype exists to review product hierarchy and interaction concepts; it is not connected to capture, recognition, persistence, or scoring.
 
