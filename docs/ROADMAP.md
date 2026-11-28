@@ -124,10 +124,11 @@ Do not describe Oculus as a complete draft companion until capture is validated 
 
 - [x] Publish a static, unlinked `/ops` inventory with set acquisition, archetype image, Wizards guide, public 17Lands freshness, prediction artifact, and GitHub Actions status.
 - [ ] Add immutable, cutoff-aware prediction-run artifacts and deterministic canonical output.
-- [ ] Implement the first algorithmic card feature model in the shared Swift core; normal set runs must not require manual per-card ordinal ratings.
-- [ ] Generate predictions for TRK and the three existing historical sets, clearly labeling retrospective runs and cutoffs.
+- [x] Implement the first experimental algorithmic card feature model in shared Swift core; normal runs do not require manual per-card ordinal ratings.
+- [ ] Generate a cutoff-valid pre-release prediction for TRK and retrospective predictions for HOB/ECL/TDM.
 - [ ] Add comparison reports for pick behavior, play rate, and game performance separately, including sample sizes and coverage.
-- [ ] Surface outliers and review annotations without allowing LLM/human analysis to mutate predictions.
+- [ ] Surface outliers and review annotations without allowing LLM/human analysis to mutate frozen predictions.
 - [ ] Establish model-version regression tests across historical sets and held-out observations.
+- [x] Add separate predictive and empirical score display surfaces to the macOS cockpit mockup and website; production artifact publication and live app wiring remain open.
 
 The `/ops` inventory is implemented as a static, read-only page; its processed-data status is driven by explicit per-event manifests, separate from ephemeral raw archive inputs. The closed learning loop is a primary product direction. 17Lands is the observation/evaluation layer, not a source of pre-release prediction features. Model changes are deterministic, versioned, and replayable. See [PROJECT_STEERING.md](PROJECT_STEERING.md) and [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md).
