@@ -10,7 +10,7 @@ enum CardEvaluationToolError: Error, CustomStringConvertible {
     var description: String {
         switch self {
         case .usage:
-            return "Usage: CardEvaluationTool (--input cards.json | --database oculus.sqlite --set TRK) [--reviews reviews.json] [--template]\nInput JSON must contain normalized UrzasOculusCore CardRecord objects. Database mode reads one set from the local Oculus store. Output is JSON on stdout."
+            return "Usage: CardEvaluationTool (--input cards.json | --database oculus.sqlite --set TRK) [--reviews reviews.json] [--template | --predictions] [--relationships relationships.json]\nInput JSON must contain normalized UrzasOculusCore CardRecord objects. Database mode reads one set from the local Oculus store. Output is JSON on stdout."
         case .duplicateCardID(let id):
             return "Duplicate Scryfall printing ID in input: \(id)"
         case .invalidReview(let id):
@@ -67,8 +67,11 @@ do {
     }
 
     let makeTemplate = arguments.contains("--template")
+    let predictionsOnly = arguments.contains("--predictions")
     let reviewsPath = argumentValue("--reviews", in: arguments)
-    guard !(makeTemplate && reviewsPath != nil) else {
+    let relationshipsPath = argumentValue("--relationships", in: arguments)
+    guard !(makeTemplate && (reviewsPath != nil || predictionsOnly)),
+          !(predictionsOnly && reviewsPath != nil) else {
         throw CardEvaluationToolError.usage
     }
 
@@ -85,6 +88,27 @@ do {
             )
         }
         let output = try encoder.encode(templates)
+        FileHandle.standardOutput.write(output)
+        FileHandle.standardOutput.write(Data([0x0A]))
+    } else if predictionsOnly {
+        struct RelationshipInput: Decodable {
+            let scryfallID: String
+            let relationship: PredictiveArchetypeRelationship
+        }
+        var relationshipsByID: [String: [PredictiveArchetypeRelationship]] = [:]
+        if let relationshipsPath {
+            let data = try Data(contentsOf: URL(fileURLWithPath: relationshipsPath))
+            for item in try JSONDecoder().decode([RelationshipInput].self, from: data) {
+                guard cards.contains(where: { $0.id == item.scryfallID }) else {
+                    throw CardEvaluationToolError.invalidInput("Relationship references unknown card: \(item.scryfallID)")
+                }
+                relationshipsByID[item.scryfallID, default: []].append(item.relationship)
+            }
+        }
+        let predictions = cards.map { card in
+            PredictiveScoringEngine.evaluate(card: card, relationships: relationshipsByID[card.id] ?? [])
+        }
+        let output = try encoder.encode(predictions)
         FileHandle.standardOutput.write(output)
         FileHandle.standardOutput.write(Data([0x0A]))
     } else {
