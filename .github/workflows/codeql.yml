@@ -1,6 +1,22 @@
 name: CodeQL
 
 on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Package.swift'
+      - 'Sources/**'
+      - 'Tests/**'
+      - 'scripts/*.py'
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - 'Package.swift'
+      - 'Sources/**'
+      - 'Tests/**'
+      - 'scripts/*.py'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 permissions:
