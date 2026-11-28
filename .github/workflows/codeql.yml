@@ -11,12 +11,13 @@ jobs:
     name: Detect CodeQL languages
     runs-on: ubuntu-latest
     outputs:
-      swift: ${{ steps.filter.outputs.swift }}
-      python: ${{ steps.filter.outputs.python }}
-      actions: ${{ steps.filter.outputs.actions }}
+      swift: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.swift }}
+      python: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.python }}
+      actions: ${{ github.event_name == 'workflow_dispatch' || steps.filter.outputs.actions }}
     steps:
       - uses: actions/checkout@v4
       - id: filter
+        if: github.event_name != 'workflow_dispatch'
         uses: dorny/paths-filter@v3
         with:
           filters: |
