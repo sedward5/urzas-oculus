@@ -33,6 +33,7 @@ jobs:
               - 'Tests/**'
               - 'Resources/**'
               - 'scripts/package-app.sh'
+              - 'scripts/capture-ui-review.sh'
             python:
               - 'scripts/*.py'
 
