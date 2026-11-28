@@ -417,10 +417,10 @@ struct DraftCockpitMockupView: View {
             Divider().overlay(OculusPalette.line)
             HStack(alignment: .firstTextBaseline) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("17Lands · observed GIH")
+                    Text("17Lands · empirical baseline")
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(OculusPalette.text)
-                    Text("Premier Draft · all players")
+                    Text("Regularized GIH score · Premier Draft")
                         .font(.system(size: 9))
                         .foregroundStyle(OculusPalette.muted)
                 }
@@ -429,7 +429,7 @@ struct DraftCockpitMockupView: View {
                     .font(.system(size: 17, weight: .bold, design: .rounded).monospacedDigit())
                     .foregroundStyle(OculusPalette.cyan)
             }
-            Text("243 copy-weighted observations · sample only")
+            Text("Raw GIH WR 57.1% · 243 copy-weighted observations · example only")
                 .font(.system(size: 9))
                 .foregroundStyle(OculusPalette.muted)
             Text("Separate evidence. No combined grade. Missing sources remain unavailable.")
