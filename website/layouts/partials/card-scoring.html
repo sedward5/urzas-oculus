@@ -1,0 +1,35 @@
+{{- $card := .card -}}
+{{- with site.Data.card_scores -}}
+  {{- $set := index .sets $.setCode -}}
+  {{- with $set -}}
+    {{- $matches := where .cards "scryfall_id" $card.scryfall_id -}}
+    {{- with $matches -}}
+      {{- $entry := index . 0 -}}
+      <section class="card-score-sources" aria-label="Card score sources">
+        {{- with $entry.predictive }}
+        <div class="card-score-source">
+          <h5>Oculus predictive <span>{{ $set.model_version }}</span></h5>
+          <dl>
+            {{- with .baseline_power }}<div><dt>Baseline power</dt><dd>{{ .value }}/5</dd></div>{{ end -}}
+            {{- with .role_value }}<div><dt>Role value</dt><dd>{{ .value }}/5</dd></div>{{ end -}}
+            {{- with .synergy_potential }}<div><dt>Synergy</dt><dd>{{ .value }}/5</dd></div>{{ end -}}
+            {{- with .context_sensitivity }}<div><dt>Context sensitivity</dt><dd>{{ .value }}/5</dd></div>{{ end -}}
+          </dl>
+          {{- with .archetype_fits }}
+          <ul class="card-archetype-fits">{{ range . }}<li>{{ .archetype_id }}: {{ .value }}/5</li>{{ end }}</ul>
+          {{- end }}
+        </div>
+        {{- end }}
+        {{- with $entry.observed }}
+        <div class="card-score-source observed">
+          <h5>17Lands observed <span>{{ .event_type }}</span></h5>
+          {{- with .gih_score }}<p class="observed-gih">{{ printf "%.1f%%" (mul . 100) }} GIH win rate</p>{{ end }}
+          {{- with .games_in_hand_count }}<p class="score-sample">{{ . }} copy-weighted observations</p>{{ end }}
+          {{- with .snapshot_id }}<p class="score-sample">Snapshot: {{ . }}</p>{{ end }}
+        </div>
+        {{- end }}
+        <p class="score-separation-note">Independent evidence sources; no combined grade.</p>
+      </section>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
