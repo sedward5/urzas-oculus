@@ -128,7 +128,18 @@ Archetype openness and splash advice are future scoring capabilities. The curren
 
 The macOS app includes a **Draft Cockpit** tab alongside the existing **Capture Lab**. The cockpit tab is a static-data SwiftUI prototype for reviewing hierarchy, visual density, and interaction concepts. It is not connected to ScreenCaptureKit, card recognition, the draft event store, or recommendation scoring.
 
-The mockup includes a pre-draft setup view, ranked card rows, unresolved-card treatment, a secondary wheel-watch indicator, explicit pick confirmation, a drafted-pool summary, early strategy context, and a missed-pick recovery sheet. Its controls demonstrate intended interaction only; no changes are persisted.
+The mockup includes a pre-draft setup view, illustrative card rows, unresolved-card treatment, a secondary wheel-watch indicator, explicit pick confirmation, a drafted-pool summary, early strategy context, a dual-source score comparison panel, and a missed-pick recovery sheet. Its controls and example score values demonstrate intended interaction only; no changes are persisted or connected to the scoring engines.
+
+## Presenting predictive and empirical scores
+
+A card may have two independent score sources. Show them as distinct evidence, never as a combined grade:
+
+- **Oculus predictive:** the pre-17L feature model's baseline power, role value, synergy potential, archetype-specific fit, and context sensitivity. Show model version, confidence, and concise rationale on selection/details. A high context-sensitivity value means the card's value varies more with conditions; it does not mean the card is stronger.
+- **17Lands empirical:** the regularized GIH score from the selected compatible dataset, alongside raw GIH win rate, copy-weighted observation count, event/user-group/color scope, and snapshot identity. Do not present the regularized value as the raw win rate or as an independent-game confidence estimate.
+- **Availability:** show whichever source exists. Missing values stay unavailable; do not use zero, borrow a value from another source, or hide the source's scope.
+- **No blended ranking:** the five predictive dimensions are not interchangeable and have no validated weights. Do not average them with each other or with 17Lands. A future pick-ordering function needs its own explicit inputs, validation, version, and explanation.
+
+The current SwiftUI cockpit displays an illustrative example of this hierarchy. The website's archetype card detail displays published score artifacts only; it never runs scoring in the browser. Neither surface is yet connected to a live draft session.
 
 ## Main draft workspace
 
@@ -214,7 +225,7 @@ This specification does not change the current Phase 0 gate. Validate real captu
 ## Open design questions for later validation
 
 - Should the user confirm picks only in Oculus, or should Arena selection be independently observed before the event is committed? The intended behavior is explicit user confirmation plus a separate observation of Arena state where feasible.
-- Should card rows default to score order or pack order? Proposed default: score order, with a clear toggle.
+- Should card rows default to pack order or a separately validated pick-ordering model? Until a pick-ordering function is validated, do not sort by an average of predictive dimensions and 17Lands metrics.
 - How should the layout adapt to compact windows and different display sizes?
 - Which exact archetype source and licensing/attribution requirements apply to each set?
 - Which deck analytics are essential during the draft versus useful only after it?
