@@ -21,17 +21,14 @@ for _ in $(seq 1 30); do
   sleep 1
 done
 sleep 4
-BOUNDS="$(osascript <<'APPLESCRIPT'
+osascript <<'APPLESCRIPT'
 tell application "System Events"
   tell process "UrzasOculus"
     set frontmost to true
     if (count of windows) is 0 then error "Urza's Oculus window did not appear"
-    set b to bounds of front window
-    return (item 1 of b) & "," & (item 2 of b) & "," & ((item 3 of b) - (item 1 of b)) & "," & ((item 4 of b) - (item 2 of b))
   end tell
 end tell
 APPLESCRIPT
-)"
 # Capture the full desktop; the app is foregrounded above. Avoid fragile AX window bounds.
 screencapture -x "$OUTPUT_DIR/draft-cockpit.png"
 test -s "$OUTPUT_DIR/draft-cockpit.png"
