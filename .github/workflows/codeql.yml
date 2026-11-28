@@ -1,0 +1,82 @@
+name: CodeQL
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'Package.swift'
+      - 'Sources/**'
+      - 'Tests/**'
+      - '.github/workflows/**'
+  push:
+    branches: [main]
+    paths:
+      - 'Package.swift'
+      - 'Sources/**'
+      - 'Tests/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: read
+
+jobs:
+  detect:
+    name: Detect CodeQL languages
+    runs-on: ubuntu-latest
+    outputs:
+      swift: ${{ steps.filter.outputs.swift }}
+      actions: ${{ steps.filter.outputs.actions }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            swift:
+              - 'Package.swift'
+              - 'Sources/**'
+              - 'Tests/**'
+            actions:
+              - '.github/workflows/**'
+
+  analyze-swift:
+    name: CodeQL Swift
+    needs: detect
+    if: needs.detect.outputs.swift == 'true'
+    runs-on: macos-15
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: swift
+          queries: security-extended
+          build-mode: manual
+      - name: Build Swift targets for extraction
+        run: swift build
+      - uses: github/codeql-action/analyze@v3
+        with:
+          category: /language:swift
+
+  analyze-actions:
+    name: CodeQL GitHub Actions
+    needs: detect
+    if: needs.detect.outputs.actions == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: actions
+          queries: security-extended
+          build-mode: none
+      - uses: github/codeql-action/analyze@v3
+        with:
+          category: /language:actions
