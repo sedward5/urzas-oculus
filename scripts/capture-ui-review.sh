@@ -26,13 +26,13 @@ tell application "System Events"
   tell process "UrzasOculus"
     set frontmost to true
     if (count of windows) is 0 then error "Urza's Oculus window did not appear"
-    set bounds of front window to {10, 30, 1450, 980}
     set b to bounds of front window
     return (item 1 of b) & "," & (item 2 of b) & "," & ((item 3 of b) - (item 1 of b)) & "," & ((item 4 of b) - (item 2 of b))
   end tell
 end tell
 APPLESCRIPT
 )"
-screencapture -x -R "$BOUNDS" "$OUTPUT_DIR/draft-cockpit.png"
+# Capture the full desktop; the app is foregrounded above. Avoid fragile AX window bounds.
+screencapture -x "$OUTPUT_DIR/draft-cockpit.png"
 test -s "$OUTPUT_DIR/draft-cockpit.png"
 echo "Screenshot captured: $OUTPUT_DIR/draft-cockpit.png"
