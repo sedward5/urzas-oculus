@@ -25,8 +25,8 @@ BOUNDS="$(osascript <<'APPLESCRIPT'
 tell application "System Events"
   tell process "UrzasOculus"
     set frontmost to true
-    set bounds of front window to {10, 30, 1450, 980}
     if (count of windows) is 0 then error "Urza's Oculus window did not appear"
+    set bounds of front window to {10, 30, 1450, 980}
     set b to bounds of front window
     return (item 1 of b) & "," & (item 2 of b) & "," & ((item 3 of b) - (item 1 of b)) & "," & ((item 4 of b) - (item 2 of b))
   end tell
