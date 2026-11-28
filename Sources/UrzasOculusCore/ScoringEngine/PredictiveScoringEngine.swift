@@ -190,19 +190,15 @@ public enum PredictiveScoringEngine {
     }
 
     private static func bestCreatureBody(card: CardRecord) -> Double? {
-        let faces = card.cardFaces
-        var topLevel: Double?
         if let powerText = card.power, let toughnessText = card.toughness,
            let power = Double(powerText), let toughness = Double(toughnessText) {
-            topLevel = power + toughness
-        }
-        let stats = faces.compactMap { face -> Double? in
-            guard let power = face.power.flatMap(Double.init),
-                  let toughness = face.toughness.flatMap(Double.init) else { return nil }
             return power + toughness
         }
-        var allStats = stats
-        if let topLevel { allStats.append(topLevel) }
-        return allStats.max()
+        guard let frontFace = card.cardFaces.first,
+              let power = frontFace.power.flatMap(Double.init),
+              let toughness = frontFace.toughness.flatMap(Double.init) else {
+            return nil
+        }
+        return power + toughness
     }
 }
