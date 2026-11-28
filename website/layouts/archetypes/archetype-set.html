@@ -4,6 +4,6 @@
 <h1>{{ .Title }}</h1><p class="page-lede">{{ .Description }}</p>
 <figure class="archetype-overview"><img src="{{ $set.overview_image.source_url }}" alt="{{ $set.overview_image.alt }}" width="{{ $set.overview_image.width }}" height="{{ $set.overview_image.height }}" fetchpriority="high"><figcaption>{{ $set.overview_image.attribution }} · <a href="{{ $set.source_url }}" rel="external noopener">Official Wizards source ↗</a></figcaption></figure>
 {{ $clans := where $set.archetypes "archetype_type" "three_color_clan" }}{{ $themes := where $set.archetypes "archetype_type" "two_color_theme" }}
-{{ if gt (len $clans) 0 }}<h2>Three-color clans</h2><div class="archetype-grid">{{ range $clans }}{{ partial "archetype-card.html" (dict "archetype" . "cards" $cardSet.cards) }}{{ end }}</div><h2>Two-color themes</h2><div class="archetype-grid">{{ range $themes }}{{ partial "archetype-card.html" (dict "archetype" . "cards" $cardSet.cards) }}{{ end }}</div>
+{{ if gt (len $clans) 0 }}<h2>Three-color clans</h2><div class="archetype-grid">{{ range $clans }}{{ partial "archetype-card.html" (dict "archetype" . "cards" $cardSet.cards "setCode" $code) }}{{ end }}</div><h2>Two-color themes</h2><div class="archetype-grid">{{ range $themes }}{{ partial "archetype-card.html" (dict "archetype" . "cards" $cardSet.cards) }}{{ end }}</div>
 {{ else }}<h2>Draft archetypes</h2><div class="archetype-grid">{{ range $set.archetypes }}{{ partial "archetype-card.html" (dict "archetype" . "cards" $cardSet.cards) }}{{ end }}</div>{{ end }}
 </article>{{ end }}
