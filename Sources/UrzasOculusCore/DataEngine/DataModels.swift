@@ -89,6 +89,8 @@ public struct CardRecord: Codable, Equatable, Sendable, Identifiable {
     public let layout: String?
     public let manaCost: String?
     public let manaValue: Double?
+    public let power: String?
+    public let toughness: String?
     public let typeLine: String?
     public let oracleText: String?
     public let colors: [String]
@@ -102,7 +104,8 @@ public struct CardRecord: Codable, Equatable, Sendable, Identifiable {
     public init(id: String, oracleID: String? = nil, arenaID: Int? = nil, mtgoID: Int? = nil,
                 name: String, setCode: String, setName: String? = nil,
                 collectorNumber: String? = nil, rarity: String? = nil, layout: String? = nil,
-                manaCost: String? = nil, manaValue: Double? = nil, typeLine: String? = nil,
+                manaCost: String? = nil, manaValue: Double? = nil, power: String? = nil,
+                toughness: String? = nil, typeLine: String? = nil,
                 oracleText: String? = nil, colors: [String] = [], colorIdentity: [String] = [],
                 keywords: [String] = [], releasedAt: String? = nil, isDigital: Bool = false,
                 imageURI: String? = nil, cardFaces: [CardFaceRecord] = []) {
@@ -118,6 +121,8 @@ public struct CardRecord: Codable, Equatable, Sendable, Identifiable {
         self.layout = layout
         self.manaCost = manaCost
         self.manaValue = manaValue
+        self.power = power
+        self.toughness = toughness
         self.typeLine = typeLine
         self.oracleText = oracleText
         self.colors = colors

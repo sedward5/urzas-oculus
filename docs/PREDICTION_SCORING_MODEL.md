@@ -152,7 +152,7 @@ The shared Swift core is authoritative for classification suggestions and evalua
 
 ## V1 limitations and next work
 
-The initial Swift engine emits structural role suggestions and carries a reviewer-authored record. It does not yet automatically score cards, infer two-for-ones, determine on-rate status, identify archetype fit, or calibrate against 17Lands. Those require explicit review inputs and tested contracts.
+The initial structural engine emits role suggestions and carries reviewer-authored records. The first experimental feature-rule predictor is now implemented, but it is not calibrated and must not be treated as a validated Limited grade. It does not yet infer two-for-ones or on-rate status, and archetype fit is only emitted when explicit reviewed relationships are supplied. Cutoff-aware artifacts and 17Lands calibration remain future work.
 
 Next implementation steps:
 
@@ -193,3 +193,69 @@ Historical runs are retrospective experiments. The evaluator must reject or clea
 17Lands public bulk archives are acquired independently after publication. They are never retroactively included in the prediction input manifest. Comparison joins only on stable card identity and preserves set/event/user-group/color scope and source snapshot. It reports distinct outcome families (pick behavior, play rate, and game performance) with their own sample counts and limitations. Missing values remain missing; copy-weighted observations are not represented as independent games.
 
 The calibration report identifies residuals, rank disagreement, coverage, and outliers. Outlier review may use humans and LLMs to suggest explanations such as a missing mechanic, incorrect rules interpretation, archetype interaction, format-speed assumption, or data-quality issue. Every accepted change becomes a new model version and is regression-tested across historical sets. Reports show both gains and regressions. Avoid tuning and evaluating solely on the same observations; use held-out sets or time slices where possible.
+
+
+## Experimental feature-rule implementation (PR 99)
+
+The shared core now contains `PredictiveScoringEngine` version `predictive-rules-0.1.0`. It emits independent ordinal dimensions for baseline power, role value, synergy potential, archetype fit, and context sensitivity. It does not calculate a weighted average or a pick score. Each dimension includes a rationale, feature identifiers, and low confidence while the rule set remains experimental.
+
+The first rules use normalized Scryfall card facts: mana value, top-level and face power/toughness, type lines, Oracle text, keywords, and explicitly supplied reviewed archetype relationships. Rarity is never read by the engine. Unreviewed relationships are ignored. Archetype-fit values are omitted unless a reviewed relationship is explicitly supplied. This is a starting heuristic, not a trained model or validated card grade; its creature-body benchmark is intentionally simple and set-speed, curve, matchup, and deck context are not yet modeled.
+
+Generate local per-card output with:
+
+```sh
+swift run CardEvaluationTool --database /path/to/local-oculus.sqlite --set TRK --predictions > trk-predictions.json
+```
+
+An optional `--relationships relationships.json` input accepts a flat array of `{ "scryfallID": "...", "relationship": { "archetypeID": "...", "role": "payoff", "reviewStatus": "reviewed", "evidence": "..." } }` records. This keeps archetype knowledge explicit and review-gated. The current CLI output is a reproducible local batch result, not yet an immutable publication artifact: it does not yet carry a declared historical source cutoff, full input manifest, or content hashes. Do not call a run pre-release until those are implemented and verified.
+
+## Dual-source score presentation contract
+
+Predictive and empirical scores are separate evidence streams and must never be averaged together:
+
+- **Oculus predictive:** show the five independent 1–5 dimensions, model version, and archetype-specific fit only when reviewed relationships exist. Context sensitivity describes variability, not strength.
+- **17Lands empirical:** show the existing regularized GIH score from `ScoredRecommendation.score`, raw GIH win rate from `observedGamesInHandWinRate`, copy-weighted sample count, and exact event/scope/snapshot. Do not label the regularized score as a raw win rate.
+- **Missing source:** show the available source only; do not fill missing values with zero or infer one source from the other.
+- **No aggregate:** do not create a combined predictive/17Lands grade or sort by an invented average.
+
+The macOS cockpit mockup demonstrates both sources with clearly labeled illustrative values; it is not live-connected. The Hugo archetype page has a shared partial that reads only published `website/data/card_scores.json` data and renders a source when present. The normalized website artifact shape is:
+
+```json
+{
+  "schema_version": 1,
+  "sets": {
+    "HOB": {
+      "model_version": "predictive-rules-0.1.0",
+      "cards": [{
+        "scryfall_id": "Scryfall printing UUID",
+        "predictive": {
+          "baseline_power": { "value": 3 },
+          "role_value": { "value": 4 },
+          "synergy_potential": { "value": 3 },
+          "context_sensitivity": { "value": 2 },
+          "archetype_fits": [{ "archetype_id": "goblins", "value": 4 }]
+        },
+        "observed": {
+          "event_type": "PremierDraft",
+          "regularized_gih_score": 0.56,
+          "observed_gih_win_rate": 0.57,
+          "games_in_hand_count": 243,
+          "snapshot_id": "source-snapshot-id"
+        }
+      }]
+    }
+  }
+}
+```
+
+The website is presentation-only. A future publisher must create this artifact from the shared Swift evaluator and validated 17Lands result; Hugo must not implement either scoring algorithm. The macOS production adapter must consume the same core result types and preserve source availability independently.
+
+## Remaining validation gates
+
+1. Review the experimental rules against TRK and improve feature extraction before treating ordinal values as useful predictions.
+2. Convert the reviewed-card catalog into explicit per-card relationship inputs; do not infer missing TDM theme relationships.
+3. Add cutoff-aware immutable prediction artifacts, source manifests, hashes, and canonical output.
+4. Freeze TRK predictions before comparing with permitted 17Lands observations. Label HOB/ECL/TDM as retrospective and enforce their historical cutoffs.
+5. Compare pick behavior, play rate, and game performance separately; investigate outliers and preserve held-out evaluation.
+6. Add regression suites and report both improvements and regressions for every model version.
+7. Wire both independent score streams into live pack recommendations only after draft-state integration and data-readiness contracts exist.

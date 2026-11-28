@@ -1,6 +1,6 @@
 # Urza's Oculus — Project Steering
 
-Last reviewed: 2026-11-27
+Last reviewed: 2026-11-28
 
 This document defines product goals, constraints, and architectural guardrails. The current implementation status and milestone sequence live in [ROADMAP.md](ROADMAP.md).
 
@@ -87,9 +87,9 @@ Owns authoritative draft history. The current core model supports session start,
 Owns card identity, local reference records, importers, dataset snapshots, provenance, freshness, and readiness. 17Lands metrics are scoped by set, event, user group, color filter where applicable, and snapshot.
 
 ### ScoringEngine
-Owns the one maintained recommendation implementation in the platform-independent Swift core. The current 17Lands baseline regularizes standalone GIH WR toward an explicit overall baseline from the same dataset scope and snapshot. ALSA and ATA are available as context but do not affect ranking. Separately, prediction model v1 records pre-release card roles, five independent evaluation dimensions, rate assessments, evidence, and confidence. Structural rules emit suggestions only; reviewed classifications and ratings require human review. Predictions remain immutable when later observations arrive. See [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md).
+Owns the one maintained recommendation implementation in the platform-independent Swift core. The current 17Lands baseline regularizes standalone GIH WR toward an explicit overall baseline from the same dataset scope and snapshot. ALSA and ATA are available as context but do not affect ranking. Separately, the experimental `PredictiveScoringEngine` emits five independent ordinal dimensions from card features and optional reviewed archetype relationships. Its current rules are a low-confidence prototype, not a trained or calibrated model. The 17Lands result remains an independent empirical score. The presentation layer labels each source, preserves missingness and sample counts, and never creates a combined grade. Predictions must remain immutable when later observations arrive. See [PREDICTION_SCORING_MODEL.md](PREDICTION_SCORING_MODEL.md).
 
-The evaluator must not depend on SwiftUI, app lifecycle, filesystem layout, CI, web hosting, or network services. Adapters acquire inputs or publish results but call the same evaluator. The website may display versioned artifacts; it must not reproduce scoring.
+The empirical evaluator and pre-release predictor are separate core paths. `ScoringEngine` computes the regularized GIH baseline only from compatible 17Lands snapshots. `PredictiveScoringEngine` (`predictive-rules-0.1.0`) computes experimental, independent ordinal dimensions from Scryfall facts and explicitly reviewed archetype relationships; it never reads rarity or 17Lands data. Neither engine depends on SwiftUI, app lifecycle, filesystem layout, CI, web hosting, or network services. Adapters acquire inputs or publish results but call the shared core. The macOS app and website present the two sources side by side without combining them. The website displays published artifacts only and must not reproduce scoring.
 
 ### CollectionEngine
 Optional future collection context. The core draft workflow must not depend on it.

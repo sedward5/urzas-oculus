@@ -78,6 +78,8 @@ private struct ScryfallCardDTO: Decodable {
     let layout: String?
     let manaCost: String?
     let manaValue: Double?
+    let power: String?
+    let toughness: String?
     let typeLine: String?
     let oracleText: String?
     let colors: [String]?
@@ -98,6 +100,7 @@ private struct ScryfallCardDTO: Decodable {
         case manaCost = "mana_cost"
         case manaValue = "cmc"
         case typeLine = "type_line"
+        case power, toughness
         case oracleText = "oracle_text"
         case colorIdentity = "color_identity"
         case releasedAt = "released_at"
@@ -110,7 +113,7 @@ private struct ScryfallCardDTO: Decodable {
             id: id, oracleID: oracleID, arenaID: arenaID, mtgoID: mtgoID,
             name: name, setCode: set, setName: setName, collectorNumber: collectorNumber,
             rarity: rarity, layout: layout, manaCost: manaCost, manaValue: manaValue,
-            typeLine: typeLine, oracleText: oracleText, colors: colors ?? [],
+            power: power, toughness: toughness, typeLine: typeLine, oracleText: oracleText, colors: colors ?? [],
             colorIdentity: colorIdentity ?? [], keywords: keywords ?? [],
             releasedAt: releasedAt, isDigital: digital ?? false,
             imageURI: imageURIs?.normal, cardFaces: cardFaces?.map(\.record) ?? []
