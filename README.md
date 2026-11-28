@@ -31,9 +31,9 @@ The app can enumerate visible, shareable macOS windows; suggest likely iPhone Mi
 | 17Lands game eligibility | Open correctness question; exact parity is not claimed |
 | Recommendation readiness | Implemented; requires compatible draft and game snapshots |
 | Recommendation evaluator | Deterministic standalone GIH WR baseline in shared Swift core |
-| Predictive model | Versioned v1 schema, five evaluation dimensions, role suggestions, and batch CLI; reviewed set ratings and calibration remain incomplete |
+| Predictive model | Experimental deterministic feature-rule engine (`predictive-rules-0.1.0`), five independent dimensions, and local batch output; cutoff-aware artifacts and calibration remain incomplete |
 | Synergy, archetype, curve, deck-needs scoring | Not integrated into live pick recommendations |
-| Website | Hugo archetype/reference site and read-only `/ops` inventory deployed via Cloudflare Pages |
+| Website | Hugo archetype/reference site with separate predictive/17Lands score presentation when published artifacts exist, plus read-only `/ops` inventory |
 | CI and security | macOS/Python/website checks, visual-review screenshot artifact, and targeted automatic CodeQL scans |
 | Capture-to-recommendation workflow | Not integrated |
 
