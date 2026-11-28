@@ -70,8 +70,9 @@ do {
     let predictionsOnly = arguments.contains("--predictions")
     let reviewsPath = argumentValue("--reviews", in: arguments)
     let relationshipsPath = argumentValue("--relationships", in: arguments)
-    guard !(makeTemplate && (reviewsPath != nil || predictionsOnly)),
-          !(predictionsOnly && reviewsPath != nil) else {
+    guard !(makeTemplate && (reviewsPath != nil || predictionsOnly || relationshipsPath != nil)),
+          !(predictionsOnly && reviewsPath != nil),
+          (relationshipsPath == nil || predictionsOnly) else {
         throw CardEvaluationToolError.usage
     }
 
