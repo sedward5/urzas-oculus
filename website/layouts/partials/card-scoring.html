@@ -5,6 +5,7 @@
     {{- $matches := where .cards "scryfall_id" $card.scryfall_id -}}
     {{- with $matches -}}
       {{- $entry := index . 0 -}}
+      {{- if or $entry.predictive $entry.observed -}}
       <section class="card-score-sources" aria-label="Card score sources">
         {{- with $entry.predictive }}
         <div class="card-score-source">
@@ -31,6 +32,7 @@
         {{- end }}
         <p class="score-separation-note">Independent evidence sources; no combined grade.</p>
       </section>
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 {{- end -}}
