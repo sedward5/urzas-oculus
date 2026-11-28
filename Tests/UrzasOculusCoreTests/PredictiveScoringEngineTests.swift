@@ -35,6 +35,18 @@ final class PredictiveScoringEngineTests: XCTestCase {
         XCTAssertEqual(PredictiveScoringEngine.evaluate(card: card).baselinePower.value, 4)
     }
 
+    func testDoubleFacedCreatureUsesFrontFaceBodyForCostBenchmark() {
+        let card = CardRecord(
+            id: "card-5", name: "Front/Back Bear", setCode: "TRK",
+            manaValue: 2, typeLine: "Creature",
+            cardFaces: [
+                CardFaceRecord(name: "Front", power: "2", toughness: "2", typeLine: "Creature"),
+                CardFaceRecord(name: "Back", power: "8", toughness: "8", typeLine: "Creature")
+            ]
+        )
+        XCTAssertEqual(PredictiveScoringEngine.evaluate(card: card).baselinePower.value, 3)
+    }
+
     func testNoAggregateGradeOr17LandsInputExists() {
         let card = CardRecord(id: "card-3", name: "Plain Bear", setCode: "TRK", manaValue: 2, typeLine: "Creature — Bear")
         let score = PredictiveScoringEngine.evaluate(card: card)
